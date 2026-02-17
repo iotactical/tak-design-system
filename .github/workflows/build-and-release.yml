@@ -1,0 +1,111 @@
+name: Build and Release TAK Design System
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tokens/**'
+      - 'scripts/**'
+      - 'package.json'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate tokens
+        run: npm run validate
+
+  build:
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build all platforms
+        run: npm run build
+
+      - name: Verify outputs exist
+        run: |
+          test -f platforms/atak/res/values/tak_colors.xml
+          test -f platforms/atak/res/values/tak_dimens.xml
+          test -f platforms/atak/compose/generated/TakColors.kt
+          test -f platforms/web/generated/tak-tokens.css
+          test -f platforms/vscode/generated/tak-dark-theme.json
+          echo "All platform outputs verified"
+
+      - name: Package release
+        run: npm run package
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: tak-design-system
+          path: |
+            dist/
+            platforms/
+          retention-days: 30
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build and package
+        run: npm run package
+
+      - name: Get version
+        id: version
+        run: echo "version=$(node -p 'require(\"./package.json\").version')" >> $GITHUB_OUTPUT
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: TAK Design System v${{ steps.version.outputs.version }}
+          files: dist/*.tar.gz
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Notify defense-builders-sdk
+        if: success()
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: iotactical/defense-builders-sdk
+          event-type: design-system-update
+          client-payload: '{"version": "${{ steps.version.outputs.version }}"}'
+        continue-on-error: true

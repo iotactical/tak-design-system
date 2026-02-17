@@ -1,0 +1,121 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "TAK Design System - Core primitive tokens. Source of truth for all TAK platform design decisions.",
+  "color": {
+    "black": {
+      "$value": "#000000",
+      "$type": "color"
+    },
+    "white": {
+      "$value": "#FFFFFF",
+      "$type": "color"
+    },
+    "gray": {
+      "50": { "$value": "#FAFAFA", "$type": "color" },
+      "100": { "$value": "#F5F5F5", "$type": "color" },
+      "200": { "$value": "#EEEEEE", "$type": "color" },
+      "300": { "$value": "#E0E0E0", "$type": "color" },
+      "400": { "$value": "#BDBDBD", "$type": "color" },
+      "500": { "$value": "#9E9E9E", "$type": "color" },
+      "600": { "$value": "#757575", "$type": "color" },
+      "700": { "$value": "#616161", "$type": "color" },
+      "800": { "$value": "#424242", "$type": "color" },
+      "900": { "$value": "#212121", "$type": "color" }
+    },
+    "tak-dark": {
+      "surface-0": { "$value": "#1A1A1A", "$type": "color", "$description": "Deepest background" },
+      "surface-1": { "$value": "#242424", "$type": "color", "$description": "Primary surface" },
+      "surface-2": { "$value": "#2E2E2E", "$type": "color", "$description": "Elevated surface" },
+      "surface-3": { "$value": "#383838", "$type": "color", "$description": "Card/dialog surface" },
+      "surface-4": { "$value": "#444444", "$type": "color", "$description": "Highest elevation" }
+    },
+    "tak-light": {
+      "surface-0": { "$value": "#FFFFFF", "$type": "color" },
+      "surface-1": { "$value": "#F5F5F5", "$type": "color" },
+      "surface-2": { "$value": "#EEEEEE", "$type": "color" },
+      "surface-3": { "$value": "#E0E0E0", "$type": "color" },
+      "surface-4": { "$value": "#D6D6D6", "$type": "color" }
+    },
+    "blue": {
+      "100": { "$value": "#BBDEFB", "$type": "color" },
+      "200": { "$value": "#90CAF9", "$type": "color" },
+      "300": { "$value": "#64B5F6", "$type": "color" },
+      "400": { "$value": "#42A5F5", "$type": "color" },
+      "500": { "$value": "#2196F3", "$type": "color" },
+      "600": { "$value": "#1E88E5", "$type": "color" },
+      "700": { "$value": "#1976D2", "$type": "color" },
+      "800": { "$value": "#1565C0", "$type": "color" },
+      "900": { "$value": "#0D47A1", "$type": "color" }
+    },
+    "red": {
+      "100": { "$value": "#FFCDD2", "$type": "color" },
+      "300": { "$value": "#E57373", "$type": "color" },
+      "500": { "$value": "#F44336", "$type": "color" },
+      "700": { "$value": "#D32F2F", "$type": "color" },
+      "900": { "$value": "#B71C1C", "$type": "color" }
+    },
+    "green": {
+      "100": { "$value": "#C8E6C9", "$type": "color" },
+      "300": { "$value": "#81C784", "$type": "color" },
+      "500": { "$value": "#4CAF50", "$type": "color" },
+      "700": { "$value": "#388E3C", "$type": "color" },
+      "900": { "$value": "#1B5E20", "$type": "color" }
+    },
+    "yellow": {
+      "100": { "$value": "#FFF9C4", "$type": "color" },
+      "300": { "$value": "#FFF176", "$type": "color" },
+      "500": { "$value": "#FFEB3B", "$type": "color" },
+      "700": { "$value": "#FBC02D", "$type": "color" },
+      "900": { "$value": "#F57F17", "$type": "color" }
+    },
+    "orange": {
+      "300": { "$value": "#FFB74D", "$type": "color" },
+      "500": { "$value": "#FF9800", "$type": "color" },
+      "700": { "$value": "#F57C00", "$type": "color" }
+    }
+  },
+  "spacing": {
+    "0": { "$value": "0px", "$type": "dimension" },
+    "1": { "$value": "4px", "$type": "dimension" },
+    "2": { "$value": "8px", "$type": "dimension" },
+    "3": { "$value": "12px", "$type": "dimension" },
+    "4": { "$value": "16px", "$type": "dimension" },
+    "5": { "$value": "20px", "$type": "dimension" },
+    "6": { "$value": "24px", "$type": "dimension" },
+    "8": { "$value": "32px", "$type": "dimension" },
+    "10": { "$value": "40px", "$type": "dimension" },
+    "12": { "$value": "48px", "$type": "dimension" },
+    "16": { "$value": "64px", "$type": "dimension" }
+  },
+  "borderRadius": {
+    "none": { "$value": "0px", "$type": "dimension" },
+    "sm": { "$value": "4px", "$type": "dimension" },
+    "md": { "$value": "8px", "$type": "dimension" },
+    "lg": { "$value": "12px", "$type": "dimension" },
+    "full": { "$value": "9999px", "$type": "dimension" }
+  },
+  "fontFamily": {
+    "sans": { "$value": "Roboto, sans-serif", "$type": "fontFamily" },
+    "mono": { "$value": "Roboto Mono, monospace", "$type": "fontFamily" }
+  },
+  "fontSize": {
+    "xs": { "$value": "10px", "$type": "dimension" },
+    "sm": { "$value": "12px", "$type": "dimension" },
+    "md": { "$value": "14px", "$type": "dimension" },
+    "lg": { "$value": "16px", "$type": "dimension" },
+    "xl": { "$value": "20px", "$type": "dimension" },
+    "2xl": { "$value": "24px", "$type": "dimension" },
+    "3xl": { "$value": "30px", "$type": "dimension" }
+  },
+  "fontWeight": {
+    "regular": { "$value": "400", "$type": "fontWeight" },
+    "medium": { "$value": "500", "$type": "fontWeight" },
+    "bold": { "$value": "700", "$type": "fontWeight" }
+  },
+  "opacity": {
+    "disabled": { "$value": "0.38", "$type": "number" },
+    "muted": { "$value": "0.6", "$type": "number" },
+    "overlay": { "$value": "0.72", "$type": "number" },
+    "full": { "$value": "1.0", "$type": "number" }
+  }
+}

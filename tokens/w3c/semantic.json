@@ -1,0 +1,105 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "TAK Design System - Semantic tokens. Intent-based aliases referencing core primitives. These encode tactical meaning used across all TAK platforms.",
+  "affiliation": {
+    "$description": "MIL-STD-2525 / APP-6 affiliation colors for force tracking",
+    "friendly": {
+      "$value": "{color.blue.500}",
+      "$type": "color",
+      "$description": "Friendly forces (blue)"
+    },
+    "hostile": {
+      "$value": "{color.red.500}",
+      "$type": "color",
+      "$description": "Hostile forces (red)"
+    },
+    "neutral": {
+      "$value": "{color.green.500}",
+      "$type": "color",
+      "$description": "Neutral entities (green)"
+    },
+    "unknown": {
+      "$value": "{color.yellow.500}",
+      "$type": "color",
+      "$description": "Unknown affiliation (yellow)"
+    },
+    "suspect": {
+      "$value": "{color.orange.500}",
+      "$type": "color",
+      "$description": "Suspect/joker/faker (orange)"
+    },
+    "pending": {
+      "$value": "{color.yellow.700}",
+      "$type": "color",
+      "$description": "Pending affiliation determination"
+    }
+  },
+  "status": {
+    "success": { "$value": "{color.green.500}", "$type": "color" },
+    "warning": { "$value": "{color.yellow.500}", "$type": "color" },
+    "error": { "$value": "{color.red.500}", "$type": "color" },
+    "info": { "$value": "{color.blue.500}", "$type": "color" }
+  },
+  "surface": {
+    "$description": "Surface colors adapt based on theme mode (dark/light)",
+    "background": {
+      "dark": { "$value": "{color.tak-dark.surface-0}", "$type": "color" },
+      "light": { "$value": "{color.tak-light.surface-0}", "$type": "color" }
+    },
+    "primary": {
+      "dark": { "$value": "{color.tak-dark.surface-1}", "$type": "color" },
+      "light": { "$value": "{color.tak-light.surface-1}", "$type": "color" }
+    },
+    "elevated": {
+      "dark": { "$value": "{color.tak-dark.surface-2}", "$type": "color" },
+      "light": { "$value": "{color.tak-light.surface-2}", "$type": "color" }
+    },
+    "card": {
+      "dark": { "$value": "{color.tak-dark.surface-3}", "$type": "color" },
+      "light": { "$value": "{color.tak-light.surface-3}", "$type": "color" }
+    }
+  },
+  "text": {
+    "primary": {
+      "dark": { "$value": "#FFFFFFDE", "$type": "color", "$description": "87% white on dark" },
+      "light": { "$value": "#000000DE", "$type": "color", "$description": "87% black on light" }
+    },
+    "secondary": {
+      "dark": { "$value": "#FFFFFF99", "$type": "color", "$description": "60% white on dark" },
+      "light": { "$value": "#00000099", "$type": "color", "$description": "60% black on light" }
+    },
+    "disabled": {
+      "dark": { "$value": "#FFFFFF61", "$type": "color", "$description": "38% white on dark" },
+      "light": { "$value": "#00000061", "$type": "color", "$description": "38% black on light" }
+    },
+    "on-accent": { "$value": "{color.white}", "$type": "color" },
+    "coordinate": {
+      "$value": "{color.green.300}",
+      "$type": "color",
+      "$description": "MGRS/lat-lon coordinate display"
+    }
+  },
+  "accent": {
+    "primary": { "$value": "{color.blue.500}", "$type": "color" },
+    "secondary": { "$value": "{color.green.500}", "$type": "color" }
+  },
+  "border": {
+    "default": {
+      "dark": { "$value": "#FFFFFF1F", "$type": "color" },
+      "light": { "$value": "#0000001F", "$type": "color" }
+    },
+    "strong": {
+      "dark": { "$value": "#FFFFFF3D", "$type": "color" },
+      "light": { "$value": "#0000003D", "$type": "color" }
+    }
+  },
+  "map": {
+    "$description": "Map-specific overlay and annotation colors",
+    "route": { "$value": "{color.blue.400}", "$type": "color" },
+    "danger-zone": { "$value": "#F4433680", "$type": "color", "$description": "Semi-transparent red" },
+    "safe-zone": { "$value": "#4CAF5080", "$type": "color", "$description": "Semi-transparent green" },
+    "selection": { "$value": "{color.yellow.300}", "$type": "color" },
+    "grid-line": { "$value": "#FFFFFF33", "$type": "color" },
+    "range-ring": { "$value": "#42A5F580", "$type": "color" }
+  }
+}

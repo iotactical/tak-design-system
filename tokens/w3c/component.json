@@ -1,0 +1,76 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "TAK Design System - Component tokens. Specific values for TAK UI components.",
+  "button": {
+    "primary": {
+      "background": { "$value": "{accent.primary}", "$type": "color" },
+      "text": { "$value": "{text.on-accent}", "$type": "color" },
+      "border-radius": { "$value": "{borderRadius.sm}", "$type": "dimension" },
+      "padding-x": { "$value": "{spacing.4}", "$type": "dimension" },
+      "padding-y": { "$value": "{spacing.2}", "$type": "dimension" },
+      "font-size": { "$value": "{fontSize.md}", "$type": "dimension" },
+      "font-weight": { "$value": "{fontWeight.medium}", "$type": "fontWeight" }
+    },
+    "secondary": {
+      "background": { "$value": "transparent", "$type": "color" },
+      "text": { "$value": "{accent.primary}", "$type": "color" },
+      "border-radius": { "$value": "{borderRadius.sm}", "$type": "dimension" }
+    },
+    "danger": {
+      "background": { "$value": "{status.error}", "$type": "color" },
+      "text": { "$value": "{text.on-accent}", "$type": "color" },
+      "border-radius": { "$value": "{borderRadius.sm}", "$type": "dimension" }
+    }
+  },
+  "toolbar": {
+    "height": { "$value": "48px", "$type": "dimension" },
+    "background": {
+      "dark": { "$value": "{color.tak-dark.surface-2}", "$type": "color" },
+      "light": { "$value": "{color.tak-light.surface-2}", "$type": "color" }
+    },
+    "icon-size": { "$value": "24px", "$type": "dimension" },
+    "icon-padding": { "$value": "{spacing.3}", "$type": "dimension" }
+  },
+  "sidebar": {
+    "width": { "$value": "280px", "$type": "dimension" },
+    "width-collapsed": { "$value": "56px", "$type": "dimension" },
+    "background": {
+      "dark": { "$value": "{color.tak-dark.surface-1}", "$type": "color" },
+      "light": { "$value": "{color.tak-light.surface-1}", "$type": "color" }
+    },
+    "item-height": { "$value": "44px", "$type": "dimension" },
+    "item-padding": { "$value": "{spacing.3}", "$type": "dimension" }
+  },
+  "marker": {
+    "$description": "Map marker / CoT icon sizing",
+    "size-sm": { "$value": "24px", "$type": "dimension" },
+    "size-md": { "$value": "32px", "$type": "dimension" },
+    "size-lg": { "$value": "48px", "$type": "dimension" },
+    "label-font-size": { "$value": "{fontSize.xs}", "$type": "dimension" },
+    "label-offset": { "$value": "{spacing.1}", "$type": "dimension" }
+  },
+  "overlay": {
+    "$description": "Tactical overlays, HUDs, and floating panels",
+    "background": { "$value": "#000000B8", "$type": "color", "$description": "72% black" },
+    "border-radius": { "$value": "{borderRadius.md}", "$type": "dimension" },
+    "padding": { "$value": "{spacing.3}", "$type": "dimension" },
+    "text-color": { "$value": "{color.white}", "$type": "color" }
+  },
+  "coordinate-display": {
+    "font-family": { "$value": "{fontFamily.mono}", "$type": "fontFamily" },
+    "font-size": { "$value": "{fontSize.sm}", "$type": "dimension" },
+    "text-color": { "$value": "{text.coordinate}", "$type": "color" },
+    "background": { "$value": "#00000099", "$type": "color" },
+    "padding": { "$value": "{spacing.2}", "$type": "dimension" }
+  },
+  "alert-banner": {
+    "height": { "$value": "40px", "$type": "dimension" },
+    "font-size": { "$value": "{fontSize.sm}", "$type": "dimension" },
+    "font-weight": { "$value": "{fontWeight.medium}", "$type": "fontWeight" },
+    "padding-x": { "$value": "{spacing.4}", "$type": "dimension" },
+    "success-background": { "$value": "{status.success}", "$type": "color" },
+    "warning-background": { "$value": "{status.warning}", "$type": "color" },
+    "error-background": { "$value": "{status.error}", "$type": "color" },
+    "info-background": { "$value": "{status.info}", "$type": "color" }
+  }
+}

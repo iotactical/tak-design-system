@@ -1,0 +1,23 @@
+{
+  "name": "@iotactical/tak-design-system",
+  "version": "0.1.0",
+  "description": "TAK Design System - Design tokens and platform-specific assets for ATAK, WinTAK, TAKX, and WebTAK development",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iotactical/tak-design-system.git"
+  },
+  "scripts": {
+    "build": "node scripts/build-tokens.mjs",
+    "build:android": "node scripts/build-tokens.mjs --platform android",
+    "build:compose": "node scripts/build-tokens.mjs --platform compose",
+    "build:css": "node scripts/build-tokens.mjs --platform css",
+    "build:vscode": "node scripts/build-tokens.mjs --platform vscode",
+    "clean": "rm -rf platforms/atak/res platforms/atak/compose/generated platforms/web/generated platforms/vscode/generated",
+    "validate": "node scripts/validate-tokens.mjs",
+    "package": "node scripts/package-release.mjs"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.0.0"
+  }
+}

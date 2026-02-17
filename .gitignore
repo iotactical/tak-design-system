@@ -1,0 +1,7 @@
+node_modules/
+dist/
+platforms/atak/res/
+platforms/atak/compose/generated/
+platforms/web/generated/
+platforms/vscode/generated/
+.DS_Store
