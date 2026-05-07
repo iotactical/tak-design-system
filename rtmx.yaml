@@ -1,0 +1,16 @@
+# RTMX Configuration
+# See https://rtmx.ai for documentation
+
+rtmx:
+  database: .rtmx/database.csv
+  requirements_dir: .rtmx/requirements
+  schema: core
+  test_dir: tests
+  languages:
+    - javascript
+  file_extensions:
+    - .mjs
+    - .js
+  pytest:
+    marker_prefix: "req"
+    register_markers: true

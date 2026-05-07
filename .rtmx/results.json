@@ -1,0 +1,86 @@
+[
+  {
+    "req_id": "REQ-AST-002",
+    "test_name": "REQ-AST-002: COT icon filter mapping",
+    "test_file": "tests/assets/test_cot.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-AST-001",
+    "test_name": "REQ-AST-001: Role-based tactical icon set",
+    "test_file": "tests/assets/test_icons.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-AST-003",
+    "test_name": "REQ-AST-003: MIL-STD-2525 symbol mapping",
+    "test_file": "tests/assets/test_milstd_csv.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-BLD-002",
+    "test_name": "REQ-BLD-002: Android XML resource generation",
+    "test_file": "tests/build/test_android.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-BLD-001",
+    "test_name": "REQ-BLD-001: Style Dictionary build pipeline",
+    "test_file": "tests/build/test_build.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-BLD-003",
+    "test_name": "REQ-BLD-003: Jetpack Compose Kotlin generation",
+    "test_file": "tests/build/test_compose.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-BLD-004",
+    "test_name": "REQ-BLD-004: CSS custom properties generation",
+    "test_file": "tests/build/test_css.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-BLD-005",
+    "test_name": "REQ-BLD-005: VS Code dark theme generation",
+    "test_file": "tests/build/test_vscode.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-TOK-003",
+    "test_name": "REQ-TOK-003: Component token references",
+    "test_file": "tests/tokens/test_component.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-TOK-001",
+    "test_name": "REQ-TOK-001: W3C core token definitions",
+    "test_file": "tests/tokens/test_core.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-TOK-005",
+    "test_name": "REQ-TOK-005: MIL-STD-2525 affiliation color compliance",
+    "test_file": "tests/tokens/test_milstd.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-TOK-002",
+    "test_name": "REQ-TOK-002: Semantic token references",
+    "test_file": "tests/tokens/test_semantic.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-TOK-004",
+    "test_name": "REQ-TOK-004: Token validation script",
+    "test_file": "tests/tokens/test_validate.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-BLD-006",
+    "test_name": "REQ-BLD-006 (inline in REQ-BLD-004)",
+    "test_file": "tests/build/test_css.mjs",
+    "passed": true
+  }
+]
