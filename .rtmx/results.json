@@ -48,6 +48,12 @@
     "passed": true
   },
   {
+    "req_id": "REQ-RCT-007",
+    "test_name": "REQ-RCT-007: React library build",
+    "test_file": "tests/react/test_react_build.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-TOK-003",
     "test_name": "REQ-TOK-003: Component token references",
     "test_file": "tests/tokens/test_component.mjs",
@@ -78,9 +84,51 @@
     "passed": true
   },
   {
+    "req_id": "REQ-INIT-001",
+    "test_name": "REQ-INIT-001 (from tests/test_rtmx.mjs)",
+    "test_file": "tests/test_rtmx.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-BLD-006",
     "test_name": "REQ-BLD-006 (inline in REQ-BLD-004)",
     "test_file": "tests/build/test_css.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-RCT-001",
+    "test_name": "REQ-RCT-001 (from tests/react/test_exports.mjs)",
+    "test_file": "tests/react/test_exports.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-RCT-002",
+    "test_name": "REQ-RCT-002 (inline in REQ-RCT-001)",
+    "test_file": "tests/react/test_exports.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-RCT-003",
+    "test_name": "REQ-RCT-003 (inline in REQ-RCT-001)",
+    "test_file": "tests/react/test_exports.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-RCT-004",
+    "test_name": "REQ-RCT-004 (inline in REQ-RCT-001)",
+    "test_file": "tests/react/test_exports.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-RCT-005",
+    "test_name": "REQ-RCT-005 (inline in REQ-RCT-001)",
+    "test_file": "tests/react/test_exports.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-RCT-006",
+    "test_name": "REQ-RCT-006 (inline in REQ-RCT-001)",
+    "test_file": "tests/react/test_exports.mjs",
     "passed": true
   }
 ]

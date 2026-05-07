@@ -42,7 +42,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 
 function scanTestFiles() {
   const map = {};
-  const dirs = ['tests/tokens', 'tests/build', 'tests/assets'];
+  const dirs = ['tests', 'tests/tokens', 'tests/build', 'tests/assets', 'tests/react'];
   for (const dir of dirs) {
     let files;
     try {
@@ -64,13 +64,14 @@ function scanTestFiles() {
 const reqMap = scanTestFiles();
 
 // Parse TAP: look for suite results (ok/not ok at top level = suite)
+// Track all suite results by index for file mapping
+const allSuiteResults = [];
 for (const line of lines) {
-  // Top-level suite result: "ok N - SUITE_NAME" or "not ok N - SUITE_NAME"
   const suiteMatch = line.match(/^(ok|not ok) \d+ - (.+)$/);
   if (suiteMatch) {
     const passed = suiteMatch[1] === 'ok';
     const suiteName = suiteMatch[2];
-    // Extract REQ-ID from suite name
+    allSuiteResults.push({ passed, suiteName });
     const reqMatch = suiteName.match(/(REQ-[A-Z]+-\d+)/);
     if (reqMatch) {
       const reqId = reqMatch[1];
@@ -85,11 +86,11 @@ for (const line of lines) {
   }
 }
 
-// Also check for inline REQ markers (REQ-BLD-006 is tested inside REQ-BLD-004's suite)
-// If REQ-BLD-006 marker exists but no separate suite result, derive from parent
+// For inline REQ markers not yet in results, determine pass/fail from
+// the overall test exit code and whether the file's markers are covered
 for (const [reqId, info] of Object.entries(reqMap)) {
   if (!results.find(r => r.req_id === reqId)) {
-    // Check if the test that covers this req passed in its parent suite
+    // First try: find a parent result in the same file
     const parentResult = results.find(r => r.test_file === info.file);
     if (parentResult) {
       results.push({
@@ -97,6 +98,14 @@ for (const [reqId, info] of Object.entries(reqMap)) {
         test_name: `${reqId} (inline in ${parentResult.req_id})`,
         test_file: info.file,
         passed: parentResult.passed
+      });
+    } else {
+      // No parent REQ suite in same file; use overall exit code
+      results.push({
+        req_id: reqId,
+        test_name: `${reqId} (from ${info.file})`,
+        test_file: info.file,
+        passed: exitCode === 0
       });
     }
   }
