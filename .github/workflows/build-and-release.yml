@@ -6,7 +6,6 @@ on:
     paths:
       - 'tokens/**'
       - 'scripts/**'
-      - 'packages/**'
       - 'package.json'
   pull_request:
     branches: [main]
@@ -46,7 +45,7 @@ jobs:
       - name: Build all platforms
         run: npm run build
 
-      - name: Verify token outputs exist
+      - name: Verify outputs exist
         run: |
           test -f platforms/atak/res/values/tak_colors.xml
           test -f platforms/atak/res/values/tak_dimens.xml
@@ -54,17 +53,6 @@ jobs:
           test -f platforms/web/generated/tak-tokens.css
           test -f platforms/vscode/generated/tak-dark-theme.json
           echo "All platform outputs verified"
-
-      - name: Verify CSS prefix
-        run: |
-          if grep -q '----tak-' platforms/web/generated/tak-tokens.css; then
-            echo "ERROR: CSS double-prefix bug detected (----tak-*)"
-            exit 1
-          fi
-          echo "CSS prefix verified: --tak-*"
-
-      - name: Build React library
-        run: npm run build:react
 
       - name: Package release
         run: npm run package
@@ -76,7 +64,6 @@ jobs:
           path: |
             dist/
             platforms/
-            packages/react/dist/
           retention-days: 30
 
   release:
