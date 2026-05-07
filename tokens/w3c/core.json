@@ -72,6 +72,18 @@
       "300": { "$value": "#FFB74D", "$type": "color" },
       "500": { "$value": "#FF9800", "$type": "color" },
       "700": { "$value": "#F57C00", "$type": "color" }
+    },
+    "marine-corps": {
+      "navy": { "$value": "#102341", "$type": "color", "$description": "USMC primary / ATAK Root/primary" },
+      "red": { "$value": "#9F162C", "$type": "color", "$description": "USMC secondary / ATAK Root/secondary" },
+      "text": { "$value": "#F4F4F4", "$type": "color", "$description": "Light text on dark / ATAK Marine Corps/text" }
+    },
+    "tak-blue": {
+      "700": { "$value": "#126DA0", "$type": "color" },
+      "800": { "$value": "#0F5780", "$type": "color" }
+    },
+    "tak-gray": {
+      "800": { "$value": "#384247", "$type": "color" }
     }
   },
   "spacing": {

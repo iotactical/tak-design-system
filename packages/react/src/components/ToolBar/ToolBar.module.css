@@ -1,0 +1,44 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  height: var(--tak-toolbar-height, 48px);
+  padding: 0 var(--tak-toolbar-icon-padding, 12px);
+  background-color: var(--tak-toolbar-background-dark, #2E2E2E);
+  color: var(--tak-text-primary-dark, rgba(255, 255, 255, 0.87));
+  gap: var(--tak-spacing-2, 8px);
+}
+
+[data-tak-theme='light'] .toolbar {
+  background-color: var(--tak-toolbar-background-light, #EEEEEE);
+  color: var(--tak-text-primary-light, rgba(0, 0, 0, 0.87));
+}
+
+.leading {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.title {
+  font-family: var(--tak-font-family-sans, 'Roboto', sans-serif);
+  font-size: var(--tak-typography-toolbar-header-font-size, 14px);
+  font-weight: var(--tak-typography-toolbar-header-font-weight, 600);
+  line-height: var(--tak-typography-toolbar-header-line-height, 22px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.trailing {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: auto;
+}

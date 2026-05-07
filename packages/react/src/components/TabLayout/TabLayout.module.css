@@ -1,0 +1,50 @@
+.tabLayout {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabBar {
+  display: flex;
+  border-bottom: 1px solid var(--tak-border-default-dark, rgba(255, 255, 255, 0.12));
+  overflow-x: auto;
+}
+
+[data-tak-theme='light'] .tabBar {
+  border-bottom-color: var(--tak-border-default-light, rgba(0, 0, 0, 0.12));
+}
+
+.tab {
+  flex-shrink: 0;
+  padding: var(--tak-spacing-2, 8px) var(--tak-spacing-4, 16px);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--tak-font-family-sans, 'Roboto', sans-serif);
+  font-size: var(--tak-typography-tab-label-font-size, 12px);
+  font-weight: var(--tak-typography-tab-label-font-weight, 500);
+  line-height: var(--tak-typography-tab-label-line-height, 18px);
+  color: var(--tak-text-secondary-dark, rgba(255, 255, 255, 0.6));
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+[data-tak-theme='light'] .tab {
+  color: var(--tak-text-secondary-light, rgba(0, 0, 0, 0.6));
+}
+
+.tab:hover {
+  color: var(--tak-text-primary-dark, rgba(255, 255, 255, 0.87));
+}
+
+[data-tak-theme='light'] .tab:hover {
+  color: var(--tak-text-primary-light, rgba(0, 0, 0, 0.87));
+}
+
+.tab.active {
+  color: var(--tak-accent-primary, #2196F3);
+  border-bottom-color: var(--tak-accent-primary, #2196F3);
+}
+
+.tabPanel {
+  padding: var(--tak-spacing-4, 16px) 0;
+}

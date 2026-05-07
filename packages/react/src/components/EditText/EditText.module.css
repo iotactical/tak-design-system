@@ -1,0 +1,80 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tak-spacing-1, 4px);
+}
+
+.label {
+  font-family: var(--tak-font-family-sans, 'Roboto', sans-serif);
+  font-size: var(--tak-typography-base-label-font-size, 12px);
+  font-weight: var(--tak-typography-base-label-font-weight, 400);
+  line-height: var(--tak-typography-base-label-line-height, 18px);
+  color: var(--tak-text-secondary-dark, rgba(255, 255, 255, 0.6));
+}
+
+[data-tak-theme='light'] .label {
+  color: var(--tak-text-secondary-light, rgba(0, 0, 0, 0.6));
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  background-color: var(--tak-surface-elevated-dark, #2E2E2E);
+  border: 1px solid var(--tak-border-default-dark, rgba(255, 255, 255, 0.12));
+  border-radius: var(--tak-border-radius-sm, 4px);
+  overflow: hidden;
+}
+
+[data-tak-theme='light'] .inputRow {
+  background-color: var(--tak-surface-elevated-light, #EEEEEE);
+  border-color: var(--tak-border-default-light, rgba(0, 0, 0, 0.12));
+}
+
+.inputRow:focus-within {
+  border-color: var(--tak-accent-primary, #2196F3);
+}
+
+.hasError .inputRow {
+  border-color: var(--tak-status-error, #F44336);
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--tak-text-primary-dark, rgba(255, 255, 255, 0.87));
+  font-family: var(--tak-font-family-sans, 'Roboto', sans-serif);
+  font-size: var(--tak-font-size-md, 14px);
+  padding: var(--tak-spacing-2, 8px);
+}
+
+[data-tak-theme='light'] .input {
+  color: var(--tak-text-primary-light, rgba(0, 0, 0, 0.87));
+}
+
+.input::placeholder {
+  color: var(--tak-text-disabled-dark, rgba(255, 255, 255, 0.38));
+}
+
+[data-tak-theme='light'] .input::placeholder {
+  color: var(--tak-text-disabled-light, rgba(0, 0, 0, 0.38));
+}
+
+.leading,
+.trailing {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--tak-spacing-2, 8px);
+  color: var(--tak-text-secondary-dark, rgba(255, 255, 255, 0.6));
+}
+
+[data-tak-theme='light'] .leading,
+[data-tak-theme='light'] .trailing {
+  color: var(--tak-text-secondary-light, rgba(0, 0, 0, 0.6));
+}
+
+.error {
+  font-size: var(--tak-font-size-xs, 10px);
+  color: var(--tak-status-error, #F44336);
+}

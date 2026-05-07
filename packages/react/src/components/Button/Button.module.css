@@ -1,0 +1,42 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  font-family: var(--tak-font-family-sans, 'Roboto', sans-serif);
+  font-size: var(--tak-button-primary-font-size, 14px);
+  font-weight: var(--tak-button-primary-font-weight, 500);
+  padding: var(--tak-button-primary-padding-y, 8px) var(--tak-button-primary-padding-x, 16px);
+  border-radius: var(--tak-button-primary-border-radius, 4px);
+  transition: opacity 0.15s ease, background-color 0.15s ease;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button:active {
+  opacity: 0.8;
+}
+
+.button:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+}
+
+.primary {
+  background-color: var(--tak-button-primary-background, #2196F3);
+  color: var(--tak-button-primary-text, #FFFFFF);
+}
+
+.secondary {
+  background-color: var(--tak-button-secondary-background, transparent);
+  color: var(--tak-button-secondary-text, #2196F3);
+  border: 1px solid currentColor;
+}
+
+.danger {
+  background-color: var(--tak-button-danger-background, #F44336);
+  color: var(--tak-button-danger-text, #FFFFFF);
+}

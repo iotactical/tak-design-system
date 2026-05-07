@@ -1,19 +1,30 @@
 {
   "name": "@iotactical/tak-design-system",
   "version": "0.1.0",
+  "private": true,
   "description": "TAK Design System - Design tokens and platform-specific assets for ATAK, WinTAK, TAKX, and WebTAK development",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/iotactical/tak-design-system.git"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "build": "node scripts/build-tokens.mjs",
     "build:android": "node scripts/build-tokens.mjs --platform android",
     "build:compose": "node scripts/build-tokens.mjs --platform compose",
     "build:css": "node scripts/build-tokens.mjs --platform css",
     "build:vscode": "node scripts/build-tokens.mjs --platform vscode",
-    "clean": "rm -rf platforms/atak/res platforms/atak/compose/generated platforms/web/generated platforms/vscode/generated",
+    "build:react": "npm -w packages/react run build",
+    "dev:react": "npm -w packages/react run dev",
+    "clean": "rm -rf platforms/atak/res platforms/atak/compose/generated platforms/web/generated platforms/vscode/generated packages/react/dist",
+    "test": "node --test tests/**/*.mjs",
+    "test:rtmx": "node scripts/run-tests-rtmx.mjs",
+    "test:tokens": "node --test tests/tokens/*.mjs",
+    "test:build": "node --test tests/build/*.mjs",
+    "test:assets": "node --test tests/assets/*.mjs",
     "validate": "node scripts/validate-tokens.mjs",
     "package": "node scripts/package-release.mjs"
   },

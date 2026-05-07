@@ -1,0 +1,61 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--tak-overlay-background, rgba(0, 0, 0, 0.72));
+  z-index: 1000;
+}
+
+.modal {
+  background-color: var(--tak-surface-card-dark, #383838);
+  color: var(--tak-text-primary-dark, rgba(255, 255, 255, 0.87));
+  border-radius: var(--tak-overlay-border-radius, 8px);
+  padding: var(--tak-overlay-padding, 12px);
+  min-width: 280px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+[data-tak-theme='light'] .modal {
+  background-color: var(--tak-surface-card-light, #E0E0E0);
+  color: var(--tak-text-primary-light, rgba(0, 0, 0, 0.87));
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--tak-spacing-3, 12px);
+  border-bottom: 1px solid var(--tak-border-default-dark, rgba(255, 255, 255, 0.12));
+}
+
+[data-tak-theme='light'] .header {
+  border-bottom-color: var(--tak-border-default-light, rgba(0, 0, 0, 0.12));
+}
+
+.title {
+  font-family: var(--tak-font-family-sans, 'Roboto', sans-serif);
+  font-size: var(--tak-typography-toolbar-header-font-size, 14px);
+  font-weight: var(--tak-typography-toolbar-header-font-weight, 600);
+}
+
+.close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  opacity: 0.6;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.body {
+  padding-top: var(--tak-spacing-3, 12px);
+}

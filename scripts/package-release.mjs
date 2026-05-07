@@ -34,6 +34,8 @@ const includes = [
   'platforms/atak/compose/generated/',
   'platforms/web/generated/',
   'platforms/vscode/generated/',
+  'packages/react/dist/',
+  'data/',
   'icons/',
   'LICENSE',
   'README.md'

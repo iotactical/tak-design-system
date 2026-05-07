@@ -101,5 +101,48 @@
     "selection": { "$value": "{color.yellow.300}", "$type": "color" },
     "grid-line": { "$value": "#FFFFFF33", "$type": "color" },
     "range-ring": { "$value": "#42A5F580", "$type": "color" }
+  },
+  "team": {
+    "$description": "ATAK 15-color team palette",
+    "white": { "$value": "{color.white}", "$type": "color" },
+    "yellow": { "$value": "{color.yellow.500}", "$type": "color" },
+    "orange": { "$value": "#FF7700", "$type": "color" },
+    "magenta": { "$value": "#FF00FF", "$type": "color" },
+    "red": { "$value": "{color.red.500}", "$type": "color" },
+    "maroon": { "$value": "#7F0000", "$type": "color" },
+    "purple": { "$value": "#7F007F", "$type": "color" },
+    "dark-blue": { "$value": "#00007F", "$type": "color" },
+    "blue": { "$value": "{color.blue.500}", "$type": "color" },
+    "cyan": { "$value": "#00FFFF", "$type": "color" },
+    "teal": { "$value": "#007F7F", "$type": "color" },
+    "green": { "$value": "{color.green.500}", "$type": "color" },
+    "dark-green": { "$value": "#007F00", "$type": "color" },
+    "brown": { "$value": "#A0714F", "$type": "color" },
+    "pink": { "$value": "#FF1493", "$type": "color" }
+  },
+  "brand": {
+    "primary": { "$value": "{color.marine-corps.navy}", "$type": "color" },
+    "secondary": { "$value": "{color.marine-corps.red}", "$type": "color" },
+    "text": { "$value": "{color.marine-corps.text}", "$type": "color" }
+  },
+  "typography": {
+    "base-label": {
+      "font-family": { "$value": "{fontFamily.sans}", "$type": "fontFamily" },
+      "font-size": { "$value": "12px", "$type": "dimension" },
+      "line-height": { "$value": "18px", "$type": "dimension" },
+      "font-weight": { "$value": "400", "$type": "fontWeight" }
+    },
+    "toolbar-header": {
+      "font-family": { "$value": "{fontFamily.sans}", "$type": "fontFamily" },
+      "font-size": { "$value": "14px", "$type": "dimension" },
+      "line-height": { "$value": "22px", "$type": "dimension" },
+      "font-weight": { "$value": "600", "$type": "fontWeight" }
+    },
+    "tab-label": {
+      "font-family": { "$value": "{fontFamily.sans}", "$type": "fontFamily" },
+      "font-size": { "$value": "12px", "$type": "dimension" },
+      "line-height": { "$value": "18px", "$type": "dimension" },
+      "font-weight": { "$value": "500", "$type": "fontWeight" }
+    }
   }
 }

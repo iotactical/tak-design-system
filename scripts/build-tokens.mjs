@@ -52,7 +52,7 @@ StyleDictionary.registerTransform({
   name: 'name/tak/css',
   type: 'name',
   transform: (token) => {
-    return '--tak-' + token.path.join('-').toLowerCase();
+    return 'tak-' + token.path.join('-').toLowerCase();
   }
 });
 

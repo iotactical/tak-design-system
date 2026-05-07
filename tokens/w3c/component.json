@@ -72,5 +72,22 @@
     "warning-background": { "$value": "{status.warning}", "$type": "color" },
     "error-background": { "$value": "{status.error}", "$type": "color" },
     "info-background": { "$value": "{status.info}", "$type": "color" }
+  },
+  "base": {
+    "width": { "$value": "861px", "$type": "dimension" },
+    "height": { "$value": "427px", "$type": "dimension" },
+    "toolbar": {
+      "hamburger-bg": { "$value": "#000000B2", "$type": "color" },
+      "hamburger-icon": { "$value": "#DAD4BC", "$type": "color" },
+      "item-icon": { "$value": "{color.white}", "$type": "color" }
+    },
+    "controls": {
+      "icon": { "$value": "{color.white}", "$type": "color" },
+      "background": { "$value": "#00000040", "$type": "color" },
+      "nav-icon": { "$value": "#F52D2D", "$type": "color" }
+    },
+    "dockpane": {
+      "slider-bg": { "$value": "#00000080", "$type": "color" }
+    }
   }
 }
