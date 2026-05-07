@@ -11,9 +11,7 @@ const DIST = resolve(ROOT, 'packages', 'react', 'dist');
 
 // rtmx:req REQ-RCT-007
 describe('REQ-RCT-007: React library build', () => {
-  before(() => {
-    execSync('npm run build:react', { cwd: ROOT, stdio: 'pipe' });
-  });
+  // Build is handled by pretest script
 
   it('dist/tak-react.js (ESM) exists', () => {
     assert.ok(existsSync(resolve(DIST, 'tak-react.js')));

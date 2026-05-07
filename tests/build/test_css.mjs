@@ -11,9 +11,7 @@ const CSS_DIR = resolve(ROOT, 'platforms', 'web', 'generated');
 
 // rtmx:req REQ-BLD-004
 describe('REQ-BLD-004: CSS custom properties generation', () => {
-  before(() => {
-    execSync('npm run build:css', { cwd: ROOT, stdio: 'pipe' });
-  });
+  // Build is handled by pretest script
 
   it('tak-tokens.css exists', () => {
     assert.ok(existsSync(resolve(CSS_DIR, 'tak-tokens.css')));

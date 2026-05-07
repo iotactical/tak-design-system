@@ -11,9 +11,7 @@ const VSCODE_DIR = resolve(ROOT, 'platforms', 'vscode', 'generated');
 
 // rtmx:req REQ-BLD-005
 describe('REQ-BLD-005: VS Code dark theme generation', () => {
-  before(() => {
-    execSync('npm run build:vscode', { cwd: ROOT, stdio: 'pipe' });
-  });
+  // Build is handled by pretest script
 
   it('tak-dark-theme.json exists', () => {
     assert.ok(existsSync(resolve(VSCODE_DIR, 'tak-dark-theme.json')));

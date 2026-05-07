@@ -11,9 +11,7 @@ const ATAK_RES = resolve(ROOT, 'platforms', 'atak', 'res', 'values');
 
 // rtmx:req REQ-BLD-002
 describe('REQ-BLD-002: Android XML resource generation', () => {
-  before(() => {
-    execSync('npm run build:android', { cwd: ROOT, stdio: 'pipe' });
-  });
+  // Build is handled by pretest script
 
   it('tak_colors.xml exists', () => {
     assert.ok(existsSync(resolve(ATAK_RES, 'tak_colors.xml')));

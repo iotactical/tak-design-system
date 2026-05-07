@@ -11,9 +11,7 @@ const COMPOSE_DIR = resolve(ROOT, 'platforms', 'atak', 'compose', 'generated');
 
 // rtmx:req REQ-BLD-003
 describe('REQ-BLD-003: Jetpack Compose Kotlin generation', () => {
-  before(() => {
-    execSync('npm run build:compose', { cwd: ROOT, stdio: 'pipe' });
-  });
+  // Build is handled by pretest script
 
   it('TakColors.kt exists', () => {
     assert.ok(existsSync(resolve(COMPOSE_DIR, 'TakColors.kt')));

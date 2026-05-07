@@ -14,9 +14,7 @@ describe('React library exported APIs', () => {
   let dts;
 
   before(() => {
-    if (!existsSync(resolve(DIST, 'index.d.ts'))) {
-      execSync('npm run build:react', { cwd: ROOT, stdio: 'pipe' });
-    }
+    // Build is handled by pretest script
     dts = readFileSync(resolve(DIST, 'index.d.ts'), 'utf8');
   });
 

@@ -13,9 +13,7 @@ describe('React library CSS output', () => {
   let css;
 
   before(() => {
-    if (!existsSync(resolve(DIST, 'style.css'))) {
-      execSync('npm run build:react', { cwd: ROOT, stdio: 'pipe' });
-    }
+    // Build is handled by pretest script
     css = readFileSync(resolve(DIST, 'style.css'), 'utf8');
   });
 
