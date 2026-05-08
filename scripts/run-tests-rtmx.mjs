@@ -42,7 +42,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 
 function scanTestFiles() {
   const map = {};
-  const dirs = ['tests', 'tests/tokens', 'tests/build', 'tests/assets', 'tests/react', 'tests/styles', 'tests/symbology', 'tests/package'];
+  const dirs = ['tests', 'tests/tokens', 'tests/build', 'tests/assets', 'tests/react', 'tests/styles', 'tests/symbology', 'tests/package', 'tests/icons', 'tests/components'];
   for (const dir of dirs) {
     let files;
     try {

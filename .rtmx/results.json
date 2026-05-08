@@ -48,6 +48,24 @@
     "passed": true
   },
   {
+    "req_id": "REQ-CMP-013",
+    "test_name": "REQ-CMP-013: Form controls component set",
+    "test_file": "tests/components/test_form_controls.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-CMP-009",
+    "test_name": "StatusIndicators component exports (REQ-CMP-009)",
+    "test_file": "tests/components/test_status.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-ICN-001",
+    "test_name": "REQ-ICN-001: ATAK drawable resource catalog",
+    "test_file": "tests/icons/test_catalog.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-PKG-001",
     "test_name": "REQ-PKG-001: Release tarball contains all required artifacts",
     "test_file": "tests/package/test_tarball.mjs",
@@ -213,6 +231,12 @@
     "req_id": "REQ-STY-012",
     "test_name": "REQ-STY-012 (inline in REQ-STY-001)",
     "test_file": "tests/styles/test_colors.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-CMP-004",
+    "test_name": "REQ-CMP-004 (from tests/components/test_coordinate.mjs)",
+    "test_file": "tests/components/test_coordinate.mjs",
     "passed": true
   }
 ]

@@ -1,0 +1,72 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tak-spacing-2, 8px);
+  cursor: pointer;
+  user-select: none;
+}
+
+.wrapper.disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+}
+
+.track {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: var(--tak-atak-toggle-width, 132px);
+  height: var(--tak-atak-toggle-height, 41px);
+  background-color: var(--tak-surface-elevated-dark, #2E2E2E);
+  border: 1px solid var(--tak-border-default-dark, rgba(255, 255, 255, 0.12));
+  border-radius: calc(var(--tak-atak-toggle-height, 41px) / 2);
+  transition: background-color 0.2s ease;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: inherit;
+}
+
+.thumb {
+  position: absolute;
+  left: var(--tak-atak-toggle-button-padding, 7px);
+  width: var(--tak-atak-toggle-button-width, 38px);
+  height: calc(var(--tak-atak-toggle-height, 41px) - var(--tak-atak-toggle-button-padding, 7px) * 2);
+  background-color: var(--tak-text-secondary-dark, rgba(255, 255, 255, 0.6));
+  border-radius: 50%;
+  transition: left 0.2s ease, background-color 0.2s ease;
+}
+
+.input:checked ~ .thumb {
+  left: calc(var(--tak-atak-toggle-width, 132px) - var(--tak-atak-toggle-button-width, 38px) - var(--tak-atak-toggle-button-padding, 7px) - 2px);
+  background-color: var(--tak-accent-primary, #2196F3);
+}
+
+.input:checked ~ .track,
+.input:checked + .thumb {
+  background-color: var(--tak-accent-primary, #2196F3);
+}
+
+.label {
+  font-family: var(--tak-font-family-sans, 'Roboto', sans-serif);
+  font-size: var(--tak-font-size-md, 14px);
+  color: var(--tak-text-primary-dark, rgba(255, 255, 255, 0.87));
+}
+
+[data-tak-theme='light'] .track {
+  background-color: var(--tak-surface-elevated-light, #EEEEEE);
+  border-color: var(--tak-border-default-light, rgba(0, 0, 0, 0.12));
+}
+
+[data-tak-theme='light'] .thumb {
+  background-color: var(--tak-text-secondary-light, rgba(0, 0, 0, 0.6));
+}
+
+[data-tak-theme='light'] .label {
+  color: var(--tak-text-primary-light, rgba(0, 0, 0, 0.87));
+}

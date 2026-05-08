@@ -1,0 +1,35 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--tak-font-family-sans, 'Roboto', sans-serif);
+  font-size: var(--tak-font-size-sm, 14px);
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.label {
+  color: var(--tak-color-text, #FFFFFF);
+}
+
+.online .dot {
+  background-color: var(--tak-color-led-green, #92A844);
+}
+
+.offline .dot {
+  background-color: var(--tak-color-led-red, #C92424);
+}
+
+.connecting .dot {
+  background-color: var(--tak-color-heading-yellow, #DFB228);
+}
+
+.error .dot {
+  background-color: var(--tak-color-deep-carmine-pink, #F52D2D);
+}

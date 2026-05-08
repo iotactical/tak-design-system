@@ -1,0 +1,31 @@
+.coordinateDisplay {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--tak-coordinate-display-font-family, 'Roboto Mono', monospace);
+  font-size: var(--tak-coordinate-display-font-size, 13px);
+  color: var(--tak-coordinate-display-text-color, #00FF00);
+  background: var(--tak-coordinate-display-background, #00000099);
+  padding: var(--tak-coordinate-display-padding, 8px);
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.coordinateDisplay:hover {
+  opacity: 0.9;
+}
+
+.format {
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.coords {
+  letter-spacing: 0.05em;
+}
+
+.altitude {
+  opacity: 0.7;
+  margin-left: 4px;
+}
