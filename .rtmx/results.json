@@ -54,6 +54,72 @@
     "passed": true
   },
   {
+    "req_id": "REQ-STY-011",
+    "test_name": "REQ-STY-011: ATAK custom attribute definitions",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-STY-004",
+    "test_name": "REQ-STY-004: ATAK button style family tokens",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-STY-001",
+    "test_name": "REQ-STY-001: ATAK color palette complete mapping",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-STY-006",
+    "test_name": "REQ-STY-006: ATAK dialog style tokens",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-STY-002",
+    "test_name": "REQ-STY-002: ATAK dimension complete mapping",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-STY-009",
+    "test_name": "REQ-STY-009: ATAK input widget tokens",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-STY-008",
+    "test_name": "REQ-STY-008: ATAK list/table style tokens",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-STY-007",
+    "test_name": "REQ-STY-007: ATAK navigation widget tokens",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-STY-010",
+    "test_name": "REQ-STY-010: ATAK tab widget tokens",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-STY-003",
+    "test_name": "REQ-STY-003: ATAK base theme token definition",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-STY-005",
+    "test_name": "REQ-STY-005: ATAK typography style family tokens",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
     "req_id": "REQ-TOK-003",
     "test_name": "REQ-TOK-003: Component token references",
     "test_file": "tests/tokens/test_component.mjs",
