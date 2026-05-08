@@ -1,0 +1,200 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "TAK Design System - ATAK-native tokens. Direct mapping of every color, dimension, and style from ATAK source (styles.xml, colors.xml, dimen.xml).",
+  "atak": {
+    "$description": "ATAK-native color palette. Every named color from ATAK res/values/colors.xml.",
+    "color": {
+      "red": { "$value": "#FF0000", "$type": "color", "$description": "ATAK red" },
+      "white": { "$value": "#FFFFFF", "$type": "color" },
+      "black": { "$value": "#000000", "$type": "color" },
+      "light-gray": { "$value": "#CCCCCC", "$type": "color" },
+      "lighter-gray": { "$value": "#555555", "$type": "color" },
+      "gray": { "$value": "#585858", "$type": "color" },
+      "dark-gray": { "$value": "#272727", "$type": "color" },
+      "darker-gray": { "$value": "#121212", "$type": "color" },
+      "green": { "$value": "#92A844", "$type": "color", "$description": "ATAK green / LED green" },
+      "black-overlay": { "$value": "#FF1F2122", "$type": "color" },
+      "black-overlay-transparent": { "$value": "#C01F2122", "$type": "color" },
+      "heading-yellow": { "$value": "#DFB228", "$type": "color" },
+      "led-green": { "$value": "#92A844", "$type": "color" },
+      "led-red": { "$value": "#C92424", "$type": "color" },
+      "actionbar-background": { "$value": "#99000000", "$type": "color" },
+      "actionbar-background-empty": { "$value": "#44000000", "$type": "color" },
+      "light-blue": { "$value": "#33B5E5", "$type": "color" },
+      "th-green": { "$value": "#00FF00", "$type": "color" },
+      "pastel-gray": { "$value": "#DAD4BC", "$type": "color", "$description": "ATAK beige/parchment tone" },
+      "pale-silver": { "$value": "#CDC8B0", "$type": "color" },
+      "ash-gray": { "$value": "#B4B4B4", "$type": "color" },
+      "atac-beige": { "$value": "#D1CBAF", "$type": "color" },
+      "onyx": { "$value": "#131415", "$type": "color" },
+      "onyx-85": { "$value": "#D8131415", "$type": "color", "$description": "Onyx at 85% opacity" },
+      "maize": { "$value": "#FFE35E", "$type": "color", "$description": "Primary highlight/accent yellow" },
+      "taupe": { "$value": "#38362F", "$type": "color", "$description": "Button pressed state" },
+      "taupe-gray": { "$value": "#878787", "$type": "color" },
+      "sand": { "$value": "#BBAE79", "$type": "color" },
+      "deep-carmine-pink": { "$value": "#F52D2D", "$type": "color", "$description": "Alert/danger color" },
+      "icterine": { "$value": "#F9FF54", "$type": "color", "$description": "Map text overlay color" },
+      "mint-green": { "$value": "#9DFFAF", "$type": "color", "$description": "Default callsign color" },
+      "ufo-green": { "$value": "#3DCF58", "$type": "color" },
+      "light-salmon-pink": { "$value": "#FF9D9D", "$type": "color", "$description": "Alert callsign color" },
+      "manatee": { "$value": "#979797", "$type": "color", "$description": "Listview divider" },
+      "medium-jungle-green": { "$value": "#2B2A2A", "$type": "color" },
+      "trolley-grey": { "$value": "#818181", "$type": "color" },
+      "hansa-yellow": { "$value": "#DEC655", "$type": "color", "$description": "Tooltip/highlight yellow" },
+      "toolbar-tint": { "$value": "#111111", "$type": "color" },
+      "listview-background": { "$value": "#232323", "$type": "color" },
+      "black-tooltip-overlay": { "$value": "#A6000000", "$type": "color" },
+      "text-shadow": { "$value": "#7F000000", "$type": "color" },
+      "bloodhound-info": { "$value": "#B3FFBE", "$type": "color" },
+      "seekbar-background": { "$value": "#80000000", "$type": "color" },
+      "color-group": { "$value": "#30808080", "$type": "color" },
+      "color-child": { "$value": "#30FFFFFF", "$type": "color" },
+      "color-child-missing": { "$value": "#4FFF3333", "$type": "color" },
+      "send-label": { "$value": "#98C5FF", "$type": "color", "$description": "Chat send label - light blue" },
+      "receive-label": { "$value": "#FF483B", "$type": "color", "$description": "Chat receive label - light red" }
+    },
+    "semantic": {
+      "$description": "ATAK semantic color aliases",
+      "alert": { "$value": "{atak.color.deep-carmine-pink}", "$type": "color" },
+      "button-pressed": { "$value": "{atak.color.taupe}", "$type": "color" },
+      "map-text": { "$value": "{atak.color.icterine}", "$type": "color" },
+      "tooltip-text": { "$value": "{atak.color.hansa-yellow}", "$type": "color" },
+      "highlight": { "$value": "{atak.color.hansa-yellow}", "$type": "color" },
+      "callsign-default": { "$value": "{atak.color.mint-green}", "$type": "color" },
+      "callsign-alert": { "$value": "{atak.color.light-salmon-pink}", "$type": "color" },
+      "listview-divider": { "$value": "{atak.color.manatee}", "$type": "color" }
+    },
+    "state": {
+      "$description": "ATAK color state lists - state-dependent colors",
+      "button-foreground": {
+        "pressed": { "$value": "{atak.color.black}", "$type": "color" },
+        "selected": { "$value": "{atak.color.black}", "$type": "color" },
+        "default": { "$value": "{atak.color.pastel-gray}", "$type": "color" }
+      },
+      "icon-tint": {
+        "pressed": { "$value": "{atak.color.maize}", "$type": "color" },
+        "default": { "$value": "{atak.color.pastel-gray}", "$type": "color" }
+      },
+      "nav-item-foreground": {
+        "pressed": { "$value": "{atak.color.black}", "$type": "color" },
+        "default": { "$value": "transparent", "$type": "color" }
+      },
+      "nav-item-foreground-white": {
+        "pressed": { "$value": "{atak.color.black}", "$type": "color" },
+        "default": { "$value": "{atak.color.white}", "$type": "color" }
+      },
+      "nav-settings-background": {
+        "pressed": { "$value": "{atak.color.pastel-gray}", "$type": "color" },
+        "default": { "$value": "{atak.color.black}", "$type": "color" }
+      },
+      "textview": {
+        "enabled": { "$value": "#FFFFFF", "$type": "color" },
+        "disabled": { "$value": "#9E9E9E", "$type": "color" }
+      },
+      "callsign-green-green": {
+        "pressed": { "$value": "{atak.color.ufo-green}", "$type": "color" },
+        "default": { "$value": "{atak.color.mint-green}", "$type": "color" }
+      },
+      "callsign-red-green": {
+        "pressed": { "$value": "{atak.color.ufo-green}", "$type": "color" },
+        "default": { "$value": "{atak.color.light-salmon-pink}", "$type": "color" }
+      },
+      "callsign-red-red": {
+        "pressed": { "$value": "{atak.color.deep-carmine-pink}", "$type": "color" },
+        "default": { "$value": "{atak.color.light-salmon-pink}", "$type": "color" }
+      }
+    },
+    "dimension": {
+      "$description": "ATAK dimension definitions from dimen.xml. All values in px (dp/sp converted 1:1 for base density).",
+      "font": {
+        "text-size": { "$value": "14px", "$type": "dimension" },
+        "draper-very-large": { "$value": "18px", "$type": "dimension" },
+        "draper-large": { "$value": "15px", "$type": "dimension" },
+        "draper-title": { "$value": "13px", "$type": "dimension" },
+        "draper-base": { "$value": "10px", "$type": "dimension" },
+        "draper-small": { "$value": "8px", "$type": "dimension" },
+        "spinner": { "$value": "14px", "$type": "dimension" },
+        "label": { "$value": "13px", "$type": "dimension" },
+        "small": { "$value": "12px", "$type": "dimension" },
+        "medium": { "$value": "14px", "$type": "dimension" },
+        "tiny": { "$value": "10px", "$type": "dimension" },
+        "listview-row": { "$value": "18px", "$type": "dimension" },
+        "listview-row-large": { "$value": "20px", "$type": "dimension" },
+        "section-header": { "$value": "20px", "$type": "dimension" },
+        "vehicle-text": { "$value": "10px", "$type": "dimension" },
+        "compass-text": { "$value": "12px", "$type": "dimension" }
+      },
+      "spacing": {
+        "auto-space": { "$value": "2px", "$type": "dimension" },
+        "auto-space-big": { "$value": "4px", "$type": "dimension" },
+        "auto-margin": { "$value": "6px", "$type": "dimension" },
+        "auto-margin-2": { "$value": "12px", "$type": "dimension" },
+        "scroll-margin": { "$value": "10px", "$type": "dimension" },
+        "padding-small": { "$value": "4px", "$type": "dimension" },
+        "padding-medium": { "$value": "10px", "$type": "dimension" },
+        "padding-large": { "$value": "16px", "$type": "dimension" },
+        "margin-small": { "$value": "4px", "$type": "dimension" },
+        "margin-medium": { "$value": "10px", "$type": "dimension" },
+        "margin-large": { "$value": "16px", "$type": "dimension" }
+      },
+      "component": {
+        "nav-button-size": { "$value": "48px", "$type": "dimension" },
+        "nav-child-button-size": { "$value": "40px", "$type": "dimension" },
+        "nav-child-width": { "$value": "64px", "$type": "dimension" },
+        "nav-child-padding": { "$value": "8px", "$type": "dimension" },
+        "nav-child-pointer-padding": { "$value": "16px", "$type": "dimension" },
+        "nav-zoom-button-height": { "$value": "96px", "$type": "dimension" },
+        "nav-slider-icon-size": { "$value": "32px", "$type": "dimension" },
+        "nav-dex-slider-width": { "$value": "57px", "$type": "dimension" },
+        "nav-grid-item-size": { "$value": "80px", "$type": "dimension" },
+        "button-small": { "$value": "32px", "$type": "dimension" },
+        "button-primary-height": { "$value": "40px", "$type": "dimension" },
+        "button-secondary-height": { "$value": "44px", "$type": "dimension" },
+        "button-marker-size": { "$value": "48px", "$type": "dimension" },
+        "button-marker-padding": { "$value": "8px", "$type": "dimension" },
+        "alert-button-height": { "$value": "48px", "$type": "dimension" },
+        "top-bar-button-padding": { "$value": "5px", "$type": "dimension" },
+        "dropdown-bottom-bar-height": { "$value": "36px", "$type": "dimension" },
+        "textview-height": { "$value": "44px", "$type": "dimension" },
+        "edit-text-drawable-padding": { "$value": "7px", "$type": "dimension" },
+        "list-item-height": { "$value": "44px", "$type": "dimension" },
+        "list-item-large-height": { "$value": "62px", "$type": "dimension" },
+        "list-item-drawer-height": { "$value": "49px", "$type": "dimension" },
+        "list-item-internal-margin": { "$value": "4px", "$type": "dimension" },
+        "list-item-title-icon-size": { "$value": "24px", "$type": "dimension" },
+        "list-item-large-title-icon-size": { "$value": "48px", "$type": "dimension" },
+        "list-item-title-icon-margin": { "$value": "10px", "$type": "dimension" },
+        "list-item-title-margin": { "$value": "8px", "$type": "dimension" },
+        "list-item-action-icon-size": { "$value": "36px", "$type": "dimension" },
+        "alert-dialog-corner-radius": { "$value": "18px", "$type": "dimension" },
+        "standard-dialog-corner-radius": { "$value": "6px", "$type": "dimension" },
+        "message-bar-height": { "$value": "34px", "$type": "dimension" },
+        "toolbar-corner-radius": { "$value": "6px", "$type": "dimension" },
+        "toolbar-corner-radius-end": { "$value": "2px", "$type": "dimension" },
+        "vehicle-icon-size": { "$value": "48px", "$type": "dimension" },
+        "toggle-width": { "$value": "132px", "$type": "dimension" },
+        "toggle-height": { "$value": "41px", "$type": "dimension" },
+        "toggle-button-width": { "$value": "38px", "$type": "dimension" },
+        "toggle-button-padding": { "$value": "7px", "$type": "dimension" },
+        "toggle-textview-width": { "$value": "56px", "$type": "dimension" },
+        "callsign-portrait-height": { "$value": "66px", "$type": "dimension" },
+        "callsign-landscape-height": { "$value": "23px", "$type": "dimension" },
+        "nineline-line-height": { "$value": "32px", "$type": "dimension" },
+        "nineline-line-height-tight": { "$value": "22px", "$type": "dimension" },
+        "dynamic-compass-height": { "$value": "54px", "$type": "dimension" },
+        "dynamic-compass-arrow-padding": { "$value": "14px", "$type": "dimension" },
+        "downwards-drop-shadow-height": { "$value": "16px", "$type": "dimension" },
+        "shape-color-dialog-margin": { "$value": "8px", "$type": "dimension" }
+      }
+    },
+    "font": {
+      "$description": "ATAK font families. Nunito is the primary UI font (not Roboto).",
+      "primary": { "$value": "Nunito, sans-serif", "$type": "fontFamily", "$description": "ATAK primary UI font" },
+      "primary-bold": { "$value": "Nunito Bold, sans-serif", "$type": "fontFamily" },
+      "digital": { "$value": "Digital, monospace", "$type": "fontFamily", "$description": "Digital readout font" },
+      "digital-bold": { "$value": "Digital Bold, monospace", "$type": "fontFamily" },
+      "mono": { "$value": "Roboto Mono, monospace", "$type": "fontFamily", "$description": "Coordinate display" },
+      "condensed": { "$value": "Roboto Condensed, sans-serif", "$type": "fontFamily", "$description": "Space-constrained labels" }
+    }
+  }
+}
