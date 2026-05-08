@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- mil-sym-android AffiliationColors - generated from W3C design tokens (REQ-SYM-002) -->
+<!-- Do not edit manually. Run `npm run build:bridge` to regenerate. -->
+<resources>
+    <color name="mil_sym_affiliation_friendly">#2196F3</color>
+    <color name="mil_sym_affiliation_hostile">#F44336</color>
+    <color name="mil_sym_affiliation_neutral">#4CAF50</color>
+    <color name="mil_sym_affiliation_unknown">#FFEB3B</color>
+    <color name="mil_sym_affiliation_suspect">#FF9800</color>
+    <color name="mil_sym_affiliation_pending">#FBC02D</color>
+</resources>

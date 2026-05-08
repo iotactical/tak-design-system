@@ -1,0 +1,11 @@
+{
+  "$description": "mil-sym-ts AffiliationColors - generated from W3C design tokens (REQ-SYM-002)",
+  "affiliationColors": {
+    "friendly": "#2196F3",
+    "hostile": "#F44336",
+    "neutral": "#4CAF50",
+    "unknown": "#FFEB3B",
+    "suspect": "#FF9800",
+    "pending": "#FBC02D"
+  }
+}

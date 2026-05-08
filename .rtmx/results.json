@@ -48,6 +48,12 @@
     "passed": true
   },
   {
+    "req_id": "REQ-PKG-001",
+    "test_name": "REQ-PKG-001: Release tarball contains all required artifacts",
+    "test_file": "tests/package/test_tarball.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-RCT-007",
     "test_name": "REQ-RCT-007: React library build",
     "test_file": "tests/react/test_react_build.mjs",
@@ -56,67 +62,73 @@
   {
     "req_id": "REQ-STY-011",
     "test_name": "REQ-STY-011: ATAK custom attribute definitions",
-    "test_file": "unknown",
+    "test_file": "tests/styles/test_attrs.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-STY-004",
     "test_name": "REQ-STY-004: ATAK button style family tokens",
-    "test_file": "unknown",
+    "test_file": "tests/styles/test_buttons.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-STY-001",
     "test_name": "REQ-STY-001: ATAK color palette complete mapping",
-    "test_file": "unknown",
+    "test_file": "tests/styles/test_colors.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-STY-006",
     "test_name": "REQ-STY-006: ATAK dialog style tokens",
-    "test_file": "unknown",
+    "test_file": "tests/styles/test_dialogs.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-STY-002",
     "test_name": "REQ-STY-002: ATAK dimension complete mapping",
-    "test_file": "unknown",
+    "test_file": "tests/styles/test_dimens.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-STY-009",
     "test_name": "REQ-STY-009: ATAK input widget tokens",
-    "test_file": "unknown",
+    "test_file": "tests/styles/test_inputs.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-STY-008",
     "test_name": "REQ-STY-008: ATAK list/table style tokens",
-    "test_file": "unknown",
+    "test_file": "tests/styles/test_lists.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-STY-007",
     "test_name": "REQ-STY-007: ATAK navigation widget tokens",
-    "test_file": "unknown",
+    "test_file": "tests/styles/test_navigation.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-STY-010",
     "test_name": "REQ-STY-010: ATAK tab widget tokens",
-    "test_file": "unknown",
+    "test_file": "tests/styles/test_tabs.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-STY-003",
     "test_name": "REQ-STY-003: ATAK base theme token definition",
-    "test_file": "unknown",
+    "test_file": "tests/styles/test_theme.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-STY-005",
     "test_name": "REQ-STY-005: ATAK typography style family tokens",
-    "test_file": "unknown",
+    "test_file": "tests/styles/test_typography.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-SYM-002",
+    "test_name": "REQ-SYM-002: Design token to mil-sym affiliation color bridge",
+    "test_file": "tests/symbology/test_color_bridge.mjs",
     "passed": true
   },
   {
@@ -195,6 +207,12 @@
     "req_id": "REQ-RCT-006",
     "test_name": "REQ-RCT-006 (inline in REQ-RCT-001)",
     "test_file": "tests/react/test_exports.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-STY-012",
+    "test_name": "REQ-STY-012 (inline in REQ-STY-001)",
+    "test_file": "tests/styles/test_colors.mjs",
     "passed": true
   }
 ]
