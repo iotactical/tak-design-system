@@ -12,6 +12,10 @@ export { ProgressBar, type ProgressBarProps } from './components/ProgressBar';
 export { CoordinateDisplay, type CoordinateDisplayProps, type CoordinateFormat } from './components/CoordinateDisplay';
 export { ConnectionStatus, type ConnectionStatusProps } from './components/ConnectionStatus';
 export { GPSStatus, type GPSStatusProps } from './components/GPSStatus';
+export { NavBar, type NavBarProps, type NavBarAction } from './components/NavBar';
+export { DockPane, type DockPaneProps } from './components/DockPane';
+export { DialogPanel, type DialogPanelProps, type DialogAction } from './components/DialogPanel';
+export { ListView, type ListViewProps, type ListItem } from './components/ListView';
 
 // Theme
 export { TakThemeProvider, useTakTheme, type TakThemeProviderProps } from './theme/TakThemeProvider';

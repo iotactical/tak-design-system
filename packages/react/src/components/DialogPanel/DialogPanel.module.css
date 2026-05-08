@@ -1,0 +1,139 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--tak-overlay-background, rgba(0, 0, 0, 0.72));
+  z-index: 1000;
+}
+
+.dialog {
+  background-color: var(--tak-surface-card-dark, #383838);
+  color: var(--tak-text-primary-light, rgba(0, 0, 0, 0.87));
+  padding: var(--tak-overlay-padding, 12px);
+  min-width: 280px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  outline: none;
+}
+
+/* Standard variant: 6px corners (ATAK standardDialog) */
+.standard {
+  border-radius: var(--tak-standard-dialog-corner-radius, 6px);
+}
+
+/* Alert variant: 18px corners (ATAK newAlertDialog) */
+.alert {
+  border-radius: var(--tak-alert-dialog-corner-radius, 18px);
+}
+
+/* Fullscreen variant: no corners, fills viewport */
+.fullscreen {
+  border-radius: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+/* Destructive styling */
+.destructive {
+  border: 2px solid var(--tak-atak-semantic-alert, #F52D2D);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--tak-spacing-3, 12px);
+  border-bottom: 1px solid var(--tak-border-default-dark, rgba(255, 255, 255, 0.12));
+}
+
+.title {
+  font-family: var(--tak-atak-font-primary, 'Nunito', sans-serif);
+  font-size: var(--tak-typography-toolbar-header-font-size, 14px);
+  font-weight: 600;
+  color: var(--tak-text-primary-light, rgba(0, 0, 0, 0.87));
+}
+
+.close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  opacity: 0.6;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.body {
+  padding-top: var(--tak-spacing-3, 12px);
+  font-family: var(--tak-atak-font-primary, 'Nunito', sans-serif);
+  color: var(--tak-text-primary-light, rgba(0, 0, 0, 0.87));
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--tak-spacing-2, 8px);
+  padding-top: var(--tak-spacing-3, 12px);
+  border-top: 1px solid var(--tak-border-default-dark, rgba(255, 255, 255, 0.12));
+  margin-top: var(--tak-spacing-3, 12px);
+}
+
+.actionButton {
+  font-family: var(--tak-atak-font-primary, 'Nunito', sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--tak-standard-dialog-corner-radius, 6px);
+  padding: 8px 16px;
+  cursor: pointer;
+  min-height: var(--tak-atak-dimension-component-alert-button-height, 48px);
+}
+
+.actionPrimary {
+  background-color: var(--tak-atak-semantic-primary, #4DA6D8);
+  color: #ffffff;
+}
+
+.actionPrimary:hover {
+  opacity: 0.85;
+}
+
+.actionSecondary {
+  background-color: transparent;
+  color: var(--tak-text-primary-light, rgba(0, 0, 0, 0.87));
+  border: 1px solid var(--tak-border-default-dark, rgba(255, 255, 255, 0.12));
+}
+
+.actionSecondary:hover {
+  opacity: 0.85;
+}
+
+.actionDestructive {
+  background-color: var(--tak-atak-semantic-alert, #F52D2D);
+  color: #ffffff;
+}
+
+.actionDestructive:hover {
+  opacity: 0.85;
+}
+
+[data-tak-theme='light'] .dialog {
+  background-color: var(--tak-surface-card-light, #E0E0E0);
+}
+
+[data-tak-theme='light'] .header {
+  border-bottom-color: var(--tak-border-default-light, rgba(0, 0, 0, 0.12));
+}
+
+[data-tak-theme='light'] .actions {
+  border-top-color: var(--tak-border-default-light, rgba(0, 0, 0, 0.12));
+}

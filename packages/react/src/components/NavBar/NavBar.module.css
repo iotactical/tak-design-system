@@ -1,0 +1,122 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  height: var(--tak-toolbar-height, 48px);
+  padding: 0 var(--tak-toolbar-icon-padding, 12px);
+  background-color: var(--tak-base-toolbar-hamburger-bg, #000000B2);
+  color: var(--tak-base-toolbar-item-icon, #FFFFFF);
+  gap: var(--tak-spacing-2, 8px);
+}
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tak-nav-button-size, 48px);
+  height: var(--tak-nav-button-size, 48px);
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.menuIcon {
+  color: var(--tak-base-toolbar-hamburger-icon, #DAD4BC);
+}
+
+.menuButton:active .menuIcon {
+  color: var(--tak-atak-color-maize, #FFE35E);
+}
+
+.title {
+  font-family: var(--tak-font-family-sans, 'Roboto', sans-serif);
+  font-size: var(--tak-typography-toolbar-header-font-size, 14px);
+  font-weight: var(--tak-typography-toolbar-header-font-weight, 600);
+  line-height: var(--tak-typography-toolbar-header-line-height, 22px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--tak-atak-color-pastel-gray, #DAD4BC);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.searchInput {
+  width: 100%;
+  height: 32px;
+  padding: 0 var(--tak-spacing-2, 8px);
+  border: 1px solid var(--tak-atak-color-pastel-gray, #DAD4BC);
+  border-radius: var(--tak-borderRadius-sm, 4px);
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--tak-atak-color-pastel-gray, #DAD4BC);
+  font-family: var(--tak-font-family-sans, 'Roboto', sans-serif);
+  font-size: var(--tak-fontSize-sm, 12px);
+}
+
+.searchInput::placeholder {
+  color: var(--tak-atak-color-pastel-gray, #DAD4BC);
+  opacity: 0.6;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--tak-atak-color-maize, #FFE35E);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: var(--tak-spacing-1, 4px);
+}
+
+.actionButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tak-nav-button-size, 48px);
+  height: var(--tak-nav-button-size, 48px);
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--tak-atak-color-pastel-gray, #DAD4BC);
+}
+
+.actionButton:active {
+  color: var(--tak-atak-color-maize, #FFE35E);
+}
+
+.overflowButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tak-nav-button-size, 48px);
+  height: var(--tak-nav-button-size, 48px);
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.overflowIcon {
+  color: var(--tak-atak-color-pastel-gray, #DAD4BC);
+}
+
+.overflowButton:active .overflowIcon {
+  color: var(--tak-atak-color-maize, #FFE35E);
+}

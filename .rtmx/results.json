@@ -48,9 +48,33 @@
     "passed": true
   },
   {
+    "req_id": "REQ-CMP-015",
+    "test_name": "REQ-CMP-015: DialogPanel component set",
+    "test_file": "tests/components/test_dialog.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-CMP-003",
+    "test_name": "DockPane component exports (REQ-CMP-003)",
+    "test_file": "tests/components/test_dockpane.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-CMP-013",
     "test_name": "REQ-CMP-013: Form controls component set",
     "test_file": "tests/components/test_form_controls.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-CMP-014",
+    "test_name": "ListView component exports (REQ-CMP-014)",
+    "test_file": "tests/components/test_listview.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-CMP-001",
+    "test_name": "NavBar component exports (REQ-CMP-001)",
+    "test_file": "tests/components/test_navbar.mjs",
     "passed": true
   },
   {

@@ -1,0 +1,97 @@
+.listView {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background: var(--tak-surface-list, #232323);
+  font-family: var(--tak-font-family-sans, 'Nunito', sans-serif);
+  color: var(--tak-text-primary-dark, #ffffff);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: var(--tak-spacing-2, 8px) var(--tak-spacing-4, 16px);
+  cursor: pointer;
+  transition: background 0.15s ease;
+  outline: none;
+}
+
+.item.multiTier {
+  min-height: 62px;
+}
+
+.item:hover,
+.item:focus-visible {
+  background: var(--tak-surface-list-hover, rgba(255, 255, 255, 0.08));
+}
+
+.item.selected {
+  background: var(--tak-surface-list-selected, rgba(33, 150, 243, 0.16));
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-right: var(--tak-spacing-3, 12px);
+}
+
+.item.multiTier .icon {
+  width: 48px;
+  height: 48px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 2px;
+}
+
+.title {
+  font-size: var(--tak-typography-header1-font-size, 14px);
+  font-weight: var(--tak-typography-header1-font-weight, 700);
+  line-height: var(--tak-typography-header1-line-height, 20px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.subtitle {
+  font-size: var(--tak-typography-body-font-size, 12px);
+  font-weight: var(--tak-typography-body-font-weight, 400);
+  line-height: var(--tak-typography-body-line-height, 16px);
+  color: var(--tak-text-secondary-dark, rgba(255, 255, 255, 0.6));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tertiary {
+  font-size: var(--tak-typography-body-font-size, 12px);
+  font-weight: var(--tak-typography-body-font-weight, 400);
+  line-height: var(--tak-typography-body-line-height, 16px);
+  color: var(--tak-text-tertiary-dark, rgba(255, 255, 255, 0.38));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: var(--tak-spacing-3, 12px);
+}
+
+.divider {
+  height: 1px;
+  background: var(--tak-border-divider, #979797);
+  margin: 0 var(--tak-spacing-4, 16px);
+}
