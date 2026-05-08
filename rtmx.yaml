@@ -5,6 +5,11 @@ rtmx:
   database: .rtmx/database.csv
   requirements_dir: .rtmx/requirements
   schema: core
+  phases:
+    1: Foundation
+    2: Core Features
+    3: ATAK Parity
+    4: Asset Packs
   test_dir: tests
   languages:
     - javascript
