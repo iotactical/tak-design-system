@@ -1,0 +1,198 @@
+{
+  "iconset": "wildfire",
+  "count": 48,
+  "icons": [
+    {
+      "name": "Unimproved Landing Zone.png",
+      "path": "WildFire/Unimproved Landing Zone.png"
+    },
+    {
+      "name": "Dozer Push.png",
+      "path": "WildFire/Dozer Push.png"
+    },
+    {
+      "name": "Fire Origin.png",
+      "path": "WildFire/Fire Origin.png"
+    },
+    {
+      "name": "Other.png",
+      "path": "WildFire/Other.png"
+    },
+    {
+      "name": "Hazard Tree.png",
+      "path": "WildFire/Hazard Tree.png"
+    },
+    {
+      "name": "Stream Crossing.png",
+      "path": "WildFire/Stream Crossing.png"
+    },
+    {
+      "name": "Safety Zone.png",
+      "path": "WildFire/Safety Zone.png"
+    },
+    {
+      "name": "Resource Location.png",
+      "path": "WildFire/Resource Location.png"
+    },
+    {
+      "name": "Retardant Avoidance Area.png",
+      "path": "WildFire/Retardant Avoidance Area.png"
+    },
+    {
+      "name": "Incident Command Post.png",
+      "path": "WildFire/Incident Command Post.png"
+    },
+    {
+      "name": "Closure.png",
+      "path": "WildFire/Closure.png"
+    },
+    {
+      "name": "Helispot.png",
+      "path": "WildFire/Helispot.png"
+    },
+    {
+      "name": "Internet Access.png",
+      "path": "WildFire/Internet Access.png"
+    },
+    {
+      "name": "Gate.png",
+      "path": "WildFire/Gate.png"
+    },
+    {
+      "name": "Dip Site.png",
+      "path": "WildFire/Dip Site.png"
+    },
+    {
+      "name": "Repair Point.png",
+      "path": "WildFire/Repair Point.png"
+    },
+    {
+      "name": "Structure Wrap.png",
+      "path": "WildFire/Structure Wrap.png"
+    },
+    {
+      "name": "Culvert.png",
+      "path": "WildFire/Culvert.png"
+    },
+    {
+      "name": "Mobile Retardant Base.png",
+      "path": "WildFire/Mobile Retardant Base.png"
+    },
+    {
+      "name": "Clean Up Area.png",
+      "path": "WildFire/Clean Up Area.png"
+    },
+    {
+      "name": "Zone Break.png",
+      "path": "WildFire/Zone Break.png"
+    },
+    {
+      "name": "Staging Area.png",
+      "path": "WildFire/Staging Area.png"
+    },
+    {
+      "name": "Fire Location.png",
+      "path": "WildFire/Fire Location.png"
+    },
+    {
+      "name": "Branch Break.png",
+      "path": "WildFire/Branch Break.png"
+    },
+    {
+      "name": "Helibase.png",
+      "path": "WildFire/Helibase.png"
+    },
+    {
+      "name": "Hazard.png",
+      "path": "WildFire/Hazard.png"
+    },
+    {
+      "name": "Landing or Log Deck.png",
+      "path": "WildFire/Landing or Log Deck.png"
+    },
+    {
+      "name": "Mobile Weather Unit.png",
+      "path": "WildFire/Mobile Weather Unit.png"
+    },
+    {
+      "name": "Water Source.png",
+      "path": "WildFire/Water Source.png"
+    },
+    {
+      "name": "Camp.png",
+      "path": "WildFire/Camp.png"
+    },
+    {
+      "name": "Aerial Hazard.png",
+      "path": "WildFire/Aerial Hazard.png"
+    },
+    {
+      "name": "Medical.png",
+      "path": "WildFire/Medical.png"
+    },
+    {
+      "name": "Landmark.png",
+      "path": "WildFire/Landmark.png"
+    },
+    {
+      "name": "Sling Site.png",
+      "path": "WildFire/Sling Site.png"
+    },
+    {
+      "name": "Restricted Water Source.png",
+      "path": "WildFire/Restricted Water Source.png"
+    },
+    {
+      "name": "Water Development for Draft Site.png",
+      "path": "WildFire/Water Development for Draft Site.png"
+    },
+    {
+      "name": "Lookout.png",
+      "path": "WildFire/Lookout.png"
+    },
+    {
+      "name": "Aviation Check Point.png",
+      "path": "WildFire/Aviation Check Point.png"
+    },
+    {
+      "name": "Road Repair.png",
+      "path": "WildFire/Road Repair.png"
+    },
+    {
+      "name": "Bridge.png",
+      "path": "WildFire/Bridge.png"
+    },
+    {
+      "name": "Value at Risk.png",
+      "path": "WildFire/Value at Risk.png"
+    },
+    {
+      "name": "Drop Point.png",
+      "path": "WildFire/Drop Point.png"
+    },
+    {
+      "name": "Division Break.png",
+      "path": "WildFire/Division Break.png"
+    },
+    {
+      "name": "Airstrip or Airport.png",
+      "path": "WildFire/Airstrip or Airport.png"
+    },
+    {
+      "name": "Fence Cut or Damaged.png",
+      "path": "WildFire/Fence Cut or Damaged.png"
+    },
+    {
+      "name": "Repeater.png",
+      "path": "WildFire/Repeater.png"
+    },
+    {
+      "name": "Hot Spot or Spot Fire.png",
+      "path": "WildFire/Hot Spot or Spot Fire.png"
+    },
+    {
+      "name": "Fire Station.png",
+      "path": "WildFire/Fire Station.png"
+    }
+  ]
+}

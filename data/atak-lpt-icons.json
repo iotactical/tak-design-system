@@ -1,0 +1,870 @@
+[
+  {
+    "name": "lpt_1bct_hlzs",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_2_82bct_hlzs",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_2bct_hlzs",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_2lcr_hlzs",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_3bct_hlzs",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_a_10",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_airplane",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_airship",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_anchor1",
+    "category": "ground-vehicle"
+  },
+  {
+    "name": "lpt_anchor2",
+    "category": "ground-vehicle"
+  },
+  {
+    "name": "lpt_b_1",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_b_52",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_blue_chk",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_blue_crs",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_blue_dot",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_blue_dot2",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_blue_ip",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_blue_local",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_blue_sqr",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_blue_target",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_blue_turn",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_blue_x",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_blue_x2",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_blustar",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_boat_1",
+    "category": "ground-vehicle"
+  },
+  {
+    "name": "lpt_brown_turn",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_c_130",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_car1",
+    "category": "ground-vehicle"
+  },
+  {
+    "name": "lpt_cargo",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_cemeteri",
+    "category": "infrastructure"
+  },
+  {
+    "name": "lpt_circ",
+    "category": "other"
+  },
+  {
+    "name": "lpt_cyan_chk",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_cyan_crs",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_cyan_dot",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_cyan_dot2",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_cyan_sqr",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_cyan_target",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_cyan_turn",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_cyan_x",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_cyan_x2",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_cynstar",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_divert",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_dot",
+    "category": "other"
+  },
+  {
+    "name": "lpt_drop_zone",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_dz",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_e_3",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_f_15",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_f_4",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_face1",
+    "category": "other"
+  },
+  {
+    "name": "lpt_farp",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_flash1",
+    "category": "other"
+  },
+  {
+    "name": "lpt_ger_achad_chmimney",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_achad_chmimney_unlt",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_achad_delete",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_achad_multi__twr_unlt",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_achad_multi_chmimney",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_achad_multi_chmimney_unlt",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_achad_multi_twr_lt",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_achad_sgl_twr_lt",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_achad_sgl_twr_unlt",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_achad_unknown_type",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_achad_wm_twr",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_amend",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_chmimney",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_delete",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_multi__twr_unlt",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_multi_twr_lt",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_new",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_sgl_twr_lt",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_sgl_twr_unlt",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_unknown_type",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_ger_wm_twr",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_gndfoot",
+    "category": "ground-vehicle"
+  },
+  {
+    "name": "lpt_gndmotor",
+    "category": "ground-vehicle"
+  },
+  {
+    "name": "lpt_gps_waypoint",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_gray_dot2",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gray_gndfoot",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gray_ip",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gray_local",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gray_turn",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gray_x",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gray_x2",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_green_dot2",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gren_chk",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gren_crs",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gren_dot",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gren_ip",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gren_local",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gren_sqr",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gren_turn",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gren_x",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gren_x2",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_grn_target",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_grnstar",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gry_check",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gry_cross",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gry_dot",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gry_square",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_gry_target",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_grystar",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_hand1",
+    "category": "other"
+  },
+  {
+    "name": "lpt_hazwaste",
+    "category": "infrastructure"
+  },
+  {
+    "name": "lpt_helicopter",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_helipad",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_hog",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_hospital",
+    "category": "infrastructure"
+  },
+  {
+    "name": "lpt_hospital_1",
+    "category": "infrastructure"
+  },
+  {
+    "name": "lpt_hospital_old",
+    "category": "infrastructure"
+  },
+  {
+    "name": "lpt_house1",
+    "category": "infrastructure"
+  },
+  {
+    "name": "lpt_hport",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_info",
+    "category": "other"
+  },
+  {
+    "name": "lpt_initial_point",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_ip2",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_kc_135",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_light_1",
+    "category": "infrastructure"
+  },
+  {
+    "name": "lpt_local_point",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_local_point_ip",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_local_point_target",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_local_point_turn",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_marswimmer",
+    "category": "ground-vehicle"
+  },
+  {
+    "name": "lpt_medevac_hlzs",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_medevac_hlzs_old",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_medheliport",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_medical",
+    "category": "infrastructure"
+  },
+  {
+    "name": "lpt_nfz",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_nrp_1",
+    "category": "other"
+  },
+  {
+    "name": "lpt_nrp_3",
+    "category": "other"
+  },
+  {
+    "name": "lpt_nrp_4",
+    "category": "other"
+  },
+  {
+    "name": "lpt_nrp_6",
+    "category": "other"
+  },
+  {
+    "name": "lpt_nuke",
+    "category": "infrastructure"
+  },
+  {
+    "name": "lpt_orange_turn",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_parachut",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_photo",
+    "category": "other"
+  },
+  {
+    "name": "lpt_pistol1",
+    "category": "other"
+  },
+  {
+    "name": "lpt_port_civ",
+    "category": "infrastructure"
+  },
+  {
+    "name": "lpt_purp_chk",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_purp_crs",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_purp_dot",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_purp_dot2",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_purp_ip",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_purp_local",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_purp_sqr",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_purp_target",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_purp_turn",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_purp_x",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_purp_x2",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_purstar",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_pushpin",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_red_chk",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_red_crs",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_red_dot",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_red_dot2",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_red_gndfoot",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_red_ip",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_red_local",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_red_sqr",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_red_target",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_red_turn",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_red_x",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_red_x2",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_redstar",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_rf",
+    "category": "infrastructure"
+  },
+  {
+    "name": "lpt_runway",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_ship1",
+    "category": "ground-vehicle"
+  },
+  {
+    "name": "lpt_subsurface",
+    "category": "ground-vehicle"
+  },
+  {
+    "name": "lpt_surfaceship",
+    "category": "ground-vehicle"
+  },
+  {
+    "name": "lpt_t_bird",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_tactical_airfield",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_tactical_helipad",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_target",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_tgt",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_tgt1",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_tgt2",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_tgt3",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_tgt4",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_tgt5",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_tgt6",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_tgt7",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_tlight1",
+    "category": "infrastructure"
+  },
+  {
+    "name": "lpt_tornado",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_tree",
+    "category": "infrastructure"
+  },
+  {
+    "name": "lpt_truck1",
+    "category": "ground-vehicle"
+  },
+  {
+    "name": "lpt_truck2",
+    "category": "ground-vehicle"
+  },
+  {
+    "name": "lpt_turn_point",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_turn_point_icon",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_turnpoint",
+    "category": "navigation"
+  },
+  {
+    "name": "lpt_tweet",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_update",
+    "category": "other"
+  },
+  {
+    "name": "lpt_update2",
+    "category": "other"
+  },
+  {
+    "name": "lpt_vfr_compulsory",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_vfr_non_compulsory",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_vip_helipad",
+    "category": "helicopter"
+  },
+  {
+    "name": "lpt_viper",
+    "category": "aircraft"
+  },
+  {
+    "name": "lpt_whale",
+    "category": "ground-vehicle"
+  },
+  {
+    "name": "lpt_white_cross",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_white_dot",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_white_dot2",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_white_ip",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_white_local",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_white_square",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_white_star",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_white_target",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_white_turn",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_white_x",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_white_x2",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_yel_check",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_yel_dot2",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_yel_ip",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_yel_local",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_yel_target",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_yel_turn",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_yelo_crs",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_yelo_dot",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_yelo_sqr",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_yelo_x",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_yelo_x2",
+    "category": "marker"
+  },
+  {
+    "name": "lpt_yelstar",
+    "category": "marker"
+  }
+]

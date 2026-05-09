@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Digital-Bold",
+    "file": "Digital-Bold.ttf",
+    "source": "assets",
+    "family": "Digital"
+  },
+  {
+    "name": "Digital",
+    "file": "Digital.ttf",
+    "source": "assets",
+    "family": "Digital"
+  },
+  {
+    "name": "Roboto-Bold",
+    "file": "Roboto-Bold.ttf",
+    "source": "assets",
+    "family": "Roboto"
+  },
+  {
+    "name": "Roboto-Condensed",
+    "file": "Roboto-Condensed.ttf",
+    "source": "assets",
+    "family": "Roboto"
+  },
+  {
+    "name": "nunito_bold",
+    "file": "nunito_bold.ttf",
+    "source": "res",
+    "family": "Nunito"
+  },
+  {
+    "name": "nunito_regular",
+    "file": "nunito_regular.ttf",
+    "source": "res",
+    "family": "Nunito"
+  }
+]

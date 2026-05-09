@@ -1,0 +1,1146 @@
+[
+  {
+    "name": "above_black",
+    "category": "altitude"
+  },
+  {
+    "name": "above_blank",
+    "category": "altitude"
+  },
+  {
+    "name": "above_blue",
+    "category": "altitude"
+  },
+  {
+    "name": "above_cyan",
+    "category": "altitude"
+  },
+  {
+    "name": "above_darkblue",
+    "category": "altitude"
+  },
+  {
+    "name": "above_darkgreen",
+    "category": "altitude"
+  },
+  {
+    "name": "above_green",
+    "category": "altitude"
+  },
+  {
+    "name": "above_grey",
+    "category": "altitude"
+  },
+  {
+    "name": "above_magenta",
+    "category": "altitude"
+  },
+  {
+    "name": "above_maroon",
+    "category": "altitude"
+  },
+  {
+    "name": "above_orange",
+    "category": "altitude"
+  },
+  {
+    "name": "above_purple",
+    "category": "altitude"
+  },
+  {
+    "name": "above_red",
+    "category": "altitude"
+  },
+  {
+    "name": "above_teal",
+    "category": "altitude"
+  },
+  {
+    "name": "above_white",
+    "category": "altitude"
+  },
+  {
+    "name": "above_yellow",
+    "category": "altitude"
+  },
+  {
+    "name": "add_waypoint_selected",
+    "category": "other"
+  },
+  {
+    "name": "add_waypoint_to_route",
+    "category": "other"
+  },
+  {
+    "name": "affiliations",
+    "category": "other"
+  },
+  {
+    "name": "aimpoint",
+    "category": "other"
+  },
+  {
+    "name": "aimpoint_select",
+    "category": "other"
+  },
+  {
+    "name": "aircraft",
+    "category": "other"
+  },
+  {
+    "name": "aircraft_generic",
+    "category": "other"
+  },
+  {
+    "name": "aircraft_unknown_high_res",
+    "category": "other"
+  },
+  {
+    "name": "alarm-geophysical",
+    "category": "alarm"
+  },
+  {
+    "name": "alarm-open",
+    "category": "alarm"
+  },
+  {
+    "name": "alarm-panic",
+    "category": "alarm"
+  },
+  {
+    "name": "alarm-trouble",
+    "category": "alarm"
+  },
+  {
+    "name": "alt_dip",
+    "category": "other"
+  },
+  {
+    "name": "alt_dip_gray",
+    "category": "other"
+  },
+  {
+    "name": "alt_dip_green",
+    "category": "other"
+  },
+  {
+    "name": "alt_phone_icon",
+    "category": "other"
+  },
+  {
+    "name": "android_app",
+    "category": "other"
+  },
+  {
+    "name": "as7",
+    "category": "other"
+  },
+  {
+    "name": "attachment",
+    "category": "other"
+  },
+  {
+    "name": "audio",
+    "category": "other"
+  },
+  {
+    "name": "b",
+    "category": "other"
+  },
+  {
+    "name": "b-i-x-i",
+    "category": "other"
+  },
+  {
+    "name": "b-m-p-s-p-i",
+    "category": "other"
+  },
+  {
+    "name": "back_to_menu",
+    "category": "other"
+  },
+  {
+    "name": "below_black",
+    "category": "altitude"
+  },
+  {
+    "name": "below_blank",
+    "category": "altitude"
+  },
+  {
+    "name": "below_blue",
+    "category": "altitude"
+  },
+  {
+    "name": "below_cyan",
+    "category": "altitude"
+  },
+  {
+    "name": "below_darkblue",
+    "category": "altitude"
+  },
+  {
+    "name": "below_darkgreen",
+    "category": "altitude"
+  },
+  {
+    "name": "below_green",
+    "category": "altitude"
+  },
+  {
+    "name": "below_grey",
+    "category": "altitude"
+  },
+  {
+    "name": "below_magenta",
+    "category": "altitude"
+  },
+  {
+    "name": "below_maroon",
+    "category": "altitude"
+  },
+  {
+    "name": "below_orange",
+    "category": "altitude"
+  },
+  {
+    "name": "below_purple",
+    "category": "altitude"
+  },
+  {
+    "name": "below_red",
+    "category": "altitude"
+  },
+  {
+    "name": "below_teal",
+    "category": "altitude"
+  },
+  {
+    "name": "below_white",
+    "category": "altitude"
+  },
+  {
+    "name": "below_yellow",
+    "category": "altitude"
+  },
+  {
+    "name": "binos",
+    "category": "other"
+  },
+  {
+    "name": "blacktriangle",
+    "category": "other"
+  },
+  {
+    "name": "blast_rings",
+    "category": "other"
+  },
+  {
+    "name": "bloodhound",
+    "category": "other"
+  },
+  {
+    "name": "breadcrumbs",
+    "category": "other"
+  },
+  {
+    "name": "brightness",
+    "category": "other"
+  },
+  {
+    "name": "bullseye",
+    "category": "other"
+  },
+  {
+    "name": "bullseye_icon",
+    "category": "other"
+  },
+  {
+    "name": "camera",
+    "category": "other"
+  },
+  {
+    "name": "cas",
+    "category": "other"
+  },
+  {
+    "name": "cas_stack",
+    "category": "other"
+  },
+  {
+    "name": "casmission",
+    "category": "other"
+  },
+  {
+    "name": "casmission_accepted",
+    "category": "other"
+  },
+  {
+    "name": "cff",
+    "category": "other"
+  },
+  {
+    "name": "cffmission",
+    "category": "other"
+  },
+  {
+    "name": "cffplus",
+    "category": "other"
+  },
+  {
+    "name": "chatsmall",
+    "category": "other"
+  },
+  {
+    "name": "check",
+    "category": "other"
+  },
+  {
+    "name": "circle",
+    "category": "other"
+  },
+  {
+    "name": "circlecrumb",
+    "category": "other"
+  },
+  {
+    "name": "clamp",
+    "category": "other"
+  },
+  {
+    "name": "clear_tracks",
+    "category": "other"
+  },
+  {
+    "name": "close",
+    "category": "other"
+  },
+  {
+    "name": "collaborative_targeting",
+    "category": "other"
+  },
+  {
+    "name": "color_wheel",
+    "category": "other"
+  },
+  {
+    "name": "communicate",
+    "category": "other"
+  },
+  {
+    "name": "compass",
+    "category": "other"
+  },
+  {
+    "name": "compass_rose",
+    "category": "other"
+  },
+  {
+    "name": "contact",
+    "category": "other"
+  },
+  {
+    "name": "control_point",
+    "category": "other"
+  },
+  {
+    "name": "control_point2",
+    "category": "other"
+  },
+  {
+    "name": "copy",
+    "category": "other"
+  },
+  {
+    "name": "cornerpoint",
+    "category": "other"
+  },
+  {
+    "name": "crosshair",
+    "category": "other"
+  },
+  {
+    "name": "damaged",
+    "category": "other"
+  },
+  {
+    "name": "damaged_hostile",
+    "category": "other"
+  },
+  {
+    "name": "damaged_neutral",
+    "category": "other"
+  },
+  {
+    "name": "damaged_unknown",
+    "category": "other"
+  },
+  {
+    "name": "default",
+    "category": "other"
+  },
+  {
+    "name": "deg",
+    "category": "other"
+  },
+  {
+    "name": "deg_s",
+    "category": "other"
+  },
+  {
+    "name": "degs_g",
+    "category": "other"
+  },
+  {
+    "name": "degs_m",
+    "category": "other"
+  },
+  {
+    "name": "degs_t",
+    "category": "other"
+  },
+  {
+    "name": "degsymbol",
+    "category": "other"
+  },
+  {
+    "name": "degsymbol_s",
+    "category": "other"
+  },
+  {
+    "name": "destination",
+    "category": "other"
+  },
+  {
+    "name": "details",
+    "category": "other"
+  },
+  {
+    "name": "details_progress",
+    "category": "other"
+  },
+  {
+    "name": "digitalcert",
+    "category": "other"
+  },
+  {
+    "name": "dip",
+    "category": "other"
+  },
+  {
+    "name": "distance_lock",
+    "category": "other"
+  },
+  {
+    "name": "dload",
+    "category": "other"
+  },
+  {
+    "name": "doc",
+    "category": "other"
+  },
+  {
+    "name": "document",
+    "category": "other"
+  },
+  {
+    "name": "doghouse",
+    "category": "other"
+  },
+  {
+    "name": "done_button",
+    "category": "other"
+  },
+  {
+    "name": "drab_pin",
+    "category": "other"
+  },
+  {
+    "name": "draw_line",
+    "category": "other"
+  },
+  {
+    "name": "drop_crosshair",
+    "category": "other"
+  },
+  {
+    "name": "dtd_id_1",
+    "category": "other"
+  },
+  {
+    "name": "dtd_id_all",
+    "category": "other"
+  },
+  {
+    "name": "edit",
+    "category": "other"
+  },
+  {
+    "name": "edit2",
+    "category": "other"
+  },
+  {
+    "name": "email_icon",
+    "category": "other"
+  },
+  {
+    "name": "emergency",
+    "category": "other"
+  },
+  {
+    "name": "esri",
+    "category": "other"
+  },
+  {
+    "name": "exit_nav",
+    "category": "other"
+  },
+  {
+    "name": "expand",
+    "category": "other"
+  },
+  {
+    "name": "eye",
+    "category": "other"
+  },
+  {
+    "name": "eyealtitude",
+    "category": "other"
+  },
+  {
+    "name": "fah_redx",
+    "category": "other"
+  },
+  {
+    "name": "feedback",
+    "category": "other"
+  },
+  {
+    "name": "fov_direction",
+    "category": "other"
+  },
+  {
+    "name": "fov_size",
+    "category": "other"
+  },
+  {
+    "name": "fov_visibility",
+    "category": "other"
+  },
+  {
+    "name": "friendly",
+    "category": "other"
+  },
+  {
+    "name": "ft",
+    "category": "other"
+  },
+  {
+    "name": "ftmi",
+    "category": "other"
+  },
+  {
+    "name": "ftmi_s",
+    "category": "other"
+  },
+  {
+    "name": "general_entry",
+    "category": "other"
+  },
+  {
+    "name": "geofence",
+    "category": "other"
+  },
+  {
+    "name": "geofence_disabled",
+    "category": "other"
+  },
+  {
+    "name": "geofence_noalerts",
+    "category": "other"
+  },
+  {
+    "name": "geojson",
+    "category": "other"
+  },
+  {
+    "name": "go",
+    "category": "other"
+  },
+  {
+    "name": "gpserror",
+    "category": "other"
+  },
+  {
+    "name": "gpserror_off",
+    "category": "other"
+  },
+  {
+    "name": "gpserror_on",
+    "category": "other"
+  },
+  {
+    "name": "gpx",
+    "category": "other"
+  },
+  {
+    "name": "gradient_new",
+    "category": "other"
+  },
+  {
+    "name": "gradient_view",
+    "category": "other"
+  },
+  {
+    "name": "green_flag",
+    "category": "other"
+  },
+  {
+    "name": "green_flag_radial",
+    "category": "other"
+  },
+  {
+    "name": "greenlight",
+    "category": "other"
+  },
+  {
+    "name": "grid_center",
+    "category": "other"
+  },
+  {
+    "name": "gugpgpow------",
+    "category": "other"
+  },
+  {
+    "name": "harp_rings",
+    "category": "other"
+  },
+  {
+    "name": "height_marker_red",
+    "category": "other"
+  },
+  {
+    "name": "height_marker_yellow",
+    "category": "other"
+  },
+  {
+    "name": "hq",
+    "category": "other"
+  },
+  {
+    "name": "hq_human",
+    "category": "other"
+  },
+  {
+    "name": "hq_nogps",
+    "category": "other"
+  },
+  {
+    "name": "ic_laser_selected",
+    "category": "other"
+  },
+  {
+    "name": "id",
+    "category": "other"
+  },
+  {
+    "name": "incomplete",
+    "category": "other"
+  },
+  {
+    "name": "info",
+    "category": "other"
+  },
+  {
+    "name": "initial_point",
+    "category": "other"
+  },
+  {
+    "name": "jtasr",
+    "category": "other"
+  },
+  {
+    "name": "keyhole_reference_point",
+    "category": "other"
+  },
+  {
+    "name": "kml",
+    "category": "other"
+  },
+  {
+    "name": "kmm",
+    "category": "other"
+  },
+  {
+    "name": "label",
+    "category": "other"
+  },
+  {
+    "name": "landing_pattern",
+    "category": "other"
+  },
+  {
+    "name": "locked",
+    "category": "other"
+  },
+  {
+    "name": "lrf_slide",
+    "category": "other"
+  },
+  {
+    "name": "magnify",
+    "category": "other"
+  },
+  {
+    "name": "manual_point_entry",
+    "category": "other"
+  },
+  {
+    "name": "medmission",
+    "category": "other"
+  },
+  {
+    "name": "mgrs_entry",
+    "category": "other"
+  },
+  {
+    "name": "middlepoint",
+    "category": "other"
+  },
+  {
+    "name": "middlepoint_radial",
+    "category": "other"
+  },
+  {
+    "name": "mils",
+    "category": "other"
+  },
+  {
+    "name": "mils_g",
+    "category": "other"
+  },
+  {
+    "name": "mils_m",
+    "category": "other"
+  },
+  {
+    "name": "mils_t",
+    "category": "other"
+  },
+  {
+    "name": "missionpackage",
+    "category": "other"
+  },
+  {
+    "name": "mortar",
+    "category": "other"
+  },
+  {
+    "name": "move",
+    "category": "other"
+  },
+  {
+    "name": "mvt",
+    "category": "other"
+  },
+  {
+    "name": "neutral",
+    "category": "other"
+  },
+  {
+    "name": "nineline",
+    "category": "other"
+  },
+  {
+    "name": "ninelineicon",
+    "category": "other"
+  },
+  {
+    "name": "nm",
+    "category": "other"
+  },
+  {
+    "name": "no_icon",
+    "category": "other"
+  },
+  {
+    "name": "open",
+    "category": "other"
+  },
+  {
+    "name": "outline",
+    "category": "other"
+  },
+  {
+    "name": "pairing_line",
+    "category": "other"
+  },
+  {
+    "name": "pairing_line_to_self",
+    "category": "other"
+  },
+  {
+    "name": "palette-2",
+    "category": "other"
+  },
+  {
+    "name": "palette-3",
+    "category": "other"
+  },
+  {
+    "name": "palette-4",
+    "category": "other"
+  },
+  {
+    "name": "palette-5",
+    "category": "other"
+  },
+  {
+    "name": "pdf",
+    "category": "other"
+  },
+  {
+    "name": "phone_icon",
+    "category": "other"
+  },
+  {
+    "name": "photo",
+    "category": "other"
+  },
+  {
+    "name": "piicon",
+    "category": "other"
+  },
+  {
+    "name": "piicon_contact",
+    "category": "other"
+  },
+  {
+    "name": "piicon_initial",
+    "category": "other"
+  },
+  {
+    "name": "polar_coord",
+    "category": "other"
+  },
+  {
+    "name": "ppt",
+    "category": "other"
+  },
+  {
+    "name": "previous",
+    "category": "other"
+  },
+  {
+    "name": "rab_drag",
+    "category": "other"
+  },
+  {
+    "name": "radial_back",
+    "category": "other"
+  },
+  {
+    "name": "radial_close",
+    "category": "other"
+  },
+  {
+    "name": "range",
+    "category": "other"
+  },
+  {
+    "name": "range_ring",
+    "category": "other"
+  },
+  {
+    "name": "rb_directional_arrow",
+    "category": "other"
+  },
+  {
+    "name": "rectangle",
+    "category": "other"
+  },
+  {
+    "name": "redlight",
+    "category": "other"
+  },
+  {
+    "name": "reds",
+    "category": "other"
+  },
+  {
+    "name": "redtriangle",
+    "category": "other"
+  },
+  {
+    "name": "reference_point",
+    "category": "other"
+  },
+  {
+    "name": "remove_waypoint",
+    "category": "other"
+  },
+  {
+    "name": "resection",
+    "category": "other"
+  },
+  {
+    "name": "right_angle",
+    "category": "other"
+  },
+  {
+    "name": "rotate",
+    "category": "other"
+  },
+  {
+    "name": "rotate_ac",
+    "category": "other"
+  },
+  {
+    "name": "routes",
+    "category": "other"
+  },
+  {
+    "name": "rubber_sheet_rotate",
+    "category": "other"
+  },
+  {
+    "name": "scale_reposition",
+    "category": "other"
+  },
+  {
+    "name": "scalebar",
+    "category": "other"
+  },
+  {
+    "name": "seekermarker",
+    "category": "other"
+  },
+  {
+    "name": "select_point_icon",
+    "category": "other"
+  },
+  {
+    "name": "self",
+    "category": "other"
+  },
+  {
+    "name": "send_icon",
+    "category": "other"
+  },
+  {
+    "name": "sensor_location",
+    "category": "sensor"
+  },
+  {
+    "name": "show_label",
+    "category": "other"
+  },
+  {
+    "name": "sign_point",
+    "category": "other"
+  },
+  {
+    "name": "slant_outline",
+    "category": "other"
+  },
+  {
+    "name": "sms_icon",
+    "category": "other"
+  },
+  {
+    "name": "speech",
+    "category": "other"
+  },
+  {
+    "name": "spi1_icon",
+    "category": "other"
+  },
+  {
+    "name": "spi2_icon",
+    "category": "other"
+  },
+  {
+    "name": "spi3_icon",
+    "category": "other"
+  },
+  {
+    "name": "spip_icon",
+    "category": "other"
+  },
+  {
+    "name": "spoi_icon",
+    "category": "other"
+  },
+  {
+    "name": "spot_map_label",
+    "category": "other"
+  },
+  {
+    "name": "sse_shape",
+    "category": "other"
+  },
+  {
+    "name": "sse_shape_delete",
+    "category": "other"
+  },
+  {
+    "name": "sse_slant",
+    "category": "other"
+  },
+  {
+    "name": "start_from_waypoint",
+    "category": "other"
+  },
+  {
+    "name": "stoplight",
+    "category": "other"
+  },
+  {
+    "name": "sub_menu_indicator",
+    "category": "other"
+  },
+  {
+    "name": "sublist",
+    "category": "other"
+  },
+  {
+    "name": "subm_arrow",
+    "category": "other"
+  },
+  {
+    "name": "sync",
+    "category": "other"
+  },
+  {
+    "name": "sync2",
+    "category": "other"
+  },
+  {
+    "name": "target",
+    "category": "other"
+  },
+  {
+    "name": "target_designation_green",
+    "category": "other"
+  },
+  {
+    "name": "target_designation_yellow",
+    "category": "other"
+  },
+  {
+    "name": "task",
+    "category": "other"
+  },
+  {
+    "name": "tilt_lock",
+    "category": "other"
+  },
+  {
+    "name": "to_from",
+    "category": "other"
+  },
+  {
+    "name": "toggle_3d",
+    "category": "other"
+  },
+  {
+    "name": "track",
+    "category": "other"
+  },
+  {
+    "name": "track_heading_arrow",
+    "category": "other"
+  },
+  {
+    "name": "trackhistory_icon",
+    "category": "other"
+  },
+  {
+    "name": "transparency",
+    "category": "other"
+  },
+  {
+    "name": "ttl-icon",
+    "category": "other"
+  },
+  {
+    "name": "ttl-icon-f",
+    "category": "other"
+  },
+  {
+    "name": "ttl-icon-n",
+    "category": "other"
+  },
+  {
+    "name": "ttl-icon-u",
+    "category": "other"
+  },
+  {
+    "name": "unit_angle",
+    "category": "other"
+  },
+  {
+    "name": "unit_dist",
+    "category": "other"
+  },
+  {
+    "name": "unknown",
+    "category": "other"
+  },
+  {
+    "name": "unknown-type",
+    "category": "other"
+  },
+  {
+    "name": "unknown-type-f",
+    "category": "other"
+  },
+  {
+    "name": "unknown-type-h",
+    "category": "other"
+  },
+  {
+    "name": "unknown-type-n",
+    "category": "other"
+  },
+  {
+    "name": "unknown-type-u",
+    "category": "other"
+  },
+  {
+    "name": "unlocked",
+    "category": "other"
+  },
+  {
+    "name": "vertex",
+    "category": "other"
+  },
+  {
+    "name": "video",
+    "category": "other"
+  },
+  {
+    "name": "viewshed_eye",
+    "category": "other"
+  },
+  {
+    "name": "virtual_dz",
+    "category": "other"
+  },
+  {
+    "name": "voip_icon",
+    "category": "other"
+  },
+  {
+    "name": "whitex",
+    "category": "other"
+  },
+  {
+    "name": "xmpp_icon",
+    "category": "other"
+  },
+  {
+    "name": "zip",
+    "category": "other"
+  }
+]

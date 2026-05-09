@@ -1,0 +1,44 @@
+[
+  {
+    "provider": "omt",
+    "variant": "bright",
+    "files": [
+      "bright.json"
+    ]
+  },
+  {
+    "provider": "omt",
+    "variant": "dark",
+    "files": [
+      "dark.json"
+    ]
+  },
+  {
+    "provider": "omt",
+    "variant": "overlay",
+    "files": [
+      "overlay.json"
+    ]
+  },
+  {
+    "provider": "rbt",
+    "variant": "bright",
+    "files": [
+      "bright.json"
+    ]
+  },
+  {
+    "provider": "rbt",
+    "variant": "dark",
+    "files": [
+      "dark.json"
+    ]
+  },
+  {
+    "provider": "rbt",
+    "variant": "overlay",
+    "files": [
+      "overlay.json"
+    ]
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "iconset": "incident",
+  "count": 12,
+  "icons": [
+    {
+      "name": "decon area.png",
+      "path": "Incident Management/decon area.png"
+    },
+    {
+      "name": "aircraft crash.png",
+      "path": "Incident Management/aircraft crash.png"
+    },
+    {
+      "name": "helicopter landing area.png",
+      "path": "Incident Management/helicopter landing area.png"
+    },
+    {
+      "name": "emergency operations center.png",
+      "path": "Incident Management/emergency operations center.png"
+    },
+    {
+      "name": "staging area.png",
+      "path": "Incident Management/staging area.png"
+    },
+    {
+      "name": "fire hazard.png",
+      "path": "Incident Management/fire hazard.png"
+    },
+    {
+      "name": "incident.png",
+      "path": "Incident Management/incident.png"
+    },
+    {
+      "name": "water point.png",
+      "path": "Incident Management/water point.png"
+    },
+    {
+      "name": "casualty collection point.png",
+      "path": "Incident Management/casualty collection point.png"
+    },
+    {
+      "name": "incident command post.png",
+      "path": "Incident Management/incident command post.png"
+    },
+    {
+      "name": "medical triage area.png",
+      "path": "Incident Management/medical triage area.png"
+    },
+    {
+      "name": "road blocked.png",
+      "path": "Incident Management/road blocked.png"
+    }
+  ]
+}

@@ -1,5 +1,59 @@
 [
   {
+    "req_id": "REQ-APK-001",
+    "test_name": "REQ-APK-001: ATAK core asset icon inventory",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-APK-008",
+    "test_name": "REQ-APK-008: ATAK font bundle",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-APK-002",
+    "test_name": "REQ-APK-002: ATAK responder iconset pack",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-APK-003",
+    "test_name": "REQ-APK-003: ATAK FalconView iconset pack",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-APK-004",
+    "test_name": "REQ-APK-004: ATAK air iconset pack",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-APK-005",
+    "test_name": "REQ-APK-005: ATAK wildfire iconset pack",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-APK-006",
+    "test_name": "REQ-APK-006: ATAK incident management iconset pack",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-APK-007",
+    "test_name": "REQ-APK-007: Landing Point Tactical icons",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-APK-009",
+    "test_name": "REQ-APK-009: ATAK map tile style definitions",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
     "req_id": "REQ-AST-002",
     "test_name": "REQ-AST-002: COT icon filter mapping",
     "test_file": "tests/assets/test_cot.mjs",

@@ -1,0 +1,4474 @@
+{
+  "iconset": "responder",
+  "count": 1117,
+  "icons": [
+    {
+      "name": "HazMat-Placarding--Class-6-Poisons.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-6-Poisons.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-4-Flammable-Solids.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-4-Flammable-Solids.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-2-Non-Flammable-Gas-2.2.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-2-Non-Flammable-Gas-2.2.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-4-Spontaneously-Combustible.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-4-Spontaneously-Combustible.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-1-Explosives-1.2.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-1-Explosives-1.2.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-1-Explosives-1.1.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-1-Explosives-1.1.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-9.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-9.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-Other-DANGEROUS.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-Other-DANGEROUS.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-Other-Store-Away-From-Food.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-Other-Store-Away-From-Food.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-1-Explosives-1.6.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-1-Explosives-1.6.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-Other-V3.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-Other-V3.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-2-Flammable-Gas-2.1.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-2-Flammable-Gas-2.1.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-6-Toxic.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-6-Toxic.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-2-Flammable-Liquid.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-2-Flammable-Liquid.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-8-Acids.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-8-Acids.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-6-Inhalation-Hazards.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-6-Inhalation-Hazards.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-3-Fuel-Oil.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-3-Fuel-Oil.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-5-Organic-Peroxides-5.2.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-5-Organic-Peroxides-5.2.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-6-Infectious.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-6-Infectious.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-3-Gasoline.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-3-Gasoline.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-Other-V2.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-Other-V2.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-1-Explosives-1.4.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-1-Explosives-1.4.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-5-Organic-Peroxides-5.1.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-5-Organic-Peroxides-5.1.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-6-Poison-Gas.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-6-Poison-Gas.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-8-Corrosive.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-8-Corrosive.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-Other-HOT.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-Other-HOT.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-1-Explosives.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-1-Explosives.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-1-Explosives-1.5.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-1-Explosives-1.5.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-5-Oxidizers-5.1.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-5-Oxidizers-5.1.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-3-Flammable.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-3-Flammable.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-1-Explosives-1.3.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-1-Explosives-1.3.png"
+    },
+    {
+      "name": "HazMat-NFPA74_Blank Placard.png",
+      "path": "Hazardous Materials/HazMat-NFPA74_Blank Placard.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-4-Dangerous-When-Wet.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-4-Dangerous-When-Wet.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-2-Flammable-Gas.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-2-Flammable-Gas.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-6-Toxic-Gas.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-6-Toxic-Gas.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-3-Combustible.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-3-Combustible.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-1-Blasting-Agent-1.5.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-1-Blasting-Agent-1.5.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-7-Radioactive.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-7-Radioactive.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-2-Oxygen-2.2.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-2-Oxygen-2.2.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-Other.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-Other.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-2-Inhalation-Hazards-2.3.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-2-Inhalation-Hazards-2.3.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-8-Alkaline.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-8-Alkaline.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-2-Chlorine.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-2-Chlorine.png"
+    },
+    {
+      "name": "HazMat-Placarding--Class-2-Flammable-Solid.png",
+      "path": "Hazardous Materials/HazMat-Placarding--Class-2-Flammable-Solid.png"
+    },
+    {
+      "name": "Hazard--Tornado.png",
+      "path": "Natural Hazards/Hazard--Tornado.png"
+    },
+    {
+      "name": "Hazard--Hurricane.png",
+      "path": "Natural Hazards/Hazard--Hurricane.png"
+    },
+    {
+      "name": "Hazard--Earthquake.png",
+      "path": "Natural Hazards/Hazard--Earthquake.png"
+    },
+    {
+      "name": "Hazard--Tsunami.png",
+      "path": "Natural Hazards/Hazard--Tsunami.png"
+    },
+    {
+      "name": "Hazard--Flood.png",
+      "path": "Natural Hazards/Hazard--Flood.png"
+    },
+    {
+      "name": "Hazard--Other.png",
+      "path": "Natural Hazards/Hazard--Other.png"
+    },
+    {
+      "name": "Hazard--Mine-Collapse.png",
+      "path": "Natural Hazards/Hazard--Mine-Collapse.png"
+    },
+    {
+      "name": "Hazard--Wind-Storm.png",
+      "path": "Natural Hazards/Hazard--Wind-Storm.png"
+    },
+    {
+      "name": "Hazard--Volcano.png",
+      "path": "Natural Hazards/Hazard--Volcano.png"
+    },
+    {
+      "name": "Hazard--Landslide.png",
+      "path": "Natural Hazards/Hazard--Landslide.png"
+    },
+    {
+      "name": "Hazard--Avalanche.png",
+      "path": "Natural Hazards/Hazard--Avalanche.png"
+    },
+    {
+      "name": "Hazard--Snow-Event.png",
+      "path": "Natural Hazards/Hazard--Snow-Event.png"
+    },
+    {
+      "name": "Hazard--Severe-Weather.png",
+      "path": "Natural Hazards/Hazard--Severe-Weather.png"
+    },
+    {
+      "name": "Railroad-Bridges.png",
+      "path": "Transportation/Railroad-Bridges.png"
+    },
+    {
+      "name": "Ferry-Locations.png",
+      "path": "Transportation/Ferry-Locations.png"
+    },
+    {
+      "name": "NBI-Bridge.png",
+      "path": "Transportation/NBI-Bridge.png"
+    },
+    {
+      "name": "Bus-Station.png",
+      "path": "Transportation/Bus-Station.png"
+    },
+    {
+      "name": "Major-US-Port-Facilities.png",
+      "path": "Transportation/Major-US-Port-Facilities.png"
+    },
+    {
+      "name": "Amtrak-Bus-Station.png",
+      "path": "Transportation/Amtrak-Bus-Station.png"
+    },
+    {
+      "name": "Intermodal-Terminal-Facilities.png",
+      "path": "Transportation/Intermodal-Terminal-Facilities.png"
+    },
+    {
+      "name": "Railroad-Yard.png",
+      "path": "Transportation/Railroad-Yard.png"
+    },
+    {
+      "name": "Railroad-Junction.png",
+      "path": "Transportation/Railroad-Junction.png"
+    },
+    {
+      "name": "COMMUTER-RAIL-SYSTEMS.png",
+      "path": "Transportation/COMMUTER-RAIL-SYSTEMS.png"
+    },
+    {
+      "name": "Amtrak-Train.png",
+      "path": "Transportation/Amtrak-Train.png"
+    },
+    {
+      "name": "Fixed-Guideway-Transit-Stations.png",
+      "path": "Transportation/Fixed-Guideway-Transit-Stations.png"
+    },
+    {
+      "name": "Road-and-Railroad-Tunnels.png",
+      "path": "Transportation/Road-and-Railroad-Tunnels.png"
+    },
+    {
+      "name": "LINE-HAUL-RAILROADS.png",
+      "path": "Transportation/LINE-HAUL-RAILROADS.png"
+    },
+    {
+      "name": "Hazard--Fire--Hazardous-Entry-Violent.png",
+      "path": "Hazards/Hazard--Fire--Hazardous-Entry-Violent.png"
+    },
+    {
+      "name": "Hazard--Fire--Powerline-Above.png",
+      "path": "Hazards/Hazard--Fire--Powerline-Above.png"
+    },
+    {
+      "name": "Hazard--Fire--Hazardous-Entry.png",
+      "path": "Hazards/Hazard--Fire--Hazardous-Entry.png"
+    },
+    {
+      "name": "Hazard--Fire--Poison.png",
+      "path": "Hazards/Hazard--Fire--Poison.png"
+    },
+    {
+      "name": "Hazard--Fire--Slip-Hazards.png",
+      "path": "Hazards/Hazard--Fire--Slip-Hazards.png"
+    },
+    {
+      "name": "Hazard--Fire--Evaucation-Hazards.png",
+      "path": "Hazards/Hazard--Fire--Evaucation-Hazards.png"
+    },
+    {
+      "name": "Hazard--Fire--Soft-Soil.png",
+      "path": "Hazards/Hazard--Fire--Soft-Soil.png"
+    },
+    {
+      "name": "HazMat-Tank-Horizontal.png",
+      "path": "Hazards/HazMat-Tank-Horizontal.png"
+    },
+    {
+      "name": "Hazard--Fire--General-Hazards.png",
+      "path": "Hazards/Hazard--Fire--General-Hazards.png"
+    },
+    {
+      "name": "Hazard--Fire--Truss-Metal.png",
+      "path": "Hazards/Hazard--Fire--Truss-Metal.png"
+    },
+    {
+      "name": "Hazard--Fire--Close-Exposure.png",
+      "path": "Hazards/Hazard--Fire--Close-Exposure.png"
+    },
+    {
+      "name": "Hazard--Fire--Truss-General.png",
+      "path": "Hazards/Hazard--Fire--Truss-General.png"
+    },
+    {
+      "name": "Hazard--Fire--High-Occupancy-Load.png",
+      "path": "Hazards/Hazard--Fire--High-Occupancy-Load.png"
+    },
+    {
+      "name": "Hazard--Fire--Collapse-Likely.png",
+      "path": "Hazards/Hazard--Fire--Collapse-Likely.png"
+    },
+    {
+      "name": "Hazard--Fire--No-Water-Supply.png",
+      "path": "Hazards/Hazard--Fire--No-Water-Supply.png"
+    },
+    {
+      "name": "Hazard--Fire--Lightweight-Roof.png",
+      "path": "Hazards/Hazard--Fire--Lightweight-Roof.png"
+    },
+    {
+      "name": "Hazard--Fire--Confined-Space.png",
+      "path": "Hazards/Hazard--Fire--Confined-Space.png"
+    },
+    {
+      "name": "Hazard--Fire--Truss-Wood.png",
+      "path": "Hazards/Hazard--Fire--Truss-Wood.png"
+    },
+    {
+      "name": "Hazard--Fire--Biohazard.png",
+      "path": "Hazards/Hazard--Fire--Biohazard.png"
+    },
+    {
+      "name": "Hazard--Fire--DO-NOT-USE-Water.png",
+      "path": "Hazards/Hazard--Fire--DO-NOT-USE-Water.png"
+    },
+    {
+      "name": "Hazard--Fire--Aerial-Hazard.png",
+      "path": "Hazards/Hazard--Fire--Aerial-Hazard.png"
+    },
+    {
+      "name": "Hazard--Fire--Bowstrin-Truss.png",
+      "path": "Hazards/Hazard--Fire--Bowstrin-Truss.png"
+    },
+    {
+      "name": "Hazard--Fire--Hazardous-Shaft.png",
+      "path": "Hazards/Hazard--Fire--Hazardous-Shaft.png"
+    },
+    {
+      "name": "Hazard--Fire--Not-Occupied-or-Abandoned.png",
+      "path": "Hazards/Hazard--Fire--Not-Occupied-or-Abandoned.png"
+    },
+    {
+      "name": "Hazard--Fire--High-Pile-Storage.png",
+      "path": "Hazards/Hazard--Fire--High-Pile-Storage.png"
+    },
+    {
+      "name": "Hazard--Fire--Saferty-Zone--Gun-Cover.png",
+      "path": "Hazards/Hazard--Fire--Saferty-Zone--Gun-Cover.png"
+    },
+    {
+      "name": "Hazard--Fire--Common-Attic.png",
+      "path": "Hazards/Hazard--Fire--Common-Attic.png"
+    },
+    {
+      "name": "Hazard--Fire--Building-Over-Nextto-Water.png",
+      "path": "Hazards/Hazard--Fire--Building-Over-Nextto-Water.png"
+    },
+    {
+      "name": "Hazard--Fire--Electical-Hazards.png",
+      "path": "Hazards/Hazard--Fire--Electical-Hazards.png"
+    },
+    {
+      "name": "Hazard--Fire--ManTrap-or-Entrapment.png",
+      "path": "Hazards/Hazard--Fire--ManTrap-or-Entrapment.png"
+    },
+    {
+      "name": "Hazard--Fire--DO-NOT-ENTER-Building.png",
+      "path": "Hazards/Hazard--Fire--DO-NOT-ENTER-Building.png"
+    },
+    {
+      "name": "Hazard--Fire--Radioactive.png",
+      "path": "Hazards/Hazard--Fire--Radioactive.png"
+    },
+    {
+      "name": "Hazard--Fire--No-Roof-Operations.png",
+      "path": "Hazards/Hazard--Fire--No-Roof-Operations.png"
+    },
+    {
+      "name": "Hazard--Fire--Truss-Wood-I-Beam.png",
+      "path": "Hazards/Hazard--Fire--Truss-Wood-I-Beam.png"
+    },
+    {
+      "name": "HazMat-Tank-Underground.png",
+      "path": "Hazards/HazMat-Tank-Underground.png"
+    },
+    {
+      "name": "Hazard--Fire--Lightweight-Floor.png",
+      "path": "Hazards/Hazard--Fire--Lightweight-Floor.png"
+    },
+    {
+      "name": "Hazard--Fire--Hazardous-Voids.png",
+      "path": "Hazards/Hazard--Fire--Hazardous-Voids.png"
+    },
+    {
+      "name": "Hazard--Fire--Magnetic-Hazards.png",
+      "path": "Hazards/Hazard--Fire--Magnetic-Hazards.png"
+    },
+    {
+      "name": "Hazard--Fire--High-Fire-Load.png",
+      "path": "Hazards/Hazard--Fire--High-Fire-Load.png"
+    },
+    {
+      "name": "Hazard--Fire--Fall-Hazards.png",
+      "path": "Hazards/Hazard--Fire--Fall-Hazards.png"
+    },
+    {
+      "name": "HazMat-Tank-Vertical.png",
+      "path": "Hazards/HazMat-Tank-Vertical.png"
+    },
+    {
+      "name": "Hazard--Fire--Poor-or-No-Radio-Reception.png",
+      "path": "Hazards/Hazard--Fire--Poor-or-No-Radio-Reception.png"
+    },
+    {
+      "name": "ESF1-Animal-Health--Large-Animal-Transport-Team.png",
+      "path": "Resources/ESF1-Animal-Health--Large-Animal-Transport-Team.png"
+    },
+    {
+      "name": "ESF3-EMS_Ambulance-Ground.png",
+      "path": "Resources/ESF3-EMS_Ambulance-Ground.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Road-Sweeper.png",
+      "path": "Resources/ESF7-Public-Works--Road-Sweeper.png"
+    },
+    {
+      "name": "ESF9-SAR--Structural-Collapse-Search-Team.png",
+      "path": "Resources/ESF9-SAR--Structural-Collapse-Search-Team.png"
+    },
+    {
+      "name": "ESF3-EMS_Critical-Tranportaton-Multple-Patient.png",
+      "path": "Resources/ESF3-EMS_Critical-Tranportaton-Multple-Patient.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Snow-Blower--Front-Loader.png",
+      "path": "Resources/ESF7-Public-Works--Snow-Blower--Front-Loader.png"
+    },
+    {
+      "name": "ESF9-SAR--Air-Search-Team-(Fixed-Wing).png",
+      "path": "Resources/ESF9-SAR--Air-Search-Team-(Fixed-Wing).png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Fuel-Tender.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Fuel-Tender.png"
+    },
+    {
+      "name": "ESF13-LAW--Mobile-Field-Force-Law-Enforcement-Crowd-Control-Teams.png",
+      "path": "Resources/ESF13-LAW--Mobile-Field-Force-Law-Enforcement-Crowd-Control-Teams.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Hydraulic-Crane.png",
+      "path": "Resources/ESF7-Public-Works--Hydraulic-Crane.png"
+    },
+    {
+      "name": "ESF9-SAR--USAR-Incident-Support-Team.png",
+      "path": "Resources/ESF9-SAR--USAR-Incident-Support-Team.png"
+    },
+    {
+      "name": "ESF1-Animal-Health--Large-Animal-Sheltering-Team.png",
+      "path": "Resources/ESF1-Animal-Health--Large-Animal-Sheltering-Team.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Mobile-Communication-Unit.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Mobile-Communication-Unit.png"
+    },
+    {
+      "name": "ESF1-Animal-Health--Small-Animal-Rescue-Team.png",
+      "path": "Resources/ESF1-Animal-Health--Small-Animal-Rescue-Team.png"
+    },
+    {
+      "name": "ESF13-LAW--Law-Enforcement-Patrol.png",
+      "path": "Resources/ESF13-LAW--Law-Enforcement-Patrol.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Snow-Plow--Loader-Mounted.png",
+      "path": "Resources/ESF7-Public-Works--Snow-Plow--Loader-Mounted.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Strike-Team-Engine.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Strike-Team-Engine.png"
+    },
+    {
+      "name": "ESF9-SAR--Urban-SAR-Task-Force.png",
+      "path": "Resources/ESF9-SAR--Urban-SAR-Task-Force.png"
+    },
+    {
+      "name": "ESF3-EMS_Ambulance-Air.png",
+      "path": "Resources/ESF3-EMS_Ambulance-Air.png"
+    },
+    {
+      "name": "ESF2-IMT--Evacuation-Coordination-Team.png",
+      "path": "Resources/ESF2-IMT--Evacuation-Coordination-Team.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Damage-Assessment.png",
+      "path": "Resources/ESF7-Public-Works--Damage-Assessment.png"
+    },
+    {
+      "name": "ESF9-SAR--Radio-Direction-Finding-Team.png",
+      "path": "Resources/ESF9-SAR--Radio-Direction-Finding-Team.png"
+    },
+    {
+      "name": "ESF1-Animal-Health--Small-Animal-Sheltering-Team.png",
+      "path": "Resources/ESF1-Animal-Health--Small-Animal-Sheltering-Team.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Snow-Plow.png",
+      "path": "Resources/ESF7-Public-Works--Snow-Plow.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Crane-Lattice.png",
+      "path": "Resources/ESF7-Public-Works--Crane-Lattice.png"
+    },
+    {
+      "name": "ESF13-LAW--Law-Enforcement-Patrol-Strike-Team.png",
+      "path": "Resources/ESF13-LAW--Law-Enforcement-Patrol-Strike-Team.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Loader.png",
+      "path": "Resources/ESF7-Public-Works--Loader.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Loader-Tracked.png",
+      "path": "Resources/ESF7-Public-Works--Loader-Tracked.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Fire-Boat.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Fire-Boat.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Snow-Blower--Truck.png",
+      "path": "Resources/ESF7-Public-Works--Snow-Blower--Truck.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Helitanker.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Helitanker.png"
+    },
+    {
+      "name": "ESF2-IMT--Mobile-Emergency-Operations-Center.png",
+      "path": "Resources/ESF2-IMT--Mobile-Emergency-Operations-Center.png"
+    },
+    {
+      "name": "ESF2-IMT--Volunteer-Liason-Team.png",
+      "path": "Resources/ESF2-IMT--Volunteer-Liason-Team.png"
+    },
+    {
+      "name": "ESF1-Animal-Health--Incident-Management-Team.png",
+      "path": "Resources/ESF1-Animal-Health--Incident-Management-Team.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_ARFF.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_ARFF.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Hand-Crew.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Hand-Crew.png"
+    },
+    {
+      "name": "ESF2-IMT--Incident-Management-Team.png",
+      "path": "Resources/ESF2-IMT--Incident-Management-Team.png"
+    },
+    {
+      "name": "ESF9-SAR--Wilderness-SAR-Team.png",
+      "path": "Resources/ESF9-SAR--Wilderness-SAR-Team.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Engine-Pumper.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Engine-Pumper.png"
+    },
+    {
+      "name": "ESF9-SAR--Airborne-Reconnaissance-Fixed-Wing.png",
+      "path": "Resources/ESF9-SAR--Airborne-Reconnaissance-Fixed-Wing.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Strike-Team-US-Coast-Guard.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Strike-Team-US-Coast-Guard.png"
+    },
+    {
+      "name": "ESF9-SAR--Cave-SAR-Team.png",
+      "path": "Resources/ESF9-SAR--Cave-SAR-Team.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Rescue.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Rescue.png"
+    },
+    {
+      "name": "ESF9-SAR--Swiftwater-Flood-SAR-Team.png",
+      "path": "Resources/ESF9-SAR--Swiftwater-Flood-SAR-Team.png"
+    },
+    {
+      "name": "ESF1-Animal-Health--Large-Animal-Rescue-Team.png",
+      "path": "Resources/ESF1-Animal-Health--Large-Animal-Rescue-Team.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Scraper.png",
+      "path": "Resources/ESF7-Public-Works--Scraper.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Water-Tender-Tanker.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Water-Tender-Tanker.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Strike-Team-Aerial-Ladder.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Strike-Team-Aerial-Ladder.png"
+    },
+    {
+      "name": "ESF9-SAR--Structural-Collapse-Rescue-Team.png",
+      "path": "Resources/ESF9-SAR--Structural-Collapse-Rescue-Team.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Strike-Team-Brush-Truck.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Strike-Team-Brush-Truck.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_HazMat.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_HazMat.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Brush.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Brush.png"
+    },
+    {
+      "name": "ESF2-IMT--CAP.png",
+      "path": "Resources/ESF2-IMT--CAP.png"
+    },
+    {
+      "name": "ESF2-IMT--Disaster-ASsessment.png",
+      "path": "Resources/ESF2-IMT--Disaster-ASsessment.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Crew-Transport.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Crew-Transport.png"
+    },
+    {
+      "name": "ESF3-EMS_MCI-Support-Vehicle.png",
+      "path": "Resources/ESF3-EMS_MCI-Support-Vehicle.png"
+    },
+    {
+      "name": "ESF9-SAR--Mountain-SAR-Team.png",
+      "path": "Resources/ESF9-SAR--Mountain-SAR-Team.png"
+    },
+    {
+      "name": "ESF13-LAW--Helicopter.png",
+      "path": "Resources/ESF13-LAW--Helicopter.png"
+    },
+    {
+      "name": "ESF2-IMT--Mobile-Kitchen.png",
+      "path": "Resources/ESF2-IMT--Mobile-Kitchen.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Bulldozer.png",
+      "path": "Resources/ESF7-Public-Works--Bulldozer.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Front-Excavator.png",
+      "path": "Resources/ESF7-Public-Works--Front-Excavator.png"
+    },
+    {
+      "name": "ESF9-SAR--Mine-and-Tunnel-SAR-Team.png",
+      "path": "Resources/ESF9-SAR--Mine-and-Tunnel-SAR-Team.png"
+    },
+    {
+      "name": "ESF13-LAW--Fixed-Wing-Recon.png",
+      "path": "Resources/ESF13-LAW--Fixed-Wing-Recon.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Command.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Command.png"
+    },
+    {
+      "name": "ESF3-EMS_Ambulance-Fixed-Wing-Air.png",
+      "path": "Resources/ESF3-EMS_Ambulance-Fixed-Wing-Air.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Foam-Tender.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Foam-Tender.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Tug-Boat.png",
+      "path": "Resources/ESF7-Public-Works--Tug-Boat.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Dump-Truck.png",
+      "path": "Resources/ESF7-Public-Works--Dump-Truck.png"
+    },
+    {
+      "name": "ESF13-LAW--Public-Safety-Dive-Team.png",
+      "path": "Resources/ESF13-LAW--Public-Safety-Dive-Team.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Wheel-Loader--Backhoe.png",
+      "path": "Resources/ESF7-Public-Works--Wheel-Loader--Backhoe.png"
+    },
+    {
+      "name": "ESF13-LAW--Bomb-Squad.png",
+      "path": "Resources/ESF13-LAW--Bomb-Squad.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Snow-Cat.png",
+      "path": "Resources/ESF7-Public-Works--Snow-Cat.png"
+    },
+    {
+      "name": "ESF2-IMT--Area-Command.png",
+      "path": "Resources/ESF2-IMT--Area-Command.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Grader.png",
+      "path": "Resources/ESF7-Public-Works--Grader.png"
+    },
+    {
+      "name": "ESF13-LAW--SWAT.png",
+      "path": "Resources/ESF13-LAW--SWAT.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Helicopter.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Helicopter.png"
+    },
+    {
+      "name": "ESF3-EMS_Strike-Team--Ambulance.png",
+      "path": "Resources/ESF3-EMS_Strike-Team--Ambulance.png"
+    },
+    {
+      "name": "ESF7-Public-Works--Bus.png",
+      "path": "Resources/ESF7-Public-Works--Bus.png"
+    },
+    {
+      "name": "ESF9-SAR--Canine-SAR-Team.png",
+      "path": "Resources/ESF9-SAR--Canine-SAR-Team.png"
+    },
+    {
+      "name": "INCDNT_RESRCE_WHITE-_SOLID-__GENRIC_ESF12-Public-Health.png",
+      "path": "Resources/INCDNT_RESRCE_WHITE-_SOLID-__GENRIC_ESF12-Public-Health.png"
+    },
+    {
+      "name": "ESF1-Animal-Health--Small-Animal-Transport-Team.png",
+      "path": "Resources/ESF1-Animal-Health--Small-Animal-Transport-Team.png"
+    },
+    {
+      "name": "ESF4-FIRE-HAZMAT_Aerial-Apparatus-Ladder.png",
+      "path": "Resources/ESF4-FIRE-HAZMAT_Aerial-Apparatus-Ladder.png"
+    },
+    {
+      "name": "ESF2-IMT--Critical-Incident-Stress-Management.png",
+      "path": "Resources/ESF2-IMT--Critical-Incident-Stress-Management.png"
+    },
+    {
+      "name": "Emergency-Personel-Access-PW-Access.png",
+      "path": "Access Hazards/Emergency-Personel-Access-PW-Access.png"
+    },
+    {
+      "name": "Hazard--ACCESS--NO-Ladder-Truck-or-Semi-Truck-Access.png",
+      "path": "Access Hazards/Hazard--ACCESS--NO-Ladder-Truck-or-Semi-Truck-Access.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Clearance--Narrow-No-Access.png",
+      "path": "Access Hazards/Hazard--ACCESS--Clearance--Narrow-No-Access.png"
+    },
+    {
+      "name": "Emergency-Access-Walking-Access-Only.png",
+      "path": "Access Hazards/Emergency-Access-Walking-Access-Only.png"
+    },
+    {
+      "name": "Emergency-Access-Pumper-Access.png",
+      "path": "Access Hazards/Emergency-Access-Pumper-Access.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Turnarounds.png",
+      "path": "Access Hazards/Hazard--ACCESS--Turnarounds.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Steep-Access-General.png",
+      "path": "Access Hazards/Hazard--ACCESS--Steep-Access-General.png"
+    },
+    {
+      "name": "Emergency-Personel-Access-PD-Access.png",
+      "path": "Access Hazards/Emergency-Personel-Access-PD-Access.png"
+    },
+    {
+      "name": "Emergency-Access-Ambulance-Access.png",
+      "path": "Access Hazards/Emergency-Access-Ambulance-Access.png"
+    },
+    {
+      "name": "Hazard--ACCESS--NO-Turnaround-Ambulance.png",
+      "path": "Access Hazards/Hazard--ACCESS--NO-Turnaround-Ambulance.png"
+    },
+    {
+      "name": "Emergency-Personel-Access-Trail-Access.png",
+      "path": "Access Hazards/Emergency-Personel-Access-Trail-Access.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Apparatus-Fire-Engine.png",
+      "path": "Access Hazards/Hazard--ACCESS--Apparatus-Fire-Engine.png"
+    },
+    {
+      "name": "Hazard--ACCESS--BLOCKED-No-Access.png",
+      "path": "Access Hazards/Hazard--ACCESS--BLOCKED-No-Access.png"
+    },
+    {
+      "name": "Emergency-Access-Water-Access.png",
+      "path": "Access Hazards/Emergency-Access-Water-Access.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Apparatus-No-Fire-Engine.png",
+      "path": "Access Hazards/Hazard--ACCESS--Apparatus-No-Fire-Engine.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Steep-Access-Difficult.png",
+      "path": "Access Hazards/Hazard--ACCESS--Steep-Access-Difficult.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Clearance--Narrow-No-Access-Fire-Engine.png",
+      "path": "Access Hazards/Hazard--ACCESS--Clearance--Narrow-No-Access-Fire-Engine.png"
+    },
+    {
+      "name": "Emergency-Access-Ladder-Truck-Access.png",
+      "path": "Access Hazards/Emergency-Access-Ladder-Truck-Access.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Traffic-Calming-Humps.png",
+      "path": "Access Hazards/Hazard--ACCESS--Traffic-Calming-Humps.png"
+    },
+    {
+      "name": "Emergency-Personel-Access-Fire-Department-Access.png",
+      "path": "Access Hazards/Emergency-Personel-Access-Fire-Department-Access.png"
+    },
+    {
+      "name": "Hazard--ACCESS--BRIDGE-Do-Not-Cross.png",
+      "path": "Access Hazards/Hazard--ACCESS--BRIDGE-Do-Not-Cross.png"
+    },
+    {
+      "name": "Hazard--ACCESS--NO-Turnaround-Vehicle-General.png",
+      "path": "Access Hazards/Hazard--ACCESS--NO-Turnaround-Vehicle-General.png"
+    },
+    {
+      "name": "Emergency-Access-Small-Vehicle.png",
+      "path": "Access Hazards/Emergency-Access-Small-Vehicle.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Steep-Access-Moderate.png",
+      "path": "Access Hazards/Hazard--ACCESS--Steep-Access-Moderate.png"
+    },
+    {
+      "name": "Hazard--ACCESS--NO-Vertical-Ladder-Access.png",
+      "path": "Access Hazards/Hazard--ACCESS--NO-Vertical-Ladder-Access.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Traffic-Calming-Bumps.png",
+      "path": "Access Hazards/Hazard--ACCESS--Traffic-Calming-Bumps.png"
+    },
+    {
+      "name": "Hazard--ACCESS--NO-Turnaround-Ladder-Truck-or-Semi-Truck.png",
+      "path": "Access Hazards/Hazard--ACCESS--NO-Turnaround-Ladder-Truck-or-Semi-Truck.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Steep-Access-Vehicle-General.png",
+      "path": "Access Hazards/Hazard--ACCESS--Steep-Access-Vehicle-General.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Clearance--Low-Height.png",
+      "path": "Access Hazards/Hazard--ACCESS--Clearance--Low-Height.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Clearance--Low-Height-No-Access-Fire-Engine.png",
+      "path": "Access Hazards/Hazard--ACCESS--Clearance--Low-Height-No-Access-Fire-Engine.png"
+    },
+    {
+      "name": "Hazard--ACCESS--NO-Turnaround.png",
+      "path": "Access Hazards/Hazard--ACCESS--NO-Turnaround.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Apparatus-Ambulance.png",
+      "path": "Access Hazards/Hazard--ACCESS--Apparatus-Ambulance.png"
+    },
+    {
+      "name": "Hazard--ACCESS--BLOCKED-Road.png",
+      "path": "Access Hazards/Hazard--ACCESS--BLOCKED-Road.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Turnarounds-Freeway.png",
+      "path": "Access Hazards/Hazard--ACCESS--Turnarounds-Freeway.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Vertical-Ladder-Access.png",
+      "path": "Access Hazards/Hazard--ACCESS--Vertical-Ladder-Access.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Clearance--Low-Height-No-Access.png",
+      "path": "Access Hazards/Hazard--ACCESS--Clearance--Low-Height-No-Access.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Clearance--Narrow.png",
+      "path": "Access Hazards/Hazard--ACCESS--Clearance--Narrow.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Steep-Access-Easy.png",
+      "path": "Access Hazards/Hazard--ACCESS--Steep-Access-Easy.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Traffic-Calming-Traffic-Circles.png",
+      "path": "Access Hazards/Hazard--ACCESS--Traffic-Calming-Traffic-Circles.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Steep-Access-Extreme.png",
+      "path": "Access Hazards/Hazard--ACCESS--Steep-Access-Extreme.png"
+    },
+    {
+      "name": "Emergency-Access-Tram-or-Vertical-Lift.png",
+      "path": "Access Hazards/Emergency-Access-Tram-or-Vertical-Lift.png"
+    },
+    {
+      "name": "Vehicle-Parking.png",
+      "path": "Access Hazards/Vehicle-Parking.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Poor-Access-Vehicle-General.png",
+      "path": "Access Hazards/Hazard--ACCESS--Poor-Access-Vehicle-General.png"
+    },
+    {
+      "name": "Hazard--ACCESS--NO-Turnaround-Fire-Engine.png",
+      "path": "Access Hazards/Hazard--ACCESS--NO-Turnaround-Fire-Engine.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Road-Access-Vehicle-General.png",
+      "path": "Access Hazards/Hazard--ACCESS--Road-Access-Vehicle-General.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Restricted-Weight.png",
+      "path": "Access Hazards/Hazard--ACCESS--Restricted-Weight.png"
+    },
+    {
+      "name": "Hazard--ACCESS--NO-Vehicle-Access.png",
+      "path": "Access Hazards/Hazard--ACCESS--NO-Vehicle-Access.png"
+    },
+    {
+      "name": "Hazard--ACCESS--Turnarounds-Roadway.png",
+      "path": "Access Hazards/Hazard--ACCESS--Turnarounds-Roadway.png"
+    },
+    {
+      "name": "Special-Weather-Warning.png",
+      "path": "Public Alert/Special-Weather-Warning.png"
+    },
+    {
+      "name": "911-Telephone-Outage-Emergency-Warning.png",
+      "path": "Public Alert/911-Telephone-Outage-Emergency-Warning.png"
+    },
+    {
+      "name": "Dust-Storm-Warning.png",
+      "path": "Public Alert/Dust-Storm-Warning.png"
+    },
+    {
+      "name": "High-Wind-Warning.png",
+      "path": "Public Alert/High-Wind-Warning.png"
+    },
+    {
+      "name": "Severe-Thunderstorm-Watch.png",
+      "path": "Public Alert/Severe-Thunderstorm-Watch.png"
+    },
+    {
+      "name": "Tornado-Warning.png",
+      "path": "Public Alert/Tornado-Warning.png"
+    },
+    {
+      "name": "Hurricane-Warning.png",
+      "path": "Public Alert/Hurricane-Warning.png"
+    },
+    {
+      "name": "Hurricane-Watch.png",
+      "path": "Public Alert/Hurricane-Watch.png"
+    },
+    {
+      "name": "Flood-Warning.png",
+      "path": "Public Alert/Flood-Warning.png"
+    },
+    {
+      "name": "Avalanche-Warning.png",
+      "path": "Public Alert/Avalanche-Warning.png"
+    },
+    {
+      "name": "Coastal-Flood-Watch.png",
+      "path": "Public Alert/Coastal-Flood-Watch.png"
+    },
+    {
+      "name": "Emergency-Action-Notification-National-Warning.png",
+      "path": "Public Alert/Emergency-Action-Notification-National-Warning.png"
+    },
+    {
+      "name": "Hurricane-Statement.png",
+      "path": "Public Alert/Hurricane-Statement.png"
+    },
+    {
+      "name": "Severe-Thunderstorm-Warning.png",
+      "path": "Public Alert/Severe-Thunderstorm-Warning.png"
+    },
+    {
+      "name": "Flood-Watch.png",
+      "path": "Public Alert/Flood-Watch.png"
+    },
+    {
+      "name": "High-Wind-Watch.png",
+      "path": "Public Alert/High-Wind-Watch.png"
+    },
+    {
+      "name": "Avalanche-Watch.png",
+      "path": "Public Alert/Avalanche-Watch.png"
+    },
+    {
+      "name": "Blue-Alert-Statement.png",
+      "path": "Public Alert/Blue-Alert-Statement.png"
+    },
+    {
+      "name": "Storm-Surge-Watch.png",
+      "path": "Public Alert/Storm-Surge-Watch.png"
+    },
+    {
+      "name": "Shelter-In-Place-Warning.png",
+      "path": "Public Alert/Shelter-In-Place-Warning.png"
+    },
+    {
+      "name": "Radiological-Hazard-Warning.png",
+      "path": "Public Alert/Radiological-Hazard-Warning.png"
+    },
+    {
+      "name": "Coastal-Flood-Warning.png",
+      "path": "Public Alert/Coastal-Flood-Warning.png"
+    },
+    {
+      "name": "Storm-Surge-Warning.png",
+      "path": "Public Alert/Storm-Surge-Warning.png"
+    },
+    {
+      "name": "Evacuate-Immediately-Warning.png",
+      "path": "Public Alert/Evacuate-Immediately-Warning.png"
+    },
+    {
+      "name": "Flash-Flood-Watch.png",
+      "path": "Public Alert/Flash-Flood-Watch.png"
+    },
+    {
+      "name": "Special-Weather-Statement.png",
+      "path": "Public Alert/Special-Weather-Statement.png"
+    },
+    {
+      "name": "Winter-Storm-Watch.png",
+      "path": "Public Alert/Winter-Storm-Watch.png"
+    },
+    {
+      "name": "Tsunami-Warning.png",
+      "path": "Public Alert/Tsunami-Warning.png"
+    },
+    {
+      "name": "Extreme-Wind-Warning.png",
+      "path": "Public Alert/Extreme-Wind-Warning.png"
+    },
+    {
+      "name": "Nuclear-Powerplant-Warning.png",
+      "path": "Public Alert/Nuclear-Powerplant-Warning.png"
+    },
+    {
+      "name": "Local-Area-Emergency-Warning.png",
+      "path": "Public Alert/Local-Area-Emergency-Warning.png"
+    },
+    {
+      "name": "Blizzard-Warning.png",
+      "path": "Public Alert/Blizzard-Warning.png"
+    },
+    {
+      "name": "Tropical-Storm-Watch.png",
+      "path": "Public Alert/Tropical-Storm-Watch.png"
+    },
+    {
+      "name": "Earthquake-Warning.png",
+      "path": "Public Alert/Earthquake-Warning.png"
+    },
+    {
+      "name": "Child-Abduction-Emergency-Statement.png",
+      "path": "Public Alert/Child-Abduction-Emergency-Statement.png"
+    },
+    {
+      "name": "Law-Enforcement-Warning.png",
+      "path": "Public Alert/Law-Enforcement-Warning.png"
+    },
+    {
+      "name": "Civil-Danger-Warning.png",
+      "path": "Public Alert/Civil-Danger-Warning.png"
+    },
+    {
+      "name": "Winter-Storm-Warning.png",
+      "path": "Public Alert/Winter-Storm-Warning.png"
+    },
+    {
+      "name": "Severe-Weather-Statement.png",
+      "path": "Public Alert/Severe-Weather-Statement.png"
+    },
+    {
+      "name": "Tropical-Storm-Warning.png",
+      "path": "Public Alert/Tropical-Storm-Warning.png"
+    },
+    {
+      "name": "Flash-Flood-Warning.png",
+      "path": "Public Alert/Flash-Flood-Warning.png"
+    },
+    {
+      "name": "Tsunami-Watch.png",
+      "path": "Public Alert/Tsunami-Watch.png"
+    },
+    {
+      "name": "Flood-Statement.png",
+      "path": "Public Alert/Flood-Statement.png"
+    },
+    {
+      "name": "Hazardous-Materials-Warning.png",
+      "path": "Public Alert/Hazardous-Materials-Warning.png"
+    },
+    {
+      "name": "Flash-Flood-Statement.png",
+      "path": "Public Alert/Flash-Flood-Statement.png"
+    },
+    {
+      "name": "Fire-Warning.png",
+      "path": "Public Alert/Fire-Warning.png"
+    },
+    {
+      "name": "Tornado-Watch.png",
+      "path": "Public Alert/Tornado-Watch.png"
+    },
+    {
+      "name": "Volcano-Warning.png",
+      "path": "Public Alert/Volcano-Warning.png"
+    },
+    {
+      "name": "Civil-Emergency-Message-Warning.png",
+      "path": "Public Alert/Civil-Emergency-Message-Warning.png"
+    },
+    {
+      "name": "Earthquake-Statement.png",
+      "path": "Public Alert/Earthquake-Statement.png"
+    },
+    {
+      "name": "Special-Marine-Warning.png",
+      "path": "Public Alert/Special-Marine-Warning.png"
+    },
+    {
+      "name": "Hazard--Fire-House.png",
+      "path": "Human Caused Hazards/Hazard--Fire-House.png"
+    },
+    {
+      "name": "Hazard--Radiological-General.png",
+      "path": "Human Caused Hazards/Hazard--Radiological-General.png"
+    },
+    {
+      "name": "Hazard--Fire-School.png",
+      "path": "Human Caused Hazards/Hazard--Fire-School.png"
+    },
+    {
+      "name": "Hazard--Train-Derail.png",
+      "path": "Human Caused Hazards/Hazard--Train-Derail.png"
+    },
+    {
+      "name": "Hazard--HazMat-Release.png",
+      "path": "Human Caused Hazards/Hazard--HazMat-Release.png"
+    },
+    {
+      "name": "Hazard--Plane-Crash.png",
+      "path": "Human Caused Hazards/Hazard--Plane-Crash.png"
+    },
+    {
+      "name": "Hazard--Fire-Forest.png",
+      "path": "Human Caused Hazards/Hazard--Fire-Forest.png"
+    },
+    {
+      "name": "Hazard--Radiological-Nuclear-Power.png",
+      "path": "Human Caused Hazards/Hazard--Radiological-Nuclear-Power.png"
+    },
+    {
+      "name": "Hazard--Fire-Commercial.png",
+      "path": "Human Caused Hazards/Hazard--Fire-Commercial.png"
+    },
+    {
+      "name": "Hazard--Other.png",
+      "path": "Human Caused Hazards/Hazard--Other.png"
+    },
+    {
+      "name": "Hazard--Structural-Collapse.png",
+      "path": "Human Caused Hazards/Hazard--Structural-Collapse.png"
+    },
+    {
+      "name": "Hazard--Fire-Other.png",
+      "path": "Human Caused Hazards/Hazard--Fire-Other.png"
+    },
+    {
+      "name": "Hazard--Fire-Industrial.png",
+      "path": "Human Caused Hazards/Hazard--Fire-Industrial.png"
+    },
+    {
+      "name": "Hazard--Explosion.png",
+      "path": "Human Caused Hazards/Hazard--Explosion.png"
+    },
+    {
+      "name": "health-and-medical_medical-supply-chain-with-label-clr.png",
+      "path": "Lifelines/health-and-medical_medical-supply-chain-with-label-clr.png"
+    },
+    {
+      "name": "health-and-medical_patient-movement-gray-halo.png",
+      "path": "Lifelines/health-and-medical_patient-movement-gray-halo.png"
+    },
+    {
+      "name": "communications-icon-only-red-halo.png",
+      "path": "Lifelines/communications-icon-only-red-halo.png"
+    },
+    {
+      "name": "energy-power-fuel_fuel-yellow-halo.png",
+      "path": "Lifelines/energy-power-fuel_fuel-yellow-halo.png"
+    },
+    {
+      "name": "food-water-shelter-with-label-yellow-halo.png",
+      "path": "Lifelines/food-water-shelter-with-label-yellow-halo.png"
+    },
+    {
+      "name": "hazmat-with-label-no-halo.png",
+      "path": "Lifelines/hazmat-with-label-no-halo.png"
+    },
+    {
+      "name": "transportation_mass-transit.png",
+      "path": "Lifelines/transportation_mass-transit.png"
+    },
+    {
+      "name": "hazmat_hazmat-pollutants-contaminants-gray-halo.png",
+      "path": "Lifelines/hazmat_hazmat-pollutants-contaminants-gray-halo.png"
+    },
+    {
+      "name": "food-water-shelter_water.png",
+      "path": "Lifelines/food-water-shelter_water.png"
+    },
+    {
+      "name": "food-water-shelter_agriculture-red-halo.png",
+      "path": "Lifelines/food-water-shelter_agriculture-red-halo.png"
+    },
+    {
+      "name": "energy-power-fuel_fuel.png",
+      "path": "Lifelines/energy-power-fuel_fuel.png"
+    },
+    {
+      "name": "safety-and-security_community-safety-with-label-clr.png",
+      "path": "Lifelines/safety-and-security_community-safety-with-label-clr.png"
+    },
+    {
+      "name": "health-and-medical-icon-only-yellow-halo.png",
+      "path": "Lifelines/health-and-medical-icon-only-yellow-halo.png"
+    },
+    {
+      "name": "transportation-icon-only-red-halo.png",
+      "path": "Lifelines/transportation-icon-only-red-halo.png"
+    },
+    {
+      "name": "energy-power-fuel-icon-only-amber-halo.png",
+      "path": "Lifelines/energy-power-fuel-icon-only-amber-halo.png"
+    },
+    {
+      "name": "safety-and-security-icon-only-red-halo.png",
+      "path": "Lifelines/safety-and-security-icon-only-red-halo.png"
+    },
+    {
+      "name": "food-water-shelter-with-label-gray-halo.png",
+      "path": "Lifelines/food-water-shelter-with-label-gray-halo.png"
+    },
+    {
+      "name": "energy-power-fuel-icon-only-gray-halo.png",
+      "path": "Lifelines/energy-power-fuel-icon-only-gray-halo.png"
+    },
+    {
+      "name": "transportation-icon-only-no-halo.png",
+      "path": "Lifelines/transportation-icon-only-no-halo.png"
+    },
+    {
+      "name": "health-and-medical-with-label-yellow-halo.png",
+      "path": "Lifelines/health-and-medical-with-label-yellow-halo.png"
+    },
+    {
+      "name": "transportation_mass-transit-yellow-halo.png",
+      "path": "Lifelines/transportation_mass-transit-yellow-halo.png"
+    },
+    {
+      "name": "food-water-shelter_food.png",
+      "path": "Lifelines/food-water-shelter_food.png"
+    },
+    {
+      "name": "food-water-shelter-with-label-no-halo.png",
+      "path": "Lifelines/food-water-shelter-with-label-no-halo.png"
+    },
+    {
+      "name": "communications-icon-only-yellow-halo.png",
+      "path": "Lifelines/communications-icon-only-yellow-halo.png"
+    },
+    {
+      "name": "transportation_railway-gray-halo.png",
+      "path": "Lifelines/transportation_railway-gray-halo.png"
+    },
+    {
+      "name": "transportation_maritime.png",
+      "path": "Lifelines/transportation_maritime.png"
+    },
+    {
+      "name": "hazmat_hazmat-pollutants-contaminants-green-halo.png",
+      "path": "Lifelines/hazmat_hazmat-pollutants-contaminants-green-halo.png"
+    },
+    {
+      "name": "safety-and-security-with-label-no-halo.png",
+      "path": "Lifelines/safety-and-security-with-label-no-halo.png"
+    },
+    {
+      "name": "safety-and-security_law-enforcement-security-red-halo.png",
+      "path": "Lifelines/safety-and-security_law-enforcement-security-red-halo.png"
+    },
+    {
+      "name": "transportation-with-label-red-halo.png",
+      "path": "Lifelines/transportation-with-label-red-halo.png"
+    },
+    {
+      "name": "safety-and-security-icon-only-no-halo.png",
+      "path": "Lifelines/safety-and-security-icon-only-no-halo.png"
+    },
+    {
+      "name": "energy-power-fuel_power-with-label-clr.png",
+      "path": "Lifelines/energy-power-fuel_power-with-label-clr.png"
+    },
+    {
+      "name": "health-and-medical_fatality-management-green-halo.png",
+      "path": "Lifelines/health-and-medical_fatality-management-green-halo.png"
+    },
+    {
+      "name": "energy-power-fuel_power-green-halo.png",
+      "path": "Lifelines/energy-power-fuel_power-green-halo.png"
+    },
+    {
+      "name": "hazmat-icon-only-amber-halo.png",
+      "path": "Lifelines/hazmat-icon-only-amber-halo.png"
+    },
+    {
+      "name": "health-and-medical_patient-movement.png",
+      "path": "Lifelines/health-and-medical_patient-movement.png"
+    },
+    {
+      "name": "transportation_aviation-yellow-halo.png",
+      "path": "Lifelines/transportation_aviation-yellow-halo.png"
+    },
+    {
+      "name": "food-water-shelter_food-with-label-clr.png",
+      "path": "Lifelines/food-water-shelter_food-with-label-clr.png"
+    },
+    {
+      "name": "health-and-medical_fatality-management-gray-halo.png",
+      "path": "Lifelines/health-and-medical_fatality-management-gray-halo.png"
+    },
+    {
+      "name": "health-and-medical-with-label-no-halo.png",
+      "path": "Lifelines/health-and-medical-with-label-no-halo.png"
+    },
+    {
+      "name": "communications_911-dispatch-with-label-clr.png",
+      "path": "Lifelines/communications_911-dispatch-with-label-clr.png"
+    },
+    {
+      "name": "communications-with-label-yellow-halo.png",
+      "path": "Lifelines/communications-with-label-yellow-halo.png"
+    },
+    {
+      "name": "transportation-with-label-amber-halo.png",
+      "path": "Lifelines/transportation-with-label-amber-halo.png"
+    },
+    {
+      "name": "communications_alerts-warnings-messages-green-halo.png",
+      "path": "Lifelines/communications_alerts-warnings-messages-green-halo.png"
+    },
+    {
+      "name": "health-and-medical_medical-care-red-halo.png",
+      "path": "Lifelines/health-and-medical_medical-care-red-halo.png"
+    },
+    {
+      "name": "health-and-medical-icon-only-amber-halo.png",
+      "path": "Lifelines/health-and-medical-icon-only-amber-halo.png"
+    },
+    {
+      "name": "transportation_maritime-with-label-clr.png",
+      "path": "Lifelines/transportation_maritime-with-label-clr.png"
+    },
+    {
+      "name": "communications_911-dispatch-green-halo.png",
+      "path": "Lifelines/communications_911-dispatch-green-halo.png"
+    },
+    {
+      "name": "energy-power-fuel-icon-only-yellow-halo.png",
+      "path": "Lifelines/energy-power-fuel-icon-only-yellow-halo.png"
+    },
+    {
+      "name": "health-and-medical-with-label-red-halo.png",
+      "path": "Lifelines/health-and-medical-with-label-red-halo.png"
+    },
+    {
+      "name": "food-water-shelter_shelter.png",
+      "path": "Lifelines/food-water-shelter_shelter.png"
+    },
+    {
+      "name": "transportation_railway.png",
+      "path": "Lifelines/transportation_railway.png"
+    },
+    {
+      "name": "food-water-shelter-with-label-amber-halo.png",
+      "path": "Lifelines/food-water-shelter-with-label-amber-halo.png"
+    },
+    {
+      "name": "communications_alerts-warnings-messages-yellow-halo.png",
+      "path": "Lifelines/communications_alerts-warnings-messages-yellow-halo.png"
+    },
+    {
+      "name": "hazmat-icon-only-no-halo.png",
+      "path": "Lifelines/hazmat-icon-only-no-halo.png"
+    },
+    {
+      "name": "communications-with-label-amber-halo.png",
+      "path": "Lifelines/communications-with-label-amber-halo.png"
+    },
+    {
+      "name": "energy-power-fuel_power.png",
+      "path": "Lifelines/energy-power-fuel_power.png"
+    },
+    {
+      "name": "communications-icon-only-green-halo.png",
+      "path": "Lifelines/communications-icon-only-green-halo.png"
+    },
+    {
+      "name": "transportation-with-label-yellow-halo.png",
+      "path": "Lifelines/transportation-with-label-yellow-halo.png"
+    },
+    {
+      "name": "health-and-medical_medical-care-green-halo.png",
+      "path": "Lifelines/health-and-medical_medical-care-green-halo.png"
+    },
+    {
+      "name": "food-water-shelter-with-label-green-halo.png",
+      "path": "Lifelines/food-water-shelter-with-label-green-halo.png"
+    },
+    {
+      "name": "energy-power-fuel-with-label-amber-halo.png",
+      "path": "Lifelines/energy-power-fuel-with-label-amber-halo.png"
+    },
+    {
+      "name": "transportation_aviation.png",
+      "path": "Lifelines/transportation_aviation.png"
+    },
+    {
+      "name": "health-and-medical_medical-supply-chain-gray-halo.png",
+      "path": "Lifelines/health-and-medical_medical-supply-chain-gray-halo.png"
+    },
+    {
+      "name": "transportation-with-label-no-halo.png",
+      "path": "Lifelines/transportation-with-label-no-halo.png"
+    },
+    {
+      "name": "communications_infrastructure-red-halo.png",
+      "path": "Lifelines/communications_infrastructure-red-halo.png"
+    },
+    {
+      "name": "safety-and-security-with-label-red-halo.png",
+      "path": "Lifelines/safety-and-security-with-label-red-halo.png"
+    },
+    {
+      "name": "food-water-shelter-icon-only-red-halo.png",
+      "path": "Lifelines/food-water-shelter-icon-only-red-halo.png"
+    },
+    {
+      "name": "health-and-medical_medical-supply-chain.png",
+      "path": "Lifelines/health-and-medical_medical-supply-chain.png"
+    },
+    {
+      "name": "communications_911-dispatch-yellow-halo.png",
+      "path": "Lifelines/communications_911-dispatch-yellow-halo.png"
+    },
+    {
+      "name": "health-and-medical_public-health-red-halo.png",
+      "path": "Lifelines/health-and-medical_public-health-red-halo.png"
+    },
+    {
+      "name": "transportation_maritime-green-halo.png",
+      "path": "Lifelines/transportation_maritime-green-halo.png"
+    },
+    {
+      "name": "communications_alerts-warnings-messages-with-label-clr.png",
+      "path": "Lifelines/communications_alerts-warnings-messages-with-label-clr.png"
+    },
+    {
+      "name": "energy-power-fuel-with-label-gray-halo.png",
+      "path": "Lifelines/energy-power-fuel-with-label-gray-halo.png"
+    },
+    {
+      "name": "transportation-with-label-gray-halo.png",
+      "path": "Lifelines/transportation-with-label-gray-halo.png"
+    },
+    {
+      "name": "hazmat_facilities-green-halo.png",
+      "path": "Lifelines/hazmat_facilities-green-halo.png"
+    },
+    {
+      "name": "communications_financial-services-yellow-halo.png",
+      "path": "Lifelines/communications_financial-services-yellow-halo.png"
+    },
+    {
+      "name": "health-and-medical_medical-supply-chain-yellow-halo.png",
+      "path": "Lifelines/health-and-medical_medical-supply-chain-yellow-halo.png"
+    },
+    {
+      "name": "communications_responder-communications.png",
+      "path": "Lifelines/communications_responder-communications.png"
+    },
+    {
+      "name": "food-water-shelter_food-gray-halo.png",
+      "path": "Lifelines/food-water-shelter_food-gray-halo.png"
+    },
+    {
+      "name": "safety-and-security_fire-services-yellow-halo.png",
+      "path": "Lifelines/safety-and-security_fire-services-yellow-halo.png"
+    },
+    {
+      "name": "safety-and-security_law-enforcement-security-yellow-halo.png",
+      "path": "Lifelines/safety-and-security_law-enforcement-security-yellow-halo.png"
+    },
+    {
+      "name": "food-water-shelter_water-gray-halo.png",
+      "path": "Lifelines/food-water-shelter_water-gray-halo.png"
+    },
+    {
+      "name": "safety-and-security_government-services-with-label-clr.png",
+      "path": "Lifelines/safety-and-security_government-services-with-label-clr.png"
+    },
+    {
+      "name": "communications-icon-only-no-halo.png",
+      "path": "Lifelines/communications-icon-only-no-halo.png"
+    },
+    {
+      "name": "hazmat-with-label-gray-halo.png",
+      "path": "Lifelines/hazmat-with-label-gray-halo.png"
+    },
+    {
+      "name": "food-water-shelter_water-red-halo.png",
+      "path": "Lifelines/food-water-shelter_water-red-halo.png"
+    },
+    {
+      "name": "food-water-shelter_shelter-yellow-halo.png",
+      "path": "Lifelines/food-water-shelter_shelter-yellow-halo.png"
+    },
+    {
+      "name": "energy-power-fuel-with-label-yellow-halo.png",
+      "path": "Lifelines/energy-power-fuel-with-label-yellow-halo.png"
+    },
+    {
+      "name": "safety-and-security_law-enforcement-security-gray-halo.png",
+      "path": "Lifelines/safety-and-security_law-enforcement-security-gray-halo.png"
+    },
+    {
+      "name": "safety-and-security-icon-only-green-halo.png",
+      "path": "Lifelines/safety-and-security-icon-only-green-halo.png"
+    },
+    {
+      "name": "transportation_mass-transit-green-halo.png",
+      "path": "Lifelines/transportation_mass-transit-green-halo.png"
+    },
+    {
+      "name": "health-and-medical-with-label-green-halo.png",
+      "path": "Lifelines/health-and-medical-with-label-green-halo.png"
+    },
+    {
+      "name": "food-water-shelter_water-yellow-halo.png",
+      "path": "Lifelines/food-water-shelter_water-yellow-halo.png"
+    },
+    {
+      "name": "safety-and-security-with-label-green-halo.png",
+      "path": "Lifelines/safety-and-security-with-label-green-halo.png"
+    },
+    {
+      "name": "health-and-medical_patient-movement-red-halo.png",
+      "path": "Lifelines/health-and-medical_patient-movement-red-halo.png"
+    },
+    {
+      "name": "health-and-medical_public-health-gray-halo.png",
+      "path": "Lifelines/health-and-medical_public-health-gray-halo.png"
+    },
+    {
+      "name": "safety-and-security-with-label-amber-halo.png",
+      "path": "Lifelines/safety-and-security-with-label-amber-halo.png"
+    },
+    {
+      "name": "transportation_mass-transit-gray-halo.png",
+      "path": "Lifelines/transportation_mass-transit-gray-halo.png"
+    },
+    {
+      "name": "safety-and-security_government-services-red-halo.png",
+      "path": "Lifelines/safety-and-security_government-services-red-halo.png"
+    },
+    {
+      "name": "safety-and-security_fire-services-with-label-clr.png",
+      "path": "Lifelines/safety-and-security_fire-services-with-label-clr.png"
+    },
+    {
+      "name": "health-and-medical_medical-care-gray-halo.png",
+      "path": "Lifelines/health-and-medical_medical-care-gray-halo.png"
+    },
+    {
+      "name": "health-and-medical-with-label-amber-halo.png",
+      "path": "Lifelines/health-and-medical-with-label-amber-halo.png"
+    },
+    {
+      "name": "energy-power-fuel_power-red-halo.png",
+      "path": "Lifelines/energy-power-fuel_power-red-halo.png"
+    },
+    {
+      "name": "transportation-with-label-green-halo.png",
+      "path": "Lifelines/transportation-with-label-green-halo.png"
+    },
+    {
+      "name": "safety-and-security-with-label-gray-halo.png",
+      "path": "Lifelines/safety-and-security-with-label-gray-halo.png"
+    },
+    {
+      "name": "transportation_aviation-gray-halo.png",
+      "path": "Lifelines/transportation_aviation-gray-halo.png"
+    },
+    {
+      "name": "energy-power-fuel-icon-only-red-halo.png",
+      "path": "Lifelines/energy-power-fuel-icon-only-red-halo.png"
+    },
+    {
+      "name": "transportation_aviation-green-halo.png",
+      "path": "Lifelines/transportation_aviation-green-halo.png"
+    },
+    {
+      "name": "safety-and-security_search-and-rescue.png",
+      "path": "Lifelines/safety-and-security_search-and-rescue.png"
+    },
+    {
+      "name": "communications_infrastructure-gray-halo.png",
+      "path": "Lifelines/communications_infrastructure-gray-halo.png"
+    },
+    {
+      "name": "safety-and-security_government-services-gray-halo.png",
+      "path": "Lifelines/safety-and-security_government-services-gray-halo.png"
+    },
+    {
+      "name": "safety-and-security_community-safety-yellow-halo.png",
+      "path": "Lifelines/safety-and-security_community-safety-yellow-halo.png"
+    },
+    {
+      "name": "hazmat_hazmat-pollutants-contaminants.png",
+      "path": "Lifelines/hazmat_hazmat-pollutants-contaminants.png"
+    },
+    {
+      "name": "communications_financial-services-green-halo.png",
+      "path": "Lifelines/communications_financial-services-green-halo.png"
+    },
+    {
+      "name": "health-and-medical_fatality-management.png",
+      "path": "Lifelines/health-and-medical_fatality-management.png"
+    },
+    {
+      "name": "transportation_railway-red-halo.png",
+      "path": "Lifelines/transportation_railway-red-halo.png"
+    },
+    {
+      "name": "health-and-medical_public-health-green-halo.png",
+      "path": "Lifelines/health-and-medical_public-health-green-halo.png"
+    },
+    {
+      "name": "hazmat_facilities-yellow-halo.png",
+      "path": "Lifelines/hazmat_facilities-yellow-halo.png"
+    },
+    {
+      "name": "food-water-shelter_food-yellow-halo.png",
+      "path": "Lifelines/food-water-shelter_food-yellow-halo.png"
+    },
+    {
+      "name": "communications_financial-services-gray-halo.png",
+      "path": "Lifelines/communications_financial-services-gray-halo.png"
+    },
+    {
+      "name": "energy-power-fuel-with-label-green-halo.png",
+      "path": "Lifelines/energy-power-fuel-with-label-green-halo.png"
+    },
+    {
+      "name": "hazmat_hazmat-pollutants-contaminants-red-halo.png",
+      "path": "Lifelines/hazmat_hazmat-pollutants-contaminants-red-halo.png"
+    },
+    {
+      "name": "hazmat_hazmat-pollutants-contaminants-with-label-clr.png",
+      "path": "Lifelines/hazmat_hazmat-pollutants-contaminants-with-label-clr.png"
+    },
+    {
+      "name": "communications_infrastructure-with-label-clr.png",
+      "path": "Lifelines/communications_infrastructure-with-label-clr.png"
+    },
+    {
+      "name": "transportation_maritime-red-halo.png",
+      "path": "Lifelines/transportation_maritime-red-halo.png"
+    },
+    {
+      "name": "hazmat-icon-only-red-halo.png",
+      "path": "Lifelines/hazmat-icon-only-red-halo.png"
+    },
+    {
+      "name": "health-and-medical_medical-supply-chain-green-halo.png",
+      "path": "Lifelines/health-and-medical_medical-supply-chain-green-halo.png"
+    },
+    {
+      "name": "food-water-shelter-icon-only-green-halo.png",
+      "path": "Lifelines/food-water-shelter-icon-only-green-halo.png"
+    },
+    {
+      "name": "communications_911-dispatch-red-halo.png",
+      "path": "Lifelines/communications_911-dispatch-red-halo.png"
+    },
+    {
+      "name": "health-and-medical-icon-only-gray-halo.png",
+      "path": "Lifelines/health-and-medical-icon-only-gray-halo.png"
+    },
+    {
+      "name": "transportation_mass-transit-red-halo.png",
+      "path": "Lifelines/transportation_mass-transit-red-halo.png"
+    },
+    {
+      "name": "food-water-shelter_agriculture.png",
+      "path": "Lifelines/food-water-shelter_agriculture.png"
+    },
+    {
+      "name": "health-and-medical_patient-movement-green-halo.png",
+      "path": "Lifelines/health-and-medical_patient-movement-green-halo.png"
+    },
+    {
+      "name": "energy-power-fuel_fuel-green-halo.png",
+      "path": "Lifelines/energy-power-fuel_fuel-green-halo.png"
+    },
+    {
+      "name": "communications-with-label-no-halo.png",
+      "path": "Lifelines/communications-with-label-no-halo.png"
+    },
+    {
+      "name": "hazmat-icon-only-gray-halo.png",
+      "path": "Lifelines/hazmat-icon-only-gray-halo.png"
+    },
+    {
+      "name": "communications_infrastructure.png",
+      "path": "Lifelines/communications_infrastructure.png"
+    },
+    {
+      "name": "food-water-shelter-icon-only-yellow-halo.png",
+      "path": "Lifelines/food-water-shelter-icon-only-yellow-halo.png"
+    },
+    {
+      "name": "health-and-medical_fatality-management-yellow-halo.png",
+      "path": "Lifelines/health-and-medical_fatality-management-yellow-halo.png"
+    },
+    {
+      "name": "hazmat_facilities-gray-halo.png",
+      "path": "Lifelines/hazmat_facilities-gray-halo.png"
+    },
+    {
+      "name": "communications_responder-communications-with-label-clr.png",
+      "path": "Lifelines/communications_responder-communications-with-label-clr.png"
+    },
+    {
+      "name": "communications-icon-only-amber-halo.png",
+      "path": "Lifelines/communications-icon-only-amber-halo.png"
+    },
+    {
+      "name": "hazmat-icon-only-yellow-halo.png",
+      "path": "Lifelines/hazmat-icon-only-yellow-halo.png"
+    },
+    {
+      "name": "transportation-icon-only-amber-halo.png",
+      "path": "Lifelines/transportation-icon-only-amber-halo.png"
+    },
+    {
+      "name": "safety-and-security_fire-services-gray-halo.png",
+      "path": "Lifelines/safety-and-security_fire-services-gray-halo.png"
+    },
+    {
+      "name": "food-water-shelter_food-red-halo.png",
+      "path": "Lifelines/food-water-shelter_food-red-halo.png"
+    },
+    {
+      "name": "safety-and-security_fire-services.png",
+      "path": "Lifelines/safety-and-security_fire-services.png"
+    },
+    {
+      "name": "hazmat-with-label-green-halo.png",
+      "path": "Lifelines/hazmat-with-label-green-halo.png"
+    },
+    {
+      "name": "hazmat-with-label-yellow-halo.png",
+      "path": "Lifelines/hazmat-with-label-yellow-halo.png"
+    },
+    {
+      "name": "communications_responder-communications-gray-halo.png",
+      "path": "Lifelines/communications_responder-communications-gray-halo.png"
+    },
+    {
+      "name": "safety-and-security-icon-only-yellow-halo.png",
+      "path": "Lifelines/safety-and-security-icon-only-yellow-halo.png"
+    },
+    {
+      "name": "communications_financial-services-red-halo.png",
+      "path": "Lifelines/communications_financial-services-red-halo.png"
+    },
+    {
+      "name": "transportation_highway-roadway-gray-halo.png",
+      "path": "Lifelines/transportation_highway-roadway-gray-halo.png"
+    },
+    {
+      "name": "food-water-shelter_agriculture-green-halo.png",
+      "path": "Lifelines/food-water-shelter_agriculture-green-halo.png"
+    },
+    {
+      "name": "hazmat_facilities.png",
+      "path": "Lifelines/hazmat_facilities.png"
+    },
+    {
+      "name": "communications_911-dispatch.png",
+      "path": "Lifelines/communications_911-dispatch.png"
+    },
+    {
+      "name": "transportation-icon-only-yellow-halo.png",
+      "path": "Lifelines/transportation-icon-only-yellow-halo.png"
+    },
+    {
+      "name": "health-and-medical_medical-care-with-label-clr.png",
+      "path": "Lifelines/health-and-medical_medical-care-with-label-clr.png"
+    },
+    {
+      "name": "transportation_mass-transit-with-label-clr.png",
+      "path": "Lifelines/transportation_mass-transit-with-label-clr.png"
+    },
+    {
+      "name": "safety-and-security_search-and-rescue-green-halo.png",
+      "path": "Lifelines/safety-and-security_search-and-rescue-green-halo.png"
+    },
+    {
+      "name": "communications_financial-services.png",
+      "path": "Lifelines/communications_financial-services.png"
+    },
+    {
+      "name": "transportation_maritime-gray-halo.png",
+      "path": "Lifelines/transportation_maritime-gray-halo.png"
+    },
+    {
+      "name": "energy-power-fuel-icon-only-green-halo.png",
+      "path": "Lifelines/energy-power-fuel-icon-only-green-halo.png"
+    },
+    {
+      "name": "energy-power-fuel-icon-only-no-halo.png",
+      "path": "Lifelines/energy-power-fuel-icon-only-no-halo.png"
+    },
+    {
+      "name": "safety-and-security-with-label-yellow-halo.png",
+      "path": "Lifelines/safety-and-security-with-label-yellow-halo.png"
+    },
+    {
+      "name": "communications_911-dispatch-gray-halo.png",
+      "path": "Lifelines/communications_911-dispatch-gray-halo.png"
+    },
+    {
+      "name": "energy-power-fuel_fuel-with-label-clr.png",
+      "path": "Lifelines/energy-power-fuel_fuel-with-label-clr.png"
+    },
+    {
+      "name": "communications_alerts-warnings-messages-gray-halo.png",
+      "path": "Lifelines/communications_alerts-warnings-messages-gray-halo.png"
+    },
+    {
+      "name": "transportation_highway-roadway-green-halo.png",
+      "path": "Lifelines/transportation_highway-roadway-green-halo.png"
+    },
+    {
+      "name": "energy-power-fuel-with-label-red-halo.png",
+      "path": "Lifelines/energy-power-fuel-with-label-red-halo.png"
+    },
+    {
+      "name": "health-and-medical_patient-movement-yellow-halo.png",
+      "path": "Lifelines/health-and-medical_patient-movement-yellow-halo.png"
+    },
+    {
+      "name": "transportation_highway-roadway.png",
+      "path": "Lifelines/transportation_highway-roadway.png"
+    },
+    {
+      "name": "food-water-shelter_water-with-label-clr.png",
+      "path": "Lifelines/food-water-shelter_water-with-label-clr.png"
+    },
+    {
+      "name": "food-water-shelter_shelter-green-halo.png",
+      "path": "Lifelines/food-water-shelter_shelter-green-halo.png"
+    },
+    {
+      "name": "health-and-medical_public-health-yellow-halo.png",
+      "path": "Lifelines/health-and-medical_public-health-yellow-halo.png"
+    },
+    {
+      "name": "safety-and-security-icon-only-gray-halo.png",
+      "path": "Lifelines/safety-and-security-icon-only-gray-halo.png"
+    },
+    {
+      "name": "hazmat-with-label-red-halo.png",
+      "path": "Lifelines/hazmat-with-label-red-halo.png"
+    },
+    {
+      "name": "communications-icon-only-gray-halo.png",
+      "path": "Lifelines/communications-icon-only-gray-halo.png"
+    },
+    {
+      "name": "food-water-shelter_agriculture-yellow-halo.png",
+      "path": "Lifelines/food-water-shelter_agriculture-yellow-halo.png"
+    },
+    {
+      "name": "health-and-medical-with-label-gray-halo.png",
+      "path": "Lifelines/health-and-medical-with-label-gray-halo.png"
+    },
+    {
+      "name": "safety-and-security_law-enforcement-security-with-label-clr.png",
+      "path": "Lifelines/safety-and-security_law-enforcement-security-with-label-clr.png"
+    },
+    {
+      "name": "energy-power-fuel_fuel-red-halo.png",
+      "path": "Lifelines/energy-power-fuel_fuel-red-halo.png"
+    },
+    {
+      "name": "safety-and-security_government-services-yellow-halo.png",
+      "path": "Lifelines/safety-and-security_government-services-yellow-halo.png"
+    },
+    {
+      "name": "communications-with-label-green-halo.png",
+      "path": "Lifelines/communications-with-label-green-halo.png"
+    },
+    {
+      "name": "communications_responder-communications-yellow-halo.png",
+      "path": "Lifelines/communications_responder-communications-yellow-halo.png"
+    },
+    {
+      "name": "health-and-medical-icon-only-green-halo.png",
+      "path": "Lifelines/health-and-medical-icon-only-green-halo.png"
+    },
+    {
+      "name": "transportation_railway-green-halo.png",
+      "path": "Lifelines/transportation_railway-green-halo.png"
+    },
+    {
+      "name": "transportation_railway-yellow-halo.png",
+      "path": "Lifelines/transportation_railway-yellow-halo.png"
+    },
+    {
+      "name": "safety-and-security_government-services-green-halo.png",
+      "path": "Lifelines/safety-and-security_government-services-green-halo.png"
+    },
+    {
+      "name": "food-water-shelter_agriculture-with-label-clr.png",
+      "path": "Lifelines/food-water-shelter_agriculture-with-label-clr.png"
+    },
+    {
+      "name": "safety-and-security_law-enforcement-security-green-halo.png",
+      "path": "Lifelines/safety-and-security_law-enforcement-security-green-halo.png"
+    },
+    {
+      "name": "food-water-shelter_shelter-red-halo.png",
+      "path": "Lifelines/food-water-shelter_shelter-red-halo.png"
+    },
+    {
+      "name": "health-and-medical-icon-only-red-halo.png",
+      "path": "Lifelines/health-and-medical-icon-only-red-halo.png"
+    },
+    {
+      "name": "safety-and-security_government-services.png",
+      "path": "Lifelines/safety-and-security_government-services.png"
+    },
+    {
+      "name": "energy-power-fuel_fuel-gray-halo.png",
+      "path": "Lifelines/energy-power-fuel_fuel-gray-halo.png"
+    },
+    {
+      "name": "communications_responder-communications-green-halo.png",
+      "path": "Lifelines/communications_responder-communications-green-halo.png"
+    },
+    {
+      "name": "communications_alerts-warnings-messages.png",
+      "path": "Lifelines/communications_alerts-warnings-messages.png"
+    },
+    {
+      "name": "health-and-medical_fatality-management-with-label-clr.png",
+      "path": "Lifelines/health-and-medical_fatality-management-with-label-clr.png"
+    },
+    {
+      "name": "safety-and-security_search-and-rescue-red-halo.png",
+      "path": "Lifelines/safety-and-security_search-and-rescue-red-halo.png"
+    },
+    {
+      "name": "health-and-medical_public-health.png",
+      "path": "Lifelines/health-and-medical_public-health.png"
+    },
+    {
+      "name": "energy-power-fuel-with-label-no-halo.png",
+      "path": "Lifelines/energy-power-fuel-with-label-no-halo.png"
+    },
+    {
+      "name": "food-water-shelter-icon-only-amber-halo.png",
+      "path": "Lifelines/food-water-shelter-icon-only-amber-halo.png"
+    },
+    {
+      "name": "safety-and-security_law-enforcement-security.png",
+      "path": "Lifelines/safety-and-security_law-enforcement-security.png"
+    },
+    {
+      "name": "communications_responder-communications-red-halo.png",
+      "path": "Lifelines/communications_responder-communications-red-halo.png"
+    },
+    {
+      "name": "safety-and-security_search-and-rescue-with-label-clr.png",
+      "path": "Lifelines/safety-and-security_search-and-rescue-with-label-clr.png"
+    },
+    {
+      "name": "energy-power-fuel_power-yellow-halo.png",
+      "path": "Lifelines/energy-power-fuel_power-yellow-halo.png"
+    },
+    {
+      "name": "safety-and-security_community-safety.png",
+      "path": "Lifelines/safety-and-security_community-safety.png"
+    },
+    {
+      "name": "transportation-icon-only-gray-halo.png",
+      "path": "Lifelines/transportation-icon-only-gray-halo.png"
+    },
+    {
+      "name": "hazmat_facilities-red-halo.png",
+      "path": "Lifelines/hazmat_facilities-red-halo.png"
+    },
+    {
+      "name": "health-and-medical_medical-care-yellow-halo.png",
+      "path": "Lifelines/health-and-medical_medical-care-yellow-halo.png"
+    },
+    {
+      "name": "food-water-shelter_water-green-halo.png",
+      "path": "Lifelines/food-water-shelter_water-green-halo.png"
+    },
+    {
+      "name": "food-water-shelter-icon-only-gray-halo.png",
+      "path": "Lifelines/food-water-shelter-icon-only-gray-halo.png"
+    },
+    {
+      "name": "health-and-medical_patient-movement-with-label-clr.png",
+      "path": "Lifelines/health-and-medical_patient-movement-with-label-clr.png"
+    },
+    {
+      "name": "communications_infrastructure-green-halo.png",
+      "path": "Lifelines/communications_infrastructure-green-halo.png"
+    },
+    {
+      "name": "food-water-shelter_food-green-halo.png",
+      "path": "Lifelines/food-water-shelter_food-green-halo.png"
+    },
+    {
+      "name": "hazmat_hazmat-pollutants-contaminants-yellow-halo.png",
+      "path": "Lifelines/hazmat_hazmat-pollutants-contaminants-yellow-halo.png"
+    },
+    {
+      "name": "safety-and-security_search-and-rescue-yellow-halo.png",
+      "path": "Lifelines/safety-and-security_search-and-rescue-yellow-halo.png"
+    },
+    {
+      "name": "energy-power-fuel_power-gray-halo.png",
+      "path": "Lifelines/energy-power-fuel_power-gray-halo.png"
+    },
+    {
+      "name": "transportation_highway-roadway-red-halo.png",
+      "path": "Lifelines/transportation_highway-roadway-red-halo.png"
+    },
+    {
+      "name": "safety-and-security_search-and-rescue-gray-halo.png",
+      "path": "Lifelines/safety-and-security_search-and-rescue-gray-halo.png"
+    },
+    {
+      "name": "safety-and-security_fire-services-red-halo.png",
+      "path": "Lifelines/safety-and-security_fire-services-red-halo.png"
+    },
+    {
+      "name": "health-and-medical_public-health-with-label-clr.png",
+      "path": "Lifelines/health-and-medical_public-health-with-label-clr.png"
+    },
+    {
+      "name": "transportation-icon-only-green-halo.png",
+      "path": "Lifelines/transportation-icon-only-green-halo.png"
+    },
+    {
+      "name": "food-water-shelter-with-label-red-halo.png",
+      "path": "Lifelines/food-water-shelter-with-label-red-halo.png"
+    },
+    {
+      "name": "food-water-shelter_agriculture-gray-halo.png",
+      "path": "Lifelines/food-water-shelter_agriculture-gray-halo.png"
+    },
+    {
+      "name": "health-and-medical_fatality-management-red-halo.png",
+      "path": "Lifelines/health-and-medical_fatality-management-red-halo.png"
+    },
+    {
+      "name": "safety-and-security_community-safety-gray-halo.png",
+      "path": "Lifelines/safety-and-security_community-safety-gray-halo.png"
+    },
+    {
+      "name": "transportation_maritime-yellow-halo.png",
+      "path": "Lifelines/transportation_maritime-yellow-halo.png"
+    },
+    {
+      "name": "safety-and-security-icon-only-amber-halo.png",
+      "path": "Lifelines/safety-and-security-icon-only-amber-halo.png"
+    },
+    {
+      "name": "safety-and-security_community-safety-red-halo.png",
+      "path": "Lifelines/safety-and-security_community-safety-red-halo.png"
+    },
+    {
+      "name": "health-and-medical_medical-care.png",
+      "path": "Lifelines/health-and-medical_medical-care.png"
+    },
+    {
+      "name": "transportation_aviation-red-halo.png",
+      "path": "Lifelines/transportation_aviation-red-halo.png"
+    },
+    {
+      "name": "transportation_aviation-with-label-clr.png",
+      "path": "Lifelines/transportation_aviation-with-label-clr.png"
+    },
+    {
+      "name": "food-water-shelter_shelter-with-label-clr.png",
+      "path": "Lifelines/food-water-shelter_shelter-with-label-clr.png"
+    },
+    {
+      "name": "communications-with-label-red-halo.png",
+      "path": "Lifelines/communications-with-label-red-halo.png"
+    },
+    {
+      "name": "safety-and-security_fire-services-green-halo.png",
+      "path": "Lifelines/safety-and-security_fire-services-green-halo.png"
+    },
+    {
+      "name": "communications_infrastructure-yellow-halo.png",
+      "path": "Lifelines/communications_infrastructure-yellow-halo.png"
+    },
+    {
+      "name": "food-water-shelter_shelter-gray-halo.png",
+      "path": "Lifelines/food-water-shelter_shelter-gray-halo.png"
+    },
+    {
+      "name": "communications_alerts-warnings-messages-red-halo.png",
+      "path": "Lifelines/communications_alerts-warnings-messages-red-halo.png"
+    },
+    {
+      "name": "transportation_railway-with-label-clr.png",
+      "path": "Lifelines/transportation_railway-with-label-clr.png"
+    },
+    {
+      "name": "hazmat_facilities-with-label-clr.png",
+      "path": "Lifelines/hazmat_facilities-with-label-clr.png"
+    },
+    {
+      "name": "hazmat-icon-only-green-halo.png",
+      "path": "Lifelines/hazmat-icon-only-green-halo.png"
+    },
+    {
+      "name": "hazmat-with-label-amber-halo.png",
+      "path": "Lifelines/hazmat-with-label-amber-halo.png"
+    },
+    {
+      "name": "health-and-medical-icon-only-no-halo.png",
+      "path": "Lifelines/health-and-medical-icon-only-no-halo.png"
+    },
+    {
+      "name": "health-and-medical_medical-supply-chain-red-halo.png",
+      "path": "Lifelines/health-and-medical_medical-supply-chain-red-halo.png"
+    },
+    {
+      "name": "food-water-shelter-icon-only-no-halo.png",
+      "path": "Lifelines/food-water-shelter-icon-only-no-halo.png"
+    },
+    {
+      "name": "safety-and-security_community-safety-green-halo.png",
+      "path": "Lifelines/safety-and-security_community-safety-green-halo.png"
+    },
+    {
+      "name": "transportation_highway-roadway-yellow-halo.png",
+      "path": "Lifelines/transportation_highway-roadway-yellow-halo.png"
+    },
+    {
+      "name": "transportation_highway-roadway-with-label-clr.png",
+      "path": "Lifelines/transportation_highway-roadway-with-label-clr.png"
+    },
+    {
+      "name": "communications-with-label-gray-halo.png",
+      "path": "Lifelines/communications-with-label-gray-halo.png"
+    },
+    {
+      "name": "communications_financial-services-with-label-clr.png",
+      "path": "Lifelines/communications_financial-services-with-label-clr.png"
+    },
+    {
+      "name": "Dept-of-Interior-DOI-Bureau-of-Land-Management-BLM-Law-Enforcement-Facilities.png",
+      "path": "Infrastructure/Dept-of-Interior-DOI-Bureau-of-Land-Management-BLM-Law-Enforcement-Facilities.png"
+    },
+    {
+      "name": "Petroleum-Oil-and-Lubricant-Terminals.png",
+      "path": "Infrastructure/Petroleum-Oil-and-Lubricant-Terminals.png"
+    },
+    {
+      "name": "Natural-Gas.png",
+      "path": "Infrastructure/Natural-Gas.png"
+    },
+    {
+      "name": "Oil-and-Natural-Gas-Interconnects-Gas.png",
+      "path": "Infrastructure/Oil-and-Natural-Gas-Interconnects-Gas.png"
+    },
+    {
+      "name": "Joint-Operation-Centers-JOC.png",
+      "path": "Infrastructure/Joint-Operation-Centers-JOC.png"
+    },
+    {
+      "name": "Natural-Gas-Storage-Facilities.png",
+      "path": "Infrastructure/Natural-Gas-Storage-Facilities.png"
+    },
+    {
+      "name": "Oil-and-Natural-Gas-Platform.png",
+      "path": "Infrastructure/Oil-and-Natural-Gas-Platform.png"
+    },
+    {
+      "name": "Public-Health-Departments.png",
+      "path": "Infrastructure/Public-Health-Departments.png"
+    },
+    {
+      "name": "Bureau-of-Alchohol-Tobacco-and-Firearms.png",
+      "path": "Infrastructure/Bureau-of-Alchohol-Tobacco-and-Firearms.png"
+    },
+    {
+      "name": "American-Red-Cross-Headquarters.png",
+      "path": "Infrastructure/American-Red-Cross-Headquarters.png"
+    },
+    {
+      "name": "Pharmaceutical-Preparation-Manufacturing-Facilities.png",
+      "path": "Infrastructure/Pharmaceutical-Preparation-Manufacturing-Facilities.png"
+    },
+    {
+      "name": "Drinking-Water-Source.png",
+      "path": "Infrastructure/Drinking-Water-Source.png"
+    },
+    {
+      "name": "Nuclear-Fuel-Plant.png",
+      "path": "Infrastructure/Nuclear-Fuel-Plant.png"
+    },
+    {
+      "name": "Transmission-Towers-Mobile.png",
+      "path": "Infrastructure/Transmission-Towers-Mobile.png"
+    },
+    {
+      "name": "Funeral-Homes-and-Funeral-Service-Facilities.png",
+      "path": "Infrastructure/Funeral-Homes-and-Funeral-Service-Facilities.png"
+    },
+    {
+      "name": "Day-Care-Centers.png",
+      "path": "Infrastructure/Day-Care-Centers.png"
+    },
+    {
+      "name": "Drinking-Water-Source-Federal-Government.png",
+      "path": "Infrastructure/Drinking-Water-Source-Federal-Government.png"
+    },
+    {
+      "name": "Solid-Waste-Landfill-Facilities.png",
+      "path": "Infrastructure/Solid-Waste-Landfill-Facilities.png"
+    },
+    {
+      "name": "Hazardous-Manufacturing.png",
+      "path": "Infrastructure/Hazardous-Manufacturing.png"
+    },
+    {
+      "name": "Electric-Power-Generation-Plants.png",
+      "path": "Infrastructure/Electric-Power-Generation-Plants.png"
+    },
+    {
+      "name": "Drinking-Water-Source-State-Government.png",
+      "path": "Infrastructure/Drinking-Water-Source-State-Government.png"
+    },
+    {
+      "name": "American-Red-Cross-Chapter-Facilities.png",
+      "path": "Infrastructure/American-Red-Cross-Chapter-Facilities.png"
+    },
+    {
+      "name": "Ethanol-Transloading-Facilities.png",
+      "path": "Infrastructure/Ethanol-Transloading-Facilities.png"
+    },
+    {
+      "name": "Urgent-Care-Facilities.png",
+      "path": "Infrastructure/Urgent-Care-Facilities.png"
+    },
+    {
+      "name": "Emergency-Services.png",
+      "path": "Infrastructure/Emergency-Services.png"
+    },
+    {
+      "name": "Natural-Gas-Market-Hubs.png",
+      "path": "Infrastructure/Natural-Gas-Market-Hubs.png"
+    },
+    {
+      "name": "Oil-Refineries.png",
+      "path": "Infrastructure/Oil-Refineries.png"
+    },
+    {
+      "name": "Law-Enforcement-Locations.png",
+      "path": "Infrastructure/Law-Enforcement-Locations.png"
+    },
+    {
+      "name": "Phosphatic-Fertilizer-Plants.png",
+      "path": "Infrastructure/Phosphatic-Fertilizer-Plants.png"
+    },
+    {
+      "name": "Drinking-Water-Source-Private.png",
+      "path": "Infrastructure/Drinking-Water-Source-Private.png"
+    },
+    {
+      "name": "Truck-Driving-Schools.png",
+      "path": "Infrastructure/Truck-Driving-Schools.png"
+    },
+    {
+      "name": "Dept-of-Homeland-Security-DHS-Immigration-and-Customs-Enforcement-ICE-Facilities.png",
+      "path": "Infrastructure/Dept-of-Homeland-Security-DHS-Immigration-and-Customs-Enforcement-ICE-Facilities.png"
+    },
+    {
+      "name": "Land-Mobile-Broadcast-Towers.png",
+      "path": "Infrastructure/Land-Mobile-Broadcast-Towers.png"
+    },
+    {
+      "name": "Natural-Gas-Processing-Plants.png",
+      "path": "Infrastructure/Natural-Gas-Processing-Plants.png"
+    },
+    {
+      "name": "Federal-Emergency-Management-Agency-Recovery-Offices.png",
+      "path": "Infrastructure/Federal-Emergency-Management-Agency-Recovery-Offices.png"
+    },
+    {
+      "name": "Dept-of-Interior-DOI-Bureau-of-Indian-Affairs-BIA-Law-Enforcement-Facilities.png",
+      "path": "Infrastructure/Dept-of-Interior-DOI-Bureau-of-Indian-Affairs-BIA-Law-Enforcement-Facilities.png"
+    },
+    {
+      "name": "State-Government-Capitol.png",
+      "path": "Infrastructure/State-Government-Capitol.png"
+    },
+    {
+      "name": "Nursing-Home.png",
+      "path": "Infrastructure/Nursing-Home.png"
+    },
+    {
+      "name": "Nuclear-Research-Facility.png",
+      "path": "Infrastructure/Nuclear-Research-Facility.png"
+    },
+    {
+      "name": "Drinking-Water-Source-Local-Government.png",
+      "path": "Infrastructure/Drinking-Water-Source-Local-Government.png"
+    },
+    {
+      "name": "Local-EOC.png",
+      "path": "Infrastructure/Local-EOC.png"
+    },
+    {
+      "name": "Law--Generic.png",
+      "path": "Infrastructure/Law--Generic.png"
+    },
+    {
+      "name": "Antenna_Structure_Registrate.png",
+      "path": "Infrastructure/Antenna_Structure_Registrate.png"
+    },
+    {
+      "name": "Water-System-Community-water-system.png",
+      "path": "Infrastructure/Water-System-Community-water-system.png"
+    },
+    {
+      "name": "Crude-Oil-Storage.png",
+      "path": "Infrastructure/Crude-Oil-Storage.png"
+    },
+    {
+      "name": "School.png",
+      "path": "Infrastructure/School.png"
+    },
+    {
+      "name": "Drinking-Water-Storage-V2.png",
+      "path": "Infrastructure/Drinking-Water-Storage-V2.png"
+    },
+    {
+      "name": "USCBP-Office-of-Field-Operations-OFO-Sector-Headquarters.png",
+      "path": "Infrastructure/USCBP-Office-of-Field-Operations-OFO-Sector-Headquarters.png"
+    },
+    {
+      "name": "Federal-Emergency-Management-Agency-Headquarters.png",
+      "path": "Infrastructure/Federal-Emergency-Management-Agency-Headquarters.png"
+    },
+    {
+      "name": "US-Postal-Service-USPS-Postal-Inspection-Service-Facilities.png",
+      "path": "Infrastructure/US-Postal-Service-USPS-Postal-Inspection-Service-Facilities.png"
+    },
+    {
+      "name": "Electric--Vehicle-Charging-Station.png",
+      "path": "Infrastructure/Electric--Vehicle-Charging-Station.png"
+    },
+    {
+      "name": "Gas-Stations.png",
+      "path": "Infrastructure/Gas-Stations.png"
+    },
+    {
+      "name": "Electricity-Substations.png",
+      "path": "Infrastructure/Electricity-Substations.png"
+    },
+    {
+      "name": "Outer-Continental-Shelf-OCS-Pacific-Platforms.png",
+      "path": "Infrastructure/Outer-Continental-Shelf-OCS-Pacific-Platforms.png"
+    },
+    {
+      "name": "Colleges-and-Universities.png",
+      "path": "Infrastructure/Colleges-and-Universities.png"
+    },
+    {
+      "name": "Liquified-Natural-Gas-Import-Exports-and-Terminals.png",
+      "path": "Infrastructure/Liquified-Natural-Gas-Import-Exports-and-Terminals.png"
+    },
+    {
+      "name": "Environmental-Protection-Agency-Facility-Registry-Service-Emergency-Response-Comprehensive-Env.png",
+      "path": "Infrastructure/Environmental-Protection-Agency-Facility-Registry-Service-Emergency-Response-Comprehensive-Env.png"
+    },
+    {
+      "name": "Emergency-Animal-Shelter.png",
+      "path": "Infrastructure/Emergency-Animal-Shelter.png"
+    },
+    {
+      "name": "Emergency-Medical-Service-EMS-Stations.png",
+      "path": "Infrastructure/Emergency-Medical-Service-EMS-Stations.png"
+    },
+    {
+      "name": "E-85-Fuel-Station.png",
+      "path": "Infrastructure/E-85-Fuel-Station.png"
+    },
+    {
+      "name": "Petroluem-Processing.png",
+      "path": "Infrastructure/Petroluem-Processing.png"
+    },
+    {
+      "name": "Veterans-Health-Administration-Medical-Clinic.png",
+      "path": "Infrastructure/Veterans-Health-Administration-Medical-Clinic.png"
+    },
+    {
+      "name": "Emergency-Shelter.png",
+      "path": "Infrastructure/Emergency-Shelter.png"
+    },
+    {
+      "name": "Natural-Gas-Compressor-Stations.png",
+      "path": "Infrastructure/Natural-Gas-Compressor-Stations.png"
+    },
+    {
+      "name": "USCBP-Office-of-Field-Operations-OFO-Facilities.png",
+      "path": "Infrastructure/USCBP-Office-of-Field-Operations-OFO-Facilities.png"
+    },
+    {
+      "name": "Air-Water-Solid-Waste- Management-Plants.png",
+      "path": "Infrastructure/Air-Water-Solid-Waste- Management-Plants.png"
+    },
+    {
+      "name": "Propane-Retailer-Locations.png",
+      "path": "Infrastructure/Propane-Retailer-Locations.png"
+    },
+    {
+      "name": "Cemeteries-and-Crematories.png",
+      "path": "Infrastructure/Cemeteries-and-Crematories.png"
+    },
+    {
+      "name": "Generic.png",
+      "path": "Infrastructure/Generic.png"
+    },
+    {
+      "name": "USCBP-Office-of-Field-Operations-OFO-Field-Office-Headquarters.png",
+      "path": "Infrastructure/USCBP-Office-of-Field-Operations-OFO-Field-Office-Headquarters.png"
+    },
+    {
+      "name": "M-85-Methanol-Fuel-Station.png",
+      "path": "Infrastructure/M-85-Methanol-Fuel-Station.png"
+    },
+    {
+      "name": "Petroleum-Ports.png",
+      "path": "Infrastructure/Petroleum-Ports.png"
+    },
+    {
+      "name": "Federal-Bureau-of-Investigation-FBI-Offices.png",
+      "path": "Infrastructure/Federal-Bureau-of-Investigation-FBI-Offices.png"
+    },
+    {
+      "name": "HY-Fuel-Station.png",
+      "path": "Infrastructure/HY-Fuel-Station.png"
+    },
+    {
+      "name": "Hospitals.png",
+      "path": "Infrastructure/Hospitals.png"
+    },
+    {
+      "name": "Governmental-Faciliy--Courthouse.png",
+      "path": "Infrastructure/Governmental-Faciliy--Courthouse.png"
+    },
+    {
+      "name": "Land-Mobile-Private-Transmission-Towers.png",
+      "path": "Infrastructure/Land-Mobile-Private-Transmission-Towers.png"
+    },
+    {
+      "name": "USCBP-US-Border-Patrol-USBP-Stations.png",
+      "path": "Infrastructure/USCBP-US-Border-Patrol-USBP-Stations.png"
+    },
+    {
+      "name": "Coal.png",
+      "path": "Infrastructure/Coal.png"
+    },
+    {
+      "name": "Coal-Storage-V2.png",
+      "path": "Infrastructure/Coal-Storage-V2.png"
+    },
+    {
+      "name": "Drinking-Water-Source-Native American.png",
+      "path": "Infrastructure/Drinking-Water-Source-Native American.png"
+    },
+    {
+      "name": "Pacific-Wells.png",
+      "path": "Infrastructure/Pacific-Wells.png"
+    },
+    {
+      "name": "CNG-Fuel-Station.png",
+      "path": "Infrastructure/CNG-Fuel-Station.png"
+    },
+    {
+      "name": "Television-Transmission-Station-Analog.png",
+      "path": "Infrastructure/Television-Transmission-Station-Analog.png"
+    },
+    {
+      "name": "Diesel-Plant.png",
+      "path": "Infrastructure/Diesel-Plant.png"
+    },
+    {
+      "name": "Electricity.png",
+      "path": "Infrastructure/Electricity.png"
+    },
+    {
+      "name": "City-Hall.png",
+      "path": "Infrastructure/City-Hall.png"
+    },
+    {
+      "name": "Weather-Radar-Station.png",
+      "path": "Infrastructure/Weather-Radar-Station.png"
+    },
+    {
+      "name": "Oil-and-Natural-Gas-Wells.png",
+      "path": "Infrastructure/Oil-and-Natural-Gas-Wells.png"
+    },
+    {
+      "name": "Veterans-Health-Administration-Medical-Facilities.png",
+      "path": "Infrastructure/Veterans-Health-Administration-Medical-Facilities.png"
+    },
+    {
+      "name": "Television-Transmission-Station-Digital.png",
+      "path": "Infrastructure/Television-Transmission-Station-Digital.png"
+    },
+    {
+      "name": "(EPA)-Facility-Registry-Service-(FRS)-Power Plant.png",
+      "path": "Infrastructure/(EPA)-Facility-Registry-Service-(FRS)-Power Plant.png"
+    },
+    {
+      "name": "Pharmacies.png",
+      "path": "Infrastructure/Pharmacies.png"
+    },
+    {
+      "name": "Oil-and-Natural-Gas-Interconnects.png",
+      "path": "Infrastructure/Oil-and-Natural-Gas-Interconnects.png"
+    },
+    {
+      "name": "FM-Transmission-Towers.png",
+      "path": "Infrastructure/FM-Transmission-Towers.png"
+    },
+    {
+      "name": "Water-System-Non-Transient-non-community-system.png",
+      "path": "Infrastructure/Water-System-Non-Transient-non-community-system.png"
+    },
+    {
+      "name": "LPG-Fuel-Station.png",
+      "path": "Infrastructure/LPG-Fuel-Station.png"
+    },
+    {
+      "name": "Cellular-Towers.png",
+      "path": "Infrastructure/Cellular-Towers.png"
+    },
+    {
+      "name": "Biological-Products-Manufacturing-Facilities.png",
+      "path": "Infrastructure/Biological-Products-Manufacturing-Facilities.png"
+    },
+    {
+      "name": "Natural-Gas-Import-and-Export.png",
+      "path": "Infrastructure/Natural-Gas-Import-and-Export.png"
+    },
+    {
+      "name": "Explosives-Manufacturing-Facilities.png",
+      "path": "Infrastructure/Explosives-Manufacturing-Facilities.png"
+    },
+    {
+      "name": "Coal-Processing.png",
+      "path": "Infrastructure/Coal-Processing.png"
+    },
+    {
+      "name": "Flight-Schools.png",
+      "path": "Infrastructure/Flight-Schools.png"
+    },
+    {
+      "name": "Biodiesel-Gas.png",
+      "path": "Infrastructure/Biodiesel-Gas.png"
+    },
+    {
+      "name": "911-Communication-Centers.png",
+      "path": "Infrastructure/911-Communication-Centers.png"
+    },
+    {
+      "name": "Ethanol-Plants.png",
+      "path": "Infrastructure/Ethanol-Plants.png"
+    },
+    {
+      "name": "Supplemental-Colleges.png",
+      "path": "Infrastructure/Supplemental-Colleges.png"
+    },
+    {
+      "name": "Biodiesel-Plants.png",
+      "path": "Infrastructure/Biodiesel-Plants.png"
+    },
+    {
+      "name": "Paging-Transmission-Towers.png",
+      "path": "Infrastructure/Paging-Transmission-Towers.png"
+    },
+    {
+      "name": "Distribution-Control-Facilities.png",
+      "path": "Infrastructure/Distribution-Control-Facilities.png"
+    },
+    {
+      "name": "US-Marshal-Service.png",
+      "path": "Infrastructure/US-Marshal-Service.png"
+    },
+    {
+      "name": "Dept-of-Interior-DOI-National-Park-Service-NPS-Law-Enforcement-Facilities.png",
+      "path": "Infrastructure/Dept-of-Interior-DOI-National-Park-Service-NPS-Law-Enforcement-Facilities.png"
+    },
+    {
+      "name": "Fire-Station.png",
+      "path": "Infrastructure/Fire-Station.png"
+    },
+    {
+      "name": "Land-Mobile-Commercial-Transmission-Towers.png",
+      "path": "Infrastructure/Land-Mobile-Commercial-Transmission-Towers.png"
+    },
+    {
+      "name": "Diesel_Gas.png",
+      "path": "Infrastructure/Diesel_Gas.png"
+    },
+    {
+      "name": "Public-Schools.png",
+      "path": "Infrastructure/Public-Schools.png"
+    },
+    {
+      "name": "Government-Facilities.png",
+      "path": "Infrastructure/Government-Facilities.png"
+    },
+    {
+      "name": "LNG-Fuel-Station.png",
+      "path": "Infrastructure/LNG-Fuel-Station.png"
+    },
+    {
+      "name": "Veterinary-Service-Facilities.png",
+      "path": "Infrastructure/Veterinary-Service-Facilities.png"
+    },
+    {
+      "name": "Nuclear-Power-Plant.png",
+      "path": "Infrastructure/Nuclear-Power-Plant.png"
+    },
+    {
+      "name": "Drug-Enforcement-Agency.png",
+      "path": "Infrastructure/Drug-Enforcement-Agency.png"
+    },
+    {
+      "name": "US-CBP-Office-of-Field-Operations-OFO-Container-Security-Initiative-CSI-Locations.png",
+      "path": "Infrastructure/US-CBP-Office-of-Field-Operations-OFO-Container-Security-Initiative-CSI-Locations.png"
+    },
+    {
+      "name": "Dept-of-Interior-DOI-US-Park-Police-USPP-Law-Enforcement-Facilities.png",
+      "path": "Infrastructure/Dept-of-Interior-DOI-US-Park-Police-USPP-Law-Enforcement-Facilities.png"
+    },
+    {
+      "name": "State-EOC.png",
+      "path": "Infrastructure/State-EOC.png"
+    },
+    {
+      "name": "Major-State-Government-Buildings.png",
+      "path": "Infrastructure/Major-State-Government-Buildings.png"
+    },
+    {
+      "name": "Chemical-Manufacturing-Facilities.png",
+      "path": "Infrastructure/Chemical-Manufacturing-Facilities.png"
+    },
+    {
+      "name": "Petroluem-Storage.png",
+      "path": "Infrastructure/Petroluem-Storage.png"
+    },
+    {
+      "name": "Dialysis-Centers.png",
+      "path": "Infrastructure/Dialysis-Centers.png"
+    },
+    {
+      "name": "Adult-Care-Facilities.png",
+      "path": "Infrastructure/Adult-Care-Facilities.png"
+    },
+    {
+      "name": "Environmental-Protection-Agency-EPA-Facility-Registry-Service-FRS-Wastewater-Treatment-Plants.png",
+      "path": "Infrastructure/Environmental-Protection-Agency-EPA-Facility-Registry-Service-FRS-Wastewater-Treatment-Plants.png"
+    },
+    {
+      "name": "Strategic-and-Petroleum-Reserves.png",
+      "path": "Infrastructure/Strategic-and-Petroleum-Reserves.png"
+    },
+    {
+      "name": "POL-Pumping-Station.png",
+      "path": "Infrastructure/POL-Pumping-Station.png"
+    },
+    {
+      "name": "AM-Transmission-Towers.png",
+      "path": "Infrastructure/AM-Transmission-Towers.png"
+    },
+    {
+      "name": "Nitrogenous-Fertilizer-Plants.png",
+      "path": "Infrastructure/Nitrogenous-Fertilizer-Plants.png"
+    },
+    {
+      "name": "Natural-Gas-Receipt-Delivery.png",
+      "path": "Infrastructure/Natural-Gas-Receipt-Delivery.png"
+    },
+    {
+      "name": "Dept-of-Interior-DOI-Fish-and-Wildlife-Service-FWS-Law-Enforcement-Facilities.png",
+      "path": "Infrastructure/Dept-of-Interior-DOI-Fish-and-Wildlife-Service-FWS-Law-Enforcement-Facilities.png"
+    },
+    {
+      "name": "Private-Schools.png",
+      "path": "Infrastructure/Private-Schools.png"
+    },
+    {
+      "name": "Transmission-Tower.png",
+      "path": "Infrastructure/Transmission-Tower.png"
+    },
+    {
+      "name": "EMS--Air-Medical-Service-Providers--ADAMS_AAMS.png",
+      "path": "Infrastructure/EMS--Air-Medical-Service-Providers--ADAMS_AAMS.png"
+    },
+    {
+      "name": "Microwave-Service-Towers.png",
+      "path": "Infrastructure/Microwave-Service-Towers.png"
+    },
+    {
+      "name": "PublicHealth-Centers-for-Disease-Control.png",
+      "path": "Infrastructure/PublicHealth-Centers-for-Disease-Control.png"
+    },
+    {
+      "name": "Dept-of-Interior-DOI-Bureau-of-Reclamation-BOR-Law-Enforcement-Facilities.png",
+      "path": "Infrastructure/Dept-of-Interior-DOI-Bureau-of-Reclamation-BOR-Law-Enforcement-Facilities.png"
+    },
+    {
+      "name": "Blood-and-Organ-Banks.png",
+      "path": "Infrastructure/Blood-and-Organ-Banks.png"
+    },
+    {
+      "name": "Drinking-Water-Source-Public-Private.png",
+      "path": "Infrastructure/Drinking-Water-Source-Public-Private.png"
+    },
+    {
+      "name": "Catholic-Churches.png",
+      "path": "Facilities/Catholic-Churches.png"
+    },
+    {
+      "name": "Mosques.png",
+      "path": "Facilities/Mosques.png"
+    },
+    {
+      "name": "Ski-Resorts.png",
+      "path": "Facilities/Ski-Resorts.png"
+    },
+    {
+      "name": "State-County-and-Local-Parks.png",
+      "path": "Facilities/State-County-and-Local-Parks.png"
+    },
+    {
+      "name": "Vineyards-and-Wineries.png",
+      "path": "Facilities/Vineyards-and-Wineries.png"
+    },
+    {
+      "name": "Aeronautical-Obstructions.png",
+      "path": "Facilities/Aeronautical-Obstructions.png"
+    },
+    {
+      "name": "Libraries.png",
+      "path": "Facilities/Libraries.png"
+    },
+    {
+      "name": "Airport--BALLOONPORT.png",
+      "path": "Facilities/Airport--BALLOONPORT.png"
+    },
+    {
+      "name": "Marinas.png",
+      "path": "Facilities/Marinas.png"
+    },
+    {
+      "name": "Highways-Rest-Areas.png",
+      "path": "Facilities/Highways-Rest-Areas.png"
+    },
+    {
+      "name": "Protestant-Churches.png",
+      "path": "Facilities/Protestant-Churches.png"
+    },
+    {
+      "name": "Amusement-and-Theme-Parks.png",
+      "path": "Facilities/Amusement-and-Theme-Parks.png"
+    },
+    {
+      "name": "Arena-or-Stadium.png",
+      "path": "Facilities/Arena-or-Stadium.png"
+    },
+    {
+      "name": "Historic-Sites.png",
+      "path": "Facilities/Historic-Sites.png"
+    },
+    {
+      "name": "Airport--ULTRALIGHT.png",
+      "path": "Facilities/Airport--ULTRALIGHT.png"
+    },
+    {
+      "name": "Jewish-Synagogues.png",
+      "path": "Facilities/Jewish-Synagogues.png"
+    },
+    {
+      "name": "Drinking-Establishments.png",
+      "path": "Facilities/Drinking-Establishments.png"
+    },
+    {
+      "name": "Mobile-Home-Parks.png",
+      "path": "Facilities/Mobile-Home-Parks.png"
+    },
+    {
+      "name": "Airport--GLIDERPORT.png",
+      "path": "Facilities/Airport--GLIDERPORT.png"
+    },
+    {
+      "name": "Airport--Heliport.png",
+      "path": "Facilities/Airport--Heliport.png"
+    },
+    {
+      "name": "Community-Centers.png",
+      "path": "Facilities/Community-Centers.png"
+    },
+    {
+      "name": "Campground.png",
+      "path": "Facilities/Campground.png"
+    },
+    {
+      "name": "Golf-Courses.png",
+      "path": "Facilities/Golf-Courses.png"
+    },
+    {
+      "name": "Theater-and-Performing-Arts-Centers.png",
+      "path": "Facilities/Theater-and-Performing-Arts-Centers.png"
+    },
+    {
+      "name": "Airport--General-Aviation.png",
+      "path": "Facilities/Airport--General-Aviation.png"
+    },
+    {
+      "name": "All-Places-of-Worship.png",
+      "path": "Facilities/All-Places-of-Worship.png"
+    },
+    {
+      "name": "Airport--Seaplane.png",
+      "path": "Facilities/Airport--Seaplane.png"
+    },
+    {
+      "name": "Cruise-Line-Terminals.png",
+      "path": "Facilities/Cruise-Line-Terminals.png"
+    },
+    {
+      "name": "Convention-Centers.png",
+      "path": "Facilities/Convention-Centers.png"
+    },
+    {
+      "name": "Casinos.png",
+      "path": "Facilities/Casinos.png"
+    },
+    {
+      "name": "Tourist-Attractions.png",
+      "path": "Facilities/Tourist-Attractions.png"
+    },
+    {
+      "name": "Airport--Commercial.png",
+      "path": "Facilities/Airport--Commercial.png"
+    },
+    {
+      "name": "Museums.png",
+      "path": "Facilities/Museums.png"
+    },
+    {
+      "name": "BRANCH--IIX.png",
+      "path": "NIMS Positions/BRANCH--IIX.png"
+    },
+    {
+      "name": "BRANCH--I.png",
+      "path": "NIMS Positions/BRANCH--I.png"
+    },
+    {
+      "name": "BRANCH--FIRE.png",
+      "path": "NIMS Positions/BRANCH--FIRE.png"
+    },
+    {
+      "name": "GROUP--VENT.png",
+      "path": "NIMS Positions/GROUP--VENT.png"
+    },
+    {
+      "name": "DIVISION--G.png",
+      "path": "NIMS Positions/DIVISION--G.png"
+    },
+    {
+      "name": "BLANK.png",
+      "path": "NIMS Positions/BLANK.png"
+    },
+    {
+      "name": "GROUP--Rescue.png",
+      "path": "NIMS Positions/GROUP--Rescue.png"
+    },
+    {
+      "name": "BRANCH--Air.png",
+      "path": "NIMS Positions/BRANCH--Air.png"
+    },
+    {
+      "name": "SECTION--LNO.png",
+      "path": "NIMS Positions/SECTION--LNO.png"
+    },
+    {
+      "name": "DIVISION--A.png",
+      "path": "NIMS Positions/DIVISION--A.png"
+    },
+    {
+      "name": "DIVISION--4.png",
+      "path": "NIMS Positions/DIVISION--4.png"
+    },
+    {
+      "name": "BRANCH--IV.png",
+      "path": "NIMS Positions/BRANCH--IV.png"
+    },
+    {
+      "name": "SECTION--DIC.png",
+      "path": "NIMS Positions/SECTION--DIC.png"
+    },
+    {
+      "name": "SECTION--PIO.png",
+      "path": "NIMS Positions/SECTION--PIO.png"
+    },
+    {
+      "name": "BRANCH--III.png",
+      "path": "NIMS Positions/BRANCH--III.png"
+    },
+    {
+      "name": "BRANCH--HazMat.png",
+      "path": "NIMS Positions/BRANCH--HazMat.png"
+    },
+    {
+      "name": "DIVISION--1.png",
+      "path": "NIMS Positions/DIVISION--1.png"
+    },
+    {
+      "name": "GROUP--SAR.png",
+      "path": "NIMS Positions/GROUP--SAR.png"
+    },
+    {
+      "name": "DIVISION--E.png",
+      "path": "NIMS Positions/DIVISION--E.png"
+    },
+    {
+      "name": "SECTION--Logistics.png",
+      "path": "NIMS Positions/SECTION--Logistics.png"
+    },
+    {
+      "name": "SECTION--SO.png",
+      "path": "NIMS Positions/SECTION--SO.png"
+    },
+    {
+      "name": "BRANCH--IX.png",
+      "path": "NIMS Positions/BRANCH--IX.png"
+    },
+    {
+      "name": "BRANCH--II.png",
+      "path": "NIMS Positions/BRANCH--II.png"
+    },
+    {
+      "name": "DIVISION--7.png",
+      "path": "NIMS Positions/DIVISION--7.png"
+    },
+    {
+      "name": "DIVISION--C.png",
+      "path": "NIMS Positions/DIVISION--C.png"
+    },
+    {
+      "name": "BRANCH--EMS.png",
+      "path": "NIMS Positions/BRANCH--EMS.png"
+    },
+    {
+      "name": "SECTION--IC.png",
+      "path": "NIMS Positions/SECTION--IC.png"
+    },
+    {
+      "name": "SECTION--Planning.png",
+      "path": "NIMS Positions/SECTION--Planning.png"
+    },
+    {
+      "name": "SECTION--Finance.png",
+      "path": "NIMS Positions/SECTION--Finance.png"
+    },
+    {
+      "name": "BRANCH--V.png",
+      "path": "NIMS Positions/BRANCH--V.png"
+    },
+    {
+      "name": "DIVISION--9.png",
+      "path": "NIMS Positions/DIVISION--9.png"
+    },
+    {
+      "name": "GROUP--Medical.png",
+      "path": "NIMS Positions/GROUP--Medical.png"
+    },
+    {
+      "name": "SECTION--Operations.png",
+      "path": "NIMS Positions/SECTION--Operations.png"
+    },
+    {
+      "name": "BRANCH--SAR.png",
+      "path": "NIMS Positions/BRANCH--SAR.png"
+    },
+    {
+      "name": "DIVISION--8.png",
+      "path": "NIMS Positions/DIVISION--8.png"
+    },
+    {
+      "name": "DIVISION--10.png",
+      "path": "NIMS Positions/DIVISION--10.png"
+    },
+    {
+      "name": "GROUP--RIG.png",
+      "path": "NIMS Positions/GROUP--RIG.png"
+    },
+    {
+      "name": "BRANCH--VI.png",
+      "path": "NIMS Positions/BRANCH--VI.png"
+    },
+    {
+      "name": "BRANCH--PW.png",
+      "path": "NIMS Positions/BRANCH--PW.png"
+    },
+    {
+      "name": "DIVISION--B.png",
+      "path": "NIMS Positions/DIVISION--B.png"
+    },
+    {
+      "name": "DIVISION--5.png",
+      "path": "NIMS Positions/DIVISION--5.png"
+    },
+    {
+      "name": "DIVISION--D.png",
+      "path": "NIMS Positions/DIVISION--D.png"
+    },
+    {
+      "name": "DIVISION--3.png",
+      "path": "NIMS Positions/DIVISION--3.png"
+    },
+    {
+      "name": "BRANCH--X.png",
+      "path": "NIMS Positions/BRANCH--X.png"
+    },
+    {
+      "name": "GROUP--SEARCH.png",
+      "path": "NIMS Positions/GROUP--SEARCH.png"
+    },
+    {
+      "name": "BRANCH--VII.png",
+      "path": "NIMS Positions/BRANCH--VII.png"
+    },
+    {
+      "name": "GROUP--EMS.png",
+      "path": "NIMS Positions/GROUP--EMS.png"
+    },
+    {
+      "name": "DIVISION--F.png",
+      "path": "NIMS Positions/DIVISION--F.png"
+    },
+    {
+      "name": "BRANCH--LAW.png",
+      "path": "NIMS Positions/BRANCH--LAW.png"
+    },
+    {
+      "name": "DIVISION--2.png",
+      "path": "NIMS Positions/DIVISION--2.png"
+    },
+    {
+      "name": "DIVISION--6.png",
+      "path": "NIMS Positions/DIVISION--6.png"
+    },
+    {
+      "name": "room-main-entry.png",
+      "path": "PrePlan/room-main-entry.png"
+    },
+    {
+      "name": "ALARM_Alarm-Control-Panel--Fire-Alarm-Control-Panel.png",
+      "path": "PrePlan/ALARM_Alarm-Control-Panel--Fire-Alarm-Control-Panel.png"
+    },
+    {
+      "name": "security-safe-room.png",
+      "path": "PrePlan/security-safe-room.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Smoke-Detector--Photoelectric.png",
+      "path": "PrePlan/DETECT_GRAY--_Smoke-Detector--Photoelectric.png"
+    },
+    {
+      "name": "Sprinkler-System--Sprinkler-Deluge.png",
+      "path": "PrePlan/Sprinkler-System--Sprinkler-Deluge.png"
+    },
+    {
+      "name": "Sprinkler-Control-Valve--Non-Indicating-Valve.png",
+      "path": "PrePlan/Sprinkler-Control-Valve--Non-Indicating-Valve.png"
+    },
+    {
+      "name": "Clean-Agent.png",
+      "path": "PrePlan/Clean-Agent.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Duct-Detector--Gas.png",
+      "path": "PrePlan/DETECT_GRAY--_Duct-Detector--Gas.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Duct-Detector--Flow.png",
+      "path": "PrePlan/DETECT_GRAY--_Duct-Detector--Flow.png"
+    },
+    {
+      "name": "Water.png",
+      "path": "PrePlan/Water.png"
+    },
+    {
+      "name": "Fire-Pump--With-Out-Drive.png",
+      "path": "PrePlan/Fire-Pump--With-Out-Drive.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_Water-Shutoff-Sub_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_Water-Shutoff-Sub_With-Line.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Detector.png",
+      "path": "PrePlan/DETECT_GRAY--_Detector.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_SIMPLE_Gas_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_SIMPLE_Gas_With-Line.png"
+    },
+    {
+      "name": "Stairs--Lift.png",
+      "path": "PrePlan/Stairs--Lift.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_SIMPLE_Refrigeration_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_SIMPLE_Refrigeration_With-Line.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_LNG-Main_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_LNG-Main_With-Line.png"
+    },
+    {
+      "name": "location-auto-garage.png",
+      "path": "PrePlan/location-auto-garage.png"
+    },
+    {
+      "name": "most-important-3.png",
+      "path": "PrePlan/most-important-3.png"
+    },
+    {
+      "name": "safety-eyewash.png",
+      "path": "PrePlan/safety-eyewash.png"
+    },
+    {
+      "name": "Fire-Department-Connection--Combination-Sprinkler-Standpipe.png",
+      "path": "PrePlan/Fire-Department-Connection--Combination-Sprinkler-Standpipe.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_Gas-SUB_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_Gas-SUB_With-Line.png"
+    },
+    {
+      "name": "ALARM_Alarm-Control-Panel--Voice-Control-Panel.png",
+      "path": "PrePlan/ALARM_Alarm-Control-Panel--Voice-Control-Panel.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_SIMPLE_Water-Shutoff_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_SIMPLE_Water-Shutoff_With-Line.png"
+    },
+    {
+      "name": "Sprinkler-System--PreAction.png",
+      "path": "PrePlan/Sprinkler-System--PreAction.png"
+    },
+    {
+      "name": "garbage-recycling.png",
+      "path": "PrePlan/garbage-recycling.png"
+    },
+    {
+      "name": "electrical-generator-battery.png",
+      "path": "PrePlan/electrical-generator-battery.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_SIMPLE_Electricall_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_SIMPLE_Electricall_With-Line.png"
+    },
+    {
+      "name": "location-auditorium.png",
+      "path": "PrePlan/location-auditorium.png"
+    },
+    {
+      "name": "Wet-Chemical.png",
+      "path": "PrePlan/Wet-Chemical.png"
+    },
+    {
+      "name": "Stairs_Single.png",
+      "path": "PrePlan/Stairs_Single.png"
+    },
+    {
+      "name": "Hose-Reel--CO2.png",
+      "path": "PrePlan/Hose-Reel--CO2.png"
+    },
+    {
+      "name": "Knox--Drug-Vault.png",
+      "path": "PrePlan/Knox--Drug-Vault.png"
+    },
+    {
+      "name": "ALARM_Smoke-Panel.png",
+      "path": "PrePlan/ALARM_Smoke-Panel.png"
+    },
+    {
+      "name": "Hose-Reel--Wet.png",
+      "path": "PrePlan/Hose-Reel--Wet.png"
+    },
+    {
+      "name": "ALARM_Alarm-Communications--Annunciator-Panel.png",
+      "path": "PrePlan/ALARM_Alarm-Communications--Annunciator-Panel.png"
+    },
+    {
+      "name": "Sprinkler-Control-Valve--Zone-Valve.png",
+      "path": "PrePlan/Sprinkler-Control-Valve--Zone-Valve.png"
+    },
+    {
+      "name": "security-area-of-refuge-2.png",
+      "path": "PrePlan/security-area-of-refuge-2.png"
+    },
+    {
+      "name": "room-telephone-equipment.png",
+      "path": "PrePlan/room-telephone-equipment.png"
+    },
+    {
+      "name": "location-auto-carport.png",
+      "path": "PrePlan/location-auto-carport.png"
+    },
+    {
+      "name": "_GENERIC_Restrooms.png",
+      "path": "PrePlan/_GENERIC_Restrooms.png"
+    },
+    {
+      "name": "Riser-Wet.png",
+      "path": "PrePlan/Riser-Wet.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Heat-Detector--Rate-Compensate.png",
+      "path": "PrePlan/DETECT_GRAY--_Heat-Detector--Rate-Compensate.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_CNG-Main_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_CNG-Main_With-Line.png"
+    },
+    {
+      "name": "Hatch.png",
+      "path": "PrePlan/Hatch.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_Telecommunications-TV_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_Telecommunications-TV_With-Line.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_SIMPLE_Air_Handling_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_SIMPLE_Air_Handling_With-Line.png"
+    },
+    {
+      "name": "Business--Bank.png",
+      "path": "PrePlan/Business--Bank.png"
+    },
+    {
+      "name": "most-important-feature.png",
+      "path": "PrePlan/most-important-feature.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Duct-Detector--Smoke.png",
+      "path": "PrePlan/DETECT_GRAY--_Duct-Detector--Smoke.png"
+    },
+    {
+      "name": "Sprinkler-System--Semi-Automatic.png",
+      "path": "PrePlan/Sprinkler-System--Semi-Automatic.png"
+    },
+    {
+      "name": "Addressable-Location--Storage.png",
+      "path": "PrePlan/Addressable-Location--Storage.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_Telecommunications-Network_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_Telecommunications-Network_With-Line.png"
+    },
+    {
+      "name": "Addressable-Location--Outdoor-Space.png",
+      "path": "PrePlan/Addressable-Location--Outdoor-Space.png"
+    },
+    {
+      "name": "Class-K.png",
+      "path": "PrePlan/Class-K.png"
+    },
+    {
+      "name": "security-safe.png",
+      "path": "PrePlan/security-safe.png"
+    },
+    {
+      "name": "ALARM__GENERIC_Alarm-Control-Panel.png",
+      "path": "PrePlan/ALARM__GENERIC_Alarm-Control-Panel.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_SIMPLE_CNG_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_SIMPLE_CNG_With-Line.png"
+    },
+    {
+      "name": "room-laundry-room.png",
+      "path": "PrePlan/room-laundry-room.png"
+    },
+    {
+      "name": "Addressable-Location--Living-Space.png",
+      "path": "PrePlan/Addressable-Location--Living-Space.png"
+    },
+    {
+      "name": "Fire-System.png",
+      "path": "PrePlan/Fire-System.png"
+    },
+    {
+      "name": "room-telephone-equipment-room.png",
+      "path": "PrePlan/room-telephone-equipment-room.png"
+    },
+    {
+      "name": "Fire-Hose-Connection--Hose-Connection_Wet.png",
+      "path": "PrePlan/Fire-Hose-Connection--Hose-Connection_Wet.png"
+    },
+    {
+      "name": "Sprinkler-Control-Valve--Outside-Screw-and-Yoke.png",
+      "path": "PrePlan/Sprinkler-Control-Valve--Outside-Screw-and-Yoke.png"
+    },
+    {
+      "name": "Water-Source--Hydrant-Fire.png",
+      "path": "PrePlan/Water-Source--Hydrant-Fire.png"
+    },
+    {
+      "name": "Water-Source--Water-Inlet.png",
+      "path": "PrePlan/Water-Source--Water-Inlet.png"
+    },
+    {
+      "name": "security-bomb-shelter.png",
+      "path": "PrePlan/security-bomb-shelter.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Heat-Detector--Rate-Fixed.png",
+      "path": "PrePlan/DETECT_GRAY--_Heat-Detector--Rate-Fixed.png"
+    },
+    {
+      "name": "Hose-Reel--Dry.png",
+      "path": "PrePlan/Hose-Reel--Dry.png"
+    },
+    {
+      "name": "Monitor--Charged.png",
+      "path": "PrePlan/Monitor--Charged.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Smoke-Detector--Tamper-Switch.png",
+      "path": "PrePlan/DETECT_GRAY--_Smoke-Detector--Tamper-Switch.png"
+    },
+    {
+      "name": "medical-nurse-station.png",
+      "path": "PrePlan/medical-nurse-station.png"
+    },
+    {
+      "name": "Fire-Department-Connection--Standpipe-Connection.png",
+      "path": "PrePlan/Fire-Department-Connection--Standpipe-Connection.png"
+    },
+    {
+      "name": "Manual_Materials-Safety-Data-Sheet.png",
+      "path": "PrePlan/Manual_Materials-Safety-Data-Sheet.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_SIMPLE_Product-Shutoff_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_SIMPLE_Product-Shutoff_With-Line.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_SIMPLE_Telecommunications_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_SIMPLE_Telecommunications_With-Line.png"
+    },
+    {
+      "name": "Fire-Department-Connection--FDC2.png",
+      "path": "PrePlan/Fire-Department-Connection--FDC2.png"
+    },
+    {
+      "name": "room-kitchen.png",
+      "path": "PrePlan/room-kitchen.png"
+    },
+    {
+      "name": "electrical-powerlines.png",
+      "path": "PrePlan/electrical-powerlines.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Duct-Detector--Level.png",
+      "path": "PrePlan/DETECT_GRAY--_Duct-Detector--Level.png"
+    },
+    {
+      "name": "Hose-Reel--Dry-Chemical.png",
+      "path": "PrePlan/Hose-Reel--Dry-Chemical.png"
+    },
+    {
+      "name": "garbage.png",
+      "path": "PrePlan/garbage.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_LNG-Sub_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_LNG-Sub_With-Line.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Smoke-Detector--Ionization.png",
+      "path": "PrePlan/DETECT_GRAY--_Smoke-Detector--Ionization.png"
+    },
+    {
+      "name": "Hose-Connection_Dry.png",
+      "path": "PrePlan/Hose-Connection_Dry.png"
+    },
+    {
+      "name": "Riser-Dry.png",
+      "path": "PrePlan/Riser-Dry.png"
+    },
+    {
+      "name": "Fire-Department-Connection--Sprinkler-Connection.png",
+      "path": "PrePlan/Fire-Department-Connection--Sprinkler-Connection.png"
+    },
+    {
+      "name": "ALARM_Alarm-Control-Panel--FAC.png",
+      "path": "PrePlan/ALARM_Alarm-Control-Panel--FAC.png"
+    },
+    {
+      "name": "fuel-pump-diesel.png",
+      "path": "PrePlan/fuel-pump-diesel.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_Telecommunications-MAIN_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_Telecommunications-MAIN_With-Line.png"
+    },
+    {
+      "name": "most-important-1.png",
+      "path": "PrePlan/most-important-1.png"
+    },
+    {
+      "name": "location-loading-dock.png",
+      "path": "PrePlan/location-loading-dock.png"
+    },
+    {
+      "name": "Safety-Location--HVAC.png",
+      "path": "PrePlan/Safety-Location--HVAC.png"
+    },
+    {
+      "name": "security-guard.png",
+      "path": "PrePlan/security-guard.png"
+    },
+    {
+      "name": "childcare-infant.png",
+      "path": "PrePlan/childcare-infant.png"
+    },
+    {
+      "name": "Water-Source--Dry-Hydrant.png",
+      "path": "PrePlan/Water-Source--Dry-Hydrant.png"
+    },
+    {
+      "name": "Business--Retail.png",
+      "path": "PrePlan/Business--Retail.png"
+    },
+    {
+      "name": "restrooms-men.png",
+      "path": "PrePlan/restrooms-men.png"
+    },
+    {
+      "name": "location-residential.png",
+      "path": "PrePlan/location-residential.png"
+    },
+    {
+      "name": "Halon.png",
+      "path": "PrePlan/Halon.png"
+    },
+    {
+      "name": "Fire-Escape.png",
+      "path": "PrePlan/Fire-Escape.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_Fuel-Sub_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_Fuel-Sub_With-Line.png"
+    },
+    {
+      "name": "electrical-transformer.png",
+      "path": "PrePlan/electrical-transformer.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Smoke-Detector--Tamper-Detector.png",
+      "path": "PrePlan/DETECT_GRAY--_Smoke-Detector--Tamper-Detector.png"
+    },
+    {
+      "name": "Fire-Hose-Connection--Hose-Connection.png",
+      "path": "PrePlan/Fire-Hose-Connection--Hose-Connection.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_SIMPLE_Steam_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_SIMPLE_Steam_With-Line.png"
+    },
+    {
+      "name": "Escalator.png",
+      "path": "PrePlan/Escalator.png"
+    },
+    {
+      "name": "medical.png",
+      "path": "PrePlan/medical.png"
+    },
+    {
+      "name": "garbage-garbage-chute.png",
+      "path": "PrePlan/garbage-garbage-chute.png"
+    },
+    {
+      "name": "Roof-Access.png",
+      "path": "PrePlan/Roof-Access.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Gas-Detector-Pressure.png",
+      "path": "PrePlan/DETECT_GRAY--_Gas-Detector-Pressure.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_Refrigeration-Main_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_Refrigeration-Main_With-Line.png"
+    },
+    {
+      "name": "location-parking-not.png",
+      "path": "PrePlan/location-parking-not.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_SIMPLE_LNG_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_SIMPLE_LNG_With-Line.png"
+    },
+    {
+      "name": "room-utility-room.png",
+      "path": "PrePlan/room-utility-room.png"
+    },
+    {
+      "name": "Monitor--Dry.png",
+      "path": "PrePlan/Monitor--Dry.png"
+    },
+    {
+      "name": "Business--Grocery.png",
+      "path": "PrePlan/Business--Grocery.png"
+    },
+    {
+      "name": "Stairs--Double.png",
+      "path": "PrePlan/Stairs--Double.png"
+    },
+    {
+      "name": "Clean-Gas.png",
+      "path": "PrePlan/Clean-Gas.png"
+    },
+    {
+      "name": "Knox--KeyShunt.png",
+      "path": "PrePlan/Knox--KeyShunt.png"
+    },
+    {
+      "name": "Addressable-Location--Work-Space.png",
+      "path": "PrePlan/Addressable-Location--Work-Space.png"
+    },
+    {
+      "name": "blank.png",
+      "path": "PrePlan/blank.png"
+    },
+    {
+      "name": "security-evacuation-shelter.png",
+      "path": "PrePlan/security-evacuation-shelter.png"
+    },
+    {
+      "name": "Stairs--Spiral.png",
+      "path": "PrePlan/Stairs--Spiral.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Smoke-Detector.png",
+      "path": "PrePlan/DETECT_GRAY--_Smoke-Detector.png"
+    },
+    {
+      "name": "ALARM_Reset-Panel.png",
+      "path": "PrePlan/ALARM_Reset-Panel.png"
+    },
+    {
+      "name": "childcare-child.png",
+      "path": "PrePlan/childcare-child.png"
+    },
+    {
+      "name": "safety-decontamination-shower.png",
+      "path": "PrePlan/safety-decontamination-shower.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Heat-Detector-Rate-of-Rise.png",
+      "path": "PrePlan/DETECT_GRAY--_Heat-Detector-Rate-of-Rise.png"
+    },
+    {
+      "name": "Knox--Plain.png",
+      "path": "PrePlan/Knox--Plain.png"
+    },
+    {
+      "name": "safety-handwash.png",
+      "path": "PrePlan/safety-handwash.png"
+    },
+    {
+      "name": "Addressable-Location--Repair-Build.png",
+      "path": "PrePlan/Addressable-Location--Repair-Build.png"
+    },
+    {
+      "name": "Fire-Department-Connection--FDC1.png",
+      "path": "PrePlan/Fire-Department-Connection--FDC1.png"
+    },
+    {
+      "name": "Knox--DoorEntry.png",
+      "path": "PrePlan/Knox--DoorEntry.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_Solar-Panel-MAIN_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_Solar-Panel-MAIN_With-Line.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_Electrical-Sub_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_Electrical-Sub_With-Line.png"
+    },
+    {
+      "name": "room-guard-shack.png",
+      "path": "PrePlan/room-guard-shack.png"
+    },
+    {
+      "name": "room-office.png",
+      "path": "PrePlan/room-office.png"
+    },
+    {
+      "name": "people-handicapped.png",
+      "path": "PrePlan/people-handicapped.png"
+    },
+    {
+      "name": "ALARM_Alarm-Control-Panel--Burglar-Alarm.png",
+      "path": "PrePlan/ALARM_Alarm-Control-Panel--Burglar-Alarm.png"
+    },
+    {
+      "name": "fuel-pump-regular.png",
+      "path": "PrePlan/fuel-pump-regular.png"
+    },
+    {
+      "name": "room-classroom.png",
+      "path": "PrePlan/room-classroom.png"
+    },
+    {
+      "name": "Foam.png",
+      "path": "PrePlan/Foam.png"
+    },
+    {
+      "name": "ALARM_Alarm-Control-Panel--Switchboard-Panel.png",
+      "path": "PrePlan/ALARM_Alarm-Control-Panel--Switchboard-Panel.png"
+    },
+    {
+      "name": "room-boiler-room.png",
+      "path": "PrePlan/room-boiler-room.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Smoke-Detector--Flow-Switch.png",
+      "path": "PrePlan/DETECT_GRAY--_Smoke-Detector--Flow-Switch.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Smoke-Detector--Beam.png",
+      "path": "PrePlan/DETECT_GRAY--_Smoke-Detector--Beam.png"
+    },
+    {
+      "name": "electrical-generator-diesel.png",
+      "path": "PrePlan/electrical-generator-diesel.png"
+    },
+    {
+      "name": "Sprinkler-System--Dry.png",
+      "path": "PrePlan/Sprinkler-System--Dry.png"
+    },
+    {
+      "name": "room-catwalk.png",
+      "path": "PrePlan/room-catwalk.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_GENRIC_Plain_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_GENRIC_Plain_With-Line.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_Electrical-Main_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_Electrical-Main_With-Line.png"
+    },
+    {
+      "name": "ALARM__GENERIC_Alarm.png",
+      "path": "PrePlan/ALARM__GENERIC_Alarm.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Duct-Detector.png",
+      "path": "PrePlan/DETECT_GRAY--_Duct-Detector.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_Steam-Main_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_Steam-Main_With-Line.png"
+    },
+    {
+      "name": "restrooms-women.png",
+      "path": "PrePlan/restrooms-women.png"
+    },
+    {
+      "name": "location-loading-truck-well.png",
+      "path": "PrePlan/location-loading-truck-well.png"
+    },
+    {
+      "name": "security-safe-zone.png",
+      "path": "PrePlan/security-safe-zone.png"
+    },
+    {
+      "name": "Dry-Chemical.png",
+      "path": "PrePlan/Dry-Chemical.png"
+    },
+    {
+      "name": "Water-Source--Static.png",
+      "path": "PrePlan/Water-Source--Static.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_SIMPLE_Solar-Panel_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_SIMPLE_Solar-Panel_With-Line.png"
+    },
+    {
+      "name": "location-institutional.png",
+      "path": "PrePlan/location-institutional.png"
+    },
+    {
+      "name": "Electrical_Powerlines.png",
+      "path": "PrePlan/Electrical_Powerlines.png"
+    },
+    {
+      "name": "Knox--Residential.png",
+      "path": "PrePlan/Knox--Residential.png"
+    },
+    {
+      "name": "ALARM_FTR.png",
+      "path": "PrePlan/ALARM_FTR.png"
+    },
+    {
+      "name": "electrical-generator-electrical.png",
+      "path": "PrePlan/electrical-generator-electrical.png"
+    },
+    {
+      "name": "MostImportant.png",
+      "path": "PrePlan/MostImportant.png"
+    },
+    {
+      "name": "Sprinkler-Control-Valve--Post-Indicating-Valve.png",
+      "path": "PrePlan/Sprinkler-Control-Valve--Post-Indicating-Valve.png"
+    },
+    {
+      "name": "electrical-room.png",
+      "path": "PrePlan/electrical-room.png"
+    },
+    {
+      "name": "Addressable-Location--Parking.png",
+      "path": "PrePlan/Addressable-Location--Parking.png"
+    },
+    {
+      "name": "Agent-Container.png",
+      "path": "PrePlan/Agent-Container.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_Gas-MAIN_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_Gas-MAIN_With-Line.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_Refrigeration-Sub_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_Refrigeration-Sub_With-Line.png"
+    },
+    {
+      "name": "Addressable-Location--Utility.png",
+      "path": "PrePlan/Addressable-Location--Utility.png"
+    },
+    {
+      "name": "location-gym-or-arena.png",
+      "path": "PrePlan/location-gym-or-arena.png"
+    },
+    {
+      "name": "Attic-Access.png",
+      "path": "PrePlan/Attic-Access.png"
+    },
+    {
+      "name": "Fire-Pump--With-Drive.png",
+      "path": "PrePlan/Fire-Pump--With-Drive.png"
+    },
+    {
+      "name": "Hose-Reel--Foam.png",
+      "path": "PrePlan/Hose-Reel--Foam.png"
+    },
+    {
+      "name": "restrooms.png",
+      "path": "PrePlan/restrooms.png"
+    },
+    {
+      "name": "security-area-of-refuge.png",
+      "path": "PrePlan/security-area-of-refuge.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Heat-Detector.png",
+      "path": "PrePlan/DETECT_GRAY--_Heat-Detector.png"
+    },
+    {
+      "name": "location-parking.png",
+      "path": "PrePlan/location-parking.png"
+    },
+    {
+      "name": "Sprinkler-Control-Valve.png",
+      "path": "PrePlan/Sprinkler-Control-Valve.png"
+    },
+    {
+      "name": "most-important-2.png",
+      "path": "PrePlan/most-important-2.png"
+    },
+    {
+      "name": "safety-location-hvac.png",
+      "path": "PrePlan/safety-location-hvac.png"
+    },
+    {
+      "name": "room-elevator-room.png",
+      "path": "PrePlan/room-elevator-room.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_Fuel-Pipeline_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_Fuel-Pipeline_With-Line.png"
+    },
+    {
+      "name": "room-library.png",
+      "path": "PrePlan/room-library.png"
+    },
+    {
+      "name": "Water-Source--Drafting-Site.png",
+      "path": "PrePlan/Water-Source--Drafting-Site.png"
+    },
+    {
+      "name": "Addressable-Location--Functional-area.png",
+      "path": "PrePlan/Addressable-Location--Functional-area.png"
+    },
+    {
+      "name": "electrical-generator-electrical-battery.png",
+      "path": "PrePlan/electrical-generator-electrical-battery.png"
+    },
+    {
+      "name": "manual.png",
+      "path": "PrePlan/manual.png"
+    },
+    {
+      "name": "emergency-control-station.png",
+      "path": "PrePlan/emergency-control-station.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_CNG-Sub_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_CNG-Sub_With-Line.png"
+    },
+    {
+      "name": "manual-operations-manual.png",
+      "path": "PrePlan/manual-operations-manual.png"
+    },
+    {
+      "name": "Knox--Keycard.png",
+      "path": "PrePlan/Knox--Keycard.png"
+    },
+    {
+      "name": "medical-aed.png",
+      "path": "PrePlan/medical-aed.png"
+    },
+    {
+      "name": "Sprinkler-System--Sprinkler-General.png",
+      "path": "PrePlan/Sprinkler-System--Sprinkler-General.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Heat-Detector--Fixed-Temp.png",
+      "path": "PrePlan/DETECT_GRAY--_Heat-Detector--Fixed-Temp.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_Solar-Panel-Sub_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_Solar-Panel-Sub_With-Line.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_Water-Shutoff-Main_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_Water-Shutoff-Main_With-Line.png"
+    },
+    {
+      "name": "Crawl-Space-Hatch.png",
+      "path": "PrePlan/Crawl-Space-Hatch.png"
+    },
+    {
+      "name": "medical-first-aid.png",
+      "path": "PrePlan/medical-first-aid.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_SIMPLE_Oxygen_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_SIMPLE_Oxygen_With-Line.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_DETAIL_Fuel-Main_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_DETAIL_Fuel-Main_With-Line.png"
+    },
+    {
+      "name": "location-mercantile.png",
+      "path": "PrePlan/location-mercantile.png"
+    },
+    {
+      "name": "fire-pump.png",
+      "path": "PrePlan/fire-pump.png"
+    },
+    {
+      "name": "CO2.png",
+      "path": "PrePlan/CO2.png"
+    },
+    {
+      "name": "electrical-generator.png",
+      "path": "PrePlan/electrical-generator.png"
+    },
+    {
+      "name": "location-air-conditioning.png",
+      "path": "PrePlan/location-air-conditioning.png"
+    },
+    {
+      "name": "security-storm-shelter.png",
+      "path": "PrePlan/security-storm-shelter.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Duct-Detector--Heat.png",
+      "path": "PrePlan/DETECT_GRAY--_Duct-Detector--Heat.png"
+    },
+    {
+      "name": "people-contact-information.png",
+      "path": "PrePlan/people-contact-information.png"
+    },
+    {
+      "name": "ALARM_Voice_Control_Panel.png",
+      "path": "PrePlan/ALARM_Voice_Control_Panel.png"
+    },
+    {
+      "name": "room-storage.png",
+      "path": "PrePlan/room-storage.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Duct-Detector--Flame.png",
+      "path": "PrePlan/DETECT_GRAY--_Duct-Detector--Flame.png"
+    },
+    {
+      "name": "Sprinkler-Control-Valve--Wall-Post-Indicating-Valve.png",
+      "path": "PrePlan/Sprinkler-Control-Valve--Wall-Post-Indicating-Valve.png"
+    },
+    {
+      "name": "people-occupant.png",
+      "path": "PrePlan/people-occupant.png"
+    },
+    {
+      "name": "DETECT_GRAY--_Gas-Detector.png",
+      "path": "PrePlan/DETECT_GRAY--_Gas-Detector.png"
+    },
+    {
+      "name": "safety-location-fire-extinguisher.png",
+      "path": "PrePlan/safety-location-fire-extinguisher.png"
+    },
+    {
+      "name": "SHUTOFF_BLUE--_SIMPLE_Fuel_With-Line.png",
+      "path": "PrePlan/SHUTOFF_BLUE--_SIMPLE_Fuel_With-Line.png"
+    },
+    {
+      "name": "electrical-vault.png",
+      "path": "PrePlan/electrical-vault.png"
+    },
+    {
+      "name": "garbage-dumpster.png",
+      "path": "PrePlan/garbage-dumpster.png"
+    },
+    {
+      "name": "Absorbtion.png",
+      "path": "Incident/Absorbtion.png"
+    },
+    {
+      "name": "Relevant_Not.png",
+      "path": "Incident/Relevant_Not.png"
+    },
+    {
+      "name": "Joint-Operations-Center.png",
+      "path": "Incident/Joint-Operations-Center.png"
+    },
+    {
+      "name": "Staging_NWCG.png",
+      "path": "Incident/Staging_NWCG.png"
+    },
+    {
+      "name": "LEVEL1_Cell-Phone.png",
+      "path": "Incident/LEVEL1_Cell-Phone.png"
+    },
+    {
+      "name": "Incident-Command-Post.png",
+      "path": "Incident/Incident-Command-Post.png"
+    },
+    {
+      "name": "Datum_Start.png",
+      "path": "Incident/Datum_Start.png"
+    },
+    {
+      "name": "Datum_Finish.png",
+      "path": "Incident/Datum_Finish.png"
+    },
+    {
+      "name": "Staging_EMS.png",
+      "path": "Incident/Staging_EMS.png"
+    },
+    {
+      "name": "SWAT_Hostage_Negotation.png",
+      "path": "Incident/SWAT_Hostage_Negotation.png"
+    },
+    {
+      "name": "Communication-Ops-Telephone.png",
+      "path": "Incident/Communication-Ops-Telephone.png"
+    },
+    {
+      "name": "Staging_Law_Enforcement.png",
+      "path": "Incident/Staging_Law_Enforcement.png"
+    },
+    {
+      "name": "LEVEL3_Cell-Phone.png",
+      "path": "Incident/LEVEL3_Cell-Phone.png"
+    },
+    {
+      "name": "Dam.png",
+      "path": "Incident/Dam.png"
+    },
+    {
+      "name": "Staging_Priority2.png",
+      "path": "Incident/Staging_Priority2.png"
+    },
+    {
+      "name": "Diversion.png",
+      "path": "Incident/Diversion.png"
+    },
+    {
+      "name": "Bomb--Detonation-Location.png",
+      "path": "Incident/Bomb--Detonation-Location.png"
+    },
+    {
+      "name": "Barrier--Emergency-Access-Only.png",
+      "path": "Incident/Barrier--Emergency-Access-Only.png"
+    },
+    {
+      "name": "EMS--Treatment-Plain.png",
+      "path": "Incident/EMS--Treatment-Plain.png"
+    },
+    {
+      "name": "EMS--Plain.png",
+      "path": "Incident/EMS--Plain.png"
+    },
+    {
+      "name": "Civilian-Staging--Transit.png",
+      "path": "Incident/Civilian-Staging--Transit.png"
+    },
+    {
+      "name": "Sensor-Weather.png",
+      "path": "Incident/Sensor-Weather.png"
+    },
+    {
+      "name": "SWAT_Canine.png",
+      "path": "Incident/SWAT_Canine.png"
+    },
+    {
+      "name": "Public_Information.png",
+      "path": "Incident/Public_Information.png"
+    },
+    {
+      "name": "Multi-Agency-Coordination-Center.png",
+      "path": "Incident/Multi-Agency-Coordination-Center.png"
+    },
+    {
+      "name": "SWAT--Standoff-Location.png",
+      "path": "Incident/SWAT--Standoff-Location.png"
+    },
+    {
+      "name": "EMS--Casuality-Collection-Point.png",
+      "path": "Incident/EMS--Casuality-Collection-Point.png"
+    },
+    {
+      "name": "Staging_Faith.png",
+      "path": "Incident/Staging_Faith.png"
+    },
+    {
+      "name": "Staging_CISM.png",
+      "path": "Incident/Staging_CISM.png"
+    },
+    {
+      "name": "LZ--Marine-LZ.png",
+      "path": "Incident/LZ--Marine-LZ.png"
+    },
+    {
+      "name": "Staging.png",
+      "path": "Incident/Staging.png"
+    },
+    {
+      "name": "Emergency-Operations-Cetner.png",
+      "path": "Incident/Emergency-Operations-Cetner.png"
+    },
+    {
+      "name": "Medical-Supply-Cache.png",
+      "path": "Incident/Medical-Supply-Cache.png"
+    },
+    {
+      "name": "Repeater_NWCG.png",
+      "path": "Incident/Repeater_NWCG.png"
+    },
+    {
+      "name": "LEVEL2_Portable-Locating-Transmitter.png",
+      "path": "Incident/LEVEL2_Portable-Locating-Transmitter.png"
+    },
+    {
+      "name": "Sensor-Chemical.png",
+      "path": "Incident/Sensor-Chemical.png"
+    },
+    {
+      "name": "Reporting-Party.png",
+      "path": "Incident/Reporting-Party.png"
+    },
+    {
+      "name": "EMS--ILS.png",
+      "path": "Incident/EMS--ILS.png"
+    },
+    {
+      "name": "EMS--ALS.png",
+      "path": "Incident/EMS--ALS.png"
+    },
+    {
+      "name": "Sensor-Intruderl.png",
+      "path": "Incident/Sensor-Intruderl.png"
+    },
+    {
+      "name": "Initial_Planning_Point_Missing_Persons_Fugitive_Search.png",
+      "path": "Incident/Initial_Planning_Point_Missing_Persons_Fugitive_Search.png"
+    },
+    {
+      "name": "Bomb--Containment.png",
+      "path": "Incident/Bomb--Containment.png"
+    },
+    {
+      "name": "Civilian-Staging--Volunteer.png",
+      "path": "Incident/Civilian-Staging--Volunteer.png"
+    },
+    {
+      "name": "Public_Information_Media.png",
+      "path": "Incident/Public_Information_Media.png"
+    },
+    {
+      "name": "Civilian-Staging--Family-Reunification.png",
+      "path": "Incident/Civilian-Staging--Family-Reunification.png"
+    },
+    {
+      "name": "Staging_Priority1.png",
+      "path": "Incident/Staging_Priority1.png"
+    },
+    {
+      "name": "Relevant_Known.png",
+      "path": "Incident/Relevant_Known.png"
+    },
+    {
+      "name": "Base_NWCG.png",
+      "path": "Incident/Base_NWCG.png"
+    },
+    {
+      "name": "Responder_First_Aid.png",
+      "path": "Incident/Responder_First_Aid.png"
+    },
+    {
+      "name": "Barrier.png",
+      "path": "Incident/Barrier.png"
+    },
+    {
+      "name": "LEVEL1_Emergency-Locating-Transmitter.png",
+      "path": "Incident/LEVEL1_Emergency-Locating-Transmitter.png"
+    },
+    {
+      "name": "Relevant_Unknown.png",
+      "path": "Incident/Relevant_Unknown.png"
+    },
+    {
+      "name": "Civilian-Staging--Animal-Reunification.png",
+      "path": "Incident/Civilian-Staging--Animal-Reunification.png"
+    },
+    {
+      "name": "Barrier--With-Security.png",
+      "path": "Incident/Barrier--With-Security.png"
+    },
+    {
+      "name": "SWAT_EMT.png",
+      "path": "Incident/SWAT_EMT.png"
+    },
+    {
+      "name": "Command-Post.png",
+      "path": "Incident/Command-Post.png"
+    },
+    {
+      "name": "Camp_NWCG.png",
+      "path": "Incident/Camp_NWCG.png"
+    },
+    {
+      "name": "Command-Post-Plain.png",
+      "path": "Incident/Command-Post-Plain.png"
+    },
+    {
+      "name": "Staging_Fire.png",
+      "path": "Incident/Staging_Fire.png"
+    },
+    {
+      "name": "Communication-Ops-Repeater.png",
+      "path": "Incident/Communication-Ops-Repeater.png"
+    },
+    {
+      "name": "Decon_NonAmbulatory.png",
+      "path": "Incident/Decon_NonAmbulatory.png"
+    },
+    {
+      "name": "Sensor-Radiological.png",
+      "path": "Incident/Sensor-Radiological.png"
+    },
+    {
+      "name": "Communication-Ops-Generic.png",
+      "path": "Incident/Communication-Ops-Generic.png"
+    },
+    {
+      "name": "IRDownlink.png",
+      "path": "Incident/IRDownlink.png"
+    },
+    {
+      "name": "Staging_Air.png",
+      "path": "Incident/Staging_Air.png"
+    },
+    {
+      "name": "LZ--Helibase.png",
+      "path": "Incident/LZ--Helibase.png"
+    },
+    {
+      "name": "Staging_Equiment.png",
+      "path": "Incident/Staging_Equiment.png"
+    },
+    {
+      "name": "Decon_Ambulatory.png",
+      "path": "Incident/Decon_Ambulatory.png"
+    },
+    {
+      "name": "Staging_Rehab.png",
+      "path": "Incident/Staging_Rehab.png"
+    },
+    {
+      "name": "Base.png",
+      "path": "Incident/Base.png"
+    },
+    {
+      "name": "LEVEL2_Emergency-Locating-Transmitter.png",
+      "path": "Incident/LEVEL2_Emergency-Locating-Transmitter.png"
+    },
+    {
+      "name": "Sensor-General.png",
+      "path": "Incident/Sensor-General.png"
+    },
+    {
+      "name": "Datum.png",
+      "path": "Incident/Datum.png"
+    },
+    {
+      "name": "Water--Fire-Hydrant.png",
+      "path": "Incident/Water--Fire-Hydrant.png"
+    },
+    {
+      "name": "SWAT--Rehearsal-Area.png",
+      "path": "Incident/SWAT--Rehearsal-Area.png"
+    },
+    {
+      "name": "Water-Point--Retardent.png",
+      "path": "Incident/Water-Point--Retardent.png"
+    },
+    {
+      "name": "SWAT.png",
+      "path": "Incident/SWAT.png"
+    },
+    {
+      "name": "LEVEL2_Cell-Phone.png",
+      "path": "Incident/LEVEL2_Cell-Phone.png"
+    },
+    {
+      "name": "LZ_Airport.png",
+      "path": "Incident/LZ_Airport.png"
+    },
+    {
+      "name": "EMS--BLS.png",
+      "path": "Incident/EMS--BLS.png"
+    },
+    {
+      "name": "Telephone_NWCG.png",
+      "path": "Incident/Telephone_NWCG.png"
+    },
+    {
+      "name": "Area-Command-Post.png",
+      "path": "Incident/Area-Command-Post.png"
+    },
+    {
+      "name": "Foam.png",
+      "path": "Incident/Foam.png"
+    },
+    {
+      "name": "Water-Point--Helicopter.png",
+      "path": "Incident/Water-Point--Helicopter.png"
+    },
+    {
+      "name": "Water-Point--Vehicle.png",
+      "path": "Incident/Water-Point--Vehicle.png"
+    },
+    {
+      "name": "Repeater.png",
+      "path": "Incident/Repeater.png"
+    },
+    {
+      "name": "LEVEL1_Portable-Locating-Transmitter.png",
+      "path": "Incident/LEVEL1_Portable-Locating-Transmitter.png"
+    },
+    {
+      "name": "EMS--Triage.png",
+      "path": "Incident/EMS--Triage.png"
+    },
+    {
+      "name": "LZ--Marine-Dock.png",
+      "path": "Incident/LZ--Marine-Dock.png"
+    },
+    {
+      "name": "Civilian-Staging--Not-Specfic.png",
+      "path": "Incident/Civilian-Staging--Not-Specfic.png"
+    },
+    {
+      "name": "SWAT--Sniper-Location.png",
+      "path": "Incident/SWAT--Sniper-Location.png"
+    },
+    {
+      "name": "Barrier-With-Checkpoint.png",
+      "path": "Incident/Barrier-With-Checkpoint.png"
+    },
+    {
+      "name": "Water-Point--General.png",
+      "path": "Incident/Water-Point--General.png"
+    },
+    {
+      "name": "Reporting_Party.png",
+      "path": "Incident/Reporting_Party.png"
+    },
+    {
+      "name": "SWAT_RallyPoint.png",
+      "path": "Incident/SWAT_RallyPoint.png"
+    },
+    {
+      "name": "Supply-Distribution_Food_Water.png",
+      "path": "Incident/Supply-Distribution_Food_Water.png"
+    },
+    {
+      "name": "Dike.png",
+      "path": "Incident/Dike.png"
+    },
+    {
+      "name": "LEVEL3_Portable-Locating-Transmitter.png",
+      "path": "Incident/LEVEL3_Portable-Locating-Transmitter.png"
+    },
+    {
+      "name": "LZ--Marine-Launch-Site.png",
+      "path": "Incident/LZ--Marine-Launch-Site.png"
+    },
+    {
+      "name": "Lookout.png",
+      "path": "Incident/Lookout.png"
+    },
+    {
+      "name": "Sensor-Biological.png",
+      "path": "Incident/Sensor-Biological.png"
+    },
+    {
+      "name": "Camp.png",
+      "path": "Incident/Camp.png"
+    },
+    {
+      "name": "Barrier1.png",
+      "path": "Incident/Barrier1.png"
+    },
+    {
+      "name": "LEVEL3_Emergency-Locating-Transmitter.png",
+      "path": "Incident/LEVEL3_Emergency-Locating-Transmitter.png"
+    },
+    {
+      "name": "Decon.png",
+      "path": "Incident/Decon.png"
+    }
+  ]
+}
