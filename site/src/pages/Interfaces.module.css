@@ -1,0 +1,116 @@
+.container {
+  max-width: 960px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #FFE35E;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #878787;
+  margin-bottom: 24px;
+}
+
+.searchBar {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  background: #1A1A1A;
+  border: 1px solid #2E2E2E;
+  border-radius: 6px;
+  color: #DAD4BC;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  margin-bottom: 32px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.searchBar::placeholder {
+  color: #5A5A5A;
+}
+
+.searchBar:focus {
+  border-color: #FFE35E;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #DAD4BC;
+  margin-bottom: 16px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #1A1A1A;
+  border: 1px solid #2E2E2E;
+  border-radius: 8px;
+  padding: 16px;
+  transition: border-color 0.15s;
+}
+
+.card:hover {
+  border-color: #3A3A3A;
+}
+
+.cardName {
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFE35E;
+  margin-bottom: 8px;
+}
+
+.cardMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-family: 'Roboto Mono', monospace;
+  background: #2E2E2E;
+  color: #DAD4BC;
+}
+
+.badgeDirection {
+  composes: badge;
+  background: #2A2A1A;
+  color: #C8B84D;
+}
+
+.badgePort {
+  composes: badge;
+  background: #1A2A2A;
+  color: #5DB8B0;
+}
+
+.cardDescription {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #878787;
+  margin: 0;
+}
+
+.empty {
+  color: #5A5A5A;
+  font-style: italic;
+  padding: 24px 0;
+}

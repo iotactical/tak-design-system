@@ -1,6 +1,9 @@
 // rtmx:req REQ-SITE-005
-import { useEffect, useState, useMemo } from 'react';
+// rtmx:req REQ-XW-074
+// rtmx:req REQ-XW-075
+import { useEffect, useState, useMemo, useRef } from 'react';
 import styles from './Palettes.module.css';
+import { ModelViewer } from '../components/ModelViewer';
 
 // All iconset manifests - static imports for reliability
 import responderData from '../../../data/atak-iconset-responder.json';
@@ -217,6 +220,78 @@ function MarkersPanel() {
   );
 }
 
+// rtmx:req REQ-XW-075
+/** Lazy-loading wrapper for ModelViewer using IntersectionObserver */
+function LazyModelViewer({
+  modelPath,
+  modelName,
+  width = 160,
+  height = 120,
+}: {
+  modelPath: string;
+  modelName: string;
+  width?: number;
+  height?: number;
+}) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '200px' },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={containerRef} style={{ width, height }}>
+      {isVisible ? (
+        <ModelViewer
+          modelPath={modelPath}
+          width={width}
+          height={height}
+          autoRotate
+        />
+      ) : (
+        <div
+          style={{
+            width,
+            height,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: '#1a1a1a',
+            color: '#878787',
+            fontSize: 11,
+            flexDirection: 'column',
+            gap: 4,
+          }}
+        >
+          <span>{modelName}</span>
+          <span style={{ fontSize: 9, opacity: 0.6 }}>Loading...</span>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// rtmx:req REQ-XW-074
+/** Derive the DAE filename from the model name: remove hyphens, append .DAE */
+function deriveDaeFilename(name: string): string {
+  return name.replace(/-/g, '') + '.DAE';
+}
+
 function VehicleModelsPanel() {
   const vData = vehicleData as unknown as { totalCount: number; categories: { name: string; models: { name: string; file: string }[] }[] };
 
@@ -239,11 +314,21 @@ function VehicleModelsPanel() {
           <div className={styles.groupName}>{cat}</div>
           <div className={styles.groupCount}>{items.length} models</div>
           <div className={styles.grid}>
-            {items.map((m) => (
-              <div key={m.name} className={styles.iconCard}>
-                <div className={styles.iconName} title={m.name}>{m.name}</div>
-              </div>
-            ))}
+            {items.map((m) => {
+              const daeFile = deriveDaeFilename(m.name);
+              const modelPath = `${BASE}models/${cat}/${m.name}/${daeFile}`;
+              return (
+                <div key={m.name} className={styles.iconCard}>
+                  <LazyModelViewer
+                    modelPath={modelPath}
+                    modelName={m.name}
+                    width={160}
+                    height={120}
+                  />
+                  <div className={styles.iconName} title={m.name}>{m.name}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
       ))}

@@ -8,6 +8,7 @@ import Components from './pages/Components';
 import Icons from './pages/Icons';
 import Platforms from './pages/Platforms';
 import Palettes from './pages/Palettes';
+import Interfaces from './pages/Interfaces';
 
 const navItems = [
   { to: '/', label: 'Overview' },
@@ -18,6 +19,7 @@ const navItems = [
   { to: '/icons', label: 'Icons' },
   { to: '/palettes', label: 'Palettes' },
   { to: '/platforms', label: 'Platforms' },
+  { to: '/interfaces', label: 'Interfaces' },
 ];
 
 export default function App() {
@@ -54,6 +56,7 @@ export default function App() {
           <Route path="/icons" element={<Icons />} />
           <Route path="/palettes" element={<Palettes />} />
           <Route path="/platforms" element={<Platforms />} />
+          <Route path="/interfaces" element={<Interfaces />} />
         </Routes>
       </main>
     </div>

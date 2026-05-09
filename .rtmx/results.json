@@ -402,6 +402,12 @@
     "passed": true
   },
   {
+    "req_id": "REQ-XW-063",
+    "test_name": "REQ-XW-063: Interface browser page",
+    "test_file": "tests/site/test_interface_page.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-XW-072",
     "test_name": "REQ-XW-072: ModelViewer component exists",
     "test_file": "tests/site/test_model_component.mjs",
@@ -417,6 +423,18 @@
     "req_id": "REQ-XW-070",
     "test_name": "REQ-XW-070: Vehicle model extraction",
     "test_file": "tests/site/test_model_extract.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-074",
+    "test_name": "REQ-XW-074: ModelViewer integrated into Vehicle Models tab",
+    "test_file": "tests/site/test_model_integration.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-075",
+    "test_name": "REQ-XW-075: Lazy loading with IntersectionObserver",
+    "test_file": "tests/site/test_model_integration.mjs",
     "passed": true
   },
   {
@@ -546,6 +564,18 @@
     "passed": true
   },
   {
+    "req_id": "REQ-XW-003",
+    "test_name": "REQ-XW-003: B-to-C mapping",
+    "test_file": "tests/symbology/test_b2c.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-004",
+    "test_name": "REQ-XW-004: B-to-D crosswalk",
+    "test_file": "tests/symbology/test_b2d.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-XW-001",
     "test_name": "REQ-XW-001: MIL-STD-2525 C-to-D reference data",
     "test_file": "tests/symbology/test_b_codes.mjs",
@@ -561,6 +591,12 @@
     "req_id": "REQ-SYM-002",
     "test_name": "REQ-SYM-002: Design token to mil-sym affiliation color bridge",
     "test_file": "tests/symbology/test_color_bridge.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-005",
+    "test_name": "REQ-XW-005: Crosswalk bidirectionality and lossy annotation",
+    "test_file": "tests/symbology/test_crosswalk_lossy.mjs",
     "passed": true
   },
   {
