@@ -1,0 +1,183 @@
+{
+  "name": "FEMA Icons",
+  "uid": "f8f7f666-8b28-4b57-9fbb-e48e61d33b79",
+  "iconCount": 42,
+  "groups": [
+    {
+      "name": "ESF",
+      "icons": [
+        {
+          "filename": "ESF 1.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "ESF 10.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "ESF 11.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "ESF 12.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "ESF 13.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "ESF 14.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "ESF 15.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "ESF 16.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "ESF 2.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "ESF 3.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "ESF 4.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "ESF 5.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "ESF 6.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "ESF 7.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "ESF 8.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "ESF 9.png",
+          "type2525b": "a-n-G"
+        }
+      ]
+    },
+    {
+      "name": "Iron Sites",
+      "icons": [
+        {
+          "filename": "Animal Issue.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Assisted.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Confirmed Victim.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Emergency Food Distro Center.png"
+        },
+        {
+          "filename": "Emergency Shelter.png"
+        },
+        {
+          "filename": "Evacuated.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Extra 21.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Extra 22.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Extra 23.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Extra 24.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Fire Incident.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Flood-Water Level.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Follow-Up Form.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "HAZMAT.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Helo Landing Site.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Human Remains Removed.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Human Remains.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Rescued.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Route Blocked.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Shelter in Place.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Structure Damaged.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Structure Destroyed.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Structure Failed.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Structure No Damage.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Targeted Search.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Victim Detected.png",
+          "type2525b": "a-n-G"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+/* rtmx:req REQ-SITE-003 */
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--tak-text-primary);
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--tak-text-secondary);
+  margin-bottom: 24px;
+}
+
+/* Search */
+.searchRow {
+  margin-bottom: 16px;
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 480px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-family: var(--tak-font-sans);
+  background: var(--tak-bg-secondary);
+  border: 1px solid var(--tak-border);
+  border-radius: 6px;
+  color: var(--tak-text-primary);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.searchInput::placeholder {
+  color: var(--tak-text-secondary);
+}
+
+.searchInput:focus {
+  border-color: var(--tak-accent);
+}
+
+/* Filters */
+.filterSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.filterLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--tak-text-secondary);
+  min-width: 70px;
+}
+
+.filterButtons {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  padding: 4px 12px;
+  font-size: 12px;
+  font-family: var(--tak-font-sans);
+  background: var(--tak-bg-secondary);
+  border: 1px solid var(--tak-border);
+  border-radius: 4px;
+  color: var(--tak-text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filterBtn:hover {
+  border-color: var(--tak-accent);
+  color: var(--tak-text-primary);
+}
+
+.filterBtnActive {
+  background: var(--tak-accent);
+  border-color: var(--tak-accent);
+  color: #fff;
+}
+
+/* Count */
+.countDisplay {
+  font-size: 13px;
+  color: var(--tak-text-secondary);
+  margin: 16px 0;
+  padding: 8px 0;
+  border-top: 1px solid var(--tak-border);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+/* Card */
+.card {
+  background: var(--tak-bg-card);
+  border: 1px solid var(--tak-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--tak-accent-dim);
+}
+
+.cardPreview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  background: var(--tak-bg-secondary);
+  padding: 12px;
+}
+
+.svgPreview {
+  max-width: 48px;
+  max-height: 48px;
+  filter: brightness(0) invert(0.85);
+}
+
+.noPreview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--tak-text-secondary);
+}
+
+.noPreviewIcon {
+  font-size: 28px;
+  opacity: 0.4;
+}
+
+.noPreviewLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.6;
+}
+
+.cardBody {
+  padding: 10px;
+}
+
+.cardName {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--tak-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 6px;
+}
+
+.cardBadges {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 10px;
+  font-weight: 500;
+  border-radius: 3px;
+  text-transform: lowercase;
+}
+
+.badgeVector {
+  background: var(--tak-badge-vector);
+  color: #fff;
+}
+
+.badgeShape {
+  background: var(--tak-badge-shape);
+  color: #fff;
+}
+
+.badgeSelector {
+  background: var(--tak-badge-selector);
+  color: #fff;
+}
+
+.badgePng {
+  background: var(--tak-badge-png);
+  color: #fff;
+}
+
+.badgeNinepatch {
+  background: var(--tak-badge-ninepatch);
+  color: #fff;
+}
+
+.badgeOther {
+  background: var(--tak-badge-other);
+  color: #fff;
+}
+
+.badgeCategory {
+  background: transparent;
+  border: 1px solid var(--tak-border);
+  color: var(--tak-text-secondary);
+}
+
+/* Empty state */
+.emptyState {
+  text-align: center;
+  padding: 48px 16px;
+  color: var(--tak-text-secondary);
+  font-size: 14px;
+}

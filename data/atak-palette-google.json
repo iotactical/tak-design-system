@@ -1,0 +1,396 @@
+{
+  "name": "Google",
+  "uid": "f7f71666-8b28-4b57-9fbb-e38e61d33b79",
+  "iconCount": 96,
+  "groups": [
+    {
+      "name": "Google",
+      "icons": [
+        {
+          "filename": "airports.png",
+          "type2525b": "a-u-A"
+        },
+        {
+          "filename": "arrow-reverse.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "arts.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "bars.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "blu-blank.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "blue-pushpin.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "bus.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "cabs.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "camera.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "campfire.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "campground.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "caution.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "coffee.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "convenience.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "cross-hairs.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "cycling.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "dining.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "dollar.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "donut.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "earthquake.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "electronics.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "euro.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "falling_rocks.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "ferry.png",
+          "type2525b": "a-u-S"
+        },
+        {
+          "filename": "firedept.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "fishing.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "flag.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "forbidden.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "gas_stations.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "golf.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "grn-blank.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "grn-pushpin.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "grocery.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "heliport.png",
+          "type2525b": "a-u-A-C-H"
+        },
+        {
+          "filename": "hiker.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "homegardenbusiness.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "horsebackriding.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "hospitals.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "info-i.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "info.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "info_circle.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "lodging.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "ltblu-blank.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "ltblu-pushpin.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "man.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "marina.png",
+          "type2525b": "a-u-S"
+        },
+        {
+          "filename": "mechanic.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "motorcycling.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "movies.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "open-diamond.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "parks.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "partly_cloudy.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "phone.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "picnic.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "pink-blank.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "pink-pushpin.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "placemark_circle.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "placemark_square.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "play.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "poi.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "police.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "polygon.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "post_office.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "purple-pushpin.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "rail.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "rainy.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "ranger_station.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "realestate.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "red-pushpin.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "sailing.png",
+          "type2525b": "a-u-S"
+        },
+        {
+          "filename": "salon.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "shaded_dot.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "shopping.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "ski.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "snack_bar.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "snowflake_simple.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "square.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "star.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "subway.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "sunny.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "swimming.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "target.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "toilets.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "trail.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "tram.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "triangle.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "truck.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "volcano.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "water.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "webcam.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "wheel_chair_accessible.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "wht-blank.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "wht-pushpin.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "woman.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "yen.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "ylw-pushpin.png",
+          "type2525b": "a-u-G"
+        }
+      ]
+    }
+  ]
+}

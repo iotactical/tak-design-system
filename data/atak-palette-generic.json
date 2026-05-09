@@ -1,0 +1,2023 @@
+{
+  "name": "Generic Icons",
+  "uid": "ad78aafb-83a6-4c07-b2b9-a897a8b6a38f",
+  "iconCount": 657,
+  "groups": [
+    {
+      "name": "LetterPins",
+      "icons": [
+        {
+          "filename": "A Pin Invert.png"
+        },
+        {
+          "filename": "A Pin.png"
+        },
+        {
+          "filename": "B Pin Invert.png"
+        },
+        {
+          "filename": "B Pin.png"
+        },
+        {
+          "filename": "C Pin Invert.png"
+        },
+        {
+          "filename": "C Pin.png"
+        },
+        {
+          "filename": "D Pin Invert.png"
+        },
+        {
+          "filename": "D Pin.png"
+        },
+        {
+          "filename": "E Pin Invert.png"
+        },
+        {
+          "filename": "E Pin.png"
+        },
+        {
+          "filename": "F Pin Invert.png"
+        },
+        {
+          "filename": "F Pin.png"
+        },
+        {
+          "filename": "G Pin Invert.png"
+        },
+        {
+          "filename": "G Pin.png"
+        },
+        {
+          "filename": "H Pin Invert.png"
+        },
+        {
+          "filename": "H Pin.png"
+        },
+        {
+          "filename": "I Pin Invert.png"
+        },
+        {
+          "filename": "I Pin.png"
+        },
+        {
+          "filename": "J Pin Invert.png"
+        },
+        {
+          "filename": "J Pin.png"
+        },
+        {
+          "filename": "K Pin Invert.png"
+        },
+        {
+          "filename": "K Pin.png"
+        },
+        {
+          "filename": "L Pin Invert.png"
+        },
+        {
+          "filename": "L Pin.png"
+        },
+        {
+          "filename": "M Pin Invert.png"
+        },
+        {
+          "filename": "M Pin.png"
+        },
+        {
+          "filename": "N Pin Invert.png"
+        },
+        {
+          "filename": "N Pin.png"
+        },
+        {
+          "filename": "O Pin Invert.png"
+        },
+        {
+          "filename": "O Pin.png"
+        },
+        {
+          "filename": "P Pin Invert.png"
+        },
+        {
+          "filename": "P Pin.png"
+        },
+        {
+          "filename": "Q Pin Invert.png"
+        },
+        {
+          "filename": "Q Pin.png"
+        },
+        {
+          "filename": "R Pin Invert.png"
+        },
+        {
+          "filename": "R Pin.png"
+        },
+        {
+          "filename": "S Pin Invert.png"
+        },
+        {
+          "filename": "S Pin.png"
+        },
+        {
+          "filename": "T Pin Invert.png"
+        },
+        {
+          "filename": "T Pin.png"
+        },
+        {
+          "filename": "U Pin Invert.png"
+        },
+        {
+          "filename": "U Pin.png"
+        },
+        {
+          "filename": "V Pin Invert.png"
+        },
+        {
+          "filename": "V Pin.png"
+        },
+        {
+          "filename": "W Pin Invert.png"
+        },
+        {
+          "filename": "W Pin.png"
+        },
+        {
+          "filename": "X Pin Invert.png"
+        },
+        {
+          "filename": "X Pin.png"
+        },
+        {
+          "filename": "Y Pin Invert.png"
+        },
+        {
+          "filename": "Y Pin.png"
+        },
+        {
+          "filename": "Z Pin Invert.png"
+        },
+        {
+          "filename": "Z Pin.png"
+        }
+      ]
+    },
+    {
+      "name": "Markers",
+      "icons": [
+        {
+          "filename": "wht-blank Invert.png"
+        },
+        {
+          "filename": "wht-blank-lv Invert.png"
+        },
+        {
+          "filename": "wht-blank-lv.png"
+        },
+        {
+          "filename": "wht-blank.png"
+        },
+        {
+          "filename": "wht-circle Invert.png"
+        },
+        {
+          "filename": "wht-circle-lv Invert.png"
+        },
+        {
+          "filename": "wht-circle-lv.png"
+        },
+        {
+          "filename": "wht-circle.png"
+        },
+        {
+          "filename": "wht-diamond Invert.png"
+        },
+        {
+          "filename": "wht-diamond-lv Invert.png"
+        },
+        {
+          "filename": "wht-diamond-lv.png"
+        },
+        {
+          "filename": "wht-diamond.png"
+        },
+        {
+          "filename": "wht-square Invert.png"
+        },
+        {
+          "filename": "wht-square-lv Invert.png"
+        },
+        {
+          "filename": "wht-square-lv.png"
+        },
+        {
+          "filename": "wht-square.png"
+        },
+        {
+          "filename": "wht-star Invert.png"
+        },
+        {
+          "filename": "wht-stars-lv Invert.png"
+        },
+        {
+          "filename": "wht-stars-lv.png"
+        },
+        {
+          "filename": "wht-stars.png"
+        }
+      ]
+    },
+    {
+      "name": "NumPins",
+      "icons": [
+        {
+          "filename": "00 Pin Invert.png"
+        },
+        {
+          "filename": "00 Pin.png"
+        },
+        {
+          "filename": "01 Pin Invert.png"
+        },
+        {
+          "filename": "01 Pin.png"
+        },
+        {
+          "filename": "02 Pin Invert.png"
+        },
+        {
+          "filename": "02 Pin.png"
+        },
+        {
+          "filename": "03 Pin Invert.png"
+        },
+        {
+          "filename": "03 Pin.png"
+        },
+        {
+          "filename": "04 Pin Invert.png"
+        },
+        {
+          "filename": "04 Pin.png"
+        },
+        {
+          "filename": "05  Pin Invert.png"
+        },
+        {
+          "filename": "05 Pin.png"
+        },
+        {
+          "filename": "06 Pin Invert.png"
+        },
+        {
+          "filename": "06 Pin.png"
+        },
+        {
+          "filename": "07 Pin Invert.png"
+        },
+        {
+          "filename": "07 Pin.png"
+        },
+        {
+          "filename": "08 Pin Invert.png"
+        },
+        {
+          "filename": "08 Pin.png"
+        },
+        {
+          "filename": "09 Pin Invert.png"
+        },
+        {
+          "filename": "09 Pin.png"
+        },
+        {
+          "filename": "10 Pin Invert.png"
+        },
+        {
+          "filename": "10 Pin.png"
+        },
+        {
+          "filename": "11 Pin Invert.png"
+        },
+        {
+          "filename": "11 Pin.png"
+        },
+        {
+          "filename": "12 Pin Invert.png"
+        },
+        {
+          "filename": "12 Pin.png"
+        },
+        {
+          "filename": "13 Pin Invert.png"
+        },
+        {
+          "filename": "13 Pin.png"
+        },
+        {
+          "filename": "14 Pin Invert.png"
+        },
+        {
+          "filename": "14 Pin.png"
+        },
+        {
+          "filename": "15 Pin Invert.png"
+        },
+        {
+          "filename": "15 Pin.png"
+        },
+        {
+          "filename": "16 Pin Invert.png"
+        },
+        {
+          "filename": "16 Pin.png"
+        },
+        {
+          "filename": "17 Pin Invert.png"
+        },
+        {
+          "filename": "17 Pin.png"
+        },
+        {
+          "filename": "18 Pin Invert.png"
+        },
+        {
+          "filename": "18 Pin.png"
+        },
+        {
+          "filename": "19 Pin Invert.png"
+        },
+        {
+          "filename": "19 Pin.png"
+        },
+        {
+          "filename": "20 Pin Invert.png"
+        },
+        {
+          "filename": "20 Pin.png"
+        },
+        {
+          "filename": "21 Pin Invert.png"
+        },
+        {
+          "filename": "21 Pin.png"
+        },
+        {
+          "filename": "22 Pin Invert.png"
+        },
+        {
+          "filename": "22 Pin.png"
+        },
+        {
+          "filename": "23 Pin Invert.png"
+        },
+        {
+          "filename": "23 Pin.png"
+        },
+        {
+          "filename": "24 Pin Invert.png"
+        },
+        {
+          "filename": "24 Pin.png"
+        },
+        {
+          "filename": "25 Pin Invert.png"
+        },
+        {
+          "filename": "25 Pin.png"
+        },
+        {
+          "filename": "26 Pin Invert.png"
+        },
+        {
+          "filename": "26 Pin.png"
+        },
+        {
+          "filename": "27 Pin Invert.png"
+        },
+        {
+          "filename": "27 Pin.png"
+        },
+        {
+          "filename": "28 Pin Invert.png"
+        },
+        {
+          "filename": "28 Pin.png"
+        },
+        {
+          "filename": "29 Pin Invert.png"
+        },
+        {
+          "filename": "29 Pin.png"
+        },
+        {
+          "filename": "30 Pin Invert.png"
+        },
+        {
+          "filename": "30 Pin.png"
+        },
+        {
+          "filename": "31 Pin Invert.png"
+        },
+        {
+          "filename": "31 Pin.png"
+        },
+        {
+          "filename": "32 Pin Invert.png"
+        },
+        {
+          "filename": "32 Pin.png"
+        },
+        {
+          "filename": "33 Pin Invert.png"
+        },
+        {
+          "filename": "33 Pin.png"
+        },
+        {
+          "filename": "34 Pin Invert.png"
+        },
+        {
+          "filename": "34 Pin.png"
+        },
+        {
+          "filename": "35 Pin Invert.png"
+        },
+        {
+          "filename": "35 Pin.png"
+        },
+        {
+          "filename": "36 Pin Invert.png"
+        },
+        {
+          "filename": "36 Pin.png"
+        },
+        {
+          "filename": "37 Pin Invert.png"
+        },
+        {
+          "filename": "37 Pin.png"
+        },
+        {
+          "filename": "38 Pin Invert.png"
+        },
+        {
+          "filename": "38 Pin.png"
+        },
+        {
+          "filename": "39 Pin Invert.png"
+        },
+        {
+          "filename": "39 Pin.png"
+        },
+        {
+          "filename": "40 Pin Invert.png"
+        },
+        {
+          "filename": "40 Pin.png"
+        },
+        {
+          "filename": "41 Pin Invert.png"
+        },
+        {
+          "filename": "41 Pin.png"
+        },
+        {
+          "filename": "42 Pin Invert.png"
+        },
+        {
+          "filename": "42 Pin.png"
+        },
+        {
+          "filename": "43 Pin Invert.png"
+        },
+        {
+          "filename": "43 Pin.png"
+        },
+        {
+          "filename": "44 Pin Invert.png"
+        },
+        {
+          "filename": "44 Pin.png"
+        },
+        {
+          "filename": "45 Pin Invert.png"
+        },
+        {
+          "filename": "45 Pin.png"
+        },
+        {
+          "filename": "46 Pin Invert.png"
+        },
+        {
+          "filename": "46 Pin.png"
+        },
+        {
+          "filename": "47 Pin Invert.png"
+        },
+        {
+          "filename": "47 Pin.png"
+        },
+        {
+          "filename": "48 Pin Invert.png"
+        },
+        {
+          "filename": "48 Pin.png"
+        },
+        {
+          "filename": "49 Pin Invert.png"
+        },
+        {
+          "filename": "49 Pin.png"
+        },
+        {
+          "filename": "50 Pin Invert.png"
+        },
+        {
+          "filename": "50 Pin.png"
+        },
+        {
+          "filename": "51 Pin Invert.png"
+        },
+        {
+          "filename": "51 Pin.png"
+        },
+        {
+          "filename": "52 Pin Invert.png"
+        },
+        {
+          "filename": "52 Pin.png"
+        },
+        {
+          "filename": "53 Pin Invert.png"
+        },
+        {
+          "filename": "53 Pin.png"
+        },
+        {
+          "filename": "54 Pin Invert.png"
+        },
+        {
+          "filename": "54 Pin.png"
+        },
+        {
+          "filename": "55 Pin Invert.png"
+        },
+        {
+          "filename": "55 Pin.png"
+        },
+        {
+          "filename": "56 Pin Invert.png"
+        },
+        {
+          "filename": "56 Pin.png"
+        },
+        {
+          "filename": "57 Pin Invert.png"
+        },
+        {
+          "filename": "57 Pin.png"
+        },
+        {
+          "filename": "58 Pin Invert.png"
+        },
+        {
+          "filename": "58 Pin.png"
+        },
+        {
+          "filename": "59 Pin Invert.png"
+        },
+        {
+          "filename": "59 Pin.png"
+        },
+        {
+          "filename": "60 Pin Invert.png"
+        },
+        {
+          "filename": "60 Pin.png"
+        },
+        {
+          "filename": "61 Pin Invert.png"
+        },
+        {
+          "filename": "61 Pin.png"
+        },
+        {
+          "filename": "62 Pin Invert.png"
+        },
+        {
+          "filename": "62 Pin.png"
+        },
+        {
+          "filename": "63 Pin Invert.png"
+        },
+        {
+          "filename": "63 Pin.png"
+        },
+        {
+          "filename": "64 Pin Invert.png"
+        },
+        {
+          "filename": "64 Pin.png"
+        },
+        {
+          "filename": "65 Pin Invert.png"
+        },
+        {
+          "filename": "65 Pin.png"
+        },
+        {
+          "filename": "66 Pin Invert.png"
+        },
+        {
+          "filename": "66 Pin.png"
+        },
+        {
+          "filename": "67 Pin Invert.png"
+        },
+        {
+          "filename": "67 Pin.png"
+        },
+        {
+          "filename": "68 Pin Invert.png"
+        },
+        {
+          "filename": "68 Pin.png"
+        },
+        {
+          "filename": "69 Pin Invert.png"
+        },
+        {
+          "filename": "69 Pin.png"
+        },
+        {
+          "filename": "70 Pin Invert.png"
+        },
+        {
+          "filename": "70 Pin.png"
+        },
+        {
+          "filename": "71 Pin Invert.png"
+        },
+        {
+          "filename": "71 Pin.png"
+        },
+        {
+          "filename": "72 Pin Invert.png"
+        },
+        {
+          "filename": "72 Pin.png"
+        },
+        {
+          "filename": "73 Pin Invert.png"
+        },
+        {
+          "filename": "73 Pin.png"
+        },
+        {
+          "filename": "74 Pin Invert.png"
+        },
+        {
+          "filename": "74 Pin.png"
+        },
+        {
+          "filename": "75 Pin Invert.png"
+        },
+        {
+          "filename": "75 Pin.png"
+        },
+        {
+          "filename": "76 Pin Invert.png"
+        },
+        {
+          "filename": "76 Pin.png"
+        },
+        {
+          "filename": "77 Pin Invert.png"
+        },
+        {
+          "filename": "77 Pin.png"
+        },
+        {
+          "filename": "78 Pin Invert.png"
+        },
+        {
+          "filename": "78 Pin.png"
+        },
+        {
+          "filename": "79 Pin Invert.png"
+        },
+        {
+          "filename": "79 Pin.png"
+        },
+        {
+          "filename": "80 Pin Invert.png"
+        },
+        {
+          "filename": "80 Pin.png"
+        },
+        {
+          "filename": "81 Pin Invert.png"
+        },
+        {
+          "filename": "81 Pin.png"
+        },
+        {
+          "filename": "82 Pin Invert.png"
+        },
+        {
+          "filename": "82 Pin.png"
+        },
+        {
+          "filename": "83 Pin Invert.png"
+        },
+        {
+          "filename": "83 Pin.png"
+        },
+        {
+          "filename": "84 Pin Invert.png"
+        },
+        {
+          "filename": "84 Pin.png"
+        },
+        {
+          "filename": "85 Pin Invert.png"
+        },
+        {
+          "filename": "85 Pin.png"
+        },
+        {
+          "filename": "86 Pin Invert.png"
+        },
+        {
+          "filename": "86 Pin.png"
+        },
+        {
+          "filename": "87 Pin Invert.png"
+        },
+        {
+          "filename": "87 Pin.png"
+        },
+        {
+          "filename": "88 Pin Invert.png"
+        },
+        {
+          "filename": "88 Pin.png"
+        },
+        {
+          "filename": "89 Pin Invert.png"
+        },
+        {
+          "filename": "89 Pin.png"
+        },
+        {
+          "filename": "90 Pin Invert.png"
+        },
+        {
+          "filename": "90 Pin.png"
+        },
+        {
+          "filename": "91 Pin Invert.png"
+        },
+        {
+          "filename": "91 Pin.png"
+        },
+        {
+          "filename": "92 Pin Invert.png"
+        },
+        {
+          "filename": "92 Pin.png"
+        },
+        {
+          "filename": "93 Pin Invert.png"
+        },
+        {
+          "filename": "93 Pin.png"
+        },
+        {
+          "filename": "94 Pin Invert.png"
+        },
+        {
+          "filename": "94 Pin.png"
+        },
+        {
+          "filename": "95 Pin Invert.png"
+        },
+        {
+          "filename": "95 Pin.png"
+        },
+        {
+          "filename": "96 Pin Invert.png"
+        },
+        {
+          "filename": "96 Pin.png"
+        },
+        {
+          "filename": "97 Pin Invert.png"
+        },
+        {
+          "filename": "97 Pin.png"
+        },
+        {
+          "filename": "98 Pin Invert.png"
+        },
+        {
+          "filename": "98 Pin.png"
+        },
+        {
+          "filename": "99 Pin Invert.png"
+        },
+        {
+          "filename": "99 Pin.png"
+        }
+      ]
+    },
+    {
+      "name": "Pointers",
+      "icons": [
+        {
+          "filename": "000.png"
+        },
+        {
+          "filename": "022.png"
+        },
+        {
+          "filename": "030.png"
+        },
+        {
+          "filename": "045.png"
+        },
+        {
+          "filename": "060.png"
+        },
+        {
+          "filename": "067.png"
+        },
+        {
+          "filename": "090.png"
+        },
+        {
+          "filename": "112.png"
+        },
+        {
+          "filename": "120.png"
+        },
+        {
+          "filename": "135.png"
+        },
+        {
+          "filename": "150.png"
+        },
+        {
+          "filename": "157.png"
+        },
+        {
+          "filename": "180.png"
+        },
+        {
+          "filename": "202.png"
+        },
+        {
+          "filename": "210.png"
+        },
+        {
+          "filename": "225.png"
+        },
+        {
+          "filename": "240.png"
+        },
+        {
+          "filename": "247.png"
+        },
+        {
+          "filename": "270.png"
+        },
+        {
+          "filename": "292.png"
+        },
+        {
+          "filename": "300.png"
+        },
+        {
+          "filename": "315.png"
+        },
+        {
+          "filename": "330.png"
+        },
+        {
+          "filename": "337.png"
+        },
+        {
+          "filename": "track-none.png"
+        }
+      ]
+    },
+    {
+      "name": "Shapes",
+      "icons": [
+        {
+          "filename": "airports.png"
+        },
+        {
+          "filename": "arts.png"
+        },
+        {
+          "filename": "bars.png"
+        },
+        {
+          "filename": "bus.png"
+        },
+        {
+          "filename": "cabs.png"
+        },
+        {
+          "filename": "camera.png"
+        },
+        {
+          "filename": "campfire.png"
+        },
+        {
+          "filename": "campground.png"
+        },
+        {
+          "filename": "capital_big.png"
+        },
+        {
+          "filename": "capital_small.png"
+        },
+        {
+          "filename": "caution.png"
+        },
+        {
+          "filename": "church.png"
+        },
+        {
+          "filename": "coffee.png"
+        },
+        {
+          "filename": "convenience.png"
+        },
+        {
+          "filename": "cycling.png"
+        },
+        {
+          "filename": "dining.png"
+        },
+        {
+          "filename": "dollar.png"
+        },
+        {
+          "filename": "donut.png"
+        },
+        {
+          "filename": "earthquake.png"
+        },
+        {
+          "filename": "electronics.png"
+        },
+        {
+          "filename": "euro.png"
+        },
+        {
+          "filename": "falling_rocks.png"
+        },
+        {
+          "filename": "ferry.png"
+        },
+        {
+          "filename": "firedept.png"
+        },
+        {
+          "filename": "fishing.png"
+        },
+        {
+          "filename": "flag.png"
+        },
+        {
+          "filename": "forbidden.png"
+        },
+        {
+          "filename": "gas_stations.png"
+        },
+        {
+          "filename": "golf.png"
+        },
+        {
+          "filename": "grocery.png"
+        },
+        {
+          "filename": "heliport.png"
+        },
+        {
+          "filename": "hiker.png"
+        },
+        {
+          "filename": "homegardenbusiness.png"
+        },
+        {
+          "filename": "horsebackriding.png"
+        },
+        {
+          "filename": "hospitals.png"
+        },
+        {
+          "filename": "info-i.png"
+        },
+        {
+          "filename": "info_circle.png"
+        },
+        {
+          "filename": "lodging.png"
+        },
+        {
+          "filename": "man.png"
+        },
+        {
+          "filename": "marina.png"
+        },
+        {
+          "filename": "mechanic.png"
+        },
+        {
+          "filename": "motorcycling.png"
+        },
+        {
+          "filename": "mountains.png"
+        },
+        {
+          "filename": "movies.png"
+        },
+        {
+          "filename": "open-diamond.png"
+        },
+        {
+          "filename": "parking_lot.png"
+        },
+        {
+          "filename": "parks.png"
+        },
+        {
+          "filename": "partly_cloudy.png"
+        },
+        {
+          "filename": "pharmacy_rx.png"
+        },
+        {
+          "filename": "phone.png"
+        },
+        {
+          "filename": "picnic.png"
+        },
+        {
+          "filename": "placemark_circle.png"
+        },
+        {
+          "filename": "placemark_square.png"
+        },
+        {
+          "filename": "play.png"
+        },
+        {
+          "filename": "poi.png"
+        },
+        {
+          "filename": "police.png"
+        },
+        {
+          "filename": "polygon.png"
+        },
+        {
+          "filename": "post_office.png"
+        },
+        {
+          "filename": "rail.png"
+        },
+        {
+          "filename": "rainy.png"
+        },
+        {
+          "filename": "ranger_station.png"
+        },
+        {
+          "filename": "realestate.png"
+        },
+        {
+          "filename": "sailing.png"
+        },
+        {
+          "filename": "salon.png"
+        },
+        {
+          "filename": "schools.png"
+        },
+        {
+          "filename": "shopping.png"
+        },
+        {
+          "filename": "ski.png"
+        },
+        {
+          "filename": "snack_bar.png"
+        },
+        {
+          "filename": "snowflake_simple.png"
+        },
+        {
+          "filename": "square.png"
+        },
+        {
+          "filename": "star.png"
+        },
+        {
+          "filename": "subway.png"
+        },
+        {
+          "filename": "sunny.png"
+        },
+        {
+          "filename": "swimming.png"
+        },
+        {
+          "filename": "target.png"
+        },
+        {
+          "filename": "thunderstorm.png"
+        },
+        {
+          "filename": "toilets.png"
+        },
+        {
+          "filename": "trail.png"
+        },
+        {
+          "filename": "tram.png"
+        },
+        {
+          "filename": "triangle.png"
+        },
+        {
+          "filename": "truck.png"
+        },
+        {
+          "filename": "volcano.png"
+        },
+        {
+          "filename": "water.png"
+        },
+        {
+          "filename": "webcam.png"
+        },
+        {
+          "filename": "wheel_chair_accessible.png"
+        },
+        {
+          "filename": "woman.png"
+        },
+        {
+          "filename": "yen.png"
+        }
+      ]
+    },
+    {
+      "name": "ShapesClr",
+      "icons": [
+        {
+          "filename": "capital_big_highlight.png"
+        },
+        {
+          "filename": "capital_small_highlight.png"
+        },
+        {
+          "filename": "highway.png"
+        },
+        {
+          "filename": "info.png"
+        },
+        {
+          "filename": "placemark_circle_highlight.png"
+        },
+        {
+          "filename": "placemark_square_highlight.png"
+        },
+        {
+          "filename": "road_shield1.png"
+        },
+        {
+          "filename": "road_shield2.png"
+        },
+        {
+          "filename": "road_shield3.png"
+        },
+        {
+          "filename": "ruler.png"
+        },
+        {
+          "filename": "shaded_dot.png"
+        },
+        {
+          "filename": "terrain.png"
+        }
+      ]
+    },
+    {
+      "name": "SqrLetters",
+      "icons": [
+        {
+          "filename": "A Square Invert.png"
+        },
+        {
+          "filename": "A Square.png"
+        },
+        {
+          "filename": "B Square Invert.png"
+        },
+        {
+          "filename": "B Square.png"
+        },
+        {
+          "filename": "C Square Invert.png"
+        },
+        {
+          "filename": "C Square.png"
+        },
+        {
+          "filename": "D Square Invert.png"
+        },
+        {
+          "filename": "D Square.png"
+        },
+        {
+          "filename": "E Square Invert.png"
+        },
+        {
+          "filename": "E Square.png"
+        },
+        {
+          "filename": "F Square Invert.png"
+        },
+        {
+          "filename": "F Square.png"
+        },
+        {
+          "filename": "G Square Invert.png"
+        },
+        {
+          "filename": "G Square.png"
+        },
+        {
+          "filename": "H Square Invert.png"
+        },
+        {
+          "filename": "H Square.png"
+        },
+        {
+          "filename": "I Square Invert.png"
+        },
+        {
+          "filename": "I Square.png"
+        },
+        {
+          "filename": "J Square Invert.png"
+        },
+        {
+          "filename": "J Square.png"
+        },
+        {
+          "filename": "K Square Invert.png"
+        },
+        {
+          "filename": "K Square.png"
+        },
+        {
+          "filename": "L Square Invert.png"
+        },
+        {
+          "filename": "L Square.png"
+        },
+        {
+          "filename": "M Square Invert.png"
+        },
+        {
+          "filename": "M Square.png"
+        },
+        {
+          "filename": "N Square Invert.png"
+        },
+        {
+          "filename": "N Square.png"
+        },
+        {
+          "filename": "O Square Invert.png"
+        },
+        {
+          "filename": "O Square.png"
+        },
+        {
+          "filename": "P Square Invert.png"
+        },
+        {
+          "filename": "P Square.png"
+        },
+        {
+          "filename": "Q Square Invert.png"
+        },
+        {
+          "filename": "Q Square.png"
+        },
+        {
+          "filename": "R Square Invert.png"
+        },
+        {
+          "filename": "R Square.png"
+        },
+        {
+          "filename": "S Square Invert.png"
+        },
+        {
+          "filename": "S Square.png"
+        },
+        {
+          "filename": "T Square Invert.png"
+        },
+        {
+          "filename": "T Square.png"
+        },
+        {
+          "filename": "U Square Invert.png"
+        },
+        {
+          "filename": "U Square.png"
+        },
+        {
+          "filename": "V Square Invert.png"
+        },
+        {
+          "filename": "V Square.png"
+        },
+        {
+          "filename": "W Square Invert.png"
+        },
+        {
+          "filename": "W Square.png"
+        },
+        {
+          "filename": "X Square Invert.png"
+        },
+        {
+          "filename": "X Square.png"
+        },
+        {
+          "filename": "Y Square Invert.png"
+        },
+        {
+          "filename": "Y Square.png"
+        },
+        {
+          "filename": "Z Square Invert.png"
+        },
+        {
+          "filename": "Z Square.png"
+        }
+      ]
+    },
+    {
+      "name": "SqrNum",
+      "icons": [
+        {
+          "filename": "00 Square Invert.png"
+        },
+        {
+          "filename": "00 Square.png"
+        },
+        {
+          "filename": "01 Square Invert.png"
+        },
+        {
+          "filename": "01 Square.png"
+        },
+        {
+          "filename": "02 Square Invert.png"
+        },
+        {
+          "filename": "02 Square.png"
+        },
+        {
+          "filename": "03 Square Invert.png"
+        },
+        {
+          "filename": "03 Square.png"
+        },
+        {
+          "filename": "04 Square Invert.png"
+        },
+        {
+          "filename": "04 Square.png"
+        },
+        {
+          "filename": "05 Square Invert.png"
+        },
+        {
+          "filename": "05 Square.png"
+        },
+        {
+          "filename": "06 Square Invert.png"
+        },
+        {
+          "filename": "06 Square.png"
+        },
+        {
+          "filename": "07 Square Invert.png"
+        },
+        {
+          "filename": "07 Square.png"
+        },
+        {
+          "filename": "08 Square Invert.png"
+        },
+        {
+          "filename": "08 Square.png"
+        },
+        {
+          "filename": "09 Square Invert.png"
+        },
+        {
+          "filename": "09 Square.png"
+        },
+        {
+          "filename": "10 Square Invert.png"
+        },
+        {
+          "filename": "10 Square.png"
+        },
+        {
+          "filename": "11 Square Invert.png"
+        },
+        {
+          "filename": "11 Square.png"
+        },
+        {
+          "filename": "12 Square Invert.png"
+        },
+        {
+          "filename": "12 Square.png"
+        },
+        {
+          "filename": "13 Square Invert.png"
+        },
+        {
+          "filename": "13 Square.png"
+        },
+        {
+          "filename": "14 Square Invert.png"
+        },
+        {
+          "filename": "14 Square.png"
+        },
+        {
+          "filename": "15 Square Invert.png"
+        },
+        {
+          "filename": "15 Square.png"
+        },
+        {
+          "filename": "16 Square Invert.png"
+        },
+        {
+          "filename": "16 Square.png"
+        },
+        {
+          "filename": "17 Square Invert.png"
+        },
+        {
+          "filename": "17 Square.png"
+        },
+        {
+          "filename": "18 Square Invert.png"
+        },
+        {
+          "filename": "18 Square.png"
+        },
+        {
+          "filename": "19 Square Invert.png"
+        },
+        {
+          "filename": "19 Square.png"
+        },
+        {
+          "filename": "20 Square Invert.png"
+        },
+        {
+          "filename": "20 Square.png"
+        },
+        {
+          "filename": "21 Square Invert.png"
+        },
+        {
+          "filename": "21 Square.png"
+        },
+        {
+          "filename": "22 Square Invert.png"
+        },
+        {
+          "filename": "22 Square.png"
+        },
+        {
+          "filename": "23 Square Invert.png"
+        },
+        {
+          "filename": "23 Square.png"
+        },
+        {
+          "filename": "24 Square Invert.png"
+        },
+        {
+          "filename": "24 Square.png"
+        },
+        {
+          "filename": "25 Square Invert.png"
+        },
+        {
+          "filename": "25 Square.png"
+        },
+        {
+          "filename": "26 Square Invert.png"
+        },
+        {
+          "filename": "26 Square.png"
+        },
+        {
+          "filename": "27 Square Invert.png"
+        },
+        {
+          "filename": "27 Square.png"
+        },
+        {
+          "filename": "28 Square Invert.png"
+        },
+        {
+          "filename": "28 Square.png"
+        },
+        {
+          "filename": "29 Square Invert.png"
+        },
+        {
+          "filename": "29 Square.png"
+        },
+        {
+          "filename": "30 Square Invert.png"
+        },
+        {
+          "filename": "30 Square.png"
+        },
+        {
+          "filename": "31 Square Invert.png"
+        },
+        {
+          "filename": "31 Square.png"
+        },
+        {
+          "filename": "32 Square Invert.png"
+        },
+        {
+          "filename": "32 Square.png"
+        },
+        {
+          "filename": "33 Square Invert.png"
+        },
+        {
+          "filename": "33 Square.png"
+        },
+        {
+          "filename": "34 Square Invert.png"
+        },
+        {
+          "filename": "34 Square.png"
+        },
+        {
+          "filename": "35 Square Invert.png"
+        },
+        {
+          "filename": "35 Square.png"
+        },
+        {
+          "filename": "36 Square Invert.png"
+        },
+        {
+          "filename": "36 Square.png"
+        },
+        {
+          "filename": "37 Square Invert.png"
+        },
+        {
+          "filename": "37 Square.png"
+        },
+        {
+          "filename": "38 Square Invert.png"
+        },
+        {
+          "filename": "38 Square.png"
+        },
+        {
+          "filename": "39 Square Invert.png"
+        },
+        {
+          "filename": "39 Square.png"
+        },
+        {
+          "filename": "40 Square Invert.png"
+        },
+        {
+          "filename": "40 Square.png"
+        },
+        {
+          "filename": "41 Square Invert.png"
+        },
+        {
+          "filename": "41 Square.png"
+        },
+        {
+          "filename": "42 Square Invert.png"
+        },
+        {
+          "filename": "42 Square.png"
+        },
+        {
+          "filename": "43 Square Invert.png"
+        },
+        {
+          "filename": "43 Square.png"
+        },
+        {
+          "filename": "44 Square Invert.png"
+        },
+        {
+          "filename": "44 Square.png"
+        },
+        {
+          "filename": "45 Square Invert.png"
+        },
+        {
+          "filename": "45 Square.png"
+        },
+        {
+          "filename": "46 Square Invert.png"
+        },
+        {
+          "filename": "46 Square.png"
+        },
+        {
+          "filename": "47 Square Invert.png"
+        },
+        {
+          "filename": "47 Square.png"
+        },
+        {
+          "filename": "48 Square Invert.png"
+        },
+        {
+          "filename": "48 Square.png"
+        },
+        {
+          "filename": "49 Square Invert.png"
+        },
+        {
+          "filename": "49 Square.png"
+        },
+        {
+          "filename": "50 Square Invert.png"
+        },
+        {
+          "filename": "50 Square.png"
+        },
+        {
+          "filename": "51 Square Invert.png"
+        },
+        {
+          "filename": "51 Square.png"
+        },
+        {
+          "filename": "52 Square Invert.png"
+        },
+        {
+          "filename": "52 Square.png"
+        },
+        {
+          "filename": "53 Square Invert.png"
+        },
+        {
+          "filename": "53 Square.png"
+        },
+        {
+          "filename": "54 Square Invert.png"
+        },
+        {
+          "filename": "54 Square.png"
+        },
+        {
+          "filename": "55 Square Invert.png"
+        },
+        {
+          "filename": "55 Square.png"
+        },
+        {
+          "filename": "56 Square Invert.png"
+        },
+        {
+          "filename": "56 Square.png"
+        },
+        {
+          "filename": "57 Square Invert.png"
+        },
+        {
+          "filename": "57 Square.png"
+        },
+        {
+          "filename": "58 Square Invert.png"
+        },
+        {
+          "filename": "58 Square.png"
+        },
+        {
+          "filename": "59 Square Invert.png"
+        },
+        {
+          "filename": "59 Square.png"
+        },
+        {
+          "filename": "60 Square Invert.png"
+        },
+        {
+          "filename": "60 Square.png"
+        },
+        {
+          "filename": "61 Square Invert.png"
+        },
+        {
+          "filename": "61 Square.png"
+        },
+        {
+          "filename": "62 Square Invert.png"
+        },
+        {
+          "filename": "62 Square.png"
+        },
+        {
+          "filename": "63 Square Invert.png"
+        },
+        {
+          "filename": "63 Square.png"
+        },
+        {
+          "filename": "64 Square Invert.png"
+        },
+        {
+          "filename": "64 Square.png"
+        },
+        {
+          "filename": "65 Square Invert.png"
+        },
+        {
+          "filename": "65 Square.png"
+        },
+        {
+          "filename": "66 Square Invert.png"
+        },
+        {
+          "filename": "66 Square.png"
+        },
+        {
+          "filename": "67 Square Invert.png"
+        },
+        {
+          "filename": "67 Square.png"
+        },
+        {
+          "filename": "68 Square Invert.png"
+        },
+        {
+          "filename": "68 Square.png"
+        },
+        {
+          "filename": "69 Square Invert.png"
+        },
+        {
+          "filename": "69 Square.png"
+        },
+        {
+          "filename": "70 Square Invert.png"
+        },
+        {
+          "filename": "70 Square.png"
+        },
+        {
+          "filename": "71 Square Invert.png"
+        },
+        {
+          "filename": "71 Square.png"
+        },
+        {
+          "filename": "72 Square Invert.png"
+        },
+        {
+          "filename": "72 Square.png"
+        },
+        {
+          "filename": "73 Square Invert.png"
+        },
+        {
+          "filename": "73 Square.png"
+        },
+        {
+          "filename": "74 Square Invert.png"
+        },
+        {
+          "filename": "74 Square.png"
+        },
+        {
+          "filename": "75 Square Invert.png"
+        },
+        {
+          "filename": "75 Square.png"
+        },
+        {
+          "filename": "76 Square Invert.png"
+        },
+        {
+          "filename": "76 Square.png"
+        },
+        {
+          "filename": "77 Square Invert.png"
+        },
+        {
+          "filename": "77 Square.png"
+        },
+        {
+          "filename": "78 Square Invert.png"
+        },
+        {
+          "filename": "78 Square.png"
+        },
+        {
+          "filename": "79 Square Invert.png"
+        },
+        {
+          "filename": "79 Square.png"
+        },
+        {
+          "filename": "80 Square Invert.png"
+        },
+        {
+          "filename": "80 Square.png"
+        },
+        {
+          "filename": "81 Square Invert.png"
+        },
+        {
+          "filename": "81 Square.png"
+        },
+        {
+          "filename": "82 Square Invert.png"
+        },
+        {
+          "filename": "82 Square.png"
+        },
+        {
+          "filename": "83 Square Invert.png"
+        },
+        {
+          "filename": "83 Square.png"
+        },
+        {
+          "filename": "84 Square Invert.png"
+        },
+        {
+          "filename": "84 Square.png"
+        },
+        {
+          "filename": "85 Square Invert.png"
+        },
+        {
+          "filename": "85 Square.png"
+        },
+        {
+          "filename": "86 Square Invert.png"
+        },
+        {
+          "filename": "86 Square.png"
+        },
+        {
+          "filename": "87 Square Invert.png"
+        },
+        {
+          "filename": "87 Square.png"
+        },
+        {
+          "filename": "88 Square Invert.png"
+        },
+        {
+          "filename": "88 Square.png"
+        },
+        {
+          "filename": "89 Square Invert.png"
+        },
+        {
+          "filename": "89 Square.png"
+        },
+        {
+          "filename": "90 Square Invert.png"
+        },
+        {
+          "filename": "90 Square.png"
+        },
+        {
+          "filename": "91 Square Invert.png"
+        },
+        {
+          "filename": "91 Square.png"
+        },
+        {
+          "filename": "92 Square Invert.png"
+        },
+        {
+          "filename": "92 Square.png"
+        },
+        {
+          "filename": "93 Square Invert.png"
+        },
+        {
+          "filename": "93 Square.png"
+        },
+        {
+          "filename": "94 Square Invert.png"
+        },
+        {
+          "filename": "94 Square.png"
+        },
+        {
+          "filename": "95 Square Invert.png"
+        },
+        {
+          "filename": "95 Square.png"
+        },
+        {
+          "filename": "96 Square Invert.png"
+        },
+        {
+          "filename": "96 Square.png"
+        },
+        {
+          "filename": "97 Square Invert.png"
+        },
+        {
+          "filename": "97 Square.png"
+        },
+        {
+          "filename": "98 Square Invert.png"
+        },
+        {
+          "filename": "98 Square.png"
+        },
+        {
+          "filename": "99 Square Invert.png"
+        },
+        {
+          "filename": "99 Square.png"
+        },
+        {
+          "filename": "Blank Square.png"
+        }
+      ]
+    },
+    {
+      "name": "Tacks",
+      "icons": [
+        {
+          "filename": "1wht-pushpin.png"
+        },
+        {
+          "filename": "blue-pushpin.png"
+        },
+        {
+          "filename": "grn-pushpin.png"
+        },
+        {
+          "filename": "ltblu-pushpin.png"
+        },
+        {
+          "filename": "pink-pushpin.png"
+        },
+        {
+          "filename": "purple-pushpin.png"
+        },
+        {
+          "filename": "red-pushpin.png"
+        },
+        {
+          "filename": "ylw-pushpin.png"
+        }
+      ]
+    }
+  ]
+}

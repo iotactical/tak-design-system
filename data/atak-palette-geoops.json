@@ -1,0 +1,263 @@
+{
+  "name": "GeoOps",
+  "uid": "83198b4872a8c34eb9c549da8a4de5a28f07821185b39a2277948f66c24ac17a",
+  "iconCount": 68,
+  "groups": [
+    {
+      "name": "WildFire",
+      "icons": [
+        {
+          "filename": "Aerial Hazard.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Aerial Ignition.png"
+        },
+        {
+          "filename": "Airstrip or Airport.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Branch Break.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Bridge.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Camp Name.png"
+        },
+        {
+          "filename": "Camp.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Check Point.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Clean Up Area.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Closure.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Culvert.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Dip Site.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Division Break.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Dozer Push.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Drop Point.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Fence Cut or Damaged.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Fire Location.png"
+        },
+        {
+          "filename": "Fire Origin.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Fire Station.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "First Aid Station.png"
+        },
+        {
+          "filename": "Gate.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Hazard Tree.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Hazard.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Heat source inside heat line.png"
+        },
+        {
+          "filename": "Heat source outside heat line.png"
+        },
+        {
+          "filename": "Helibase.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Helispot.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Hot Spot or Spot Fire.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Hotspot.png"
+        },
+        {
+          "filename": "IR Isolated Heat Source.png"
+        },
+        {
+          "filename": "Incident Base.png"
+        },
+        {
+          "filename": "Incident Command Post.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Internet Access.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Landing or Log Deck.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Landmark.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Lookout.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "MediVac Site.png"
+        },
+        {
+          "filename": "Medical.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Mobile Retardant Base.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Mobile Weather Station.png"
+        },
+        {
+          "filename": "Mobile Weather Unit.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Other.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Pump.png"
+        },
+        {
+          "filename": "Ranger Station.png"
+        },
+        {
+          "filename": "Repair Point.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Repeater Mobile Relay.png"
+        },
+        {
+          "filename": "Repeater.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Resource Location.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Restricted Water Source.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Retardant Mud Pit.png"
+        },
+        {
+          "filename": "Retardant Pickup.png"
+        },
+        {
+          "filename": "Retardant in Avoidance Area.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Road Repair.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Safety Zone.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Segment Break.png"
+        },
+        {
+          "filename": "Sling Site.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Spot Fire Date Time.png"
+        },
+        {
+          "filename": "Staging Area.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Stream Crossing.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Structure Wrap.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Telephone.png"
+        },
+        {
+          "filename": "Unimproved Landing Area.png"
+        },
+        {
+          "filename": "Unimproved Landing Zone.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Value at Risk.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Water Development or Draft Site.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Water Source.png",
+          "type2525b": "a-n-G"
+        },
+        {
+          "filename": "Wind Speed Direction.png"
+        },
+        {
+          "filename": "Zone Break.png",
+          "type2525b": "a-n-G"
+        }
+      ]
+    }
+  ]
+}

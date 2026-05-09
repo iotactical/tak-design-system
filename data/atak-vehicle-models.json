@@ -1,0 +1,397 @@
+{
+  "categories": [
+    {
+      "name": "aircraft",
+      "models": [
+        {
+          "name": "a10",
+          "file": "aircraft/a10.zip"
+        },
+        {
+          "name": "ah-6",
+          "file": "aircraft/ah-6.zip"
+        },
+        {
+          "name": "ah-64",
+          "file": "aircraft/ah-64.zip"
+        },
+        {
+          "name": "ah1",
+          "file": "aircraft/ah1.zip"
+        },
+        {
+          "name": "as-350",
+          "file": "aircraft/as-350.zip"
+        },
+        {
+          "name": "atr-42",
+          "file": "aircraft/atr-42.zip"
+        },
+        {
+          "name": "av-8b",
+          "file": "aircraft/av-8b.zip"
+        },
+        {
+          "name": "b-350",
+          "file": "aircraft/b-350.zip"
+        },
+        {
+          "name": "b-707",
+          "file": "aircraft/b-707.zip"
+        },
+        {
+          "name": "b-727",
+          "file": "aircraft/b-727.zip"
+        },
+        {
+          "name": "b-737",
+          "file": "aircraft/b-737.zip"
+        },
+        {
+          "name": "b-747",
+          "file": "aircraft/b-747.zip"
+        },
+        {
+          "name": "b-757",
+          "file": "aircraft/b-757.zip"
+        },
+        {
+          "name": "b52",
+          "file": "aircraft/b52.zip"
+        },
+        {
+          "name": "c-130",
+          "file": "aircraft/c-130.zip"
+        },
+        {
+          "name": "c-141",
+          "file": "aircraft/c-141.zip"
+        },
+        {
+          "name": "c-145",
+          "file": "aircraft/c-145.zip"
+        },
+        {
+          "name": "c-146",
+          "file": "aircraft/c-146.zip"
+        },
+        {
+          "name": "c-17",
+          "file": "aircraft/c-17.zip"
+        },
+        {
+          "name": "c-20",
+          "file": "aircraft/c-20.zip"
+        },
+        {
+          "name": "c-208",
+          "file": "aircraft/c-208.zip"
+        },
+        {
+          "name": "c-27",
+          "file": "aircraft/c-27.zip"
+        },
+        {
+          "name": "c-32",
+          "file": "aircraft/c-32.zip"
+        },
+        {
+          "name": "c-337",
+          "file": "aircraft/c-337.zip"
+        },
+        {
+          "name": "c-40",
+          "file": "aircraft/c-40.zip"
+        },
+        {
+          "name": "c-5",
+          "file": "aircraft/c-5.zip"
+        },
+        {
+          "name": "casa_212",
+          "file": "aircraft/casa_212.zip"
+        },
+        {
+          "name": "casa_235",
+          "file": "aircraft/casa_235.zip"
+        },
+        {
+          "name": "ch-46e",
+          "file": "aircraft/ch-46e.zip"
+        },
+        {
+          "name": "ch-47",
+          "file": "aircraft/ch-47.zip"
+        },
+        {
+          "name": "cv-22",
+          "file": "aircraft/cv-22.zip"
+        },
+        {
+          "name": "dc-10",
+          "file": "aircraft/dc-10.zip"
+        },
+        {
+          "name": "dhc-6",
+          "file": "aircraft/dhc-6.zip"
+        },
+        {
+          "name": "ea-6b",
+          "file": "aircraft/ea-6b.zip"
+        },
+        {
+          "name": "emb-314",
+          "file": "aircraft/emb-314.zip"
+        },
+        {
+          "name": "ep-3",
+          "file": "aircraft/ep-3.zip"
+        },
+        {
+          "name": "f-117",
+          "file": "aircraft/f-117.zip"
+        },
+        {
+          "name": "f-15",
+          "file": "aircraft/f-15.zip"
+        },
+        {
+          "name": "f-16",
+          "file": "aircraft/f-16.zip"
+        },
+        {
+          "name": "f-18",
+          "file": "aircraft/f-18.zip"
+        },
+        {
+          "name": "f-22",
+          "file": "aircraft/f-22.zip"
+        },
+        {
+          "name": "f-35",
+          "file": "aircraft/f-35.zip"
+        },
+        {
+          "name": "f-4",
+          "file": "aircraft/f-4.zip"
+        },
+        {
+          "name": "hc-144a",
+          "file": "aircraft/hc-144a.zip"
+        },
+        {
+          "name": "hc-27j",
+          "file": "aircraft/hc-27j.zip"
+        },
+        {
+          "name": "hh-53",
+          "file": "aircraft/hh-53.zip"
+        },
+        {
+          "name": "hh-60",
+          "file": "aircraft/hh-60.zip"
+        },
+        {
+          "name": "kc-10",
+          "file": "aircraft/kc-10.zip"
+        },
+        {
+          "name": "kc-130",
+          "file": "aircraft/kc-130.zip"
+        },
+        {
+          "name": "kc-135",
+          "file": "aircraft/kc-135.zip"
+        },
+        {
+          "name": "kc-46",
+          "file": "aircraft/kc-46.zip"
+        },
+        {
+          "name": "l-100",
+          "file": "aircraft/l-100.zip"
+        },
+        {
+          "name": "l-1011",
+          "file": "aircraft/l-1011.zip"
+        },
+        {
+          "name": "m-28",
+          "file": "aircraft/m-28.zip"
+        },
+        {
+          "name": "mh-6",
+          "file": "aircraft/mh-6.zip"
+        },
+        {
+          "name": "mh-65",
+          "file": "aircraft/mh-65.zip"
+        },
+        {
+          "name": "mq-1",
+          "file": "aircraft/mq-1.zip"
+        },
+        {
+          "name": "mq-9",
+          "file": "aircraft/mq-9.zip"
+        },
+        {
+          "name": "ov-10",
+          "file": "aircraft/ov-10.zip"
+        },
+        {
+          "name": "p-3",
+          "file": "aircraft/p-3.zip"
+        },
+        {
+          "name": "pc-12",
+          "file": "aircraft/pc-12.zip"
+        },
+        {
+          "name": "rq-21",
+          "file": "aircraft/rq-21.zip"
+        },
+        {
+          "name": "sh-3d",
+          "file": "aircraft/sh-3d.zip"
+        },
+        {
+          "name": "uh-1",
+          "file": "aircraft/uh-1.zip"
+        },
+        {
+          "name": "uh-60",
+          "file": "aircraft/uh-60.zip"
+        },
+        {
+          "name": "vc-25",
+          "file": "aircraft/vc-25.zip"
+        },
+        {
+          "name": "vc-32",
+          "file": "aircraft/vc-32.zip"
+        },
+        {
+          "name": "vh-3d",
+          "file": "aircraft/vh-3d.zip"
+        },
+        {
+          "name": "vh-60n",
+          "file": "aircraft/vh-60n.zip"
+        }
+      ]
+    },
+    {
+      "name": "automobiles",
+      "models": [
+        {
+          "name": "15_Pax_Van",
+          "file": "automobiles/15_Pax_Van.zip"
+        },
+        {
+          "name": "ambulance",
+          "file": "automobiles/ambulance.zip"
+        },
+        {
+          "name": "coach_bus",
+          "file": "automobiles/coach_bus.zip"
+        },
+        {
+          "name": "dagor",
+          "file": "automobiles/dagor.zip"
+        },
+        {
+          "name": "firetruck",
+          "file": "automobiles/firetruck.zip"
+        },
+        {
+          "name": "hmmwv",
+          "file": "automobiles/hmmwv.zip"
+        },
+        {
+          "name": "limousine",
+          "file": "automobiles/limousine.zip"
+        },
+        {
+          "name": "m113",
+          "file": "automobiles/m113.zip"
+        },
+        {
+          "name": "m1a2",
+          "file": "automobiles/m1a2.zip"
+        },
+        {
+          "name": "m939",
+          "file": "automobiles/m939.zip"
+        },
+        {
+          "name": "ntv",
+          "file": "automobiles/ntv.zip"
+        },
+        {
+          "name": "r-11",
+          "file": "automobiles/r-11.zip"
+        },
+        {
+          "name": "razr",
+          "file": "automobiles/razr.zip"
+        },
+        {
+          "name": "schoolbus",
+          "file": "automobiles/schoolbus.zip"
+        },
+        {
+          "name": "squadcar",
+          "file": "automobiles/squadcar.zip"
+        },
+        {
+          "name": "stryker",
+          "file": "automobiles/stryker.zip"
+        },
+        {
+          "name": "suburban",
+          "file": "automobiles/suburban.zip"
+        },
+        {
+          "name": "truck",
+          "file": "automobiles/truck.zip"
+        }
+      ]
+    },
+    {
+      "name": "maritime",
+      "models": [
+        {
+          "name": "RIB",
+          "file": "maritime/RIB.zip"
+        },
+        {
+          "name": "cca",
+          "file": "maritime/cca.zip"
+        },
+        {
+          "name": "cch",
+          "file": "maritime/cch.zip"
+        },
+        {
+          "name": "ccm",
+          "file": "maritime/ccm.zip"
+        },
+        {
+          "name": "crrc",
+          "file": "maritime/crrc.zip"
+        }
+      ]
+    },
+    {
+      "name": "other",
+      "models": [
+        {
+          "name": "mfb",
+          "file": "other/mfb.zip"
+        }
+      ]
+    }
+  ],
+  "totalCount": 93
+}

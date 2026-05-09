@@ -54,6 +54,60 @@
     "passed": true
   },
   {
+    "req_id": "REQ-APK-010",
+    "test_name": "REQ-APK-010: SQLite palette manifests exist for all 6 iconsets",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-APK-010",
+    "test_name": "REQ-APK-010: Default palette has 800+ icons",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-APK-010",
+    "test_name": "REQ-APK-010: Generic palette has 600+ icons",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-APK-010",
+    "test_name": "REQ-APK-010: OSM palette has 300+ icons",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-APK-010",
+    "test_name": "REQ-APK-010: Google palette has 90+ icons",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-APK-010",
+    "test_name": "REQ-APK-010: FEMA palette has 40+ icons",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-APK-010",
+    "test_name": "REQ-APK-010: GeoOps palette exists and has valid structure",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-APK-010",
+    "test_name": "REQ-APK-010: All palette manifests have name, groups, and icons arrays",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-APK-011",
+    "test_name": "REQ-APK-011: ATAK vehicle models palette",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
     "req_id": "REQ-AST-002",
     "test_name": "REQ-AST-002: COT icon filter mapping",
     "test_file": "tests/assets/test_cot.mjs",
@@ -273,6 +327,36 @@
     "req_id": "REQ-RCT-007",
     "test_name": "REQ-RCT-007: React library build",
     "test_file": "tests/react/test_react_build.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-SITE-002",
+    "test_name": "REQ-SITE-002: Component gallery page",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-SITE-003",
+    "test_name": "REQ-SITE-003: Icon and drawable browser",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-SITE-005",
+    "test_name": "REQ-SITE-005: Palettes page",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-SITE-004",
+    "test_name": "REQ-SITE-004: Platform output reference pages",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-SITE-001",
+    "test_name": "REQ-SITE-001: Site build",
+    "test_file": "unknown",
     "passed": true
   },
   {

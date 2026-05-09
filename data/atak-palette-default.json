@@ -1,0 +1,3343 @@
+{
+  "name": "Default",
+  "uid": "34ae1613-9645-4222-a9d2-e5f243dea2865",
+  "iconCount": 821,
+  "groups": [
+    {
+      "name": "Animals",
+      "icons": [
+        {
+          "filename": "ant.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "antelope.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "bat.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "bear.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "bear2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "beehive.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "bird.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "bull.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "bull2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "butterfly.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "camel.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "camel2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "caribou.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "chicken.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "cow.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "cow2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "cow3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "cow4.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "cow5.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "croc.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "deerlarge.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "dolphin.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "donkey.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "donkey2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "donkey3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "duck.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "duck2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "duck3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "eagle.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "elephant.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "elephant2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "fly.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "fox.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "geese.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "giraffe.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "goat.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "goose.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "goose2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "gorilla.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "grizzly.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "hen.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "honeybadger.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "horse.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "kangaroo.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "lion.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "lioness.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "lizard.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "llama.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "mosquito.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "owl.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "panther.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "pawprint.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "pig.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "pig2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "pig3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "pigeon.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "rabbit.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "rabbit1.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "rhino.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "rhino2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "rooster.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "scorpion.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "sheep.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "sheep1.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "spider.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "squirell.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "squirell1.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "starfish.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "swallow.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "swan.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "tick.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "turkey1.png"
+        },
+        {
+          "filename": "turtle.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "turtle2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "whale.png",
+          "type2525b": "a-u-G"
+        }
+      ]
+    },
+    {
+      "name": "Buildings",
+      "icons": [
+        {
+          "filename": "Mosque.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "Orthodox.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "apartments.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "apartments2.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "bank.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "brick.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "buddhistTemple.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "buildings.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "buildings2.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "buildings3.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "buildings4.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "buildings5.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "capitol.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "castle.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "castle1.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "cathedral.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "cathedral2.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "chapel.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "church1.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "church2.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "city.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "cityline.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "condo.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "controltower.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "crane.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "embassy.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "factory.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "factory2.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "factory3.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "farm.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "farm2.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "ferriswheel.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "firehouse.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "firehydrant.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "fountain.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "garage.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "government.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "highrises.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "hospital.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "hotel.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "house.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "house2.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "house3.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "house4.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "house5.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "house6.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "house7.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "lighthouse.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "mission.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "monument.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "museum.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "ngo.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "office.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "parkingmeter.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "pyramid.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "pyramid2.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "rowhouse.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "shops.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "skyscraper.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "tentlarge.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "tower.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "tower2.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "townhouse.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "un.png",
+          "type2525b": "a-u-G-I"
+        },
+        {
+          "filename": "university.png",
+          "type2525b": "a-u-G-I"
+        }
+      ]
+    },
+    {
+      "name": "Flags",
+      "icons": [
+        {
+          "filename": "Abkhazia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Afghanistan.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Aland.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Albania.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Algeria.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "American-Samoa.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Andorra.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Angola.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Anguilla.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Antarctica.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Antigua-and-Barbuda.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Argentina.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Armenia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Aruba.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Australia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Austria.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Azerbaijan.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Bahamas.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Bahrain.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Bangladesh.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Barbados.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Basque-Country.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Belarus.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Belgium.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Belize.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Benin.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Bermuda.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Bhutan.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Bolivia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Bosnia-and-Herzegovina.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Botswana.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Brazil.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "British-Antarctic-Territory.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "British-Virgin-Islands.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Brunei.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Bulgaria.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Burkina-Faso.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Burundi.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Cambodia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Cameroon.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Canada.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Canary-Islands.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Cape-Verde.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Cayman-Islands.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Central-African-Republic.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Chad.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Chile.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "China.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Christmas-Island.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Cocos-Keeling-Islands.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Colombia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Commonwealth.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Comoros.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Cook-Islands.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Costa-Rica.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Cote-dIvoire.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Croatia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Cuba.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Curacao.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Cyprus.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Czech-Republic.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Democratic-Republic-of-the-Congo.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Denmark.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Djibouti.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Dominica.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Dominican-Republic.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "East-Timor.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Ecuador.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Egypt.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "El-Salvador.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "England.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Equatorial-Guinea.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Eritrea.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Estonia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Ethiopia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "European-Union.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Falkland-Islands.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Faroes.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Fiji.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Finland.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "France.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "French-Polynesia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "French-Southern-Territories.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Gabon.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Gambia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Georgia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Germany.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Ghana.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Gibraltar.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "GoSquared.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Greece.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Greenland.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Grenada.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Guam.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Guatemala.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Guernsey.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Guinea-Bissau.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Guinea.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Guyana.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Haiti.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Honduras.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Hong-Kong.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Hungary.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Iceland.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "India.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Indonesia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Iran.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Iraq.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Ireland.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Isle-of-Man.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Israel.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Italy.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Jamaica.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Japan.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Jersey.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Jordan.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Kazakhstan.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Kenya.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Kiribati.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Kosovo.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Kuwait.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Kyrgyzstan.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Laos.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Latvia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Lebanon.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Lesotho.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Liberia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Libya.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Liechtenstein.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Lithuania.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Luxembourg.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Macau.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Macedonia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Madagascar.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Malawi.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Malaysia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Maldives.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Mali.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Malta.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Mars.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Marshall-Islands.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Martinique.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Mauritania.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Mauritius.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Mayotte.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Mexico.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Micronesia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Moldova.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Monaco.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Mongolia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Montenegro.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Montserrat.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Morocco.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Mozambique.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Myanmar.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "NATO.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Nagorno-Karabakh.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Namibia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Nauru.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Nepal.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Netherlands-Antilles.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Netherlands.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "New-Caledonia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "New-Zealand.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Nicaragua.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Niger.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Nigeria.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Niue.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Norfolk-Island.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "North-Korea.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Northern-Cyprus.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Northern-Mariana-Islands.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Norway.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Olympics.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Oman.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Pakistan.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Palau.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Palestine.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Panama.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Papua-New-Guinea.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Paraguay.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Peru.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Philippines.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Pitcairn-Islands.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Poland.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Portugal.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Puerto-Rico.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Qatar.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Red-Cross.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Republic-of-the-Congo.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Romania.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Russia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Rwanda.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Saint-Barthelemy.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Saint-Helena.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Saint-Kitts-and-Nevis.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Saint-Lucia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Saint-Martin.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Saint-Vincent-and-the-Grenadines.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Samoa.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "San-Marino.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Sao-Tome-and-Principe.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Saudi-Arabia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Scotland.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Senegal.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Serbia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Seychelles.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Sierra-Leone.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Singapore.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Slovakia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Slovenia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Solomon-Islands.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Somalia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Somaliland.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "South-Africa.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "South-Georgia-and-the-South-Sandwich-Islands.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "South-Korea.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "South-Ossetia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "South-Sudan.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Spain.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Sri-Lanka.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Sudan.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Suriname.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Swaziland.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Sweden.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Switzerland.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Syria.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Taiwan.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Tajikistan.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Tanzania.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Thailand.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Togo.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Tokelau.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Tonga.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Trinidad-and-Tobago.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Tunisia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Turkmenistan.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Turks-and-Caicos-Islands.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Tuvalu.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "US-Virgin-Islands.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Uganda.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Ukraine.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "United-Arab-Emirates.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "United-Kingdom.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "United-Nations.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "United-States.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Unknown.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Uruguay.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Uzbekistan.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Vanuatu.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Vatican-City.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Venezuela.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Vietnam.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Wales.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Wallis-And-Futuna.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Western-Sahara.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Yemen.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Zambia.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Zimbabwe.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "turkey.png",
+          "type2525b": "a-u-G"
+        }
+      ]
+    },
+    {
+      "name": "Hiking",
+      "icons": [
+        {
+          "filename": "backpack.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "boot.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "cabin.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "camp.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "camp2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "camp3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "campsite.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "climbing.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "compass.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "hatchet.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "hatchets.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "hiker.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "hiking.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "map.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "mountain.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "mountain2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "mountain3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "potablewater.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "star.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "summit.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "tent.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "tent2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "tent3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "tent4.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "water.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "wood.png",
+          "type2525b": "a-u-G"
+        }
+      ]
+    },
+    {
+      "name": "Hunting",
+      "icons": [
+        {
+          "filename": "antlers.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "archer.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "archery.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "arrow.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "arrow2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "arrow3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "birddog.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "boar.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "bow.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "bow2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "buck.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "buck2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "buck3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "cat.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "coyote.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "crosshair.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "crosshair1.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "deer.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "deer2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "deer3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "deer_crosshair.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "doe.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "doe2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "elk.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "elk2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "fish.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "fishing.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "fishing2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "huntingblind.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "largemouth.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "moose.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "moose2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "pheasant.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "quail.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "rabbitcrosshair.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "reticle.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "reticle2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "rifle2.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "scope.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "scope2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "scope3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "shotgun2.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "shotgun3.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "smallmouth.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "spear.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "speargun.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "spotting.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "target.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "target2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "target3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "target4.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "tom.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "tracks.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "trap.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "treestand.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "treestand2.png",
+          "type2525b": "a-u-G"
+        }
+      ]
+    },
+    {
+      "name": "Military",
+      "icons": [
+        {
+          "filename": "A10.png",
+          "type2525b": "a-u-A-M-F"
+        },
+        {
+          "filename": "AK47.png",
+          "type2525b": "a-u-G-E-W-R"
+        },
+        {
+          "filename": "AV8B.png",
+          "type2525b": "a-u-A-M-F-A"
+        },
+        {
+          "filename": "B2.png",
+          "type2525b": "a-u-A-M-F-B"
+        },
+        {
+          "filename": "B52.png",
+          "type2525b": "a-u-A-M-F-A"
+        },
+        {
+          "filename": "C-17.png",
+          "type2525b": "a-u-A-M-F"
+        },
+        {
+          "filename": "CV-22.png",
+          "type2525b": "a-u-A-M-H"
+        },
+        {
+          "filename": "CV_22.png",
+          "type2525b": "a-u-A-M-H"
+        },
+        {
+          "filename": "Chinook2.png",
+          "type2525b": "a-u-A-M-H-C"
+        },
+        {
+          "filename": "DogTags.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "DroneTarget.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "EA-6B.png",
+          "type2525b": "a-u-A-M-F"
+        },
+        {
+          "filename": "Explosion.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "F111A.png",
+          "type2525b": "a-u-A-M-F-F"
+        },
+        {
+          "filename": "F117.png",
+          "type2525b": "a-u-A-M-F-F"
+        },
+        {
+          "filename": "F15.png",
+          "type2525b": "a-u-A-M-F-F"
+        },
+        {
+          "filename": "F16.png",
+          "type2525b": "a-u-A-M-F-F"
+        },
+        {
+          "filename": "F18.png",
+          "type2525b": "a-u-A-M-F-F"
+        },
+        {
+          "filename": "F22.png",
+          "type2525b": "a-u-A-M-F-F"
+        },
+        {
+          "filename": "F35.png",
+          "type2525b": "a-u-A-M-F-F"
+        },
+        {
+          "filename": "Glock.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "Grenade.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "GunTruck.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Humvee.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "ISR.png",
+          "type2525b": "a-u-A-M-F"
+        },
+        {
+          "filename": "ISR2.png",
+          "type2525b": "a-u-A-M-F"
+        },
+        {
+          "filename": "K9.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "LittleBird.png",
+          "type2525b": "a-u-A-M-H"
+        },
+        {
+          "filename": "LittleBird2.png",
+          "type2525b": "a-u-A-M-H"
+        },
+        {
+          "filename": "LittleBird4.png",
+          "type2525b": "a-u-A-M-H"
+        },
+        {
+          "filename": "MFF.png",
+          "type2525b": "a-u-A"
+        },
+        {
+          "filename": "MP.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "MRAP.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Missle.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "MissleLauncher.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "PC-12.png",
+          "type2525b": "a-u-A-M-F"
+        },
+        {
+          "filename": "Predator.png",
+          "type2525b": "a-u-A-M-F-Q"
+        },
+        {
+          "filename": "RECCE.png",
+          "type2525b": "a-u-A-M-F-R-X"
+        },
+        {
+          "filename": "RPG.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "Reaper.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "SIGINT.png",
+          "type2525b": "a-u-A-M-F-R-Z"
+        },
+        {
+          "filename": "Salute.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Submarine2.png",
+          "type2525b": "a-u-U"
+        },
+        {
+          "filename": "Tank.png",
+          "type2525b": "a-u-G-E-V-A-T"
+        },
+        {
+          "filename": "Tank10.png",
+          "type2525b": "a-u-G-E-V-A-T"
+        },
+        {
+          "filename": "Tank11.png",
+          "type2525b": "a-u-G-E-V-A-T"
+        },
+        {
+          "filename": "Tank2.png",
+          "type2525b": "a-u-G-E-V-A-T"
+        },
+        {
+          "filename": "Tank3.png",
+          "type2525b": "a-u-G-E-V-A-T"
+        },
+        {
+          "filename": "Tank4.png",
+          "type2525b": "a-u-G-E-V-A-T"
+        },
+        {
+          "filename": "Tank5.png",
+          "type2525b": "a-u-G-E-V-A-T"
+        },
+        {
+          "filename": "Tank6.png",
+          "type2525b": "a-u-G-E-V-A-T"
+        },
+        {
+          "filename": "Tank7.png",
+          "type2525b": "a-u-G-E-V-A-T"
+        },
+        {
+          "filename": "Tank8.png",
+          "type2525b": "a-u-G-E-V-A-T"
+        },
+        {
+          "filename": "Tank9.png",
+          "type2525b": "a-u-G-E-V-A-T"
+        },
+        {
+          "filename": "TruckCargo.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "TruckM35.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "UAV_quad.png",
+          "type2525b": "a-u-A-M-F-Q"
+        },
+        {
+          "filename": "aircraftcarrier.png",
+          "type2525b": "a-u-S-C-L-C-V"
+        },
+        {
+          "filename": "airdrop.png",
+          "type2525b": "a-u-A"
+        },
+        {
+          "filename": "airman.png",
+          "type2525b": "a-u-A"
+        },
+        {
+          "filename": "apache.png",
+          "type2525b": "a-u-A-M-H"
+        },
+        {
+          "filename": "artillary.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "assaultship.png",
+          "type2525b": "a-u-S-C-A-L-A"
+        },
+        {
+          "filename": "blackhawk.png",
+          "type2525b": "a-u-A-M-H"
+        },
+        {
+          "filename": "blackhawk1.png",
+          "type2525b": "a-u-A-M-H"
+        },
+        {
+          "filename": "blackhawk2.png",
+          "type2525b": "a-u-A-M-H"
+        },
+        {
+          "filename": "bomb.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "bomber.png",
+          "type2525b": "a-u-A-M-F-B"
+        },
+        {
+          "filename": "bombing.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "bullet.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "cannon.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "cannon2.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "cannon3.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "chinook.png",
+          "type2525b": "a-u-A-M-H-C"
+        },
+        {
+          "filename": "commander.png",
+          "type2525b": "a-u-G-U-U-S-O"
+        },
+        {
+          "filename": "convoy.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "cruiser.png",
+          "type2525b": "a-u-S-C-L-C-C"
+        },
+        {
+          "filename": "destroyer.png",
+          "type2525b": "a-u-S-C-L-D-D"
+        },
+        {
+          "filename": "fastrope.png",
+          "type2525b": "a-u-A-M-H"
+        },
+        {
+          "filename": "fastrope2.png",
+          "type2525b": "a-u-A-M-H"
+        },
+        {
+          "filename": "fortress.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "helmet.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "jeep1.png"
+        },
+        {
+          "filename": "jeep2.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "jeep3.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "jeep4.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "knife.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "littlebird3.png",
+          "type2525b": "a-u-A-M-H"
+        },
+        {
+          "filename": "medical.png",
+          "type2525b": "a-u-G-U-S-M"
+        },
+        {
+          "filename": "missle2.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "molotov.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "pistol.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "radar.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "range.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "reticle3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "revolver.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "rifle.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "rocket.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "seaman.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "shield.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "shield2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "shotgun.png",
+          "type2525b": "a-u-G-E-W"
+        },
+        {
+          "filename": "sniper.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "sniper2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "soldier.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "soldier2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "soldier3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "soldier4.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "soldier5.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "soldier6.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "submarine.png",
+          "type2525b": "a-u-U"
+        },
+        {
+          "filename": "submarine3.png",
+          "type2525b": "a-u-U"
+        },
+        {
+          "filename": "surrender.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "target5.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "team.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "truckcargo2.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "warrior.png",
+          "type2525b": "a-u-G"
+        }
+      ]
+    },
+    {
+      "name": "People",
+      "icons": [
+        {
+          "filename": "Astronaut.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Beggar.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Bicyclist.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "BikeAccident.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "BikeRacer.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "CrossCountrySki.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "CrossingGuard.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Fireman.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "FreestyleSkiing.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Handicap.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Luge.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Man.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Police.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Police2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Protesters.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "SkiRacing.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "SnowShoe.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Woman.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "body.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "businessman.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "construction.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "crimescene.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "criminal.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "crosswalk.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "delivery.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "downhillski.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "fall.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "femalecrime.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "freefall.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "ice.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "picket.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "restroom.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "riot.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "robber.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "skijump.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "skydive.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "slip.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "suspect.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "thief.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "trash.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "trip.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "walk.png",
+          "type2525b": "a-u-G"
+        }
+      ]
+    },
+    {
+      "name": "Plants",
+      "icons": [
+        {
+          "filename": "Acorn.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Apple.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Banana.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Corn.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Flower.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Flower2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Maple.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Oak.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Orange.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "PalmTree.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "PalmTrees.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Pear.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "PineTree.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Pineapple.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "SunFlower.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Tomato.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Tree.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Tree2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Tree3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Tree4.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Watermelon.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Wheat.png",
+          "type2525b": "a-u-G"
+        }
+      ]
+    },
+    {
+      "name": "Summer",
+      "icons": [
+        {
+          "filename": "BeachChair.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "BeachUmbrella.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Drinks.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Grill.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Lifeguard.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Picnic.png",
+          "type2525b": "a-u-G"
+        }
+      ]
+    },
+    {
+      "name": "Transportation",
+      "icons": [
+        {
+          "filename": "4x4.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "ATV.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "ATV2.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Ambulance.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Bicycle.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Bike.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "BikeLane.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Blimp.png",
+          "type2525b": "a-u-A-C-L"
+        },
+        {
+          "filename": "Blimp2.png",
+          "type2525b": "a-u-A-C-L"
+        },
+        {
+          "filename": "Boat.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Bridge.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Bridge2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Bus.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Bus2.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Bus3.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "BusTicket.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "CableCar.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Car.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Car2.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Car3.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Car4.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Car5.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Car6.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Car7.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Car8.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Car9.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "CarRack.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Car_Incline.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "CargoPort.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "CargoShip.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Customs.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "DirtBike.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "DoNotEnter.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "DriveThru.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "DumpTruck.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "DumpTruck2.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Exit.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "FarmTractor.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "FireTruck.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "FishingBoat.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Flag.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Flatbed.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Forklift.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Fuel.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "GasPump.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Gondola.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Gondola3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "GreenLight.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Helicopter.png",
+          "type2525b": "a-u-A-C-H"
+        },
+        {
+          "filename": "Helicopter2.png",
+          "type2525b": "a-u-A-C-H"
+        },
+        {
+          "filename": "Helicopter3.png",
+          "type2525b": "a-u-A-C-H"
+        },
+        {
+          "filename": "Helicopter4.png",
+          "type2525b": "a-u-A-C-H"
+        },
+        {
+          "filename": "HelicopterPad.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Highway.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "HorseTrailer.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "HotAirBalloon.png",
+          "type2525b": "a-u-A-C-L"
+        },
+        {
+          "filename": "Humbee.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Incline.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Interstate.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Locomotive.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "LogTruck.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Metro.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Moped.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Motorcycle.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "MountainLift.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "OffRoadTruck.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "OffRoading.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "PickupTruck.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Plane.png",
+          "type2525b": "a-u-A-C-F"
+        },
+        {
+          "filename": "Plane2.png",
+          "type2525b": "a-u-A-C-F"
+        },
+        {
+          "filename": "Plane3.png",
+          "type2525b": "a-u-A-C-F"
+        },
+        {
+          "filename": "Plane4.png",
+          "type2525b": "a-u-A-C-F"
+        },
+        {
+          "filename": "Plane5.png",
+          "type2525b": "a-u-A-C-F"
+        },
+        {
+          "filename": "Plane6.png",
+          "type2525b": "a-u-A-C-F"
+        },
+        {
+          "filename": "Plane7.png",
+          "type2525b": "a-u-A-C-F"
+        },
+        {
+          "filename": "Plane8.png",
+          "type2525b": "a-u-A-C-F"
+        },
+        {
+          "filename": "Plane9.png",
+          "type2525b": "a-u-A-C-F"
+        },
+        {
+          "filename": "PlaneTicket.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "RailCar.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "RailRoad.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "RailRoadCrossing.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "RailTracks.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "RallyPoint.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "RedLight.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "RickShaw2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Rickshaw.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Rocket1.png"
+        },
+        {
+          "filename": "Route.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "STOP.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Sailboat.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Sailboat2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Sailboat3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "SchoolBus.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "SchoolBus2.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Schooner.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Segway.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Segway2.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Semi.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Semi2.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Ship.png",
+          "type2525b": "a-u-S"
+        },
+        {
+          "filename": "Ship2.png",
+          "type2525b": "a-u-S"
+        },
+        {
+          "filename": "Ship3.png",
+          "type2525b": "a-u-S"
+        },
+        {
+          "filename": "Ship4.png",
+          "type2525b": "a-u-S"
+        },
+        {
+          "filename": "Sidecar.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Snowmobile.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "SpaceShuttle.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Speed_Train.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Taxi.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Taxi2.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "TourBus.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "TowTruck.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "TractorTrailer.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Trailsign.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Trailsign2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Train.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Train2.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Train3.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Train4.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Train5.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Train6.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "TrainTicket.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Tram.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Trolly.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Truck.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Truck2.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Truck3.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Truck4.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Truck5.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Tunnel.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "TunnelRoad.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "TunnelTrain.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Underground.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Underground2.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Van.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Van2.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Van3.png",
+          "type2525b": "a-u-G-E-V"
+        },
+        {
+          "filename": "Warning.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Yacht.png",
+          "type2525b": "a-u-S"
+        },
+        {
+          "filename": "YellowLight.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "accident.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "baybridge.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "biofuel.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "bridge3.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "bridge4.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "caution.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "curves.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "jeep.png",
+          "type2525b": "a-u-G-E-V"
+        }
+      ]
+    },
+    {
+      "name": "Weather",
+      "icons": [
+        {
+          "filename": "Icing.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Rain.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Snow.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "Snowflake.png",
+          "type2525b": "a-u-G"
+        },
+        {
+          "filename": "sun.png",
+          "type2525b": "a-u-G"
+        }
+      ]
+    }
+  ]
+}

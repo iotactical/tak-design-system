@@ -9,7 +9,8 @@
     "url": "https://github.com/iotactical/tak-design-system.git"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "site"
   ],
   "scripts": {
     "build": "node scripts/build-tokens.mjs",
@@ -20,8 +21,10 @@
     "build:bridge": "node scripts/build-color-bridge.mjs",
     "build:react": "npm -w packages/react run build",
     "dev:react": "npm -w packages/react run dev",
+    "dev:site": "npm -w site run dev",
+    "build:site": "npm -w site run build",
     "clean": "rm -rf platforms/atak/res platforms/atak/compose/generated platforms/web/generated platforms/vscode/generated platforms/bridge packages/react/dist",
-    "pretest": "npm run build && npm run build:bridge && npm run build:react",
+    "pretest": "npm run build && npm run build:bridge && npm run build:react && npm run build:site",
     "test": "node --test tests/**/*.mjs",
     "test:rtmx": "node scripts/run-tests-rtmx.mjs",
     "test:tokens": "node --test tests/tokens/*.mjs",

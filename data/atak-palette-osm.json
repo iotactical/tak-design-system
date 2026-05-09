@@ -1,0 +1,1098 @@
+{
+  "name": "OSM",
+  "uid": "6d781afb-89a6-4c07-b2b9-a89748b6a38f",
+  "iconCount": 347,
+  "groups": [
+    {
+      "name": "General",
+      "icons": [
+        {
+          "filename": "accommodation.png"
+        },
+        {
+          "filename": "education.png"
+        },
+        {
+          "filename": "empty.png"
+        },
+        {
+          "filename": "food.png"
+        },
+        {
+          "filename": "geocache.png"
+        },
+        {
+          "filename": "health.png"
+        },
+        {
+          "filename": "leisure.png"
+        },
+        {
+          "filename": "misc.png"
+        },
+        {
+          "filename": "money.png"
+        },
+        {
+          "filename": "nautical.png"
+        },
+        {
+          "filename": "people.png"
+        },
+        {
+          "filename": "place.png"
+        },
+        {
+          "filename": "religion.png"
+        },
+        {
+          "filename": "rendering.png"
+        },
+        {
+          "filename": "service.png"
+        },
+        {
+          "filename": "shop.png"
+        },
+        {
+          "filename": "sightseeing.png"
+        },
+        {
+          "filename": "sport.png"
+        },
+        {
+          "filename": "transport.png"
+        },
+        {
+          "filename": "unknown.png"
+        },
+        {
+          "filename": "vehicle.png"
+        },
+        {
+          "filename": "waypoint.png"
+        },
+        {
+          "filename": "wlan.png"
+        }
+      ]
+    },
+    {
+      "name": "Landmarks",
+      "icons": [
+        {
+          "filename": "aldi.png"
+        },
+        {
+          "filename": "aldi_nord.png"
+        },
+        {
+          "filename": "archaeological.png"
+        },
+        {
+          "filename": "bacon_and_eggs.png"
+        },
+        {
+          "filename": "bahai.png"
+        },
+        {
+          "filename": "bar.png"
+        },
+        {
+          "filename": "barn.png"
+        },
+        {
+          "filename": "battlefield.png"
+        },
+        {
+          "filename": "beverages.png"
+        },
+        {
+          "filename": "biergarten.png"
+        },
+        {
+          "filename": "buddhism.png"
+        },
+        {
+          "filename": "bunker.png"
+        },
+        {
+          "filename": "burger-king.png"
+        },
+        {
+          "filename": "butcher.png"
+        },
+        {
+          "filename": "cafe.png"
+        },
+        {
+          "filename": "capital.png"
+        },
+        {
+          "filename": "castle.png"
+        },
+        {
+          "filename": "catholic.png"
+        },
+        {
+          "filename": "cemetery.png"
+        },
+        {
+          "filename": "chapel.png"
+        },
+        {
+          "filename": "chimney.png"
+        },
+        {
+          "filename": "church.png"
+        },
+        {
+          "filename": "city.png"
+        },
+        {
+          "filename": "computers.png"
+        },
+        {
+          "filename": "confectioner.png"
+        },
+        {
+          "filename": "convenience.png"
+        },
+        {
+          "filename": "crane.png"
+        },
+        {
+          "filename": "diy_store.png"
+        },
+        {
+          "filename": "doctor.png"
+        },
+        {
+          "filename": "eye_specialist.png"
+        },
+        {
+          "filename": "farm.png"
+        },
+        {
+          "filename": "florist.png"
+        },
+        {
+          "filename": "forest.png"
+        },
+        {
+          "filename": "fossil.png"
+        },
+        {
+          "filename": "friends.png"
+        },
+        {
+          "filename": "fruits.png"
+        },
+        {
+          "filename": "furniture.png"
+        },
+        {
+          "filename": "gasometer.png"
+        },
+        {
+          "filename": "hinduism.png"
+        },
+        {
+          "filename": "home.png"
+        },
+        {
+          "filename": "hospital.png"
+        },
+        {
+          "filename": "hydro.png"
+        },
+        {
+          "filename": "icecream.png"
+        },
+        {
+          "filename": "island.png"
+        },
+        {
+          "filename": "jainism.png"
+        },
+        {
+          "filename": "japanese.png"
+        },
+        {
+          "filename": "jewish.png"
+        },
+        {
+          "filename": "kaufland.png"
+        },
+        {
+          "filename": "kindergarten.png"
+        },
+        {
+          "filename": "kiosk.png"
+        },
+        {
+          "filename": "laundry.png"
+        },
+        {
+          "filename": "lidl.png"
+        },
+        {
+          "filename": "lighthouse.png"
+        },
+        {
+          "filename": "locality.png"
+        },
+        {
+          "filename": "mc-donalds.png"
+        },
+        {
+          "filename": "memorial.png"
+        },
+        {
+          "filename": "mine.png"
+        },
+        {
+          "filename": "monument.png"
+        },
+        {
+          "filename": "mormon.png"
+        },
+        {
+          "filename": "mountain_pass.png"
+        },
+        {
+          "filename": "museum.png"
+        },
+        {
+          "filename": "muslim.png"
+        },
+        {
+          "filename": "nuclear.png"
+        },
+        {
+          "filename": "optician.png"
+        },
+        {
+          "filename": "orthodox.png"
+        },
+        {
+          "filename": "outdoor.png"
+        },
+        {
+          "filename": "peak.png"
+        },
+        {
+          "filename": "peak_small.png"
+        },
+        {
+          "filename": "pharmacy.png"
+        },
+        {
+          "filename": "pizza.png"
+        },
+        {
+          "filename": "plant.png"
+        },
+        {
+          "filename": "power.png"
+        },
+        {
+          "filename": "primary.png"
+        },
+        {
+          "filename": "protestant.png"
+        },
+        {
+          "filename": "pub.png"
+        },
+        {
+          "filename": "range.png"
+        },
+        {
+          "filename": "reservoir_covered.png"
+        },
+        {
+          "filename": "restaurant.png"
+        },
+        {
+          "filename": "ruins.png"
+        },
+        {
+          "filename": "settlement.png"
+        },
+        {
+          "filename": "shinto.png"
+        },
+        {
+          "filename": "sikhism.png"
+        },
+        {
+          "filename": "snacks.png"
+        },
+        {
+          "filename": "spring.png"
+        },
+        {
+          "filename": "survey_point.png"
+        },
+        {
+          "filename": "taoism.png"
+        },
+        {
+          "filename": "tower.png"
+        },
+        {
+          "filename": "town.png"
+        },
+        {
+          "filename": "trees.png"
+        },
+        {
+          "filename": "university.png"
+        },
+        {
+          "filename": "veterinary.png"
+        },
+        {
+          "filename": "viewpoint.png"
+        },
+        {
+          "filename": "wastewater_plant.png"
+        },
+        {
+          "filename": "water_tower.png"
+        },
+        {
+          "filename": "wayside_cross.png"
+        },
+        {
+          "filename": "wayside_shrine.png"
+        },
+        {
+          "filename": "wind.png"
+        },
+        {
+          "filename": "windmill.png"
+        },
+        {
+          "filename": "wine_tavern.png"
+        },
+        {
+          "filename": "works.png"
+        }
+      ]
+    },
+    {
+      "name": "Leisure",
+      "icons": [
+        {
+          "filename": "BBQ.png"
+        },
+        {
+          "filename": "bicycling.png"
+        },
+        {
+          "filename": "cinema.png"
+        },
+        {
+          "filename": "common.png"
+        },
+        {
+          "filename": "dog.png"
+        },
+        {
+          "filename": "garden.png"
+        },
+        {
+          "filename": "music.png"
+        },
+        {
+          "filename": "nature_reserve.png"
+        },
+        {
+          "filename": "nightclub.png"
+        },
+        {
+          "filename": "park.png"
+        },
+        {
+          "filename": "playground.png"
+        },
+        {
+          "filename": "sauna.png"
+        },
+        {
+          "filename": "shelter1.png"
+        },
+        {
+          "filename": "stripclub.png"
+        },
+        {
+          "filename": "theater.png"
+        },
+        {
+          "filename": "theme_park.png"
+        },
+        {
+          "filename": "zoo.png"
+        }
+      ]
+    },
+    {
+      "name": "Lodging",
+      "icons": [
+        {
+          "filename": "camping.png"
+        },
+        {
+          "filename": "caravan.png"
+        },
+        {
+          "filename": "chalet.png"
+        },
+        {
+          "filename": "dump-station.png"
+        },
+        {
+          "filename": "five_star.png"
+        },
+        {
+          "filename": "four_star.png"
+        },
+        {
+          "filename": "gas-refill.png"
+        },
+        {
+          "filename": "guest_house.png"
+        },
+        {
+          "filename": "hookup.png"
+        },
+        {
+          "filename": "hostel.png"
+        },
+        {
+          "filename": "hotel.png"
+        },
+        {
+          "filename": "motel.png"
+        },
+        {
+          "filename": "one_star.png"
+        },
+        {
+          "filename": "shelter-bw.png"
+        },
+        {
+          "filename": "shelter.png"
+        },
+        {
+          "filename": "three_star.png"
+        },
+        {
+          "filename": "trash.png"
+        },
+        {
+          "filename": "two_star.png"
+        },
+        {
+          "filename": "wastewater.png"
+        },
+        {
+          "filename": "water.png"
+        }
+      ]
+    },
+    {
+      "name": "Misc",
+      "icons": [
+        {
+          "filename": "Base.png"
+        },
+        {
+          "filename": "Camp.png"
+        },
+        {
+          "filename": "Helibase.png"
+        },
+        {
+          "filename": "Helipad1.png"
+        },
+        {
+          "filename": "IncidentCommandPost.png"
+        },
+        {
+          "filename": "StagingArea.png"
+        },
+        {
+          "filename": "bunny.png"
+        },
+        {
+          "filename": "butterfly.png"
+        },
+        {
+          "filename": "construction.png"
+        },
+        {
+          "filename": "danger.png"
+        },
+        {
+          "filename": "deprecated.png"
+        },
+        {
+          "filename": "door.png"
+        },
+        {
+          "filename": "drinking_water.png"
+        },
+        {
+          "filename": "guidepost.png"
+        },
+        {
+          "filename": "information.png"
+        },
+        {
+          "filename": "informationoffice.png"
+        },
+        {
+          "filename": "landmark.png"
+        },
+        {
+          "filename": "lock_closed.png"
+        },
+        {
+          "filename": "lock_open.png"
+        },
+        {
+          "filename": "map.png"
+        },
+        {
+          "filename": "map_bicycle.png"
+        },
+        {
+          "filename": "map_city.png"
+        },
+        {
+          "filename": "map_hiking.png"
+        },
+        {
+          "filename": "map_skiing.png"
+        },
+        {
+          "filename": "no_icon.png"
+        },
+        {
+          "filename": "no_smoking.png"
+        },
+        {
+          "filename": "note.png"
+        },
+        {
+          "filename": "proposed.png"
+        },
+        {
+          "filename": "tag_.png"
+        }
+      ]
+    },
+    {
+      "name": "Nautical",
+      "icons": [
+        {
+          "filename": "alpha_flag.png"
+        },
+        {
+          "filename": "anchor.png"
+        },
+        {
+          "filename": "aqueduct.png"
+        },
+        {
+          "filename": "dive_flag.png"
+        },
+        {
+          "filename": "lock_gate.png"
+        },
+        {
+          "filename": "marina.png"
+        },
+        {
+          "filename": "pier.png"
+        },
+        {
+          "filename": "turning.png"
+        },
+        {
+          "filename": "weir.png"
+        }
+      ]
+    },
+    {
+      "name": "Service",
+      "icons": [
+        {
+          "filename": "atm.png"
+        },
+        {
+          "filename": "bank.png"
+        },
+        {
+          "filename": "emergency.png"
+        },
+        {
+          "filename": "exchange.png"
+        },
+        {
+          "filename": "firebrigade.png"
+        },
+        {
+          "filename": "post_box.png"
+        },
+        {
+          "filename": "post_office.png"
+        },
+        {
+          "filename": "recycling.png"
+        },
+        {
+          "filename": "telephone.png"
+        },
+        {
+          "filename": "toilets.png"
+        },
+        {
+          "filename": "trash-bin.png"
+        },
+        {
+          "filename": "vr-bank.png"
+        }
+      ]
+    },
+    {
+      "name": "Sport",
+      "icons": [
+        {
+          "filename": "basketball.png"
+        },
+        {
+          "filename": "bicycle1.png"
+        },
+        {
+          "filename": "centre.png"
+        },
+        {
+          "filename": "cycling.png"
+        },
+        {
+          "filename": "dart.png"
+        },
+        {
+          "filename": "flying.png"
+        },
+        {
+          "filename": "football.png"
+        },
+        {
+          "filename": "golf.png"
+        },
+        {
+          "filename": "gym.png"
+        },
+        {
+          "filename": "indoor_pool.png"
+        },
+        {
+          "filename": "kiteflying.png"
+        },
+        {
+          "filename": "mountain_bike.png"
+        },
+        {
+          "filename": "pitch.png"
+        },
+        {
+          "filename": "pool.png"
+        },
+        {
+          "filename": "racquetball.png"
+        },
+        {
+          "filename": "riding.png"
+        },
+        {
+          "filename": "skiing.png"
+        },
+        {
+          "filename": "soccer.png"
+        },
+        {
+          "filename": "swimming.png"
+        },
+        {
+          "filename": "table_tennis.png"
+        },
+        {
+          "filename": "tennis.png"
+        }
+      ]
+    },
+    {
+      "name": "Transport",
+      "icons": [
+        {
+          "filename": "30-end.png"
+        },
+        {
+          "filename": "BMW.png"
+        },
+        {
+          "filename": "IRno_left_turn.png"
+        },
+        {
+          "filename": "IRno_right_turn.png"
+        },
+        {
+          "filename": "IRno_straight_on.png"
+        },
+        {
+          "filename": "IRno_u_turn.png"
+        },
+        {
+          "filename": "NoParking.png"
+        },
+        {
+          "filename": "Nomotorbike.png"
+        },
+        {
+          "filename": "agip.png"
+        },
+        {
+          "filename": "airfield.png"
+        },
+        {
+          "filename": "airport.png"
+        },
+        {
+          "filename": "aral.png"
+        },
+        {
+          "filename": "bicycle.Rental.png"
+        },
+        {
+          "filename": "bicycle.png"
+        },
+        {
+          "filename": "bollard-bw.png"
+        },
+        {
+          "filename": "bollard.png"
+        },
+        {
+          "filename": "bridge-car.png"
+        },
+        {
+          "filename": "bridge-pedestrian.png"
+        },
+        {
+          "filename": "bridge-train.png"
+        },
+        {
+          "filename": "bridge.png"
+        },
+        {
+          "filename": "bump.png"
+        },
+        {
+          "filename": "bus.png"
+        },
+        {
+          "filename": "car.png"
+        },
+        {
+          "filename": "carRental.png"
+        },
+        {
+          "filename": "car_parking.png"
+        },
+        {
+          "filename": "car_sharing.png"
+        },
+        {
+          "filename": "caution.png"
+        },
+        {
+          "filename": "crossing.png"
+        },
+        {
+          "filename": "crossing_small.png"
+        },
+        {
+          "filename": "dead_end.png"
+        },
+        {
+          "filename": "drawbridge.png"
+        },
+        {
+          "filename": "elf.png"
+        },
+        {
+          "filename": "emergency_phone.png"
+        },
+        {
+          "filename": "esso.png"
+        },
+        {
+          "filename": "exit.png"
+        },
+        {
+          "filename": "ferry-car.png"
+        },
+        {
+          "filename": "ferry-pedestrian.png"
+        },
+        {
+          "filename": "ferry.png"
+        },
+        {
+          "filename": "ford.png"
+        },
+        {
+          "filename": "fuel.png"
+        },
+        {
+          "filename": "funicular.png"
+        },
+        {
+          "filename": "handicapped.png"
+        },
+        {
+          "filename": "handicapped_parking.png"
+        },
+        {
+          "filename": "harbour.png"
+        },
+        {
+          "filename": "helipad.png"
+        },
+        {
+          "filename": "hiking.png"
+        },
+        {
+          "filename": "incline.png"
+        },
+        {
+          "filename": "jet.png"
+        },
+        {
+          "filename": "motorbike.png"
+        },
+        {
+          "filename": "motorbikePark.png"
+        },
+        {
+          "filename": "motorway_junction.png"
+        },
+        {
+          "filename": "multi-storey.png"
+        },
+        {
+          "filename": "no_left_turn.png"
+        },
+        {
+          "filename": "no_right_turn.png"
+        },
+        {
+          "filename": "no_straight_on.png"
+        },
+        {
+          "filename": "no_u_turn.png"
+        },
+        {
+          "filename": "omv.png"
+        },
+        {
+          "filename": "only_left_turn.png"
+        },
+        {
+          "filename": "only_right_turn.png"
+        },
+        {
+          "filename": "only_straight_on.png"
+        },
+        {
+          "filename": "park_ride.png"
+        },
+        {
+          "filename": "parking.png"
+        },
+        {
+          "filename": "pedestrian.png"
+        },
+        {
+          "filename": "play_street.png"
+        },
+        {
+          "filename": "railway_station.png"
+        },
+        {
+          "filename": "rapid_train.png"
+        },
+        {
+          "filename": "rental.png"
+        },
+        {
+          "filename": "repair_shop.png"
+        },
+        {
+          "filename": "restarea.png"
+        },
+        {
+          "filename": "restarea_toilets.png"
+        },
+        {
+          "filename": "restriction.png"
+        },
+        {
+          "filename": "right_of_way.png"
+        },
+        {
+          "filename": "road_works.png"
+        },
+        {
+          "filename": "roundabout_left.png"
+        },
+        {
+          "filename": "roundabout_right.png"
+        },
+        {
+          "filename": "services.png"
+        },
+        {
+          "filename": "shell.png"
+        },
+        {
+          "filename": "sixt.png"
+        },
+        {
+          "filename": "smartcar.png"
+        },
+        {
+          "filename": "speed_trap.png"
+        },
+        {
+          "filename": "stop.png"
+        },
+        {
+          "filename": "table.png"
+        },
+        {
+          "filename": "taxi.png"
+        },
+        {
+          "filename": "terminal.png"
+        },
+        {
+          "filename": "texaco.png"
+        },
+        {
+          "filename": "ticket-machine.png"
+        },
+        {
+          "filename": "toll_booth.png"
+        },
+        {
+          "filename": "total.png"
+        },
+        {
+          "filename": "towing.png"
+        },
+        {
+          "filename": "traffic-light.png"
+        },
+        {
+          "filename": "traffic_jam.png"
+        },
+        {
+          "filename": "tram.png"
+        },
+        {
+          "filename": "tunnel.png"
+        },
+        {
+          "filename": "turning_circle.png"
+        },
+        {
+          "filename": "turntable.png"
+        },
+        {
+          "filename": "underground.png"
+        },
+        {
+          "filename": "viaduct.png"
+        },
+        {
+          "filename": "zebra_crossing.png"
+        }
+      ]
+    },
+    {
+      "name": "Waypoints",
+      "icons": [
+        {
+          "filename": "green.png"
+        },
+        {
+          "filename": "pin.png"
+        },
+        {
+          "filename": "red.png"
+        },
+        {
+          "filename": "wpt1.png"
+        },
+        {
+          "filename": "wpt2.png"
+        },
+        {
+          "filename": "wpt3.png"
+        },
+        {
+          "filename": "wpt4.png"
+        },
+        {
+          "filename": "wpt5.png"
+        },
+        {
+          "filename": "wpt6.png"
+        },
+        {
+          "filename": "wpt7.png"
+        },
+        {
+          "filename": "wpt8.png"
+        },
+        {
+          "filename": "wpt9.png"
+        },
+        {
+          "filename": "wptblue.png"
+        },
+        {
+          "filename": "wptgreen.png"
+        },
+        {
+          "filename": "wptorange.png"
+        },
+        {
+          "filename": "wptred.png"
+        },
+        {
+          "filename": "wptyellow.png"
+        },
+        {
+          "filename": "yellow.png"
+        }
+      ]
+    }
+  ]
+}

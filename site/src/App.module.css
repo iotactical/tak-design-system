@@ -1,0 +1,101 @@
+/* ATAK dark theme */
+:global(*) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:global(body) {
+  background: #131415;
+  color: #DAD4BC;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: #1A1A1A;
+  border-right: 1px solid #2E2E2E;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.brand {
+  padding: 0 24px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: 1px solid #2E2E2E;
+  margin-bottom: 16px;
+}
+
+.brandAccent {
+  color: #FFE35E;
+}
+
+.navList {
+  list-style: none;
+  flex: 1;
+}
+
+.navLink {
+  display: block;
+  padding: 10px 24px;
+  color: #DAD4BC;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+}
+
+.navLink:hover {
+  background: #242424;
+  color: #FFE35E;
+}
+
+.navLinkActive {
+  background: #242424;
+  color: #FFE35E;
+  border-left: 3px solid #FFE35E;
+}
+
+.sidebarFooter {
+  padding: 16px 24px 0;
+  border-top: 1px solid #2E2E2E;
+  font-size: 12px;
+  color: #878787;
+}
+
+.content {
+  flex: 1;
+  margin-left: 240px;
+  padding: 32px 40px;
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 960px;
+}
+
+.pageTitle {
+  font-size: 30px;
+  font-weight: 700;
+  color: #FFE35E;
+  margin-bottom: 24px;
+}
+
+.muted {
+  color: #878787;
+}
