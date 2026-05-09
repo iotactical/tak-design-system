@@ -48,6 +48,30 @@
     "passed": true
   },
   {
+    "req_id": "REQ-CI-002",
+    "test_name": "REQ-CI-002: Build artifacts uploaded with 30-day retention",
+    "test_file": "tests/ci/test_artifacts.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-CI-004",
+    "test_name": "REQ-CI-004: Repository dispatch to defense-builders-sdk",
+    "test_file": "tests/ci/test_dispatch.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-CI-001",
+    "test_name": "REQ-CI-001: CI pipeline validates builds and releases",
+    "test_file": "tests/ci/test_pipeline.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-CI-003",
+    "test_name": "REQ-CI-003: GitHub Release created with version tag",
+    "test_file": "tests/ci/test_release.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-CMP-006",
     "test_name": "REQ-CMP-006: ChatPanel component",
     "test_file": "tests/components/test_chat.mjs",
