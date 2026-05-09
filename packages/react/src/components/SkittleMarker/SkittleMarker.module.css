@@ -1,0 +1,32 @@
+.skittleMarker {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.dot {
+  /* no rotation needed */
+}
+
+.expired {
+  filter: grayscale(100%);
+}
+
+.roleBadge {
+  display: block;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  border-radius: 2px;
+  font-family: var(--tak-font-family-sans, 'Roboto', sans-serif);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-top: 2px;
+  white-space: nowrap;
+}

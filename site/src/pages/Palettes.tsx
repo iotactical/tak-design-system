@@ -127,14 +127,26 @@ function groupIcons(icons: IconEntry[]): Map<string, IconEntry[]> {
   return groups;
 }
 
-/** Build the palette image path */
-function paletteImgSrc(paletteId: string, icon: IconEntry): string {
-  // Try with full path (group/filename) first
+/** Build the palette image path based on palette type.
+ *  - iconset (ZIP-extracted): files are flat, use filename directly
+ *  - sqlite-palette: files are in group subdirectories, use group/filename
+ */
+function paletteImgSrc(paletteId: string, icon: IconEntry, type: PaletteType): string {
+  if (type === 'iconset') {
+    // ZIP-extracted iconsets have flat file structure (no subdirectory)
+    return `${BASE}palettes/${paletteId}/${icon.name}`;
+  }
+  // SQLite palettes preserve group/filename directory structure
   return `${BASE}palettes/${paletteId}/${icon.path}`;
 }
 
-/** Fallback: try just the filename without group directory */
-function paletteImgFallback(paletteId: string, icon: IconEntry): string {
+/** Fallback: try the opposite path strategy */
+function paletteImgFallback(paletteId: string, icon: IconEntry, type: PaletteType): string {
+  if (type === 'iconset') {
+    // Some iconsets like responder have subdirectories; try full path
+    return `${BASE}palettes/${paletteId}/${icon.path}`;
+  }
+  // SQLite fallback: try just the filename without group directory
   return `${BASE}palettes/${paletteId}/${icon.name}`;
 }
 
@@ -262,7 +274,7 @@ function IconsetPanel({ tab }: { tab: PaletteTab }) {
         <div className={styles.paletteCount}>{manifest.count} icons</div>
       </div>
 
-      {icons.length > 20 && (
+      {icons.length > 0 && (
         <div className={styles.searchRow}>
           <input
             className={styles.searchInput}
@@ -272,6 +284,11 @@ function IconsetPanel({ tab }: { tab: PaletteTab }) {
             onChange={(e) => setSearch(e.target.value)}
             aria-label={`Search ${tab.label} icons`}
           />
+          {search && (
+            <span className={styles.searchCount}>
+              {filtered.length} of {icons.length}
+            </span>
+          )}
         </div>
       )}
 
@@ -283,13 +300,13 @@ function IconsetPanel({ tab }: { tab: PaletteTab }) {
             {groupIcons.map((icon) => (
               <div key={icon.path} className={styles.iconCard}>
                 <img
-                  src={paletteImgSrc(tab.id, icon)}
+                  src={paletteImgSrc(tab.id, icon, tab.type)}
                   alt={icon.name}
                   className={styles.iconPreview}
                   loading="lazy"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    const fallback = paletteImgFallback(tab.id, icon);
+                    const fallback = paletteImgFallback(tab.id, icon, tab.type);
                     if (target.src !== fallback && !target.dataset.triedFallback) {
                       target.dataset.triedFallback = 'true';
                       target.src = fallback;

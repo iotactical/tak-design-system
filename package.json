@@ -18,6 +18,7 @@
     "build:compose": "node scripts/build-tokens.mjs --platform compose",
     "build:css": "node scripts/build-tokens.mjs --platform css",
     "build:vscode": "node scripts/build-tokens.mjs --platform vscode",
+    "build:wintak": "node scripts/build-tokens.mjs --platform=wintak",
     "build:bridge": "node scripts/build-color-bridge.mjs",
     "build:react": "npm -w packages/react run build",
     "dev:react": "npm -w packages/react run dev",

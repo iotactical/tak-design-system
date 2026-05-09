@@ -2,109 +2,109 @@
   {
     "req_id": "REQ-APK-001",
     "test_name": "REQ-APK-001: ATAK core asset icon inventory",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_core_icons.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-APK-008",
     "test_name": "REQ-APK-008: ATAK font bundle",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_fonts.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-APK-002",
     "test_name": "REQ-APK-002: ATAK responder iconset pack",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_iconsets.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-APK-003",
     "test_name": "REQ-APK-003: ATAK FalconView iconset pack",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_iconsets.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-APK-004",
     "test_name": "REQ-APK-004: ATAK air iconset pack",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_iconsets.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-APK-005",
     "test_name": "REQ-APK-005: ATAK wildfire iconset pack",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_iconsets.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-APK-006",
     "test_name": "REQ-APK-006: ATAK incident management iconset pack",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_iconsets.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-APK-007",
     "test_name": "REQ-APK-007: Landing Point Tactical icons",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_lpt.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-APK-009",
     "test_name": "REQ-APK-009: ATAK map tile style definitions",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_map_styles.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-APK-010",
     "test_name": "REQ-APK-010: SQLite palette manifests exist for all 6 iconsets",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_sqlite_palettes.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-APK-010",
     "test_name": "REQ-APK-010: Default palette has 800+ icons",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_sqlite_palettes.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-APK-010",
     "test_name": "REQ-APK-010: Generic palette has 600+ icons",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_sqlite_palettes.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-APK-010",
     "test_name": "REQ-APK-010: OSM palette has 300+ icons",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_sqlite_palettes.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-APK-010",
     "test_name": "REQ-APK-010: Google palette has 90+ icons",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_sqlite_palettes.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-APK-010",
     "test_name": "REQ-APK-010: FEMA palette has 40+ icons",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_sqlite_palettes.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-APK-010",
     "test_name": "REQ-APK-010: GeoOps palette exists and has valid structure",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_sqlite_palettes.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-APK-010",
     "test_name": "REQ-APK-010: All palette manifests have name, groups, and icons arrays",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_sqlite_palettes.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-APK-011",
     "test_name": "REQ-APK-011: ATAK vehicle models palette",
-    "test_file": "unknown",
+    "test_file": "tests/asset-packs/test_vehicles.mjs",
     "passed": true
   },
   {
@@ -153,6 +153,36 @@
     "req_id": "REQ-BLD-005",
     "test_name": "REQ-BLD-005: VS Code dark theme generation",
     "test_file": "tests/build/test_vscode.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-034",
+    "test_name": "REQ-XW-034: build:wintak exits 0 and produces output",
+    "test_file": "tests/build/test_wintak.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-030",
+    "test_name": "REQ-XW-030: Valid WPF ResourceDictionary format",
+    "test_file": "tests/build/test_wintak.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-031",
+    "test_name": "REQ-XW-031: Color tokens become SolidColorBrush",
+    "test_file": "tests/build/test_wintak.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-032",
+    "test_name": "REQ-XW-032: Dimension tokens become sys:Double",
+    "test_file": "tests/build/test_wintak.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-033",
+    "test_name": "REQ-XW-033: Resource keys use Tak prefix and PascalCase",
+    "test_file": "tests/build/test_wintak.mjs",
     "passed": true
   },
   {
@@ -246,6 +276,12 @@
     "passed": true
   },
   {
+    "req_id": "REQ-XW-010",
+    "test_name": "SkittleMarker component exports (REQ-XW-010 through XW-015)",
+    "test_file": "tests/components/test_skittle.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-CMP-009",
     "test_name": "StatusIndicators component exports (REQ-CMP-009)",
     "test_file": "tests/components/test_status.mjs",
@@ -332,31 +368,43 @@
   {
     "req_id": "REQ-SITE-002",
     "test_name": "REQ-SITE-002: Component gallery page",
-    "test_file": "unknown",
+    "test_file": "tests/site/test_component_gallery.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-SITE-003",
     "test_name": "REQ-SITE-003: Icon and drawable browser",
-    "test_file": "unknown",
+    "test_file": "tests/site/test_icon_browser.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-040",
+    "test_name": "REQ-XW-040: Fix broken icon paths across palette tabs",
+    "test_file": "tests/site/test_palette_polish.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-041",
+    "test_name": "REQ-XW-041: Add search/filter to all palette tabs",
+    "test_file": "tests/site/test_palette_polish.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-SITE-005",
     "test_name": "REQ-SITE-005: Palettes page",
-    "test_file": "unknown",
+    "test_file": "tests/site/test_palettes.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-SITE-004",
     "test_name": "REQ-SITE-004: Platform output reference pages",
-    "test_file": "unknown",
+    "test_file": "tests/site/test_platform_reference.mjs",
     "passed": true
   },
   {
     "req_id": "REQ-SITE-001",
     "test_name": "REQ-SITE-001: Site build",
-    "test_file": "unknown",
+    "test_file": "tests/site/test_site_build.mjs",
     "passed": true
   },
   {
@@ -525,6 +573,72 @@
     "req_id": "REQ-CMP-005",
     "test_name": "REQ-CMP-005 (from tests/components/test_range_bearing.mjs)",
     "test_file": "tests/components/test_range_bearing.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-011",
+    "test_name": "REQ-XW-011 (inline in REQ-XW-010)",
+    "test_file": "tests/components/test_skittle.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-012",
+    "test_name": "REQ-XW-012 (inline in REQ-XW-010)",
+    "test_file": "tests/components/test_skittle.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-013",
+    "test_name": "REQ-XW-013 (inline in REQ-XW-010)",
+    "test_file": "tests/components/test_skittle.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-014",
+    "test_name": "REQ-XW-014 (inline in REQ-XW-010)",
+    "test_file": "tests/components/test_skittle.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-015",
+    "test_name": "REQ-XW-015 (inline in REQ-XW-010)",
+    "test_file": "tests/components/test_skittle.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-050",
+    "test_name": "REQ-XW-050 (from tests/bdd/test_gherkin.mjs)",
+    "test_file": "tests/bdd/test_gherkin.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-051",
+    "test_name": "REQ-XW-051 (inline in REQ-XW-050)",
+    "test_file": "tests/bdd/test_gherkin.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-052",
+    "test_name": "REQ-XW-052 (inline in REQ-XW-050)",
+    "test_file": "tests/bdd/test_gherkin.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-053",
+    "test_name": "REQ-XW-053 (inline in REQ-XW-050)",
+    "test_file": "tests/bdd/test_gherkin.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-054",
+    "test_name": "REQ-XW-054 (inline in REQ-XW-050)",
+    "test_file": "tests/bdd/test_gherkin.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-055",
+    "test_name": "REQ-XW-055 (inline in REQ-XW-050)",
+    "test_file": "tests/bdd/test_gherkin.mjs",
     "passed": true
   }
 ]

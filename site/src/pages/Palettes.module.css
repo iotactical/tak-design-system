@@ -95,6 +95,13 @@
   border-color: #FFE35E;
 }
 
+.searchCount {
+  display: inline-block;
+  margin-left: 12px;
+  font-size: 13px;
+  color: #878787;
+}
+
 /* Group sections */
 .groupSection {
   margin-bottom: 28px;

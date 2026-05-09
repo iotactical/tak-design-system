@@ -47,6 +47,19 @@ StyleDictionary.registerTransform({
   }
 });
 
+// rtmx:req XW-033
+// WinTAK WPF resource key: TakColorBlue500 (PascalCase with Tak prefix)
+StyleDictionary.registerTransform({
+  name: 'name/tak/wintak',
+  type: 'name',
+  transform: (token) => {
+    return ['tak', ...token.path]
+      .map(p => p.replace(/-([a-zA-Z0-9])/g, (_, c) => c.toUpperCase()))
+      .map(p => p.charAt(0).toUpperCase() + p.slice(1))
+      .join('');
+  }
+});
+
 // CSS variable name: --tak-color-blue-500
 StyleDictionary.registerTransform({
   name: 'name/tak/css',
@@ -130,6 +143,36 @@ import androidx.compose.ui.graphics.Color
 object ${objectName} {
 ${colors}
 }
+`;
+  }
+});
+
+// rtmx:req XW-030
+// WinTAK WPF ResourceDictionary XAML
+StyleDictionary.registerFormat({
+  name: 'wintak/resource-dictionary',
+  format: ({ dictionary }) => {
+    const resources = dictionary.allTokens.map(t => {
+      const v = val(t);
+      // rtmx:req XW-031
+      if (t.$type === 'color') {
+        return `    <SolidColorBrush x:Key="${t.name}" Color="${v}"/>`;
+      }
+      // rtmx:req XW-032
+      if (t.$type === 'dimension') {
+        const num = typeof v === 'string' ? v.replace(/[a-z%]+$/i, '') : String(v);
+        return `    <sys:Double x:Key="${t.name}">${num}</sys:Double>`;
+      }
+      return null;
+    }).filter(Boolean).join('\n');
+
+    return `<!-- TAK Design System - Generated. Do not edit manually. -->
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+${resources}
+</ResourceDictionary>
 `;
   }
 });
@@ -258,6 +301,18 @@ const platforms = {
         destination: 'tak-tokens.css',
         format: 'css/variables',
         options: { selector: ':root' }
+      }
+    ]
+  },
+  // rtmx:req XW-034
+  wintak: {
+    transforms: ['name/tak/wintak'],
+    buildPath: 'platforms/wintak/generated/',
+    files: [
+      {
+        destination: 'TakResourceDictionary.xaml',
+        format: 'wintak/resource-dictionary',
+        filter: (token) => token.$type === 'color' || token.$type === 'dimension'
       }
     ]
   },

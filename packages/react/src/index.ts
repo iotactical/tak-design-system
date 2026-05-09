@@ -24,6 +24,7 @@ export { RangeBearing, type RangeBearingProps, type DistanceUnit } from './compo
 export { RoutePlanner, type RoutePlannerProps, type Waypoint } from './components/RoutePlanner';
 export { NineLineForm, type NineLineFormProps, type NineLineTemplate, type NineLineLine } from './components/NineLineForm';
 export { ScaleBar, type ScaleBarProps, CompassHeading, type CompassHeadingProps, ElevationProfile, type ElevationProfileProps, type ElevationPoint } from './components/MapOverlay';
+export { SkittleMarker, type SkittleMarkerProps } from './components/SkittleMarker';
 
 // Theme
 export { TakThemeProvider, useTakTheme, type TakThemeProviderProps } from './theme/TakThemeProvider';

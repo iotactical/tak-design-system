@@ -42,7 +42,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 
 function scanTestFiles() {
   const map = {};
-  const dirs = ['tests', 'tests/tokens', 'tests/build', 'tests/assets', 'tests/react', 'tests/styles', 'tests/symbology', 'tests/package', 'tests/icons', 'tests/components', 'tests/ci'];
+  const dirs = ['tests', 'tests/tokens', 'tests/build', 'tests/assets', 'tests/react', 'tests/styles', 'tests/symbology', 'tests/package', 'tests/icons', 'tests/components', 'tests/ci', 'tests/site', 'tests/asset-packs', 'tests/bdd'];
   for (const dir of dirs) {
     let files;
     try {
@@ -51,7 +51,7 @@ function scanTestFiles() {
     for (const file of files) {
       if (!file.endsWith('.mjs')) continue;
       const content = readFileSync(resolve(ROOT, dir, file), 'utf8');
-      const markers = content.match(/\/\/ rtmx:req (REQ-[A-Z0-9-]+)/g) || [];
+      const markers = content.match(/\/\/ rtmx:req ([A-Z]+-[A-Z0-9-]+)/g) || [];
       for (const m of markers) {
         const reqId = m.replace('// rtmx:req ', '');
         map[reqId] = { file: `${dir}/${file}` };
@@ -72,7 +72,7 @@ for (const line of lines) {
     const passed = suiteMatch[1] === 'ok';
     const suiteName = suiteMatch[2];
     allSuiteResults.push({ passed, suiteName });
-    const reqMatch = suiteName.match(/(REQ-[A-Z]+-\d+)/);
+    const reqMatch = suiteName.match(/([A-Z]+-[A-Z]*-?\d+)/);
     if (reqMatch) {
       const reqId = reqMatch[1];
       const fileInfo = reqMap[reqId];
