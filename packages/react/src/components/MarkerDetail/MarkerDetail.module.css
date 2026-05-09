@@ -1,0 +1,140 @@
+.markerDetail {
+  background-color: var(--tak-surface-card-dark, #383838);
+  border-left: 4px solid var(--tak-border-default-dark, rgba(255, 255, 255, 0.12));
+  padding: var(--tak-spacing-3, 12px);
+  font-family: var(--tak-atak-font-primary, 'Nunito', sans-serif);
+  color: var(--tak-text-primary-light, rgba(0, 0, 0, 0.87));
+  min-width: 240px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--tak-spacing-2, 8px);
+  padding-bottom: var(--tak-spacing-2, 8px);
+  border-bottom: 1px solid var(--tak-border-default-dark, rgba(255, 255, 255, 0.12));
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.callsign {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--tak-atak-color-mint-green, #A8E6CF);
+  flex: 1;
+}
+
+.callsignStale {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--tak-atak-color-light-salmon-pink, #FFAAA5);
+  flex: 1;
+}
+
+.cotType {
+  font-size: 11px;
+  font-family: var(--tak-atak-font-mono, 'JetBrains Mono', monospace);
+  color: var(--tak-text-secondary-dark, rgba(255, 255, 255, 0.6));
+}
+
+.staleIndicator {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--tak-atak-semantic-alert, #F52D2D);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.coordinates {
+  display: flex;
+  align-items: baseline;
+  gap: var(--tak-spacing-2, 8px);
+  padding-top: var(--tak-spacing-2, 8px);
+}
+
+.coordValue {
+  font-family: var(--tak-atak-font-mono, 'JetBrains Mono', monospace);
+  font-size: 13px;
+  color: var(--tak-atak-color-mint-green, #A8E6CF);
+}
+
+.altitude {
+  font-family: var(--tak-atak-font-mono, 'JetBrains Mono', monospace);
+  font-size: 12px;
+  color: var(--tak-text-secondary-dark, rgba(255, 255, 255, 0.6));
+}
+
+.lastUpdate {
+  font-size: 11px;
+  color: var(--tak-text-secondary-dark, rgba(255, 255, 255, 0.6));
+  padding-top: var(--tak-spacing-1, 4px);
+}
+
+.body {
+  padding-top: var(--tak-spacing-3, 12px);
+}
+
+.actionBar {
+  display: flex;
+  gap: var(--tak-spacing-2, 8px);
+  padding-top: var(--tak-spacing-3, 12px);
+  margin-top: var(--tak-spacing-3, 12px);
+  border-top: 1px solid var(--tak-border-default-dark, rgba(255, 255, 255, 0.12));
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  gap: var(--tak-spacing-1, 4px);
+  background-color: var(--tak-atak-semantic-primary, #4DA6D8);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--tak-standard-dialog-corner-radius, 6px);
+  padding: 6px 12px;
+  font-family: var(--tak-atak-font-primary, 'Nunito', sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 32px;
+}
+
+.actionButton:hover {
+  opacity: 0.85;
+}
+
+.actionIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+}
+
+.actionLabel {
+  white-space: nowrap;
+}
+
+/* Stale state */
+.stale {
+  border-left-color: var(--tak-atak-semantic-alert, #F52D2D);
+}
+
+/* Light theme overrides */
+[data-tak-theme='light'] .markerDetail {
+  background-color: var(--tak-surface-card-light, #E0E0E0);
+}
+
+[data-tak-theme='light'] .header {
+  border-bottom-color: var(--tak-border-default-light, rgba(0, 0, 0, 0.12));
+}
+
+[data-tak-theme='light'] .actionBar {
+  border-top-color: var(--tak-border-default-light, rgba(0, 0, 0, 0.12));
+}

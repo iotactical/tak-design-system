@@ -1,0 +1,163 @@
+.chatPanel {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--tak-chat-background, #232323);
+  color: var(--tak-text-primary-dark, rgba(255, 255, 255, 0.87));
+  font-family: var(--tak-atak-font-primary, 'Nunito', sans-serif);
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Channel selector bar */
+.channelBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background-color: var(--tak-chat-channel-bar, #1a1a1a);
+  border-bottom: 1px solid var(--tak-border-default-dark, rgba(255, 255, 255, 0.12));
+}
+
+.channelSelect {
+  flex: 1;
+  background-color: #2a2a2a;
+  color: rgba(255, 255, 255, 0.87);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-family: inherit;
+  font-size: 13px;
+  height: 28px;
+}
+
+.unreadBadge {
+  background-color: var(--tak-atak-semantic-alert, #F52D2D);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+}
+
+/* Scrollable message list */
+.messageList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Message bubbles */
+.messageBubble {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background-color: #2e2e2e;
+  gap: 2px;
+}
+
+.self {
+  align-self: flex-end;
+  background-color: #2a3a4a;
+}
+
+.other {
+  align-self: flex-start;
+  background-color: #2e2e2e;
+}
+
+.sender {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.senderSelf {
+  color: var(--tak-chat-send-label, #98C5FF);
+}
+
+.senderOther {
+  color: var(--tak-chat-receive-label, #FF483B);
+}
+
+.text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.87);
+  word-break: break-word;
+}
+
+.coordinate {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: monospace;
+}
+
+.timestamp {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  align-self: flex-end;
+}
+
+/* Input bar - ATAK AtakMessageBar style */
+.inputBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  height: var(--tak-chat-message-bar-height, 34px);
+  min-height: var(--tak-chat-message-bar-height, 34px);
+  background-color: var(--tak-chat-input-bar, #1a1a1a);
+  border-top: 1px solid var(--tak-border-default-dark, rgba(255, 255, 255, 0.12));
+}
+
+.input {
+  flex: 1;
+  background-color: #2a2a2a;
+  color: rgba(255, 255, 255, 0.87);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-family: inherit;
+  font-size: 13px;
+  height: 26px;
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--tak-atak-semantic-primary, #4DA6D8);
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.sendButton {
+  background-color: var(--tak-atak-semantic-primary, #4DA6D8);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 26px;
+  white-space: nowrap;
+}
+
+.sendButton:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.sendButton:disabled {
+  opacity: 0.4;
+  cursor: default;
+}

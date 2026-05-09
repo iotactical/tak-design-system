@@ -1,0 +1,107 @@
+.userList {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background: var(--tak-surface-list, #232323);
+  font-family: var(--tak-font-family-sans, 'Nunito', sans-serif);
+  color: var(--tak-text-primary-dark, #ffffff);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 var(--tak-spacing-4, 16px);
+  cursor: pointer;
+  transition: background 0.15s ease;
+  outline: none;
+}
+
+.item:hover,
+.item:focus-visible {
+  background: var(--tak-surface-list-hover, rgba(255, 255, 255, 0.08));
+}
+
+.item.selected {
+  background: var(--tak-surface-list-selected, rgba(33, 150, 243, 0.16));
+}
+
+/* Status indicator dot */
+.statusDot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: var(--tak-spacing-2, 8px);
+}
+
+.item.online .statusDot {
+  background: var(--tak-led-green, #92A844);
+}
+
+.item.stale .statusDot {
+  background: var(--tak-heading-yellow, #DFB228);
+}
+
+.item.offline .statusDot {
+  background: var(--tak-led-red, #C92424);
+}
+
+/* Team color dot */
+.teamDot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: var(--tak-spacing-2, 8px);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  gap: var(--tak-spacing-2, 8px);
+}
+
+.callsign {
+  font-size: var(--tak-typography-header1-font-size, 14px);
+  font-weight: var(--tak-typography-header1-font-weight, 700);
+  line-height: var(--tak-typography-header1-line-height, 20px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Callsign color by status */
+.item.online .callsign {
+  color: var(--tak-callsign-default, #9DFFAF);
+}
+
+.item.stale .callsign {
+  color: var(--tak-callsign-alert, #FF9D9D);
+}
+
+.item.offline .callsign {
+  color: var(--tak-text-disabled-dark, rgba(255, 255, 255, 0.38));
+}
+
+.role {
+  font-size: var(--tak-typography-body-font-size, 12px);
+  font-weight: var(--tak-typography-body-font-weight, 400);
+  line-height: var(--tak-typography-body-line-height, 16px);
+  color: var(--tak-text-secondary-dark, rgba(255, 255, 255, 0.6));
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.divider {
+  height: 1px;
+  background: var(--tak-border-divider, #979797);
+  margin: 0 var(--tak-spacing-4, 16px);
+}

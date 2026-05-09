@@ -16,6 +16,10 @@ export { NavBar, type NavBarProps, type NavBarAction } from './components/NavBar
 export { DockPane, type DockPaneProps } from './components/DockPane';
 export { DialogPanel, type DialogPanelProps, type DialogAction } from './components/DialogPanel';
 export { ListView, type ListViewProps, type ListItem } from './components/ListView';
+export { RadialMenu, type RadialMenuProps, type RadialMenuItem } from './components/RadialMenu';
+export { ChatPanel, type ChatPanelProps, type ChatMessage } from './components/ChatPanel';
+export { MarkerDetail, type MarkerDetailProps, type MarkerAction, type MarkerAffiliation } from './components/MarkerDetail';
+export { UserList, type UserListProps, type UserEntry } from './components/UserList';
 
 // Theme
 export { TakThemeProvider, useTakTheme, type TakThemeProviderProps } from './theme/TakThemeProvider';
