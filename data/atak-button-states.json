@@ -1,0 +1,491 @@
+[
+  {
+    "name": "btn_check",
+    "states": [
+      {
+        "drawable": "@drawable/ic_check_on",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": true,
+          "state_window_focused": false
+        }
+      },
+      {
+        "drawable": "@drawable/ic_check_off",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": false,
+          "state_window_focused": false
+        }
+      },
+      {
+        "drawable": "@drawable/ic_check_off",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": false
+        }
+      },
+      {
+        "drawable": "@drawable/ic_check_on",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "btn_check_off",
+    "states": [],
+    "shapeType": "rectangle"
+  },
+  {
+    "name": "btn_check_off_default",
+    "type": "png",
+    "format": "png",
+    "densities": [
+      "xhdpi"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_check_off_disabled",
+    "type": "png",
+    "format": "png",
+    "densities": [
+      "xhdpi"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_check_off_pressed",
+    "type": "png",
+    "format": "png",
+    "densities": [
+      "xhdpi"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_check_on",
+    "states": [],
+    "shapeType": "rectangle"
+  },
+  {
+    "name": "btn_check_on_default",
+    "type": "png",
+    "format": "png",
+    "densities": [
+      "xhdpi"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_check_on_disabled",
+    "type": "png",
+    "format": "png",
+    "densities": [
+      "xhdpi"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_check_on_pressed",
+    "type": "png",
+    "format": "png",
+    "densities": [
+      "xhdpi"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_check_semi",
+    "states": [],
+    "shapeType": "rectangle"
+  },
+  {
+    "name": "btn_check_semi_default",
+    "type": "png",
+    "format": "png",
+    "densities": [
+      "xhdpi"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_check_semi_disabled",
+    "type": "png",
+    "format": "png",
+    "densities": [
+      "xhdpi"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_check_semi_pressed",
+    "type": "png",
+    "format": "png",
+    "densities": [
+      "xhdpi"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_check_use_btn",
+    "states": [
+      {
+        "drawable": "@drawable/btn_check_on_default",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": true,
+          "state_window_focused": false
+        }
+      },
+      {
+        "drawable": "@drawable/btn_check_off_default",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": false,
+          "state_window_focused": false
+        }
+      },
+      {
+        "drawable": "@drawable/btn_check_off_default",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": false
+        }
+      },
+      {
+        "drawable": "@drawable/btn_check_on_default",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "btn_dark_normal",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "default"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_dark_pressed",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "default"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_default",
+    "states": [
+      {
+        "drawable": "@drawable/btn_default_normal",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": false,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_default_selected",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_default_pressed",
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_default_disabled",
+        "conditions": {
+          "state_enabled": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "btn_default_atak_disabled",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "mdpi"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_default_atak_disabled_focused",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "mdpi"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_default_atak_focused",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "mdpi"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_default_atak_normal",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "mdpi"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_default_atak_pressed",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "mdpi"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_default_disabled",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "default"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_default_normal",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "default"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_default_normal_arrow",
+    "states": [
+      {
+        "drawable": "@drawable/btn_default_normal"
+      },
+      {},
+      {
+        "drawable": "@drawable/btn_default_normal"
+      }
+    ]
+  },
+  {
+    "name": "btn_default_normal_disable",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "default"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_default_normal_disable_focused",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "default"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_default_pressed",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "default"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_default_selected",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "default"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_default_selected_arrow",
+    "states": [
+      {
+        "drawable": "@drawable/btn_default_selected"
+      },
+      {},
+      {
+        "drawable": "@drawable/btn_default_normal"
+      }
+    ]
+  },
+  {
+    "name": "btn_expandable",
+    "states": [
+      {
+        "drawable": "@drawable/ic_row_contract"
+      },
+      {
+        "drawable": "@drawable/ic_row_expand"
+      }
+    ]
+  },
+  {
+    "name": "btn_gray",
+    "states": [
+      {
+        "drawable": "@drawable/new_dark_button_selected",
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/new_dark_button_selected",
+        "conditions": {
+          "state_selected": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/new_dark_button_selected",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/new_dark_button_disabled",
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {
+        "drawable": "@drawable/new_dark_button_bg"
+      }
+    ]
+  },
+  {
+    "name": "btn_gray_default",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "hdpi"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_gray_disabled",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "hdpi"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_gray_no_checked_highlight",
+    "states": [
+      {
+        "drawable": "@drawable/btn_gray_selected",
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_gray_selected",
+        "conditions": {
+          "state_selected": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_gray_disabled",
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {
+        "drawable": "@drawable/btn_gray_default"
+      }
+    ]
+  },
+  {
+    "name": "btn_gray_selected",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "hdpi"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_toggle_holo_dark",
+    "states": [
+      {
+        "drawable": "@drawable/btn_toggle_on_normal_holo_dark",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_toggle_on_pressed_holo_dark",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_toggle_off_normal_holo_dark"
+      }
+    ]
+  },
+  {
+    "name": "btn_toggle_off_normal_holo_dark",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "default"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_toggle_on_normal_holo_dark",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "default"
+    ],
+    "states": []
+  },
+  {
+    "name": "btn_toggle_on_pressed_holo_dark",
+    "type": "nine-patch",
+    "format": "9.png",
+    "densities": [
+      "default"
+    ],
+    "states": []
+  }
+]

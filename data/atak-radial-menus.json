@@ -1,0 +1,2901 @@
+{
+  "menus": [
+    {
+      "name": "a-f",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/toggle_crumb.xml",
+          "icon": "icons/breadcrumbs.xml",
+          "submenu": "menus/trackhistory_submenu.xml",
+          "selected": "${tracks_on}"
+        },
+        {
+          "action": "actions/dangerclose.xml",
+          "icon": "icons/blast_rings.png",
+          "dependsOnCapability": "capability.weapons"
+        },
+        {
+          "icon": "icons/contact.png",
+          "submenu": "menus/contact_submenu.xml"
+        },
+        {
+          "action": "actions/video.xml",
+          "icon": "icons/video.png",
+          "disabled": "!{${videoUrl}}"
+        },
+        {
+          "action": "actions/lockcam.xml",
+          "icon": "icons/camlock.xml",
+          "selected": "${camLocked}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        }
+      ]
+    },
+    {
+      "name": "a-f-A-M-F-Q-k",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/toggle_crumb.xml",
+          "icon": "icons/breadcrumbs.xml",
+          "submenu": "menus/trackhistory_submenu.xml",
+          "selected": "${tracks_on}"
+        },
+        {
+          "action": "actions/lockcam.xml",
+          "icon": "icons/camlock.xml",
+          "selected": "${camLocked}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        }
+      ]
+    },
+    {
+      "name": "a-h",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/toggle_crumb.xml",
+          "icon": "icons/breadcrumbs.xml",
+          "submenu": "menus/trackhistory_submenu.xml",
+          "selected": "${tracks_on}"
+        },
+        {
+          "action": "actions/dangerclose.xml",
+          "icon": "icons/blast_rings.png",
+          "dependsOnCapability": "capability.weapons"
+        },
+        {
+          "action": "actions/9line.xml",
+          "icon": "icons/cas.png",
+          "submenu": "menus/cff_submenu.xml",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/tasktoobject.xml",
+          "icon": "icons/task.png",
+          "disabled": "@{disableTasking}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        },
+        {
+          "action": "actions/hostile_compass.xml",
+          "icon": "icons/compass_rose.png",
+          "submenu": "menus/compass_submenu.xml",
+          "selected": "${hostileBearingCircle}"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        }
+      ]
+    },
+    {
+      "name": "a-j",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/lockcam.xml",
+          "icon": "icons/camlock.xml",
+          "selected": "${camLocked}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        }
+      ]
+    },
+    {
+      "name": "a-k",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/lockcam.xml",
+          "icon": "icons/camlock.xml",
+          "selected": "${camLocked}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        }
+      ]
+    },
+    {
+      "name": "a-n",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/toggle_crumb.xml",
+          "icon": "icons/breadcrumbs.xml",
+          "submenu": "menus/trackhistory_submenu.xml",
+          "selected": "${tracks_on}"
+        },
+        {
+          "action": "actions/dangerclose.xml",
+          "icon": "icons/blast_rings.png",
+          "dependsOnCapability": "capability.weapons"
+        },
+        {
+          "action": "actions/tasktoobject.xml",
+          "icon": "icons/task.png",
+          "disabled": "@{disableTasking}"
+        },
+        {
+          "action": "actions/lockcam.xml",
+          "icon": "icons/camlock.xml",
+          "selected": "${camLocked}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        }
+      ]
+    },
+    {
+      "name": "a-u",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/toggle_crumb.xml",
+          "icon": "icons/breadcrumbs.xml",
+          "submenu": "menus/trackhistory_submenu.xml",
+          "selected": "${tracks_on}"
+        },
+        {
+          "action": "actions/dangerclose.xml",
+          "icon": "icons/blast_rings.png",
+          "dependsOnCapability": "capability.weapons"
+        },
+        {
+          "action": "actions/tasktoobject.xml",
+          "icon": "icons/task.png",
+          "disabled": "@{disableTasking}"
+        },
+        {
+          "action": "actions/lockcam.xml",
+          "icon": "icons/camlock.xml",
+          "selected": "${camLocked}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        }
+      ]
+    },
+    {
+      "name": "alert_menu",
+      "items": [
+        {
+          "action": "actions/remove_alert.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        }
+      ]
+    },
+    {
+      "name": "b-i",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/image_details.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/image.xml",
+          "icon": "icons/camera.png"
+        },
+        {
+          "action": "actions/9line_spi.xml",
+          "icon": "icons/nineline.png",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        }
+      ]
+    },
+    {
+      "name": "b-m-p-a",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    },
+    {
+      "name": "b-m-p-c",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    },
+    {
+      "name": "b-m-p-c-z",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    },
+    {
+      "name": "b-m-p-i",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    },
+    {
+      "name": "b-m-p-j",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/jm_reminder.xml",
+          "icon": "icons/details.png"
+        }
+      ]
+    },
+    {
+      "name": "b-m-p-j-alt",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/jumpmaster_jump_to_alt.xml",
+          "icon": "icons/go.png",
+          "disabled": "!{${navigating}}"
+        },
+        {
+          "action": "actions/jumpmaster_landing_pattern.xml",
+          "icon": "icons/landing_pattern.png",
+          "selected": "${dipLandingPattern}"
+        },
+        {
+          "action": "actions/jumpmaster_dip_circle.xml",
+          "icon": "icons/compass_rose.png",
+          "selected": "${dipBearingCircle}"
+        }
+      ]
+    },
+    {
+      "name": "b-m-p-s-m",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails_spotmap.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/toggle_label.xml",
+          "icon": "icons/show_label.png",
+          "selected": "!{${hideLabel}}"
+        },
+        {
+          "action": "actions/dangerclose.xml",
+          "icon": "icons/blast_rings.png",
+          "dependsOnCapability": "capability.weapons"
+        },
+        {
+          "action": "actions/9line_spi.xml",
+          "icon": "icons/nineline.png",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/startgoto.xml",
+          "icon": "icons/green_flag_radial.png",
+          "selected": "${hounding}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    },
+    {
+      "name": "b-m-p-s-p-i",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/lockcam.xml",
+          "icon": "icons/camlock.xml",
+          "selected": "${camLocked}"
+        },
+        {
+          "action": "actions/dropspitarget.xml",
+          "icon": "icons/target.png",
+          "submenu": "menus/drop_point_submenu.xml"
+        },
+        {
+          "action": "actions/drop9Line.xml",
+          "icon": "icons/cas.png",
+          "submenu": "menus/cffdropper_submenu.xml",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/spi_fah.xml",
+          "icon": "icons/fah_redx.png",
+          "submenu": "menus/spi_fah_submenu.xml",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/toggle_crumb.xml",
+          "icon": "icons/breadcrumbs.xml",
+          "submenu": "menus/breadcrumbs_prefs.xml",
+          "selected": "${tracks_on}"
+        },
+        {
+          "action": "actions/dangerclose.xml",
+          "icon": "icons/blast_rings.png",
+          "dependsOnCapability": "capability.weapons"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/spipairinglineself.xml",
+          "icon": "icons/pairing_line_to_self.png",
+          "submenu": "menus/compass_submenu.xml",
+          "selected": "${hostileBearingCircle}"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        },
+        {
+          "action": "actions/bloodhound.xml",
+          "icon": "icons/bloodhound.xml",
+          "selected": "${hounding}"
+        }
+      ]
+    },
+    {
+      "name": "b-m-p-s-p-i-lrf",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/lockcam.xml",
+          "icon": "icons/camlock.xml",
+          "selected": "${camLocked}"
+        },
+        {
+          "action": "actions/lrfslide.xml",
+          "icon": "icons/lrf_slide.png",
+          "selected": "${lrfslide}"
+        },
+        {
+          "action": "actions/spi_fah.xml",
+          "icon": "icons/fah_redx.png",
+          "submenu": "menus/spi_fah_submenu.xml",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/dangerclose.xml",
+          "icon": "icons/blast_rings.png",
+          "dependsOnCapability": "capability.weapons"
+        },
+        {
+          "action": "actions/dropspitarget.xml",
+          "icon": "icons/target.png",
+          "submenu": "menus/drop_point_submenu.xml"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/spipairinglineself.xml",
+          "icon": "icons/pairing_line_to_self.png",
+          "submenu": "menus/compass_submenu.xml",
+          "selected": "${hostileBearingCircle}"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        }
+      ]
+    },
+    {
+      "name": "b-m-p-s-p-i-mgrs",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/dangerclose.xml",
+          "icon": "icons/blast_rings.png",
+          "dependsOnCapability": "capability.weapons"
+        },
+        {
+          "action": "actions/dropspitarget.xml",
+          "icon": "icons/target.png",
+          "submenu": "menus/drop_point_submenu.xml"
+        },
+        {
+          "action": "actions/bloodhound.xml",
+          "icon": "icons/bloodhound.xml",
+          "selected": "${hounding}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        }
+      ]
+    },
+    {
+      "name": "b-m-p-s-p-loc",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails_sensor.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/toggle_sensor_fov.xml",
+          "icon": "icons/fov_visibility.png",
+          "selected": "!{${hideFov}}"
+        },
+        {
+          "action": "actions/sensor_fov_color.xml",
+          "icon": "icons/color_wheel.png"
+        },
+        {
+          "action": "actions/video.xml",
+          "icon": "icons/video.png",
+          "disabled": "!{${videoUID}}"
+        },
+        {
+          "action": "actions/sensor_fov_direction.xml",
+          "icon": "icons/fov_direction.png"
+        },
+        {
+          "action": "actions/sensor_fov_size.xml",
+          "icon": "icons/fov_size.png"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        }
+      ]
+    },
+    {
+      "name": "b-m-p-s-p-op",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/snaptoself.xml",
+          "icon": "icons/self.png"
+        },
+        {
+          "action": "actions/startgoto.xml",
+          "icon": "icons/green_flag_radial.png",
+          "selected": "${hounding}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    },
+    {
+      "name": "b-m-p-w",
+      "items": [
+        {
+          "action": "actions/startgoto.xml",
+          "icon": "icons/green_flag_radial.png",
+          "angle": "90",
+          "selected": "${hounding}"
+        },
+        {
+          "action": "actions/edit_route.xml",
+          "icon": "icons/edit2.png"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/show_route_for_wp.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/general_entry.xml",
+          "icon": "icons/general_entry.png"
+        }
+      ]
+    },
+    {
+      "name": "b-m-p-w-GOTO",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/startgoto.xml",
+          "icon": "icons/green_flag_radial.png",
+          "selected": "${hounding}"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    },
+    {
+      "name": "b-m-r",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/show_route.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/edit_route.xml",
+          "icon": "icons/edit2.png",
+          "disabled": "!{${editable}}"
+        },
+        {
+          "action": "actions/startnav.xml",
+          "icon": "icons/green_flag_radial.png"
+        },
+        {
+          "action": "actions/label_toggle.xml",
+          "icon": "icons/label.png",
+          "selected": "${labels_on}"
+        },
+        {
+          "action": "actions/clamp_toggle.xml",
+          "icon": "icons/clamp.png",
+          "selected": "${clampedToGround}"
+        }
+      ]
+    },
+    {
+      "name": "b-m-r-air",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/show_route.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/edit_route.xml",
+          "icon": "icons/edit2.png",
+          "disabled": "!{${editable}}"
+        },
+        {
+          "action": "actions/startnav.xml",
+          "icon": "icons/green_flag_radial.png"
+        },
+        {
+          "action": "actions/label_toggle.xml",
+          "icon": "icons/label.png",
+          "selected": "${labels_on}"
+        },
+        {
+          "action": "actions/clamp_toggle.xml",
+          "icon": "icons/clamp.png",
+          "selected": "${clampedToGround}"
+        },
+        {
+          "action": "actions/doghouse_toggle.xml",
+          "icon": "icons/doghouse.png",
+          "selected": "${showDoghouses}"
+        }
+      ]
+    },
+    {
+      "name": "basic_assoc_marker",
+      "items": [
+        {
+          "action": "actions/remove_route.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "true"
+        },
+        {
+          "action": "actions/move_editable_polyline_vertex.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_vertex_submenu.xml",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumbs_prefs",
+      "items": [
+        {
+          "action": "actions/breadcrumb_color.xml",
+          "icon": "icons/color_wheel.png"
+        }
+      ]
+    },
+    {
+      "name": "cff_submenu",
+      "items": [
+        {
+          "action": "actions/9line.xml",
+          "icon": "icons/cas.png"
+        },
+        {
+          "action": "actions/cff.xml",
+          "icon": "icons/cff.png"
+        },
+        {
+          "action": "actions/cffplus.xml",
+          "icon": "icons/cffplus.png"
+        }
+      ]
+    },
+    {
+      "name": "cffdropper_submenu",
+      "items": [
+        {
+          "action": "actions/drop9Line.xml",
+          "icon": "icons/cas.png"
+        },
+        {
+          "action": "actions/drop5Line.xml",
+          "icon": "icons/cff.png"
+        },
+        {
+          "action": "actions/dropcffplus.xml",
+          "icon": "icons/cffplus.png"
+        }
+      ]
+    },
+    {
+      "name": "compass_submenu",
+      "items": [
+        {
+          "action": "actions/hostile_compass.xml",
+          "icon": "icons/compass_rose.png",
+          "selected": "${hostileBearingCircle}"
+        },
+        {
+          "action": "actions/bullseye_compass.xml",
+          "icon": "icons/bullseye.png",
+          "selected": "${bullseyeOverlay}"
+        },
+        {
+          "action": "actions/spipairinglineself.xml",
+          "icon": "icons/pairing_line_to_self.png",
+          "selected": "${pairinglineself_on}"
+        }
+      ]
+    },
+    {
+      "name": "compass_widget_menu",
+      "items": [
+        {
+          "action": "actions/compass_lock_tilt.xml",
+          "icon": "icons/tilt_lock.png",
+          "angle": "-75",
+          "disabled": "!{${enable3D}}",
+          "selected": "${lockTilt}",
+          "dependsOnCapability": "capability.3d"
+        },
+        {
+          "action": "actions/compass_toggle_3d.xml",
+          "icon": "icons/toggle_3d.png",
+          "selected": "${enable3D}",
+          "dependsOnCapability": "capability.3d"
+        },
+        {
+          "action": "actions/compass_toggle_user_up.xml",
+          "icon": "icons/rotate.png",
+          "selected": "${userUp}"
+        }
+      ]
+    },
+    {
+      "name": "compass_widget_model_menu",
+      "items": [
+        {
+          "action": "actions/compass_lock_tilt.xml",
+          "icon": "icons/tilt_lock.png",
+          "angle": "-75",
+          "disabled": "!{${enable3D}}",
+          "selected": "${lockTilt}",
+          "dependsOnCapability": "capability.3d"
+        },
+        {
+          "action": "actions/compass_toggle_3d.xml",
+          "icon": "icons/toggle_3d.png",
+          "selected": "${enable3D}",
+          "dependsOnCapability": "capability.3d"
+        },
+        {
+          "action": "actions/compass_toggle_user_up.xml",
+          "icon": "icons/rotate.png",
+          "selected": "${userUp}"
+        }
+      ]
+    },
+    {
+      "name": "contact_submenu",
+      "items": [
+        {
+          "action": "actions/phonecall.xml",
+          "icon": "icons/phone_icon.png",
+          "disabled": "!{${phoneNumber}}"
+        },
+        {
+          "action": "actions/phonecall.xml",
+          "icon": "icons/alt_phone_icon.png",
+          "disabled": "!{${altphoneNumber}}"
+        },
+        {
+          "action": "actions/voip.xml",
+          "icon": "icons/voip_icon.png",
+          "disabled": "!{${sipAddress}}"
+        },
+        {
+          "action": "actions/geochat.xml",
+          "icon": "icons/chatsmall.png",
+          "disabled": "!{${endpoint}}"
+        },
+        {
+          "action": "actions/xmpp.xml",
+          "icon": "icons/xmpp_icon.png",
+          "disabled": "!{${xmppUsername}}"
+        },
+        {
+          "action": "actions/sms.xml",
+          "icon": "icons/sms_icon.png",
+          "disabled": "!{${phoneNumber}}"
+        },
+        {
+          "action": "actions/email.xml",
+          "icon": "icons/email_icon.png",
+          "disabled": "!{${emailAddress}}"
+        },
+        {
+          "action": "actions/missionpackage.xml",
+          "icon": "icons/missionpackage.png",
+          "disabled": "!{${endpoint}}"
+        }
+      ]
+    },
+    {
+      "name": "coord_widget_menu",
+      "items": [
+        {
+          "action": "actions/coord_copy.xml",
+          "icon": "icons/copy.png",
+          "angle": "-160"
+        },
+        {
+          "action": "actions/coord_enlarge.xml",
+          "icon": "icons/expand.png"
+        }
+      ]
+    },
+    {
+      "name": "damaged_friendly",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showmedline.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        },
+        {
+          "action": "actions/bloodhound.xml",
+          "icon": "icons/bloodhound.xml",
+          "selected": "${hounding}"
+        }
+      ]
+    },
+    {
+      "name": "danger_close_menu",
+      "items": [
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/danger_label_toggle.xml",
+          "icon": "icons/label.png",
+          "selected": "${labels_on}"
+        }
+      ]
+    },
+    {
+      "name": "default",
+      "items": [
+        {
+          "action": "actions/dropfriendly.xml",
+          "icon": "icons/friendly.png",
+          "angle": "30"
+        },
+        {
+          "action": "actions/droptarget.xml",
+          "icon": "icons/target.png"
+        },
+        {
+          "action": "actions/dropneutral.xml",
+          "icon": "icons/neutral.png"
+        },
+        {
+          "action": "actions/dropunknown.xml",
+          "icon": "icons/unknown.png"
+        },
+        {
+          "action": "actions/dropdamaged.xml",
+          "icon": "icons/damaged.png"
+        }
+      ]
+    },
+    {
+      "name": "default_item",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        }
+      ]
+    },
+    {
+      "name": "default_item_w_type",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails.xml",
+          "icon": "icons/details.png"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        }
+      ]
+    },
+    {
+      "name": "drab_endpoint_menu",
+      "items": [
+        {
+          "action": "actions/rab_action_delete.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/drophostile.xml",
+          "icon": "icons/target.png",
+          "submenu": "menus/drop_point_submenu.xml"
+        },
+        {
+          "action": "actions/bloodhound.xml",
+          "icon": "icons/bloodhound.xml",
+          "selected": "${hounding}"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        }
+      ]
+    },
+    {
+      "name": "drab_menu",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/rab_drop_down.xml",
+          "icon": "icons/details.png"
+        },
+        {
+          "action": "actions/rab_distance_lock.xml",
+          "icon": "icons/distance_lock.png",
+          "selected": "${distanceLocked}"
+        },
+        {
+          "action": "actions/drab_pin.xml",
+          "icon": "icons/drab_pin.png"
+        },
+        {
+          "icon": "icons/kmm.png",
+          "submenu": "menus/randb_range_submenu.xml"
+        },
+        {
+          "icon": "icons/degs_m.png",
+          "submenu": "menus/randb_bearing_submenu.xml"
+        },
+        {
+          "action": "actions/toggle_slant_range.xml",
+          "icon": "icons/right_angle.png"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/edit2.png",
+          "disabled": "${disable_polar}"
+        },
+        {
+          "action": "actions/clamp_toggle.xml",
+          "icon": "icons/clamp.png",
+          "selected": "${clampedToGround}"
+        }
+      ]
+    },
+    {
+      "name": "drawing_circle_geofence_menu",
+      "items": [
+        {
+          "action": "actions/shape_delete.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90"
+        },
+        {
+          "action": "actions/showdetails_shape.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/edit_shape.xml",
+          "icon": "icons/edit2.png",
+          "disabled": "!{${editable}}"
+        },
+        {
+          "action": "actions/shape_msd.xml",
+          "icon": "icons/blast_rings.png"
+        },
+        {
+          "action": "actions/geofence.xml",
+          "icon": "icons/geofence.png",
+          "selected": "${geofence_tracking_menustate}"
+        },
+        {
+          "action": "actions/compass_toggle_free_look.xml",
+          "icon": "icons/3d_free_look.png",
+          "selected": "${freeLook}",
+          "dependsOnCapability": "capability.3d"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/label_toggle.xml",
+          "icon": "icons/label.png",
+          "selected": "${labels_on}"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    },
+    {
+      "name": "drawing_ellipse_menu",
+      "items": [
+        {
+          "action": "actions/shape_delete.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90"
+        },
+        {
+          "action": "actions/showdetails_shape.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/edit_shape.xml",
+          "icon": "icons/edit2.png",
+          "disabled": "!{${editable}}"
+        },
+        {
+          "action": "actions/shape_msd.xml",
+          "icon": "icons/blast_rings.png"
+        },
+        {
+          "action": "actions/geofence.xml",
+          "icon": "icons/geofence.png",
+          "selected": "${geofence_tracking_menustate}"
+        },
+        {
+          "action": "actions/compass_toggle_free_look.xml",
+          "icon": "icons/3d_free_look.png",
+          "selected": "${freeLook}",
+          "dependsOnCapability": "capability.3d"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/label_toggle.xml",
+          "icon": "icons/label.png",
+          "selected": "${labels_on}"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    },
+    {
+      "name": "drawing_generic_point_menu",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails_shape.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        }
+      ]
+    },
+    {
+      "name": "drawing_rectangle_corner_menu",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/mgrs_entry.xml",
+          "icon": "icons/mgrs_entry.png",
+          "disabled": "!{${movable}}"
+        },
+        {
+          "action": "actions/general_entry.xml",
+          "icon": "icons/general_entry.png",
+          "disabled": "!{${movable}}"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    },
+    {
+      "name": "drawing_rectangle_geofence_menu",
+      "items": [
+        {
+          "action": "actions/shape_delete.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails_shape.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/edit_shape.xml",
+          "icon": "icons/edit2.png",
+          "disabled": "!{${editable}}"
+        },
+        {
+          "action": "actions/shape_msd.xml",
+          "icon": "icons/blast_rings.png"
+        },
+        {
+          "action": "actions/geofence.xml",
+          "icon": "icons/geofence.png",
+          "selected": "${geofence_tracking_menustate}"
+        },
+        {
+          "action": "actions/compass_toggle_free_look.xml",
+          "icon": "icons/3d_free_look.png",
+          "selected": "${freeLook}",
+          "dependsOnCapability": "capability.3d"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/label_toggle.xml",
+          "icon": "icons/label.png",
+          "selected": "${labels_on}"
+        },
+        {
+          "action": "actions/move_editable_polyline_vertex.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_vertex_submenu.xml",
+          "disabled": "true"
+        }
+      ]
+    },
+    {
+      "name": "drawing_shape_corner_menu",
+      "items": [
+        {
+          "action": "actions/remove_editable_polyline_vertex.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/mgrs_entry_vertex.xml",
+          "icon": "icons/mgrs_entry.png",
+          "disabled": "!{${movable}}"
+        },
+        {
+          "action": "actions/general_entry_vertex.xml",
+          "icon": "icons/general_entry.png",
+          "disabled": "!{${movable}}"
+        },
+        {
+          "action": "actions/move_editable_polyline_vertex.xml",
+          "icon": "icons/move.png",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    },
+    {
+      "name": "drawing_shape_geofence_menu",
+      "items": [
+        {
+          "action": "actions/shape_delete.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails_shape.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/edit_shape.xml",
+          "icon": "icons/edit2.png",
+          "disabled": "!{${editable}}"
+        },
+        {
+          "action": "actions/shape_msd.xml",
+          "icon": "icons/blast_rings.png"
+        },
+        {
+          "action": "actions/geofence.xml",
+          "icon": "icons/geofence.png",
+          "disabled": "!{${closed}}",
+          "selected": "${geofence_tracking_menustate}"
+        },
+        {
+          "action": "actions/compass_toggle_free_look.xml",
+          "icon": "icons/3d_free_look.png",
+          "selected": "${freeLook}",
+          "dependsOnCapability": "capability.3d"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/label_toggle.xml",
+          "icon": "icons/label.png",
+          "selected": "${labels_on}"
+        },
+        {
+          "action": "actions/move_editable_polyline_vertex.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_vertex_submenu.xml",
+          "disabled": "true"
+        }
+      ]
+    },
+    {
+      "name": "drawing_shape_line_menu",
+      "items": [
+        {
+          "action": "actions/remove_shape.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "true"
+        },
+        {
+          "action": "actions/move_editable_polyline_vertex.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_vertex_submenu.xml",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    },
+    {
+      "name": "drawing_shape_menu",
+      "items": [
+        {
+          "action": "actions/shape_delete.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails_shape.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/edit_shape.xml",
+          "icon": "icons/edit2.png",
+          "disabled": "!{${editable}}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/label_toggle.xml",
+          "icon": "icons/label.png",
+          "selected": "${labels_on}"
+        },
+        {
+          "action": "actions/move_editable_polyline_vertex.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_vertex_submenu.xml",
+          "disabled": "true"
+        }
+      ]
+    },
+    {
+      "name": "drop_point_submenu",
+      "items": [
+        {
+          "action": "actions/dropunknown.xml",
+          "icon": "icons/unknown.png"
+        },
+        {
+          "action": "actions/dropneutral.xml",
+          "icon": "icons/neutral.png"
+        },
+        {
+          "action": "actions/drophostile.xml",
+          "icon": "icons/target.png"
+        },
+        {
+          "action": "actions/dropfriendly.xml",
+          "icon": "icons/friendly.png"
+        }
+      ]
+    },
+    {
+      "name": "feature_menu",
+      "items": [
+        {
+          "action": "actions/showdetails_feature.xml",
+          "icon": "icons/details.png",
+          "angle": "-90"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        },
+        {
+          "action": "actions/toggleVisibility.xml",
+          "icon": "icons/eye.png",
+          "disabled": "${visibilityNotSupported}"
+        },
+        {
+          "action": "actions/label_toggle.xml",
+          "icon": "icons/label.png",
+          "selected": "${labels_on}"
+        }
+      ]
+    },
+    {
+      "name": "feature_point_menu",
+      "items": [
+        {
+          "action": "actions/dangerclose.xml",
+          "icon": "icons/blast_rings.png",
+          "angle": "-90",
+          "dependsOnCapability": "capability.weapons"
+        },
+        {
+          "action": "actions/showdetails_feature.xml",
+          "icon": "icons/details.png"
+        },
+        {
+          "action": "actions/9line_spi.xml",
+          "icon": "icons/nineline.png",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        },
+        {
+          "action": "actions/toggleVisibility.xml",
+          "icon": "icons/eye.png",
+          "disabled": "${visibilityNotSupported}"
+        }
+      ]
+    },
+    {
+      "name": "geofence-breach",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/dropspitarget.xml",
+          "icon": "icons/target.png",
+          "submenu": "menus/drop_point_submenu.xml"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        }
+      ]
+    },
+    {
+      "name": "grg_menu",
+      "items": [
+        {
+          "action": "actions/grg_delete.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/grg_toggle_visibility.xml",
+          "icon": "icons/eye.png"
+        },
+        {
+          "action": "actions/grg_transparency.xml",
+          "icon": "icons/transparency.png"
+        },
+        {
+          "action": "actions/grg_brightness.xml",
+          "icon": "icons/brightness.png"
+        },
+        {
+          "action": "actions/grg_color.xml",
+          "icon": "icons/color_wheel.png"
+        }
+      ]
+    },
+    {
+      "name": "grid_center",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/mgrs_entry.xml",
+          "icon": "icons/mgrs_entry.png"
+        },
+        {
+          "action": "actions/general_entry.xml",
+          "icon": "icons/general_entry.png"
+        }
+      ]
+    },
+    {
+      "name": "immutable_point",
+      "items": [
+        {
+          "action": "actions/dangerclose.xml",
+          "icon": "icons/blast_rings.png",
+          "angle": "-90",
+          "dependsOnCapability": "capability.weapons"
+        },
+        {
+          "action": "actions/9line_spi.xml",
+          "icon": "icons/nineline.png",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        },
+        {
+          "action": "actions/toggleVisibility.xml",
+          "icon": "icons/eye.png"
+        }
+      ]
+    },
+    {
+      "name": "immutable_shape",
+      "items": [
+        {
+          "action": "actions/dangerclose.xml",
+          "icon": "icons/blast_rings.png",
+          "angle": "-90",
+          "disabled": "true",
+          "dependsOnCapability": "capability.weapons"
+        },
+        {
+          "action": "actions/9line_spi.xml",
+          "icon": "icons/nineline.png",
+          "disabled": "true",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png",
+          "disabled": "true"
+        },
+        {
+          "action": "actions/toggleVisibility.xml",
+          "icon": "icons/eye.png"
+        }
+      ]
+    },
+    {
+      "name": "keyhole_menu",
+      "items": [
+        {
+          "action": "actions/remove_keyhole.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails_keyhole.xml",
+          "icon": "icons/details.png"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        }
+      ]
+    },
+    {
+      "name": "mgrs_entry_submenu",
+      "items": [
+        {
+          "action": "actions/mgrs_entry.xml",
+          "icon": "icons/mgrs_entry.png"
+        },
+        {
+          "action": "actions/general_entry.xml",
+          "icon": "icons/general_entry.png"
+        }
+      ]
+    },
+    {
+      "name": "mgrs_entry_vertex_submenu",
+      "items": [
+        {
+          "action": "actions/mgrs_entry_vertex.xml",
+          "icon": "icons/mgrs_entry.png"
+        },
+        {
+          "action": "actions/general_entry_vertex.xml",
+          "icon": "icons/general_entry.png"
+        }
+      ]
+    },
+    {
+      "name": "multipolyline_shape_menu",
+      "items": [
+        {
+          "action": "actions/shape_delete.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails_multipolyline.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/clamp_toggle.xml",
+          "icon": "icons/clamp.png",
+          "selected": "${clampedToGround}"
+        },
+        {
+          "action": "actions/compass_toggle_free_look.xml",
+          "icon": "icons/3d_free_look.png",
+          "selected": "${freeLook}",
+          "dependsOnCapability": "capability.3d"
+        },
+        {
+          "action": "actions/label_toggle.xml",
+          "icon": "icons/label.png",
+          "selected": "${labels_on}"
+        }
+      ]
+    },
+    {
+      "name": "poi",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/dropspitarget.xml",
+          "icon": "icons/target.png",
+          "submenu": "menus/drop_point_submenu.xml"
+        },
+        {
+          "action": "actions/drop9Line.xml",
+          "icon": "icons/cas.png",
+          "submenu": "menus/cffdropper_submenu.xml",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/spi_fah.xml",
+          "icon": "icons/fah_redx.png",
+          "submenu": "menus/spi_fah_submenu.xml",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/dangerclose.xml",
+          "icon": "icons/blast_rings.png",
+          "dependsOnCapability": "capability.weapons"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        },
+        {
+          "action": "actions/bloodhound.xml",
+          "icon": "icons/bloodhound.xml",
+          "selected": "${hounding}"
+        }
+      ]
+    },
+    {
+      "name": "rab_bullseye_menu",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/bullseye_details.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "icon": "icons/degs_m.png",
+          "submenu": "menus/randb_bearing_submenu.xml"
+        },
+        {
+          "action": "actions/toggle_bullseye_to_from.xml",
+          "icon": "icons/to_from.png"
+        },
+        {
+          "action": "actions/toggle_bullseye_rings.xml",
+          "icon": "icons/range_ring.png",
+          "selected": "${rangeRingVisible}"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        }
+      ]
+    },
+    {
+      "name": "rab_endpoint_menu",
+      "items": [
+        {
+          "action": "actions/rab_action_delete.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        }
+      ]
+    },
+    {
+      "name": "rab_menu",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/rab_drop_down.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/shape_msd.xml",
+          "icon": "icons/blast_rings.png"
+        },
+        {
+          "icon": "icons/kmm.png",
+          "submenu": "menus/randb_range_submenu.xml"
+        },
+        {
+          "icon": "icons/degs_m.png",
+          "submenu": "menus/randb_bearing_submenu.xml"
+        },
+        {
+          "action": "actions/toggle_slant_range.xml",
+          "icon": "icons/right_angle.png",
+          "disabled": "${disable_slant}"
+        },
+        {
+          "action": "actions/bloodhound_link.xml",
+          "icon": "icons/bloodhound.xml",
+          "disabled": "!{${enable_hounding}}",
+          "selected": "${hounding}"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/edit2.png",
+          "disabled": "${disable_polar}"
+        },
+        {
+          "action": "actions/clamp_toggle.xml",
+          "icon": "icons/clamp.png",
+          "selected": "${clampedToGround}"
+        }
+      ]
+    },
+    {
+      "name": "randb_bearing_submenu",
+      "items": [
+        {
+          "icon": "icons/mils_t.png"
+        },
+        {
+          "icon": "icons/degs_t.png"
+        },
+        {
+          "icon": "icons/mils_m.png"
+        },
+        {
+          "icon": "icons/degs_m.png"
+        },
+        {
+          "icon": "icons/mils_g.png"
+        },
+        {
+          "icon": "icons/degs_g.png"
+        }
+      ]
+    },
+    {
+      "name": "randb_range_submenu",
+      "items": [
+        {
+          "icon": "icons/ftmi.png"
+        },
+        {
+          "icon": "icons/kmm.png"
+        },
+        {
+          "icon": "icons/nm.png"
+        }
+      ]
+    },
+    {
+      "name": "range_circle_menu",
+      "items": [
+        {
+          "action": "actions/shape_delete.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/range_circle_dropdown.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/range_circle_edit.xml",
+          "icon": "icons/edit2.png",
+          "disabled": "!{${editable}}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/label_toggle.xml",
+          "icon": "icons/label.png",
+          "selected": "${labels_on}"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    },
+    {
+      "name": "range_ring_menu",
+      "items": [
+        {
+          "action": "actions/remove_range_ring.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        }
+      ]
+    },
+    {
+      "name": "redx_compass_submenu",
+      "items": [
+        {
+          "action": "actions/hostile_compass.xml",
+          "icon": "icons/compass_rose.png",
+          "selected": "${hostileBearingCircle}"
+        },
+        {
+          "action": "actions/bullseye_compass.xml",
+          "icon": "icons/bullseye.png",
+          "selected": "${bullseyeOverlay}"
+        },
+        {
+          "action": "actions/pairinglineself.xml",
+          "icon": "icons/pairing_line_to_self.png",
+          "selected": "${pairinglineself_on}"
+        }
+      ]
+    },
+    {
+      "name": "redx_fah_submenu",
+      "items": [
+        {
+          "action": "actions/redx_fah.xml",
+          "icon": "icons/fah_redx.png",
+          "selected": "${fahon}",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/redx_lb.xml",
+          "icon": "icons/ic_laser_selected.png",
+          "selected": "${lbon}",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/dangerclose.xml",
+          "icon": "icons/blast_rings.png",
+          "dependsOnCapability": "capability.weapons"
+        }
+      ]
+    },
+    {
+      "name": "redx_menu",
+      "items": [
+        {
+          "action": "actions/redx_remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/dropspitarget.xml",
+          "icon": "icons/target.png",
+          "submenu": "menus/drop_point_submenu.xml"
+        },
+        {
+          "action": "actions/drop9Line.xml",
+          "icon": "icons/cas.png",
+          "submenu": "menus/cffdropper_submenu.xml",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/redx_fah.xml",
+          "icon": "icons/fah_redx.png",
+          "submenu": "menus/redx_fah_submenu.xml",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/move_spi.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        },
+        {
+          "action": "actions/hostile_compass.xml",
+          "icon": "icons/compass_rose.png",
+          "selected": "${hostileBearingCircle}"
+        },
+        {
+          "action": "actions/pairinglineself.xml",
+          "icon": "icons/pairing_line_to_self.png",
+          "submenu": "menus/redx_compass_submenu.xml",
+          "selected": "${hostileBearingCircle}"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        }
+      ]
+    },
+    {
+      "name": "resection_landmark",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails_resection.xml",
+          "icon": "icons/details.png"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        },
+        {
+          "action": "actions/bearing_resection.xml",
+          "icon": "icons/compass_rose.png"
+        }
+      ]
+    },
+    {
+      "name": "route_corner_menu",
+      "items": [
+        {
+          "action": "actions/remove_editable_polyline_vertex.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/edit_cues.xml",
+          "icon": "icons/speech.png"
+        },
+        {
+          "action": "actions/insert_waypoint.xml",
+          "icon": "icons/reference_point.png"
+        },
+        {
+          "action": "actions/general_entry_vertex.xml",
+          "icon": "icons/general_entry.png",
+          "disabled": "!{${movable}}"
+        },
+        {
+          "action": "actions/move_editable_polyline_vertex.xml",
+          "icon": "icons/move.png",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    },
+    {
+      "name": "route_line_menu",
+      "items": [
+        {
+          "action": "actions/remove_route.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "true"
+        },
+        {
+          "action": "actions/insert_waypoint.xml",
+          "icon": "icons/reference_point.png"
+        },
+        {
+          "action": "actions/insert_vertex.xml",
+          "icon": "icons/vertex.png"
+        },
+        {
+          "action": "actions/move_editable_polyline_vertex.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_vertex_submenu.xml",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    },
+    {
+      "name": "route_nav_menu",
+      "items": [
+        {
+          "action": "actions/startgoto.xml",
+          "icon": "icons/green_flag_radial.png",
+          "angle": "-90",
+          "selected": "${hounding}"
+        }
+      ]
+    },
+    {
+      "name": "rubber_image_menu",
+      "items": [
+        {
+          "action": "actions/shape_delete.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/rubber_sheet_details.xml",
+          "icon": "icons/details.png"
+        },
+        {
+          "action": "actions/rubber_sheet_edit.xml",
+          "icon": "icons/edit2.png",
+          "disabled": "!{${editable}}"
+        },
+        {
+          "action": "actions/rubber_sheet_rotate.xml",
+          "icon": "icons/rubber_sheet_rotate.png",
+          "disabled": "!{${editable}}"
+        },
+        {
+          "action": "actions/rubber_sheet_transparency.xml",
+          "icon": "icons/transparency.png",
+          "disabled": "!{${editable}}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/label_toggle.xml",
+          "icon": "icons/label.png",
+          "selected": "${labels_on}"
+        },
+        {
+          "action": "actions/rubber_sheet_move.xml",
+          "icon": "icons/move.png",
+          "disabled": "!{${editable}}"
+        }
+      ]
+    },
+    {
+      "name": "rubber_model_menu",
+      "items": [
+        {
+          "action": "actions/shape_delete.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/rubber_sheet_details.xml",
+          "icon": "icons/details.png"
+        },
+        {
+          "action": "actions/rubber_sheet_edit.xml",
+          "icon": "icons/edit2.png",
+          "disabled": "!{${editable}}"
+        },
+        {
+          "action": "actions/compass_toggle_free_look.xml",
+          "icon": "icons/3d_free_look.png",
+          "selected": "${freeLook}",
+          "dependsOnCapability": "capability.3d"
+        },
+        {
+          "action": "actions/rubber_sheet_transparency.xml",
+          "icon": "icons/transparency.png",
+          "disabled": "!{${editable}}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/label_toggle.xml",
+          "icon": "icons/label.png",
+          "selected": "${labels_on}"
+        },
+        {
+          "action": "actions/rubber_sheet_move.xml",
+          "icon": "icons/move.png",
+          "disabled": "!{${editable}}"
+        }
+      ]
+    },
+    {
+      "name": "self_menu",
+      "items": [
+        {
+          "action": "actions/showdetails.xml",
+          "icon": "icons/details.png",
+          "angle": "-90"
+        },
+        {
+          "action": "actions/dropunknownatself.xml",
+          "icon": "icons/unknown.png",
+          "submenu": "menus/drop_point_submenu.xml"
+        },
+        {
+          "action": "actions/toggle_crumb.xml",
+          "icon": "icons/breadcrumbs.xml",
+          "submenu": "menus/self_track_submenu.xml",
+          "selected": "${tracks_on}"
+        },
+        {
+          "action": "actions/lockcam.xml",
+          "icon": "icons/camlock.xml",
+          "selected": "${camLocked}"
+        },
+        {
+          "action": "actions/dangerclose.xml",
+          "icon": "icons/blast_rings.png",
+          "dependsOnCapability": "capability.weapons"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/togglegpserror.xml",
+          "icon": "icons/gpserror.xml",
+          "disabled": "${disableErrorEllipseToggle}",
+          "selected": "${gpserrorenabled}"
+        },
+        {
+          "action": "actions/video.xml",
+          "icon": "icons/video.png",
+          "disabled": "!{${videoUrl}}"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        },
+        {
+          "action": "actions/hostile_compass.xml",
+          "icon": "icons/compass_rose.png",
+          "selected": "${hostileBearingCircle}"
+        }
+      ]
+    },
+    {
+      "name": "self_track_submenu",
+      "items": [
+        {
+          "action": "actions/search_trackhistory.xml",
+          "icon": "icons/trackhistory_icon.png"
+        },
+        {
+          "action": "actions/clear_self_tracks.xml",
+          "icon": "icons/clear_tracks.png"
+        }
+      ]
+    },
+    {
+      "name": "send_submenu",
+      "items": [
+        {
+          "action": "actions/send_action.xml",
+          "icon": "icons/send_icon.png"
+        }
+      ]
+    },
+    {
+      "name": "spi_fah_submenu",
+      "items": [
+        {
+          "action": "actions/spi_fah.xml",
+          "icon": "icons/fah_redx.png",
+          "selected": "${fahon}",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/spi_lb.xml",
+          "icon": "icons/ic_laser_selected.png",
+          "selected": "${lbon}",
+          "dependsOnCapability": "capability.fires"
+        }
+      ]
+    },
+    {
+      "name": "spi_menu",
+      "items": [
+        {
+          "action": "actions/remove_spi.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/drophostile.xml",
+          "icon": "icons/target.png",
+          "submenu": "menus/drop_point_submenu.xml"
+        },
+        {
+          "action": "actions/drop9Line.xml",
+          "icon": "icons/cas.png",
+          "submenu": "menus/cffdropper_submenu.xml",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/spi_fah.xml",
+          "icon": "icons/fah_redx.png",
+          "submenu": "menus/spi_fah_submenu.xml",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/dangerclose.xml",
+          "icon": "icons/blast_rings.png",
+          "dependsOnCapability": "capability.weapons"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/spipairinglineself.xml",
+          "icon": "icons/pairing_line_to_self.png",
+          "submenu": "menus/compass_submenu.xml",
+          "selected": "${hostileBearingCircle}"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        },
+        {
+          "action": "actions/move_spi.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    },
+    {
+      "name": "sse_grg_shape_menu",
+      "items": [
+        {
+          "action": "actions/grg_remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90"
+        },
+        {
+          "action": "actions/grg_details.xml",
+          "icon": "icons/details_progress.png"
+        },
+        {
+          "action": "actions/sse_survey_completed_toggle.xml",
+          "icon": "icons/sse_survey_progress.xml",
+          "selected": "${sseCompleted}"
+        },
+        {
+          "action": "actions/grg_edit.xml",
+          "icon": "icons/edit2.png"
+        }
+      ]
+    },
+    {
+      "name": "sse_menu",
+      "items": [
+        {
+          "action": "actions/remove_sse.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails_sse.xml",
+          "icon": "icons/details.png"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        }
+      ]
+    },
+    {
+      "name": "sse_shape_menu",
+      "items": [
+        {
+          "action": "actions/remove_sse.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails_sse.xml",
+          "icon": "icons/details.png"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/sse_shape_create.xml",
+          "icon": "icons/sse_shape.png"
+        },
+        {
+          "action": "actions/sse_shape_remove.xml",
+          "icon": "icons/sse_shape_delete.png",
+          "disabled": "!{${shape_exists}}"
+        }
+      ]
+    },
+    {
+      "name": "sse_slant",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails.xml",
+          "icon": "icons/details.png"
+        },
+        {
+          "action": "actions/dangerclose.xml",
+          "icon": "icons/blast_rings.png",
+          "dependsOnCapability": "capability.weapons"
+        },
+        {
+          "action": "actions/9line.xml",
+          "icon": "icons/cas.png",
+          "submenu": "menus/cff_submenu.xml",
+          "dependsOnCapability": "capability.fires"
+        },
+        {
+          "action": "actions/showquick_sse_slant.xml",
+          "icon": "icons/sse_slant.png"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${movable}}"
+        },
+        {
+          "action": "actions/hostile_compass.xml",
+          "icon": "icons/compass_rose.png",
+          "submenu": "menus/compass_submenu.xml",
+          "selected": "${hostileBearingCircle}"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        }
+      ]
+    },
+    {
+      "name": "survey_circle_menu",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails_circle.xml",
+          "icon": "icons/details.png"
+        },
+        {
+          "action": "actions/pairingline_survey_circle.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/move_survey_circle.xml",
+          "icon": "icons/move.png"
+        }
+      ]
+    },
+    {
+      "name": "t-k-d",
+      "items": [
+        {
+          "action": "actions/showdetails.xml",
+          "icon": "icons/details.png",
+          "angle": "-90"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "disabled": "!{${removable}}"
+        }
+      ]
+    },
+    {
+      "name": "t-s-v-e",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        }
+      ]
+    },
+    {
+      "name": "track_menu",
+      "items": [
+        {
+          "action": "actions/remove_track.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails_track.xml",
+          "icon": "icons/details.png"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        }
+      ]
+    },
+    {
+      "name": "trackhistory_submenu",
+      "items": [
+        {
+          "action": "actions/search_trackhistory.xml",
+          "icon": "icons/trackhistory_icon.png"
+        }
+      ]
+    },
+    {
+      "name": "vehicle_model_menu",
+      "items": [
+        {
+          "action": "actions/shape_delete.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails_shape.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/compass_toggle_free_look.xml",
+          "icon": "icons/3d_free_look.png",
+          "selected": "${freeLook}",
+          "dependsOnCapability": "capability.3d"
+        },
+        {
+          "action": "actions/vehicle_model_edit.xml",
+          "icon": "icons/edit2.png",
+          "disabled": "!{${editable}}"
+        },
+        {
+          "action": "actions/rotate.xml",
+          "icon": "icons/rotate_ac.png",
+          "disabled": "!{${editable}}"
+        },
+        {
+          "action": "actions/rubber_sheet_transparency.xml",
+          "icon": "icons/transparency.png",
+          "disabled": "!{${editable}}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/polarCoords.xml",
+          "icon": "icons/polar_coord.png"
+        },
+        {
+          "action": "actions/rubber_sheet_move.xml",
+          "icon": "icons/move.png",
+          "disabled": "!{${editable}}"
+        }
+      ]
+    },
+    {
+      "name": "vehicle_shape_marker_menu",
+      "items": [
+        {
+          "action": "actions/shape_delete.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails_shape.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/toggle_label.xml",
+          "icon": "icons/show_label.png",
+          "selected": "${showLabel}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml"
+        },
+        {
+          "action": "actions/rotate.xml",
+          "icon": "icons/rotate_ac.png"
+        }
+      ]
+    },
+    {
+      "name": "vehicle_shape_menu",
+      "items": [
+        {
+          "action": "actions/shape_delete.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/showdetails_shape.xml",
+          "icon": "icons/details.png",
+          "submenu": "menus/send_submenu.xml"
+        },
+        {
+          "action": "actions/toggle_label.xml",
+          "icon": "icons/show_label.png",
+          "selected": "${showLabel}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/move_editable_polyline_vertex.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_vertex_submenu.xml"
+        },
+        {
+          "action": "actions/rotate.xml",
+          "icon": "icons/rotate_ac.png"
+        }
+      ]
+    },
+    {
+      "name": "viewshed_menu",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/pairingline.xml",
+          "icon": "icons/pairing_line.png"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "submenu": "menus/mgrs_entry_submenu.xml",
+          "disabled": "!{${preciseMove}}"
+        }
+      ]
+    },
+    {
+      "name": "waypoint_edit",
+      "items": [
+        {
+          "action": "actions/remove.xml",
+          "icon": "icons/delete.png",
+          "angle": "-90",
+          "disabled": "!{${removable}}"
+        },
+        {
+          "action": "actions/edit_cues.xml",
+          "icon": "icons/speech.png"
+        },
+        {
+          "action": "actions/add_pt_from_bearing.xml",
+          "icon": "icons/middlepoint_radial.png"
+        },
+        {
+          "action": "actions/general_entry.xml",
+          "icon": "icons/general_entry.png",
+          "disabled": "!{${movable}}"
+        },
+        {
+          "action": "actions/move.xml",
+          "icon": "icons/move.png",
+          "disabled": "!{${movable}}"
+        }
+      ]
+    }
+  ]
+}

@@ -126,9 +126,39 @@
     "passed": true
   },
   {
+    "req_id": "REQ-ICN-005",
+    "test_name": "REQ-ICN-005: ATAK button state definitions",
+    "test_file": "tests/icons/test_btn_states.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-ICN-001",
     "test_name": "REQ-ICN-001: ATAK drawable resource catalog",
     "test_file": "tests/icons/test_catalog.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-ICN-008",
+    "test_name": "REQ-ICN-008: ATAK radial menu definitions",
+    "test_file": "tests/icons/test_radial_menus.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-ICN-007",
+    "test_name": "REQ-ICN-007: ATAK selector drawable metadata",
+    "test_file": "tests/icons/test_selectors.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-ICN-006",
+    "test_name": "REQ-ICN-006: ATAK shape drawable metadata",
+    "test_file": "tests/icons/test_shapes.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-ICN-002",
+    "test_name": "REQ-ICN-002: ATAK vector drawable to SVG extraction",
+    "test_file": "tests/icons/test_vectors.mjs",
     "passed": true
   },
   {

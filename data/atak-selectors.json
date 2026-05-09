@@ -1,0 +1,2581 @@
+[
+  {
+    "name": "all_tools_grid",
+    "states": [
+      {
+        "drawable": "@color/led_green",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@color/led_green",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@color/dark_gray"
+      }
+    ]
+  },
+  {
+    "name": "atak_button",
+    "states": [
+      {
+        "drawable": "@drawable/btn_default_atak_disabled_focused",
+        "conditions": {
+          "state_enabled": false,
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_default_atak_disabled",
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {
+        "drawable": "@drawable/btn_default_atak_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_default_atak_focused",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_default_atak_normal"
+      }
+    ]
+  },
+  {
+    "name": "atak_dropdown",
+    "states": [
+      {
+        "drawable": "@drawable/dropdown_atak_disabled",
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {
+        "drawable": "@drawable/dropdown_atak_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/dropdown_atak_focused",
+        "conditions": {
+          "state_pressed": false,
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/dropdown_atak_default"
+      }
+    ]
+  },
+  {
+    "name": "atak_list_item",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "atak_menu_export",
+    "states": [
+      {
+        "drawable": "@drawable/export_menu_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/export_menu_default"
+      }
+    ]
+  },
+  {
+    "name": "atak_menu_send",
+    "states": [
+      {
+        "drawable": "@drawable/send_menu_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/send_menu_default"
+      }
+    ]
+  },
+  {
+    "name": "atak_menu_text_color",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "atak_spinner",
+    "states": [
+      {
+        "drawable": "@drawable/spinner_atak_disabled",
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {
+        "drawable": "@drawable/spinner_atak_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/spinner_atak_focused",
+        "conditions": {
+          "state_pressed": false,
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/spinner_atak_default"
+      }
+    ]
+  },
+  {
+    "name": "atak_textfield",
+    "states": [
+      {
+        "drawable": "@drawable/textfield_atak_normal",
+        "conditions": {
+          "state_enabled": true,
+          "state_window_focused": false
+        }
+      },
+      {
+        "drawable": "@drawable/textfield_atak_normal",
+        "conditions": {
+          "state_enabled": false,
+          "state_window_focused": false
+        }
+      },
+      {
+        "drawable": "@drawable/textfield_atak_pressed",
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true,
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/textfield_atak_selected",
+        "conditions": {
+          "state_enabled": true,
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/textfield_atak_selected",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/textfield_atak_normal",
+        "conditions": {
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/textfield_atak_normal"
+      }
+    ]
+  },
+  {
+    "name": "atak_toggle",
+    "states": [
+      {
+        "drawable": "@drawable/toggle_atak_on_default",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": true,
+          "state_window_focused": false
+        }
+      },
+      {
+        "drawable": "@drawable/toggle_atak_on_disabled",
+        "conditions": {
+          "state_enabled": false,
+          "state_checked": true,
+          "state_window_focused": false
+        }
+      },
+      {
+        "drawable": "@drawable/toggle_atak_on_pressed",
+        "conditions": {
+          "state_pressed": true,
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/toggle_atak_on_default",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/toggle_atak_on_disabled",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/toggle_atak_off_default",
+        "conditions": {
+          "state_enabled": true,
+          "state_window_focused": false
+        }
+      },
+      {
+        "drawable": "@drawable/toggle_atak_off_disabled",
+        "conditions": {
+          "state_enabled": false,
+          "state_window_focused": false
+        }
+      },
+      {
+        "drawable": "@drawable/toggle_atak_off_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/toggle_atak_off_default",
+        "conditions": {
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/toggle_atak_off_disabled"
+      }
+    ]
+  },
+  {
+    "name": "border_bottom_pastel_gray",
+    "states": [
+      {
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  {
+    "name": "btn_check",
+    "states": [
+      {
+        "drawable": "@drawable/ic_check_on",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": true,
+          "state_window_focused": false
+        }
+      },
+      {
+        "drawable": "@drawable/ic_check_off",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": false,
+          "state_window_focused": false
+        }
+      },
+      {
+        "drawable": "@drawable/ic_check_off",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": false
+        }
+      },
+      {
+        "drawable": "@drawable/ic_check_on",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "btn_check_use_btn",
+    "states": [
+      {
+        "drawable": "@drawable/btn_check_on_default",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": true,
+          "state_window_focused": false
+        }
+      },
+      {
+        "drawable": "@drawable/btn_check_off_default",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": false,
+          "state_window_focused": false
+        }
+      },
+      {
+        "drawable": "@drawable/btn_check_off_default",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": false
+        }
+      },
+      {
+        "drawable": "@drawable/btn_check_on_default",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "btn_default",
+    "states": [
+      {
+        "drawable": "@drawable/btn_default_normal",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": false,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_default_selected",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_default_pressed",
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_default_disabled",
+        "conditions": {
+          "state_enabled": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "btn_expandable",
+    "states": [
+      {
+        "drawable": "@drawable/ic_row_contract"
+      },
+      {
+        "drawable": "@drawable/ic_row_expand"
+      }
+    ]
+  },
+  {
+    "name": "btn_gray",
+    "states": [
+      {
+        "drawable": "@drawable/new_dark_button_selected",
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/new_dark_button_selected",
+        "conditions": {
+          "state_selected": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/new_dark_button_selected",
+        "conditions": {
+          "state_enabled": true,
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/new_dark_button_disabled",
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {
+        "drawable": "@drawable/new_dark_button_bg"
+      }
+    ]
+  },
+  {
+    "name": "btn_gray_no_checked_highlight",
+    "states": [
+      {
+        "drawable": "@drawable/btn_gray_selected",
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_gray_selected",
+        "conditions": {
+          "state_selected": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_gray_disabled",
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {
+        "drawable": "@drawable/btn_gray_default"
+      }
+    ]
+  },
+  {
+    "name": "btn_toggle_holo_dark",
+    "states": [
+      {
+        "drawable": "@drawable/btn_toggle_on_normal_holo_dark",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_toggle_on_pressed_holo_dark",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_toggle_off_normal_holo_dark"
+      }
+    ]
+  },
+  {
+    "name": "button_background",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "conditions": {
+          "state_enabled": true
+        }
+      },
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "button_background_inverse",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "conditions": {
+          "state_enabled": true
+        }
+      },
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "button_black_secondary_background",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "button_marker_background",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "button_secondary_background",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "buttonback",
+    "states": [
+      {
+        "drawable": "@drawable/buttonbackdown",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/buttonbackhover",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/buttonbackup"
+      }
+    ]
+  },
+  {
+    "name": "cell_dark_clickable",
+    "states": [
+      {
+        "drawable": "@drawable/cell_dark_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/cell_dark"
+      }
+    ]
+  },
+  {
+    "name": "cell_light_clickable",
+    "states": [
+      {
+        "drawable": "@drawable/cell_light_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/cell_light"
+      }
+    ]
+  },
+  {
+    "name": "cell_title_clickable",
+    "states": [
+      {
+        "drawable": "@drawable/cell_title_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/cell_title"
+      }
+    ]
+  },
+  {
+    "name": "cell_title_dark_clickable",
+    "states": [
+      {
+        "drawable": "@drawable/cell_title_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/cell_title_dark"
+      }
+    ]
+  },
+  {
+    "name": "chat_title_background",
+    "states": [
+      {
+        "drawable": "@android:color/black",
+        "conditions": {
+          "state_pressed": false
+        }
+      },
+      {
+        "drawable": "@android:color/darker_gray",
+        "conditions": {
+          "state_pressed": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "dialog_alert_left_button_background",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "conditions": {
+          "state_enabled": true
+        }
+      },
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "dialog_alert_right_button_background",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "conditions": {
+          "state_enabled": true
+        }
+      },
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "dialog_standard_button_background",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "conditions": {
+          "state_enabled": true
+        }
+      },
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "dot_selector",
+    "states": [
+      {
+        "drawable": "@drawable/dot_selected",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/dot_unselected"
+      }
+    ]
+  },
+  {
+    "name": "edit_text_new_background",
+    "states": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  {
+    "name": "enter_location_label",
+    "states": [
+      {
+        "drawable": "@drawable/enter_location_label_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_label_pressed",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_label_pressed",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_label_default"
+      }
+    ]
+  },
+  {
+    "name": "enter_location_spot_black",
+    "states": [
+      {
+        "drawable": "@drawable/enter_location_spot_black_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_black_pressed",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_black_pressed",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_black_default"
+      }
+    ]
+  },
+  {
+    "name": "enter_location_spot_blue",
+    "states": [
+      {
+        "drawable": "@drawable/enter_location_spot_blue_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_blue_pressed",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_blue_pressed",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_blue_default"
+      }
+    ]
+  },
+  {
+    "name": "enter_location_spot_brown",
+    "states": [
+      {
+        "drawable": "@drawable/enter_location_spot_brown_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_brown_pressed",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_brown_pressed",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_brown_default"
+      }
+    ]
+  },
+  {
+    "name": "enter_location_spot_custom_center",
+    "states": [
+      {
+        "drawable": "@drawable/enter_location_spot_custom_center_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_custom_center_pressed",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_custom_center_pressed",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_custom_center_default"
+      }
+    ]
+  },
+  {
+    "name": "enter_location_spot_custom_first",
+    "states": [
+      {
+        "drawable": "@drawable/enter_location_spot_custom_first_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_custom_first_pressed",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_custom_first_pressed",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_custom_first_default"
+      }
+    ]
+  },
+  {
+    "name": "enter_location_spot_custom_last",
+    "states": [
+      {
+        "drawable": "@drawable/enter_location_spot_custom_last_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_custom_last_pressed",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_custom_last_pressed",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_custom_last_default"
+      }
+    ]
+  },
+  {
+    "name": "enter_location_spot_cyan",
+    "states": [
+      {
+        "drawable": "@drawable/enter_location_spot_cyan_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_cyan_pressed",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_cyan_pressed",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_cyan_default"
+      }
+    ]
+  },
+  {
+    "name": "enter_location_spot_green",
+    "states": [
+      {
+        "drawable": "@drawable/enter_location_spot_green_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_green_pressed",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_green_pressed",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_green_default"
+      }
+    ]
+  },
+  {
+    "name": "enter_location_spot_grey",
+    "states": [
+      {
+        "drawable": "@drawable/enter_location_spot_grey_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_grey_pressed",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_grey_pressed",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_grey_default"
+      }
+    ]
+  },
+  {
+    "name": "enter_location_spot_magenta",
+    "states": [
+      {
+        "drawable": "@drawable/enter_location_spot_magenta_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_magenta_pressed",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_magenta_pressed",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_magenta_default"
+      }
+    ]
+  },
+  {
+    "name": "enter_location_spot_orange",
+    "states": [
+      {
+        "drawable": "@drawable/enter_location_spot_orange_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_orange_pressed",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_orange_pressed",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_orange_default"
+      }
+    ]
+  },
+  {
+    "name": "enter_location_spot_red",
+    "states": [
+      {
+        "drawable": "@drawable/enter_location_spot_red_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_red_pressed",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_red_pressed",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_red_default"
+      }
+    ]
+  },
+  {
+    "name": "enter_location_spot_white",
+    "states": [
+      {
+        "drawable": "@drawable/enter_location_spot_white_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_white_pressed",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_white_pressed",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_white_default"
+      }
+    ]
+  },
+  {
+    "name": "enter_location_spot_yellow",
+    "states": [
+      {
+        "drawable": "@drawable/enter_location_spot_yellow_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_yellow_pressed",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_yellow_pressed",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/enter_location_spot_yellow_default"
+      }
+    ]
+  },
+  {
+    "name": "fastfwdforeground",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "fastrevforeground",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "freetext_list_selector",
+    "states": [
+      {
+        "drawable": "@android:color/white",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@android:color/white",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "friendly_radio",
+    "states": [
+      {
+        "drawable": "@drawable/friendly_selected",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/friendly_unselected",
+        "conditions": {
+          "state_checked": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "group_checkbox",
+    "states": [
+      {
+        "drawable": "@drawable/overlay_visible",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/overlay_not_visible",
+        "conditions": {
+          "state_checked": false
+        }
+      },
+      {
+        "drawable": "@drawable/overlay_visible"
+      }
+    ]
+  },
+  {
+    "name": "hostile_radio",
+    "states": [
+      {
+        "drawable": "@drawable/hostile_selected",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/hostile_unselected",
+        "conditions": {
+          "state_checked": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "ic_arrow_down",
+    "states": [
+      {
+        "drawable": "@drawable/arrow_down_selected",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/arrow_down_unselected"
+      }
+    ]
+  },
+  {
+    "name": "ic_arrow_up",
+    "states": [
+      {
+        "drawable": "@drawable/arrow_up_selected",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/arrow_up_unselected"
+      }
+    ]
+  },
+  {
+    "name": "ic_drag_ruler_toggle",
+    "states": [
+      {
+        "drawable": "@drawable/ic_drag_ruler_selected",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/ic_drag_ruler_unselected"
+      }
+    ]
+  },
+  {
+    "name": "ic_hostile_mgr",
+    "states": [
+      {
+        "drawable": "@drawable/ic_hostile_mgr_active",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/ic_hostile_mgr_default"
+      }
+    ]
+  },
+  {
+    "name": "ic_hostile_toggle",
+    "states": [
+      {
+        "drawable": "@drawable/ic_hostile_selected",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/ic_hostile_unselected"
+      }
+    ]
+  },
+  {
+    "name": "ic_laser_toggle",
+    "states": [
+      {
+        "drawable": "@drawable/ic_laser_selected",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/ic_laser_unselected"
+      }
+    ]
+  },
+  {
+    "name": "ic_menu_drawing_circle_toggle",
+    "states": [
+      {
+        "drawable": "@drawable/ic_menu_circle_lit",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/ic_menu_circle"
+      }
+    ]
+  },
+  {
+    "name": "ic_menu_drawing_rect_toggle",
+    "states": [
+      {
+        "drawable": "@drawable/rectangle_lit",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/rectangle"
+      }
+    ]
+  },
+  {
+    "name": "ic_menu_drawing_telestrate_toggle",
+    "states": [
+      {
+        "drawable": "@drawable/telestrate_lit",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/telestrate"
+      }
+    ]
+  },
+  {
+    "name": "ic_menu_ellipse_toggle",
+    "states": [
+      {
+        "drawable": "@drawable/ic_menu_ellipse_lit",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/ic_menu_ellipse"
+      }
+    ]
+  },
+  {
+    "name": "ic_menu_rb_circle_toggle",
+    "states": [
+      {
+        "drawable": "@drawable/ic_menu_rb_circle_active",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/ic_menu_rb_circle"
+      }
+    ]
+  },
+  {
+    "name": "ic_mgrs_goto",
+    "states": [
+      {
+        "drawable": "@drawable/ic_hostile_go_to_active",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/ic_hostile_go_to_default"
+      }
+    ]
+  },
+  {
+    "name": "ic_password_toggle",
+    "states": [
+      {
+        "drawable": "@drawable/ic_password_show",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/ic_password_hide",
+        "conditions": {
+          "state_selected": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "ic_rab_bullseye",
+    "states": [
+      {
+        "drawable": "@drawable/bullseye_lit",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/bullseye"
+      }
+    ]
+  },
+  {
+    "name": "ic_radio_btn",
+    "states": [
+      {
+        "drawable": "@drawable/ic_radio_btn_filled",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/ic_radio_btn_empty"
+      }
+    ]
+  },
+  {
+    "name": "ic_ruler_toggle",
+    "states": [
+      {
+        "drawable": "@drawable/ic_ruler_selected",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/ic_ruler_unselected"
+      }
+    ]
+  },
+  {
+    "name": "image_radio_button",
+    "states": [
+      {
+        "drawable": "@drawable/btn_gray_selected",
+        "conditions": {
+          "state_pressed": true,
+          "state_checkable": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_gray_selected",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_gray_selected",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_gray_default"
+      }
+    ]
+  },
+  {
+    "name": "item_background",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "loadout_selection_drawable",
+    "states": [
+      {
+        "drawable": "@drawable/ic_white_radio_empty",
+        "conditions": {
+          "state_selected": false
+        }
+      },
+      {
+        "drawable": "@drawable/ic_white_radio_filled",
+        "conditions": {
+          "state_selected": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "marker",
+    "states": [
+      {}
+    ]
+  },
+  {
+    "name": "menu_bloodhound",
+    "states": [
+      {
+        "drawable": "@drawable/ic_menu_bloodhound_lit",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/ic_menu_bloodhound_lit",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/ic_menu_bloodhound"
+      }
+    ]
+  },
+  {
+    "name": "message_bar_background",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "missionpackage_list_group_indicator",
+    "states": [
+      {
+        "drawable": "@drawable/missionpackage_list_expanded"
+      },
+      {
+        "drawable": "@drawable/missionpackage_list_collapsed"
+      }
+    ]
+  },
+  {
+    "name": "neutral_radio",
+    "states": [
+      {
+        "drawable": "@drawable/neutral_selected",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/neutral_unselected",
+        "conditions": {
+          "state_checked": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "oval_button",
+    "states": [
+      {
+        "drawable": "@drawable/oval_button_normal",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": false,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/oval_button_pressed",
+        "conditions": {
+          "state_pressed": true,
+          "state_selected": false,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/oval_button_pressed",
+        "conditions": {
+          "state_selected": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/oval_button_normal",
+        "conditions": {
+          "state_enabled": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "overlay_title_background",
+    "states": [
+      {
+        "drawable": "@color/lighter_gray",
+        "conditions": {
+          "state_pressed": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "panto_button",
+    "states": [
+      {
+        "drawable": "@drawable/panto_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/panto_selected",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/panto_disabled",
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {
+        "drawable": "@drawable/panto_normal"
+      }
+    ]
+  },
+  {
+    "name": "pauseforeground",
+    "states": [
+      {}
+    ]
+  },
+  {
+    "name": "playforeground",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "select_grids_button",
+    "states": [
+      {
+        "drawable": "@drawable/select_grids_button_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/select_grids_button_pressed",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/select_grids_button_default"
+      }
+    ]
+  },
+  {
+    "name": "selector_methodbutton",
+    "states": [
+      {
+        "drawable": "@drawable/method_button_selected",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true,
+          "state_enabled": true,
+          "state_focused": false
+        }
+      },
+      {
+        "drawable": "@drawable/method_button_not_selected",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": false,
+          "state_enabled": true,
+          "state_focused": false
+        }
+      },
+      {
+        "drawable": "@drawable/method_button_selected",
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true,
+          "state_focused": false
+        }
+      },
+      {
+        "drawable": "@drawable/method_button_selected",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true,
+          "state_enabled": true,
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/method_button_not_selected",
+        "conditions": {
+          "state_enabled": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "sliderback",
+    "states": [
+      {
+        "drawable": "@drawable/sliderback_close",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/sliderback_open"
+      }
+    ]
+  },
+  {
+    "name": "sliderback_close",
+    "states": [
+      {
+        "drawable": "@drawable/sliderhandle_pressed_close",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/sliderhandle_hover_close",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/sliderhandle_close"
+      }
+    ]
+  },
+  {
+    "name": "sliderback_open",
+    "states": [
+      {
+        "drawable": "@drawable/sliderhandle_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/sliderhandle_hover",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/sliderhandle"
+      }
+    ]
+  },
+  {
+    "name": "slowfwdforeground",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "slowrevforeground",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "small_dark_btn",
+    "states": [
+      {
+        "drawable": "@drawable/btn_dark_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_dark_normal",
+        "conditions": {
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_dark_normal"
+      }
+    ]
+  },
+  {
+    "name": "small_dark_btn2",
+    "states": [
+      {
+        "drawable": "@drawable/btn_dark_pressed",
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_dark_normal",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": false,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/trackhistory_list_item_background_selected",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_dark_normal",
+        "conditions": {
+          "state_enabled": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "spinner_background_holo",
+    "states": [
+      {
+        "drawable": "@drawable/spinner_background_holo_disabled",
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {
+        "drawable": "@drawable/spinner_background_holo_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/spinner_background_holo_normal",
+        "conditions": {
+          "state_pressed": false,
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/spinner_background_holo_normal"
+      }
+    ]
+  },
+  {
+    "name": "spinner_new",
+    "states": [
+      {},
+      {},
+      {},
+      {
+        "drawable": "@drawable/dropdown_selector"
+      }
+    ]
+  },
+  {
+    "name": "sse_shape",
+    "states": [
+      {
+        "drawable": "@drawable/polygon_lit",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/polygon"
+      }
+    ]
+  },
+  {
+    "name": "survey_entry_button",
+    "states": [
+      {
+        "drawable": "@drawable/survey_entry_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/survey_entry_selected",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/survey_entry_disabled",
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {
+        "drawable": "@drawable/survey_entry_normal"
+      }
+    ]
+  },
+  {
+    "name": "switch_thumb",
+    "states": [
+      {
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "switch_track_selector",
+    "states": [
+      {
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "tab_bg_selector",
+    "states": [
+      {
+        "drawable": "@drawable/tab_holo_selected",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/tab_holo_selected_pressed",
+        "conditions": {
+          "state_pressed": true,
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/tab_holo_unselected_pressed",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/tab_holo_unselected"
+      }
+    ]
+  },
+  {
+    "name": "tab_indicator_background",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": false,
+          "state_focused": false
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true,
+          "state_focused": false
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": false,
+          "state_focused": true
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true,
+          "state_focused": true
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_selected": false,
+          "state_focused": false
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_selected": true,
+          "state_focused": false
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_selected": false,
+          "state_focused": true
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_selected": true,
+          "state_focused": true
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "tab_indicator_left_background",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": false,
+          "state_focused": false
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true,
+          "state_focused": false
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": false,
+          "state_focused": true
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true,
+          "state_focused": true
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_selected": false,
+          "state_focused": false
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_selected": true,
+          "state_focused": false
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_selected": false,
+          "state_focused": true
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_selected": true,
+          "state_focused": true
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "tab_indicator_right_background",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": false,
+          "state_focused": false
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true,
+          "state_focused": false
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": false,
+          "state_focused": true
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true,
+          "state_focused": true
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_selected": false,
+          "state_focused": false
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_selected": true,
+          "state_focused": false
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_selected": false,
+          "state_focused": true
+        }
+      },
+      {},
+      {
+        "conditions": {
+          "state_pressed": true,
+          "state_selected": true,
+          "state_focused": true
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "tab_text_selector",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {}
+    ]
+  },
+  {
+    "name": "thumbback_small",
+    "states": [
+      {
+        "drawable": "@drawable/thumb_hover",
+        "conditions": {
+          "state_focused": true
+        }
+      },
+      {
+        "drawable": "@drawable/thumb_small"
+      }
+    ]
+  },
+  {
+    "name": "toggle_button_left_background",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {},
+      {}
+    ]
+  },
+  {
+    "name": "toggle_button_right_background",
+    "states": [
+      {
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {},
+      {}
+    ]
+  },
+  {
+    "name": "toggle_textview_background",
+    "states": [
+      {},
+      {}
+    ]
+  },
+  {
+    "name": "togglebutton",
+    "states": [
+      {
+        "drawable": "@drawable/btn_default_selected",
+        "conditions": {
+          "state_selected": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_default_selected",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/btn_default_normal"
+      }
+    ]
+  },
+  {
+    "name": "toolbar_item_gray",
+    "states": [
+      {
+        "drawable": "@drawable/toolbar_item_gray_normal",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": false,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/toolbar_item_gray_selected",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/toolbar_item_gray_normal",
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/toolbar_item_gray_normal",
+        "conditions": {
+          "state_enabled": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "toolbar_item_green",
+    "states": [
+      {
+        "drawable": "@drawable/toolbar_item_green_normal",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": false,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/toolbar_item_green_selected",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/toolbar_item_green_normal",
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/toolbar_item_green_normal",
+        "conditions": {
+          "state_enabled": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "toolbar_item_red",
+    "states": [
+      {
+        "drawable": "@drawable/toolbar_item_red_normal",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": false,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/toolbar_item_red_selected",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/toolbar_item_red_normal",
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/toolbar_item_red_normal",
+        "conditions": {
+          "state_enabled": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "toolbar_item_yellow",
+    "states": [
+      {
+        "drawable": "@drawable/toolbar_item_yellow_normal",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": false,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/toolbar_item_yellow_selected",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/toolbar_item_yellow_normal",
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/toolbar_item_yellow_normal",
+        "conditions": {
+          "state_enabled": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "trackhistory_list_item_background",
+    "states": [
+      {
+        "drawable": "@drawable/trackhistory_list_item_background_normal",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": false,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/trackhistory_list_item_background_selected",
+        "conditions": {
+          "state_pressed": false,
+          "state_selected": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/trackhistory_list_item_background_normal",
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/trackhistory_list_item_background_normal",
+        "conditions": {
+          "state_enabled": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "unknown_radio",
+    "states": [
+      {
+        "drawable": "@drawable/unknown_selected",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/unknown_unselected",
+        "conditions": {
+          "state_checked": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "video_btn2",
+    "states": [
+      {
+        "drawable": "@drawable/video_btn_default_normal",
+        "conditions": {
+          "state_enabled": true
+        }
+      },
+      {
+        "drawable": "@drawable/video_btn_default_disabled",
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {
+        "drawable": "@drawable/video_btn_default_normal"
+      }
+    ]
+  },
+  {
+    "name": "zeroize_switch_bg",
+    "states": [
+      {
+        "drawable": "@drawable/zeroize_switch_enable",
+        "conditions": {
+          "state_enabled": false
+        }
+      },
+      {
+        "drawable": "@drawable/zeroize_switch_enable",
+        "conditions": {
+          "state_pressed": true
+        }
+      },
+      {
+        "drawable": "@drawable/zeroize_switch_check_on",
+        "conditions": {
+          "state_checked": true
+        }
+      },
+      {
+        "drawable": "@drawable/zeroize_switch_enable"
+      }
+    ]
+  }
+]

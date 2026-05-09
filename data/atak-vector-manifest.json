@@ -1,0 +1,1394 @@
+[
+  {
+    "name": "bottom_closed",
+    "source": "drawable/bottom_closed.xml",
+    "output": "icons/svg/atak/bottom_closed.svg",
+    "viewBox": "0 0 313 31",
+    "viewportWidth": 313,
+    "viewportHeight": 31
+  },
+  {
+    "name": "btn_check_off",
+    "source": "drawable/btn_check_off.xml",
+    "output": "icons/svg/atak/btn_check_off.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "btn_check_on",
+    "source": "drawable/btn_check_on.xml",
+    "output": "icons/svg/atak/btn_check_on.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "btn_check_semi",
+    "source": "drawable/btn_check_semi.xml",
+    "output": "icons/svg/atak/btn_check_semi.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "bullseye",
+    "source": "drawable/bullseye.xml",
+    "output": "icons/svg/atak/bullseye.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "bullseye_lit",
+    "source": "drawable/bullseye_lit.xml",
+    "output": "icons/svg/atak/bullseye_lit.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "cancel_widget",
+    "source": "drawable/cancel_widget.xml",
+    "output": "icons/svg/atak/cancel_widget.svg",
+    "viewBox": "0 0 367 41",
+    "viewportWidth": 367,
+    "viewportHeight": 41
+  },
+  {
+    "name": "checked_box",
+    "source": "drawable/checked_box.xml",
+    "output": "icons/svg/atak/checked_box.svg",
+    "viewBox": "0 0 500 500",
+    "viewportWidth": 500,
+    "viewportHeight": 500
+  },
+  {
+    "name": "confirm_icon",
+    "source": "drawable/confirm_icon.xml",
+    "output": "icons/svg/atak/confirm_icon.svg",
+    "viewBox": "0 0 367 41",
+    "viewportWidth": 367,
+    "viewportHeight": 41
+  },
+  {
+    "name": "confirm_widget",
+    "source": "drawable/confirm_widget.xml",
+    "output": "icons/svg/atak/confirm_widget.svg",
+    "viewBox": "0 0 367 41",
+    "viewportWidth": 367,
+    "viewportHeight": 41
+  },
+  {
+    "name": "dropdown_selector",
+    "source": "drawable/dropdown_selector.xml",
+    "output": "icons/svg/atak/dropdown_selector.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "empty_box",
+    "source": "drawable/empty_box.xml",
+    "output": "icons/svg/atak/empty_box.svg",
+    "viewBox": "0 0 500 500",
+    "viewportWidth": 500,
+    "viewportHeight": 500
+  },
+  {
+    "name": "hierarchy_clear",
+    "source": "drawable/hierarchy_clear.xml",
+    "output": "icons/svg/atak/hierarchy_clear.svg",
+    "viewBox": "0 0 34 34",
+    "viewportWidth": 34,
+    "viewportHeight": 34
+  },
+  {
+    "name": "ic_3d",
+    "source": "drawable/ic_3d.xml",
+    "output": "icons/svg/atak/ic_3d.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_3d_lock",
+    "source": "drawable/ic_3d_lock.xml",
+    "output": "icons/svg/atak/ic_3d_lock.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_add",
+    "source": "drawable/ic_add.xml",
+    "output": "icons/svg/atak/ic_add.svg",
+    "viewBox": "0 0 36 36",
+    "viewportWidth": 36,
+    "viewportHeight": 36
+  },
+  {
+    "name": "ic_arrow_right",
+    "source": "drawable/ic_arrow_right.xml",
+    "output": "icons/svg/atak/ic_arrow_right.svg",
+    "viewBox": "0 0 36 36",
+    "viewportWidth": 36,
+    "viewportHeight": 36
+  },
+  {
+    "name": "ic_attach_new",
+    "source": "drawable/ic_attach_new.xml",
+    "output": "icons/svg/atak/ic_attach_new.svg",
+    "viewBox": "0 0 36 36",
+    "viewportWidth": 36,
+    "viewportHeight": 36
+  },
+  {
+    "name": "ic_baseline_keyboard_arrow_right_24",
+    "source": "drawable/ic_baseline_keyboard_arrow_right_24.xml",
+    "output": "icons/svg/atak/ic_baseline_keyboard_arrow_right_24.svg",
+    "viewBox": "0 0 24 24",
+    "viewportWidth": 24,
+    "viewportHeight": 24
+  },
+  {
+    "name": "ic_button_close",
+    "source": "drawable/ic_button_close.xml",
+    "output": "icons/svg/atak/ic_button_close.svg",
+    "viewBox": "0 0 17 16",
+    "viewportWidth": 17,
+    "viewportHeight": 16
+  },
+  {
+    "name": "ic_button_confirm",
+    "source": "drawable/ic_button_confirm.xml",
+    "output": "icons/svg/atak/ic_button_confirm.svg",
+    "viewBox": "0 0 16 16",
+    "viewportWidth": 16,
+    "viewportHeight": 16
+  },
+  {
+    "name": "ic_center",
+    "source": "drawable/ic_center.xml",
+    "output": "icons/svg/atak/ic_center.svg",
+    "viewBox": "0 0 16 16",
+    "viewportWidth": 16,
+    "viewportHeight": 16
+  },
+  {
+    "name": "ic_check",
+    "source": "drawable/ic_check.xml",
+    "output": "icons/svg/atak/ic_check.svg",
+    "viewBox": "0 0 22 20",
+    "viewportWidth": 22,
+    "viewportHeight": 20
+  },
+  {
+    "name": "ic_check_off",
+    "source": "drawable/ic_check_off.xml",
+    "output": "icons/svg/atak/ic_check_off.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_check_on",
+    "source": "drawable/ic_check_on.xml",
+    "output": "icons/svg/atak/ic_check_on.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_close",
+    "source": "drawable/ic_close.xml",
+    "output": "icons/svg/atak/ic_close.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_compass",
+    "source": "drawable/ic_compass.xml",
+    "output": "icons/svg/atak/ic_compass.svg",
+    "viewBox": "0 0 26 35",
+    "viewportWidth": 26,
+    "viewportHeight": 35
+  },
+  {
+    "name": "ic_delete",
+    "source": "drawable/ic_delete.xml",
+    "output": "icons/svg/atak/ic_delete.svg",
+    "viewBox": "0 0 30 29",
+    "viewportWidth": 30,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_details_v2",
+    "source": "drawable/ic_details_v2.xml",
+    "output": "icons/svg/atak/ic_details_v2.svg",
+    "viewBox": "0 0 36 36",
+    "viewportWidth": 36,
+    "viewportHeight": 36
+  },
+  {
+    "name": "ic_down_arrow",
+    "source": "drawable/ic_down_arrow.xml",
+    "output": "icons/svg/atak/ic_down_arrow.svg",
+    "viewBox": "0 0 7 18",
+    "viewportWidth": 7,
+    "viewportHeight": 18
+  },
+  {
+    "name": "ic_download",
+    "source": "drawable/ic_download.xml",
+    "output": "icons/svg/atak/ic_download.svg",
+    "viewBox": "0 0 36 36",
+    "viewportWidth": 36,
+    "viewportHeight": 36
+  },
+  {
+    "name": "ic_drag_ruler_selected",
+    "source": "drawable/ic_drag_ruler_selected.xml",
+    "output": "icons/svg/atak/ic_drag_ruler_selected.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "ic_drag_ruler_unselected",
+    "source": "drawable/ic_drag_ruler_unselected.xml",
+    "output": "icons/svg/atak/ic_drag_ruler_unselected.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "ic_dropdown_container",
+    "source": "drawable/ic_dropdown_container.xml",
+    "output": "icons/svg/atak/ic_dropdown_container.svg",
+    "viewBox": "0 0 164 56",
+    "viewportWidth": 164,
+    "viewportHeight": 56
+  },
+  {
+    "name": "ic_edit_calendar",
+    "source": "drawable/ic_edit_calendar.xml",
+    "output": "icons/svg/atak/ic_edit_calendar.svg",
+    "viewBox": "0 0 24 24",
+    "viewportWidth": 24,
+    "viewportHeight": 24
+  },
+  {
+    "name": "ic_edit_features",
+    "source": "drawable/ic_edit_features.xml",
+    "output": "icons/svg/atak/ic_edit_features.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_edit_outline",
+    "source": "drawable/ic_edit_outline.xml",
+    "output": "icons/svg/atak/ic_edit_outline.svg",
+    "viewBox": "0 0 30 29",
+    "viewportWidth": 30,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_elevation",
+    "source": "drawable/ic_elevation.xml",
+    "output": "icons/svg/atak/ic_elevation.svg",
+    "viewBox": "0 0 34 34",
+    "viewportWidth": 34,
+    "viewportHeight": 34
+  },
+  {
+    "name": "ic_forward",
+    "source": "drawable/ic_forward.xml",
+    "output": "icons/svg/atak/ic_forward.svg",
+    "viewBox": "0 0 30 29",
+    "viewportWidth": 30,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_group",
+    "source": "drawable/ic_group.xml",
+    "output": "icons/svg/atak/ic_group.svg",
+    "viewBox": "0 0 48 48",
+    "viewportWidth": 48,
+    "viewportHeight": 48
+  },
+  {
+    "name": "ic_hamburger",
+    "source": "drawable/ic_hamburger.xml",
+    "output": "icons/svg/atak/ic_hamburger.svg",
+    "viewBox": "0 0 32 32",
+    "viewportWidth": 32,
+    "viewportHeight": 32
+  },
+  {
+    "name": "ic_hamburger_left",
+    "source": "drawable/ic_hamburger_left.xml",
+    "output": "icons/svg/atak/ic_hamburger_left.svg",
+    "viewBox": "0 0 32 32",
+    "viewportWidth": 32,
+    "viewportHeight": 32
+  },
+  {
+    "name": "ic_hamburger_right",
+    "source": "drawable/ic_hamburger_right.xml",
+    "output": "icons/svg/atak/ic_hamburger_right.svg",
+    "viewBox": "0 0 32 32",
+    "viewportWidth": 32,
+    "viewportHeight": 32
+  },
+  {
+    "name": "ic_hashtag_new",
+    "source": "drawable/ic_hashtag_new.xml",
+    "output": "icons/svg/atak/ic_hashtag_new.svg",
+    "viewBox": "0 0 34 34",
+    "viewportWidth": 34,
+    "viewportHeight": 34
+  },
+  {
+    "name": "ic_hide",
+    "source": "drawable/ic_hide.xml",
+    "output": "icons/svg/atak/ic_hide.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_hierarchy_delete",
+    "source": "drawable/ic_hierarchy_delete.xml",
+    "output": "icons/svg/atak/ic_hierarchy_delete.svg",
+    "viewBox": "0 0 34 34",
+    "viewportWidth": 34,
+    "viewportHeight": 34
+  },
+  {
+    "name": "ic_hostile_go_to_active",
+    "source": "drawable/ic_hostile_go_to_active.xml",
+    "output": "icons/svg/atak/ic_hostile_go_to_active.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "ic_hostile_go_to_default",
+    "source": "drawable/ic_hostile_go_to_default.xml",
+    "output": "icons/svg/atak/ic_hostile_go_to_default.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "ic_hostile_mgr_active",
+    "source": "drawable/ic_hostile_mgr_active.xml",
+    "output": "icons/svg/atak/ic_hostile_mgr_active.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "ic_hostile_mgr_default",
+    "source": "drawable/ic_hostile_mgr_default.xml",
+    "output": "icons/svg/atak/ic_hostile_mgr_default.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "ic_hostile_selected",
+    "source": "drawable/ic_hostile_selected.xml",
+    "output": "icons/svg/atak/ic_hostile_selected.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "ic_hostile_unselected",
+    "source": "drawable/ic_hostile_unselected.xml",
+    "output": "icons/svg/atak/ic_hostile_unselected.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "ic_imagery_scale",
+    "source": "drawable/ic_imagery_scale.xml",
+    "output": "icons/svg/atak/ic_imagery_scale.svg",
+    "viewBox": "0 0 500 500",
+    "viewportWidth": 500,
+    "viewportHeight": 500
+  },
+  {
+    "name": "ic_laser_selected",
+    "source": "drawable/ic_laser_selected.xml",
+    "output": "icons/svg/atak/ic_laser_selected.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_laser_unselected",
+    "source": "drawable/ic_laser_unselected.xml",
+    "output": "icons/svg/atak/ic_laser_unselected.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_link_eud",
+    "source": "drawable/ic_link_eud.xml",
+    "output": "icons/svg/atak/ic_link_eud.svg",
+    "viewBox": "0 0 40 40",
+    "viewportWidth": 40,
+    "viewportHeight": 40
+  },
+  {
+    "name": "ic_lock_on_self",
+    "source": "drawable/ic_lock_on_self.xml",
+    "output": "icons/svg/atak/ic_lock_on_self.svg",
+    "viewBox": "0 0 35 35",
+    "viewportWidth": 35,
+    "viewportHeight": 35
+  },
+  {
+    "name": "ic_lock_on_self_active",
+    "source": "drawable/ic_lock_on_self_active.xml",
+    "output": "icons/svg/atak/ic_lock_on_self_active.svg",
+    "viewBox": "0 0 35 35",
+    "viewportWidth": 35,
+    "viewportHeight": 35
+  },
+  {
+    "name": "ic_menu_circle",
+    "source": "drawable/ic_menu_circle.xml",
+    "output": "icons/svg/atak/ic_menu_circle.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "ic_menu_circle_lit",
+    "source": "drawable/ic_menu_circle_lit.xml",
+    "output": "icons/svg/atak/ic_menu_circle_lit.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "ic_menu_ellipse",
+    "source": "drawable/ic_menu_ellipse.xml",
+    "output": "icons/svg/atak/ic_menu_ellipse.svg",
+    "viewBox": "0 0 32 32",
+    "viewportWidth": 32,
+    "viewportHeight": 32
+  },
+  {
+    "name": "ic_menu_ellipse_lit",
+    "source": "drawable/ic_menu_ellipse_lit.xml",
+    "output": "icons/svg/atak/ic_menu_ellipse_lit.svg",
+    "viewBox": "0 0 32 32",
+    "viewportWidth": 32,
+    "viewportHeight": 32
+  },
+  {
+    "name": "ic_menu_handle",
+    "source": "drawable/ic_menu_handle.xml",
+    "output": "icons/svg/atak/ic_menu_handle.svg",
+    "viewBox": "0 0 8 40",
+    "viewportWidth": 8,
+    "viewportHeight": 40
+  },
+  {
+    "name": "ic_menu_rb_circle",
+    "source": "drawable/ic_menu_rb_circle.xml",
+    "output": "icons/svg/atak/ic_menu_rb_circle.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "ic_menu_rb_circle_active",
+    "source": "drawable/ic_menu_rb_circle_active.xml",
+    "output": "icons/svg/atak/ic_menu_rb_circle_active.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "ic_minus",
+    "source": "drawable/ic_minus.xml",
+    "output": "icons/svg/atak/ic_minus.svg",
+    "viewBox": "0 0 30 29",
+    "viewportWidth": 30,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_multiselect",
+    "source": "drawable/ic_multiselect.xml",
+    "output": "icons/svg/atak/ic_multiselect.svg",
+    "viewBox": "0 0 34 34",
+    "viewportWidth": 34,
+    "viewportHeight": 34
+  },
+  {
+    "name": "ic_nav_child_arrow_horizontal",
+    "source": "drawable/ic_nav_child_arrow_horizontal.xml",
+    "output": "icons/svg/atak/ic_nav_child_arrow_horizontal.svg",
+    "viewBox": "0 0 10 14",
+    "viewportWidth": 10,
+    "viewportHeight": 14
+  },
+  {
+    "name": "ic_nav_child_arrow_vertical",
+    "source": "drawable/ic_nav_child_arrow_vertical.xml",
+    "output": "icons/svg/atak/ic_nav_child_arrow_vertical.svg",
+    "viewBox": "0 0 14 10",
+    "viewportWidth": 14,
+    "viewportHeight": 10
+  },
+  {
+    "name": "ic_nav_child_dropdown_horizontal",
+    "source": "drawable/ic_nav_child_dropdown_horizontal.xml",
+    "output": "icons/svg/atak/ic_nav_child_dropdown_horizontal.svg",
+    "viewBox": "0 0 174 55",
+    "viewportWidth": 174,
+    "viewportHeight": 55
+  },
+  {
+    "name": "ic_nav_child_dropdown_vertical",
+    "source": "drawable/ic_nav_child_dropdown_vertical.xml",
+    "output": "icons/svg/atak/ic_nav_child_dropdown_vertical.svg",
+    "viewBox": "0 0 54 173",
+    "viewportWidth": 54,
+    "viewportHeight": 173
+  },
+  {
+    "name": "ic_nav_overflow",
+    "source": "drawable/ic_nav_overflow.xml",
+    "output": "icons/svg/atak/ic_nav_overflow.svg",
+    "viewBox": "0 0 48 48",
+    "viewportWidth": 48,
+    "viewportHeight": 48
+  },
+  {
+    "name": "ic_nav_video",
+    "source": "drawable/ic_nav_video.xml",
+    "output": "icons/svg/atak/ic_nav_video.svg",
+    "viewBox": "0 0 48 48",
+    "viewportWidth": 48,
+    "viewportHeight": 48
+  },
+  {
+    "name": "ic_navstack_add",
+    "source": "drawable/ic_navstack_add.xml",
+    "output": "icons/svg/atak/ic_navstack_add.svg",
+    "viewBox": "0 0 36 36",
+    "viewportWidth": 36,
+    "viewportHeight": 36
+  },
+  {
+    "name": "ic_navstack_delete",
+    "source": "drawable/ic_navstack_delete.xml",
+    "output": "icons/svg/atak/ic_navstack_delete.svg",
+    "viewBox": "0 0 36 36",
+    "viewportWidth": 36,
+    "viewportHeight": 36
+  },
+  {
+    "name": "ic_navstack_edit",
+    "source": "drawable/ic_navstack_edit.xml",
+    "output": "icons/svg/atak/ic_navstack_edit.svg",
+    "viewBox": "0 0 36 36",
+    "viewportWidth": 36,
+    "viewportHeight": 36
+  },
+  {
+    "name": "ic_navstack_export",
+    "source": "drawable/ic_navstack_export.xml",
+    "output": "icons/svg/atak/ic_navstack_export.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_navstack_grid",
+    "source": "drawable/ic_navstack_grid.xml",
+    "output": "icons/svg/atak/ic_navstack_grid.svg",
+    "viewBox": "0 0 36 36",
+    "viewportWidth": 36,
+    "viewportHeight": 36
+  },
+  {
+    "name": "ic_navstack_import",
+    "source": "drawable/ic_navstack_import.xml",
+    "output": "icons/svg/atak/ic_navstack_import.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_navstack_list",
+    "source": "drawable/ic_navstack_list.xml",
+    "output": "icons/svg/atak/ic_navstack_list.svg",
+    "viewBox": "0 0 36 36",
+    "viewportWidth": 36,
+    "viewportHeight": 36
+  },
+  {
+    "name": "ic_navstack_navigate",
+    "source": "drawable/ic_navstack_navigate.xml",
+    "output": "icons/svg/atak/ic_navstack_navigate.svg",
+    "viewBox": "0 0 36 36",
+    "viewportWidth": 36,
+    "viewportHeight": 36
+  },
+  {
+    "name": "ic_navstack_reverse",
+    "source": "drawable/ic_navstack_reverse.xml",
+    "output": "icons/svg/atak/ic_navstack_reverse.svg",
+    "viewBox": "0 0 32 32",
+    "viewportWidth": 32,
+    "viewportHeight": 32
+  },
+  {
+    "name": "ic_navstack_save",
+    "source": "drawable/ic_navstack_save.xml",
+    "output": "icons/svg/atak/ic_navstack_save.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_navstack_settings",
+    "source": "drawable/ic_navstack_settings.xml",
+    "output": "icons/svg/atak/ic_navstack_settings.svg",
+    "viewBox": "0 0 36 36",
+    "viewportWidth": 36,
+    "viewportHeight": 36
+  },
+  {
+    "name": "ic_navstack_vertical",
+    "source": "drawable/ic_navstack_vertical.xml",
+    "output": "icons/svg/atak/ic_navstack_vertical.svg",
+    "viewBox": "0 0 36 36",
+    "viewportWidth": 36,
+    "viewportHeight": 36
+  },
+  {
+    "name": "ic_pick_date",
+    "source": "drawable/ic_pick_date.xml",
+    "output": "icons/svg/atak/ic_pick_date.svg",
+    "viewBox": "0 0 24 24",
+    "viewportWidth": 24,
+    "viewportHeight": 24
+  },
+  {
+    "name": "ic_pick_time",
+    "source": "drawable/ic_pick_time.xml",
+    "output": "icons/svg/atak/ic_pick_time.svg",
+    "viewBox": "0 0 24 24",
+    "viewportWidth": 24,
+    "viewportHeight": 24
+  },
+  {
+    "name": "ic_plus",
+    "source": "drawable/ic_plus.xml",
+    "output": "icons/svg/atak/ic_plus.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_point",
+    "source": "drawable/ic_point.xml",
+    "output": "icons/svg/atak/ic_point.svg",
+    "viewBox": "0 0 40 40",
+    "viewportWidth": 40,
+    "viewportHeight": 40
+  },
+  {
+    "name": "ic_pref_handle_shade",
+    "source": "drawable/ic_pref_handle_shade.xml",
+    "output": "icons/svg/atak/ic_pref_handle_shade.svg",
+    "viewBox": "0 0 138 138",
+    "viewportWidth": 138,
+    "viewportHeight": 138
+  },
+  {
+    "name": "ic_pref_self_coord_info",
+    "source": "drawable/ic_pref_self_coord_info.xml",
+    "output": "icons/svg/atak/ic_pref_self_coord_info.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_radio_btn_empty",
+    "source": "drawable/ic_radio_btn_empty.xml",
+    "output": "icons/svg/atak/ic_radio_btn_empty.svg",
+    "viewBox": "0 0 30 29",
+    "viewportWidth": 30,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_radio_btn_filled",
+    "source": "drawable/ic_radio_btn_filled.xml",
+    "output": "icons/svg/atak/ic_radio_btn_filled.svg",
+    "viewBox": "0 0 30 29",
+    "viewportWidth": 30,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_remarks_new",
+    "source": "drawable/ic_remarks_new.xml",
+    "output": "icons/svg/atak/ic_remarks_new.svg",
+    "viewBox": "0 0 36 37",
+    "viewportWidth": 36,
+    "viewportHeight": 37
+  },
+  {
+    "name": "ic_rotation",
+    "source": "drawable/ic_rotation.xml",
+    "output": "icons/svg/atak/ic_rotation.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_rotation_lock",
+    "source": "drawable/ic_rotation_lock.xml",
+    "output": "icons/svg/atak/ic_rotation_lock.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_routes",
+    "source": "drawable/ic_routes.xml",
+    "output": "icons/svg/atak/ic_routes.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_row_back",
+    "source": "drawable/ic_row_back.xml",
+    "output": "icons/svg/atak/ic_row_back.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_row_boat",
+    "source": "drawable/ic_row_boat.xml",
+    "output": "icons/svg/atak/ic_row_boat.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_row_car",
+    "source": "drawable/ic_row_car.xml",
+    "output": "icons/svg/atak/ic_row_car.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_row_continue",
+    "source": "drawable/ic_row_continue.xml",
+    "output": "icons/svg/atak/ic_row_continue.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_row_contract",
+    "source": "drawable/ic_row_contract.xml",
+    "output": "icons/svg/atak/ic_row_contract.svg",
+    "viewBox": "0 0 30 29",
+    "viewportWidth": 30,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_row_expand",
+    "source": "drawable/ic_row_expand.xml",
+    "output": "icons/svg/atak/ic_row_expand.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_row_plane",
+    "source": "drawable/ic_row_plane.xml",
+    "output": "icons/svg/atak/ic_row_plane.svg",
+    "viewBox": "0 0 29 30",
+    "viewportWidth": 29,
+    "viewportHeight": 30
+  },
+  {
+    "name": "ic_row_swim",
+    "source": "drawable/ic_row_swim.xml",
+    "output": "icons/svg/atak/ic_row_swim.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_row_walking",
+    "source": "drawable/ic_row_walking.xml",
+    "output": "icons/svg/atak/ic_row_walking.svg",
+    "viewBox": "0 0 28 29",
+    "viewportWidth": 28,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_ruler_selected",
+    "source": "drawable/ic_ruler_selected.xml",
+    "output": "icons/svg/atak/ic_ruler_selected.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "ic_ruler_unselected",
+    "source": "drawable/ic_ruler_unselected.xml",
+    "output": "icons/svg/atak/ic_ruler_unselected.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "ic_search",
+    "source": "drawable/ic_search.xml",
+    "output": "icons/svg/atak/ic_search.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "ic_send",
+    "source": "drawable/ic_send.xml",
+    "output": "icons/svg/atak/ic_send.svg",
+    "viewBox": "0 0 24 24",
+    "viewportWidth": 24,
+    "viewportHeight": 24
+  },
+  {
+    "name": "ic_send_alt",
+    "source": "drawable/ic_send_alt.xml",
+    "output": "icons/svg/atak/ic_send_alt.svg",
+    "viewBox": "0 0 34 34",
+    "viewportWidth": 34,
+    "viewportHeight": 34
+  },
+  {
+    "name": "ic_send_outline",
+    "source": "drawable/ic_send_outline.xml",
+    "output": "icons/svg/atak/ic_send_outline.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_settings",
+    "source": "drawable/ic_settings.xml",
+    "output": "icons/svg/atak/ic_settings.svg",
+    "viewBox": "0 0 30 29",
+    "viewportWidth": 30,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_show",
+    "source": "drawable/ic_show.xml",
+    "output": "icons/svg/atak/ic_show.svg",
+    "viewBox": "0 0 30 29",
+    "viewportWidth": 30,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_side_menu_trigger_bottom_close",
+    "source": "drawable/ic_side_menu_trigger_bottom_close.xml",
+    "output": "icons/svg/atak/ic_side_menu_trigger_bottom_close.svg",
+    "viewBox": "0 0 94 38",
+    "viewportWidth": 94,
+    "viewportHeight": 38
+  },
+  {
+    "name": "ic_side_menu_trigger_bottom_close_legacy",
+    "source": "drawable/ic_side_menu_trigger_bottom_close_legacy.xml",
+    "output": "icons/svg/atak/ic_side_menu_trigger_bottom_close_legacy.svg",
+    "viewBox": "0 0 94 38",
+    "viewportWidth": 94,
+    "viewportHeight": 38
+  },
+  {
+    "name": "ic_side_menu_trigger_bottom_open",
+    "source": "drawable/ic_side_menu_trigger_bottom_open.xml",
+    "output": "icons/svg/atak/ic_side_menu_trigger_bottom_open.svg",
+    "viewBox": "0 0 95 33",
+    "viewportWidth": 95,
+    "viewportHeight": 33
+  },
+  {
+    "name": "ic_side_menu_trigger_bottom_open_legacy",
+    "source": "drawable/ic_side_menu_trigger_bottom_open_legacy.xml",
+    "output": "icons/svg/atak/ic_side_menu_trigger_bottom_open_legacy.svg",
+    "viewBox": "0 0 95 33",
+    "viewportWidth": 95,
+    "viewportHeight": 33
+  },
+  {
+    "name": "ic_side_menu_trigger_close",
+    "source": "drawable/ic_side_menu_trigger_close.xml",
+    "output": "icons/svg/atak/ic_side_menu_trigger_close.svg",
+    "viewBox": "0 0 38 95",
+    "viewportWidth": 38,
+    "viewportHeight": 95
+  },
+  {
+    "name": "ic_side_menu_trigger_close_legacy",
+    "source": "drawable/ic_side_menu_trigger_close_legacy.xml",
+    "output": "icons/svg/atak/ic_side_menu_trigger_close_legacy.svg",
+    "viewBox": "0 0 38 95",
+    "viewportWidth": 38,
+    "viewportHeight": 95
+  },
+  {
+    "name": "ic_side_menu_trigger_open",
+    "source": "drawable/ic_side_menu_trigger_open.xml",
+    "output": "icons/svg/atak/ic_side_menu_trigger_open.svg",
+    "viewBox": "0 0 31 94",
+    "viewportWidth": 31,
+    "viewportHeight": 94
+  },
+  {
+    "name": "ic_side_menu_trigger_open_legacy",
+    "source": "drawable/ic_side_menu_trigger_open_legacy.xml",
+    "output": "icons/svg/atak/ic_side_menu_trigger_open_legacy.svg",
+    "viewBox": "0 0 31 94",
+    "viewportWidth": 31,
+    "viewportHeight": 94
+  },
+  {
+    "name": "ic_sort_asc",
+    "source": "drawable/ic_sort_asc.xml",
+    "output": "icons/svg/atak/ic_sort_asc.svg",
+    "viewBox": "0 0 36 36",
+    "viewportWidth": 36,
+    "viewportHeight": 36
+  },
+  {
+    "name": "ic_sort_desc",
+    "source": "drawable/ic_sort_desc.xml",
+    "output": "icons/svg/atak/ic_sort_desc.svg",
+    "viewBox": "0 0 36 37",
+    "viewportWidth": 36,
+    "viewportHeight": 37
+  },
+  {
+    "name": "ic_spi1_disabled",
+    "source": "drawable/ic_spi1_disabled.xml",
+    "output": "icons/svg/atak/ic_spi1_disabled.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_spi1_enabled",
+    "source": "drawable/ic_spi1_enabled.xml",
+    "output": "icons/svg/atak/ic_spi1_enabled.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_spi1_off",
+    "source": "drawable/ic_spi1_off.xml",
+    "output": "icons/svg/atak/ic_spi1_off.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_spi2_disabled",
+    "source": "drawable/ic_spi2_disabled.xml",
+    "output": "icons/svg/atak/ic_spi2_disabled.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_spi2_enabled",
+    "source": "drawable/ic_spi2_enabled.xml",
+    "output": "icons/svg/atak/ic_spi2_enabled.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_spi2_off",
+    "source": "drawable/ic_spi2_off.xml",
+    "output": "icons/svg/atak/ic_spi2_off.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_spi3_disabled",
+    "source": "drawable/ic_spi3_disabled.xml",
+    "output": "icons/svg/atak/ic_spi3_disabled.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_spi3_enabled",
+    "source": "drawable/ic_spi3_enabled.xml",
+    "output": "icons/svg/atak/ic_spi3_enabled.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_spi3_off",
+    "source": "drawable/ic_spi3_off.xml",
+    "output": "icons/svg/atak/ic_spi3_off.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "ic_switch",
+    "source": "drawable/ic_switch.xml",
+    "output": "icons/svg/atak/ic_switch.svg",
+    "viewBox": "0 0 30 29",
+    "viewportWidth": 30,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_target",
+    "source": "drawable/ic_target.xml",
+    "output": "icons/svg/atak/ic_target.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_tile_indicator",
+    "source": "drawable/ic_tile_indicator.xml",
+    "output": "icons/svg/atak/ic_tile_indicator.svg",
+    "viewBox": "0 0 33 42",
+    "viewportWidth": 33,
+    "viewportHeight": 42
+  },
+  {
+    "name": "ic_toolbar_corner_close",
+    "source": "drawable/ic_toolbar_corner_close.xml",
+    "output": "icons/svg/atak/ic_toolbar_corner_close.svg",
+    "viewBox": "0 0 16 16",
+    "viewportWidth": 16,
+    "viewportHeight": 16
+  },
+  {
+    "name": "ic_trash_outline",
+    "source": "drawable/ic_trash_outline.xml",
+    "output": "icons/svg/atak/ic_trash_outline.svg",
+    "viewBox": "0 0 30 29",
+    "viewportWidth": 30,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_up_arrow",
+    "source": "drawable/ic_up_arrow.xml",
+    "output": "icons/svg/atak/ic_up_arrow.svg",
+    "viewBox": "0 0 7 17",
+    "viewportWidth": 7,
+    "viewportHeight": 17
+  },
+  {
+    "name": "ic_video",
+    "source": "drawable/ic_video.xml",
+    "output": "icons/svg/atak/ic_video.svg",
+    "viewBox": "0 0 30 29",
+    "viewportWidth": 30,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_white_radio_empty",
+    "source": "drawable/ic_white_radio_empty.xml",
+    "output": "icons/svg/atak/ic_white_radio_empty.svg",
+    "viewBox": "0 0 30 29",
+    "viewportWidth": 30,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_white_radio_filled",
+    "source": "drawable/ic_white_radio_filled.xml",
+    "output": "icons/svg/atak/ic_white_radio_filled.svg",
+    "viewBox": "0 0 30 29",
+    "viewportWidth": 30,
+    "viewportHeight": 29
+  },
+  {
+    "name": "ic_zoom_in_out",
+    "source": "drawable/ic_zoom_in_out.xml",
+    "output": "icons/svg/atak/ic_zoom_in_out.svg",
+    "viewBox": "0 0 25 60",
+    "viewportWidth": 25,
+    "viewportHeight": 60
+  },
+  {
+    "name": "large_reticle_red",
+    "source": "drawable/large_reticle_red.xml",
+    "output": "icons/svg/atak/large_reticle_red.svg",
+    "viewBox": "0 0 32 33",
+    "viewportWidth": 32,
+    "viewportHeight": 33
+  },
+  {
+    "name": "nav_child_dropdown_horizontal",
+    "source": "drawable/nav_child_dropdown_horizontal.xml",
+    "output": "icons/svg/atak/nav_child_dropdown_horizontal.svg",
+    "viewBox": "0 0 214 56",
+    "viewportWidth": 214,
+    "viewportHeight": 56
+  },
+  {
+    "name": "nav_collapse",
+    "source": "drawable/nav_collapse.xml",
+    "output": "icons/svg/atak/nav_collapse.svg",
+    "viewBox": "0 0 48 48",
+    "viewportWidth": 48,
+    "viewportHeight": 48
+  },
+  {
+    "name": "nav_compass",
+    "source": "drawable/nav_compass.xml",
+    "output": "icons/svg/atak/nav_compass.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "nav_compass_arrow",
+    "source": "drawable/nav_compass_arrow.xml",
+    "output": "icons/svg/atak/nav_compass_arrow.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "nav_dynamic_compass_arrow",
+    "source": "drawable/nav_dynamic_compass_arrow.xml",
+    "output": "icons/svg/atak/nav_dynamic_compass_arrow.svg",
+    "viewBox": "0 0 7 9",
+    "viewportWidth": 7,
+    "viewportHeight": 9
+  },
+  {
+    "name": "nav_dynamic_compass_background",
+    "source": "drawable/nav_dynamic_compass_background.xml",
+    "output": "icons/svg/atak/nav_dynamic_compass_background.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "nav_dynamic_compass_circle",
+    "source": "drawable/nav_dynamic_compass_circle.xml",
+    "output": "icons/svg/atak/nav_dynamic_compass_circle.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "nav_dynamic_compass_rotate",
+    "source": "drawable/nav_dynamic_compass_rotate.xml",
+    "output": "icons/svg/atak/nav_dynamic_compass_rotate.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "nav_dynamic_compass_ticks",
+    "source": "drawable/nav_dynamic_compass_ticks.xml",
+    "output": "icons/svg/atak/nav_dynamic_compass_ticks.svg",
+    "viewBox": "0 0 128 128",
+    "viewportWidth": 128,
+    "viewportHeight": 128
+  },
+  {
+    "name": "nav_tool_hidden",
+    "source": "drawable/nav_tool_hidden.xml",
+    "output": "icons/svg/atak/nav_tool_hidden.svg",
+    "viewBox": "0 0 128.00002 128.00002",
+    "viewportWidth": 128.00002,
+    "viewportHeight": 128.00002
+  },
+  {
+    "name": "nav_tool_shown",
+    "source": "drawable/nav_tool_shown.xml",
+    "output": "icons/svg/atak/nav_tool_shown.svg",
+    "viewBox": "0 0 128.00002 128.00002",
+    "viewportWidth": 128.00002,
+    "viewportHeight": 128.00002
+  },
+  {
+    "name": "nav_zoom_edit",
+    "source": "drawable/nav_zoom_edit.xml",
+    "output": "icons/svg/atak/nav_zoom_edit.svg",
+    "viewBox": "0 0 128 256",
+    "viewportWidth": 128,
+    "viewportHeight": 256
+  },
+  {
+    "name": "overlay_not_visible",
+    "source": "drawable/overlay_not_visible.xml",
+    "output": "icons/svg/atak/overlay_not_visible.svg",
+    "viewBox": "0 0 24 24",
+    "viewportWidth": 24,
+    "viewportHeight": 24
+  },
+  {
+    "name": "overlay_semi_visible",
+    "source": "drawable/overlay_semi_visible.xml",
+    "output": "icons/svg/atak/overlay_semi_visible.svg",
+    "viewBox": "0 0 24 24",
+    "viewportWidth": 24,
+    "viewportHeight": 24
+  },
+  {
+    "name": "overlay_visible",
+    "source": "drawable/overlay_visible.xml",
+    "output": "icons/svg/atak/overlay_visible.svg",
+    "viewBox": "0 0 24 24",
+    "viewportWidth": 24,
+    "viewportHeight": 24
+  },
+  {
+    "name": "polygon",
+    "source": "drawable/polygon.xml",
+    "output": "icons/svg/atak/polygon.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "polygon_lit",
+    "source": "drawable/polygon_lit.xml",
+    "output": "icons/svg/atak/polygon_lit.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "rectangle",
+    "source": "drawable/rectangle.xml",
+    "output": "icons/svg/atak/rectangle.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "rectangle_lit",
+    "source": "drawable/rectangle_lit.xml",
+    "output": "icons/svg/atak/rectangle_lit.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "select_area_current_view",
+    "source": "drawable/select_area_current_view.xml",
+    "output": "icons/svg/atak/select_area_current_view.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "select_area_drawn_objects",
+    "source": "drawable/select_area_drawn_objects.xml",
+    "output": "icons/svg/atak/select_area_drawn_objects.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "select_area_freeform",
+    "source": "drawable/select_area_freeform.xml",
+    "output": "icons/svg/atak/select_area_freeform.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "select_area_rectangle",
+    "source": "drawable/select_area_rectangle.xml",
+    "output": "icons/svg/atak/select_area_rectangle.svg",
+    "viewBox": "0 0 29 29",
+    "viewportWidth": 29,
+    "viewportHeight": 29
+  },
+  {
+    "name": "side_closed",
+    "source": "drawable/side_closed.xml",
+    "output": "icons/svg/atak/side_closed.svg",
+    "viewBox": "0 0 29 319",
+    "viewportWidth": 29,
+    "viewportHeight": 319
+  },
+  {
+    "name": "side_open",
+    "source": "drawable/side_open.xml",
+    "output": "icons/svg/atak/side_open.svg",
+    "viewBox": "0 0 18 319",
+    "viewportWidth": 18,
+    "viewportHeight": 319
+  },
+  {
+    "name": "sidemenu_back",
+    "source": "drawable/sidemenu_back.xml",
+    "output": "icons/svg/atak/sidemenu_back.svg",
+    "viewBox": "0 0 11 19",
+    "viewportWidth": 11,
+    "viewportHeight": 19
+  },
+  {
+    "name": "telestrate",
+    "source": "drawable/telestrate.xml",
+    "output": "icons/svg/atak/telestrate.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "telestrate_lit",
+    "source": "drawable/telestrate_lit.xml",
+    "output": "icons/svg/atak/telestrate_lit.svg",
+    "viewBox": "0 0 30 30",
+    "viewportWidth": 30,
+    "viewportHeight": 30
+  },
+  {
+    "name": "tilt_indicator",
+    "source": "drawable/tilt_indicator.xml",
+    "output": "icons/svg/atak/tilt_indicator.svg",
+    "viewBox": "0 0 44 44",
+    "viewportWidth": 44,
+    "viewportHeight": 44
+  },
+  {
+    "name": "toolbar_endcap",
+    "source": "drawable/toolbar_endcap.xml",
+    "output": "icons/svg/atak/toolbar_endcap.svg",
+    "viewBox": "0 0 8 46",
+    "viewportWidth": 8,
+    "viewportHeight": 46
+  }
+]

@@ -1,0 +1,669 @@
+[
+  {
+    "name": "all_tools_config_border",
+    "shapeType": "rectangle",
+    "solidColor": "#77484848",
+    "stroke": {
+      "width": "2dp",
+      "color": "#77FFFFFF"
+    },
+    "corners": {
+      "radius": "2dp"
+    }
+  },
+  {
+    "name": "all_tools_config_drop",
+    "shapeType": "rectangle",
+    "stroke": {
+      "width": "2dp",
+      "color": "#FF00FF00"
+    },
+    "corners": {
+      "topLeftRadius": "3dp",
+      "topRightRadius": "3dp",
+      "bottomLeftRadius": "3dp",
+      "bottomRightRadius": "3dp"
+    },
+    "gradient": {
+      "startColor": "#DD000000",
+      "endColor": "#DD2ECCFA",
+      "angle": "225"
+    }
+  },
+  {
+    "name": "atak_tabwidget_bottom",
+    "shapeType": "rectangle",
+    "gradient": {
+      "startColor": "#333",
+      "endColor": "#000",
+      "angle": "90",
+      "type": "linear"
+    }
+  },
+  {
+    "name": "black_overlay_gradient",
+    "shapeType": "rectangle",
+    "gradient": {
+      "startColor": "#00000000",
+      "endColor": "@color/black_overlay",
+      "angle": "90"
+    }
+  },
+  {
+    "name": "blue_indicator_circle",
+    "shapeType": "oval",
+    "stroke": {
+      "width": "1dp",
+      "color": "#0000FF"
+    },
+    "gradient": {
+      "startColor": "#0000FF",
+      "endColor": "#000099",
+      "centerColor": "#000099",
+      "type": "radial",
+      "gradientRadius": "50.0%"
+    }
+  },
+  {
+    "name": "border",
+    "shapeType": "rectangle",
+    "solidColor": "#0000",
+    "stroke": {
+      "width": "2px",
+      "color": "#8888"
+    },
+    "corners": {
+      "radius": "3px"
+    }
+  },
+  {
+    "name": "bottom_left_widget_background",
+    "shapeType": "rectangle",
+    "solidColor": "@color/black",
+    "corners": {
+      "topRightRadius": "6dp"
+    }
+  },
+  {
+    "name": "buttonbackdown",
+    "shapeType": "rectangle",
+    "stroke": {
+      "width": "1dp",
+      "color": "#FF0B0B0B"
+    },
+    "gradient": {
+      "startColor": "#FF0A0A0A",
+      "endColor": "#FF000000",
+      "angle": "90",
+      "type": "linear"
+    }
+  },
+  {
+    "name": "buttonbackhover",
+    "shapeType": "rectangle",
+    "stroke": {
+      "width": "1dp",
+      "color": "#FF05050A"
+    },
+    "gradient": {
+      "startColor": "#FF1010E0",
+      "endColor": "#FF0A0A0A",
+      "angle": "90",
+      "type": "linear"
+    }
+  },
+  {
+    "name": "buttonbackup",
+    "shapeType": "rectangle",
+    "stroke": {
+      "width": "1dp",
+      "color": "#FF0B0B0B"
+    },
+    "gradient": {
+      "startColor": "#FF000000",
+      "endColor": "#FF0A0A0A",
+      "angle": "90",
+      "type": "linear"
+    }
+  },
+  {
+    "name": "cell_dark",
+    "shapeType": "rectangle",
+    "solidColor": "#CBCBCB",
+    "stroke": {
+      "width": "1dp",
+      "color": "#7733B5E5"
+    }
+  },
+  {
+    "name": "cell_light",
+    "shapeType": "rectangle",
+    "solidColor": "#E7E7E7",
+    "stroke": {
+      "width": "1dp",
+      "color": "#7733B5E5"
+    }
+  },
+  {
+    "name": "cell_title",
+    "shapeType": "rectangle",
+    "solidColor": "#999"
+  },
+  {
+    "name": "cell_title_dark",
+    "shapeType": "rectangle",
+    "solidColor": "@android:color/black"
+  },
+  {
+    "name": "circle",
+    "shapeType": "oval",
+    "solidColor": "@color/white"
+  },
+  {
+    "name": "color_button_outline",
+    "shapeType": "rectangle",
+    "stroke": {
+      "width": "1dp",
+      "color": "@color/pale_silver"
+    },
+    "corners": {
+      "radius": "2dp"
+    }
+  },
+  {
+    "name": "color_button_outline_selected",
+    "shapeType": "rectangle",
+    "stroke": {
+      "width": "4dp",
+      "color": "@color/pale_silver"
+    },
+    "corners": {
+      "radius": "2dp"
+    }
+  },
+  {
+    "name": "color_rectangle",
+    "shapeType": "rectangle",
+    "solidColor": "#FFFFFF"
+  },
+  {
+    "name": "color_rectangle_new2",
+    "shapeType": "rectangle",
+    "solidColor": "@color/white",
+    "corners": {
+      "radius": "2dp"
+    }
+  },
+  {
+    "name": "color_rectangle_rounded",
+    "shapeType": "rectangle",
+    "solidColor": "@color/white",
+    "corners": {
+      "radius": "4dp"
+    }
+  },
+  {
+    "name": "dex_slider_bg",
+    "shapeType": "rectangle",
+    "solidColor": "@color/black",
+    "stroke": {
+      "width": "1dp",
+      "color": "#FF000000"
+    }
+  },
+  {
+    "name": "dialog_alert_background",
+    "shapeType": "rectangle",
+    "solidColor": "@color/pastel_gray",
+    "stroke": {
+      "width": "1dp",
+      "color": "@color/black"
+    },
+    "corners": {
+      "radius": "@dimen/alert_dialog_corner_radius"
+    }
+  },
+  {
+    "name": "dialog_background",
+    "shapeType": "rectangle",
+    "solidColor": "@color/pastel_gray",
+    "stroke": {
+      "width": "1dp",
+      "color": "@color/black"
+    },
+    "corners": {
+      "radius": "18dp"
+    }
+  },
+  {
+    "name": "dialog_standard_background",
+    "shapeType": "rectangle",
+    "solidColor": "@color/pastel_gray",
+    "corners": {
+      "radius": "@dimen/standard_dialog_corner_radius"
+    }
+  },
+  {
+    "name": "divider_horizontal",
+    "shapeType": "rectangle",
+    "solidColor": "@color/black"
+  },
+  {
+    "name": "divider_vertical",
+    "shapeType": "rectangle",
+    "solidColor": "@color/black"
+  },
+  {
+    "name": "drop_down_bg",
+    "shapeType": "rectangle",
+    "gradient": {
+      "startColor": "#272d33",
+      "endColor": "#000",
+      "angle": "90"
+    }
+  },
+  {
+    "name": "floating_toolbar_rounded",
+    "shapeType": "rectangle",
+    "solidColor": "#80000000",
+    "corners": {
+      "topLeftRadius": "10dp",
+      "bottomLeftRadius": "10dp"
+    }
+  },
+  {
+    "name": "green_indicator_circle",
+    "shapeType": "oval",
+    "stroke": {
+      "width": "1dp",
+      "color": "#00FF00"
+    },
+    "gradient": {
+      "startColor": "#00FF00",
+      "endColor": "#009900",
+      "centerColor": "#009900",
+      "type": "radial",
+      "gradientRadius": "50.0%"
+    }
+  },
+  {
+    "name": "group_checkbox_checked",
+    "shapeType": "oval",
+    "solidColor": "#0d0",
+    "stroke": {
+      "width": "2px",
+      "color": "#aaa"
+    }
+  },
+  {
+    "name": "group_checkbox_unchecked",
+    "shapeType": "oval",
+    "solidColor": "#f00",
+    "stroke": {
+      "width": "2px",
+      "color": "#aaa"
+    }
+  },
+  {
+    "name": "groupbox",
+    "shapeType": "rectangle",
+    "solidColor": "#77C5C5C5",
+    "stroke": {
+      "width": "3dp",
+      "color": "#77AAAAAA"
+    },
+    "corners": {
+      "radius": "5dp"
+    }
+  },
+  {
+    "name": "itembox",
+    "shapeType": "rectangle",
+    "solidColor": "#AACFCFCF",
+    "stroke": {
+      "width": "3dp",
+      "color": "#AA555555"
+    },
+    "corners": {
+      "radius": "5dp"
+    }
+  },
+  {
+    "name": "led_green",
+    "shapeType": "oval",
+    "solidColor": "@color/led_green"
+  },
+  {
+    "name": "led_red",
+    "shapeType": "oval",
+    "solidColor": "@color/led_red"
+  },
+  {
+    "name": "listrow_sep",
+    "shapeType": "rectangle",
+    "gradient": {
+      "startColor": "@color/gray",
+      "endColor": "@color/dark_gray",
+      "angle": "0"
+    }
+  },
+  {
+    "name": "menu_dropdown_background",
+    "shapeType": "rectangle",
+    "solidColor": "@color/black",
+    "corners": {
+      "bottomLeftRadius": "2dp",
+      "bottomRightRadius": "2dp"
+    }
+  },
+  {
+    "name": "nav_button_drag_background",
+    "shapeType": "rectangle",
+    "solidColor": "@color/black_overlay_transparent",
+    "stroke": {
+      "width": "1dp",
+      "color": "@android:color/white"
+    },
+    "corners": {
+      "radius": "4dp"
+    }
+  },
+  {
+    "name": "nav_control_background",
+    "shapeType": "rectangle",
+    "gradient": {
+      "startColor": "#000000",
+      "endColor": "#00FFFFFF",
+      "type": "radial",
+      "gradientRadius": "15dp"
+    }
+  },
+  {
+    "name": "nav_item_background",
+    "shapeType": "rectangle",
+    "gradient": {
+      "startColor": "#000000",
+      "endColor": "#00FFFFFF",
+      "type": "radial",
+      "gradientRadius": "25dp"
+    }
+  },
+  {
+    "name": "nav_settings_divider",
+    "shapeType": "rectangle",
+    "solidColor": "#979797"
+  },
+  {
+    "name": "obstacle_palette_spacer",
+    "shapeType": "rectangle",
+    "gradient": {
+      "startColor": "#222",
+      "endColor": "#000",
+      "angle": "90",
+      "type": "linear"
+    }
+  },
+  {
+    "name": "orange_indicator_circle",
+    "shapeType": "oval",
+    "stroke": {
+      "width": "1dp",
+      "color": "#FF6600"
+    },
+    "gradient": {
+      "startColor": "#FF6600",
+      "endColor": "#DD4400",
+      "centerColor": "#DD4400",
+      "type": "radial",
+      "gradientRadius": "50.0%"
+    }
+  },
+  {
+    "name": "radio_item_line_gradient",
+    "shapeType": "rectangle",
+    "gradient": {
+      "startColor": "#000000",
+      "endColor": "#000000",
+      "centerColor": "#888888",
+      "angle": "0"
+    }
+  },
+  {
+    "name": "rb_off",
+    "shapeType": "oval",
+    "stroke": {
+      "width": "2dp",
+      "color": "@color/gray"
+    }
+  },
+  {
+    "name": "red_indicator_circle",
+    "shapeType": "oval",
+    "stroke": {
+      "width": "1dp",
+      "color": "#FF0000"
+    },
+    "gradient": {
+      "startColor": "#FF0000",
+      "endColor": "#990000",
+      "centerColor": "#990000",
+      "type": "radial",
+      "gradientRadius": "50.0%"
+    }
+  },
+  {
+    "name": "seekbarback",
+    "shapeType": "rectangle",
+    "stroke": {
+      "width": "1dp",
+      "color": "#FF0B0B0B"
+    },
+    "gradient": {
+      "startColor": "#FF000000",
+      "endColor": "#FF0A0A0A",
+      "angle": "90",
+      "type": "linear"
+    }
+  },
+  {
+    "name": "stroked_background",
+    "shapeType": "rectangle",
+    "solidColor": "#00000000",
+    "stroke": {
+      "width": "1dip",
+      "color": "#ffffff"
+    }
+  },
+  {
+    "name": "survey_menu_bg",
+    "shapeType": "rectangle",
+    "solidColor": "#E7E7E7",
+    "stroke": {
+      "width": "1dp",
+      "color": "#77767676"
+    }
+  },
+  {
+    "name": "tab_divider_vertical",
+    "shapeType": "rectangle",
+    "solidColor": "@color/pale_silver"
+  },
+  {
+    "name": "tab_selected",
+    "shapeType": "rectangle",
+    "solidColor": "#00000000",
+    "corners": {
+      "radius": "1dp"
+    }
+  },
+  {
+    "name": "tab_unselected",
+    "shapeType": "rectangle",
+    "solidColor": "#64000000",
+    "corners": {
+      "radius": "1dp"
+    }
+  },
+  {
+    "name": "tickmark",
+    "shapeType": "oval",
+    "solidColor": "@android:color/white"
+  },
+  {
+    "name": "toggle_background",
+    "shapeType": "rectangle",
+    "solidColor": "#C222",
+    "stroke": {
+      "width": "1dp",
+      "color": "#7AAA"
+    },
+    "corners": {
+      "topLeftRadius": "5dp",
+      "bottomLeftRadius": "5dp"
+    }
+  },
+  {
+    "name": "toolbar_close_rounded",
+    "shapeType": "rectangle",
+    "solidColor": "@color/black",
+    "corners": {
+      "topLeftRadius": "@dimen/toolbar_corner_radius",
+      "bottomLeftRadius": "@dimen/toolbar_corner_radius"
+    }
+  },
+  {
+    "name": "toolbar_container_half_rounded",
+    "shapeType": "rectangle",
+    "solidColor": "#80FFFFFF",
+    "corners": {
+      "topLeftRadius": "6dp",
+      "bottomLeftRadius": "6dp"
+    }
+  },
+  {
+    "name": "toolbar_container_rounded",
+    "shapeType": "rectangle",
+    "solidColor": "#80FFFFFF",
+    "corners": {
+      "radius": "@dimen/toolbar_corner_radius"
+    }
+  },
+  {
+    "name": "tooltip_outline",
+    "shapeType": "rectangle",
+    "solidColor": "@color/black_overlay",
+    "stroke": {
+      "width": "1dp",
+      "color": "@color/black"
+    },
+    "corners": {
+      "radius": "4dp"
+    }
+  },
+  {
+    "name": "trackhistory_calendar_bottombackground",
+    "shapeType": "rectangle",
+    "solidColor": "@color/led_red",
+    "stroke": {
+      "width": "1dp",
+      "color": "@color/white"
+    },
+    "corners": {
+      "radius": "1dp"
+    }
+  },
+  {
+    "name": "trackhistory_calendar_topbackground",
+    "shapeType": "rectangle",
+    "solidColor": "@color/led_red",
+    "stroke": {
+      "width": "1dp",
+      "color": "@color/white"
+    },
+    "corners": {
+      "radius": "1dp"
+    }
+  },
+  {
+    "name": "trackhistory_list_item_background_normal",
+    "shapeType": "rectangle",
+    "solidColor": "#77484848",
+    "stroke": {
+      "width": "1dp",
+      "color": "#3379de35"
+    },
+    "corners": {
+      "radius": "4dp"
+    }
+  },
+  {
+    "name": "trackhistory_list_item_background_selected",
+    "shapeType": "rectangle",
+    "solidColor": "#77484848",
+    "stroke": {
+      "width": "1dp",
+      "color": "#8879de35"
+    },
+    "corners": {
+      "radius": "4dp"
+    }
+  },
+  {
+    "name": "transparent_indicator_rectangle",
+    "shapeType": "rectangle",
+    "solidColor": "#FF000000",
+    "stroke": {
+      "width": "1px",
+      "color": "@color/white"
+    },
+    "corners": {
+      "radius": "3dp"
+    }
+  },
+  {
+    "name": "white_divider_line",
+    "shapeType": "line",
+    "solidColor": "@color/white",
+    "stroke": {
+      "width": "1dp",
+      "color": "@color/white"
+    }
+  },
+  {
+    "name": "zeroize_button_border",
+    "shapeType": "rectangle",
+    "solidColor": "@color/red",
+    "stroke": {
+      "width": "2dp",
+      "color": "@color/gray"
+    },
+    "corners": {
+      "radius": "3dp"
+    }
+  },
+  {
+    "name": "zeroize_switch_check_on",
+    "shapeType": "rectangle",
+    "solidColor": "@color/red",
+    "stroke": {
+      "width": "2dp",
+      "color": "@color/gray"
+    }
+  },
+  {
+    "name": "zeroize_switch_enable",
+    "shapeType": "rectangle",
+    "solidColor": "#77484848"
+  },
+  {
+    "name": "zmist_background",
+    "shapeType": "rectangle",
+    "stroke": {
+      "width": "1dp",
+      "color": "#dfb228"
+    },
+    "corners": {
+      "radius": "2dp"
+    }
+  }
+]
