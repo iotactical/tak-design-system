@@ -1,0 +1,3045 @@
+{
+  "totalCount": 440,
+  "groups": [
+    {
+      "namespace": "com.atak.plugins.impl",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atak.plugins.impl.AtakPluginRegistry$1",
+          "action": "com.atak.plugin.selected.com.atakmap.android.geocam.plugin.class com.atakmap.android.geocam.plugin.GeoCamTool",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atak.plugins.impl.AtakPluginRegistry$1",
+          "action": "com.atak.plugin.selected.com.atakmap.android.jumpmaster.plugin.class com.atakmap.android.jumpmaster.plugin.JumpMasterTool",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atak.plugins.impl.AtakPluginRegistry$1",
+          "action": "com.atak.plugin.selected.com.atakmap.android.ssetool.plugin.class com.atakmap.android.ssetool.plugin.SSETool",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.attachment",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.attachment.AttachmentBroadcastReceiver",
+          "action": "com.atakmap.android.attachment.ATTACHMENT_RECEIVED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.attachment.AttachmentBroadcastReceiver",
+          "action": "com.atakmap.android.attachment.GALLERY",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.attachment.AttachmentBroadcastReceiver",
+          "action": "com.atakmap.android.attachment.SEND_ATTACHMENT",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.bloodhound",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.bloodhound.BloodHoundButtonTool$1",
+          "action": "com.atakmap.android.toolbars.BLOOD_HOUND",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.bluetooth",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.bluetooth.BluetoothManager$7",
+          "action": "android.bluetooth.adapter.action.DISCOVERY_FINISHED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.bluetooth.BluetoothManager$7",
+          "action": "android.bluetooth.adapter.action.DISCOVERY_STARTED",
+          "description": ""
+        },
+        {
+          "type": "systembroadcast",
+          "class": "com.atakmap.android.bluetooth.BluetoothFragment$3",
+          "action": "android.bluetooth.adapter.action.STATE_CHANGED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.bluetooth.BluetoothManager$6",
+          "action": "android.bluetooth.device.action.FOUND",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.bluetooth.BluetoothFragment$2",
+          "action": "com.atakmap.android.bluetooth.RESCAN",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.brightness",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.brightness.BrightnessReceiver",
+          "action": "com.atakmap.android.brightness.BrightnessComponent.SHOW_TOOL",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.chat",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.chat.ChatManagerMapComponent$7",
+          "action": "com.atakmap.android.chat.HISTORY_UPDATE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.chat.ChatManagerMapComponent$1",
+          "action": "com.atakmap.android.chat.NEW_CHAT_MESSAGE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.chat.ChatManagerMapComponent$6",
+          "action": "com.atakmap.android.MODES_EDITED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.chat.ChatManagerMapComponent$4",
+          "action": "com.atakmap.android.OPEN_GEOCHAT",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.chat.ChatManagerMapComponent$5",
+          "action": "com.atakmap.chat.markmessageread",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.chat.ChatManagerMapComponent$5",
+          "action": "com.atakmap.chatmessage.persistmessage",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.compass",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.compass.CompassDropDownReceiver$1",
+          "action": "com.atakmap.android.map.action.LOCK_CAM",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.compassring",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.compassring.CompassRingMapReceiver",
+          "action": "com.atakmap.android.maps.COMPASS",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.contact",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.contact.ContactDetailDropdown",
+          "action": "com.atakmap.android.contact.CONTACT_DETAILS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.contact.ContactPresenceDropdown",
+          "action": "com.atakmap.android.contact.CONTACT_LIST",
+          "description": "Open the contacts list (default mode)"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.contact.ContactPresenceDropdown",
+          "action": "com.atakmap.android.contact.GEO_CHAT",
+          "description": "Opens the contacts list for geo-chat"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.contact.ContactPresenceDropdown",
+          "action": "com.atakmap.android.contact.REFRESH_LIST",
+          "description": "Refresh the contacts list"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.contact.ContactStatusReceiver",
+          "action": "com.atakmap.android.cot.ITEM_REFRESHED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.contact.ContactStatusReceiver",
+          "action": "com.atakmap.android.cot.ITEM_STALE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.contact.ContactDetailDropdown",
+          "action": "com.atakmap.android.cotdetails.COTINFO",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.contact.Contacts$1",
+          "action": "com.atakmap.utc_time_set",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.contact.ContactPresenceDropdown",
+          "action": "mil.arl.atak.CONTACT_LIST",
+          "description": "Open the contacts list for sending items or files"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.coordinate",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.coordinate.PolarCoordinateReceiver",
+          "action": "com.atakmap.android.maps.POLAR_COORD_ENTRY",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.coordoverlay",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.coordoverlay.CoordOverlayMapReceiver",
+          "action": "com.atakmap.android.action.HIDE_POINT_DETAILS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.coordoverlay.CoordOverlayMapReceiver",
+          "action": "com.atakmap.android.action.PRI_TRANSFORMED_COORDS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.coordoverlay.CoordOverlayMapReceiver",
+          "action": "com.atakmap.android.action.SHOW_POINT_DETAILS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.coordoverlay.CoordOverlayMapReceiver",
+          "action": "com.atakmap.android.maps.HIDE_DETAILS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.coordoverlay.CoordOverlayMapReceiver",
+          "action": "com.atakmap.android.maps.SHOW_DETAILS",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.cot",
+      "intents": [
+        {
+          "type": "systembroadcast",
+          "class": "com.atakmap.android.cot.CotMapComponent$9",
+          "action": "android.intent.action.BATTERY_CHANGED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.cot.CotMapAdapter$2",
+          "action": "com.atakmap.android.cot.COT_MAP_IGNORE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.cot.TaskCotReceiver",
+          "action": "com.atakmap.android.maps.TASK",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.cot.CotMapComponent$1",
+          "action": "com.atakmap.callAction",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.cot.CotMapComponent$6",
+          "action": "com.atakmap.emailAction",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.cot.CotMapComponent$4",
+          "action": "com.atakmap.geochatAction",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.cot.CotMapComponent$7",
+          "action": "com.atakmap.missionPackageAction",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.cot.CotMapComponent$2",
+          "action": "com.atakmap.smsAction",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.cot.CotMarkerRefresher$2",
+          "action": "com.atakmap.utc_time_set",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.cot.CotMapComponent$3",
+          "action": "com.atakmap.voipAction",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.cot.CotMapComponent$5",
+          "action": "com.atakmap.xmppAction",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.cotdetails",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.cotdetails.CoTInfoBroadcastReceiver",
+          "action": "com.atakmap.android.cotdetails.COTINFO",
+          "description": "mechanism for bringing up the cot information details based on an existing marker unique identifier"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.cotdetails.CoTInfoBroadcastReceiver",
+          "action": "com.atakmap.android.cotdetails.COTINFO_SETTYPE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.cotdetails.CoTInfoBroadcastReceiver",
+          "action": "com.atakmap.android.cotdetails.SENSORDETAILS",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.data",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.data.DataMgmtReceiver",
+          "action": "com.atakmap.app.CLEAR_CONTENT",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.drawing",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.drawing.DrawingToolsMapReceiver",
+          "action": "com.atakmap.android.maps.DRAWING_DETAILS",
+          "description": "Intent to open the details page for a shape, requires a UID string extra to be passed in."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.drawing.DrawingToolsMapReceiver",
+          "action": "com.atakmap.android.maps.DRAWING_EDIT",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.drawing.DrawingToolsMapReceiver",
+          "action": "com.atakmap.android.maps.DRAWING_KML_IMPORT",
+          "description": "Intent to launch importing of data from a KML file, requires a file path string extra to be passed in."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.drawing.DrawingToolsMapReceiver",
+          "action": "com.atakmap.android.maps.LABEL_TOGGLE",
+          "description": "Intent to toggle labels on a shape, requires a UID string extra to be passed in."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.drawing.DrawingToolsMapReceiver",
+          "action": "com.atakmap.android.maps.SHAPE_DELETE",
+          "description": "Intent to delete a shape, requires a UID string extra to be passed in."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.drawing.DrawingToolsMapReceiver",
+          "action": "com.atakmap.android.maps.TOOLSELECTOR_READY",
+          "description": "Intent to notify receivers that the tool selector is ready to launch tools."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.drawing.DrawingToolsMapReceiver",
+          "action": "com.atakmap.android.maps.ZOOM_ON_SHAPE",
+          "description": "Intent to zoom to a shape, requires a UID string extra to be passed in."
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.dropdown",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.dropdown.DropDownManager",
+          "action": "com.android.arrowmaker.BACK_PRESS",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.editableShapes",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.editableShapes.EditablePolylineReceiver",
+          "action": "com.atakmap.android.maps.INSERT_EDITABLE_POLYLINE_VERTEX",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.editableShapes.EditablePolylineReceiver",
+          "action": "com.atakmap.android.maps.MANUAL_POINT_ENTRY_EDITABLE_POLYLINE_VERTEX",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.editableShapes.EditablePolylineReceiver",
+          "action": "com.atakmap.android.maps.MOVE_EDITABLE_POLYLINE_VERTEX",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.editableShapes.EditablePolylineReceiver",
+          "action": "com.atakmap.android.maps.REMOVE_EDITABLE_POLYLINE_VERTEX",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.elev",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.elev.ViewShedReceiver",
+          "action": "com.atakmap.android.elev.ViewShedReceiver.DISMISS_VIEWSHED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.elev.ViewShedReceiver",
+          "action": "com.atakmap.android.elev.ViewShedReceiver.DISMISS_VIEWSHED_LINE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.elev.ViewShedReceiver",
+          "action": "com.atakmap.android.elev.ViewShedReceiver.SHOW_VIEWSHED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.elev.ViewShedReceiver",
+          "action": "com.atakmap.android.elev.ViewShedReceiver.SHOW_VIEWSHED_LINE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.elev.ViewShedReceiver",
+          "action": "com.atakmap.android.elev.ViewShedReceiver.UPDATE_VIEWSHED_INTENSITY",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.emergency",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.emergency.EmergencyAlertReceiver",
+          "action": "com.atakmap.android.emergency.ALERT_EVENT",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.emergency.EmergencyAlertReceiver",
+          "action": "com.atakmap.android.emergency.CANCEL_EVENT",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.emergency.EmergencyAlertReceiver",
+          "action": "com.atakmap.android.emergency.REMOVE_ALERT",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.emergency.tool",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.emergency.tool.EmergencyTool",
+          "action": "com.atakmap.android.emergency.tool",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.features",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.features.FeaturesDetailsDropdownReceiver",
+          "action": "com.atakmap.android.features.SHOW_DETAILS",
+          "description": "Show feature details"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.features.FeaturesDetailsDropdownReceiver",
+          "action": "com.atakmap.android.features.TOGGLE_VISIBILITY",
+          "description": "Toggle feature visibility"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.fires",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.fires.HostileManagerDropDownReceiver",
+          "action": "com.atakmap.android.maps.MANAGE_HOSTILES",
+          "description": "The event to bring up the hostile manager within the ATAK system.   This allows for manipulation of all CAS 9-lines within the system."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.fires.FiresToolbar",
+          "action": "com.atakmap.app.ZEROIZE_CONFIRMED",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.geocam",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.geocam.GeoCamDropDownReceiver",
+          "action": "com.atakmap.android.geocam.START_CAM",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.geofence.component",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.geofence.component.GeoFenceReceiver",
+          "action": "com.atakmap.android.geofence.ADD",
+          "description": "Intent to a CoT based Geofence to the local system"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.geofence.component.GeoFenceReceiver",
+          "action": "com.atakmap.android.geofence.DISPLAY_ALERTING",
+          "description": "Intent to view list of Geofence alerts within Overlay Manager"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.geofence.component.GeoFenceReceiver",
+          "action": "com.atakmap.android.geofence.EDIT",
+          "description": "Intent to view and edit Geofence parameters"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.geofence.component.GeoFenceReceiver",
+          "action": "com.atakmap.android.geofence.ITEMS_SELECTED",
+          "description": "Intent to specific a list of map items to monitor in a Geofence"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.geofence.component.GeoFenceReceiver",
+          "action": "com.atakmap.app.ZEROIZE_CONFIRMED",
+          "description": "When the local system is zeroized, all Geofences are removed"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.grg",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.grg.GRGMapComponent$2",
+          "action": "com.atakmap.android.grg.OUTLINE_VISIBLE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.grg.GRGMapComponent$3",
+          "action": "com.atakmap.android.grg.TOGGLE_VISIBILITY",
+          "description": "Toggle the visibility of the GRGs"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.grg.GRGMapComponent$TransparencyReceiver",
+          "action": "com.atakmap.android.grg.TRANSPARENCY",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.grg.GRGMapComponent$4",
+          "action": "com.atakmap.app.ZEROIZE_CONFIRMED",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.hierarchy",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.hierarchy.HierarchyListReceiver",
+          "action": "com.atakmap.android.maps.CLEAR_HIERARCHY",
+          "description": "Clear Overlay Manager user-select handler and sets to default visibility mode"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.hierarchy.HierarchyListReceiver",
+          "action": "com.atakmap.android.maps.CLOSE_HIERARCHY",
+          "description": "Close Overlay Manager"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.hierarchy.HierarchyListReceiver",
+          "action": "com.atakmap.android.maps.HIDE_MENU",
+          "description": "Deselect any currently selected item in Overlay Manager"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.hierarchy.HierarchyListReceiver",
+          "action": "com.atakmap.android.maps.MANAGE_HIERARCHY",
+          "description": "Open the Overlay Manager drop-down"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.hierarchy.HierarchyListReceiver",
+          "action": "com.atakmap.android.maps.REFRESH_HIERARCHY",
+          "description": "Refresh Overlay Manager items and lists"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.icons",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.icons.IconsMapAdapter",
+          "action": "com.atakmap.android.icons.ADD_ICONSET",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.icons.IconsMapComponent$3",
+          "action": "com.atakmap.android.icons.DEFAULT_MAPPING_CHANGED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.icons.IconManagerDropdown",
+          "action": "com.atakmap.android.icons.DISPLAY_DROPDOWN",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.icons.IconManagerDropdown",
+          "action": "com.atakmap.android.icons.ICONSET_ADDED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.icons.IconsMapComponent$3",
+          "action": "com.atakmap.android.icons.ICONSET_ADDED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.icons.IconManagerDropdown",
+          "action": "com.atakmap.android.icons.ICONSET_REMOVED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.icons.IconsMapComponent$3",
+          "action": "com.atakmap.android.icons.ICONSET_REMOVED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.icons.IconsMapAdapter",
+          "action": "com.atakmap.android.icons.REMOVE_ICONSET",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.icons.IconsMapAdapter",
+          "action": "com.atakmap.app.ZEROIZE_CONFIRMED",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.image",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.image.ImageGalleryReceiver$15",
+          "action": "com.atakmap.android.ACTIVITY_FINISHED",
+          "description": "Fired when Gallery is ready to import an image/video"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.image.ImageGalleryReceiver",
+          "action": "com.atakmap.android.attachment.VIEW_ATTACHMENTS",
+          "description": "Launch the image gallery for a map item's attachments"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.image.ImageMapReceiver",
+          "action": "com.atakmap.android.image.IMAGE_DETAILS",
+          "description": "Select image's associated marker and open its details"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.image.ImageGalleryReceiver",
+          "action": "com.atakmap.android.image.IMAGE_GALLERY",
+          "description": "Launch the image gallery drop-down"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.image.ImageGalleryReceiver$15",
+          "action": "com.atakmap.android.image.PIC_CAPTURED",
+          "description": "Fired when Gallery is ready to import a captured image"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.image.ImageGalleryReceiver",
+          "action": "com.atakmap.android.image.SEND_FILES",
+          "description": "Sent by image file adapter to send files to selected contacts"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.image.ImageDropDownReceiver",
+          "action": "com.atakmap.maps.images.DISPLAY",
+          "description": "Display an image in the image viewer drop-down"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.image.ImageDropDownReceiver",
+          "action": "com.atakmap.maps.images.FILE_UPDATE",
+          "description": "Same as ImageDropDownReceiver.IMAGE_DISPLAY"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.image.ImageDropDownReceiver",
+          "action": "com.atakmap.maps.images.REFRESH",
+          "description": "Fired by Image Markup when an image has been edited"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.image.ImageDropDownReceiver",
+          "action": "com.atakmap.maps.images.SELECT_RESOLUTION",
+          "description": "Select image resolution in preparation to send"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.image.quickpic",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.image.quickpic.QuickPicReceiver",
+          "action": "com.atakmap.android.image.quickpic.QUICK_PIC",
+          "description": "Start quick-pic request"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.image.quickpic.QuickPicReceiver",
+          "action": "com.atakmap.android.image.quickpic.QUICK_PIC_CAPTURED",
+          "description": "Fired when quick-pic has been captured."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.image.quickpic.QuickPicReceiver",
+          "action": "com.atakmap.android.image.quickpic.QUICK_PIC_MOVE",
+          "description": "Move a quick-pic marker and associated images"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.image.quickpic.QuickPicReceiver",
+          "action": "com.atakmap.android.image.quickpic.QUICK_PIC_RECEIVED",
+          "description": "Fired after the quick-pic has been received by the image drop-down"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.image.quickpic.QuickPicReceiver",
+          "action": "com.atakmap.android.image.quickpic.QUICK_PIC_VIEW",
+          "description": "Display image in drop-down and focus on its marker"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.importexport",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importexport.ImportExportMapComponent$5",
+          "action": "com.atakmap.android.export.FTP_UPLOAD_FILE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importexport.ImportReceiver",
+          "action": "com.atakmap.android.importexport.DELETE_DATA",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importexport.ImportExportMapComponent$6",
+          "action": "com.atakmap.android.importexport.EXPORT_LOGS",
+          "description": "Intent used to kick off the process of exporting the log files to a server"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importexport.ImportReceiver",
+          "action": "com.atakmap.android.importexport.IMPORT_DATA",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importexport.ImportExportMapComponent$7",
+          "action": "com.atakmap.android.importexport.SET_EXPORT_LOG_SERVER",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importexport.ImportExportMapComponent$4",
+          "action": "com.atakmap.android.importfiles.IMPORT_COT",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importexport.ImportExportMapComponent$2",
+          "action": "com.atakmap.android.importfiles.IMPORT_FILE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importexport.ImportExportMapComponent$3",
+          "action": "com.atakmap.android.importfiles.KML_NETWORK_LINK",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importexport.ImportExportMapComponent$2",
+          "action": "com.atakmap.android.importfiles.USER_HANDLE_IMPORT_FILE_ACTION",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importexport.ImportExportMapComponent$1",
+          "action": "com.atakmap.app.COMPONENTS_CREATED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importexport.ImportExportMapComponent$8",
+          "action": "com.atakmap.app.preferences.CERTIFICATE_UPDATED",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.importexport.handlers",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importexport.handlers.KmlImportExportHandler$1",
+          "action": "com.atakmap.android.maps.kml.KML_RQST_FILE_LIST",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importexport.handlers.CotImportExportHandler$1",
+          "action": "com.atakmap.android.statesaver.ADD_CLASSIFICATION",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importexport.handlers.KmlImportExportHandler$2",
+          "action": "com.atakmap.map.IMPORT_DATA",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.importfiles.ui",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importfiles.ui.ImportManagerView",
+          "action": "com.atakmap.android.ACTIVITY_FINISHED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importfiles.ui.ImportManagerDropdown",
+          "action": "com.atakmap.android.importfiles.ui.ADD_RESOURCE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importfiles.ui.ImportManagerDropdown",
+          "action": "com.atakmap.android.importfiles.ui.DLOAD_RESOURCE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.importfiles.ui.ImportManagerDropdown",
+          "action": "com.atakmap.android.importfiles.ui.UPDATE_RESOURCE",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.jumpbridge",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpbridge.JumpBridgeDropDownReceiver",
+          "action": "com.atakmap.android.jumpbridge.JM_WARNING",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.jumpmaster",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.JumpmasterDropDownReceiver",
+          "action": "com.atakmap.maps.jumpmaster.DIP",
+          "description": "Intent to create, edit, move, or remove a DIP. Add extra 'point' to edit. Add extra 'command' with value of 1 to move the DIP. Add extra 'command' with value of 0 to delete the DIP. Add extra 'newDIP' with value true to create a new DIP."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.JumpmasterDropDownReceiver",
+          "action": "com.atakmap.maps.jumpmaster.MOVE_DIP",
+          "description": "Intent to move a DIP, this will enure the user does not accidentally move a DIP by showing a confirmation dialog. Needs extra 'uid', being the UID of the DIP and a 'point' being the string value of the GeoPoint to move the DIP to."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.JumpmasterDropDownReceiver",
+          "action": "com.atakmap.maps.jumpmaster.PLAN",
+          "description": "Intent to plan out a DIP. Requires extra 'uid' to be the UID of the DIP to plan the jump for."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.JumpmasterDropDownReceiver",
+          "action": "com.atakmap.maps.jumpmaster.RELOAD_WIND_SERVERS",
+          "description": "Intent to reload the list of available wind servers."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.JumpmasterDropDownReceiver",
+          "action": "com.atakmap.maps.jumpmaster.SHARE",
+          "description": "Intent to share a DIP. Requires extra 'uid' to be the UID of the DIP to share."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.JumpmasterDropDownReceiver",
+          "action": "com.atakmap.maps.jumpmaster.SHOW_INTENT",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.jumpmaster.calculation.jump",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.calculation.jump.JumpManager$ForwardThrowReceiver",
+          "action": "com.atakmap.maps.jumpmaster.SHOW_HIDE_FORWARD_THROW",
+          "description": "Intent to hide or show the the forward throw arrow. Requires the 'uid' of the last out point to show the forward throw arrow it should be attached to. Also requires 'forwardThrow' to be the value in meters of the forward throw."
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.jumpmaster.dip",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.dip.AlternateDIPManager",
+          "action": "com.atakmap.maps.jumpmaster.ALTERNATE_DIPS",
+          "description": "Intent to begin the process of placing an alternate DIP. Requires 'uid' which is the UID of the primary DIP to associate the Alt DIP with."
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.jumpmaster.overlays",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.overlays.DistanceRingReceiver",
+          "action": "com.atakmap.maps.jumpmaster.COURSE_BOX_LABELS",
+          "description": "Intent to toggle the labels on the AC Course Box on and off"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.overlays.DistanceRingReceiver",
+          "action": "com.atakmap.maps.jumpmaster.DIP_BEARING_RING",
+          "description": "Intent to show the compass ring around the DIP. Requires extra 'dipBearing' to be true to show the compass circle. Requires 'uid' which is the UID of the DIP."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.overlays.DistanceRingReceiver",
+          "action": "com.atakmap.maps.jumpmaster.HARP_DISTANCE_RING",
+          "description": "Intent to show a distance circles around a HARP. Requires 'uid' which is the UID of the HARP. Requires 'point' which is the location of the HARP. Extra 'acType' can be 'high performance' or 'low performance' to set the initial ring distance. If not specified default to high"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.overlays.MeetUpOverlayReceiver",
+          "action": "com.atakmap.maps.jumpmaster.MEET_UP",
+          "description": "Intent to show an overlay that shows where the jumpers should meet up."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.overlays.LandingPatternManager",
+          "action": "com.atakmap.maps.jumpmaster.SHOW_LANDING_PATTERN",
+          "description": "Intent to show, hide or edit a landing pattern. Requires 'uid' which is the UID of either the DIP or an existing landing pattern point. If the UID is a LP point then show the edit LP view. If the UID is of a DIP, hide or show the LP, depending on if it's already visible or not."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.overlays.DistanceRingReceiver",
+          "action": "com.atakmap.maps.jumpmaster.SIMPLE_CIRCLE",
+          "description": "Intent to show a circle around a HARP. Requires 'uid' which is the UID of the HARP. Requires 'point' which is the location of the HARP. If extra 'simple' is true, just showe a basic circle."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.overlays.ProjectedLocationArrowReceiver",
+          "action": "com.atakmap.maps.PROJECTED_LOC_COLOR",
+          "description": "Intent to select the color of the projected location arrow."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.overlays.ProjectedLocationArrowReceiver",
+          "action": "com.atakmap.maps.PROJECTED_LOC_LABEL",
+          "description": "Intent to toggle the label on the location arrow."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.overlays.ProjectedLocationArrowReceiver",
+          "action": "com.atakmap.maps.PROJECTED_LOC_TIME",
+          "description": "Intent to select how far ahead the projected location arrow should point."
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.jumpmaster.toolbar",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.toolbar.JumpTool$NorthUpReceiver",
+          "action": "com.atakmap.android.maps.MAGNETIC_UP",
+          "description": "Change the map mode to magnetic north up"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.toolbar.JumpTool$NorthUpReceiver",
+          "action": "com.atakmap.android.maps.NORTH_UP",
+          "description": "Change the map mode to north up"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.toolbar.JumpTool$NorthUpReceiver",
+          "action": "com.atakmap.android.maps.TRACK_UP",
+          "description": "Change the map mode to track up"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.toolbar.JumpTool$JumpToAltReceiver",
+          "action": "com.atakmap.maps.jumpmaster.JUMP_TO_ALT",
+          "description": "Jump to an alternate DIP. Include the 'uid' of the alternate DIP as an extra."
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.jumpmaster.view",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.jumpmaster.view.InJumpDropdown$3",
+          "action": "com.atakmap.android.tools.DISABLE_ACTIONBAR",
+          "description": "Intent to lock the actionbar so that no other tools can be accidentally pressed during the jump. Include a boolean extra 'disabled' that is true if the actionbar shold be locked and false if it hsould be unlocked"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.layers",
+      "intents": [
+        {
+          "type": "systembroadcast",
+          "class": "com.atakmap.android.layers.ScanLayersService",
+          "action": "android.intent.action.MEDIA_MOUNTED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.layers.LayersManagerBroadcastReceiver",
+          "action": "com.atakmap.android.grg.DELETE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.layers.ScanLayersService",
+          "action": "com.atakmap.android.layers.SCAN_LAYERS_START",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.layers.ScanLayersService",
+          "action": "com.atakmap.android.layers.SCAN_LAYERS_STOP",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.layers.LayersManagerBroadcastReceiver",
+          "action": "com.atakmap.android.layers.TOOL_FINISHED",
+          "description": "Region select tool finished"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.layers.LayersManagerBroadcastReceiver",
+          "action": "com.atakmap.android.maps.ERROR_LOADING_LAYERS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.layers.LayersManagerBroadcastReceiver",
+          "action": "com.atakmap.android.maps.MANAGE_LAYERS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.layers.LayersManagerBroadcastReceiver",
+          "action": "com.atakmap.android.maps.REFRESH_LAYER_MANAGER",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.layers.LayersManagerBroadcastReceiver",
+          "action": "com.atakmap.android.maps.SELECT_LAYER",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.layers.ZoomToLayerReceiver",
+          "action": "com.atakmap.android.maps.ZOOM_TO_LAYER",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.layers.LayersManagerBroadcastReceiver",
+          "action": "com.atakmap.app.ZEROIZE_CONFIRMED",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.location",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.location.LocationMapComponent$9",
+          "action": "com.atakmap.android.map.action.TOGGLE_GPS_ERROR",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.location.LocationMapComponent$2",
+          "action": "com.atakmap.android.map.SELF_LOCATION_SPECIFIED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.location.TrackUpReceiver",
+          "action": "com.atakmap.android.maps.MAGNETIC_UP",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.location.TrackUpReceiver",
+          "action": "com.atakmap.android.maps.NORTH_UP",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.location.LocationMapComponent$3",
+          "action": "com.atakmap.android.maps.SNAP_TO_SELF",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.location.TrackUpReceiver",
+          "action": "com.atakmap.android.maps.TRACK_UP",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.location.TrackUpReceiver",
+          "action": "com.atakmap.android.maps.USER_DEFINED_UP",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.lrf",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.lrf.LocalRangeFinderInput$5",
+          "action": "com.atakmap.android.lrf.TOGGLE_SLIDE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.lrf.LocalRangeFinderInput$1",
+          "action": "com.atakmap.android.maps.HIDE_PLRF",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.mapcompass",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.mapcompass.CompassArrowMapComponent$1",
+          "action": "com.atakmap.android.mapcompass.HIDE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.mapcompass.CompassArrowMapComponent$1",
+          "action": "com.atakmap.android.mapcompass.SHOW",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.mapcompass.CompassArrowMapComponent$1",
+          "action": "com.atakmap.android.maps.LOCK_TILT",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.mapcompass.CompassArrowMapComponent$1",
+          "action": "com.atakmap.android.maps.MAGNETIC_UP",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.mapcompass.CompassArrowMapComponent$1",
+          "action": "com.atakmap.android.maps.NORTH_UP",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.mapcompass.CompassArrowMapComponent$1",
+          "action": "com.atakmap.android.maps.TOGGLE_3D",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.mapcompass.CompassArrowMapComponent$1",
+          "action": "com.atakmap.android.maps.TRACK_UP",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.mapcompass.CompassArrowMapComponent$1",
+          "action": "com.atakmap.android.maps.UNDEFINED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.mapcompass.CompassArrowMapComponent$1",
+          "action": "com.atakmap.android.maps.USER_DEFINED_UP",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.maps",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.maps.DoghouseReceiver",
+          "action": "com.atakmap.android.maps.CHANGE_LEG_REFERENCE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.maps.PanZoomReceiver",
+          "action": "com.atakmap.android.maps.MapController.PAN_ZOOM",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.maps.MapGroupDeleteReceiver",
+          "action": "com.atakmap.android.maps.MapView.DELETE_GROUP",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.maps.MapItemDeleteReceiver",
+          "action": "com.atakmap.android.maps.MapView.DELETE_ITEM",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.maps.conversion",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.maps.conversion.UnitChangeReceiver",
+          "action": "com.atakmap.android.maps.ANGL_UNIT_ADJUST",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.maps.conversion.UnitChangeReceiver",
+          "action": "com.atakmap.android.maps.DIST_UNIT_ADJUST",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.medline",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.medline.MedicalLineBroadcastReceiver",
+          "action": "com.atakmap.android.MED_LINE",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.menu",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.menu.MapMenuReceiver",
+          "action": "com.atakmap.android.maps.HIDE_MENU",
+          "description": "Hide any open radial menus"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.menu.MapMenuReceiver",
+          "action": "com.atakmap.android.maps.REGISTER_MENU",
+          "description": "Allows for the registration of a radial menu"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.menu.MapMenuReceiver",
+          "action": "com.atakmap.android.maps.SHOW_MENU",
+          "description": "Display a map item's radial menu"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.menu.MapMenuReceiver",
+          "action": "com.atakmap.android.maps.toolbar.BEGIN_TOOL",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.menu.MapMenuReceiver",
+          "action": "com.atakmap.android.maps.UNREGISTER_MENU",
+          "description": "Allows for the unregistration of a menu"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.missionpackage",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.missionpackage.MissionPackageMapComponent$1",
+          "action": "com.atakmap.android.maps.TOOLSELECTOR_READY",
+          "description": "Intent to register the Mission Package Tool UI"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.missionpackage.MissionPackageReceiver",
+          "action": "com.atakmap.android.missionpackage._MISSIONPACKGE_DETAIL",
+          "description": "Intent to display the details of a Mission Package"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.missionpackage.MissionPackageReceiver",
+          "action": "com.atakmap.android.missionpackage.MISSIONPACKAGE",
+          "description": "Intent to display the Mission Package Tool UI"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.missionpackage.MissionPackageReceiver",
+          "action": "com.atakmap.android.missionpackage.MISSIONPACKAGE_DELETE",
+          "description": "Intent to delete a Mission Package by path or manifest"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.missionpackage.MissionPackageReceiver",
+          "action": "com.atakmap.android.missionpackage.MISSIONPACKAGE_DOWNLOAD",
+          "description": "Intent to download a Mission Package"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.missionpackage.MissionPackageReceiver",
+          "action": "com.atakmap.android.missionpackage.MISSIONPACKAGE_LOG",
+          "description": "Intent to display the Mission Package Tool Log UI"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.missionpackage.MissionPackageReceiver",
+          "action": "com.atakmap.android.missionpackage.MISSIONPACKAGE_MAPSELECT",
+          "description": "Intent to select map items via Map View"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.missionpackage.MissionPackageReceiver",
+          "action": "com.atakmap.android.missionpackage.MISSIONPACKAGE_POST",
+          "description": "Intent to send a Mission Package to TAK Server"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.missionpackage.MissionPackageReceiver",
+          "action": "com.atakmap.android.missionpackage.MISSIONPACKAGE_QUERY",
+          "description": "Intent to query list of Mission Packages available on TAK Server"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.missionpackage.MissionPackageReceiver",
+          "action": "com.atakmap.android.missionpackage.MISSIONPACKAGE_SAVE",
+          "description": "Intent to save, and optionally send, a Mission Package"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.missionpackage.MissionPackageReceiver",
+          "action": "com.atakmap.android.missionpackage.MISSIONPACKAGE_SEND",
+          "description": "Callback intent sent after selecting send-to contacts from list"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.missionpackage.MissionPackageReceiver",
+          "action": "com.atakmap.android.missionpackage.MISSIONPACKAGE_UPDATE",
+          "description": "Intent to save changes to an existing Mission Package (without displaying UI/list)"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.missionpackage.MissionPackageReceiver",
+          "action": "com.atakmap.app.ZEROIZE_CONFIRMED",
+          "description": "When the local system is zeroized, all Mission Packages are removed"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.model",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.model.ModelDetailsDropdownReceiver",
+          "action": "com.atakmap.android.model.SHOW_DETAILS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.model.ModelDetailsDropdownReceiver",
+          "action": "com.atakmap.android.model.TOGGLE_VISIBILITY",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.model.viewer",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.model.viewer.DetailedModelViewerDropdownReceiver",
+          "action": "com.l3t.visor.plugin.SHOW_3D_VIEW",
+          "description": "Show the 3D Model"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.munitions",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.munitions.DangerCloseReceiver",
+          "action": "com.atakmap.android.munitions.ADD",
+          "description": "Add a weapon to a target"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.munitions.DangerCloseReceiver",
+          "action": "com.atakmap.android.munitions.LABEL_TOGGLE",
+          "description": "Toggle labels on a range ring"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.munitions.DangerCloseReceiver",
+          "action": "com.atakmap.android.munitions.OPEN",
+          "description": "Open the REDs and MSDs drop-down"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.munitions.DangerCloseReceiver",
+          "action": "com.atakmap.android.munitions.REMOVE",
+          "description": "Remove a range ring"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.munitions.DangerCloseReceiver",
+          "action": "com.atakmap.android.munitions.REMOVE_MUNITION_FROM_ALL",
+          "description": "Remove a specific weapon from all targets"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.munitions.DangerCloseReceiver",
+          "action": "com.atakmap.android.munitions.TOGGLE",
+          "description": "Toggle weapon on a target - similar to add but with extra functionality"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.nightvision",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.nightvision.NightVisionReceiver",
+          "action": "adjust_night_vision_value",
+          "description": ""
+        },
+        {
+          "type": "systembroadcast",
+          "class": "com.atakmap.android.nightvision.NightVisionReceiver",
+          "action": "adjust_night_vision_value",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.nightvision.NightVisionReceiver",
+          "action": "com.atak.nightvision.send_dim_value",
+          "description": ""
+        },
+        {
+          "type": "systembroadcast",
+          "class": "com.atakmap.android.nightvision.NightVisionReceiver",
+          "action": "com.atak.nightvision.send_dim_value",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.nightvision.NightVisionMapWidgetComponent$1",
+          "action": "com.atakmap.app.APP_ADDED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.nightvision.NightVisionMapWidgetComponent$1",
+          "action": "com.atakmap.app.APP_REMOVED",
+          "description": ""
+        },
+        {
+          "type": "systembroadcast",
+          "class": "com.atakmap.android.nightvision.NightVisionNotification",
+          "action": "control_notification_night_vision",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.nightvision.NightVisionReceiver",
+          "action": "update_dim_value",
+          "description": ""
+        },
+        {
+          "type": "systembroadcast",
+          "class": "com.atakmap.android.nightvision.NightVisionReceiver",
+          "action": "update_dim_value",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.nineline",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.nineline.LaserBasketBroadcastReceiver",
+          "action": "com.atakmap.android.maps.DRAW_WEDGE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.nineline.NineLineBroadcastReceiver",
+          "action": "com.atakmap.android.toolbar.tools.NINE_LINE_LINK_BACK",
+          "description": "During the Nine Line DropDown creation, if no self marker is placed, this intent will be fired after the user decides to either place the self marker or ignore this condition"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.nineline.NineLineBroadcastReceiver",
+          "action": "com.atakmap.baokit.NINE_LINE",
+          "description": "Intent to launch the Nine Line DropDown Receiver, requires a targetUID string extra to be passed in."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.nineline.NineLineBroadcastReceiver",
+          "action": "com.atakmap.baokit.NINE_LINE_SPI",
+          "description": "Generate a hostile marker from a SPI's radial menu"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.nineline.CallForFireBroadcastReceiver",
+          "action": "com.staudertech.cff.CFF_GPS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.nineline.CallForFireBroadcastReceiver",
+          "action": "com.staudertech.cff.CFF_MISSION",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.nineline.AdditionalCFFMapComponent$1",
+          "action": "com.staudertech.cff.CFF_PLUS",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.pairingline",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.pairingline.PairingLineMapReceiver",
+          "action": "com.atakmap.android.maps.PAIRING_LINE",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.radiolibrary",
+      "intents": [
+        {
+          "type": "systembroadcast",
+          "class": "com.atakmap.android.radiolibrary.ControllerPppd",
+          "action": "com.atakmap.pppd",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.radiolibrary.RadioDropDownReceiver",
+          "action": "com.atakmap.radiocontrol.RADIO_CONTROL",
+          "description": ""
+        },
+        {
+          "type": "systembroadcast",
+          "class": "com.atakmap.android.radiolibrary.HarrisConfigurator$1",
+          "action": "com.partech.harrisconfigurator.ACTION_USB_PERMISSION",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.resection",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.resection.ResectionMapComponent$ResectionWorkflowReceiver",
+          "action": "com.atakmap.andrdoid.resection.RESECTION_WORFLOW",
+          "description": "Intent to launch the Resection Workflow which could contain one or more resectioning tools.  If it only contains one tool, then it will enter into the standard resectioning capability."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.resection.ResectionDropDownReceiver",
+          "action": "com.atakmap.android.maps.toolbar.END_TOOL",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.resection.ResectionDropDownReceiver",
+          "action": "com.atakmap.android.resection.SET_BEARING",
+          "description": "Set landmark bearing via dialog"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.resection.ResectionDropDownReceiver",
+          "action": "com.atakmap.android.resection.SET_LANDMARK",
+          "description": "Broadcast when a landmark point has been selected"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.resection.ResectionDropDownReceiver",
+          "action": "com.atakmap.android.resection.SHOW_DROPDOWN",
+          "description": "Show the resection drop-down"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.routes",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.GoToMapTool",
+          "action": "com.android.arrowmaker.BACK_PRESS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.ADD_PT_FROM_BEARING",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.END_NAV",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.EXTERNAL_PREFS_READY",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.LABEL_TOGGLE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.MANAGE_ROUTES",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.ROUTE_DELETE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.ROUTE_DETAILS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.ROUTE_EDIT_CUE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.ROUTE_EXPORT",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.ROUTE_IMPORT",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.ROUTE_IMPORT_FINISHED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.ROUTE_INSERT_WAYPOINT",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.ROUTE_NOTI_CLICKED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.ROUTE_PROCESSING_DONE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.ROUTE_SHARE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.ROUTE_TRANSFER",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.route.EDIT_ROUTE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.START_NAV",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.toolbar.BEGIN_TOOL",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteToolbarBroadcastReceiver",
+          "action": "com.atakmap.android.maps.toolbar.BEGIN_TOOL",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteToolbarBroadcastReceiver",
+          "action": "com.atakmap.android.maps.toolbar.END_TOOL",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.toolbar.OPEN_TOOLBAR",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.toolbar.SET_TOOLBAR",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.toolbar.UNDO",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.RouteMapReceiver",
+          "action": "com.atakmap.android.maps.TOOLSELECTOR_READY",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.GoToMapTool",
+          "action": "com.atakmap.android.routes.GOTO_NAV_BEGIN",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.routes.GoToMapTool",
+          "action": "com.atakmap.android.routes.GOTO_NAV_END",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.selfcoordoverlay",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.selfcoordoverlay.SelfCoordOverlayUpdater$1",
+          "action": "com.atakmap.android.action.PRI_TRANSFORMED_COORDS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.selfcoordoverlay.SelfCoordOverlayUpdater$2",
+          "action": "com.atakmap.android.map.SELF_LOCATION_SPECIFIED",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.slant",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.slant.SSESlantDetailsView$SlantDropDownReceiver",
+          "action": "com.atakmap.android.cotdetails.QUICKSLANT",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.slant.SSESlantDetailsView$SlantDropDownReceiver",
+          "action": "com.atakmap.android.cotdetails.SLANTDETAILS",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.ssetool",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.ssetool.SSEToolReceiver",
+          "action": "com.atakmap.android.ssetool.ACTIVATE_TOOL",
+          "description": "Tool has been activated from menu"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.ssetool.SSEToolReceiver",
+          "action": "com.atakmap.android.ssetool.ADD_TO_COLLECTION",
+          "description": "Add new content to an SSE collection"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.ssetool.SSEToolReceiver",
+          "action": "com.atakmap.android.ssetool.COLLECTION_DETAILS",
+          "description": "View SSE collection details"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.ssetool.SSEToolReceiver",
+          "action": "com.atakmap.android.ssetool.CONTENT_DETAILS",
+          "description": "View content details"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.ssetool.SSEToolReceiver",
+          "action": "com.atakmap.android.ssetool.CONTENT_VIEW",
+          "description": "View the content itself"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.ssetool.SSEToolReceiver",
+          "action": "com.atakmap.android.ssetool.CREATE_COLLECTION",
+          "description": "Create a new SSE collection"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.ssetool.SSEToolReceiver",
+          "action": "com.atakmap.android.ssetool.DELETE_COLLECTION",
+          "description": "Delete an SSE collection"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.ssetool.SSEToolReceiver",
+          "action": "com.atakmap.android.ssetool.DELETE_CONTENT",
+          "description": "Delete content from a collection"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.ssetool.SSEToolReceiver",
+          "action": "com.atakmap.android.ssetool.EXPORT_COLLECTION",
+          "description": "Export SSE collection"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.ssetool.SSEToolReceiver",
+          "action": "com.atakmap.android.ssetool.SEND_COLLECTION_CALLBACK",
+          "description": "Callback received when sending collection to TAK contacts"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.ssetool.SSEToolReceiver",
+          "action": "com.atakmap.app.ZEROIZE_CONFIRMED",
+          "description": "Clear content task executed - delete all plugin data"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.ssetool.SSEToolReceiver",
+          "action": "com.atakmap.maps.images.REFRESH",
+          "description": "Image Markup has been used to details an image"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.ssetool.ui",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.ssetool.ui.RecordAudioDropDown",
+          "action": "com.atakmap.android.ssetool.RECORD_AUDIO",
+          "description": "Record audio for an SSE collection"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.ssetool.ui.FreeTextDropDown",
+          "action": "com.atakmap.android.ssetool.RECORD_TEXT",
+          "description": "Create/edit text content for an SSE collection"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.ssetool.ui.puc",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.ssetool.ui.puc.PUCDropDown",
+          "action": "com.atakmap.android.ssetool.RECORD_PUC",
+          "description": "Create/edit a Person Under Control for an SSE collection"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.statesaver",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.statesaver.StateSaver$1",
+          "action": "com.atakmap.android.statesaver.ADD_CLASSIFICATION",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.statesaver.StateSaver$ComponentsCreatedReceiver",
+          "action": "com.atakmap.app.COMPONENTS_CREATED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.statesaver.StateSaver$2",
+          "action": "com.atakmap.app.ZEROIZE_CONFIRMED",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.targetbubble",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.targetbubble.TargetBubbleReceiver",
+          "action": "com.atakmap.android.maps.FINE_ADJUST",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.targetbubble.TargetBubbleReceiver",
+          "action": "com.atakmap.android.maps.FOCUS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.targetbubble.TargetBubbleReceiver",
+          "action": "com.atakmap.android.maps.GENERAL_ENTRY",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.targetbubble.TargetBubbleReceiver",
+          "action": "com.atakmap.android.maps.MGRS_ENTRY",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.targetbubble.TargetBubbleReceiver",
+          "action": "com.atakmap.android.maps.UNFOCUS",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.toolbar",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolbarBroadcastReceiver",
+          "action": "com.atakmap.android.maps.HIDE_MENU",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolManagerBroadcastReceiver",
+          "action": "com.atakmap.android.maps.HIDE_MENU",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolbarBroadcastReceiver",
+          "action": "com.atakmap.android.maps.SHOW_MENU",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolManagerBroadcastReceiver",
+          "action": "com.atakmap.android.maps.SHOW_MENU",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolbarBroadcastReceiver",
+          "action": "com.atakmap.android.maps.toolbar.BEGIN_SUB_TOOL",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolManagerBroadcastReceiver",
+          "action": "com.atakmap.android.maps.toolbar.BEGIN_SUB_TOOL",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolbarBroadcastReceiver",
+          "action": "com.atakmap.android.maps.toolbar.BEGIN_TOOL",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolManagerBroadcastReceiver",
+          "action": "com.atakmap.android.maps.toolbar.BEGIN_TOOL",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolbarBroadcastReceiver",
+          "action": "com.atakmap.android.maps.toolbar.END_TOOL",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolManagerBroadcastReceiver",
+          "action": "com.atakmap.android.maps.toolbar.END_TOOL",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolbarBroadcastReceiver",
+          "action": "com.atakmap.android.maps.toolbar.INVOKE_METHOD_TOOL",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolManagerBroadcastReceiver",
+          "action": "com.atakmap.android.maps.toolbar.INVOKE_METHOD_TOOL",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolbarBroadcastReceiver",
+          "action": "com.atakmap.android.maps.toolbar.OPEN_TOOLBAR",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolManagerBroadcastReceiver",
+          "action": "com.atakmap.android.maps.toolbar.OPEN_TOOLBAR",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolbarBroadcastReceiver",
+          "action": "com.atakmap.android.maps.toolbar.SET_TOOLBAR",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolManagerBroadcastReceiver",
+          "action": "com.atakmap.android.maps.toolbar.SET_TOOLBAR",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolbarBroadcastReceiver",
+          "action": "com.atakmap.android.maps.toolbar.UNSET_TOOLBAR",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbar.ToolManagerBroadcastReceiver",
+          "action": "com.atakmap.android.maps.toolbar.UNSET_TOOLBAR",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.toolbars",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.RangeAndBearingReceiver",
+          "action": "com.arrowmkaer.android.maps.toolbars.RangeAndBearing.CHANGECOLOR",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.RangeAndBearingToolbar$RangeRingReceiver",
+          "action": "com.atakmap.android.maps.CREATE_RAB_CIRCLE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.RangeAndBearingMapComponent$5",
+          "action": "com.atakmap.android.maps.RAB_DISTANCE_LOCK",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.RangeAndBearingCircleDropDown",
+          "action": "com.atakmap.android.maps.SHOW_RAB_CIRCLE_DROPDOWN",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.RangeAndBearingDropDown",
+          "action": "com.atakmap.android.maps.SHOW_RAB_LINE_DROPDOWN",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.RangeAndBearingMapComponent$4",
+          "action": "com.atakmap.android.maps.UNPIN_RAB_LINE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.BullseyeDropDownReceiver",
+          "action": "com.atakmap.android.toolbars.BullseyeDropDown",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.RangeAndBearingReceiver",
+          "action": "com.atakmap.android.toolbars.RangeAndBearing.BEARING_UNITS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.RangeAndBearingReceiver",
+          "action": "com.atakmap.android.toolbars.RangeAndBearing.DESTROY",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.RangeAndBearingReceiver",
+          "action": "com.atakmap.android.toolbars.RangeAndBearing.PIN_DYNAMIC",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.RangeAndBearingReceiver",
+          "action": "com.atakmap.android.toolbars.RangeAndBearing.RANGE_UNITS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.RangeAndBearingReceiver",
+          "action": "com.atakmap.android.toolbars.RangeAndBearing.TOGGLE_SLANT_RANGE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.RangeAndBearingToolbar$1",
+          "action": "com.atakmap.android.user.REDX_CLICK",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.RangeAndBearingToolbar$1",
+          "action": "com.atakmap.android.user.REDX_LONG_CLICK",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.RangeAndBearingToolbar$1",
+          "action": "com.atakmap.android.user.REDX_OFF",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.RangeAndBearingMapComponent$3",
+          "action": "com.atakmap.maps.bullseye.TOGGLE_BEARING",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.RangeAndBearingMapComponent$2",
+          "action": "com.atakmap.maps.bullseye.TOGGLE_DIRECTION",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.toolbars.RangeAndBearingMapComponent$1",
+          "action": "com.atakmap.maps.bullseye.TOGGLE_RINGS",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.tools",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.tools.ActionBarReceiver",
+          "action": "com.atakmap.android.tools.ADD_NEW_TOOL",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.tools.ActionBarReceiver",
+          "action": "com.atakmap.android.tools.ADD_NEW_TOOLS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.tools.ActionBarReceiver",
+          "action": "com.atakmap.android.tools.DISABLE_ACTIONBAR",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.tools.ActionBarReceiver",
+          "action": "com.atakmap.android.tools.REFRESH_ACTION_BAR",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.tools.ActionBarReceiver",
+          "action": "com.atakmap.android.tools.RELOAD_ACTION_BAR",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.tools.ActionBarReceiver",
+          "action": "com.atakmap.android.tools.REMOVE_TOOLS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.tools.ActionBarReceiver",
+          "action": "com.atakmap.android.tools.TOGGLE_ACTIONBAR",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.tools.AtakLayerDrawableUtil",
+          "action": "ic_menu_contact_layers",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.track",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.track.BreadcrumbReceiver",
+          "action": "com.atakmap.android.bread.CREATE_TRACK_SEGMENT",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.track.BreadcrumbReceiver",
+          "action": "com.atakmap.android.bread.DELETE_TRACK",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.track.BreadcrumbReceiver",
+          "action": "com.atakmap.android.bread.EXPORT_TRACK_HISTORY",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.track.BreadcrumbReceiver",
+          "action": "com.atakmap.android.bread.TOGGLE_BREAD",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.track.BreadcrumbReceiver",
+          "action": "com.atakmap.android.bread.UPDATE_TRACK_METADATA",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.track.BreadcrumbReceiver",
+          "action": "com.atakmap.android.location.LOCATION_INIT",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.track.TrackHistoryDropDown",
+          "action": "com.atakmap.android.toolbars.self.SERVERTRACKSEXPORTED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.track.TrackHistoryDropDown",
+          "action": "com.atakmap.android.toolbars.self.TRACKSEXPORTED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.track.BreadcrumbReceiver",
+          "action": "com.atakmap.android.track.CLEAR_TRACKS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.track.TrackHistoryDropDown",
+          "action": "com.atakmap.android.track.DELETE_TRACK",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.track.TrackHistoryDropDown",
+          "action": "com.atakmap.android.track.TRACK_HISTORY",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.track.TrackHistoryDropDown",
+          "action": "com.atakmap.android.track.TRACK_SEARCH",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.track.TrackHistoryDropDown",
+          "action": "com.atakmap.android.track.TRACK_USERLIST",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.track.BreadcrumbReceiver",
+          "action": "com.atakmap.app.ZEROIZE_CONFIRMED",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.update",
+      "intents": [
+        {
+          "type": "systembroadcast",
+          "class": "com.atakmap.android.update.ApkUpdateReceiver",
+          "action": "android.intent.action.PACKAGE_ADDED",
+          "description": "If an app is installed into Android, ATAK will scan and see if its a compatible plugin"
+        },
+        {
+          "type": "systembroadcast",
+          "class": "com.atakmap.android.update.ApkUpdateReceiver",
+          "action": "android.intent.action.PACKAGE_REMOVED",
+          "description": "If an ap is uninstalled from Android, and is an ATAK plugin, ATAK will unload the plugin"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.update.AppMgmtActivity$14",
+          "action": "com.atakmap.android.update.PRODUCT_REPOS_REFRESHED",
+          "description": "Intent to indicate the list of available apps and plugins has been updated"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.update.AppMgmtActivity$15",
+          "action": "com.atakmap.android.update.SYNC",
+          "description": "Intent to initiate a sync with all app repositories"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.update.ProductProviderManager$4",
+          "action": "com.atakmap.android.update.VIEW_APP_MGMT",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.update.ProductProviderManager",
+          "action": "com.atakmap.app.APP_ADDED",
+          "description": "Intent to indicate an app or plugin has been added"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.update.AppMgmtActivity$13",
+          "action": "com.atakmap.app.APP_ADDED",
+          "description": "Intent to indicate an app or plugin has been added"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.update.ProductProviderManager",
+          "action": "com.atakmap.app.APP_REMOVED",
+          "description": "Intent to indicate an app or plugin has been removed"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.update.AppMgmtActivity$13",
+          "action": "com.atakmap.app.APP_REMOVED",
+          "description": "Intent to indicate an app or plugin has been removed"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.update.ApkUpdateComponent$1",
+          "action": "com.atakmap.app.COMPONENTS_CREATED",
+          "description": "Once all components are initialized, the configured app repos are scanned, based on configuration"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.update.ApkUpdateReceiver",
+          "action": "com.atakmap.app.DOWNLOAD_APK",
+          "description": "Intent to download an APK from a remote Update Server"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.user",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.DropItemGuiReceiver",
+          "action": "com.atakmap.android.action.OPEN_POINT_GUI",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.RecentlyAddedDropDownReceiver",
+          "action": "com.atakmap.android.cotdetails.COTINFO_SETTYPE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.EnterLocationDropDownReceiver",
+          "action": "com.atakmap.android.icons.ICONSET_ADDED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.EnterLocationDropDownReceiver",
+          "action": "com.atakmap.android.icons.ICONSET_REMOVED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.CamLockerReceiver",
+          "action": "com.atakmap.android.map.action.LOCK_CAM",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.CamLockerReceiver",
+          "action": "com.atakmap.android.map.action.UNLOCK_CAM",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.RecentlyAddedDropDownReceiver",
+          "action": "com.atakmap.android.maps.COT_PLACED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.RecentlyAddedDropDownReceiver",
+          "action": "com.atakmap.android.maps.COT_RECENTLYPLACED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.FocusBroadcastReceiver",
+          "action": "com.atakmap.android.maps.FOCUS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.FocusBroadcastReceiver",
+          "action": "com.atakmap.android.maps.FOCUS_DISPLAY",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.FocusBroadcastReceiver",
+          "action": "com.atakmap.android.maps.FOCUS_UNFOCUS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.CamLockerReceiver",
+          "action": "com.atakmap.android.maps.HIDE_MENU",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.CamLockerReceiver",
+          "action": "com.atakmap.android.maps.MAGNETIC_UP",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.ManualPointEntryReceiver",
+          "action": "com.atakmap.android.maps.MANUAL_POINT_ENTRY",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.CamLockerReceiver",
+          "action": "com.atakmap.android.maps.NORTH_UP",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.SelectPointButtonTool$2",
+          "action": "com.atakmap.android.maps.PAIRING_LINE_SELF",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.PlaceBroadcastReceiver",
+          "action": "com.atakmap.android.maps.PLACE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.SelectPointButtonTool$2",
+          "action": "com.atakmap.android.maps.REDX_FAH",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.SelectPointButtonTool$2",
+          "action": "com.atakmap.android.maps.REDX_LB",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.RemoveBroadcastReceiver",
+          "action": "com.atakmap.android.maps.REMOVE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.CamLockerReceiver",
+          "action": "com.atakmap.android.maps.SHOW_MENU",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.SelectPointButtonTool$2",
+          "action": "com.atakmap.android.maps.SPI_FAH",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.SelectPointButtonTool$2",
+          "action": "com.atakmap.android.maps.SPI_LB",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.SelectPointButtonTool$2",
+          "action": "com.atakmap.android.maps.SPI_PAIRING_LINE_SELF",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.TaskBroadcastReceiver",
+          "action": "com.atakmap.android.maps.TASK",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.CamLockerReceiver",
+          "action": "com.atakmap.android.maps.TRACK_UP",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.FocusBroadcastReceiver",
+          "action": "com.atakmap.android.maps.UNFOCUS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.FocusBroadcastReceiver",
+          "action": "com.atakmap.android.maps.UNFOCUS_FOR_FINE_ADJUST",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.CamLockerReceiver",
+          "action": "com.atakmap.android.maps.USER_DEFINED_UP",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.EnterLocationDropDownReceiver",
+          "action": "com.atakmap.android.user.ENTER_LOCATION_DROP_DOWN",
+          "description": "Open the point dropper drop-down"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.EnterLocationDropDownReceiver",
+          "action": "com.atakmap.android.user.GO_TO",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.RecentlyAddedDropDownReceiver",
+          "action": "com.atakmap.android.user.RECENTLY_ADDED_DROP_DOWN",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.CompassOverlayReceiver",
+          "action": "com.atakmap.maps.DRAW_COMPASS_OVERLAY",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.user.icon",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.icon.SpotMapReceiver",
+          "action": "com.atakmap.android.maps.TOGGLE_LABEL",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.icon.SpotMapReceiver",
+          "action": "com.atakmap.android.user.icon.PLACE_SPOT",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.user.icon.SpotMapReceiver",
+          "action": "com.atakmap.android.user.icon.SPOT_DETAILS",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.util",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.util.RingsReceiver",
+          "action": "com.atakmap.android.toolbars.RangeAndBearing.CIRCLE_DESTROY",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.util.RingsReceiver",
+          "action": "com.atakmap.android.toolbars.RangeAndBearing.CIRCLE_DESTROY",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.vehicle",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.vehicle.VehicleMapReceiver",
+          "action": "com.atakmap.android.maps.ROTATE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.vehicle.VehicleMapReceiver",
+          "action": "com.atakmap.android.maps.TOGGLE_LABEL",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.vehicle.overhead",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.vehicle.overhead.OverheadDetailsReceiver",
+          "action": "com.atakmap.android.vehicle.overhead.DETAILS",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.video",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.video.VideoDropDownReceiver",
+          "action": "com.atakmap.android.video.SET_LOCK_BUTTON",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.video.VideoDropDownReceiver",
+          "action": "com.atakmap.android.video.VIDEO_TOOL",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.video.VideoDropDownReceiver",
+          "action": "com.atakmap.maps.video.ADD_ALIAS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.video.VideoDropDownReceiver",
+          "action": "com.atakmap.maps.video.DISPLAY",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.viewshed",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.viewshed.ViewshedDropDownReceiver",
+          "action": "com.atakmap.viewshed.VIEWSHED_TOOL",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.android.wfs",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.android.wfs.WFSBroadcastReceiver",
+          "action": "com.atakmap.app.ZEROIZE_CONFIRMED",
+          "description": "Delete WFS configs when clear content is invoked"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.app",
+      "intents": [
+        {
+          "type": "systembroadcast",
+          "class": "com.atakmap.app.ATAKActivity$ShutDownReceiver",
+          "action": "android.intent.action.ACTION_SHUTDOWN",
+          "description": "Listen for the system wide shutdown intent so that finish can be called on ATAK otherwise ATAK might not be able to clean up appropriate items"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ATAKActivity$35",
+          "action": "android.intent.action.MEDIA_MOUNTED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ATAKActivity$35",
+          "action": "android.intent.action.MEDIA_REMOVED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ATAKActivity$25",
+          "action": "com.android.arrowmaker.BACK_PRESS_NOT_HANDLED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ATAKActivity$20",
+          "action": "com.atakmap.android.map.action.LOCK_CAM",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ATAKActivity$20",
+          "action": "com.atakmap.android.map.action.UNLOCK_CAM",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ZoomReceiver",
+          "action": "com.atakmap.android.map.ZOOM",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ZoomReceiver",
+          "action": "com.atakmap.android.map.ZOOM_IN",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ZoomReceiver",
+          "action": "com.atakmap.android.map.ZOOM_OUT",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ATAKActivity$19",
+          "action": "com.atakmap.android.maps.ORIENTATION_TOGGLE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ATAKActivity$20",
+          "action": "com.atakmap.android.maps.SHOW_MENU",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ATAKActivity$20",
+          "action": "com.atakmap.android.maps.TOGGLE_LOCK",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ATAKActivity$30",
+          "action": "com.atakmap.app.ADVANCED_SETTINGS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ATAKActivity$3",
+          "action": "com.atakmap.app.COMPONENTS_CREATED",
+          "description": "Once all of the components are created, launch the intent then remove."
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ATAKActivity$30",
+          "action": "com.atakmap.app.DEVICE_SETTINGS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ATAKActivity$4",
+          "action": "com.atakmap.app.ExportCrashLogsTask",
+          "description": "Triggered when the ExportCrashLogsTask is completed"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ATAKActivity$32",
+          "action": "com.atakmap.app.LAYOUT_MANAGER",
+          "description": "Starts the layout management activity"
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.LinkLineReceiver",
+          "action": "com.atakmap.app.LINK_LINE",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ATAKActivity$30",
+          "action": "com.atakmap.app.NETWORK_SETTINGS",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.app.ATAKActivity$31",
+          "action": "com.atakmap.app.QUITAPP",
+          "description": "Intent to start the quiting process, if the boolean extra FORCE_QUIT is set, the the application will not prompt the user before quitting"
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.comms",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.comms.CommsMapComponent$7",
+          "action": "com.atakmap.android.network.ui.CREDENTIALS_UPDATED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.comms.CommsMapComponent$7",
+          "action": "com.atakmap.app.preferences.CERTIFICATE_UPDATED",
+          "description": ""
+        },
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.comms.ReportingRate",
+          "action": "com.atakmap.cot.reporting.REPORT_LOCATION",
+          "description": ""
+        },
+        {
+          "type": "systembroadcast",
+          "class": "com.atakmap.comms.CommsMapComponent$6",
+          "action": "com.partech.networkmonitor.CONFIG_ALTERED",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "namespace": "com.atakmap.spatial.wkt",
+      "intents": [
+        {
+          "type": "localbroadcast",
+          "class": "com.atakmap.spatial.wkt.WktMapComponent$2",
+          "action": "com.atakmap.app.ZEROIZE_CONFIRMED",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

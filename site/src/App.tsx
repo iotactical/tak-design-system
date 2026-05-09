@@ -10,6 +10,7 @@ import Icons from './pages/Icons';
 import Platforms from './pages/Platforms';
 import Palettes from './pages/Palettes';
 import Interfaces from './pages/Interfaces';
+import Explorer from './pages/Explorer';
 
 const navItems = [
   { to: '/', label: 'Overview' },
@@ -21,6 +22,7 @@ const navItems = [
   { to: '/palettes', label: 'Palettes' },
   { to: '/platforms', label: 'Platforms' },
   { to: '/interfaces', label: 'Interfaces' },
+  { to: '/explorer', label: '2525 Explorer' },
 ];
 
 export default function App() {
@@ -59,6 +61,7 @@ export default function App() {
           <Route path="/palettes" element={<Palettes />} />
           <Route path="/platforms" element={<Platforms />} />
           <Route path="/interfaces" element={<Interfaces />} />
+          <Route path="/explorer" element={<Explorer />} />
         </Routes>
       </main>
     </div>

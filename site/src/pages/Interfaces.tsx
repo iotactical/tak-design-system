@@ -1,8 +1,10 @@
 // rtmx:req REQ-XW-090
+// rtmx:req REQ-XW-113
 import { useEffect, useState } from 'react';
 import styles from './Interfaces.module.css';
 import externalInterfaces from '../../../data/tak-interfaces-external.json';
 import internalInterfaces from '../../../data/tak-interfaces-internal.json';
+import intentCatalog from '../../../data/atak-intents.json';
 
 interface ExternalInterface {
   name: string;
@@ -20,12 +22,24 @@ interface InternalInterface {
   description: string;
 }
 
+interface IntentEntry {
+  type: string;
+  class: string;
+  action: string;
+  description: string;
+}
+
+interface IntentGroup {
+  namespace: string;
+  intents: IntentEntry[];
+}
+
 type TabId = 'external' | 'internal' | 'intents';
 
 const TABS: { id: TabId; label: string }[] = [
   { id: 'external', label: 'External' },
   { id: 'internal', label: 'Internal' },
-  { id: 'intents', label: 'Intents' },
+  { id: 'intents', label: `Intents (${intentCatalog.totalCount})` },
 ];
 
 function matchesQuery(text: string, query: string): boolean {
@@ -56,15 +70,21 @@ function filterInternal(items: InternalInterface[], query: string): InternalInte
   );
 }
 
-/** Filter internal interfaces to show only Intent/BroadcastReceiver types */
-function getIntentInterfaces(items: InternalInterface[]): InternalInterface[] {
-  return items.filter(
-    (i) =>
-      i.type.toLowerCase().includes('intent') ||
-      i.mechanism.toLowerCase().includes('intent') ||
-      i.mechanism.toLowerCase().includes('broadcastreceiver') ||
-      i.name.toLowerCase().includes('intent')
-  );
+function filterIntentGroups(groups: IntentGroup[], query: string): IntentGroup[] {
+  if (!query) return groups;
+  return groups
+    .map((g) => ({
+      namespace: g.namespace,
+      intents: g.intents.filter(
+        (i) =>
+          matchesQuery(i.action, query) ||
+          matchesQuery(i.type, query) ||
+          matchesQuery(i.class, query) ||
+          matchesQuery(i.description, query) ||
+          matchesQuery(g.namespace, query)
+      ),
+    }))
+    .filter((g) => g.intents.length > 0);
 }
 
 export default function Interfaces() {
@@ -74,11 +94,12 @@ export default function Interfaces() {
 
   const allExternal = externalInterfaces as ExternalInterface[];
   const allInternal = internalInterfaces as InternalInterface[];
-  const intentInterfaces = getIntentInterfaces(allInternal);
+  const intentGroups = intentCatalog.groups as IntentGroup[];
 
   const filteredExternal = filterExternal(allExternal, query);
   const filteredInternal = filterInternal(allInternal, query);
-  const filteredIntents = filterInternal(intentInterfaces, query);
+  const filteredIntentGroups = filterIntentGroups(intentGroups, query);
+  const filteredIntentCount = filteredIntentGroups.reduce((sum, g) => sum + g.intents.length, 0);
 
   return (
     <div className={styles.container}>
@@ -155,25 +176,39 @@ export default function Interfaces() {
 
       {activeTab === 'intents' && (
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Intents</h2>
+          <h2 className={styles.sectionTitle}>ATAK Intent Catalog</h2>
           <p className={styles.intentDescription}>
-            ATAK broadcast intents and Intent/BroadcastReceiver interfaces for inter-component communication.
+            {filteredIntentCount} intents across {filteredIntentGroups.length} namespaces,
+            parsed from the ATAK SDK broadcast registry.
           </p>
-          {filteredIntents.length === 0 ? (
-            <div className={styles.empty}>No intent interfaces match your filter.</div>
+          {filteredIntentGroups.length === 0 ? (
+            <div className={styles.empty}>No intents match your filter.</div>
           ) : (
-            <div className={styles.grid}>
-              {filteredIntents.map((iface) => (
-                <div key={iface.name} className={styles.card}>
-                  <div className={styles.cardName}>{iface.name}</div>
-                  <div className={styles.cardMeta}>
-                    <span className={styles.badge}>{iface.mechanism}</span>
-                    <span className={styles.badge}>{iface.type}</span>
-                  </div>
-                  <p className={styles.cardDescription}>{iface.description}</p>
+            filteredIntentGroups.map((group) => (
+              <div key={group.namespace} className={styles.intentGroup}>
+                <h3 className={styles.intentGroupTitle}>{group.namespace}</h3>
+                <div className={styles.grid}>
+                  {group.intents.map((intent, idx) => (
+                    <div key={`${intent.action}-${idx}`} className={styles.card}>
+                      <div className={styles.cardName}>{intent.action}</div>
+                      <div className={styles.cardMeta}>
+                        <span className={
+                          intent.type === 'systembroadcast'
+                            ? styles.badgeDirection
+                            : styles.badge
+                        }>
+                          {intent.type}
+                        </span>
+                      </div>
+                      <p className={styles.intentClass}>{intent.class}</p>
+                      {intent.description && (
+                        <p className={styles.cardDescription}>{intent.description}</p>
+                      )}
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))
           )}
         </section>
       )}

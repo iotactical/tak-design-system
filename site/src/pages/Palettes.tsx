@@ -262,10 +262,10 @@ function buildDSidc(mapping: B2DMapping, si20: string): string {
 }
 
 const AFFILIATIONS = [
-  { key: 'F', label: 'Friendly', siChar15: 'F', siChar20: '3', color: '#0000FF' },
-  { key: 'H', label: 'Hostile', siChar15: 'H', siChar20: '6', color: '#FF0000' },
-  { key: 'N', label: 'Neutral', siChar15: 'N', siChar20: '4', color: '#00FF00' },
-  { key: 'U', label: 'Unknown', siChar15: 'U', siChar20: '1', color: '#FFFF00' },
+  { key: 'F', label: 'Friendly', siChar15: 'F', siChar20: '3', color: '#80C0FF' },
+  { key: 'H', label: 'Hostile', siChar15: 'H', siChar20: '6', color: '#FF8080' },
+  { key: 'N', label: 'Neutral', siChar15: 'N', siChar20: '4', color: '#AAFFAA' },
+  { key: 'U', label: 'Unknown', siChar15: 'U', siChar20: '1', color: '#FFFF80' },
 ] as const;
 
 // rtmx:req REQ-XW-085
@@ -322,31 +322,38 @@ function MarkersPanel() {
         <div className={styles.paletteName}>Markers (MIL-STD-2525)</div>
         <div className={styles.paletteCount}>{totalCount} entities -- military symbology</div>
       </div>
-      <div style={{ display: 'flex', gap: 16, alignItems: 'center', flexWrap: 'wrap', marginBottom: 12 }}>
-        <div className={styles.subToggle}>
-          <span style={{ fontSize: 12, color: '#878787', marginRight: 4 }}>Version:</span>
-          {versions.map((v) => (
-            <button
-              key={v}
-              className={`${styles.subToggleBtn} ${version === v ? styles.subToggleBtnActive : ''}`}
-              onClick={() => setVersion(v)}
-            >
-              {v}
-            </button>
-          ))}
+      <div style={{ display: 'flex', gap: 24, alignItems: 'center', flexWrap: 'wrap', marginBottom: 12 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+          <span style={{ fontSize: 13, color: '#878787' }}>Version</span>
+          <div className={styles.subToggle}>
+            {versions.map((v) => (
+              <button
+                key={v}
+                className={`${styles.subToggleBtn} ${version === v ? styles.subToggleBtnActive : ''}`}
+                onClick={() => setVersion(v)}
+              >
+                {v}
+              </button>
+            ))}
+          </div>
         </div>
-        <div className={styles.subToggle}>
-          <span style={{ fontSize: 12, color: '#878787', marginRight: 4 }}>Affiliation:</span>
-          {AFFILIATIONS.map((a) => (
-            <button
-              key={a.key}
-              className={`${styles.subToggleBtn} ${affiliation.key === a.key ? styles.subToggleBtnActive : ''}`}
-              style={affiliation.key === a.key ? { backgroundColor: a.color, color: contrastText(a.color), borderColor: a.color } : {}}
-              onClick={() => setAffiliation(a)}
-            >
-              {a.label}
-            </button>
-          ))}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+          <span style={{ fontSize: 13, color: '#878787' }}>Affiliation</span>
+          <div className={styles.subToggle}>
+            {AFFILIATIONS.map((a) => (
+              <button
+                key={a.key}
+                className={`${styles.subToggleBtn} ${affiliation.key === a.key ? styles.subToggleBtnActive : ''}`}
+                style={{
+                  borderLeft: `3px solid ${a.color}`,
+                  ...(affiliation.key === a.key ? { backgroundColor: a.color, color: contrastText(a.color), borderColor: a.color } : {}),
+                }}
+                onClick={() => setAffiliation(a)}
+              >
+                {a.label}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 

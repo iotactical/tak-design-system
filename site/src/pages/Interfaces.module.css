@@ -150,6 +150,28 @@
   margin: 0;
 }
 
+.intentGroup {
+  margin-bottom: 28px;
+}
+
+.intentGroupTitle {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Roboto Mono', monospace;
+  color: #C8B84D;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #2E2E2E;
+}
+
+.intentClass {
+  font-size: 11px;
+  font-family: 'Roboto Mono', monospace;
+  color: #5A5A5A;
+  margin: 0 0 6px 0;
+  word-break: break-all;
+}
+
 .empty {
   color: #5A5A5A;
   font-style: italic;
