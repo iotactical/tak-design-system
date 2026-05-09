@@ -324,8 +324,8 @@ function MarkersPanel() {
       </div>
       <div style={{ display: 'flex', gap: 24, alignItems: 'center', flexWrap: 'wrap', marginBottom: 12 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-          <span style={{ fontSize: 13, color: '#878787' }}>Version</span>
-          <div className={styles.subToggle}>
+          <span style={{ fontSize: 13, color: '#878787', lineHeight: '32px' }}>Version</span>
+          <div className={styles.subToggle} style={{ display: 'flex', alignItems: 'center' }}>
             {versions.map((v) => (
               <button
                 key={v}
@@ -338,8 +338,8 @@ function MarkersPanel() {
           </div>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-          <span style={{ fontSize: 13, color: '#878787' }}>Affiliation</span>
-          <div className={styles.subToggle}>
+          <span style={{ fontSize: 13, color: '#878787', lineHeight: '32px' }}>Affiliation</span>
+          <div className={styles.subToggle} style={{ display: 'flex', alignItems: 'center' }}>
             {AFFILIATIONS.map((a) => (
               <button
                 key={a.key}
