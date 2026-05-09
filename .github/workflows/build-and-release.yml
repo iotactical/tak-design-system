@@ -45,6 +45,8 @@ jobs:
         run: npm ci
 
       - name: Run tests
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm test
 
   build:
