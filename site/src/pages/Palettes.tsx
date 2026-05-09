@@ -1,13 +1,20 @@
 // rtmx:req REQ-SITE-005
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import styles from './Palettes.module.css';
 
-// ZIP-based iconset manifests (these exist)
+// All iconset manifests - static imports for reliability
 import responderData from '../../../data/atak-iconset-responder.json';
 import falconviewData from '../../../data/atak-iconset-falconview.json';
 import airData from '../../../data/atak-iconset-air.json';
 import incidentData from '../../../data/atak-iconset-incident.json';
 import wildfireData from '../../../data/atak-iconset-wildfire.json';
+import defaultData from '../../../data/atak-palette-default.json';
+import googleData from '../../../data/atak-palette-google.json';
+import osmData from '../../../data/atak-palette-osm.json';
+import genericData from '../../../data/atak-palette-generic.json';
+import femaData from '../../../data/atak-palette-fema.json';
+import geoopsData from '../../../data/atak-palette-geoops.json';
+import vehicleData from '../../../data/atak-vehicle-models.json';
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -57,32 +64,48 @@ const TEAM_COLORS: { name: string; hex: string }[] = [
 
 // ----- Palette tab definitions -----
 
-type PaletteType = 'iconset' | 'spotmap' | 'markers' | 'vehicle-models';
+type PaletteType = 'iconset' | 'sqlite-palette' | 'spotmap' | 'markers' | 'vehicle-models';
+
+/** SQLite palette format: groups with icons */
+interface SqlitePalette {
+  name: string;
+  uid: string;
+  iconCount: number;
+  groups: { name: string; icons: { filename: string; type2525b?: string }[] }[];
+}
+
+/** Normalize SQLite palette to flat icon list with group in path */
+function normalizeSqlite(data: SqlitePalette, paletteSlug: string): IconsetManifest {
+  const icons: IconEntry[] = [];
+  for (const g of data.groups) {
+    for (const icon of g.icons) {
+      icons.push({ name: icon.filename, path: `${g.name}/${icon.filename}` });
+    }
+  }
+  return { iconset: data.name, count: data.iconCount, icons };
+}
 
 interface PaletteTab {
   id: string;
   label: string;
   type: PaletteType;
   data: IconsetManifest | null;
-  /** JSON filename to dynamically load if data is null */
-  dynamicFile?: string;
 }
 
 const PALETTE_TABS: PaletteTab[] = [
   { id: 'markers', label: 'Markers', type: 'markers', data: null },
   { id: 'spotmap', label: 'Spot Map', type: 'spotmap', data: null },
-  { id: 'vehicle-models', label: 'Vehicle Models', type: 'vehicle-models', data: null, dynamicFile: 'atak-vehicle-models.json' },
-  { id: 'reference-point', label: 'Reference Point', type: 'iconset', data: null, dynamicFile: 'atak-palette-referencepoint.json' },
-  { id: 'google', label: 'Google', type: 'iconset', data: null, dynamicFile: 'atak-palette-google.json' },
-  { id: 'osm', label: 'OSM', type: 'iconset', data: null, dynamicFile: 'atak-palette-osm.json' },
-  { id: 'generic', label: 'Generic Icons', type: 'iconset', data: null, dynamicFile: 'atak-palette-generic.json' },
-  { id: 'fema', label: 'FEMA Icons', type: 'iconset', data: null, dynamicFile: 'atak-palette-fema.json' },
-  { id: 'default', label: 'Default', type: 'iconset', data: null, dynamicFile: 'atak-palette-default.json' },
-  { id: 'falconview', label: 'FalconView', type: 'iconset', data: falconviewData as IconsetManifest },
-  { id: 'incident', label: 'Incident Mgmt', type: 'iconset', data: incidentData as IconsetManifest },
-  { id: 'air', label: 'Public Safety Air', type: 'iconset', data: airData as IconsetManifest },
-  { id: 'responder', label: 'Responder', type: 'iconset', data: responderData as IconsetManifest },
-  { id: 'geoops', label: 'GeoOps', type: 'iconset', data: wildfireData as IconsetManifest },
+  { id: 'vehicle-models', label: 'Vehicle Models', type: 'vehicle-models', data: null },
+  { id: 'google', label: 'Google', type: 'sqlite-palette', data: normalizeSqlite(googleData as unknown as SqlitePalette, 'google') },
+  { id: 'osm', label: 'OSM', type: 'sqlite-palette', data: normalizeSqlite(osmData as unknown as SqlitePalette, 'osm') },
+  { id: 'generic', label: 'Generic Icons', type: 'sqlite-palette', data: normalizeSqlite(genericData as unknown as SqlitePalette, 'generic') },
+  { id: 'fema', label: 'FEMA Icons', type: 'sqlite-palette', data: normalizeSqlite(femaData as unknown as SqlitePalette, 'fema') },
+  { id: 'default', label: 'Default', type: 'sqlite-palette', data: normalizeSqlite(defaultData as unknown as SqlitePalette, 'default') },
+  { id: 'falconview', label: 'FalconView', type: 'iconset', data: falconviewData as unknown as IconsetManifest },
+  { id: 'incident', label: 'Incident Mgmt', type: 'iconset', data: incidentData as unknown as IconsetManifest },
+  { id: 'air', label: 'Public Safety Air', type: 'iconset', data: airData as unknown as IconsetManifest },
+  { id: 'responder', label: 'Responder', type: 'iconset', data: responderData as unknown as IconsetManifest },
+  { id: 'geoops', label: 'GeoOps', type: 'sqlite-palette', data: normalizeSqlite(geoopsData as unknown as SqlitePalette, 'geoops') },
 ];
 
 // ----- Helpers -----
@@ -106,32 +129,16 @@ function groupIcons(icons: IconEntry[]): Map<string, IconEntry[]> {
 
 /** Build the palette image path */
 function paletteImgSrc(paletteId: string, icon: IconEntry): string {
+  // Try with full path (group/filename) first
   return `${BASE}palettes/${paletteId}/${icon.path}`;
 }
 
-// ----- Hook for dynamic data loading -----
-
-function useDynamicManifest(filename: string | undefined): IconsetManifest | null {
-  const [data, setData] = useState<IconsetManifest | null>(null);
-
-  useEffect(() => {
-    if (!filename) return;
-    // Attempt to fetch from the data directory (works during dev with Vite)
-    fetch(`${BASE}data/${filename}`)
-      .then((res) => {
-        if (!res.ok) return null;
-        return res.json();
-      })
-      .then((json) => {
-        if (json) setData(json as IconsetManifest);
-      })
-      .catch(() => {
-        // File does not exist yet
-      });
-  }, [filename]);
-
-  return data;
+/** Fallback: try just the filename without group directory */
+function paletteImgFallback(paletteId: string, icon: IconEntry): string {
+  return `${BASE}palettes/${paletteId}/${icon.name}`;
 }
+
+// No dynamic loading needed - all manifests are statically imported
 
 // ----- Sub-components -----
 
@@ -187,23 +194,9 @@ function MarkersPanel() {
 }
 
 function VehicleModelsPanel() {
-  const dynamicData = useDynamicManifest('atak-vehicle-models.json');
+  const vData = vehicleData as unknown as { totalCount: number; categories: { name: string; models: { name: string; file: string }[] }[] };
 
-  if (!dynamicData) {
-    return (
-      <div>
-        <div className={styles.paletteHeader}>
-          <div className={styles.paletteName}>Vehicle Models</div>
-        </div>
-        <div className={styles.placeholder}>
-          <div className={styles.placeholderTitle}>Extracting...</div>
-          Vehicle model data not yet available.
-        </div>
-      </div>
-    );
-  }
-
-  const models = (dynamicData as unknown as VehicleModelsManifest).models || [];
+  const models = vData.categories.flatMap(c => c.models.map(m => ({ ...m, category: c.name })));
   const categories = new Map<string, VehicleModelEntry[]>();
   for (const m of models) {
     const cat = m.category || 'Uncategorized';
@@ -215,7 +208,7 @@ function VehicleModelsPanel() {
     <div>
       <div className={styles.paletteHeader}>
         <div className={styles.paletteName}>Vehicle Models</div>
-        <div className={styles.paletteCount}>{(dynamicData as unknown as VehicleModelsManifest).count} models</div>
+        <div className={styles.paletteCount}>{vData.totalCount} models</div>
       </div>
       {Array.from(categories.entries()).map(([cat, items]) => (
         <div key={cat} className={styles.groupSection}>
@@ -236,8 +229,7 @@ function VehicleModelsPanel() {
 
 function IconsetPanel({ tab }: { tab: PaletteTab }) {
   const [search, setSearch] = useState('');
-  const dynamicData = useDynamicManifest(tab.data ? undefined : tab.dynamicFile);
-  const manifest = tab.data || dynamicData;
+  const manifest = tab.data;
 
   if (!manifest) {
     return (
@@ -246,8 +238,8 @@ function IconsetPanel({ tab }: { tab: PaletteTab }) {
           <div className={styles.paletteName}>{tab.label}</div>
         </div>
         <div className={styles.placeholder}>
-          <div className={styles.placeholderTitle}>Extracting...</div>
-          Palette data not yet available. Run the extraction script to populate.
+          <div className={styles.placeholderTitle}>No data</div>
+          Palette manifest not available.
         </div>
       </div>
     );
@@ -297,14 +289,10 @@ function IconsetPanel({ tab }: { tab: PaletteTab }) {
                   loading="lazy"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.style.display = 'none';
-                    const parent = target.parentElement;
-                    if (parent && !parent.querySelector('[data-fallback]')) {
-                      const span = document.createElement('span');
-                      span.setAttribute('data-fallback', 'true');
-                      span.style.cssText = 'font-size:10px;color:#878787;text-align:center;padding:4px;word-break:break-all;';
-                      span.textContent = icon.name;
-                      parent.insertBefore(span, target.nextSibling);
+                    const fallback = paletteImgFallback(tab.id, icon);
+                    if (target.src !== fallback && !target.dataset.triedFallback) {
+                      target.dataset.triedFallback = 'true';
+                      target.src = fallback;
                     }
                   }}
                 />
@@ -354,7 +342,7 @@ export default function Palettes() {
       {active.type === 'spotmap' && <SpotMapPanel />}
       {active.type === 'markers' && <MarkersPanel />}
       {active.type === 'vehicle-models' && <VehicleModelsPanel />}
-      {active.type === 'iconset' && <IconsetPanel tab={active} />}
+      {(active.type === 'iconset' || active.type === 'sqlite-palette') && <IconsetPanel tab={active} />}
     </div>
   );
 }
