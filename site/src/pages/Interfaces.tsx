@@ -1,3 +1,4 @@
+// rtmx:req REQ-XW-090
 import { useEffect, useState } from 'react';
 import styles from './Interfaces.module.css';
 import externalInterfaces from '../../../data/tak-interfaces-external.json';
@@ -18,6 +19,14 @@ interface InternalInterface {
   mechanism: string;
   description: string;
 }
+
+type TabId = 'external' | 'internal' | 'intents';
+
+const TABS: { id: TabId; label: string }[] = [
+  { id: 'external', label: 'External' },
+  { id: 'internal', label: 'Internal' },
+  { id: 'intents', label: 'Intents' },
+];
 
 function matchesQuery(text: string, query: string): boolean {
   return text.toLowerCase().includes(query.toLowerCase());
@@ -47,12 +56,29 @@ function filterInternal(items: InternalInterface[], query: string): InternalInte
   );
 }
 
+/** Filter internal interfaces to show only Intent/BroadcastReceiver types */
+function getIntentInterfaces(items: InternalInterface[]): InternalInterface[] {
+  return items.filter(
+    (i) =>
+      i.type.toLowerCase().includes('intent') ||
+      i.mechanism.toLowerCase().includes('intent') ||
+      i.mechanism.toLowerCase().includes('broadcastreceiver') ||
+      i.name.toLowerCase().includes('intent')
+  );
+}
+
 export default function Interfaces() {
   useEffect(() => { document.title = 'Interfaces - TAK Design System'; }, []);
   const [query, setQuery] = useState('');
+  const [activeTab, setActiveTab] = useState<TabId>('external');
 
-  const filteredExternal = filterExternal(externalInterfaces as ExternalInterface[], query);
-  const filteredInternal = filterInternal(internalInterfaces as InternalInterface[], query);
+  const allExternal = externalInterfaces as ExternalInterface[];
+  const allInternal = internalInterfaces as InternalInterface[];
+  const intentInterfaces = getIntentInterfaces(allInternal);
+
+  const filteredExternal = filterExternal(allExternal, query);
+  const filteredInternal = filterInternal(allInternal, query);
+  const filteredIntents = filterInternal(intentInterfaces, query);
 
   return (
     <div className={styles.container}>
@@ -60,6 +86,18 @@ export default function Interfaces() {
       <p className={styles.subtitle}>
         External and internal interfaces in the TAK ecosystem.
       </p>
+
+      <div className={styles.tabBar}>
+        {TABS.map((tab) => (
+          <button
+            key={tab.id}
+            className={`${styles.tab} ${activeTab === tab.id ? styles.tabActive : ''}`}
+            onClick={() => setActiveTab(tab.id)}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
 
       <input
         className={styles.searchBar}
@@ -69,47 +107,76 @@ export default function Interfaces() {
         onChange={(e) => setQuery(e.target.value)}
       />
 
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>External Interfaces</h2>
-        {filteredExternal.length === 0 ? (
-          <div className={styles.empty}>No external interfaces match your filter.</div>
-        ) : (
-          <div className={styles.grid}>
-            {filteredExternal.map((iface) => (
-              <div key={iface.name} className={styles.card}>
-                <div className={styles.cardName}>{iface.name}</div>
-                <div className={styles.cardMeta}>
-                  <span className={styles.badge}>{iface.protocol}</span>
-                  <span className={styles.badge}>{iface.format}</span>
-                  <span className={styles.badgeDirection}>{iface.direction}</span>
-                  {iface.port && <span className={styles.badgePort}>:{iface.port}</span>}
+      {activeTab === 'external' && (
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>External Interfaces</h2>
+          {filteredExternal.length === 0 ? (
+            <div className={styles.empty}>No external interfaces match your filter.</div>
+          ) : (
+            <div className={styles.grid}>
+              {filteredExternal.map((iface) => (
+                <div key={iface.name} className={styles.card}>
+                  <div className={styles.cardName}>{iface.name}</div>
+                  <div className={styles.cardMeta}>
+                    <span className={styles.badge}>{iface.protocol}</span>
+                    <span className={styles.badge}>{iface.format}</span>
+                    <span className={styles.badgeDirection}>{iface.direction}</span>
+                    {iface.port && <span className={styles.badgePort}>:{iface.port}</span>}
+                  </div>
+                  <p className={styles.cardDescription}>{iface.description}</p>
                 </div>
-                <p className={styles.cardDescription}>{iface.description}</p>
-              </div>
-            ))}
-          </div>
-        )}
-      </section>
+              ))}
+            </div>
+          )}
+        </section>
+      )}
 
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Internal Interfaces</h2>
-        {filteredInternal.length === 0 ? (
-          <div className={styles.empty}>No internal interfaces match your filter.</div>
-        ) : (
-          <div className={styles.grid}>
-            {filteredInternal.map((iface) => (
-              <div key={iface.name} className={styles.card}>
-                <div className={styles.cardName}>{iface.name}</div>
-                <div className={styles.cardMeta}>
-                  <span className={styles.badge}>{iface.mechanism}</span>
-                  <span className={styles.badge}>{iface.type}</span>
+      {activeTab === 'internal' && (
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Internal Interfaces</h2>
+          {filteredInternal.length === 0 ? (
+            <div className={styles.empty}>No internal interfaces match your filter.</div>
+          ) : (
+            <div className={styles.grid}>
+              {filteredInternal.map((iface) => (
+                <div key={iface.name} className={styles.card}>
+                  <div className={styles.cardName}>{iface.name}</div>
+                  <div className={styles.cardMeta}>
+                    <span className={styles.badge}>{iface.mechanism}</span>
+                    <span className={styles.badge}>{iface.type}</span>
+                  </div>
+                  <p className={styles.cardDescription}>{iface.description}</p>
                 </div>
-                <p className={styles.cardDescription}>{iface.description}</p>
-              </div>
-            ))}
-          </div>
-        )}
-      </section>
+              ))}
+            </div>
+          )}
+        </section>
+      )}
+
+      {activeTab === 'intents' && (
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Intents</h2>
+          <p className={styles.intentDescription}>
+            ATAK broadcast intents and Intent/BroadcastReceiver interfaces for inter-component communication.
+          </p>
+          {filteredIntents.length === 0 ? (
+            <div className={styles.empty}>No intent interfaces match your filter.</div>
+          ) : (
+            <div className={styles.grid}>
+              {filteredIntents.map((iface) => (
+                <div key={iface.name} className={styles.card}>
+                  <div className={styles.cardName}>{iface.name}</div>
+                  <div className={styles.cardMeta}>
+                    <span className={styles.badge}>{iface.mechanism}</span>
+                    <span className={styles.badge}>{iface.type}</span>
+                  </div>
+                  <p className={styles.cardDescription}>{iface.description}</p>
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+      )}
     </div>
   );
 }

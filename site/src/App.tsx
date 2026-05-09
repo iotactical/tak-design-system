@@ -1,5 +1,6 @@
 import { Routes, Route, NavLink } from 'react-router-dom';
 import styles from './App.module.css';
+import { GlobalSearch } from './components/GlobalSearch';
 import Home from './pages/Home';
 import Colors from './pages/Colors';
 import Typography from './pages/Typography';
@@ -29,6 +30,7 @@ export default function App() {
         <div className={styles.brand}>
           <span className={styles.brandAccent}>TAK</span> Design System
         </div>
+        <GlobalSearch />
         <ul className={styles.navList}>
           {navItems.map((item) => (
             <li key={item.to}>

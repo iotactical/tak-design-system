@@ -85,7 +85,7 @@
 .codeBlock {
   margin: 0;
   padding: 16px;
-  overflow-x: auto;
+  flex-wrap: wrap;
   font-family: 'Roboto Mono', monospace;
   font-size: 12px;
   line-height: 1.6;

@@ -1,0 +1,163 @@
+/* rtmx:req REQ-XW-110 */
+/* Global autocomplete search bar -- ATAK dark theme */
+
+.searchWrapper {
+  padding: 8px 16px 16px;
+  position: relative;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #878787;
+  pointer-events: none;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px 12px 8px 32px;
+  background: #242424;
+  border: 1px solid #2E2E2E;
+  border-radius: 6px;
+  color: #DAD4BC;
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.searchInput::placeholder {
+  color: #878787;
+}
+
+.searchInput:focus {
+  border-color: #FFE35E;
+}
+
+/* Dropdown */
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 16px;
+  right: 16px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #1A1A1A;
+  border: 1px solid #2E2E2E;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.categoryHeader {
+  padding: 8px 12px 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #878787;
+  background: #1A1A1A;
+  position: sticky;
+  top: 0;
+}
+
+.resultItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.1s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.resultItem:hover,
+.resultItemActive {
+  background: #242424;
+}
+
+.resultName {
+  flex: 1;
+  font-size: 13px;
+  color: #DAD4BC;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.highlight {
+  color: #FFE35E;
+  font-weight: 600;
+}
+
+.resultDescription {
+  font-size: 11px;
+  color: #878787;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 140px;
+}
+
+/* Category badges */
+
+.badge {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 6px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.badgeTokens {
+  background: #1565C0;
+  color: #BBDEFB;
+}
+
+.badgeComponents {
+  background: #2E7D32;
+  color: #C8E6C9;
+}
+
+.badgeIcons {
+  background: #6A1B9A;
+  color: #E1BEE7;
+}
+
+.badgePalettes {
+  background: #E65100;
+  color: #FFE0B2;
+}
+
+.badgeInterfaces {
+  background: #00838F;
+  color: #B2EBF2;
+}
+
+.emptyState {
+  padding: 16px 12px;
+  text-align: center;
+  color: #878787;
+  font-size: 12px;
+}
+
+.hint {
+  padding: 4px 12px 8px;
+  font-size: 10px;
+  color: #555;
+  text-align: right;
+}

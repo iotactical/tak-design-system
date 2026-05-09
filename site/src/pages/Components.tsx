@@ -1,5 +1,6 @@
+// rtmx:req REQ-XW-091
 import { Link } from 'react-router-dom';
-import { useEffect, type ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import styles from './Components.module.css';
 
 // Live component imports from source
@@ -401,6 +402,8 @@ const componentGallery: CategoryGroup[] = [
   },
 ];
 
+const CATEGORY_TABS = componentGallery.map((g) => g.category);
+
 function ComponentCard({ component }: { component: ComponentInfo }) {
   const preview = previews[component.name];
   return (
@@ -431,10 +434,14 @@ function ComponentCard({ component }: { component: ComponentInfo }) {
 
 export default function Components() {
   useEffect(() => { document.title = 'Components - TAK Design System'; }, []);
+  const [activeTab, setActiveTab] = useState(CATEGORY_TABS[0]);
+
   const totalCount = componentGallery.reduce(
     (sum, group) => sum + group.components.length,
     0
   );
+
+  const activeGroup = componentGallery.find((g) => g.category === activeTab);
 
   return (
     <div className={styles.page}>
@@ -445,16 +452,29 @@ export default function Components() {
       <p className={styles.subtitle}>
         {totalCount} React components from @iotactical/tak-react, grouped by category.
       </p>
-      {componentGallery.map((group) => (
-        <section key={group.category} className={styles.categorySection}>
-          <h2 className={styles.categoryTitle}>{group.category}</h2>
+
+      <div className={styles.tabBar}>
+        {CATEGORY_TABS.map((cat) => (
+          <button
+            key={cat}
+            className={`${styles.tab} ${activeTab === cat ? styles.tabActive : ''}`}
+            onClick={() => setActiveTab(cat)}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      {activeGroup && (
+        <section className={styles.categorySection}>
+          <h2 className={styles.categoryTitle}>{activeGroup.category}</h2>
           <div className={styles.grid}>
-            {group.components.map((comp) => (
+            {activeGroup.components.map((comp) => (
               <ComponentCard key={comp.name} component={comp} />
             ))}
           </div>
         </section>
-      ))}
+      )}
     </div>
   );
 }

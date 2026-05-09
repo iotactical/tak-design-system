@@ -1,9 +1,11 @@
 // rtmx:req REQ-SITE-005
 // rtmx:req REQ-XW-074
 // rtmx:req REQ-XW-075
+// rtmx:req REQ-XW-085
 import { useEffect, useState, useMemo, useRef } from 'react';
 import styles from './Palettes.module.css';
 import { ModelViewer } from '../components/ModelViewer';
+import { MilSymRenderer } from '../components/MilSymRenderer';
 
 // All iconset manifests - static imports for reliability
 import responderData from '../../../data/atak-iconset-responder.json';
@@ -18,6 +20,8 @@ import genericData from '../../../data/atak-palette-generic.json';
 import femaData from '../../../data/atak-palette-fema.json';
 import geoopsData from '../../../data/atak-palette-geoops.json';
 import vehicleData from '../../../data/atak-vehicle-models.json';
+import bEntitiesData from '../../../data/mil-std-2525/b-entities.json';
+import b2dData from '../../../data/mil-std-2525/b2d.json';
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -191,31 +195,261 @@ function SpotMapPanel() {
   );
 }
 
+/** Symbol set display names for MIL-STD-2525D */
+const SYMBOL_SET_NAMES: Record<string, string> = {
+  '01': 'Air',
+  '02': 'Air Missile',
+  '05': 'Space',
+  '10': 'Land Unit',
+  '11': 'Land Civilian',
+  '15': 'Land Equipment',
+  '20': 'Land Installation',
+  '25': 'Control Measure',
+  '30': 'Sea Surface',
+  '35': 'Subsurface',
+  '36': 'Mine Warfare',
+  '40': 'Activities',
+  '45': 'Atmospheric',
+  '46': 'Oceanographic',
+  '50': 'SIGINT - Space',
+  '51': 'SIGINT - Air',
+  '52': 'SIGINT - Land',
+  '53': 'SIGINT - Sea Surface',
+  '54': 'SIGINT - Subsurface',
+  '60': 'Cyberspace',
+};
+
+interface BEntity {
+  basic: string;
+  ss: string;
+  ec: string;
+  b_compat: boolean;
+  label: string;
+}
+
+interface B2DMapping {
+  b_sidc: string;
+  d_ss: string;
+  d_ec: string;
+  d_s1: string;
+  d_s2: string;
+  label: string;
+  lossy: boolean;
+}
+
+/**
+ * Build a friendly SIDC for rendering from the B-format basic pattern.
+ * Replace wildcard '*' in affiliation position with 'F' (friendly).
+ */
+function buildSidc15(basic: string, affiliationChar: string): string {
+  if (!basic || basic.length < 2) return basic;
+  return basic.charAt(0) + affiliationChar + basic.substring(2);
+}
+
+/**
+ * Build a D-format 20-char SIDC from crosswalk mapping.
+ */
+function buildDSidc(mapping: B2DMapping, si20: string): string {
+  const version = '10';
+  const si = si20;
+  const sd = '0';
+  const ss = mapping.d_ss;
+  const ec = mapping.d_ec;
+  const s1 = mapping.d_s1;
+  const s2 = mapping.d_s2;
+  const oo = '00';
+  return `${version}${si}${sd}${ss}${ec}${s1}${s2}${oo}`;
+}
+
+const AFFILIATIONS = [
+  { key: 'F', label: 'Friendly', siChar15: 'F', siChar20: '3', color: '#0000FF' },
+  { key: 'H', label: 'Hostile', siChar15: 'H', siChar20: '6', color: '#FF0000' },
+  { key: 'N', label: 'Neutral', siChar15: 'N', siChar20: '4', color: '#00FF00' },
+  { key: 'U', label: 'Unknown', siChar15: 'U', siChar20: '1', color: '#FFFF00' },
+] as const;
+
+// rtmx:req REQ-XW-085
 function MarkersPanel() {
   const [version, setVersion] = useState('B');
+  const [search, setSearch] = useState('');
+  const [affiliation, setAffiliation] = useState<typeof AFFILIATIONS[number]>(AFFILIATIONS[0]);
   const versions = ['B', 'C', 'D', 'E'];
+
+  const bEntities = (bEntitiesData as { entities: BEntity[] }).entities;
+  const b2dMappings = (b2dData as { mappings: B2DMapping[] }).mappings;
+
+  // Group entities by symbol set
+  const groupedEntities = useMemo(() => {
+    const groups = new Map<string, BEntity[]>();
+    const lower = search.toLowerCase();
+    const filtered = lower
+      ? bEntities.filter((e) => e.label.toLowerCase().includes(lower))
+      : bEntities;
+    for (const entity of filtered) {
+      const ss = entity.ss;
+      if (!groups.has(ss)) groups.set(ss, []);
+      groups.get(ss)!.push(entity);
+    }
+    return groups;
+  }, [bEntities, search]);
+
+  // Group D mappings by symbol set
+  const groupedDMappings = useMemo(() => {
+    const groups = new Map<string, B2DMapping[]>();
+    const lower = search.toLowerCase();
+    const filtered = lower
+      ? b2dMappings.filter((m) => m.label.toLowerCase().includes(lower))
+      : b2dMappings;
+    for (const mapping of filtered) {
+      const ss = mapping.d_ss;
+      if (!groups.has(ss)) groups.set(ss, []);
+      groups.get(ss)!.push(mapping);
+    }
+    return groups;
+  }, [b2dMappings, search]);
+
+  const totalCount = version === 'B' || version === 'C'
+    ? bEntities.length
+    : b2dMappings.length;
+
+  const filteredCount = version === 'B' || version === 'C'
+    ? Array.from(groupedEntities.values()).reduce((s, g) => s + g.length, 0)
+    : Array.from(groupedDMappings.values()).reduce((s, g) => s + g.length, 0);
 
   return (
     <div>
       <div className={styles.paletteHeader}>
         <div className={styles.paletteName}>Markers (MIL-STD-2525)</div>
-        <div className={styles.paletteCount}>Military symbology</div>
+        <div className={styles.paletteCount}>{totalCount} entities -- military symbology</div>
       </div>
-      <div className={styles.subToggle}>
-        {versions.map((v) => (
-          <button
-            key={v}
-            className={`${styles.subToggleBtn} ${version === v ? styles.subToggleBtnActive : ''}`}
-            onClick={() => setVersion(v)}
-          >
-            {v}
-          </button>
-        ))}
+      <div style={{ display: 'flex', gap: 16, alignItems: 'center', flexWrap: 'wrap', marginBottom: 12 }}>
+        <div className={styles.subToggle}>
+          <span style={{ fontSize: 12, color: '#878787', marginRight: 4 }}>Version:</span>
+          {versions.map((v) => (
+            <button
+              key={v}
+              className={`${styles.subToggleBtn} ${version === v ? styles.subToggleBtnActive : ''}`}
+              onClick={() => setVersion(v)}
+            >
+              {v}
+            </button>
+          ))}
+        </div>
+        <div className={styles.subToggle}>
+          <span style={{ fontSize: 12, color: '#878787', marginRight: 4 }}>Affiliation:</span>
+          {AFFILIATIONS.map((a) => (
+            <button
+              key={a.key}
+              className={`${styles.subToggleBtn} ${affiliation.key === a.key ? styles.subToggleBtnActive : ''}`}
+              style={affiliation.key === a.key ? { backgroundColor: a.color, color: contrastText(a.color), borderColor: a.color } : {}}
+              onClick={() => setAffiliation(a)}
+            >
+              {a.label}
+            </button>
+          ))}
+        </div>
       </div>
-      <div className={styles.placeholder}>
-        <div className={styles.placeholderTitle}>MIL-STD-2525{version}</div>
-        Requires mil-sym-ts integration
+
+      <div className={styles.searchRow}>
+        <input
+          className={styles.searchInput}
+          type="text"
+          placeholder="Search entities..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          aria-label="Search MIL-STD-2525 entities"
+        />
+        {search && (
+          <span className={styles.searchCount}>
+            {filteredCount} of {totalCount}
+          </span>
+        )}
       </div>
+
+      {(version === 'B' || version === 'C') && (
+        <>
+          {version === 'C' && (
+            <p style={{ fontSize: 12, color: '#878787', marginBottom: 16 }}>
+              MIL-STD-2525C uses the same 15-character SIDC as 2525B. Showing B entities (B/C share identical coding).
+            </p>
+          )}
+          {Array.from(groupedEntities.entries())
+            .sort(([a], [b]) => a.localeCompare(b))
+            .map(([ss, entities]) => (
+              <div key={ss} className={styles.groupSection}>
+                <div className={styles.groupName}>
+                  {SYMBOL_SET_NAMES[ss] || `Symbol Set ${ss}`}
+                </div>
+                <div className={styles.groupCount}>{entities.length} entities</div>
+                <div className={styles.markerGrid} data-testid={`marker-group-${ss}`}>
+                  {entities.map((entity) => (
+                    <div key={entity.basic} className={styles.markerCard}>
+                      <MilSymRenderer
+                        sidc={buildSidc15(entity.basic, affiliation.siChar15)}
+                        size={36}
+                      />
+                      <div className={styles.markerLabel} title={`${entity.label}\n${entity.basic}`}>
+                        {entity.label}
+                      </div>
+                      <div className={styles.markerSidc}>{entity.basic}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+        </>
+      )}
+
+      {(version === 'D' || version === 'E') && (
+        <>
+          {version === 'E' && (
+            <p style={{ fontSize: 12, color: '#878787', marginBottom: 16 }}>
+              MIL-STD-2525E extends 2525D. Showing D entities from the B-to-D crosswalk.
+            </p>
+          )}
+          {Array.from(groupedDMappings.entries())
+            .sort(([a], [b]) => a.localeCompare(b))
+            .map(([ss, mappings]) => (
+              <div key={ss} className={styles.groupSection}>
+                <div className={styles.groupName}>
+                  {SYMBOL_SET_NAMES[ss] || `Symbol Set ${ss}`}
+                </div>
+                <div className={styles.groupCount}>
+                  {mappings.length} entities
+                  {mappings.some((m) => m.lossy) && (
+                    <span style={{ color: '#CC8844', marginLeft: 8 }}>
+                      ({mappings.filter((m) => m.lossy).length} lossy mappings)
+                    </span>
+                  )}
+                </div>
+                <div className={styles.markerGrid} data-testid={`marker-group-d-${ss}`}>
+                  {mappings.map((mapping) => {
+                    const dSidc = buildDSidc(mapping, affiliation.siChar20);
+                    return (
+                      <div key={dSidc} className={styles.markerCard}>
+                        <MilSymRenderer
+                          sidc={dSidc}
+                          size={36}
+                        />
+                        <div className={styles.markerLabel} title={`${mapping.label}\nB: ${mapping.b_sidc}\nD: ${dSidc}`}>
+                          {mapping.label}
+                        </div>
+                        <div className={styles.markerSidc}>{mapping.d_ss}-{mapping.d_ec}</div>
+                        {/* lossy indicated by subtle orange left border, visible on hover via title */}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+        </>
+      )}
+
+      {filteredCount === 0 && (
+        <div className={styles.emptyState}>
+          No entities match your search.
+        </div>
+      )}
     </div>
   );
 }
@@ -356,6 +590,16 @@ const AFFILIATION_COLORS: { label: string; hex: string }[] = [
   { label: 'Unknown', hex: '#FFCC00' },
 ];
 
+/** Column cell wrapping each circle for vertical dividers and spacing */
+const skittleCell: React.CSSProperties = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: 36,
+  flexShrink: 0,
+  borderRight: '1px solid #2A2A2A',
+};
+
 const skittleCircleBase: React.CSSProperties = {
   width: 28,
   height: 28,
@@ -381,19 +625,26 @@ function SkittlesPanel() {
         <div className={styles.paletteCount}>Team member circles -- ATAK spot map markers</div>
       </div>
 
-      {/* Team Color Grid */}
+      {/* Team Color header row with names */}
       <div className={styles.groupSection}>
         <div className={styles.groupName}>Team Colors</div>
         <div className={styles.groupCount}>15 colors</div>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+        <div style={{ display: 'flex', alignItems: 'flex-end', gap: 6, marginBottom: 4, borderBottom: '1px solid #333', paddingBottom: 6 }}>
+          <span style={{ width: 130, flexShrink: 0 }} />
           {TEAM_COLORS.map((tc) => (
-            <div key={tc.name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
-              <div
-                data-testid={`skittle-color-${tc.name}`}
-                style={{ ...skittleCircleBase, backgroundColor: tc.hex, color: contrastText(tc.hex) }}
-              />
-              <span style={{ fontSize: 9, color: '#878787' }}>{tc.name}</span>
+            <div key={tc.name} style={skittleCell}>
+              <span style={{ fontSize: 11, color: '#AAA', transform: 'rotate(-45deg)', transformOrigin: 'center', display: 'inline-block', whiteSpace: 'nowrap' }}>{tc.name}</span>
             </div>
+          ))}
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 0, marginBottom: 8 }}>
+          <span style={{ width: 130, fontSize: 12, color: '#DAD4BC', flexShrink: 0 }}>(base)</span>
+          {TEAM_COLORS.map((tc) => (
+            <div
+              key={tc.name}
+              data-testid={`skittle-color-${tc.name}`}
+              style={{ ...skittleCircleBase, backgroundColor: tc.hex, color: contrastText(tc.hex) }}
+            />
           ))}
         </div>
       </div>
@@ -404,8 +655,8 @@ function SkittlesPanel() {
         <div className={styles.groupCount}>{SKITTLE_ROLES.length} roles x {TEAM_COLORS.length} colors</div>
         <div style={{ overflowX: 'auto' }}>
           {SKITTLE_ROLES.map((role) => (
-            <div key={role.label} style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
-              <span style={{ width: 120, fontSize: 12, color: '#DAD4BC', flexShrink: 0 }}>{role.label}</span>
+            <div key={role.label} style={{ display: 'flex', alignItems: 'center', gap: 0, marginBottom: 8 }}>
+              <span style={{ width: 130, fontSize: 12, color: '#DAD4BC', flexShrink: 0 }}>{role.label}</span>
               {TEAM_COLORS.map((tc) => (
                 <div
                   key={tc.name}
@@ -420,18 +671,18 @@ function SkittlesPanel() {
         </div>
       </div>
 
-      {/* Staleness States */}
+      {/* Staleness States -- full 15 color rows */}
       <div className={styles.groupSection}>
         <div className={styles.groupName}>Staleness States</div>
-        <div className={styles.groupCount}>Connected, stale, expired</div>
+        <div className={styles.groupCount}>Connected, stale, expired -- all 15 colors</div>
         {[
-          { label: 'Connected', opacity: 1, filter: 'none' },
-          { label: 'Stale', opacity: 0.5, filter: 'none' },
-          { label: 'Expired', opacity: 0.3, filter: 'grayscale(1)' },
+          { label: 'Connected', opacity: 1, filter: 'none', note: 'CoT received within staleness threshold. Full color.' },
+          { label: 'Stale', opacity: 0.5, filter: 'none', note: 'No update received past staleness time. Faded to 50% opacity.' },
+          { label: 'Expired', opacity: 0.3, filter: 'grayscale(1)', note: 'No update well past threshold. Grayed out, may be removed.' },
         ].map((state) => (
-          <div key={state.label} style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
-            <span style={{ width: 120, fontSize: 12, color: '#DAD4BC', flexShrink: 0 }}>{state.label}</span>
-            {stalenessColors.map((tc) => (
+          <div key={state.label} style={{ display: 'flex', alignItems: 'center', gap: 0, marginBottom: 8 }}>
+            <span style={{ width: 130, fontSize: 12, color: '#DAD4BC', flexShrink: 0 }}>{state.label}</span>
+            {TEAM_COLORS.map((tc) => (
               <div
                 key={tc.name}
                 style={{
@@ -443,48 +694,55 @@ function SkittlesPanel() {
                 }}
               />
             ))}
+            <span style={{ fontSize: 11, color: '#878787', marginLeft: 8, flexShrink: 0 }}>
+              {state.note}
+            </span>
           </div>
         ))}
       </div>
 
-      {/* Affiliation Dots */}
+      {/* GPS Source Variants */}
       <div className={styles.groupSection}>
-        <div className={styles.groupName}>Affiliation</div>
-        <div className={styles.groupCount}>4 affiliations</div>
-        <div style={{ display: 'flex', gap: 16 }}>
-          {AFFILIATION_COLORS.map((a) => (
-            <div key={a.label} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
-              <div style={{ ...skittleCircleBase, backgroundColor: a.hex, color: contrastText(a.hex) }} />
-              <span style={{ fontSize: 10, color: '#DAD4BC' }}>{a.label}</span>
-            </div>
-          ))}
+        <div className={styles.groupName}>GPS Source Variants</div>
+        <div className={styles.groupCount}>
+          CoT &quot;how&quot; field: h-e (GPS), h-* (human/device), m-g-l (manual entry with slash)
         </div>
-      </div>
-
-      {/* Comparison: Skittle vs Self Marker */}
-      <div className={styles.groupSection}>
-        <div className={styles.groupName}>Comparison</div>
-        <div className={styles.groupCount}>Skittle circle vs Self Marker arrow</div>
-        <div style={{ display: 'flex', gap: 32 }}>
-          {TEAM_COLORS.slice(0, 5).map((tc) => (
-            <div key={tc.name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
-              <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-                {/* Skittle circle */}
-                <div style={{ ...skittleCircleBase, backgroundColor: tc.hex, color: contrastText(tc.hex) }} />
-                {/* Self Marker arrow */}
-                <svg width="28" height="28" viewBox="0 0 28 28">
-                  <polygon
-                    points="14,2 24,24 14,18 4,24"
-                    fill={tc.hex}
-                    stroke="rgba(255,255,255,0.3)"
-                    strokeWidth="1"
-                  />
-                </svg>
+        {[
+          { label: 'GPS (h-e)', suffix: '', note: 'Device GPS fix. Standard rendering, no overlay.' },
+          { label: 'Human (h-*)', suffix: 'human', note: 'External GPS source (PLI puck, BT GPS, radio). Green dot indicator.' },
+          { label: 'Manual (m-g-l)', suffix: 'nogps', note: 'Hand-entered MGRS/lat-lon. Black slash indicates no GPS hardware.' },
+        ].map((variant) => (
+          <div key={variant.label} style={{ display: 'flex', alignItems: 'center', gap: 0, marginBottom: 8 }}>
+            <span style={{ width: 130, fontSize: 12, color: '#DAD4BC', flexShrink: 0 }}>
+              {variant.label}
+            </span>
+            {TEAM_COLORS.map((tc) => (
+              <div
+                key={tc.name}
+                style={{
+                  ...skittleCircleBase,
+                  backgroundColor: tc.hex,
+                  color: contrastText(tc.hex),
+                  position: 'relative',
+                }}
+              >
+                {variant.suffix === 'nogps' && (
+                  <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} viewBox="0 0 28 28">
+                    <line x1="6" y1="22" x2="22" y2="6" stroke="#000" strokeWidth="3" strokeLinecap="round" />
+                  </svg>
+                )}
+                {variant.suffix === 'human' && (
+                  <svg style={{ position: 'absolute', bottom: -2, right: -2, width: 10, height: 10 }} viewBox="0 0 10 10">
+                    <circle cx="5" cy="5" r="4" fill="#92A844" stroke="#000" strokeWidth="1" />
+                  </svg>
+                )}
               </div>
-              <span style={{ fontSize: 9, color: '#878787' }}>{tc.name}</span>
-            </div>
-          ))}
-        </div>
+            ))}
+            <span style={{ fontSize: 11, color: '#878787', marginLeft: 8, flexShrink: 0 }}>
+              {variant.note}
+            </span>
+          </div>
+        ))}
       </div>
     </div>
   );
