@@ -256,6 +256,103 @@
 }
 
 /* Build tab */
+.buildSearchWrap {
+  margin-bottom: 20px;
+}
+
+.buildSearchBox {
+  position: relative;
+  max-width: 480px;
+}
+
+.buildDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 280px;
+  overflow-y: auto;
+  background: #1A1A1A;
+  border: 1px solid #2E2E2E;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  z-index: 10;
+}
+
+.buildDropdownItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #2E2E2E;
+  color: #DAD4BC;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.buildDropdownItem:hover {
+  background: #2E2E2E;
+}
+
+.buildDropdownLabel {
+  flex: 1;
+}
+
+.buildDropdownSs {
+  font-size: 11px;
+  color: #878787;
+  margin-left: 8px;
+  white-space: nowrap;
+}
+
+.buildVersionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.buildVersionCard {
+  background: #1A1A1A;
+  border: 1px solid #2E2E2E;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.buildVersionLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #DAD4BC;
+}
+
+.buildSidcInput {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1.5px;
+  background: #111;
+  border: 1px solid #2E2E2E;
+  border-radius: 4px;
+  color: #FFE35E;
+  outline: none;
+  text-align: center;
+  transition: border-color 0.15s ease;
+}
+
+.buildSidcInput:focus {
+  border-color: #FFE35E;
+}
+
 .buildPreview {
   display: flex;
   align-items: center;

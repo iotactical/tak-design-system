@@ -1,8 +1,10 @@
 // rtmx:req REQ-XW-110
 // rtmx:req REQ-XW-117
 // rtmx:req REQ-XW-118
+// rtmx:req REQ-XW-120
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Fuse from 'fuse.js';
 import { searchIndex, type SearchEntry, type SearchCategory } from '../data/searchIndex';
 import styles from './GlobalSearch.module.css';
 
@@ -66,17 +68,42 @@ export function GlobalSearch() {
 
   const debouncedQuery = useDebounce(query, 200);
 
-  // Filter results
-  const results = useMemo(() => {
+  // Build Fuse index once on mount
+  const fuse = useMemo(
+    () =>
+      new Fuse(searchIndex, {
+        keys: [
+          { name: 'name', weight: 3 },
+          { name: 'breadcrumb', weight: 1 },
+          { name: 'description', weight: 0.5 },
+        ],
+        threshold: 0.4,
+        includeScore: true,
+        minMatchCharLength: 2,
+      }),
+    [],
+  );
+
+  // Fuzzy search results (sorted by score via Fuse)
+  const fuseResults = useMemo(() => {
     if (!debouncedQuery || debouncedQuery.length < 2) return [];
-    const lower = debouncedQuery.toLowerCase();
-    return searchIndex.filter(
-      (entry) =>
-        entry.name.toLowerCase().includes(lower) ||
-        (entry.description && entry.description.toLowerCase().includes(lower)) ||
-        entry.breadcrumb.toLowerCase().includes(lower),
-    );
-  }, [debouncedQuery]);
+    return fuse.search(debouncedQuery);
+  }, [debouncedQuery, fuse]);
+
+  // Flat SearchEntry list for counting and highlight helper
+  const results = useMemo(
+    () => fuseResults.map((r) => r.item),
+    [fuseResults],
+  );
+
+  // Score map: entry -> score (lower is better, 0 = perfect)
+  const scoreMap = useMemo(() => {
+    const map = new Map<SearchEntry, number>();
+    for (const r of fuseResults) {
+      map.set(r.item, r.score ?? 0);
+    }
+    return map;
+  }, [fuseResults]);
 
   // Group results by category
   const grouped = useMemo(() => {
@@ -200,10 +227,14 @@ export function GlobalSearch() {
                   {group.entries.map((entry) => {
                     flatIdx++;
                     const idx = flatIdx;
+                    const score = scoreMap.get(entry) ?? 0;
+                    // Map score (0 = perfect, 0.4 = threshold) to opacity (1.0 - 0.6)
+                    const opacity = 1 - score;
                     return (
                       <div
                         key={`${entry.category}-${entry.name}-${idx}`}
                         className={`${styles.resultItem} ${idx === activeIndex ? styles.resultItemActive : ''}`}
+                        style={{ opacity }}
                         onClick={() => handleSelect(entry)}
                         onMouseEnter={() => setActiveIndex(idx)}
                         role="option"

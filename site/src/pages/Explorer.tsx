@@ -4,6 +4,8 @@ import styles from './Explorer.module.css';
 import { MilSymRenderer } from '../components/MilSymRenderer';
 import bEntitiesData from '../../../data/mil-std-2525/b-entities.json';
 import b2dData from '../../../data/mil-std-2525/b2d.json';
+import b2cData from '../../../data/mil-std-2525/b2c.json';
+import c2dRefData from '../../../data/mil-std-2525/c2d-reference.json';
 
 // ----- Types -----
 
@@ -23,6 +25,23 @@ interface B2DMapping {
   d_s2: string;
   label: string;
   lossy: boolean;
+}
+
+interface B2CMapping {
+  b_sidc: string;
+  c_sidc: string;
+  match_type: string;
+}
+
+interface C2DSymbol {
+  basic: string;
+  ss: string;
+  ec: string;
+  s1: string;
+  s2: string;
+  e?: string;
+  et?: string;
+  est?: string;
 }
 
 // ----- Constants -----
@@ -110,6 +129,8 @@ function buildDSidc(mapping: B2DMapping, si: string): string {
 
 const bEntities = (bEntitiesData as { entities: BEntity[] }).entities;
 const b2dMappings = (b2dData as { mappings: B2DMapping[] }).mappings;
+const b2cMappings = b2cData as B2CMapping[];
+const c2dSymbols = (c2dRefData as { c2d: { symbols: C2DSymbol[] } }).c2d.symbols;
 
 // ----- Browse Tab -----
 
@@ -336,9 +357,67 @@ function DecodePanel() {
   );
 }
 
+// ----- Build Tab Helpers -----
+
+/** Match B SIDC patterns using wildcard '*' at affiliation position */
+function matchBSidc(pattern: string, candidate: string): boolean {
+  if (pattern.length !== candidate.length) return false;
+  for (let i = 0; i < pattern.length; i++) {
+    if (pattern[i] === '*' || candidate[i] === '*') continue;
+    if (pattern[i] !== candidate[i]) return false;
+  }
+  return true;
+}
+
+/** Given a B SIDC, find the C equivalent via b2c crosswalk */
+function lookupB2C(bSidc: string): string | null {
+  const normalized = bSidc.charAt(0) + '*' + bSidc.substring(2);
+  const entry = b2cMappings.find((m) => matchBSidc(m.b_sidc, normalized));
+  return entry ? entry.c_sidc : null;
+}
+
+/** Given a C SIDC (basic pattern), find the D equivalent via c2d-reference */
+function lookupC2D(cSidc: string): { ss: string; ec: string; s1: string; s2: string } | null {
+  const normalized = cSidc.charAt(0) + '*' + cSidc.substring(2);
+  const entry = c2dSymbols.find((s) => matchBSidc(s.basic, normalized));
+  return entry ? { ss: entry.ss, ec: entry.ec, s1: entry.s1, s2: entry.s2 } : null;
+}
+
+/** Reverse lookup: given D fields, find C basic SIDC */
+function lookupD2C(ss: string, ec: string): string | null {
+  const entry = c2dSymbols.find((s) => s.ss === ss && s.ec === ec);
+  return entry ? entry.basic : null;
+}
+
+/** Reverse lookup: given C SIDC, find B SIDC via b2c */
+function lookupC2B(cSidc: string): string | null {
+  const normalized = cSidc.charAt(0) + '*' + cSidc.substring(2);
+  const entry = b2cMappings.find((m) => matchBSidc(m.c_sidc, normalized));
+  return entry ? entry.b_sidc : null;
+}
+
+// B affiliation char to D standard identity digit mapping
+const AFFIL_TO_SI: Record<string, string> = {
+  'P': '0', 'U': '1', 'A': '2', 'F': '3', 'N': '4', 'S': '5', 'H': '6', 'J': '5', 'K': '6',
+};
+const SI_TO_AFFIL: Record<string, string> = {
+  '0': 'P', '1': 'U', '2': 'A', '3': 'F', '4': 'N', '5': 'S', '6': 'H',
+};
+
 // ----- Build Tab -----
 
 function BuildPanel() {
+  // Four SIDC strings
+  const [bSidc, setBSidc] = useState('S*G*UCF---*****');
+  const [cSidc, setCSidc] = useState('S*G*UCF---*****');
+  const [dSidc, setDSidc] = useState('10030100001101000000');
+  const [eSidc, setESidc] = useState('15030100001101000000');
+
+  // Fuzzy entity search
+  const [entitySearch, setEntitySearch] = useState('');
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  // D/E field dropdowns
   const [si, setSi] = useState('3');
   const [ss, setSs] = useState('10');
   const [status, setStatus] = useState('0');
@@ -348,22 +427,310 @@ function BuildPanel() {
   const [mod1, setMod1] = useState('00');
   const [mod2, setMod2] = useState('00');
 
-  const sidc = `10${si}${status}${ss}${hqtffd}${echelon}${entityCode}${mod1}${mod2}`;
-
   const ssEntities = useMemo(() => {
     return b2dMappings.filter((m) => m.d_ss === ss);
   }, [ss]);
 
+  // Fuzzy-filtered entity list for search autocomplete
+  const searchResults = useMemo(() => {
+    if (!entitySearch || entitySearch.length < 1) return [];
+    const lower = entitySearch.toLowerCase();
+    return bEntities
+      .filter((e) => e.label.toLowerCase().includes(lower))
+      .slice(0, 25);
+  }, [entitySearch]);
+
+  // Sync all four versions from D fields
+  function syncFromDFields(
+    newSi: string, newSs: string, newStatus: string,
+    newHqtffd: string, newEchelon: string, newEc: string,
+    newMod1: string, newMod2: string
+  ) {
+    const newD = `10${newSi}${newStatus}${newSs}${newHqtffd}${newEchelon}${newEc}${newMod1}${newMod2}`;
+    const newE = `15${newSi}${newStatus}${newSs}${newHqtffd}${newEchelon}${newEc}${newMod1}${newMod2}`;
+    setDSidc(newD);
+    setESidc(newE);
+
+    // Reverse to C
+    const cBasic = lookupD2C(newSs, newEc);
+    if (cBasic) {
+      const affilil = SI_TO_AFFIL[newSi] || 'F';
+      const cFull = buildSidc15(cBasic, affilil);
+      setCSidc(cFull);
+
+      // Reverse to B
+      const bBasic = lookupC2B(cBasic);
+      if (bBasic) {
+        setBSidc(buildSidc15(bBasic, affilil));
+      } else {
+        setBSidc(cFull);
+      }
+    }
+  }
+
+  // Handle entity selection from search
+  function handleEntitySelect(entity: BEntity) {
+    setEntitySearch(entity.label);
+    setShowDropdown(false);
+
+    // Set B SIDC
+    const bFull = buildSidc15(entity.basic, 'F');
+    setBSidc(bFull);
+
+    // B -> C
+    const cBasic = lookupB2C(entity.basic);
+    const cFull = cBasic ? buildSidc15(cBasic, 'F') : bFull;
+    setCSidc(cFull);
+
+    // Use entity.ss and entity.ec for D/E
+    const newSs = entity.ss;
+    const newEc = entity.ec;
+    setSs(newSs);
+    setEntityCode(newEc);
+    setSi('3');
+    setStatus('0');
+    setHqtffd('0');
+    setEchelon('00');
+    setMod1('00');
+    setMod2('00');
+
+    const newD = `1030${newSs}00${newEc}0000`;
+    const newE = `1530${newSs}00${newEc}0000`;
+    setDSidc(newD);
+    setESidc(newE);
+  }
+
+  // Handle direct B SIDC edit
+  function handleBSidcChange(val: string) {
+    const v = val.toUpperCase();
+    setBSidc(v);
+    if (v.length === 15) {
+      const affil = v.charAt(1);
+      // B -> C
+      const cBasic = lookupB2C(v);
+      if (cBasic) {
+        setCSidc(buildSidc15(cBasic, affil));
+        // C -> D
+        const dFields = lookupC2D(cBasic);
+        if (dFields) {
+          const siChar = AFFIL_TO_SI[affil] || '3';
+          setSi(siChar);
+          setSs(dFields.ss);
+          setEntityCode(dFields.ec);
+          setMod1(dFields.s1);
+          setMod2(dFields.s2);
+          const newD = `10${siChar}0${dFields.ss}0${echelon}${dFields.ec}${dFields.s1}${dFields.s2}`;
+          const newE = `15${siChar}0${dFields.ss}0${echelon}${dFields.ec}${dFields.s1}${dFields.s2}`;
+          setDSidc(newD);
+          setESidc(newE);
+        }
+      }
+    }
+  }
+
+  // Handle direct C SIDC edit
+  function handleCSidcChange(val: string) {
+    const v = val.toUpperCase();
+    setCSidc(v);
+    if (v.length === 15) {
+      const affil = v.charAt(1);
+      // C -> D
+      const dFields = lookupC2D(v);
+      if (dFields) {
+        const siChar = AFFIL_TO_SI[affil] || '3';
+        setSi(siChar);
+        setSs(dFields.ss);
+        setEntityCode(dFields.ec);
+        setMod1(dFields.s1);
+        setMod2(dFields.s2);
+        const newD = `10${siChar}0${dFields.ss}0${echelon}${dFields.ec}${dFields.s1}${dFields.s2}`;
+        const newE = `15${siChar}0${dFields.ss}0${echelon}${dFields.ec}${dFields.s1}${dFields.s2}`;
+        setDSidc(newD);
+        setESidc(newE);
+      }
+      // Reverse to B
+      const bBasic = lookupC2B(v);
+      if (bBasic) {
+        setBSidc(buildSidc15(bBasic, affil));
+      }
+    }
+  }
+
+  // Handle direct D SIDC edit
+  function handleDSidcChange(val: string) {
+    setDSidc(val);
+    if (val.length === 20) {
+      const newSi = val.charAt(2);
+      const newStatus2 = val.charAt(3);
+      const newSs2 = val.substring(4, 6);
+      const newHqtffd2 = val.charAt(6);
+      const newEchelon2 = val.substring(7, 9);
+      const newEc = val.substring(10, 16);
+      const newMod12 = val.substring(16, 18);
+      const newMod22 = val.substring(18, 20);
+
+      setSi(newSi);
+      setStatus(newStatus2);
+      setSs(newSs2);
+      setHqtffd(newHqtffd2);
+      setEchelon(newEchelon2);
+      setEntityCode(newEc);
+      setMod1(newMod12);
+      setMod2(newMod22);
+
+      // Update E
+      setESidc('15' + val.substring(2));
+
+      // Reverse to C
+      const cBasic = lookupD2C(newSs2, newEc);
+      if (cBasic) {
+        const affil = SI_TO_AFFIL[newSi] || 'F';
+        setCSidc(buildSidc15(cBasic, affil));
+        const bBasic = lookupC2B(cBasic);
+        if (bBasic) {
+          setBSidc(buildSidc15(bBasic, affil));
+        }
+      }
+    }
+  }
+
+  // Handle direct E SIDC edit
+  function handleESidcChange(val: string) {
+    setESidc(val);
+    if (val.length === 20) {
+      // E is same structure as D with version prefix 15
+      const equivalentD = '10' + val.substring(2);
+      handleDSidcChange(equivalentD);
+      setDSidc(equivalentD);
+    }
+  }
+
+  // Handle dropdown field changes
+  function handleFieldChange(field: string, value: string) {
+    const newSi = field === 'si' ? value : si;
+    const newSs = field === 'ss' ? value : ss;
+    const newStatus = field === 'status' ? value : status;
+    const newHqtffd = field === 'hqtffd' ? value : hqtffd;
+    const newEchelon = field === 'echelon' ? value : echelon;
+    const newEc = field === 'entity' ? value : entityCode;
+    const newMod1 = field === 'mod1' ? value : mod1;
+    const newMod2 = field === 'mod2' ? value : mod2;
+
+    if (field === 'si') setSi(value);
+    if (field === 'ss') { setSs(value); setEntityCode('110000'); }
+    if (field === 'status') setStatus(value);
+    if (field === 'hqtffd') setHqtffd(value);
+    if (field === 'echelon') setEchelon(value);
+    if (field === 'entity') setEntityCode(value);
+    if (field === 'mod1') setMod1(value);
+    if (field === 'mod2') setMod2(value);
+
+    const ec = field === 'ss' ? '110000' : newEc;
+    syncFromDFields(newSi, newSs, newStatus, newHqtffd, newEchelon, ec, newMod1, newMod2);
+  }
+
   return (
     <div>
-      <div className={styles.buildPreview}>
-        <MilSymRenderer sidc={sidc} size={64} />
-        <div className={styles.buildSidc}>{sidc}</div>
+      {/* Fuzzy entity search */}
+      <div className={styles.buildSearchWrap}>
+        <label className={styles.buildFieldLabel}>Search Entity</label>
+        <div className={styles.buildSearchBox}>
+          <input
+            className={styles.searchInput}
+            type="text"
+            placeholder="Type to search 1,915 entities..."
+            value={entitySearch}
+            onChange={(e) => { setEntitySearch(e.target.value); setShowDropdown(true); }}
+            onFocus={() => setShowDropdown(true)}
+            onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
+            aria-label="Entity search"
+            data-testid="entity-search-input"
+          />
+          {showDropdown && searchResults.length > 0 && (
+            <div className={styles.buildDropdown}>
+              {searchResults.map((entity) => (
+                <button
+                  key={entity.basic}
+                  className={styles.buildDropdownItem}
+                  onMouseDown={() => handleEntitySelect(entity)}
+                >
+                  <span className={styles.buildDropdownLabel}>{entity.label}</span>
+                  <span className={styles.buildDropdownSs}>{SYMBOL_SET_NAMES[entity.ss] || entity.ss}</span>
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
+
+      {/* Four-version SIDC display */}
+      <div className={styles.buildVersionGrid}>
+        {/* B version */}
+        <div className={styles.buildVersionCard}>
+          <span className={styles.buildVersionLabel}>2525B (15-char)</span>
+          <input
+            className={styles.buildSidcInput}
+            type="text"
+            value={bSidc}
+            onChange={(e) => handleBSidcChange(e.target.value)}
+            maxLength={15}
+            aria-label="B SIDC input"
+            data-testid="b-sidc-input"
+          />
+          <MilSymRenderer sidc={bSidc} size={48} />
+        </div>
+
+        {/* C version */}
+        <div className={styles.buildVersionCard}>
+          <span className={styles.buildVersionLabel}>2525C (15-char)</span>
+          <input
+            className={styles.buildSidcInput}
+            type="text"
+            value={cSidc}
+            onChange={(e) => handleCSidcChange(e.target.value)}
+            maxLength={15}
+            aria-label="C SIDC input"
+            data-testid="c-sidc-input"
+          />
+          <MilSymRenderer sidc={cSidc} size={48} />
+        </div>
+
+        {/* D version */}
+        <div className={styles.buildVersionCard}>
+          <span className={styles.buildVersionLabel}>2525D (20-char)</span>
+          <input
+            className={styles.buildSidcInput}
+            type="text"
+            value={dSidc}
+            onChange={(e) => handleDSidcChange(e.target.value)}
+            maxLength={20}
+            aria-label="D SIDC input"
+            data-testid="d-sidc-input"
+          />
+          <MilSymRenderer sidc={dSidc} size={48} />
+        </div>
+
+        {/* E version */}
+        <div className={styles.buildVersionCard}>
+          <span className={styles.buildVersionLabel}>2525E (20-char)</span>
+          <input
+            className={styles.buildSidcInput}
+            type="text"
+            value={eSidc}
+            onChange={(e) => handleESidcChange(e.target.value)}
+            maxLength={20}
+            aria-label="E SIDC input"
+            data-testid="e-sidc-input"
+          />
+          <MilSymRenderer sidc={eSidc} size={48} />
+        </div>
+      </div>
+
+      {/* D/E field selector dropdowns */}
       <div className={styles.buildFields}>
         <div className={styles.buildFieldGroup}>
           <label className={styles.buildFieldLabel}>Standard Identity</label>
-          <select className={styles.buildFieldSelect} value={si} onChange={(e) => setSi(e.target.value)}>
+          <select className={styles.buildFieldSelect} value={si} onChange={(e) => handleFieldChange('si', e.target.value)}>
             {Object.entries(STANDARD_IDENTITY_NAMES).map(([k, v]) => (
               <option key={k} value={k}>{v} ({k})</option>
             ))}
@@ -371,7 +738,7 @@ function BuildPanel() {
         </div>
         <div className={styles.buildFieldGroup}>
           <label className={styles.buildFieldLabel}>Symbol Set</label>
-          <select className={styles.buildFieldSelect} value={ss} onChange={(e) => { setSs(e.target.value); setEntityCode('110000'); }}>
+          <select className={styles.buildFieldSelect} value={ss} onChange={(e) => handleFieldChange('ss', e.target.value)}>
             {Object.entries(SYMBOL_SET_NAMES).map(([k, v]) => (
               <option key={k} value={k}>{v} ({k})</option>
             ))}
@@ -379,7 +746,7 @@ function BuildPanel() {
         </div>
         <div className={styles.buildFieldGroup}>
           <label className={styles.buildFieldLabel}>Status</label>
-          <select className={styles.buildFieldSelect} value={status} onChange={(e) => setStatus(e.target.value)}>
+          <select className={styles.buildFieldSelect} value={status} onChange={(e) => handleFieldChange('status', e.target.value)}>
             {Object.entries(STATUS_NAMES).map(([k, v]) => (
               <option key={k} value={k}>{v} ({k})</option>
             ))}
@@ -387,7 +754,7 @@ function BuildPanel() {
         </div>
         <div className={styles.buildFieldGroup}>
           <label className={styles.buildFieldLabel}>HQ/TF/FD</label>
-          <select className={styles.buildFieldSelect} value={hqtffd} onChange={(e) => setHqtffd(e.target.value)}>
+          <select className={styles.buildFieldSelect} value={hqtffd} onChange={(e) => handleFieldChange('hqtffd', e.target.value)}>
             {Object.entries(HQ_TF_FD_NAMES).map(([k, v]) => (
               <option key={k} value={k}>{v} ({k})</option>
             ))}
@@ -395,7 +762,7 @@ function BuildPanel() {
         </div>
         <div className={styles.buildFieldGroup}>
           <label className={styles.buildFieldLabel}>Echelon</label>
-          <select className={styles.buildFieldSelect} value={echelon} onChange={(e) => setEchelon(e.target.value)}>
+          <select className={styles.buildFieldSelect} value={echelon} onChange={(e) => handleFieldChange('echelon', e.target.value)}>
             {Object.entries(ECHELON_NAMES).map(([k, v]) => (
               <option key={k} value={k}>{v} ({k})</option>
             ))}
@@ -403,7 +770,7 @@ function BuildPanel() {
         </div>
         <div className={styles.buildFieldGroup}>
           <label className={styles.buildFieldLabel}>Entity</label>
-          <select className={styles.buildFieldSelect} value={entityCode} onChange={(e) => setEntityCode(e.target.value)}>
+          <select className={styles.buildFieldSelect} value={entityCode} onChange={(e) => handleFieldChange('entity', e.target.value)}>
             {ssEntities.map((m) => (
               <option key={m.d_ec} value={m.d_ec}>{m.label} ({m.d_ec})</option>
             ))}
@@ -414,13 +781,13 @@ function BuildPanel() {
         </div>
         <div className={styles.buildFieldGroup}>
           <label className={styles.buildFieldLabel}>Modifier 1</label>
-          <select className={styles.buildFieldSelect} value={mod1} onChange={(e) => setMod1(e.target.value)}>
+          <select className={styles.buildFieldSelect} value={mod1} onChange={(e) => handleFieldChange('mod1', e.target.value)}>
             <option value="00">None (00)</option>
           </select>
         </div>
         <div className={styles.buildFieldGroup}>
           <label className={styles.buildFieldLabel}>Modifier 2</label>
-          <select className={styles.buildFieldSelect} value={mod2} onChange={(e) => setMod2(e.target.value)}>
+          <select className={styles.buildFieldSelect} value={mod2} onChange={(e) => handleFieldChange('mod2', e.target.value)}>
             <option value="00">None (00)</option>
           </select>
         </div>
