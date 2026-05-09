@@ -20,7 +20,7 @@ describe('REQ-SITE-005: Palettes page', () => {
     assert.ok(existsSync(palettesCss), 'Palettes.module.css must exist');
   });
 
-  it('Palettes.tsx contains all 14 palette tab names', () => {
+  it('Palettes.tsx contains all 13 palette tab names', () => {
     const source = readFileSync(
       resolve(SITE_DIR, 'src', 'pages', 'Palettes.tsx'),
       'utf8'
@@ -30,7 +30,6 @@ describe('REQ-SITE-005: Palettes page', () => {
       'Markers',
       'Spot Map',
       'Vehicle Models',
-      'Reference Point',
       'Google',
       'OSM',
       'Generic Icons',
