@@ -129,6 +129,11 @@
   filter: brightness(0) invert(0.85);
 }
 
+.pngPreview {
+  max-width: 48px;
+  max-height: 48px;
+}
+
 .noPreview {
   display: flex;
   flex-direction: column;

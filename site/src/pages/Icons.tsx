@@ -120,12 +120,31 @@ function CardPreview({ entry }: { entry: CatalogEntry }) {
     return <ShapePreview shape={shape} />;
   }
 
-  // Selector/layer-list/png/nine-patch: show type icon
-  const icon = entry.type === 'selector' ? '\u21C4'
-    : entry.type === 'layer-list' ? '\u29C9'
-    : entry.type === 'nine-patch' ? '\u2B1C'
-    : '\u25A3';
+  // PNG/nine-patch: try loading from public/icons/
+  if (entry.type === 'png' || entry.type === 'nine-patch') {
+    const ext = entry.type === 'nine-patch' ? '.9.png' : '.png';
+    return (
+      <img
+        src={`${BASE}icons/${entry.name}${ext}`}
+        alt={entry.name}
+        className={styles.pngPreview}
+        loading="lazy"
+        onError={(e) => {
+          const el = e.target as HTMLImageElement;
+          // Fallback: try without .9 prefix
+          if (ext === '.9.png') {
+            el.src = `${BASE}icons/${entry.name}.png`;
+            el.onerror = () => { el.style.display = 'none'; };
+          } else {
+            el.style.display = 'none';
+          }
+        }}
+      />
+    );
+  }
 
+  // Selector/layer-list: metadata-only, no visual preview
+  const icon = entry.type === 'selector' ? '\u21C4' : '\u29C9';
   return (
     <div className={styles.noPreview}>
       <span className={styles.noPreviewIcon}>{icon}</span>
