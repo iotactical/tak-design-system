@@ -1,4 +1,6 @@
 // rtmx:req REQ-XW-110
+// rtmx:req REQ-XW-117
+// rtmx:req REQ-XW-118
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { searchIndex, type SearchEntry, type SearchCategory } from '../data/searchIndex';
@@ -10,7 +12,9 @@ const CATEGORY_ORDER: SearchCategory[] = [
   'Tokens',
   'Icons',
   'Palettes',
+  '2525',
   'Interfaces',
+  'Specs',
 ];
 
 /** Map category to badge CSS class */
@@ -20,6 +24,8 @@ const BADGE_CLASS: Record<SearchCategory, string> = {
   Icons: styles.badgeIcons,
   Palettes: styles.badgePalettes,
   Interfaces: styles.badgeInterfaces,
+  '2525': styles.badge2525,
+  Specs: styles.badgeSpecs,
 };
 
 /** Highlight matching substring in text */
@@ -67,7 +73,8 @@ export function GlobalSearch() {
     return searchIndex.filter(
       (entry) =>
         entry.name.toLowerCase().includes(lower) ||
-        entry.description.toLowerCase().includes(lower),
+        (entry.description && entry.description.toLowerCase().includes(lower)) ||
+        entry.breadcrumb.toLowerCase().includes(lower),
     );
   }, [debouncedQuery]);
 
@@ -164,7 +171,7 @@ export function GlobalSearch() {
           ref={inputRef}
           className={styles.searchInput}
           type="text"
-          placeholder="Search..."
+          placeholder="Search tokens, components, icons, 2525..."
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
@@ -195,7 +202,7 @@ export function GlobalSearch() {
                     const idx = flatIdx;
                     return (
                       <div
-                        key={`${entry.category}-${entry.name}`}
+                        key={`${entry.category}-${entry.name}-${idx}`}
                         className={`${styles.resultItem} ${idx === activeIndex ? styles.resultItemActive : ''}`}
                         onClick={() => handleSelect(entry)}
                         onMouseEnter={() => setActiveIndex(idx)}
@@ -209,7 +216,9 @@ export function GlobalSearch() {
                         <span className={styles.resultName}>
                           {highlightMatch(entry.name, debouncedQuery)}
                         </span>
-                        <span className={styles.resultDescription}>{entry.description}</span>
+                        <span className={styles.resultBreadcrumb}>
+                          {entry.breadcrumb}
+                        </span>
                       </div>
                     );
                   })}

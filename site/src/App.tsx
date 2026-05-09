@@ -32,7 +32,6 @@ export default function App() {
         <div className={styles.brand}>
           <span className={styles.brandAccent}>TAK</span> Design System
         </div>
-        <GlobalSearch />
         <ul className={styles.navList}>
           {navItems.map((item) => (
             <li key={item.to}>
@@ -50,6 +49,9 @@ export default function App() {
         </ul>
         <div className={styles.sidebarFooter}>v0.1.0</div>
       </nav>
+      <div className={styles.topBar}>
+        <GlobalSearch />
+      </div>
       <main className={styles.content}>
         <Routes>
           <Route path="/" element={<Home />} />

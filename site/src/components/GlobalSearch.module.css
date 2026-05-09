@@ -2,8 +2,9 @@
 /* Global autocomplete search bar -- ATAK dark theme */
 
 .searchWrapper {
-  padding: 8px 16px 16px;
+  padding: 0;
   position: relative;
+  flex: 1;
 }
 
 .inputWrapper {
@@ -49,8 +50,8 @@
 .dropdown {
   position: absolute;
   top: calc(100% + 4px);
-  left: 16px;
-  right: 16px;
+  left: 0;
+  right: 0;
   max-height: 400px;
   overflow-y: auto;
   background: #1A1A1A;
@@ -146,6 +147,25 @@
 .badgeInterfaces {
   background: #00838F;
   color: #B2EBF2;
+}
+
+.badge2525 {
+  background: #4E342E;
+  color: #D7CCC8;
+}
+
+.badgeSpecs {
+  background: #37474F;
+  color: #B0BEC5;
+}
+
+.resultBreadcrumb {
+  font-size: 10px;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 260px;
 }
 
 .emptyState {
