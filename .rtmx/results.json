@@ -390,9 +390,21 @@
     "passed": true
   },
   {
+    "req_id": "REQ-XW-091",
+    "test_name": "REQ-XW-091: Components page horizontal tabs",
+    "test_file": "tests/site/test_component_tabs.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-XW-084",
     "test_name": "REQ-XW-084: Favicon",
     "test_file": "tests/site/test_favicon.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-110",
+    "test_name": "REQ-XW-110: Persistent site-wide autocomplete search bar",
+    "test_file": "tests/site/test_global_search.mjs",
     "passed": true
   },
   {
@@ -405,6 +417,18 @@
     "req_id": "REQ-XW-063",
     "test_name": "REQ-XW-063: Interface browser page",
     "test_file": "tests/site/test_interface_page.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-090",
+    "test_name": "REQ-XW-090: Interfaces page horizontal tabs",
+    "test_file": "tests/site/test_interface_tabs.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-085",
+    "test_name": "REQ-XW-085: MilSymRenderer and Markers integration",
+    "test_file": "tests/site/test_milsym_render.mjs",
     "passed": true
   },
   {

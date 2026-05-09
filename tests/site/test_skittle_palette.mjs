@@ -79,10 +79,10 @@ describe('REQ-XW-081: Skittles circles tab', () => {
     );
   });
 
-  it('includes comparison section (circle vs arrow)', () => {
+  it('includes GPS source variants section', () => {
     assert.ok(
-      source.includes('Comparison'),
-      'SkittlesPanel must include comparison section'
+      source.includes('GPS Source Variants'),
+      'SkittlesPanel must include GPS source variants'
     );
   });
 
