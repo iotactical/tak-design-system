@@ -64,22 +64,6 @@
     "description": "Web Map Service and Web Map Tile Service connections for streaming raster map imagery from tile servers."
   },
   {
-    "name": "JTAC/CAS data link",
-    "protocol": "CoT extension",
-    "format": "9-line brief",
-    "direction": "outbound",
-    "port": null,
-    "description": "Joint Terminal Attack Controller / Close Air Support 9-line brief data formatted for fire support coordination."
-  },
-  {
-    "name": "Link-16 / VMF",
-    "protocol": "tactical data link",
-    "format": "MIL-STD messages",
-    "direction": "bidirectional",
-    "port": null,
-    "description": "Military message format integration including Link-16 J-series messages and Variable Message Format for joint interoperability."
-  },
-  {
     "name": "ATAK Plugin API",
     "protocol": "Android IPC",
     "format": "Intent/BroadcastReceiver",
