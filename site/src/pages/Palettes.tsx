@@ -590,22 +590,13 @@ const AFFILIATION_COLORS: { label: string; hex: string }[] = [
   { label: 'Unknown', hex: '#FFCC00' },
 ];
 
-/** Column cell wrapping each circle for vertical dividers and spacing */
-const skittleCell: React.CSSProperties = {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  width: 36,
-  flexShrink: 0,
-  borderRight: '1px solid #2A2A2A',
-};
+const COL_W = 38; // column width for consistent alignment
 
 const skittleCircleBase: React.CSSProperties = {
   width: 28,
   height: 28,
   borderRadius: '50%',
   boxShadow: '0 2px 4px rgba(0,0,0,0.5)',
-  border: '1px solid rgba(255,255,255,0.2)',
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -629,22 +620,23 @@ function SkittlesPanel() {
       <div className={styles.groupSection}>
         <div className={styles.groupName}>Team Colors</div>
         <div className={styles.groupCount}>15 colors</div>
-        <div style={{ display: 'flex', alignItems: 'flex-end', gap: 6, marginBottom: 4, borderBottom: '1px solid #333', paddingBottom: 6 }}>
+        <div style={{ display: 'flex', alignItems: 'flex-end', marginBottom: 6, height: 70 }}>
           <span style={{ width: 130, flexShrink: 0 }} />
           {TEAM_COLORS.map((tc) => (
-            <div key={tc.name} style={skittleCell}>
-              <span style={{ fontSize: 11, color: '#AAA', transform: 'rotate(-45deg)', transformOrigin: 'center', display: 'inline-block', whiteSpace: 'nowrap' }}>{tc.name}</span>
+            <div key={tc.name} style={{ width: COL_W, flexShrink: 0, display: 'flex', justifyContent: 'center', alignItems: 'flex-end', height: '100%' }}>
+              <span style={{ fontSize: 11, color: '#AAA', transform: 'rotate(-45deg)', transformOrigin: '0% 100%', display: 'inline-block', whiteSpace: 'nowrap', position: 'relative', left: 14 }}>{tc.name}</span>
             </div>
           ))}
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 0, marginBottom: 8 }}>
+        <div style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
           <span style={{ width: 130, fontSize: 12, color: '#DAD4BC', flexShrink: 0 }}>(base)</span>
           {TEAM_COLORS.map((tc) => (
-            <div
-              key={tc.name}
-              data-testid={`skittle-color-${tc.name}`}
-              style={{ ...skittleCircleBase, backgroundColor: tc.hex, color: contrastText(tc.hex) }}
-            />
+            <div key={tc.name} style={{ width: COL_W, flexShrink: 0, display: 'flex', justifyContent: 'center' }}>
+              <div
+                data-testid={`skittle-color-${tc.name}`}
+                style={{ ...skittleCircleBase, backgroundColor: tc.hex, color: contrastText(tc.hex) }}
+              />
+            </div>
           ))}
         </div>
       </div>
@@ -655,15 +647,16 @@ function SkittlesPanel() {
         <div className={styles.groupCount}>{SKITTLE_ROLES.length} roles x {TEAM_COLORS.length} colors</div>
         <div style={{ overflowX: 'auto' }}>
           {SKITTLE_ROLES.map((role) => (
-            <div key={role.label} style={{ display: 'flex', alignItems: 'center', gap: 0, marginBottom: 8 }}>
+            <div key={role.label} style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
               <span style={{ width: 130, fontSize: 12, color: '#DAD4BC', flexShrink: 0 }}>{role.label}</span>
               {TEAM_COLORS.map((tc) => (
-                <div
-                  key={tc.name}
-                  data-testid={`skittle-role-${role.abbr || 'member'}-${tc.name}`}
-                  style={{ ...skittleCircleBase, backgroundColor: tc.hex, color: contrastText(tc.hex) }}
-                >
-                  {role.abbr}
+                <div key={tc.name} style={{ width: COL_W, flexShrink: 0, display: 'flex', justifyContent: 'center' }}>
+                  <div
+                    data-testid={`skittle-role-${role.abbr || 'member'}-${tc.name}`}
+                    style={{ ...skittleCircleBase, backgroundColor: tc.hex, color: contrastText(tc.hex) }}
+                  >
+                    {role.abbr}
+                  </div>
                 </div>
               ))}
             </div>
@@ -680,19 +673,20 @@ function SkittlesPanel() {
           { label: 'Stale', opacity: 0.5, filter: 'none', note: 'No update received past staleness time. Faded to 50% opacity.' },
           { label: 'Expired', opacity: 0.3, filter: 'grayscale(1)', note: 'No update well past threshold. Grayed out, may be removed.' },
         ].map((state) => (
-          <div key={state.label} style={{ display: 'flex', alignItems: 'center', gap: 0, marginBottom: 8 }}>
+          <div key={state.label} style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
             <span style={{ width: 130, fontSize: 12, color: '#DAD4BC', flexShrink: 0 }}>{state.label}</span>
             {TEAM_COLORS.map((tc) => (
-              <div
-                key={tc.name}
-                style={{
-                  ...skittleCircleBase,
-                  backgroundColor: tc.hex,
-                  color: contrastText(tc.hex),
-                  opacity: state.opacity,
-                  filter: state.filter,
-                }}
-              />
+              <div key={tc.name} style={{ width: COL_W, flexShrink: 0, display: 'flex', justifyContent: 'center' }}>
+                <div
+                  style={{
+                    ...skittleCircleBase,
+                    backgroundColor: tc.hex,
+                    color: contrastText(tc.hex),
+                    opacity: state.opacity,
+                    filter: state.filter,
+                  }}
+                />
+              </div>
             ))}
             <span style={{ fontSize: 11, color: '#878787', marginLeft: 8, flexShrink: 0 }}>
               {state.note}
@@ -712,20 +706,20 @@ function SkittlesPanel() {
           { label: 'Human (h-*)', suffix: 'human', note: 'External GPS source (PLI puck, BT GPS, radio). Green dot indicator.' },
           { label: 'Manual (m-g-l)', suffix: 'nogps', note: 'Hand-entered MGRS/lat-lon. Black slash indicates no GPS hardware.' },
         ].map((variant) => (
-          <div key={variant.label} style={{ display: 'flex', alignItems: 'center', gap: 0, marginBottom: 8 }}>
+          <div key={variant.label} style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
             <span style={{ width: 130, fontSize: 12, color: '#DAD4BC', flexShrink: 0 }}>
               {variant.label}
             </span>
             {TEAM_COLORS.map((tc) => (
-              <div
-                key={tc.name}
-                style={{
-                  ...skittleCircleBase,
-                  backgroundColor: tc.hex,
-                  color: contrastText(tc.hex),
-                  position: 'relative',
-                }}
-              >
+              <div key={tc.name} style={{ width: COL_W, flexShrink: 0, display: 'flex', justifyContent: 'center' }}>
+                <div
+                  style={{
+                    ...skittleCircleBase,
+                    backgroundColor: tc.hex,
+                    color: contrastText(tc.hex),
+                    position: 'relative',
+                  }}
+                >
                 {variant.suffix === 'nogps' && (
                   <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} viewBox="0 0 28 28">
                     <line x1="6" y1="22" x2="22" y2="6" stroke="#000" strokeWidth="3" strokeLinecap="round" />
@@ -736,6 +730,7 @@ function SkittlesPanel() {
                     <circle cx="5" cy="5" r="4" fill="#92A844" stroke="#000" strokeWidth="1" />
                   </svg>
                 )}
+                </div>
               </div>
             ))}
             <span style={{ fontSize: 11, color: '#878787', marginLeft: 8, flexShrink: 0 }}>
