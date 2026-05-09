@@ -1,0 +1,142 @@
+.nineLineForm {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--tak-surface-base-dark, #1E1E1E);
+  border: 1px solid var(--tak-border-default-dark, rgba(255, 255, 255, 0.12));
+  border-radius: var(--tak-border-radius-sm, 4px);
+  font-family: var(--tak-font-family-sans, 'Roboto', sans-serif);
+  color: var(--tak-text-primary-dark, rgba(255, 255, 255, 0.87));
+  overflow: hidden;
+}
+
+[data-tak-theme='light'] .nineLineForm {
+  background-color: var(--tak-surface-base-light, #FAFAFA);
+  border-color: var(--tak-border-default-light, rgba(0, 0, 0, 0.12));
+  color: var(--tak-text-primary-light, rgba(0, 0, 0, 0.87));
+}
+
+.header {
+  font-size: var(--tak-font-size-md, 14px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--tak-spacing-2, 8px) var(--tak-spacing-3, 12px);
+  background-color: var(--tak-surface-elevated-dark, #2E2E2E);
+  border-bottom: 1px solid var(--tak-border-default-dark, rgba(255, 255, 255, 0.12));
+}
+
+[data-tak-theme='light'] .header {
+  background-color: var(--tak-surface-elevated-light, #EEEEEE);
+  border-bottom-color: var(--tak-border-default-light, rgba(0, 0, 0, 0.12));
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  height: var(--tak-nineline-line-height, 32px);
+  min-height: var(--tak-nineline-line-height, 32px);
+  padding: 0 var(--tak-spacing-3, 12px);
+  border-bottom: 1px solid var(--tak-border-default-dark, rgba(255, 255, 255, 0.08));
+  gap: var(--tak-spacing-2, 8px);
+}
+
+[data-tak-theme='light'] .line {
+  border-bottom-color: var(--tak-border-default-light, rgba(0, 0, 0, 0.08));
+}
+
+.line:last-child {
+  border-bottom: none;
+}
+
+.lineNumber {
+  font-weight: 700;
+  font-size: var(--tak-font-size-sm, 12px);
+  min-width: 20px;
+  color: var(--tak-accent-primary, #2196F3);
+}
+
+.lineLabel {
+  font-size: var(--tak-font-size-sm, 12px);
+  font-weight: 700;
+  text-transform: uppercase;
+  min-width: 100px;
+  white-space: nowrap;
+  color: var(--tak-text-secondary-dark, rgba(255, 255, 255, 0.6));
+}
+
+[data-tak-theme='light'] .lineLabel {
+  color: var(--tak-text-secondary-light, rgba(0, 0, 0, 0.6));
+}
+
+.lineInput {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.input,
+.select {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--tak-text-primary-dark, rgba(255, 255, 255, 0.87));
+  font-family: var(--tak-font-family-sans, 'Roboto', sans-serif);
+  font-size: var(--tak-font-size-sm, 12px);
+  height: var(--tak-nineline-line-height-tight, 22px);
+  padding: 0 var(--tak-spacing-1, 4px);
+}
+
+[data-tak-theme='light'] .input,
+[data-tak-theme='light'] .select {
+  color: var(--tak-text-primary-light, rgba(0, 0, 0, 0.87));
+}
+
+.input::placeholder {
+  color: var(--tak-text-disabled-dark, rgba(255, 255, 255, 0.38));
+}
+
+[data-tak-theme='light'] .input::placeholder {
+  color: var(--tak-text-disabled-light, rgba(0, 0, 0, 0.38));
+}
+
+.input:read-only {
+  cursor: default;
+}
+
+.select {
+  cursor: pointer;
+}
+
+.select:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.submitButton {
+  margin: var(--tak-spacing-2, 8px) var(--tak-spacing-3, 12px);
+  padding: var(--tak-spacing-1, 4px) var(--tak-spacing-3, 12px);
+  background-color: var(--tak-accent-primary, #2196F3);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--tak-border-radius-sm, 4px);
+  font-family: var(--tak-font-family-sans, 'Roboto', sans-serif);
+  font-size: var(--tak-font-size-sm, 12px);
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  height: var(--tak-nineline-line-height, 32px);
+}
+
+.submitButton:hover {
+  opacity: 0.9;
+}
+
+.submitButton:active {
+  opacity: 0.8;
+}

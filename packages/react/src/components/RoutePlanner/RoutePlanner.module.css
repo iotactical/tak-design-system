@@ -1,0 +1,160 @@
+.routePlanner {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--tak-route-background, #232323);
+  color: var(--tak-text-primary-dark, rgba(255, 255, 255, 0.87));
+  font-family: var(--tak-atak-font-primary, 'Nunito', sans-serif);
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Scrollable waypoint list */
+.waypointList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px 0;
+}
+
+/* Individual waypoint row */
+.waypointItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  min-height: 44px;
+  padding: 0 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.waypointItem:hover {
+  background-color: rgba(66, 165, 245, 0.08);
+}
+
+.waypointIndex {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #42A5F5;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.waypointType {
+  font-size: 11px;
+  font-weight: 600;
+  color: #42A5F5;
+  min-width: 28px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.waypointInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.waypointName {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.87);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.waypointCoord {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: monospace;
+}
+
+.waypointActions {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.actionButton {
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.actionButton:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.actionButton:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* Leg distance between waypoints */
+.legDistance {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px 2px 18px;
+  height: 20px;
+}
+
+.legLine {
+  width: 2px;
+  height: 100%;
+  background-color: #42A5F5;
+  opacity: 0.5;
+  margin-left: 2px;
+}
+
+.legLabel {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Total summary bar */
+.summaryBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px 12px;
+  background-color: var(--tak-route-summary-bar, #1a1a1a);
+  border-top: 1px solid var(--tak-border-default-dark, rgba(255, 255, 255, 0.12));
+  min-height: 40px;
+}
+
+.summaryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.summaryLabel {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summaryValue {
+  font-size: 14px;
+  font-weight: 700;
+  color: #42A5F5;
+}

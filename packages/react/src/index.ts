@@ -20,6 +20,10 @@ export { RadialMenu, type RadialMenuProps, type RadialMenuItem } from './compone
 export { ChatPanel, type ChatPanelProps, type ChatMessage } from './components/ChatPanel';
 export { MarkerDetail, type MarkerDetailProps, type MarkerAction, type MarkerAffiliation } from './components/MarkerDetail';
 export { UserList, type UserListProps, type UserEntry } from './components/UserList';
+export { RangeBearing, type RangeBearingProps, type DistanceUnit } from './components/RangeBearing';
+export { RoutePlanner, type RoutePlannerProps, type Waypoint } from './components/RoutePlanner';
+export { NineLineForm, type NineLineFormProps, type NineLineTemplate, type NineLineLine } from './components/NineLineForm';
+export { ScaleBar, type ScaleBarProps, CompassHeading, type CompassHeadingProps, ElevationProfile, type ElevationProfileProps, type ElevationPoint } from './components/MapOverlay';
 
 // Theme
 export { TakThemeProvider, useTakTheme, type TakThemeProviderProps } from './theme/TakThemeProvider';

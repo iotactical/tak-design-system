@@ -78,6 +78,12 @@
     "passed": true
   },
   {
+    "req_id": "REQ-CMP-010",
+    "test_name": "MapOverlay component exports (REQ-CMP-010)",
+    "test_file": "tests/components/test_map_overlay.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-CMP-011",
     "test_name": "REQ-CMP-011: MarkerDetail component",
     "test_file": "tests/components/test_marker_detail.mjs",
@@ -90,9 +96,21 @@
     "passed": true
   },
   {
+    "req_id": "REQ-CMP-008",
+    "test_name": "REQ-CMP-008: NineLineForm component",
+    "test_file": "tests/components/test_nine_line.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-CMP-002",
     "test_name": "RadialMenu component exports (REQ-CMP-002)",
     "test_file": "tests/components/test_radial_menu.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-CMP-007",
+    "test_name": "REQ-CMP-007: RoutePlanner component",
+    "test_file": "tests/components/test_route.mjs",
     "passed": true
   },
   {
@@ -285,6 +303,12 @@
     "req_id": "REQ-CMP-004",
     "test_name": "REQ-CMP-004 (from tests/components/test_coordinate.mjs)",
     "test_file": "tests/components/test_coordinate.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-CMP-005",
+    "test_name": "REQ-CMP-005 (from tests/components/test_range_bearing.mjs)",
+    "test_file": "tests/components/test_range_bearing.mjs",
     "passed": true
   }
 ]
