@@ -44,6 +44,16 @@ interface VehicleModelsManifest {
 
 // ----- Spot Map team colors -----
 
+/** Return black or white text depending on background luminance */
+function contrastText(hex: string): string {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  // Relative luminance (ITU-R BT.709)
+  const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+  return lum > 0.5 ? '#000000' : '#FFFFFF';
+}
+
 const TEAM_COLORS: { name: string; hex: string }[] = [
   { name: 'white', hex: '#FFFFFF' },
   { name: 'yellow', hex: '#FFFF00' },
@@ -64,7 +74,7 @@ const TEAM_COLORS: { name: string; hex: string }[] = [
 
 // ----- Palette tab definitions -----
 
-type PaletteType = 'iconset' | 'sqlite-palette' | 'spotmap' | 'markers' | 'vehicle-models';
+type PaletteType = 'iconset' | 'sqlite-palette' | 'spotmap' | 'markers' | 'vehicle-models' | 'skittles' | 'self-marker';
 
 /** SQLite palette format: groups with icons */
 interface SqlitePalette {
@@ -93,6 +103,8 @@ interface PaletteTab {
 }
 
 const PALETTE_TABS: PaletteTab[] = [
+  { id: 'skittles', label: 'Skittles', type: 'skittles', data: null },
+  { id: 'self-marker', label: 'Self Marker', type: 'self-marker', data: null },
   { id: 'markers', label: 'Markers', type: 'markers', data: null },
   { id: 'spotmap', label: 'Spot Map', type: 'spotmap', data: null },
   { id: 'vehicle-models', label: 'Vehicle Models', type: 'vehicle-models', data: null },
@@ -239,6 +251,214 @@ function VehicleModelsPanel() {
   );
 }
 
+// ----- Skittles role definitions -----
+
+const SKITTLE_ROLES: { label: string; abbr: string }[] = [
+  { label: 'Team Member', abbr: '' },
+  { label: 'Team Lead', abbr: 'TL' },
+  { label: 'HQ', abbr: 'HQ' },
+  { label: 'Sniper', abbr: 'S' },
+  { label: 'Medic', abbr: 'M' },
+  { label: 'Forward Observer', abbr: 'FO' },
+  { label: 'RTO', abbr: 'RTO' },
+  { label: 'K9', abbr: 'K9' },
+];
+
+const AFFILIATION_COLORS: { label: string; hex: string }[] = [
+  { label: 'Friendly', hex: '#4488FF' },
+  { label: 'Hostile', hex: '#FF4444' },
+  { label: 'Neutral', hex: '#44BB44' },
+  { label: 'Unknown', hex: '#FFCC00' },
+];
+
+const skittleCircleBase: React.CSSProperties = {
+  width: 28,
+  height: 28,
+  borderRadius: '50%',
+  boxShadow: '0 2px 4px rgba(0,0,0,0.5)',
+  border: '1px solid rgba(255,255,255,0.2)',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  fontWeight: 'bold',
+  fontSize: 10,
+  flexShrink: 0,
+};
+
+// rtmx:req REQ-XW-081
+function SkittlesPanel() {
+  const stalenessColors = TEAM_COLORS.slice(0, 5);
+
+  return (
+    <div>
+      <div className={styles.paletteHeader}>
+        <div className={styles.paletteName}>Skittles</div>
+        <div className={styles.paletteCount}>Team member circles -- ATAK spot map markers</div>
+      </div>
+
+      {/* Team Color Grid */}
+      <div className={styles.groupSection}>
+        <div className={styles.groupName}>Team Colors</div>
+        <div className={styles.groupCount}>15 colors</div>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+          {TEAM_COLORS.map((tc) => (
+            <div key={tc.name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+              <div
+                data-testid={`skittle-color-${tc.name}`}
+                style={{ ...skittleCircleBase, backgroundColor: tc.hex, color: contrastText(tc.hex) }}
+              />
+              <span style={{ fontSize: 9, color: '#878787' }}>{tc.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Role x Color Matrix */}
+      <div className={styles.groupSection}>
+        <div className={styles.groupName}>Roles</div>
+        <div className={styles.groupCount}>{SKITTLE_ROLES.length} roles x {TEAM_COLORS.length} colors</div>
+        <div style={{ overflowX: 'auto' }}>
+          {SKITTLE_ROLES.map((role) => (
+            <div key={role.label} style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
+              <span style={{ width: 120, fontSize: 12, color: '#DAD4BC', flexShrink: 0 }}>{role.label}</span>
+              {TEAM_COLORS.map((tc) => (
+                <div
+                  key={tc.name}
+                  data-testid={`skittle-role-${role.abbr || 'member'}-${tc.name}`}
+                  style={{ ...skittleCircleBase, backgroundColor: tc.hex, color: contrastText(tc.hex) }}
+                >
+                  {role.abbr}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Staleness States */}
+      <div className={styles.groupSection}>
+        <div className={styles.groupName}>Staleness States</div>
+        <div className={styles.groupCount}>Connected, stale, expired</div>
+        {[
+          { label: 'Connected', opacity: 1, filter: 'none' },
+          { label: 'Stale', opacity: 0.5, filter: 'none' },
+          { label: 'Expired', opacity: 0.3, filter: 'grayscale(1)' },
+        ].map((state) => (
+          <div key={state.label} style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
+            <span style={{ width: 120, fontSize: 12, color: '#DAD4BC', flexShrink: 0 }}>{state.label}</span>
+            {stalenessColors.map((tc) => (
+              <div
+                key={tc.name}
+                style={{
+                  ...skittleCircleBase,
+                  backgroundColor: tc.hex,
+                  color: contrastText(tc.hex),
+                  opacity: state.opacity,
+                  filter: state.filter,
+                }}
+              />
+            ))}
+          </div>
+        ))}
+      </div>
+
+      {/* Affiliation Dots */}
+      <div className={styles.groupSection}>
+        <div className={styles.groupName}>Affiliation</div>
+        <div className={styles.groupCount}>4 affiliations</div>
+        <div style={{ display: 'flex', gap: 16 }}>
+          {AFFILIATION_COLORS.map((a) => (
+            <div key={a.label} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+              <div style={{ ...skittleCircleBase, backgroundColor: a.hex, color: contrastText(a.hex) }} />
+              <span style={{ fontSize: 10, color: '#DAD4BC' }}>{a.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Comparison: Skittle vs Self Marker */}
+      <div className={styles.groupSection}>
+        <div className={styles.groupName}>Comparison</div>
+        <div className={styles.groupCount}>Skittle circle vs Self Marker arrow</div>
+        <div style={{ display: 'flex', gap: 32 }}>
+          {TEAM_COLORS.slice(0, 5).map((tc) => (
+            <div key={tc.name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+              <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+                {/* Skittle circle */}
+                <div style={{ ...skittleCircleBase, backgroundColor: tc.hex, color: contrastText(tc.hex) }} />
+                {/* Self Marker arrow */}
+                <svg width="28" height="28" viewBox="0 0 28 28">
+                  <polygon
+                    points="14,2 24,24 14,18 4,24"
+                    fill={tc.hex}
+                    stroke="rgba(255,255,255,0.3)"
+                    strokeWidth="1"
+                  />
+                </svg>
+              </div>
+              <span style={{ fontSize: 9, color: '#878787' }}>{tc.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// rtmx:req REQ-XW-082
+function SelfMarkerPanel() {
+  return (
+    <div>
+      <div className={styles.paletteHeader}>
+        <div className={styles.paletteName}>Self Marker</div>
+        <div className={styles.paletteCount}>Directional arrow showing own position and heading</div>
+      </div>
+
+      <div className={styles.groupSection}>
+        <div className={styles.groupName}>Heading Arrows by Team Color</div>
+        <div className={styles.groupCount}>{TEAM_COLORS.length} colors</div>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+          {TEAM_COLORS.map((tc) => (
+            <div key={tc.name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+              <svg width="48" height="48" viewBox="0 0 48 48" data-testid={`self-marker-arrow-${tc.name}`}>
+                <polygon
+                  points="24,4 40,40 24,30 8,40"
+                  fill={tc.hex}
+                  stroke="rgba(255,255,255,0.3)"
+                  strokeWidth="1.5"
+                />
+              </svg>
+              <span style={{ fontSize: 10, color: '#DAD4BC' }}>{tc.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className={styles.groupSection}>
+        <div className={styles.groupName}>Heading Variations</div>
+        <div className={styles.groupCount}>Cardinal directions</div>
+        <div style={{ display: 'flex', gap: 16 }}>
+          {[0, 45, 90, 135, 180, 225, 270, 315].map((deg) => (
+            <div key={deg} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+              <svg width="48" height="48" viewBox="0 0 48 48">
+                <g transform={`rotate(${deg} 24 24)`}>
+                  <polygon
+                    points="24,4 40,40 24,30 8,40"
+                    fill="#00FF00"
+                    stroke="rgba(255,255,255,0.3)"
+                    strokeWidth="1.5"
+                  />
+                </g>
+              </svg>
+              <span style={{ fontSize: 10, color: '#878787' }}>{deg}deg</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function IconsetPanel({ tab }: { tab: PaletteTab }) {
   const [search, setSearch] = useState('');
   const manifest = tab.data;
@@ -334,7 +554,7 @@ function IconsetPanel({ tab }: { tab: PaletteTab }) {
 // ----- Main component -----
 
 export default function Palettes() {
-  const [activeTab, setActiveTab] = useState('markers');
+  const [activeTab, setActiveTab] = useState('skittles');
   const active = PALETTE_TABS.find((t) => t.id === activeTab) ?? PALETTE_TABS[0];
 
   return (
@@ -356,6 +576,8 @@ export default function Palettes() {
         ))}
       </div>
 
+      {active.type === 'skittles' && <SkittlesPanel />}
+      {active.type === 'self-marker' && <SelfMarkerPanel />}
       {active.type === 'spotmap' && <SpotMapPanel />}
       {active.type === 'markers' && <MarkersPanel />}
       {active.type === 'vehicle-models' && <VehicleModelsPanel />}

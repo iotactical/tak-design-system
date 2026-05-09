@@ -27,6 +27,8 @@ describe('REQ-SITE-005: Palettes page', () => {
     );
 
     const tabNames = [
+      'Skittles',
+      'Self Marker',
       'Markers',
       'Spot Map',
       'Vehicle Models',

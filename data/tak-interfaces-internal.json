@@ -1,0 +1,62 @@
+[
+  {
+    "name": "MapComponent lifecycle",
+    "type": "lifecycle",
+    "mechanism": "onCreate/onDestroy/onStart/onStop callbacks",
+    "description": "Android Activity-style lifecycle management for map components, controlling initialization, teardown, and visibility state transitions."
+  },
+  {
+    "name": "CotDispatcher event bus",
+    "type": "event",
+    "mechanism": "publish-subscribe event dispatch",
+    "description": "Internal event bus for routing Cursor-on-Target events between components, supporting filtered subscriptions and priority handling."
+  },
+  {
+    "name": "Intent-based inter-component communication",
+    "type": "event",
+    "mechanism": "Android Intents and Intent filters",
+    "description": "Standard Android Intent mechanism for loosely-coupled communication between ATAK components and plugins."
+  },
+  {
+    "name": "SharedPreferences configuration",
+    "type": "storage",
+    "mechanism": "Android SharedPreferences key-value store",
+    "description": "Persistent key-value configuration storage for user preferences, connection settings, and component state."
+  },
+  {
+    "name": "IconsetDatabase",
+    "type": "storage",
+    "mechanism": "SQLite database",
+    "description": "SQLite-backed database storing icon sets, user-defined icons, and iconset metadata for map symbology rendering."
+  },
+  {
+    "name": "CoT event parsing pipeline",
+    "type": "event",
+    "mechanism": "XML SAX/DOM parser chain",
+    "description": "Pipeline for parsing incoming CoT XML events, validating schema conformance, and dispatching structured event objects."
+  },
+  {
+    "name": "Map renderer integration",
+    "type": "render",
+    "mechanism": "OpenGL ES / GLSurfaceView",
+    "description": "Hardware-accelerated map rendering using OpenGL ES via GLSurfaceView for 2D/3D map display and overlay compositing."
+  },
+  {
+    "name": "Plugin framework",
+    "type": "plugin",
+    "mechanism": "BroadcastReceiver (ATAK) / MEF (WinTAK)",
+    "description": "Platform-specific plugin loading framework using Android BroadcastReceiver for ATAK and Managed Extensibility Framework for WinTAK."
+  },
+  {
+    "name": "DropDown/DockPane UI framework",
+    "type": "lifecycle",
+    "mechanism": "DropDownReceiver and DockPane managers",
+    "description": "UI panel management framework providing slide-out drop-down panels in ATAK and dockable panes in WinTAK for plugin user interfaces."
+  },
+  {
+    "name": "Tool/toolbar registration",
+    "type": "plugin",
+    "mechanism": "ActionBar and toolbar item registration API",
+    "description": "Registration system for adding tools, toolbar buttons, and menu items to the main ATAK/WinTAK interface chrome."
+  }
+]

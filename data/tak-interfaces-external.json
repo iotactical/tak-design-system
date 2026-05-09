@@ -1,0 +1,98 @@
+[
+  {
+    "name": "CoT over TCP/TLS",
+    "protocol": "TCP/TLS",
+    "format": "CoT XML",
+    "direction": "bidirectional",
+    "port": "8089/8443",
+    "description": "Primary TAK Server connection for Cursor-on-Target event exchange using TCP with optional TLS encryption."
+  },
+  {
+    "name": "CoT over UDP multicast",
+    "protocol": "UDP multicast",
+    "format": "CoT XML",
+    "direction": "bidirectional",
+    "port": "6969",
+    "description": "Situational awareness broadcast using UDP multicast to 239.2.3.1:6969 for local network CoT sharing."
+  },
+  {
+    "name": "CoT over UDP unicast",
+    "protocol": "UDP unicast",
+    "format": "CoT XML",
+    "direction": "bidirectional",
+    "port": null,
+    "description": "Point-to-point CoT event exchange over UDP unicast for direct device communication."
+  },
+  {
+    "name": "HTTP/HTTPS REST API",
+    "protocol": "HTTP/HTTPS",
+    "format": "JSON/XML",
+    "direction": "bidirectional",
+    "port": "8443",
+    "description": "TAK Server Mission API providing RESTful endpoints for mission data, user management, and server configuration."
+  },
+  {
+    "name": "Mission Package transfer",
+    "protocol": "HTTP",
+    "format": "ZIP",
+    "direction": "bidirectional",
+    "port": "8443",
+    "description": "Transfer of mission packages as ZIP archives over HTTP, containing maps, overlays, routes, and other mission data."
+  },
+  {
+    "name": "KML/KMZ import/export",
+    "protocol": "file",
+    "format": "KML/KMZ",
+    "direction": "bidirectional",
+    "port": null,
+    "description": "Import and export of geographic data using Keyhole Markup Language files and compressed KMZ archives."
+  },
+  {
+    "name": "GeoPackage/SpatiaLite",
+    "protocol": "file",
+    "format": "SQLite/GeoPackage",
+    "direction": "bidirectional",
+    "port": null,
+    "description": "OGC GeoPackage and SpatiaLite database files for offline geospatial data storage and exchange."
+  },
+  {
+    "name": "WMS/WMTS tile services",
+    "protocol": "HTTP/HTTPS",
+    "format": "image tiles",
+    "direction": "inbound",
+    "port": "80/443",
+    "description": "Web Map Service and Web Map Tile Service connections for streaming raster map imagery from tile servers."
+  },
+  {
+    "name": "JTAC/CAS data link",
+    "protocol": "CoT extension",
+    "format": "9-line brief",
+    "direction": "outbound",
+    "port": null,
+    "description": "Joint Terminal Attack Controller / Close Air Support 9-line brief data formatted for fire support coordination."
+  },
+  {
+    "name": "Link-16 / VMF",
+    "protocol": "tactical data link",
+    "format": "MIL-STD messages",
+    "direction": "bidirectional",
+    "port": null,
+    "description": "Military message format integration including Link-16 J-series messages and Variable Message Format for joint interoperability."
+  },
+  {
+    "name": "ATAK Plugin API",
+    "protocol": "Android IPC",
+    "format": "Intent/BroadcastReceiver",
+    "direction": "bidirectional",
+    "port": null,
+    "description": "Android plugin interface using Intents and BroadcastReceivers for third-party ATAK plugin integration."
+  },
+  {
+    "name": "Repository dispatch / CI webhooks",
+    "protocol": "HTTP/HTTPS",
+    "format": "JSON",
+    "direction": "outbound",
+    "port": "443",
+    "description": "GitHub repository dispatch events and CI webhook triggers for automated build and release pipelines."
+  }
+]

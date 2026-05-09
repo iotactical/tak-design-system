@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/iotactical/tak-design-system/data/tak-interface-schema.json",
+  "title": "TAK Interface Catalog Schema",
+  "description": "JSON Schema for TAK external and internal interface catalog files.",
+  "oneOf": [
+    { "$ref": "#/$defs/externalInterfaceArray" },
+    { "$ref": "#/$defs/internalInterfaceArray" }
+  ],
+  "$defs": {
+    "externalInterface": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Human-readable interface name."
+        },
+        "protocol": {
+          "type": "string",
+          "description": "Communication protocol (e.g. TCP/TLS, UDP, HTTP)."
+        },
+        "format": {
+          "type": "string",
+          "description": "Data format used by the interface (e.g. CoT XML, JSON, ZIP)."
+        },
+        "direction": {
+          "type": "string",
+          "enum": ["inbound", "outbound", "bidirectional"],
+          "description": "Data flow direction relative to the TAK client."
+        },
+        "port": {
+          "type": ["string", "null"],
+          "description": "Network port number(s) if applicable, null otherwise."
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of the interface purpose and usage."
+        }
+      },
+      "required": ["name", "protocol", "format", "direction", "description"],
+      "additionalProperties": false
+    },
+    "internalInterface": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Human-readable interface name."
+        },
+        "type": {
+          "type": "string",
+          "enum": ["lifecycle", "event", "storage", "render", "plugin"],
+          "description": "Category of the internal interface."
+        },
+        "mechanism": {
+          "type": "string",
+          "description": "Technical mechanism or API used by the interface."
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of the interface purpose and usage."
+        }
+      },
+      "required": ["name", "type", "mechanism", "description"],
+      "additionalProperties": false
+    },
+    "externalInterfaceArray": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/externalInterface" },
+      "minItems": 1
+    },
+    "internalInterfaceArray": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/internalInterface" },
+      "minItems": 1
+    }
+  }
+}
