@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { type ReactNode } from 'react';
+import { useEffect, type ReactNode } from 'react';
 import styles from './Components.module.css';
 
 // Live component imports from source
@@ -430,6 +430,7 @@ function ComponentCard({ component }: { component: ComponentInfo }) {
 }
 
 export default function Components() {
+  useEffect(() => { document.title = 'Components - TAK Design System'; }, []);
   const totalCount = componentGallery.reduce(
     (sum, group) => sum + group.components.length,
     0

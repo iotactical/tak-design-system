@@ -1,5 +1,5 @@
 // rtmx:req REQ-SITE-005
-import { useState, useMemo } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import styles from './Palettes.module.css';
 
 // All iconset manifests - static imports for reliability
@@ -554,6 +554,7 @@ function IconsetPanel({ tab }: { tab: PaletteTab }) {
 // ----- Main component -----
 
 export default function Palettes() {
+  useEffect(() => { document.title = 'Palettes - TAK Design System'; }, []);
   const [activeTab, setActiveTab] = useState('skittles');
   const active = PALETTE_TABS.find((t) => t.id === activeTab) ?? PALETTE_TABS[0];
 

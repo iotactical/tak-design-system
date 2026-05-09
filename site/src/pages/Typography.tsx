@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import coreTokens from '@tokens/core.json';
 import atakTokens from '@tokens/atak.json';
 
@@ -23,6 +24,7 @@ const atakFonts = getEntries(atak.font as Record<string, unknown>);
 const atakFontSizes = getEntries((atak.dimension as Record<string, unknown>).font as Record<string, unknown>);
 
 export default function Typography() {
+  useEffect(() => { document.title = 'Typography - TAK Design System'; }, []);
   return (
     <div style={{ maxWidth: 960 }}>
       <h1 style={{ fontSize: 30, fontWeight: 700, color: '#FFE35E', marginBottom: 8 }}>Typography</h1>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './Platforms.module.css';
 
 // Android XML
@@ -139,6 +139,7 @@ function CodeBlock({ file }: { file: FileEntry }) {
 }
 
 export default function Platforms() {
+  useEffect(() => { document.title = 'Platforms - TAK Design System'; }, []);
   const [activeTab, setActiveTab] = useState('android');
   const active = platforms.find((p) => p.id === activeTab) ?? platforms[0];
 

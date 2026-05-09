@@ -1,0 +1,39 @@
+/* rtmx:req REQ-XW-072 */
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a1a;
+  border: 1px solid #2e2e2e;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.canvas canvas {
+  display: block;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #878787;
+  font-size: 12px;
+  font-family: 'Nunito', sans-serif;
+  pointer-events: none;
+}
+
+.fallback {
+  color: #878787;
+  font-size: 12px;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  padding: 8px;
+}

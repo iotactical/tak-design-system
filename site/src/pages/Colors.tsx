@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import coreTokens from '@tokens/core.json';
 import semanticTokens from '@tokens/semantic.json';
 import atakTokens from '@tokens/atak.json';
@@ -50,6 +50,7 @@ const colorGroups = [
 ];
 
 export default function Colors() {
+  useEffect(() => { document.title = 'Colors - TAK Design System'; }, []);
   const [copied, setCopied] = useState<string | null>(null);
 
   function handleCopy(value: string) {

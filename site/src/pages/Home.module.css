@@ -1,0 +1,154 @@
+.dashboard {
+  max-width: 960px;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #FFE35E;
+  margin-bottom: 4px;
+}
+
+.version {
+  font-size: 13px;
+  color: #878787;
+  font-family: 'Roboto Mono', monospace;
+  margin-left: 12px;
+}
+
+.tagline {
+  color: #878787;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+/* Stats grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.statCard {
+  background: #1A1A1A;
+  border: 1px solid #2E2E2E;
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+
+.statValue {
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFE35E;
+}
+
+.statLabel {
+  font-size: 13px;
+  color: #878787;
+  margin-top: 4px;
+}
+
+/* Navigation cards */
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.navGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.navCard {
+  display: block;
+  background: #1A1A1A;
+  border: 1px solid #2E2E2E;
+  border-radius: 8px;
+  padding: 20px 24px;
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+
+.navCard:hover {
+  border-color: #FFE35E;
+}
+
+.navCardTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFE35E;
+  margin-bottom: 6px;
+}
+
+.navCardDesc {
+  font-size: 13px;
+  color: #878787;
+}
+
+/* Platform matrix */
+.matrixTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+.matrixTable th,
+.matrixTable td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #2E2E2E;
+  text-align: left;
+}
+
+.matrixTable th {
+  color: #878787;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.matrixTable td:first-child {
+  font-weight: 600;
+  color: #FFE35E;
+}
+
+/* Quick-start */
+.quickStart {
+  margin-bottom: 40px;
+}
+
+.codeBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1A1A1A;
+  border: 1px solid #2E2E2E;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  color: #DAD4BC;
+}
+
+.copyBtn {
+  background: none;
+  border: 1px solid #2E2E2E;
+  border-radius: 4px;
+  color: #878787;
+  padding: 4px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Nunito', sans-serif;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.copyBtn:hover {
+  color: #FFE35E;
+  border-color: #FFE35E;
+}

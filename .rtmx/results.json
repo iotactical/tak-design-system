@@ -354,6 +354,24 @@
     "passed": true
   },
   {
+    "req_id": "REQ-XW-060",
+    "test_name": "REQ-XW-060: External interfaces catalog",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-061",
+    "test_name": "REQ-XW-061: Internal interfaces catalog",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-062",
+    "test_name": "REQ-XW-062: Interface catalog JSON schema",
+    "test_file": "unknown",
+    "passed": true
+  },
+  {
     "req_id": "REQ-PKG-001",
     "test_name": "REQ-PKG-001: Release tarball contains all required artifacts",
     "test_file": "tests/package/test_tarball.mjs",
@@ -372,9 +390,39 @@
     "passed": true
   },
   {
+    "req_id": "REQ-XW-084",
+    "test_name": "REQ-XW-084: Favicon",
+    "test_file": "tests/site/test_favicon.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-SITE-003",
     "test_name": "REQ-SITE-003: Icon and drawable browser",
     "test_file": "tests/site/test_icon_browser.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-072",
+    "test_name": "REQ-XW-072: ModelViewer component exists",
+    "test_file": "tests/site/test_model_component.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-073",
+    "test_name": "REQ-XW-073: ModelViewer uses Three.js with ColladaLoader",
+    "test_file": "tests/site/test_model_component.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-070",
+    "test_name": "REQ-XW-070: Vehicle model extraction",
+    "test_file": "tests/site/test_model_extract.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-083",
+    "test_name": "REQ-XW-083: Overview dashboard redesign",
+    "test_file": "tests/site/test_overview.mjs",
     "passed": true
   },
   {
@@ -402,9 +450,33 @@
     "passed": true
   },
   {
+    "req_id": "REQ-XW-082",
+    "test_name": "REQ-XW-082: Self Marker palette tab",
+    "test_file": "tests/site/test_skittle_palette.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-SITE-001",
     "test_name": "REQ-SITE-001: Site build",
     "test_file": "tests/site/test_site_build.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-081",
+    "test_name": "REQ-XW-081: Skittles circles tab",
+    "test_file": "tests/site/test_skittle_palette.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-082",
+    "test_name": "REQ-XW-082: Self Marker tab (renamed from old Skittles)",
+    "test_file": "tests/site/test_skittle_palette.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-071",
+    "test_name": "REQ-XW-071: three.js site dependency",
+    "test_file": "tests/site/test_threejs_dep.mjs",
     "passed": true
   },
   {
@@ -471,6 +543,18 @@
     "req_id": "REQ-STY-005",
     "test_name": "REQ-STY-005: ATAK typography style family tokens",
     "test_file": "tests/styles/test_typography.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-001",
+    "test_name": "REQ-XW-001: MIL-STD-2525 C-to-D reference data",
+    "test_file": "tests/symbology/test_b_codes.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-002",
+    "test_name": "REQ-XW-002: MIL-STD-2525B entity code table",
+    "test_file": "tests/symbology/test_b_entities.mjs",
     "passed": true
   },
   {

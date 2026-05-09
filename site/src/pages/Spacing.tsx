@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import coreTokens from '@tokens/core.json';
 import atakTokens from '@tokens/atak.json';
 
@@ -21,6 +22,7 @@ const coreBorderRadius = getEntries(core.borderRadius as Record<string, unknown>
 const atakSpacing = getEntries((atak.dimension as Record<string, unknown>).spacing as Record<string, unknown>);
 
 export default function Spacing() {
+  useEffect(() => { document.title = 'Spacing - TAK Design System'; }, []);
   return (
     <div style={{ maxWidth: 960 }}>
       <h1 style={{ fontSize: 30, fontWeight: 700, color: '#FFE35E', marginBottom: 8 }}>Spacing</h1>
