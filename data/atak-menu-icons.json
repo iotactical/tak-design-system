@@ -1,0 +1,494 @@
+[
+  {
+    "name": "ic_menu_actionbar_placeholder",
+    "hasSvg": false,
+    "format": "png",
+    "description": "actionbar placeholder"
+  },
+  {
+    "name": "ic_menu_apps",
+    "hasSvg": false,
+    "format": "png",
+    "description": "apps"
+  },
+  {
+    "name": "ic_menu_arrow_left",
+    "hasSvg": false,
+    "format": "png",
+    "description": "arrow left"
+  },
+  {
+    "name": "ic_menu_binos",
+    "hasSvg": false,
+    "format": "png",
+    "description": "binos"
+  },
+  {
+    "name": "ic_menu_bloodhound",
+    "hasSvg": false,
+    "format": "png",
+    "description": "bloodhound"
+  },
+  {
+    "name": "ic_menu_bloodhound_lit",
+    "hasSvg": false,
+    "format": "png",
+    "description": "bloodhound lit"
+  },
+  {
+    "name": "ic_menu_casevac",
+    "hasSvg": false,
+    "format": "png",
+    "description": "casevac"
+  },
+  {
+    "name": "ic_menu_chat",
+    "hasSvg": false,
+    "format": "png",
+    "description": "chat"
+  },
+  {
+    "name": "ic_menu_chat_layers",
+    "hasSvg": false,
+    "format": "png",
+    "description": "chat layers"
+  },
+  {
+    "name": "ic_menu_circle",
+    "hasSvg": true,
+    "format": "svg",
+    "description": "circle"
+  },
+  {
+    "name": "ic_menu_circle_lit",
+    "hasSvg": true,
+    "format": "svg",
+    "description": "circle lit"
+  },
+  {
+    "name": "ic_menu_clear_content",
+    "hasSvg": false,
+    "format": "png",
+    "description": "clear content"
+  },
+  {
+    "name": "ic_menu_close_clear_cancel",
+    "hasSvg": false,
+    "format": "png",
+    "description": "close clear cancel"
+  },
+  {
+    "name": "ic_menu_compass",
+    "hasSvg": false,
+    "format": "png",
+    "description": "compass"
+  },
+  {
+    "name": "ic_menu_contact",
+    "hasSvg": false,
+    "format": "png",
+    "description": "contact"
+  },
+  {
+    "name": "ic_menu_contact_layers",
+    "hasSvg": false,
+    "format": "png",
+    "description": "contact layers"
+  },
+  {
+    "name": "ic_menu_copy",
+    "hasSvg": false,
+    "format": "png",
+    "description": "copy"
+  },
+  {
+    "name": "ic_menu_cot",
+    "hasSvg": false,
+    "format": "png",
+    "description": "cot"
+  },
+  {
+    "name": "ic_menu_delete",
+    "hasSvg": false,
+    "format": "png",
+    "description": "delete"
+  },
+  {
+    "name": "ic_menu_delete_32",
+    "hasSvg": false,
+    "format": "png",
+    "description": "delete 32"
+  },
+  {
+    "name": "ic_menu_drawing",
+    "hasSvg": false,
+    "format": "png",
+    "description": "drawing"
+  },
+  {
+    "name": "ic_menu_drawing_circle_toggle",
+    "hasSvg": false,
+    "format": "png",
+    "description": "drawing circle toggle"
+  },
+  {
+    "name": "ic_menu_drawing_rect_toggle",
+    "hasSvg": false,
+    "format": "png",
+    "description": "drawing rect toggle"
+  },
+  {
+    "name": "ic_menu_drawing_telestrate_toggle",
+    "hasSvg": false,
+    "format": "png",
+    "description": "drawing telestrate toggle"
+  },
+  {
+    "name": "ic_menu_ellipse",
+    "hasSvg": true,
+    "format": "svg",
+    "description": "ellipse"
+  },
+  {
+    "name": "ic_menu_ellipse_lit",
+    "hasSvg": true,
+    "format": "svg",
+    "description": "ellipse lit"
+  },
+  {
+    "name": "ic_menu_ellipse_toggle",
+    "hasSvg": false,
+    "format": "png",
+    "description": "ellipse toggle"
+  },
+  {
+    "name": "ic_menu_emergency",
+    "hasSvg": false,
+    "format": "png",
+    "description": "emergency"
+  },
+  {
+    "name": "ic_menu_enterlocation",
+    "hasSvg": false,
+    "format": "png",
+    "description": "enterlocation"
+  },
+  {
+    "name": "ic_menu_error",
+    "hasSvg": false,
+    "format": "png",
+    "description": "error"
+  },
+  {
+    "name": "ic_menu_fires",
+    "hasSvg": false,
+    "format": "png",
+    "description": "fires"
+  },
+  {
+    "name": "ic_menu_geofence",
+    "hasSvg": false,
+    "format": "png",
+    "description": "geofence"
+  },
+  {
+    "name": "ic_menu_goto",
+    "hasSvg": false,
+    "format": "png",
+    "description": "goto"
+  },
+  {
+    "name": "ic_menu_goto_nav",
+    "hasSvg": false,
+    "format": "png",
+    "description": "goto nav"
+  },
+  {
+    "name": "ic_menu_handle",
+    "hasSvg": true,
+    "format": "svg",
+    "description": "handle"
+  },
+  {
+    "name": "ic_menu_help",
+    "hasSvg": false,
+    "format": "png",
+    "description": "help"
+  },
+  {
+    "name": "ic_menu_import_file",
+    "hasSvg": false,
+    "format": "png",
+    "description": "import file"
+  },
+  {
+    "name": "ic_menu_lock_lit",
+    "hasSvg": false,
+    "format": "png",
+    "description": "lock lit"
+  },
+  {
+    "name": "ic_menu_lock_unlit",
+    "hasSvg": false,
+    "format": "png",
+    "description": "lock unlit"
+  },
+  {
+    "name": "ic_menu_map_brightness",
+    "hasSvg": false,
+    "format": "png",
+    "description": "map brightness"
+  },
+  {
+    "name": "ic_menu_maps",
+    "hasSvg": false,
+    "format": "png",
+    "description": "maps"
+  },
+  {
+    "name": "ic_menu_minus",
+    "hasSvg": false,
+    "format": "png",
+    "description": "minus"
+  },
+  {
+    "name": "ic_menu_missionpackage",
+    "hasSvg": false,
+    "format": "png",
+    "description": "missionpackage"
+  },
+  {
+    "name": "ic_menu_mylocation",
+    "hasSvg": false,
+    "format": "png",
+    "description": "mylocation"
+  },
+  {
+    "name": "ic_menu_network",
+    "hasSvg": false,
+    "format": "png",
+    "description": "network"
+  },
+  {
+    "name": "ic_menu_network_connections",
+    "hasSvg": false,
+    "format": "png",
+    "description": "network connections"
+  },
+  {
+    "name": "ic_menu_nineline",
+    "hasSvg": false,
+    "format": "png",
+    "description": "nineline"
+  },
+  {
+    "name": "ic_menu_overlays",
+    "hasSvg": false,
+    "format": "png",
+    "description": "overlays"
+  },
+  {
+    "name": "ic_menu_pairingline",
+    "hasSvg": false,
+    "format": "png",
+    "description": "pairingline"
+  },
+  {
+    "name": "ic_menu_pairingline_lit",
+    "hasSvg": false,
+    "format": "png",
+    "description": "pairingline lit"
+  },
+  {
+    "name": "ic_menu_plugins",
+    "hasSvg": false,
+    "format": "png",
+    "description": "plugins"
+  },
+  {
+    "name": "ic_menu_plus",
+    "hasSvg": false,
+    "format": "png",
+    "description": "plus"
+  },
+  {
+    "name": "ic_menu_preferences",
+    "hasSvg": false,
+    "format": "png",
+    "description": "preferences"
+  },
+  {
+    "name": "ic_menu_question",
+    "hasSvg": false,
+    "format": "png",
+    "description": "question"
+  },
+  {
+    "name": "ic_menu_quickpic",
+    "hasSvg": false,
+    "format": "png",
+    "description": "quickpic"
+  },
+  {
+    "name": "ic_menu_quit",
+    "hasSvg": false,
+    "format": "png",
+    "description": "quit"
+  },
+  {
+    "name": "ic_menu_radio",
+    "hasSvg": false,
+    "format": "png",
+    "description": "radio"
+  },
+  {
+    "name": "ic_menu_rb_circle",
+    "hasSvg": true,
+    "format": "svg",
+    "description": "rb circle"
+  },
+  {
+    "name": "ic_menu_rb_circle_active",
+    "hasSvg": true,
+    "format": "svg",
+    "description": "rb circle active"
+  },
+  {
+    "name": "ic_menu_rb_circle_toggle",
+    "hasSvg": false,
+    "format": "png",
+    "description": "rb circle toggle"
+  },
+  {
+    "name": "ic_menu_routes",
+    "hasSvg": false,
+    "format": "png",
+    "description": "routes"
+  },
+  {
+    "name": "ic_menu_ruler",
+    "hasSvg": false,
+    "format": "png",
+    "description": "ruler"
+  },
+  {
+    "name": "ic_menu_save",
+    "hasSvg": false,
+    "format": "png",
+    "description": "save"
+  },
+  {
+    "name": "ic_menu_save_pref",
+    "hasSvg": false,
+    "format": "png",
+    "description": "save pref"
+  },
+  {
+    "name": "ic_menu_save2",
+    "hasSvg": false,
+    "format": "png",
+    "description": "save2"
+  },
+  {
+    "name": "ic_menu_select_point_disabled",
+    "hasSvg": false,
+    "format": "png",
+    "description": "select point disabled"
+  },
+  {
+    "name": "ic_menu_select_point_enabled",
+    "hasSvg": false,
+    "format": "png",
+    "description": "select point enabled"
+  },
+  {
+    "name": "ic_menu_select_point_off",
+    "hasSvg": false,
+    "format": "png",
+    "description": "select point off"
+  },
+  {
+    "name": "ic_menu_selfhistory",
+    "hasSvg": false,
+    "format": "png",
+    "description": "selfhistory"
+  },
+  {
+    "name": "ic_menu_send",
+    "hasSvg": false,
+    "format": "png",
+    "description": "send"
+  },
+  {
+    "name": "ic_menu_settings",
+    "hasSvg": false,
+    "format": "png",
+    "description": "settings"
+  },
+  {
+    "name": "ic_menu_share",
+    "hasSvg": false,
+    "format": "png",
+    "description": "share"
+  },
+  {
+    "name": "ic_menu_sse_slant",
+    "hasSvg": false,
+    "format": "png",
+    "description": "sse slant"
+  },
+  {
+    "name": "ic_menu_stop",
+    "hasSvg": false,
+    "format": "png",
+    "description": "stop"
+  },
+  {
+    "name": "ic_menu_support_info",
+    "hasSvg": false,
+    "format": "png",
+    "description": "support info"
+  },
+  {
+    "name": "ic_menu_survey",
+    "hasSvg": false,
+    "format": "png",
+    "description": "survey"
+  },
+  {
+    "name": "ic_menu_toggle_orientation",
+    "hasSvg": false,
+    "format": "png",
+    "description": "toggle orientation"
+  },
+  {
+    "name": "ic_menu_tools",
+    "hasSvg": false,
+    "format": "png",
+    "description": "tools"
+  },
+  {
+    "name": "ic_menu_upload_file",
+    "hasSvg": false,
+    "format": "png",
+    "description": "upload file"
+  },
+  {
+    "name": "ic_menu_video",
+    "hasSvg": false,
+    "format": "png",
+    "description": "video"
+  },
+  {
+    "name": "ic_menu_widget",
+    "hasSvg": false,
+    "format": "png",
+    "description": "widget"
+  },
+  {
+    "name": "ic_menu_wr",
+    "hasSvg": false,
+    "format": "png",
+    "description": "wr"
+  }
+]

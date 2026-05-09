@@ -1,0 +1,272 @@
+[
+  {
+    "name": "tab_bg_selector",
+    "chromeType": "tab",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "tab_divider_vertical",
+    "chromeType": "tab",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "tab_holo_divider",
+    "chromeType": "tab",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "tab_holo_selected",
+    "chromeType": "tab",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "tab_holo_selected_pressed",
+    "chromeType": "tab",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "tab_holo_unselected",
+    "chromeType": "tab",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "tab_holo_unselected_pressed",
+    "chromeType": "tab",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "tab_indicator_background",
+    "chromeType": "tab",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "tab_indicator_left_background",
+    "chromeType": "tab",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "tab_indicator_right_background",
+    "chromeType": "tab",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "tab_selected",
+    "chromeType": "tab",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "tab_selection_window_divider",
+    "chromeType": "tab",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "tab_selection_window_normal",
+    "chromeType": "tab",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "tab_selection_window_selected",
+    "chromeType": "tab",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "tab_text_selector",
+    "chromeType": "tab",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "tab_unselected",
+    "chromeType": "tab",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toggle_arrows_closed",
+    "chromeType": "toggle",
+    "hasSvg": false,
+    "format": "png"
+  },
+  {
+    "name": "toggle_arrows_open",
+    "chromeType": "toggle",
+    "hasSvg": false,
+    "format": "png"
+  },
+  {
+    "name": "toggle_atak_off_default",
+    "chromeType": "toggle",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "toggle_atak_off_disabled",
+    "chromeType": "toggle",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "toggle_atak_off_pressed",
+    "chromeType": "toggle",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "toggle_atak_on_default",
+    "chromeType": "toggle",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "toggle_atak_on_disabled",
+    "chromeType": "toggle",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "toggle_atak_on_pressed",
+    "chromeType": "toggle",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "toggle_background",
+    "chromeType": "toggle",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toggle_button_left_background",
+    "chromeType": "toggle",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toggle_button_right_background",
+    "chromeType": "toggle",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toggle_crosshair_color",
+    "chromeType": "toggle",
+    "hasSvg": false,
+    "format": "png"
+  },
+  {
+    "name": "toggle_textview_background",
+    "chromeType": "toggle",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toolbar_close_rounded",
+    "chromeType": "toolbar",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toolbar_container_half_rounded",
+    "chromeType": "toolbar",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toolbar_container_rounded",
+    "chromeType": "toolbar",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toolbar_endcap",
+    "chromeType": "toolbar",
+    "hasSvg": true,
+    "format": "xml"
+  },
+  {
+    "name": "toolbar_item_gray",
+    "chromeType": "toolbar",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toolbar_item_gray_normal",
+    "chromeType": "toolbar",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toolbar_item_gray_selected",
+    "chromeType": "toolbar",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toolbar_item_green",
+    "chromeType": "toolbar",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toolbar_item_green_normal",
+    "chromeType": "toolbar",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toolbar_item_green_selected",
+    "chromeType": "toolbar",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toolbar_item_red",
+    "chromeType": "toolbar",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toolbar_item_red_normal",
+    "chromeType": "toolbar",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toolbar_item_red_selected",
+    "chromeType": "toolbar",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toolbar_item_yellow",
+    "chromeType": "toolbar",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toolbar_item_yellow_normal",
+    "chromeType": "toolbar",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "toolbar_item_yellow_selected",
+    "chromeType": "toolbar",
+    "hasSvg": false,
+    "format": "xml"
+  }
+]

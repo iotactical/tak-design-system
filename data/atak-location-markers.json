@@ -1,0 +1,278 @@
+[
+  {
+    "name": "enter_location_label",
+    "color": "none",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "enter_location_label_default",
+    "color": "none",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_label_icon",
+    "color": "none",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_label_pressed",
+    "color": "none",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_black",
+    "color": "black",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "enter_location_spot_black_default",
+    "color": "black",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_black_pressed",
+    "color": "black",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_blue",
+    "color": "blue",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "enter_location_spot_blue_default",
+    "color": "blue",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_blue_pressed",
+    "color": "blue",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_brown",
+    "color": "brown",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "enter_location_spot_brown_default",
+    "color": "brown",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_brown_pressed",
+    "color": "brown",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_custom_center",
+    "color": "custom",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "enter_location_spot_custom_center_default",
+    "color": "custom",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_custom_center_pressed",
+    "color": "custom",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_custom_first",
+    "color": "custom",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "enter_location_spot_custom_first_default",
+    "color": "custom",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_custom_first_pressed",
+    "color": "custom",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_custom_last",
+    "color": "custom",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "enter_location_spot_custom_last_default",
+    "color": "custom",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_custom_last_pressed",
+    "color": "custom",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_cyan",
+    "color": "cyan",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "enter_location_spot_cyan_default",
+    "color": "cyan",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_cyan_pressed",
+    "color": "cyan",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_green",
+    "color": "green",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "enter_location_spot_green_default",
+    "color": "green",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_green_pressed",
+    "color": "green",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_grey",
+    "color": "grey",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "enter_location_spot_grey_default",
+    "color": "grey",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_grey_pressed",
+    "color": "grey",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_magenta",
+    "color": "magenta",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "enter_location_spot_magenta_default",
+    "color": "magenta",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_magenta_pressed",
+    "color": "magenta",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_orange",
+    "color": "orange",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "enter_location_spot_orange_default",
+    "color": "orange",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_orange_pressed",
+    "color": "orange",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_red",
+    "color": "red",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "enter_location_spot_red_default",
+    "color": "red",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_red_pressed",
+    "color": "red",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_white",
+    "color": "white",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "enter_location_spot_white_default",
+    "color": "white",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_white_pressed",
+    "color": "white",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_yellow",
+    "color": "yellow",
+    "hasSvg": false,
+    "format": "xml"
+  },
+  {
+    "name": "enter_location_spot_yellow_default",
+    "color": "yellow",
+    "hasSvg": false,
+    "format": "9.png"
+  },
+  {
+    "name": "enter_location_spot_yellow_pressed",
+    "color": "yellow",
+    "hasSvg": false,
+    "format": "9.png"
+  }
+]

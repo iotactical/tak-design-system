@@ -1,0 +1,716 @@
+[
+  {
+    "name": "nav_add_hostile",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_alert",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_android",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_bar",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_billboard",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_billboard_disabled",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_blank",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_bloodhound",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_brightness",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_button_drag_background",
+    "hasSvg": false,
+    "format": "xml",
+    "section": "other"
+  },
+  {
+    "name": "nav_camera",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_casevac",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_center",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_channels",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_chatnext",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_child_dropdown_horizontal",
+    "hasSvg": true,
+    "format": "xml",
+    "section": "nav_child"
+  },
+  {
+    "name": "nav_collapse",
+    "hasSvg": true,
+    "format": "xml",
+    "section": "nav_collapse"
+  },
+  {
+    "name": "nav_compass",
+    "hasSvg": true,
+    "format": "xml",
+    "section": "nav_compass"
+  },
+  {
+    "name": "nav_compass_arrow",
+    "hasSvg": true,
+    "format": "xml",
+    "section": "nav_compass"
+  },
+  {
+    "name": "nav_contacts",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_control_background",
+    "hasSvg": false,
+    "format": "xml",
+    "section": "other"
+  },
+  {
+    "name": "nav_cp_mode_toggle",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_data_package",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_delete",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_display_backdrop",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_draw",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_draw_circle",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_draw_rectangle",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_draw_shape",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_draw_telestration",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_dynamic_compass_arrow",
+    "hasSvg": true,
+    "format": "xml",
+    "section": "nav_dynamic"
+  },
+  {
+    "name": "nav_dynamic_compass_background",
+    "hasSvg": true,
+    "format": "xml",
+    "section": "nav_dynamic"
+  },
+  {
+    "name": "nav_dynamic_compass_circle",
+    "hasSvg": true,
+    "format": "xml",
+    "section": "nav_dynamic"
+  },
+  {
+    "name": "nav_dynamic_compass_rotate",
+    "hasSvg": true,
+    "format": "xml",
+    "section": "nav_dynamic"
+  },
+  {
+    "name": "nav_dynamic_compass_ticks",
+    "hasSvg": true,
+    "format": "xml",
+    "section": "nav_dynamic"
+  },
+  {
+    "name": "nav_elevation",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_empty",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_exit_button_img",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_export",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_file",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_fire",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_fire_tools",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_firstperson",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_gallery",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_geofence",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_go_to",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_goto",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_grid",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_group_chat",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_hostile_manager",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_import",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_info",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_item_background",
+    "hasSvg": false,
+    "format": "xml",
+    "section": "other"
+  },
+  {
+    "name": "nav_lasso",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_left",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_left_manual",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_lock_on",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_lock_on_selected",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_maps",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_marker",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_menu_closed",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_menu_opened",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_more",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_mute",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_nightvision",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_orientation",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_overlay_manager",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_package",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_plugins",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_point",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_point_at_intersect",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_point_at_self",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_point_dropper",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_power",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_quick_nav",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_quick_pic",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_rab",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_radio",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_range",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_range_and_bearing",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_rb",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_rb_bullseye",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_rb_circle",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_rb_dynamic",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_rb_line",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_redx",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_redx_locked",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_resection",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_restart",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_right",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_right_manual",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_routes",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_rubber_sheet",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_server",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_settings",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_settings_divider",
+    "hasSvg": false,
+    "format": "xml",
+    "section": "other"
+  },
+  {
+    "name": "nav_sharp_left",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_sharp_right",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_slight_left",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_slight_right",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_sp_icon",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_speak",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_speed_backdrop",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_spi",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_straight",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_symbols_copy_26",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_thumb",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_tool_delete",
+    "hasSvg": false,
+    "format": "png",
+    "section": "nav_tool"
+  },
+  {
+    "name": "nav_tool_hidden",
+    "hasSvg": true,
+    "format": "xml",
+    "section": "nav_tool"
+  },
+  {
+    "name": "nav_tool_shown",
+    "hasSvg": true,
+    "format": "xml",
+    "section": "nav_tool"
+  },
+  {
+    "name": "nav_toolbars",
+    "hasSvg": false,
+    "format": "png",
+    "section": "nav_tool"
+  },
+  {
+    "name": "nav_track_history",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_update_location",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_vdo_icon",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_vdo_mode_toggle",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_video",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_viewshed",
+    "hasSvg": false,
+    "format": "png",
+    "section": "other"
+  },
+  {
+    "name": "nav_zoom",
+    "hasSvg": false,
+    "format": "png",
+    "section": "nav_zoom"
+  },
+  {
+    "name": "nav_zoom_edit",
+    "hasSvg": true,
+    "format": "xml",
+    "section": "nav_zoom"
+  }
+]

@@ -138,6 +138,30 @@
     "passed": true
   },
   {
+    "req_id": "REQ-ICN-010",
+    "test_name": "REQ-ICN-010: ATAK chrome drawable manifest",
+    "test_file": "tests/icons/test_chrome.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-ICN-009",
+    "test_name": "REQ-ICN-009: ATAK location marker manifest",
+    "test_file": "tests/icons/test_markers.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-ICN-003",
+    "test_name": "REQ-ICN-003: ATAK menu icon library",
+    "test_file": "tests/icons/test_menu_icons.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-ICN-004",
+    "test_name": "REQ-ICN-004: ATAK navigation icon library",
+    "test_file": "tests/icons/test_nav_icons.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-ICN-008",
     "test_name": "REQ-ICN-008: ATAK radial menu definitions",
     "test_file": "tests/icons/test_radial_menus.mjs",
