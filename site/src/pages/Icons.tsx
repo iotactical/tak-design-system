@@ -1,5 +1,7 @@
 // rtmx:req REQ-SITE-003
+// rtmx:req REQ-XW-121
 import { useEffect, useState, useMemo, type CSSProperties } from 'react';
+import { useHighlight } from '../hooks/useHighlight';
 import styles from './Icons.module.css';
 import catalog from '../../../data/atak-drawable-catalog.json';
 import shapeData from '../../../data/atak-shapes.json';
@@ -155,6 +157,7 @@ function CardPreview({ entry }: { entry: CatalogEntry }) {
 
 export default function Icons() {
   useEffect(() => { document.title = 'Icons - TAK Design System'; }, []);
+  useHighlight();
   const [search, setSearch] = useState('');
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [activeType, setActiveType] = useState<string | null>(null);
@@ -229,7 +232,7 @@ export default function Icons() {
 
       <div className={styles.grid}>
         {filtered.map((entry) => (
-          <div key={entry.name} className={styles.card}>
+          <div key={entry.name} className={styles.card} data-highlight={entry.name}>
             <div className={styles.cardPreview}>
               <CardPreview entry={entry} />
             </div>

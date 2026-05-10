@@ -2,6 +2,9 @@
 // rtmx:req REQ-XW-117
 // rtmx:req REQ-XW-118
 // rtmx:req REQ-XW-120
+// rtmx:req REQ-XW-121
+// rtmx:req REQ-XW-122
+// rtmx:req REQ-XW-123
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Fuse from 'fuse.js';
@@ -29,6 +32,64 @@ const BADGE_CLASS: Record<SearchCategory, string> = {
   '2525': styles.badge2525,
   Specs: styles.badgeSpecs,
 };
+
+/** REQ-XW-122: Map breadcrumb segments to navigable paths */
+const SEGMENT_ROUTES: Record<string, string> = {
+  Tokens: '/colors',
+  Components: '/components',
+  Icons: '/icons',
+  Palettes: '/palettes',
+  Interfaces: '/interfaces',
+  '2525': '/explorer',
+  Specs: '/',
+};
+
+const TAB_SEGMENTS: Record<string, Record<string, string>> = {
+  Interfaces: {
+    External: '/interfaces?tab=external',
+    Internal: '/interfaces?tab=internal',
+    Intents: '/interfaces?tab=intents',
+  },
+  '2525': {
+    Browse: '/explorer?tab=browse',
+    Decode: '/explorer?tab=decode',
+    Build: '/explorer?tab=build',
+    Compare: '/explorer?tab=compare',
+  },
+};
+
+function breadcrumbSegmentPath(
+  segments: string[],
+  segmentIndex: number,
+  entryPath: string,
+): string {
+  const seg = segments[segmentIndex];
+  const root = segments[0];
+
+  // First segment: top-level page
+  if (segmentIndex === 0) {
+    return SEGMENT_ROUTES[root] || '/';
+  }
+
+  // Second segment: tab-level (e.g. "Intents", "External")
+  if (segmentIndex === 1 && TAB_SEGMENTS[root]?.[seg]) {
+    return TAB_SEGMENTS[root][seg];
+  }
+
+  // For deeper segments or last segment, use the entry's full path
+  // For intermediate segments beyond tab-level, construct highlight param
+  if (segmentIndex === segments.length - 1) {
+    return entryPath;
+  }
+
+  // Intermediate deep segment (e.g. namespace in intents breadcrumb)
+  const tabSeg = segments[1];
+  if (root === 'Interfaces' && TAB_SEGMENTS[root]?.[tabSeg]) {
+    return `${TAB_SEGMENTS[root][tabSeg]}&highlight=${encodeURIComponent(seg)}`;
+  }
+
+  return entryPath;
+}
 
 /** Highlight matching substring in text */
 function highlightMatch(text: string, query: string): React.ReactNode {
@@ -162,6 +223,18 @@ export function GlobalSearch() {
     [isOpen, flatResults, activeIndex, handleSelect],
   );
 
+  // REQ-XW-123: Global Cmd+K / Ctrl+K hotkey to focus search
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        inputRef.current?.focus();
+      }
+    };
+    document.addEventListener('keydown', handler);
+    return () => document.removeEventListener('keydown', handler);
+  }, []);
+
   // Close on outside click
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -198,7 +271,7 @@ export function GlobalSearch() {
           ref={inputRef}
           className={styles.searchInput}
           type="text"
-          placeholder="Search tokens, components, icons, 2525..."
+          placeholder="Search... (Cmd+K)"
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
@@ -248,7 +321,26 @@ export function GlobalSearch() {
                           {highlightMatch(entry.name, debouncedQuery)}
                         </span>
                         <span className={styles.resultBreadcrumb}>
-                          {entry.breadcrumb}
+                          {(() => {
+                            const segments = entry.breadcrumb.split(' > ');
+                            return segments.map((seg, i) => (
+                              <span key={i}>
+                                {i > 0 && <span className={styles.breadcrumbSep}> &gt; </span>}
+                                <span
+                                  className={styles.breadcrumbLink}
+                                  onClick={(ev) => {
+                                    ev.stopPropagation();
+                                    navigate(breadcrumbSegmentPath(segments, i, entry.path));
+                                    setQuery('');
+                                    setIsOpen(false);
+                                    setActiveIndex(-1);
+                                  }}
+                                >
+                                  {seg}
+                                </span>
+                              </span>
+                            ));
+                          })()}
                         </span>
                       </div>
                     );

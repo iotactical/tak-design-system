@@ -1,6 +1,9 @@
 // rtmx:req REQ-XW-090
 // rtmx:req REQ-XW-113
+// rtmx:req REQ-XW-121
 import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { useHighlight } from '../hooks/useHighlight';
 import styles from './Interfaces.module.css';
 import externalInterfaces from '../../../data/tak-interfaces-external.json';
 import internalInterfaces from '../../../data/tak-interfaces-internal.json';
@@ -88,9 +91,20 @@ function filterIntentGroups(groups: IntentGroup[], query: string): IntentGroup[]
 }
 
 export default function Interfaces() {
+  const [searchParams] = useSearchParams();
+  const tabParam = searchParams.get('tab') as TabId | null;
+
   useEffect(() => { document.title = 'Interfaces - TAK Design System'; }, []);
+  useHighlight();
   const [query, setQuery] = useState('');
-  const [activeTab, setActiveTab] = useState<TabId>('external');
+  const [activeTab, setActiveTab] = useState<TabId>(tabParam && ['external', 'internal', 'intents'].includes(tabParam) ? tabParam : 'external');
+
+  // Sync tab from URL when search params change
+  useEffect(() => {
+    if (tabParam && ['external', 'internal', 'intents'].includes(tabParam)) {
+      setActiveTab(tabParam);
+    }
+  }, [tabParam]);
 
   const allExternal = externalInterfaces as ExternalInterface[];
   const allInternal = internalInterfaces as InternalInterface[];
@@ -136,7 +150,7 @@ export default function Interfaces() {
           ) : (
             <div className={styles.grid}>
               {filteredExternal.map((iface) => (
-                <div key={iface.name} className={styles.card}>
+                <div key={iface.name} className={styles.card} data-highlight={iface.name}>
                   <div className={styles.cardName}>{iface.name}</div>
                   <div className={styles.cardMeta}>
                     <span className={styles.badge}>{iface.protocol}</span>
@@ -160,7 +174,7 @@ export default function Interfaces() {
           ) : (
             <div className={styles.grid}>
               {filteredInternal.map((iface) => (
-                <div key={iface.name} className={styles.card}>
+                <div key={iface.name} className={styles.card} data-highlight={iface.name}>
                   <div className={styles.cardName}>{iface.name}</div>
                   <div className={styles.cardMeta}>
                     <span className={styles.badge}>{iface.mechanism}</span>
@@ -189,7 +203,7 @@ export default function Interfaces() {
                 <h3 className={styles.intentGroupTitle}>{group.namespace}</h3>
                 <div className={styles.grid}>
                   {group.intents.map((intent, idx) => (
-                    <div key={`${intent.action}-${idx}`} className={styles.card}>
+                    <div key={`${intent.action}-${idx}`} className={styles.card} data-highlight={intent.action}>
                       <div className={styles.cardName}>{intent.action}</div>
                       <div className={styles.cardMeta}>
                         <span className={

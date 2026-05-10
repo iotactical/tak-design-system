@@ -1,5 +1,8 @@
 // rtmx:req REQ-XW-100
+// rtmx:req REQ-XW-121
 import { useEffect, useState, useMemo } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { useHighlight } from '../hooks/useHighlight';
 import styles from './Explorer.module.css';
 import { MilSymRenderer } from '../components/MilSymRenderer';
 import bEntitiesData from '../../../data/mil-std-2525/b-entities.json';
@@ -194,7 +197,7 @@ function BrowsePanel() {
         )}
         <div className={styles.entityGrid}>
           {filteredEntities.map((entity) => (
-            <div key={entity.basic} className={styles.entityCard}>
+            <div key={entity.basic} className={styles.entityCard} data-highlight={entity.label}>
               <MilSymRenderer
                 sidc={buildSidc15(entity.basic, 'F')}
                 size={36}
@@ -869,8 +872,21 @@ function ComparePanel() {
 // ----- Main Component -----
 
 export default function Explorer() {
+  const [searchParams] = useSearchParams();
+  const tabParam = searchParams.get('tab') as TabId | null;
+
   useEffect(() => { document.title = '2525 Explorer - TAK Design System'; }, []);
-  const [activeTab, setActiveTab] = useState<TabId>('browse');
+  useHighlight();
+  const [activeTab, setActiveTab] = useState<TabId>(
+    tabParam && ['browse', 'decode', 'build', 'compare'].includes(tabParam) ? tabParam : 'browse',
+  );
+
+  // Sync tab from URL when search params change
+  useEffect(() => {
+    if (tabParam && ['browse', 'decode', 'build', 'compare'].includes(tabParam)) {
+      setActiveTab(tabParam);
+    }
+  }, [tabParam]);
 
   return (
     <div className={styles.container}>

@@ -1,6 +1,8 @@
 // rtmx:req REQ-XW-091
-import { Link } from 'react-router-dom';
+// rtmx:req REQ-XW-121
+import { Link, useSearchParams } from 'react-router-dom';
 import { useEffect, useState, type ReactNode } from 'react';
+import { useHighlight } from '../hooks/useHighlight';
 import styles from './Components.module.css';
 
 // Live component imports from source
@@ -407,7 +409,7 @@ const CATEGORY_TABS = componentGallery.map((g) => g.category);
 function ComponentCard({ component }: { component: ComponentInfo }) {
   const preview = previews[component.name];
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-highlight={component.name}>
       {preview && (
         <div className={styles.previewArea}>
           {preview}
@@ -433,8 +435,21 @@ function ComponentCard({ component }: { component: ComponentInfo }) {
 }
 
 export default function Components() {
+  const [searchParams] = useSearchParams();
+  const tabParam = searchParams.get('tab');
+
   useEffect(() => { document.title = 'Components - TAK Design System'; }, []);
-  const [activeTab, setActiveTab] = useState(CATEGORY_TABS[0]);
+  useHighlight();
+  const [activeTab, setActiveTab] = useState(
+    tabParam && CATEGORY_TABS.includes(tabParam) ? tabParam : CATEGORY_TABS[0],
+  );
+
+  // Sync tab from URL when search params change
+  useEffect(() => {
+    if (tabParam && CATEGORY_TABS.includes(tabParam)) {
+      setActiveTab(tabParam);
+    }
+  }, [tabParam]);
 
   const totalCount = componentGallery.reduce(
     (sum, group) => sum + group.components.length,

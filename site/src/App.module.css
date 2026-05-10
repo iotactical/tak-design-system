@@ -116,3 +116,13 @@
 .muted {
   color: #878787;
 }
+
+/* REQ-XW-121: highlight-flash animation for deep-link targets */
+:global(.highlight-flash) {
+  animation: highlightPulse 2s ease-out;
+}
+
+@keyframes highlightPulse {
+  0% { box-shadow: 0 0 0 4px #FFE35E; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}

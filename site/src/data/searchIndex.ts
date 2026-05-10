@@ -1,5 +1,6 @@
 // rtmx:req REQ-XW-110
 // rtmx:req REQ-XW-118
+// rtmx:req REQ-XW-121
 /**
  * Full taxonomy search index for GlobalSearch autocomplete.
  * Covers tokens, components, icons, 2525 entities, intents, interfaces, palettes, and BDD specs.
@@ -68,7 +69,7 @@ function buildTokenEntries(): SearchEntry[] {
     for (const { tokenPath, breadcrumb } of tokens) {
       entries.push({
         name: tokenPath,
-        path: '/colors',
+        path: `/colors?highlight=${encodeURIComponent(tokenPath)}`,
         breadcrumb,
         category: 'Tokens',
         description: `${source} token`,
@@ -115,7 +116,7 @@ function buildComponentEntries(): SearchEntry[] {
   return COMPONENTS.map((c) => ({
     name: c.name,
     category: 'Components' as SearchCategory,
-    path: '/components',
+    path: `/components?tab=${encodeURIComponent(c.layoutCategory)}&highlight=${encodeURIComponent(c.name)}`,
     breadcrumb: `Components > ${c.layoutCategory} > ${c.name}`,
     description: c.description,
   }));
@@ -128,7 +129,7 @@ function buildIconEntries(): SearchEntry[] {
   return catalog.map((entry) => ({
     name: entry.name,
     category: 'Icons' as SearchCategory,
-    path: '/icons',
+    path: `/icons?highlight=${encodeURIComponent(entry.name)}`,
     breadcrumb: `Icons > ${entry.category || 'other'} > ${entry.name}`,
     description: entry.category ? `${entry.category} drawable` : 'ATAK drawable',
   }));
@@ -233,7 +234,7 @@ function build2525Entries(): SearchEntry[] {
     return {
       name: e.label,
       category: '2525' as SearchCategory,
-      path: '/explorer',
+      path: `/explorer?tab=browse&highlight=${encodeURIComponent(e.label)}`,
       breadcrumb: `2525 > ${ssName} > ${e.label}`,
       description: `SIDC ${e.basic}`,
     };
@@ -253,7 +254,7 @@ function buildIntentEntries(): SearchEntry[] {
       entries.push({
         name: shortAction,
         category: 'Interfaces',
-        path: '/interfaces',
+        path: `/interfaces?tab=intents&highlight=${encodeURIComponent(intent.action)}`,
         breadcrumb: `Interfaces > Intents > ${group.namespace} > ${shortAction}`,
         description: intent.description || `Intent in ${group.namespace}`,
       });

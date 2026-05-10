@@ -159,13 +159,26 @@
   color: #B0BEC5;
 }
 
+/* REQ-XW-122: breadcrumb always fully visible, segments clickable */
 .resultBreadcrumb {
   font-size: 10px;
   color: #666;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 260px;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.breadcrumbSep {
+  color: #555;
+}
+
+.breadcrumbLink {
+  cursor: pointer;
+  transition: color 0.15s, text-decoration 0.15s;
+}
+
+.breadcrumbLink:hover {
+  text-decoration: underline;
+  color: #FFE35E;
 }
 
 .emptyState {
