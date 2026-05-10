@@ -1,127 +1,87 @@
 // rtmx:req REQ-XW-085
-import { useEffect, useRef, useState, useMemo } from 'react';
+import { useMemo } from 'react';
+import manifest from '../../../data/2525-svg-manifest.json';
 
 export interface MilSymRendererProps {
-  /** 15-char (B/C) or 20-char (D/E) Symbol Identification Code */
+  /** The raw entity basic SIDC pattern (e.g. "S*A*MF----*****") */
   sidc: string;
   /** Pixel size of the rendered symbol (default 50) */
   size?: number;
-  /** Optional text modifiers */
-  modifiers?: Record<string, string>;
+  /** Affiliation: friendly, hostile, neutral, unknown (default friendly) */
+  affiliation?: 'friendly' | 'hostile' | 'neutral' | 'unknown';
   /** Optional label to display below the frame */
   label?: string;
 }
 
-// Lazy-load mil-sym-ts only once
-let milSymModule: any = null;
-let milSymLoading = false;
-let milSymCallbacks: (() => void)[] = [];
+const BASE = import.meta.env.BASE_URL;
+const svgManifest = manifest as Record<string, Record<string, string>>;
 
-function loadMilSym(): Promise<void> {
-  if (milSymModule) return Promise.resolve();
-  if (milSymLoading) {
-    return new Promise((resolve) => { milSymCallbacks.push(resolve); });
+/** Map affiliation character to directory name */
+function charToAffiliation(ch: string): string {
+  switch (ch) {
+    case 'F': case '3': case '2': return 'friendly';
+    case 'H': case '6': return 'hostile';
+    case 'N': case '4': return 'neutral';
+    default: return 'unknown';
   }
-  milSymLoading = true;
-  return import('@armyc2.c5isr.renderer/mil-sym-ts-web').then((mod) => {
-    milSymModule = mod;
-    milSymLoading = false;
-    milSymCallbacks.forEach((cb) => cb());
-    milSymCallbacks = [];
-  }).catch((err) => {
-    console.warn('mil-sym-ts failed to load:', err);
-    milSymLoading = false;
-  });
 }
 
-export function MilSymRenderer({ sidc, size = 50, modifiers, label }: MilSymRendererProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [loaded, setLoaded] = useState(!!milSymModule);
-  const [svgContent, setSvgContent] = useState<string | null>(null);
+export function MilSymRenderer({ sidc, size = 50, affiliation }: MilSymRendererProps) {
+  const imgSrc = useMemo(() => {
+    if (!sidc || sidc.length < 10) return null;
 
-  // Load mil-sym-ts on first render
-  useEffect(() => {
-    if (!milSymModule) {
-      loadMilSym().then(() => setLoaded(true));
+    // Determine affiliation from prop or SIDC character
+    let aff = affiliation;
+    if (!aff) {
+      const ch = sidc.length >= 20 ? sidc.charAt(2) : (sidc.length >= 2 ? sidc.charAt(1) : 'U');
+      aff = charToAffiliation(ch) as typeof affiliation;
     }
-  }, []);
+    const affDir = aff || 'friendly';
 
-  // Render the symbol when SIDC or module changes
-  useEffect(() => {
-    if (!loaded || !milSymModule || !sidc || sidc.length < 10) {
-      setSvgContent(null);
-      return;
-    }
-
-    try {
-      const { MilStdIconRenderer, MilStdAttributes, RendererSettings } = milSymModule;
-
-      const rs = RendererSettings.getInstance();
-      rs.setDefaultPixelSize(size);
-
-      const renderer = MilStdIconRenderer.getInstance();
-      if (!renderer.isReady()) {
-        // Renderer needs a tick to initialize
-        setTimeout(() => {
-          try {
-            const attrs = new Map();
-            attrs.set(MilStdAttributes.PixelSize, size);
-            const result = renderer.RenderSVG(sidc, attrs);
-            if (result) {
-              setSvgContent(result.getSVG());
-            }
-          } catch (e) {
-            console.warn('mil-sym-ts render error:', e);
-          }
-        }, 100);
-        return;
+    // Try manifest lookup first (most reliable)
+    // The manifest key is the raw entity.basic pattern with wildcards
+    const affManifest = svgManifest[affDir];
+    if (affManifest) {
+      // Try exact match
+      if (affManifest[sidc]) {
+        return `${BASE}2525/${affDir}/${affManifest[sidc]}`;
       }
-
-      const attrs = new Map();
-      attrs.set(MilStdAttributes.PixelSize, size);
-
-      if (modifiers) {
-        for (const [key, value] of Object.entries(modifiers)) {
-          attrs.set(key, value);
+      // Try reconstructing the basic pattern by replacing affiliation back to *
+      let basicPattern = sidc;
+      if (sidc.length === 15) {
+        basicPattern = sidc.charAt(0) + '*' + sidc.substring(2);
+        // Also restore position 3 status to *
+        if (basicPattern.charAt(3) === 'P' || basicPattern.charAt(3) === 'A') {
+          basicPattern = basicPattern.substring(0, 3) + '*' + basicPattern.substring(4);
         }
+        // Restore trailing dashes to *****
+        basicPattern = basicPattern.substring(0, 10) + '*****';
       }
-
-      const result = renderer.RenderSVG(sidc, attrs);
-      if (result) {
-        setSvgContent(result.getSVG());
+      if (affManifest[basicPattern]) {
+        return `${BASE}2525/${affDir}/${affManifest[basicPattern]}`;
       }
-    } catch (e) {
-      console.warn('mil-sym-ts render failed for SIDC:', sidc, e);
-      setSvgContent(null);
     }
-  }, [loaded, sidc, size, modifiers]);
 
-  // Fallback: show simplified frame if mil-sym-ts hasn't loaded
-  const fallbackSvg = useMemo(() => {
-    if (svgContent) return null;
-    const affChar = sidc.length >= 20 ? sidc.charAt(2) : (sidc.length >= 2 ? sidc.charAt(1) : '0');
-    const colors: Record<string, { fill: string; stroke: string }> = {
-      '3': { fill: '#80C0FF', stroke: '#006BE6' }, // Friendly
-      'F': { fill: '#80C0FF', stroke: '#006BE6' },
-      '6': { fill: '#FF8080', stroke: '#C80000' }, // Hostile
-      'H': { fill: '#FF8080', stroke: '#C80000' },
-      '4': { fill: '#AAFFAA', stroke: '#00A000' }, // Neutral
-      'N': { fill: '#AAFFAA', stroke: '#00A000' },
-      '1': { fill: '#FFFF80', stroke: '#C8C800' }, // Unknown
-      'U': { fill: '#FFFF80', stroke: '#C8C800' },
-    };
-    const c = colors[affChar] || { fill: '#FFFF80', stroke: '#C8C800' };
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
-      <rect x="4" y="4" width="${size - 8}" height="${size - 8}" rx="3" fill="${c.fill}" stroke="${c.stroke}" stroke-width="2"/>
-      <text x="${size / 2}" y="${size / 2 + 3}" text-anchor="middle" font-size="8" fill="${c.stroke}" font-family="sans-serif">?</text>
-    </svg>`;
-  }, [sidc, size, svgContent]);
+    // Fallback: construct filename directly
+    let cleanSidc = sidc.replace(/[^A-Za-z0-9-]/g, '_');
+    return `${BASE}2525/${affDir}/${cleanSidc}.svg`;
+  }, [sidc, affiliation]);
+
+  if (!imgSrc) {
+    return <div style={{ width: size, height: size }} />;
+  }
 
   return (
-    <div
-      ref={containerRef}
-      style={{ width: size, height: size, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
-      dangerouslySetInnerHTML={{ __html: svgContent || fallbackSvg || '' }}
+    <img
+      src={imgSrc}
+      alt={sidc}
+      width={size}
+      height={size}
+      loading="lazy"
+      style={{ objectFit: 'contain' }}
+      onError={(e) => {
+        (e.target as HTMLImageElement).style.display = 'none';
+      }}
     />
   );
 }

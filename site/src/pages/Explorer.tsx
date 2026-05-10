@@ -121,7 +121,12 @@ const TABS: { id: TabId; label: string }[] = [
 
 function buildSidc15(basic: string, affiliationChar: string): string {
   if (!basic || basic.length < 2) return basic;
-  return basic.charAt(0) + affiliationChar + basic.substring(2);
+  let sidc = basic.charAt(0) + affiliationChar + basic.substring(2);
+  if (sidc.charAt(3) === '*') {
+    sidc = sidc.substring(0, 3) + 'P' + sidc.substring(4);
+  }
+  sidc = sidc.replace(/\*/g, '-');
+  return sidc;
 }
 
 function buildDSidc(mapping: B2DMapping, si: string): string {
@@ -199,7 +204,7 @@ function BrowsePanel() {
           {filteredEntities.map((entity) => (
             <div key={entity.basic} className={styles.entityCard} data-highlight={entity.label}>
               <MilSymRenderer
-                sidc={buildSidc15(entity.basic, 'F')}
+                sidc={entity.basic} affiliation="friendly"
                 size={36}
               />
               <div className={styles.entityLabel} title={entity.label}>

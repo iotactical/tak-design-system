@@ -36,5 +36,9 @@
   },
   "devDependencies": {
     "style-dictionary": "^4.0.0"
+  },
+  "dependencies": {
+    "@armyc2.c5isr.renderer/mil-sym-ts": "^2.8.3",
+    "canvas": "^3.2.3"
   }
 }

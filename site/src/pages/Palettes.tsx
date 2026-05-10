@@ -243,7 +243,15 @@ interface B2DMapping {
  */
 function buildSidc15(basic: string, affiliationChar: string): string {
   if (!basic || basic.length < 2) return basic;
-  return basic.charAt(0) + affiliationChar + basic.substring(2);
+  // Replace wildcards: pos 1=affiliation, pos 3=status(P=present), rest with dashes
+  let sidc = basic.charAt(0) + affiliationChar + basic.substring(2);
+  // Position 3 (status): replace * with P (present)
+  if (sidc.charAt(3) === '*') {
+    sidc = sidc.substring(0, 3) + 'P' + sidc.substring(4);
+  }
+  // Replace remaining * with - (standard padding)
+  sidc = sidc.replace(/\*/g, '-');
+  return sidc;
 }
 
 /**
@@ -392,7 +400,7 @@ function MarkersPanel() {
                   {entities.map((entity) => (
                     <div key={entity.basic} className={styles.markerCard}>
                       <MilSymRenderer
-                        sidc={buildSidc15(entity.basic, affiliation.siChar15)}
+                        sidc={entity.basic} affiliation={affiliation.key === "F" ? "friendly" : affiliation.key === "H" ? "hostile" : affiliation.key === "N" ? "neutral" : "unknown"}
                         size={36}
                       />
                       <div className={styles.markerLabel} title={`${entity.label}\n${entity.basic}`}>
