@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="40" height="40" viewBox="0 0 40 40">
+<desc>20 20 0 0 40 40 0 0 40 40</desc>
+<metadata>
+<symbolID>10064500001104040000</symbolID>
+<anchor>20 20</anchor>
+<symbolBounds>0 0 40 40</symbolBounds>
+<imageBounds>0 0 40 40</imageBounds>
+</metadata>
+<g transform="translate(-1.9889502762430937,-1.9889502762430937) scale(0.11049723756906077,0.11049723756906077)"><g id="45110404">        <line fill="none" stroke="#000000" stroke-width="15" x1="24" x2="104" y1="374" y2="294"/>        <line fill="none" stroke="#000000" stroke-width="15" x1="154" x2="244" y1="244" y2="154"/>        <line fill="none" stroke="#000000" stroke-width="15" x1="294" x2="374" y1="104" y2="24"/>        <polyline fill="none" points="129,229 149,289 89,269  " stroke="#000000" stroke-linejoin="bevel" stroke-width="15"/>        <polyline fill="none" points="229,129 289,149 269,89  " stroke="#000000" stroke-linejoin="bevel" stroke-width="15"/>    </g></g>
+</svg></svg>

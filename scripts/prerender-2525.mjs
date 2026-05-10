@@ -48,7 +48,7 @@ for (const aff of affiliations) {
   for (const mapping of mappings) {
     // Build 20-char D SIDC: version(10) + SI(2chars) + SS(2) + status(0) + hqtffd(0) + echelon(00) + entity(6) + s1(2) + s2(2)
     const version = '10';
-    const si = aff.si + '0'; // SI is 2 chars: affiliation + context(0=reality)
+    const si = '0' + aff.si; // 2 chars: context(0=reality) + affiliation
     const ss = mapping.d_ss.padStart(2, '0');
     const status = '0';
     const hqtffd = '0';

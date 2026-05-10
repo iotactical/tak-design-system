@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="40" height="40" viewBox="0 0 40 40">
+<desc>20 20 0 0 40 40 0 0 40 40</desc>
+<metadata>
+<symbolID>10034500001620040000</symbolID>
+<anchor>20 20</anchor>
+<symbolBounds>0 0 40 40</symbolBounds>
+<imageBounds>0 0 40 40</imageBounds>
+</metadata>
+<g transform="translate(-4.2105263157894735,-2.1052631578947367) scale(0.11080332409972299,0.11080332409972299)"><g id="45162004">        <g>                <circle cx="200.5" cy="182" fill="none" r="40" stroke="#C61021" stroke-width="5"/>                <path d="M337.5,45c78,78,78,196,0,274s-196,78-274,0l24-24c-62-62-62-164,0-226    s164-62,226,0L337.5,45z" fill="none" stroke="#C61021" stroke-width="5"/>                <path d="M271.5,111c39,39,39,103,0,142s-103,39-142,0l18-18c-31-31-31-75,0-106    s75-31,106,0L271.5,111z" fill="none" stroke="#FF00FF" stroke-width="5"/>                <line fill="#231F20" stroke="#231F20" stroke-width="4" x1="190.5" x2="65.5" y1="172" y2="67"/>                <g>                        <rect fill="none" height="27.77" stroke="#000000" stroke-linecap="round" stroke-miterlimit="8" stroke-width="1.5065" width="26.391" x="39.403" y="39.146"/>                        <text font-family="sans-serif" font-size="20.2511" x="42" y="61">W</text>                    </g>            </g>        <g transform="scale(0.175 0.175) translate(940 943)">                <path d="M150.642,126.121C102.255,38.51,196.847-69.348,266.518-91.647    c0,0-50.614,75.067-50.882,117.718" fill="#C61021" stroke="#C61021" stroke-width="5"/>                <path d="M281.345,67.879c48.393,87.606-46.205,195.472-115.876,217.771    c0,0,50.614-75.067,50.882-117.72" fill="#C61021" stroke="#C61021" stroke-width="5"/>                <circle cx="215.993" cy="97.003" fill="#C61021" r="70" stroke="#C61021" stroke-width="10"/>            </g>    </g></g>
+</svg></svg>
