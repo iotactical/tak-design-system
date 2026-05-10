@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 /**
  * Pre-render MIL-STD-2525 symbols to static SVG files using mil-sym-ts (Node).
- * Generates SVGs for all 1,915 entities across 4 affiliations.
+ * Uses 20-char D-format SIDCs for proper rendering with entity icons.
+ * Maps B/C entities to their D equivalents via crosswalk.
  */
 
 import { createRequire } from 'module';
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -13,56 +14,72 @@ const require = createRequire(import.meta.url);
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 
-// Load mil-sym-ts
 const milsym = require('@armyc2.c5isr.renderer/mil-sym-ts');
 const { MilStdIconRenderer, MilStdAttributes, RendererSettings } = milsym;
 
 const rs = RendererSettings.getInstance();
 rs.setDefaultPixelSize(50);
-
 const renderer = MilStdIconRenderer.getInstance();
 console.log('mil-sym-ts ready:', renderer.isReady());
 
-// Load entity data
-const entities = JSON.parse(readFileSync(resolve(ROOT, 'data/mil-std-2525/b-entities.json'), 'utf8')).entities;
-console.log(`Rendering ${entities.length} entities...`);
+// Load crosswalk: B entities -> D mapping
+const b2dData = JSON.parse(readFileSync(resolve(ROOT, 'data/mil-std-2525/b2d.json'), 'utf8'));
+const mappings = b2dData.mappings;
+console.log(`Processing ${mappings.length} B-to-D mappings...`);
 
 const affiliations = [
-  { char15: 'F', char20: '3', name: 'friendly' },
-  { char15: 'H', char20: '6', name: 'hostile' },
-  { char15: 'N', char20: '4', name: 'neutral' },
-  { char15: 'U', char20: '1', name: 'unknown' },
+  { si: '3', name: 'friendly' },   // Friend
+  { si: '6', name: 'hostile' },    // Hostile
+  { si: '4', name: 'neutral' },    // Neutral
+  { si: '1', name: 'unknown' },    // Unknown
 ];
 
 const outDir = resolve(ROOT, 'site/public/2525');
-mkdirSync(outDir, { recursive: true });
 
 let rendered = 0;
 let failed = 0;
+const manifest = {};
 
 for (const aff of affiliations) {
   const affDir = resolve(outDir, aff.name);
   mkdirSync(affDir, { recursive: true });
+  manifest[aff.name] = {};
 
-  for (const entity of entities) {
-    // Build a clean 15-char SIDC
-    let sidc = entity.basic;
-    sidc = sidc.charAt(0) + aff.char15 + sidc.substring(2);
-    if (sidc.charAt(3) === '*') sidc = sidc.substring(0, 3) + 'P' + sidc.substring(4);
-    sidc = sidc.replace(/\*/g, '-');
+  for (const mapping of mappings) {
+    // Build 20-char D SIDC: version(10) + SI(2chars) + SS(2) + status(0) + hqtffd(0) + echelon(00) + entity(6) + s1(2) + s2(2)
+    const version = '10';
+    const si = aff.si + '0'; // SI is 2 chars: affiliation + context(0=reality)
+    const ss = mapping.d_ss.padStart(2, '0');
+    const status = '0';
+    const hqtffd = '0';
+    const echelon = '00';
+    const entity = mapping.d_ec.padStart(6, '0');
+    const s1 = (mapping.d_s1 || '00').padStart(2, '0');
+    const s2 = (mapping.d_s2 || '00').padStart(2, '0');
+    const sidc = `${version}${si}${ss}${status}${hqtffd}${echelon}${entity}${s1}${s2}`;
 
-    const filename = sidc.replace(/[^A-Za-z0-9-]/g, '_') + '.svg';
-    const outPath = resolve(affDir, filename);
+    // Use B basic pattern as the manifest key (for lookup from both B/C and D/E views)
+    const bKey = mapping.b_sidc;
+    const dKey = `${mapping.d_ss}-${mapping.d_ec}`;
+    const filename = `${sidc}.svg`;
 
     try {
       const attrs = new Map();
-      attrs.set(MilStdAttributes.PixelSize, '50');
-      attrs.set(MilStdAttributes.DrawAsIcon, 'true');
+      attrs.set('PIXELSIZE', '50');
+      attrs.set('DRAWASICON', 'true');
 
       const result = renderer.RenderSVG(sidc, attrs);
       if (result && result.getSVG) {
-        writeFileSync(outPath, result.getSVG());
+        const ib = result.getImageBounds();
+        const w = ib ? ib.getWidth() : 50;
+        const h = ib ? ib.getHeight() : 50;
+        const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">${result.getSVG()}</svg>`;
+        writeFileSync(resolve(affDir, filename), svgContent);
         rendered++;
+
+        // Map both B-format key and D-format key to the same filename
+        manifest[aff.name][bKey] = filename;
+        manifest[aff.name][dKey] = filename;
       } else {
         failed++;
       }
@@ -73,20 +90,5 @@ for (const aff of affiliations) {
 }
 
 console.log(`Done: ${rendered} rendered, ${failed} failed`);
-console.log(`Output: ${outDir}`);
-
-// Write a manifest mapping SIDC -> SVG filename
-const manifest = {};
-for (const aff of affiliations) {
-  manifest[aff.name] = {};
-  for (const entity of entities) {
-    let sidc = entity.basic;
-    sidc = sidc.charAt(0) + aff.char15 + sidc.substring(2);
-    if (sidc.charAt(3) === '*') sidc = sidc.substring(0, 3) + 'P' + sidc.substring(4);
-    sidc = sidc.replace(/\*/g, '-');
-    const filename = sidc.replace(/[^A-Za-z0-9-]/g, '_') + '.svg';
-    manifest[aff.name][entity.basic] = filename;
-  }
-}
 writeFileSync(resolve(ROOT, 'data/2525-svg-manifest.json'), JSON.stringify(manifest, null, 2));
-console.log('Manifest written to data/2525-svg-manifest.json');
+console.log('Manifest written with both B-key and D-key lookups');

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="36.79083094555874" viewBox="0 0 40 36.79083094555874"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="40" height="36.79083094555874" viewBox="0 0 40 36.79083094555874">
+<desc>20 18 0 0 40 36.79083094555874 0 0 40 36.79083094555874</desc>
+<metadata>
+<symbolID>10602500001716000000</symbolID>
+<anchor>20 18</anchor>
+<symbolBounds>0 0 40 36.79083094555874</symbolBounds>
+<imageBounds>0 0 40 36.79083094555874</imageBounds>
+</metadata>
+<g transform="translate(-4.469914040114613,-3.7822349570200577) scale(0.11461318051575932,0.11461318051575932)"><g id="25171600" transform="translate(-290 -280) scale(2 2)">        <text font-family="sans-serif" font-size="24" transform="matrix(0.5 0 0 0.5 174.3938 222.5581)">MIN ALT:</text>        <text font-family="sans-serif" font-size="24" transform="matrix(0.5 0 0 0.5 174.5647 246.3232)">MAX ALT:</text>        <text font-family="sans-serif" font-size="24" transform="matrix(0.5 0 0 0.5 173.5408 277.1113)">TIME FROM:</text>        <text font-family="sans-serif" font-size="24" transform="matrix(0.5 0 0 0.5 174.9646 300.1699)">TIME TO:</text>        <text font-family="sans-serif" font-size="24" transform="matrix(0.5 0 0 0.5 175.8821 182.1113)">MEZ</text>        <polygon fill="none" points="167.882,314.312 167.482,159.511 295.927,161.661 335.927,244.223    309.427,314.312  " stroke="#FFFF00" stroke-width="5"/>    </g></g>
+</svg></svg>
