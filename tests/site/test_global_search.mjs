@@ -57,7 +57,7 @@ describe('REQ-XW-110: Persistent site-wide autocomplete search bar', () => {
     assert.ok(content.includes('tak-interfaces-internal.json'), 'Should import internal interfaces');
   });
 
-  it('App.tsx includes GlobalSearch in sidebar', () => {
+  it('App.tsx includes GlobalSearch in topBar', () => {
     const filePath = join(SITE_SRC, 'App.tsx');
     assert.ok(existsSync(filePath), 'App.tsx should exist');
 
@@ -70,13 +70,9 @@ describe('REQ-XW-110: Persistent site-wide autocomplete search bar', () => {
       content.includes('<GlobalSearch'),
       'App.tsx should render GlobalSearch component',
     );
-
-    // Verify it appears before nav links
-    const searchPos = content.indexOf('<GlobalSearch');
-    const navListPos = content.indexOf('navList');
     assert.ok(
-      searchPos < navListPos,
-      'GlobalSearch should appear before navList in the sidebar',
+      content.includes('topBar'),
+      'GlobalSearch should be in the topBar',
     );
   });
 

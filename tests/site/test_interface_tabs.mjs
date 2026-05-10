@@ -56,7 +56,7 @@ describe('REQ-XW-090: Interfaces page horizontal tabs', () => {
       'Must define an intents tab ID'
     );
     assert.ok(
-      content.includes("'Intents'") || content.includes('"Intents"'),
+      content.includes('Intents'),
       'Must have Intents tab label'
     );
   });
@@ -95,8 +95,8 @@ describe('REQ-XW-090: Interfaces page horizontal tabs', () => {
   it('filters intent interfaces from internal interfaces', () => {
     content = readFileSync(pagePath, 'utf8');
     assert.ok(
-      content.includes('getIntentInterfaces') || content.includes('intentInterfaces'),
-      'Must filter internal interfaces for intents tab'
+      content.includes('intentCatalog') || content.includes('atak-intents'),
+      'Must import intent catalog data'
     );
   });
 

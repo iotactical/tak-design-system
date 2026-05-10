@@ -830,8 +830,8 @@ function ComparePanel() {
         />
       </div>
       {results.map((mapping) => {
-        const bSidc = buildSidc15(mapping.b_sidc, 'F');
-        const dSidc = buildDSidc(mapping, '30');
+        const dKey = `${mapping.d_ss}-${mapping.d_ec}`;
+        const dSidc = buildDSidc(mapping, '03');
         return (
           <div key={mapping.b_sidc} style={{ marginBottom: 24 }}>
             <div style={{ fontSize: 14, fontWeight: 600, color: '#DAD4BC', marginBottom: 8 }}>
@@ -840,22 +840,22 @@ function ComparePanel() {
             <div className={styles.compareGrid}>
               <div className={styles.compareCard}>
                 <span className={styles.compareVersion}>2525B</span>
-                <MilSymRenderer sidc={bSidc} size={48} />
-                <span className={styles.compareSidc}>{bSidc}</span>
+                <MilSymRenderer sidc={mapping.b_sidc} affiliation="friendly" size={48} />
+                <span className={styles.compareSidc}>{mapping.b_sidc}</span>
               </div>
               <div className={styles.compareCard}>
                 <span className={styles.compareVersion}>2525C</span>
-                <MilSymRenderer sidc={bSidc} size={48} />
-                <span className={styles.compareSidc}>{bSidc}</span>
+                <MilSymRenderer sidc={mapping.b_sidc} affiliation="friendly" size={48} />
+                <span className={styles.compareSidc}>{mapping.b_sidc}</span>
               </div>
               <div className={styles.compareCard}>
                 <span className={styles.compareVersion}>2525D</span>
-                <MilSymRenderer sidc={dSidc} size={48} />
+                <MilSymRenderer sidc={dKey} affiliation="friendly" size={48} />
                 <span className={styles.compareSidc}>{dSidc}</span>
               </div>
               <div className={styles.compareCard}>
                 <span className={styles.compareVersion}>2525E</span>
-                <MilSymRenderer sidc={dSidc} size={48} />
+                <MilSymRenderer sidc={dKey} affiliation="friendly" size={48} />
                 <span className={styles.compareSidc}>{dSidc}</span>
               </div>
             </div>

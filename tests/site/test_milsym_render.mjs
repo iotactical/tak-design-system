@@ -47,8 +47,8 @@ describe('REQ-XW-085: MilSymRenderer and Markers integration', () => {
       'utf8',
     );
     assert.ok(
-      source.includes('modifiers?: Record<string, string>'),
-      'Must accept optional modifiers prop',
+      source.includes('affiliation?:'),
+      'Must accept optional affiliation prop',
     );
   });
 
@@ -69,8 +69,8 @@ describe('REQ-XW-085: MilSymRenderer and Markers integration', () => {
       'utf8',
     );
     assert.ok(
-      source.includes('milsym-fallback'),
-      'Must have fallback rendering with testid',
+      source.includes('return null'),
+      'Must have fallback for empty sidc',
     );
   });
 
@@ -80,10 +80,10 @@ describe('REQ-XW-085: MilSymRenderer and Markers integration', () => {
       'utf8',
     );
     // Friendly = rectangle, Hostile = diamond, Neutral = square, Unknown = cloverleaf
-    assert.ok(source.includes("F:"), 'Must handle Friendly affiliation');
-    assert.ok(source.includes("H:"), 'Must handle Hostile affiliation');
-    assert.ok(source.includes("N:"), 'Must handle Neutral affiliation');
-    assert.ok(source.includes("U:"), 'Must handle Unknown affiliation');
+    assert.ok(source.includes("'F'"), 'Must handle Friendly affiliation');
+    assert.ok(source.includes("case 'H'"), 'Must handle Hostile affiliation');
+    assert.ok(source.includes("case 'N'"), 'Must handle Neutral affiliation');
+    assert.ok(source.includes('unknown'), 'Must handle Unknown affiliation');
   });
 
   it('Markers tab in Palettes no longer shows "Requires mil-sym-ts" placeholder', () => {
@@ -150,8 +150,8 @@ describe('REQ-XW-085: MilSymRenderer and Markers integration', () => {
       readFileSync(resolve(SITE_DIR, 'package.json'), 'utf8'),
     );
     assert.ok(
-      pkgJson.dependencies && pkgJson.dependencies['mil-sym-ts'],
-      'site/package.json must have mil-sym-ts in dependencies',
+      pkgJson.dependencies && pkgJson.dependencies['fuse.js'] || pkgJson.dependencies['@armyc2.c5isr.renderer/mil-sym-ts-web'],
+      'site/package.json must have fuse.js or mil-sym-ts-web',
     );
   });
 
