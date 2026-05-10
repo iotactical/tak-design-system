@@ -1,0 +1,10 @@
+{
+  "versions": [
+    { "id": "base", "name": "MIL-STD-2525 Base", "year": 1981, "entityCount": null, "source": "PDF extraction pending" },
+    { "id": "a", "name": "MIL-STD-2525A", "year": 1996, "entityCount": null, "source": "PDF extraction pending" },
+    { "id": "b", "name": "MIL-STD-2525B", "year": 1999, "entityCount": 1915, "source": "c2d-reference.json (NGA)" },
+    { "id": "c", "name": "MIL-STD-2525C", "year": 2008, "entityCount": 1915, "source": "c2d-reference.json (NGA)" },
+    { "id": "d", "name": "MIL-STD-2525D", "year": 2014, "entityCount": 2114, "source": "msd.json (mil-sym-ts)" },
+    { "id": "e", "name": "MIL-STD-2525E", "year": 2021, "entityCount": 2192, "source": "mse.json (mil-sym-ts)" }
+  ]
+}

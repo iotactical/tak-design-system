@@ -6,3 +6,4 @@ platforms/web/generated/
 platforms/vscode/generated/
 packages/react/dist/
 .DS_Store
+data/mil-std-2525/raw/
