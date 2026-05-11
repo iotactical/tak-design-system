@@ -47,14 +47,25 @@ export function MilSymRenderer({ sidc, size = 50, affiliation }: MilSymRendererP
       return `${BASE}2525/${affDir}/${affManifest[sidc]}`;
     }
 
-    // 2. For 20-char SIDCs: try direct filename match
+    // 2. For 20-char SIDCs: try D-key format "ss-entity" in manifest, then direct file
     if (sidc.length === 20) {
-      return `${BASE}2525/${affDir}/${sidc}.svg`;
+      const ss = sidc.substring(4, 6);
+      const entity = sidc.substring(10, 16);
+      const dKey = `${ss}-${entity}`;
+      if (affManifest[dKey]) {
+        return `${BASE}2525/${affDir}/${affManifest[dKey]}`;
+      }
+      // Try exact filename
+      if (affManifest[sidc] !== undefined) {
+        return `${BASE}2525/${affDir}/${affManifest[sidc]}`;
+      }
+      // Try pre-rendered file directly (only if we know it exists via manifest)
+      return null;
     }
 
     // 3. For 15-char SIDCs: reconstruct B-pattern by replacing affiliation/status with wildcards
     if (sidc.length === 15) {
-      let pattern = sidc.charAt(0) + '*' + sidc.charAt(2) + '*' + sidc.substring(4, 10) + '*****';
+      const pattern = sidc.charAt(0) + '*' + sidc.charAt(2) + '*' + sidc.substring(4, 10) + '*****';
       if (affManifest[pattern]) {
         return `${BASE}2525/${affDir}/${affManifest[pattern]}`;
       }
@@ -66,9 +77,10 @@ export function MilSymRenderer({ sidc, size = 50, affiliation }: MilSymRendererP
   // Determine symbol category for fallback icon
   const fallbackIcon = useMemo(() => {
     if (!sidc || sidc.length < 3) return null;
+
+    // B/C format (15-char): check position 0
     const ch = sidc.charAt(0);
     if (ch === 'W') {
-      // METOC: WO=Oceanographic, WA=Atmospheric, WS=Space
       const dim = sidc.charAt(1);
       if (dim === 'O') return { label: 'OCN', color: '#2196F3' };
       if (dim === 'A') return { label: 'ATM', color: '#FF9800' };
@@ -76,8 +88,18 @@ export function MilSymRenderer({ sidc, size = 50, affiliation }: MilSymRendererP
       return { label: 'MET', color: '#607D8B' };
     }
     if (ch === 'G') {
-      return { label: 'TG', color: '#4CAF50' }; // Tactical Graphics / Control Measures
+      return { label: 'TG', color: '#4CAF50' };
     }
+
+    // D/E format (20-char): check symbol set at positions 5-6
+    if (sidc.length === 20) {
+      const ss = sidc.substring(4, 6);
+      if (ss === '25') return { label: 'TG', color: '#4CAF50' };
+      if (ss === '45') return { label: 'ATM', color: '#FF9800' };
+      if (ss === '46') return { label: 'OCN', color: '#2196F3' };
+      if (ss === '47') return { label: 'SPC', color: '#9C27B0' };
+    }
+
     return null;
   }, [sidc]);
 

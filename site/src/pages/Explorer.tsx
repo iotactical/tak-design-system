@@ -133,7 +133,8 @@ function buildSidc15(basic: string, affiliationChar: string): string {
 }
 
 function buildDSidc(mapping: B2DMapping, si: string): string {
-  return `10${si}0${mapping.d_ss}${mapping.d_ec}${mapping.d_s1}${mapping.d_s2}00`;
+  // 20-char: version(2) + context(1) + SI(1) + SS(2) + status(1) + HQ(1) + echelon(2) + entity(6) + mod1(2) + mod2(2)
+  return `100${si}${mapping.d_ss}0000${mapping.d_ec}${mapping.d_s1}${mapping.d_s2}`;
 }
 
 // ----- Data -----
@@ -170,7 +171,8 @@ function findB2DMapping(entity: BEntity): B2DMapping | undefined {
 }
 
 function buildDSidcFromEntity(entity: BEntity, si: string, s1: string, s2: string): string {
-  return `10${si}0${entity.ss}00${entity.ec}${s1}${s2}`;
+  // 20-char: version(2) + context(1) + SI(1) + SS(2) + status(1) + HQ(1) + echelon(2) + entity(6) + mod1(2) + mod2(2)
+  return `100${si}${entity.ss}0000${entity.ec}${s1}${s2}`;
 }
 
 // ----- Modifier Inspector -----
@@ -468,7 +470,7 @@ function DecodePanel() {
         return true;
       });
       if (mapping) {
-        const dSidc = buildDSidc(mapping, '30');
+        const dSidc = buildDSidc(mapping, '3');
         return { bSidc: sidc, dSidc, label: mapping.label };
       }
     }
@@ -633,8 +635,9 @@ function BuildPanel() {
     newHqtffd: string, newEchelon: string, newEc: string,
     newMod1: string, newMod2: string
   ) {
-    const newD = `10${newSi}${newStatus}${newSs}${newHqtffd}${newEchelon}${newEc}${newMod1}${newMod2}`;
-    const newE = `15${newSi}${newStatus}${newSs}${newHqtffd}${newEchelon}${newEc}${newMod1}${newMod2}`;
+    // 20-char SIDC: version(2) + context(1) + SI(1) + SS(2) + status(1) + HQ(1) + echelon(2) + entity(6) + mod1(2) + mod2(2)
+    const newD = `100${newSi}${newSs}${newStatus}${newHqtffd}${newEchelon}${newEc}${newMod1}${newMod2}`;
+    const newE = `150${newSi}${newSs}${newStatus}${newHqtffd}${newEchelon}${newEc}${newMod1}${newMod2}`;
     setDSidc(newD);
     setESidc(newE);
 
@@ -1066,7 +1069,7 @@ function ComparePanel() {
         </div>
       )}
       {results.map((mapping) => {
-        const dSidc = buildDSidc(mapping, '03');
+        const dSidc = buildDSidc(mapping, '3');
         const confidence = getConfidence(mapping);
         return (
           <div key={mapping.b_sidc} style={{ marginBottom: 24 }}>
