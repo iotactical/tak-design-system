@@ -656,6 +656,10 @@ function BuildPanel() {
       } else {
         setBSidc(cFull);
       }
+    } else {
+      // No B/C equivalent -- entity is D/E only
+      setBSidc('');
+      setCSidc('');
     }
   }
 
@@ -808,7 +812,13 @@ function BuildPanel() {
     const newMod2 = field === 'mod2' ? value : mod2;
 
     if (field === 'si') setSi(value);
-    if (field === 'ss') { setSs(value); setEntityCode('110000'); }
+    if (field === 'ss') {
+      setSs(value);
+      // Reset to first valid entity for new symbol set
+      const firstEntity = b2dMappings.find((m) => m.d_ss === value);
+      const defaultEc = firstEntity ? firstEntity.d_ec : '110000';
+      setEntityCode(defaultEc);
+    }
     if (field === 'status') setStatus(value);
     if (field === 'hqtffd') setHqtffd(value);
     if (field === 'echelon') setEchelon(value);
@@ -816,7 +826,9 @@ function BuildPanel() {
     if (field === 'mod1') setMod1(value);
     if (field === 'mod2') setMod2(value);
 
-    const ec = field === 'ss' ? '110000' : newEc;
+    const ec = field === 'ss'
+      ? (b2dMappings.find((m) => m.d_ss === value)?.d_ec || '110000')
+      : newEc;
     syncFromDFields(newSi, newSs, newStatus, newHqtffd, newEchelon, ec, newMod1, newMod2);
   }
 
@@ -865,10 +877,13 @@ function BuildPanel() {
             value={bSidc}
             onChange={(e) => handleBSidcChange(e.target.value)}
             maxLength={15}
+            placeholder="No B equivalent"
             aria-label="B SIDC input"
             data-testid="b-sidc-input"
           />
-          <MilSymRenderer sidc={bSidc} size={48} />
+          {bSidc ? <MilSymRenderer sidc={bSidc} size={48} /> : (
+            <div style={{ fontSize: 11, color: '#585858', fontStyle: 'italic', padding: 8 }}>D/E only entity</div>
+          )}
         </div>
 
         {/* C version */}
@@ -883,7 +898,9 @@ function BuildPanel() {
             aria-label="C SIDC input"
             data-testid="c-sidc-input"
           />
-          <MilSymRenderer sidc={cSidc} size={48} />
+          {cSidc ? <MilSymRenderer sidc={cSidc} size={48} /> : (
+            <div style={{ fontSize: 11, color: '#585858', fontStyle: 'italic', padding: 8 }}>D/E only entity</div>
+          )}
         </div>
 
         {/* D version */}
