@@ -1,9 +1,12 @@
 # TAK Design System
 
-[![Build](https://github.com/iotactical/tak-design-system/actions/workflows/build-and-release.yml/badge.svg)](https://github.com/iotactical/tak-design-system/actions/workflows/build-and-release.yml)
-[![Tests](https://img.shields.io/badge/tests-962%20passing-brightgreen)](https://github.com/iotactical/tak-design-system)
-[![Coverage](https://img.shields.io/badge/RTM-166%2F178%20(93.2%25)-blue)](https://github.com/iotactical/tak-design-system)
-[![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+[![CI](https://github.com/iotactical/tak-design-system/actions/workflows/build-and-release.yml/badge.svg)](https://github.com/iotactical/tak-design-system/actions/workflows/build-and-release.yml)
+[![Tests](https://img.shields.io/endpoint?url=https://iotactical.github.io/tak-design-system/badges/tests.json)](https://github.com/iotactical/tak-design-system/actions)
+[![Requirements](https://img.shields.io/endpoint?url=https://iotactical.github.io/tak-design-system/badges/rtm.json)](https://github.com/iotactical/tak-design-system)
+[![License](https://img.shields.io/github/license/iotactical/tak-design-system)](LICENSE)
+[![Node](https://img.shields.io/badge/node-%3E%3D20-brightgreen?logo=nodedotjs)](package.json)
+[![W3C Tokens](https://img.shields.io/badge/tokens-W3C%20Design%20Tokens-blue?logo=w3c)](https://tr.designtokens.org/format/)
+[![MIL-STD-2525](https://img.shields.io/badge/symbology-MIL--STD--2525%20B%2FC%2FD%2FE-informational)](https://github.com/missioncommand/mil-sym-ts)
 
 Design tokens, components, and military symbology for the TAK (Tactical Assault Kit / Team Awareness Kit) ecosystem. Supports ATAK 5.5.1 through 5.7.0.
 

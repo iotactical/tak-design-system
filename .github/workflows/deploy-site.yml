@@ -8,6 +8,8 @@ on:
       - 'tokens/**'
       - 'data/**'
       - 'icons/**'
+      - 'tests/**'
+      - '.rtmx/**'
   workflow_dispatch:
 
 permissions:
@@ -41,6 +43,25 @@ jobs:
 
       - name: Build React library
         run: npm run build:react
+
+      - name: Run tests and generate badges
+        run: |
+          npm test 2>&1 | tee test-output.txt || true
+          TESTS=$(grep '# tests' test-output.txt | awk '{print $3}' || echo "0")
+          PASS=$(grep '# pass' test-output.txt | awk '{print $3}' || echo "0")
+          FAIL=$(grep '# fail' test-output.txt | awk '{print $3}' || echo "0")
+          if [ "$FAIL" = "0" ]; then
+            echo "{\"schemaVersion\":1,\"label\":\"tests\",\"message\":\"${PASS} passing\",\"color\":\"brightgreen\"}" > site/public/badges/tests.json
+          else
+            echo "{\"schemaVersion\":1,\"label\":\"tests\",\"message\":\"${PASS}/${TESTS} passing\",\"color\":\"red\"}" > site/public/badges/tests.json
+          fi
+          COMPLETE=$(grep -c ',COMPLETE,' .rtmx/database.csv || echo "0")
+          TOTAL=$(( $(wc -l < .rtmx/database.csv) - 1 ))
+          PCT=$(echo "scale=1; ${COMPLETE} * 100 / ${TOTAL}" | bc)
+          if [ "$(echo "$PCT >= 90" | bc)" = "1" ]; then RTM_COLOR="brightgreen";
+          elif [ "$(echo "$PCT >= 70" | bc)" = "1" ]; then RTM_COLOR="yellow";
+          else RTM_COLOR="red"; fi
+          echo "{\"schemaVersion\":1,\"label\":\"requirements\",\"message\":\"${COMPLETE}/${TOTAL} (${PCT}%)\",\"color\":\"${RTM_COLOR}\"}" > site/public/badges/rtm.json
 
       - name: Build site
         run: npm run build:site
