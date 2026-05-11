@@ -1,7 +1,8 @@
 // rtmx:req REQ-XW-091
 // rtmx:req REQ-XW-121
-import { Link, useSearchParams } from 'react-router-dom';
-import { useEffect, useState, type ReactNode } from 'react';
+// rtmx:req REQ-XW-140
+import { Link, useParams, useNavigate } from 'react-router-dom';
+import { useEffect, type ReactNode } from 'react';
 import { useHighlight } from '../hooks/useHighlight';
 import styles from './Components.module.css';
 
@@ -406,6 +407,16 @@ const componentGallery: CategoryGroup[] = [
 
 const CATEGORY_TABS = componentGallery.map((g) => g.category);
 
+/** Convert category name to URL slug */
+function categorySlug(cat: string): string {
+  return cat.toLowerCase().replace(/\s+/g, '-');
+}
+
+/** Find category name from URL slug */
+function categoryFromSlug(slug: string): string | undefined {
+  return CATEGORY_TABS.find((c) => categorySlug(c) === slug);
+}
+
 function ComponentCard({ component }: { component: ComponentInfo }) {
   const preview = previews[component.name];
   return (
@@ -435,21 +446,13 @@ function ComponentCard({ component }: { component: ComponentInfo }) {
 }
 
 export default function Components() {
-  const [searchParams] = useSearchParams();
-  const tabParam = searchParams.get('tab');
+  const { tab } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => { document.title = 'Components - TAK Design System'; }, []);
   useHighlight();
-  const [activeTab, setActiveTab] = useState(
-    tabParam && CATEGORY_TABS.includes(tabParam) ? tabParam : CATEGORY_TABS[0],
-  );
 
-  // Sync tab from URL when search params change
-  useEffect(() => {
-    if (tabParam && CATEGORY_TABS.includes(tabParam)) {
-      setActiveTab(tabParam);
-    }
-  }, [tabParam]);
+  const activeTab = (tab && categoryFromSlug(tab)) || CATEGORY_TABS[0];
 
   const totalCount = componentGallery.reduce(
     (sum, group) => sum + group.components.length,
@@ -473,7 +476,7 @@ export default function Components() {
           <button
             key={cat}
             className={`${styles.tab} ${activeTab === cat ? styles.tabActive : ''}`}
-            onClick={() => setActiveTab(cat)}
+            onClick={() => navigate(`/components/${categorySlug(cat)}`)}
           >
             {cat}
           </button>

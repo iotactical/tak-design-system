@@ -99,8 +99,8 @@ describe('REQ-XW-081: Skittles circles tab', () => {
 
   it('default activeTab is skittles', () => {
     assert.ok(
-      source.includes("useState('skittles')"),
-      'Default active tab must be skittles'
+      source.includes("|| 'skittles'"),
+      'Default tab fallback must be skittles'
     );
   });
 });

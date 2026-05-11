@@ -1,8 +1,9 @@
 // rtmx:req REQ-XW-090
 // rtmx:req REQ-XW-113
 // rtmx:req REQ-XW-121
+// rtmx:req REQ-XW-140
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useHighlight } from '../hooks/useHighlight';
 import styles from './Interfaces.module.css';
 import externalInterfaces from '../../../data/tak-interfaces-external.json';
@@ -91,20 +92,13 @@ function filterIntentGroups(groups: IntentGroup[], query: string): IntentGroup[]
 }
 
 export default function Interfaces() {
-  const [searchParams] = useSearchParams();
-  const tabParam = searchParams.get('tab') as TabId | null;
+  const { tab } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => { document.title = 'Interfaces - TAK Design System'; }, []);
   useHighlight();
   const [query, setQuery] = useState('');
-  const [activeTab, setActiveTab] = useState<TabId>(tabParam && ['external', 'internal', 'intents'].includes(tabParam) ? tabParam : 'external');
-
-  // Sync tab from URL when search params change
-  useEffect(() => {
-    if (tabParam && ['external', 'internal', 'intents'].includes(tabParam)) {
-      setActiveTab(tabParam);
-    }
-  }, [tabParam]);
+  const activeTab: TabId = (tab && ['external', 'internal', 'intents'].includes(tab) ? tab : 'external') as TabId;
 
   const allExternal = externalInterfaces as ExternalInterface[];
   const allInternal = internalInterfaces as InternalInterface[];
@@ -123,13 +117,13 @@ export default function Interfaces() {
       </p>
 
       <div className={styles.tabBar}>
-        {TABS.map((tab) => (
+        {TABS.map((t) => (
           <button
-            key={tab.id}
-            className={`${styles.tab} ${activeTab === tab.id ? styles.tabActive : ''}`}
-            onClick={() => setActiveTab(tab.id)}
+            key={t.id}
+            className={`${styles.tab} ${activeTab === t.id ? styles.tabActive : ''}`}
+            onClick={() => navigate(`/interfaces/${t.id}`)}
           >
-            {tab.label}
+            {t.label}
           </button>
         ))}
       </div>

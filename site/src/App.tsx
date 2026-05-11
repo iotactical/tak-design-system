@@ -58,12 +58,12 @@ export default function App() {
           <Route path="/colors" element={<Colors />} />
           <Route path="/typography" element={<Typography />} />
           <Route path="/spacing" element={<Spacing />} />
-          <Route path="/components" element={<Components />} />
+          <Route path="/components/:tab?" element={<Components />} />
           <Route path="/icons" element={<Icons />} />
-          <Route path="/palettes" element={<Palettes />} />
+          <Route path="/palettes/:tab?" element={<Palettes />} />
           <Route path="/platforms" element={<Platforms />} />
-          <Route path="/interfaces" element={<Interfaces />} />
-          <Route path="/explorer" element={<Explorer />} />
+          <Route path="/interfaces/:tab?" element={<Interfaces />} />
+          <Route path="/explorer/:tab?" element={<Explorer />} />
         </Routes>
       </main>
     </div>

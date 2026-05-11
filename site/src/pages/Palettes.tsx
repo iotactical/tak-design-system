@@ -2,7 +2,9 @@
 // rtmx:req REQ-XW-074
 // rtmx:req REQ-XW-075
 // rtmx:req REQ-XW-085
+// rtmx:req REQ-XW-140
 import { useEffect, useState, useMemo, useRef } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import styles from './Palettes.module.css';
 import { ModelViewer } from '../components/ModelViewer';
 import { MilSymRenderer } from '../components/MilSymRenderer';
@@ -909,7 +911,9 @@ function IconsetPanel({ tab }: { tab: PaletteTab }) {
 
 export default function Palettes() {
   useEffect(() => { document.title = 'Palettes - TAK Design System'; }, []);
-  const [activeTab, setActiveTab] = useState('skittles');
+  const { tab } = useParams();
+  const navigate = useNavigate();
+  const activeTab = tab || 'skittles';
   const active = PALETTE_TABS.find((t) => t.id === activeTab) ?? PALETTE_TABS[0];
 
   return (
@@ -920,13 +924,13 @@ export default function Palettes() {
       </p>
 
       <div className={styles.tabBar}>
-        {PALETTE_TABS.map((tab) => (
+        {PALETTE_TABS.map((t) => (
           <button
-            key={tab.id}
-            className={`${styles.tab} ${activeTab === tab.id ? styles.tabActive : ''}`}
-            onClick={() => setActiveTab(tab.id)}
+            key={t.id}
+            className={`${styles.tab} ${activeTab === t.id ? styles.tabActive : ''}`}
+            onClick={() => navigate(`/palettes/${t.id}`)}
           >
-            {tab.label}
+            {t.label}
           </button>
         ))}
       </div>

@@ -1,7 +1,8 @@
 // rtmx:req REQ-XW-100
 // rtmx:req REQ-XW-121
+// rtmx:req REQ-XW-140
 import { useEffect, useState, useMemo } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useHighlight } from '../hooks/useHighlight';
 import styles from './Explorer.module.css';
 import { MilSymRenderer } from '../components/MilSymRenderer';
@@ -877,21 +878,12 @@ function ComparePanel() {
 // ----- Main Component -----
 
 export default function Explorer() {
-  const [searchParams] = useSearchParams();
-  const tabParam = searchParams.get('tab') as TabId | null;
+  const { tab } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => { document.title = '2525 Explorer - TAK Design System'; }, []);
   useHighlight();
-  const [activeTab, setActiveTab] = useState<TabId>(
-    tabParam && ['browse', 'decode', 'build', 'compare'].includes(tabParam) ? tabParam : 'browse',
-  );
-
-  // Sync tab from URL when search params change
-  useEffect(() => {
-    if (tabParam && ['browse', 'decode', 'build', 'compare'].includes(tabParam)) {
-      setActiveTab(tabParam);
-    }
-  }, [tabParam]);
+  const activeTab: TabId = (tab && ['browse', 'decode', 'build', 'compare'].includes(tab) ? tab : 'browse') as TabId;
 
   return (
     <div className={styles.container}>
@@ -901,13 +893,13 @@ export default function Explorer() {
       </p>
 
       <div className={styles.tabBar}>
-        {TABS.map((tab) => (
+        {TABS.map((t) => (
           <button
-            key={tab.id}
-            className={`${styles.tab} ${activeTab === tab.id ? styles.tabActive : ''}`}
-            onClick={() => setActiveTab(tab.id)}
+            key={t.id}
+            className={`${styles.tab} ${activeTab === t.id ? styles.tabActive : ''}`}
+            onClick={() => navigate(`/explorer/${t.id}`)}
           >
-            {tab.label}
+            {t.label}
           </button>
         ))}
       </div>
