@@ -1,0 +1,22 @@
+{
+  "name": "tak-dark-theme",
+  "displayName": "TAK Dark Theme",
+  "description": "Dark theme inspired by the TAK (Tactical Assault Kit) design system. Military-grade colors for focused development.",
+  "version": "0.1.0",
+  "publisher": "iotactical",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/iotactical/tak-design-system.git" },
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Themes"],
+  "keywords": ["theme", "dark", "military", "tak", "atak", "tactical"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "TAK Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/tak-dark-theme.json"
+      }
+    ]
+  },
+  "icon": "icon.png"
+}

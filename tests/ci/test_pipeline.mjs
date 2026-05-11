@@ -22,7 +22,7 @@ describe('REQ-CI-001: CI pipeline validates builds and releases', () => {
   let jobs;
 
   it('has at least one successful run on main', () => {
-    const runs = JSON.parse(gh('run list --status success --branch main --limit 1 --json databaseId'));
+    const runs = JSON.parse(gh('run list --status success --branch main --workflow="Build and Release TAK Design System" --limit 1 --json databaseId'));
     assert.ok(runs.length > 0, 'No successful runs found on main');
     runId = runs[0].databaseId;
   });

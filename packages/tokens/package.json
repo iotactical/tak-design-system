@@ -1,0 +1,22 @@
+{
+  "name": "@iotactical/tak-tokens",
+  "version": "0.1.0",
+  "description": "TAK Design System - W3C design tokens for all TAK platforms",
+  "license": "MIT",
+  "main": "w3c/core.json",
+  "files": ["w3c/"],
+  "exports": {
+    "./core": "./w3c/core.json",
+    "./semantic": "./w3c/semantic.json",
+    "./component": "./w3c/component.json",
+    "./atak": "./w3c/atak.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iotactical/tak-design-system.git"
+  },
+  "keywords": ["tak", "atak", "design-system", "tokens", "w3c"],
+  "scripts": {
+    "prepublish": "cp -r ../../tokens/w3c/ ./w3c/"
+  }
+}

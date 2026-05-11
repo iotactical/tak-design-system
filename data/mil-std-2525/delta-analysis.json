@@ -1,0 +1,137 @@
+{
+  "d_to_e": {
+    "d_only": 93,
+    "e_only": 150,
+    "shared": 2016,
+    "d_total": 2109,
+    "e_total": 2166,
+    "changes_by_symbol_set": {
+      "10": {
+        "added": 8,
+        "removed": 18,
+        "shared": 193
+      },
+      "11": {
+        "added": 0,
+        "removed": 0,
+        "shared": 12
+      },
+      "15": {
+        "added": 3,
+        "removed": 34,
+        "shared": 196
+      },
+      "20": {
+        "added": 6,
+        "removed": 1,
+        "shared": 128
+      },
+      "25": {
+        "added": 37,
+        "removed": 9,
+        "shared": 611
+      },
+      "27": {
+        "added": 16,
+        "removed": 5,
+        "shared": 34
+      },
+      "30": {
+        "added": 1,
+        "removed": 0,
+        "shared": 94
+      },
+      "35": {
+        "added": 0,
+        "removed": 0,
+        "shared": 21
+      },
+      "36": {
+        "added": 0,
+        "removed": 1,
+        "shared": 65
+      },
+      "40": {
+        "added": 2,
+        "removed": 3,
+        "shared": 149
+      },
+      "45": {
+        "added": 0,
+        "removed": 0,
+        "shared": 205
+      },
+      "46": {
+        "added": 0,
+        "removed": 0,
+        "shared": 206
+      },
+      "47": {
+        "added": 0,
+        "removed": 0,
+        "shared": 1
+      },
+      "50": {
+        "added": 0,
+        "removed": 0,
+        "shared": 5
+      },
+      "51": {
+        "added": 0,
+        "removed": 5,
+        "shared": 0
+      },
+      "52": {
+        "added": 0,
+        "removed": 5,
+        "shared": 0
+      },
+      "53": {
+        "added": 0,
+        "removed": 5,
+        "shared": 0
+      },
+      "54": {
+        "added": 0,
+        "removed": 5,
+        "shared": 0
+      },
+      "60": {
+        "added": 38,
+        "removed": 2,
+        "shared": 5
+      },
+      "64": {
+        "added": 34,
+        "removed": 0,
+        "shared": 0
+      },
+      "01": {
+        "added": 3,
+        "removed": 0,
+        "shared": 52
+      },
+      "02": {
+        "added": 0,
+        "removed": 0,
+        "shared": 2
+      },
+      "05": {
+        "added": 2,
+        "removed": 0,
+        "shared": 35
+      },
+      "06": {
+        "added": 0,
+        "removed": 0,
+        "shared": 2
+      }
+    }
+  },
+  "c_to_d": {
+    "c_mapped": 1915,
+    "d_total": 2109,
+    "d_new": 615,
+    "mapping_coverage": "90.8%"
+  }
+}

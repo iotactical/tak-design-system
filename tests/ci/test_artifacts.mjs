@@ -10,7 +10,7 @@ describe('REQ-CI-002: Build artifacts uploaded with 30-day retention', () => {
   let artifacts;
 
   it('latest successful run has artifacts', { skip: !isGhAuthenticated() && 'gh not authenticated' }, () => {
-    const runs = JSON.parse(gh('run list --status success --branch main --limit 1 --json databaseId'));
+    const runs = JSON.parse(gh('run list --status success --branch main --workflow="Build and Release TAK Design System" --limit 1 --json databaseId'));
     runId = runs[0].databaseId;
     const data = ghApi(`repos/iotactical/tak-design-system/actions/runs/${runId}/artifacts`);
     artifacts = data.artifacts;

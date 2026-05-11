@@ -1,0 +1,85 @@
+{
+  "name": "TAK Dark",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#1A1A1A",
+    "sideBar.background": "#242424",
+    "titleBar.activeBackground": "#2E2E2E",
+    "panel.background": "#383838",
+    "errorForeground": "#F44336",
+    "editor.foreground": "#FFFFFFDE",
+    "editorLineNumber.foreground": "#FFFFFF99",
+    "focusBorder": "#2196F3",
+    "activityBar.background": "#1A1A1A",
+    "activityBar.foreground": "#FFFFFFDE",
+    "statusBar.background": "#1565C0",
+    "statusBar.foreground": "#FFFFFF",
+    "terminal.background": "#1A1A1A",
+    "terminal.foreground": "#FFFFFFDE",
+    "terminal.ansiBlue": "#2196F3",
+    "terminal.ansiRed": "#F44336",
+    "terminal.ansiGreen": "#4CAF50",
+    "terminal.ansiYellow": "#FFEB3B"
+  },
+  "tokenColors": [
+    {
+      "scope": [
+        "comment"
+      ],
+      "settings": {
+        "foreground": "#757575",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
+        "keyword",
+        "storage.type"
+      ],
+      "settings": {
+        "foreground": "#42A5F5"
+      }
+    },
+    {
+      "scope": [
+        "string"
+      ],
+      "settings": {
+        "foreground": "#81C784"
+      }
+    },
+    {
+      "scope": [
+        "constant.numeric"
+      ],
+      "settings": {
+        "foreground": "#FFB74D"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.function"
+      ],
+      "settings": {
+        "foreground": "#FFF176"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.type",
+        "entity.name.class"
+      ],
+      "settings": {
+        "foreground": "#64B5F6"
+      }
+    },
+    {
+      "scope": [
+        "variable"
+      ],
+      "settings": {
+        "foreground": "#FFFFFFDE"
+      }
+    }
+  ]
+}
