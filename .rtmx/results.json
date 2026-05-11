@@ -456,6 +456,48 @@
     "passed": true
   },
   {
+    "req_id": "REQ-XW-137",
+    "test_name": "REQ-XW-137: milsym-worker.ts exists",
+    "test_file": "tests/site/test_milsym_worker.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-137",
+    "test_name": "REQ-XW-137: useMilSymWorker hook exists",
+    "test_file": "tests/site/test_milsym_worker.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-137",
+    "test_name": "REQ-XW-137: MilSymRendererLive component exists",
+    "test_file": "tests/site/test_milsym_worker.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-137",
+    "test_name": "REQ-XW-137: Worker handles message events via self.onmessage",
+    "test_file": "tests/site/test_milsym_worker.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-137",
+    "test_name": "REQ-XW-137: Worker catches errors to prevent main-thread crash",
+    "test_file": "tests/site/test_milsym_worker.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-137",
+    "test_name": "REQ-XW-137: Hook memoizes results",
+    "test_file": "tests/site/test_milsym_worker.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-137",
+    "test_name": "REQ-XW-137: MilSymRendererLive falls back to static renderer",
+    "test_file": "tests/site/test_milsym_worker.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-XW-072",
     "test_name": "REQ-XW-072: ModelViewer component exists",
     "test_file": "tests/site/test_model_component.mjs",
@@ -837,6 +879,12 @@
     "req_id": "REQ-XW-135",
     "test_name": "REQ-XW-135 (from tests/ci/test_ghpages.mjs)",
     "test_file": "tests/ci/test_ghpages.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-140",
+    "test_name": "REQ-XW-140 (from tests/site/test_url_routing.mjs)",
+    "test_file": "tests/site/test_url_routing.mjs",
     "passed": true
   },
   {
