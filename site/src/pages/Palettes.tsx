@@ -349,14 +349,14 @@ function MarkersPanel() {
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
           <span style={{ fontSize: 13, color: '#878787', lineHeight: '32px' }}>Affiliation</span>
-          <div className={styles.subToggle} style={{ display: 'flex', alignItems: 'center' }}>
+          <div style={{ display: 'flex', gap: 2 }}>
             {AFFILIATIONS.map((a) => (
               <button
                 key={a.key}
-                className={`${styles.subToggleBtn} ${affiliation.key === a.key ? styles.subToggleBtnActive : ''}`}
                 style={{
+                  padding: '4px 12px', fontSize: 12, border: '1px solid #444', borderRadius: 4, cursor: 'pointer',
+                  ...(affiliation.key === a.key ? { backgroundColor: a.color, color: contrastText(a.color), borderColor: a.color } : { backgroundColor: '#242424', color: '#C8C8C8' }),
                   borderLeft: `3px solid ${a.color}`,
-                  ...(affiliation.key === a.key ? { backgroundColor: a.color, color: contrastText(a.color), borderColor: a.color } : {}),
                 }}
                 onClick={() => setAffiliation(a)}
               >

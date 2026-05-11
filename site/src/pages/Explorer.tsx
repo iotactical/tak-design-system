@@ -193,8 +193,8 @@ function BrowsePanel() {
                 key={a.key}
                 style={{
                   padding: '4px 12px', fontSize: 12, border: '1px solid #444', borderRadius: 4, cursor: 'pointer',
-                  borderLeft: `3px solid ${a.color}`,
                   ...(affiliation.key === a.key ? { backgroundColor: a.color, color: contrastText(a.color), borderColor: a.color } : { backgroundColor: '#242424', color: '#C8C8C8' }),
+                  borderLeft: `3px solid ${a.color}`,
                 }}
                 onClick={() => setAffiliation(a)}
               >
