@@ -1,0 +1,15 @@
+{
+  "base_url": "https://{server}:8443/Marti/api",
+  "endpoints": [
+    { "method": "GET", "path": "/missions", "description": "List all missions", "auth": "Certificate" },
+    { "method": "POST", "path": "/missions/{name}", "description": "Create a mission", "auth": "Certificate" },
+    { "method": "GET", "path": "/missions/{name}/cot", "description": "Get mission CoT events", "auth": "Certificate" },
+    { "method": "POST", "path": "/cot", "description": "Submit a CoT event", "auth": "Certificate", "content_type": "application/xml" },
+    { "method": "GET", "path": "/missions/{name}/subscription", "description": "Get mission subscriptions", "auth": "Certificate" },
+    { "method": "PUT", "path": "/missions/{name}/subscription", "description": "Subscribe to a mission", "auth": "Certificate" },
+    { "method": "POST", "path": "/sync/upload", "description": "Upload a data package", "auth": "Certificate", "content_type": "multipart/form-data" },
+    { "method": "GET", "path": "/sync/search", "description": "Search data packages", "auth": "Certificate" },
+    { "method": "GET", "path": "/clientEndPoints", "description": "List connected clients", "auth": "Certificate" },
+    { "method": "GET", "path": "/contacts/all", "description": "List all contacts", "auth": "Certificate" }
+  ]
+}

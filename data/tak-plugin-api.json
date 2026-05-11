@@ -1,0 +1,17 @@
+{
+  "lifecycle": [
+    { "method": "onStart", "description": "Called when the plugin is started", "since": "ATAK 3.0" },
+    { "method": "onStop", "description": "Called when the plugin is stopped", "since": "ATAK 3.0" },
+    { "method": "onDestroyView", "description": "Called when the plugin view is destroyed", "since": "ATAK 3.0" }
+  ],
+  "components": [
+    { "name": "DropDownReceiver", "description": "Base class for plugin panels that slide in from the right", "since": "ATAK 3.0" },
+    { "name": "AbstractMapComponent", "description": "Base class for map overlay plugins", "since": "ATAK 3.0" },
+    { "name": "ToolbarComponent", "description": "Add buttons to the main toolbar", "since": "ATAK 4.0" }
+  ],
+  "patterns": [
+    { "name": "BroadcastReceiver", "description": "Register for and send ATAK intents", "example": "registerReceiver(new BroadcastReceiver(){...}, new IntentFilter(ACTION))" },
+    { "name": "CotEvent", "description": "Create and send CoT events", "example": "CotEvent event = new CotEvent(); event.setType(\"a-f-G-U-C-I\");" },
+    { "name": "MapGroup", "description": "Add items to the map", "example": "MapGroup group = mapView.getRootGroup().addGroup(\"MyPlugin\");" }
+  ]
+}

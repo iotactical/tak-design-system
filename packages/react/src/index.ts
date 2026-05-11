@@ -28,6 +28,8 @@ export { SkittleMarker, type SkittleMarkerProps } from './components/SkittleMark
 
 // Theme
 export { TakThemeProvider, useTakTheme, type TakThemeProviderProps } from './theme/TakThemeProvider';
+export { DensityProvider, useDensity, type DensityMode, type DensityProviderProps } from './theme/DensityContext';
 
 // Tokens
 export { takTokens } from './tokens';
+export { mobileDensity, desktopDensity, type DensityTokens } from './tokens/density';

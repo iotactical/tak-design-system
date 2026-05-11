@@ -1,6 +1,7 @@
 import { Routes, Route, NavLink } from 'react-router-dom';
 import styles from './App.module.css';
 import { GlobalSearch } from './components/GlobalSearch';
+import { VersionSelector } from './components/VersionSelector';
 import Home from './pages/Home';
 import Colors from './pages/Colors';
 import Typography from './pages/Typography';
@@ -48,6 +49,7 @@ export default function App() {
             </li>
           ))}
         </ul>
+        <VersionSelector />
         <div className={styles.sidebarFooter}>v0.1.0</div>
       </nav>
       <div className={styles.topBar}>

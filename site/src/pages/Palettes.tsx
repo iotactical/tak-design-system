@@ -354,9 +354,11 @@ function MarkersPanel() {
               <button
                 key={a.key}
                 style={{
-                  padding: '4px 12px', fontSize: 12, border: '1px solid #444', borderRadius: 4, cursor: 'pointer',
-                  ...(affiliation.key === a.key ? { backgroundColor: a.color, color: contrastText(a.color), borderColor: a.color } : { backgroundColor: '#242424', color: '#C8C8C8' }),
+                  padding: '4px 12px', fontSize: 12, borderRadius: 4, cursor: 'pointer',
+                  borderTop: '1px solid #444', borderRight: '1px solid #444', borderBottom: '1px solid #444',
                   borderLeft: `3px solid ${a.color}`,
+                  backgroundColor: affiliation.key === a.key ? a.color : '#242424',
+                  color: affiliation.key === a.key ? contrastText(a.color) : '#C8C8C8',
                 }}
                 onClick={() => setAffiliation(a)}
               >
@@ -540,8 +542,11 @@ function LazyModelViewer({
 
 // rtmx:req REQ-XW-074
 /** Derive the DAE filename from the model name: remove hyphens, append .DAE */
-function deriveDaeFilename(name: string): string {
-  return name.replace(/-/g, '') + '.DAE';
+import daeMap from '../../../data/vehicle-dae-map.json';
+const vehicleDaeMap = daeMap as Record<string, string>;
+
+function deriveDaeFilename(category: string, name: string): string {
+  return vehicleDaeMap[`${category}/${name}`] || name.replace(/-/g, '') + '.DAE';
 }
 
 function VehicleModelsPanel() {
@@ -567,7 +572,7 @@ function VehicleModelsPanel() {
           <div className={styles.groupCount}>{items.length} models</div>
           <div className={styles.grid}>
             {items.map((m) => {
-              const daeFile = deriveDaeFilename(m.name);
+              const daeFile = deriveDaeFilename(cat, m.name);
               const modelPath = `${BASE}models/${cat}/${m.name}/${daeFile}`;
               return (
                 <div key={m.name} className={styles.iconCard}>
