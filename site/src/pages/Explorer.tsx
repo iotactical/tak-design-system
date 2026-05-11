@@ -8,6 +8,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useHighlight } from '../hooks/useHighlight';
 import styles from './Explorer.module.css';
 import { MilSymRenderer } from '../components/MilSymRenderer';
+import { MilSymRendererLive } from '../components/MilSymRendererLive';
 import bEntitiesData from '../../../data/mil-std-2525/b-entities.json';
 import b2dData from '../../../data/mil-std-2525/b2d.json';
 import b2cData from '../../../data/mil-std-2525/b2c.json';
@@ -596,11 +597,11 @@ const SI_TO_AFFIL: Record<string, string> = {
 // ----- Build Tab -----
 
 function BuildPanel() {
-  // Four SIDC strings
-  const [bSidc, setBSidc] = useState('S*G*UCF---*****');
-  const [cSidc, setCSidc] = useState('S*G*UCF---*****');
-  const [dSidc, setDSidc] = useState('10030100001101000000');
-  const [eSidc, setESidc] = useState('15030100001101000000');
+  // Four SIDC strings -- default: Command and Control (Land Unit)
+  const [bSidc, setBSidc] = useState('SFGPU-----*****');
+  const [cSidc, setCSidc] = useState('SFGPU-----*****');
+  const [dSidc, setDSidc] = useState('10031000001100000000');
+  const [eSidc, setESidc] = useState('15031000001100000000');
 
   // Fuzzy entity search
   const [entitySearch, setEntitySearch] = useState('');
@@ -897,7 +898,7 @@ function BuildPanel() {
             aria-label="D SIDC input"
             data-testid="d-sidc-input"
           />
-          <MilSymRenderer sidc={dSidc} size={48} />
+          <MilSymRendererLive sidc={dSidc} size={48} />
         </div>
 
         {/* E version */}
@@ -912,7 +913,7 @@ function BuildPanel() {
             aria-label="E SIDC input"
             data-testid="e-sidc-input"
           />
-          <MilSymRenderer sidc={eSidc} size={48} />
+          <MilSymRendererLive sidc={eSidc} size={48} />
         </div>
       </div>
 

@@ -5,6 +5,9 @@ import { resolve } from 'path';
 export default defineConfig({
   plugins: [react()],
   base: '/tak-design-system/',
+  worker: {
+    format: 'es',
+  },
   resolve: {
     alias: {
       '@tokens': resolve(__dirname, '../tokens/w3c'),

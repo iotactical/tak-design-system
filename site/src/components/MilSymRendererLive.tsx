@@ -79,10 +79,14 @@ export function MilSymRendererLive({
   if (svg) {
     return (
       <div
-        style={{ width: size, height: size }}
-        dangerouslySetInnerHTML={{ __html: svg }}
+        style={{ width: size, height: size, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
         aria-label={`Military symbol ${sidc}`}
-      />
+      >
+        <div
+          style={{ maxWidth: size, maxHeight: size }}
+          dangerouslySetInnerHTML={{ __html: svg }}
+        />
+      </div>
     );
   }
 
