@@ -228,6 +228,12 @@
     "passed": true
   },
   {
+    "req_id": "REQ-XW-162",
+    "test_name": "Desktop/browser density variants (REQ-XW-162)",
+    "test_file": "tests/components/test_desktop.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-CMP-015",
     "test_name": "REQ-CMP-015: DialogPanel component set",
     "test_file": "tests/components/test_dialog.mjs",
@@ -582,6 +588,18 @@
     "passed": true
   },
   {
+    "req_id": "REQ-XW-114",
+    "test_name": "REQ-XW-114: ATAK Plugin API reference",
+    "test_file": "tests/site/test_plugin_api.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-115",
+    "test_name": "REQ-XW-115: TAK Server REST API reference",
+    "test_file": "tests/site/test_rest_api.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-XW-122",
     "test_name": "REQ-XW-122: Ancestor navigation in breadcrumbs",
     "test_file": "tests/site/test_search_ancestors.mjs",
@@ -645,6 +663,12 @@
     "req_id": "REQ-XW-071",
     "test_name": "REQ-XW-071: three.js site dependency",
     "test_file": "tests/site/test_threejs_dep.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-116",
+    "test_name": "REQ-XW-116: TAK version selector",
+    "test_file": "tests/site/test_version_selector.mjs",
     "passed": true
   },
   {
