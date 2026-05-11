@@ -69,6 +69,40 @@ StyleDictionary.registerTransform({
   }
 });
 
+// rtmx:req REQ-XW-133
+// Dart/Flutter token name: takColorBlue500 (camelCase with 'tak' prefix)
+StyleDictionary.registerTransform({
+  name: 'name/tak/dart',
+  type: 'name',
+  transform: (token) => {
+    return ['tak', ...token.path]
+      .map((p, i) => {
+        const clean = p.replace(/-([a-zA-Z0-9])/g, (_, c) => c.toUpperCase());
+        if (i === 0) return clean.toLowerCase();
+        return clean.charAt(0).toUpperCase() + clean.slice(1);
+      })
+      .join('');
+  }
+});
+
+// rtmx:req REQ-XW-134
+// Swift token name: camelCase with category prefix (e.g. blue500, spacing4)
+StyleDictionary.registerTransform({
+  name: 'name/tak/swift',
+  type: 'name',
+  transform: (token) => {
+    // Drop the first path segment (category like "color") and camelCase the rest
+    const parts = token.path.slice(1);
+    return parts
+      .map((p, i) => {
+        const clean = p.replace(/-([a-zA-Z0-9])/g, (_, c) => c.toUpperCase());
+        if (i === 0) return clean.charAt(0).toLowerCase() + clean.slice(1);
+        return clean.charAt(0).toUpperCase() + clean.slice(1);
+      })
+      .join('');
+  }
+});
+
 // ---------------------------------------------------------------------------
 // Custom formats
 // ---------------------------------------------------------------------------
@@ -174,6 +208,95 @@ StyleDictionary.registerFormat({
 ${resources}
 </ResourceDictionary>
 `;
+  }
+});
+
+// rtmx:req REQ-XW-133
+// Flutter/Dart tokens file
+StyleDictionary.registerFormat({
+  name: 'flutter/tak-tokens',
+  format: ({ dictionary }) => {
+    const colors = dictionary.allTokens
+      .filter(t => {
+        const v = val(t);
+        return t.$type === 'color' && typeof v === 'string' && v.startsWith('#');
+      })
+      .map(t => {
+        let hex = val(t).replace('#', '').toUpperCase();
+        if (hex.length === 6) hex = 'FF' + hex;
+        else if (hex.length === 8) hex = hex.slice(6, 8) + hex.slice(0, 6);
+        return `  static const Color ${t.name} = Color(0x${hex});`;
+      })
+      .join('\n');
+
+    const dimens = dictionary.allTokens
+      .filter(t => t.$type === 'dimension')
+      .map(t => {
+        const v = val(t);
+        const num = typeof v === 'string' ? parseFloat(v.replace(/[a-z%]+$/i, '')) : Number(v);
+        return `  static const double ${t.name} = ${num.toFixed(1)};`;
+      })
+      .join('\n');
+
+    let body = '';
+    if (colors) {
+      body += `\nclass TakColors {\n${colors}\n}\n`;
+    }
+    if (dimens) {
+      body += `\nclass TakDimens {\n${dimens}\n}\n`;
+    }
+
+    return `/// TAK Design System - Generated design tokens.
+/// Do not edit manually. Run \`npm run build:flutter\` to regenerate.
+library tak_tokens;
+
+import 'dart:ui';
+${body}`;
+  }
+});
+
+// rtmx:req REQ-XW-134
+// Swift/SwiftUI tokens file
+StyleDictionary.registerFormat({
+  name: 'swift/tak-tokens',
+  format: ({ dictionary }) => {
+    const colors = dictionary.allTokens
+      .filter(t => {
+        const v = val(t);
+        return t.$type === 'color' && typeof v === 'string' && v.startsWith('#');
+      })
+      .map(t => {
+        let hex = val(t).replace('#', '');
+        if (hex.length === 8) hex = hex.slice(0, 6); // strip alpha for RGB
+        const r = parseInt(hex.slice(0, 2), 16) / 255;
+        const g = parseInt(hex.slice(2, 4), 16) / 255;
+        const b = parseInt(hex.slice(4, 6), 16) / 255;
+        return `    public static let ${t.name} = Color(red: ${r.toFixed(3)}, green: ${g.toFixed(3)}, blue: ${b.toFixed(3)})`;
+      })
+      .join('\n');
+
+    const dimens = dictionary.allTokens
+      .filter(t => t.$type === 'dimension')
+      .map(t => {
+        const v = val(t);
+        const num = typeof v === 'string' ? parseFloat(v.replace(/[a-z%]+$/i, '')) : Number(v);
+        return `    public static let ${t.name}: CGFloat = ${num.toFixed(1)}`;
+      })
+      .join('\n');
+
+    let body = '';
+    if (colors) {
+      body += `\npublic enum TakColors {\n${colors}\n}\n`;
+    }
+    if (dimens) {
+      body += `\npublic enum TakDimens {\n${dimens}\n}\n`;
+    }
+
+    return `/// TAK Design System - Generated design tokens.
+/// Do not edit manually. Run \`npm run build:swift\` to regenerate.
+
+import SwiftUI
+${body}`;
   }
 });
 
@@ -313,6 +436,28 @@ const platforms = {
         destination: 'TakResourceDictionary.xaml',
         format: 'wintak/resource-dictionary',
         filter: (token) => token.$type === 'color' || token.$type === 'dimension'
+      }
+    ]
+  },
+  // rtmx:req REQ-XW-133
+  flutter: {
+    transforms: ['name/tak/dart'],
+    buildPath: 'platforms/flutter/generated/',
+    files: [
+      {
+        destination: 'tak_tokens.dart',
+        format: 'flutter/tak-tokens'
+      }
+    ]
+  },
+  // rtmx:req REQ-XW-134
+  swift: {
+    transforms: ['name/tak/swift'],
+    buildPath: 'platforms/swift/generated/',
+    files: [
+      {
+        destination: 'TakTokens.swift',
+        format: 'swift/tak-tokens'
       }
     ]
   },

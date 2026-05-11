@@ -150,6 +150,18 @@
     "passed": true
   },
   {
+    "req_id": "REQ-XW-133",
+    "test_name": "REQ-XW-133: Flutter/Dart token generation",
+    "test_file": "tests/build/test_flutter.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-134",
+    "test_name": "REQ-XW-134: Swift/SwiftUI token generation",
+    "test_file": "tests/build/test_swift.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-BLD-005",
     "test_name": "REQ-BLD-005: VS Code dark theme generation",
     "test_file": "tests/build/test_vscode.mjs",
@@ -723,6 +735,12 @@
     "req_id": "REQ-XW-152",
     "test_name": "REQ-XW-152: MIL-STD-2525 delta analysis",
     "test_file": "tests/symbology/test_delta_analysis.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-170",
+    "test_name": "REQ-XW-170: Lossy crosswalk entries render with sector modifiers",
+    "test_file": "tests/symbology/test_lossy_render.mjs",
     "passed": true
   },
   {
