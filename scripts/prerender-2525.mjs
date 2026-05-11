@@ -64,11 +64,13 @@ for (const aff of affiliations) {
     const filename = `${sidc}.svg`;
 
     try {
+      const mods = new Map();
       const attrs = new Map();
       attrs.set('PIXELSIZE', '50');
       attrs.set('DRAWASICON', 'true');
 
-      const result = renderer.RenderSVG(sidc, attrs);
+      // RenderSVG signature: (symbolID, modifiers, attributes)
+      const result = renderer.RenderSVG(sidc, mods, attrs);
       if (result && result.getSVG) {
         const ib = result.getImageBounds();
         const w = ib ? ib.getWidth() : 50;

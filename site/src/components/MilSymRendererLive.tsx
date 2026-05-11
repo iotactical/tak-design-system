@@ -75,18 +75,14 @@ export function MilSymRendererLive({
     );
   }
 
-  // Render live SVG from worker
+  // Render live SVG from worker -- allow height to expand for amplifiers
   if (svg) {
     return (
       <div
-        style={{ width: size, height: size, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
         aria-label={`Military symbol ${sidc}`}
-      >
-        <div
-          style={{ maxWidth: size, maxHeight: size }}
-          dangerouslySetInnerHTML={{ __html: svg }}
-        />
-      </div>
+        dangerouslySetInnerHTML={{ __html: svg }}
+      />
     );
   }
 

@@ -27,16 +27,18 @@ self.onmessage = async (e: MessageEvent<MilSymWorkerRequest>) => {
     rs.setDefaultPixelSize(size || 50);
 
     const renderer = MilStdIconRenderer.getInstance();
+    const mods = new Map<string, string>();
     const attrs = new Map<string, string>();
     attrs.set('PIXELSIZE', String(size || 50));
 
     if (modifiers) {
       for (const [key, value] of Object.entries(modifiers)) {
-        attrs.set(key, value);
+        mods.set(key, value);
       }
     }
 
-    const result = renderer.RenderSVG(sidc, attrs);
+    // RenderSVG signature: (symbolID, modifiers, attributes)
+    const result = renderer.RenderSVG(sidc, mods, attrs);
     if (result && result.getSVG) {
       const ib = result.getImageBounds();
       const w = ib ? ib.getWidth() : size;
