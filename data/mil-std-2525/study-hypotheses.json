@@ -1,0 +1,92 @@
+{
+  "$description": "Scientific hypotheses for MIL-STD-2525 cross-version study. Each hypothesis is testable against the authoritative PDF documents.",
+  "study_plan": {
+    "method": "Extract field definitions and entity tables from each PDF. Test each hypothesis by comparing extracted data against our current crosswalk assumptions. Reject or accept with evidence.",
+    "pdfs": [
+      "MIL-STD-2525 Base.pdf (1981)",
+      "MIL-STD-2525A.pdf (1996)",
+      "MIL-STD-2525A Change 1.pdf",
+      "MIL-STD-2525B.pdf (1999)",
+      "MIL-STD-2525B Change 1.pdf",
+      "MIL-STD-2525B Change 2.pdf",
+      "MIL-STD-2525C.pdf (2008)",
+      "MIL-STD-2525D.pdf (2014)",
+      "MIL-STD-2525D Change 1.pdf",
+      "MIL-STD-2525E.pdf (2021)"
+    ]
+  },
+  "hypotheses": [
+    {
+      "id": "H1",
+      "title": "B/C 15-character SIDC field positions",
+      "hypothesis": "The 15-character SIDC in 2525B and 2525C has identical field positions: (1) Coding Scheme, (2) Affiliation, (3) Battle Dimension, (4) Status, (5-10) Function ID, (11-12) Symbol Modifier, (13-14) Country Code, (15) Order of Battle.",
+      "test": "Extract the SIDC field definition table from 2525B.pdf Section 5.3 and 2525C.pdf Section 5.3. Compare field-by-field.",
+      "evidence_needed": "PDF page numbers showing field position tables for both versions.",
+      "current_assumption": "B and C share identical 15-char structure. Our code treats them identically.",
+      "risk_if_wrong": "Every B-to-C mapping could have field position errors."
+    },
+    {
+      "id": "H2",
+      "title": "D/E 20-character SIDC field positions",
+      "hypothesis": "The 20-character SIDC in 2525D has field positions: (1-2) Version, (3) Standard Identity 1, (4) Standard Identity 2, (5-6) Symbol Set, (7) Status, (8) HQ/TF/FD, (9-10) Echelon/Mobility, (11-16) Entity/Type/Subtype, (17-18) Sector Modifier 1, (19-20) Sector Modifier 2.",
+      "test": "Extract the SIDC definition from 2525D.pdf Table I and 2525E.pdf Table I. Verify exact positions.",
+      "evidence_needed": "The official field position table from each PDF.",
+      "current_assumption": "Our pre-render script builds SIDCs as version(2)+SI(2)+SS(2)+status(1)+HQ(1)+echelon(2)+entity(6)+s1(2)+s2(2). Rendered files suggest mil-sym-ts uses a different entity position.",
+      "risk_if_wrong": "All 6,568 pre-rendered SVGs may have wrong entity codes in the SIDC. This would explain the ACP/UAV mismatches."
+    },
+    {
+      "id": "H3",
+      "title": "D entity code 110200 in Air symbol set means Rotary Wing",
+      "hypothesis": "In 2525D, symbol set 01 (Air), entity code 110200 represents 'Rotary Wing' aircraft.",
+      "test": "Extract the Air symbol set entity table from 2525D.pdf Appendix A. Find entity 110200.",
+      "evidence_needed": "The specific row in the entity table showing code 110200 and its name.",
+      "current_assumption": "msd.json lists code 110200 as 'Rotary Wing' but with empty ss field, so the symbol set context is ambiguous.",
+      "risk_if_wrong": "The NGA C2D crosswalk mapping ACP to 110200 may be semantically incorrect."
+    },
+    {
+      "id": "H4",
+      "title": "Sector modifiers change the entity icon, not just add decorators",
+      "hypothesis": "In 2525D, sector modifier 1 (s1=11) on an Air entity transforms the base icon into a Command Post variant, not merely adding a text overlay.",
+      "test": "Find the sector modifier 1 table for symbol set 01 in 2525D.pdf. Check what s1=11 means.",
+      "evidence_needed": "The modifier table showing s1 values and their visual effects.",
+      "current_assumption": "We treat s1/s2 as part of the SIDC but don't understand their visual impact. Our pre-render may omit modifier rendering.",
+      "risk_if_wrong": "ACP in D may be correctly mapped by NGA (entity=Rotary Wing + modifier=Command Post) but we render without the modifier."
+    },
+    {
+      "id": "H5",
+      "title": "B/C Function ID maps directly to D Entity code",
+      "hypothesis": "The 6-character Function ID in a B/C 15-char SIDC (positions 5-10) maps to the 6-character Entity code in a D 20-char SIDC (positions 11-16) via a deterministic lookup table, not a positional shift.",
+      "test": "For each B/C entity in c2d-reference.json, verify that the D entity code in the crosswalk matches the entity listed in 2525D Appendix A for that symbol set.",
+      "evidence_needed": "Side-by-side comparison of B/C function IDs and their claimed D entity codes against the PDF tables.",
+      "current_assumption": "The NGA C2D crosswalk is semantically correct. Our visual comparison suggests it's not always correct.",
+      "risk_if_wrong": "Significant portion of our 1,915 crosswalk entries may be wrong."
+    },
+    {
+      "id": "H6",
+      "title": "2525D and 2525E share 97% entity overlap",
+      "hypothesis": "The entity code space in 2525E is a superset of 2525D with ~60 additions and ~28 removals.",
+      "test": "Compare our delta-analysis.json against the actual entity tables from 2525D.pdf and 2525E.pdf.",
+      "evidence_needed": "Entity count per symbol set from each PDF's appendix, compared against our msd.json/mse.json counts.",
+      "current_assumption": "Our delta analysis shows 2016 shared, 93 D-only, 150 E-only. This came from mil-sym-ts data, not the PDFs.",
+      "risk_if_wrong": "Our understanding of D-to-E differences may be incomplete."
+    },
+    {
+      "id": "H7",
+      "title": "The 20-char SIDC entity field is a hierarchical 3-level code",
+      "hypothesis": "The 6-digit entity field (positions 11-16) in D/E encodes a 3-level hierarchy: Entity (2 digits), Entity Type (2 digits), Entity Subtype (2 digits). Code 110200 means Entity=11, Type=02, Subtype=00.",
+      "test": "Extract the entity hierarchy structure from 2525D.pdf Appendix A introduction.",
+      "evidence_needed": "The explanation of how the 6-digit entity code is structured hierarchically.",
+      "current_assumption": "We treat the 6-digit code as flat. Understanding the hierarchy explains why the same code appears in multiple symbol sets with different meanings.",
+      "risk_if_wrong": "Our crosswalk and rendering are correctly treating hierarchical codes as flat -- but the hierarchy is needed for proper browsing and comparison."
+    },
+    {
+      "id": "H8",
+      "title": "B/C battle dimension maps to D/E symbol set",
+      "hypothesis": "The Battle Dimension character at position 3 of a B/C SIDC (A=Air, G=Ground, S=Sea, P=Space, etc.) maps to a specific D/E Symbol Set code (01=Air, 10=Land Unit, 30=Sea Surface, 05=Space).",
+      "test": "Extract battle dimension definitions from 2525B/C and symbol set definitions from 2525D. Create the authoritative mapping.",
+      "evidence_needed": "The battle dimension table from B/C and the symbol set table from D.",
+      "current_assumption": "The NGA C2D crosswalk implicitly provides this mapping but we haven't validated it.",
+      "risk_if_wrong": "Entities may be mapped to wrong symbol sets in the crosswalk."
+    }
+  ]
+}
