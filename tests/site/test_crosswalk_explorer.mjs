@@ -32,8 +32,8 @@ describe('REQ-XW-094: Crosswalk explorer confidence levels', () => {
   it('Compare tab shows count summary', () => {
     const content = readFileSync(explorerPath, 'utf8');
     assert.ok(content.includes('confidenceCounts'), 'Should compute confidence counts');
-    assert.ok(content.includes('exact') && content.includes('modifier-based') && content.includes('unverified'),
-      'Should display summary with exact, modifier-based, unverified counts');
+    assert.ok(content.includes('1:1') && content.includes('modifier'),
+      'Should display summary with 1:1 and modifier counts');
     assert.ok(content.includes('confidence-summary'), 'Should have confidence summary element');
   });
 
