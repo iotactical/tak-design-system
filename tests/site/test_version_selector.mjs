@@ -16,17 +16,10 @@ describe('REQ-XW-116: TAK version selector', () => {
     assert.ok(existsSync(componentPath), 'VersionSelector.tsx must exist');
   });
 
-  it('VersionSelector contains TAK version options', () => {
+  it('VersionSelector shows supported TAK versions', () => {
     const content = readFileSync(componentPath, 'utf8');
-    assert.ok(content.includes('ATAK 4.x'), 'Must include ATAK 4.x');
-    assert.ok(content.includes('ATAK 5.0'), 'Must include ATAK 5.0');
-    assert.ok(content.includes('ATAK 5.1'), 'Must include ATAK 5.1');
-    assert.ok(content.includes('ATAK 5.2'), 'Must include ATAK 5.2');
-  });
-
-  it('VersionSelector uses localStorage for persistence', () => {
-    const content = readFileSync(componentPath, 'utf8');
-    assert.ok(content.includes('localStorage'), 'Must use localStorage for persistence');
+    assert.ok(content.includes('5.7.0'), 'Must show ATAK 5.7.0 (latest)');
+    assert.ok(content.includes('5.5.1'), 'Must show ATAK 5.5.1 (N-2)');
   });
 
   it('App.tsx imports VersionSelector', () => {

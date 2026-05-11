@@ -192,31 +192,42 @@ export default function Interfaces() {
           {filteredIntentGroups.length === 0 ? (
             <div className={styles.empty}>No intents match your filter.</div>
           ) : (
-            filteredIntentGroups.map((group) => (
-              <div key={group.namespace} className={styles.intentGroup}>
-                <h3 className={styles.intentGroupTitle}>{group.namespace}</h3>
-                <div className={styles.grid}>
-                  {group.intents.map((intent, idx) => (
-                    <div key={`${intent.action}-${idx}`} className={styles.card} data-highlight={intent.action}>
-                      <div className={styles.cardName}>{intent.action}</div>
-                      <div className={styles.cardMeta}>
-                        <span className={
-                          intent.type === 'systembroadcast'
-                            ? styles.badgeDirection
-                            : styles.badge
-                        }>
-                          {intent.type}
-                        </span>
-                      </div>
-                      <p className={styles.intentClass}>{intent.class}</p>
-                      {intent.description && (
-                        <p className={styles.cardDescription}>{intent.description}</p>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, tableLayout: 'fixed' }}>
+              <colgroup>
+                <col style={{ width: '45%' }} />
+                <col style={{ width: '12%' }} />
+                <col style={{ width: '43%' }} />
+              </colgroup>
+              <thead>
+                <tr style={{ borderBottom: '1px solid #444', color: '#878787', textAlign: 'left', position: 'sticky', top: 0, background: '#1A1A1A', zIndex: 1 }}>
+                  <th style={{ padding: '8px', fontWeight: 500 }}>Action</th>
+                  <th style={{ padding: '8px', fontWeight: 500 }}>Type</th>
+                  <th style={{ padding: '8px', fontWeight: 500 }}>Class</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filteredIntentGroups.map((group) => (
+                  <>
+                    <tr key={`ns-${group.namespace}`}>
+                      <td colSpan={3} style={{ padding: '12px 8px 4px', color: '#FFE35E', fontWeight: 600, fontSize: 14, fontFamily: 'monospace', borderTop: '1px solid #333' }}>
+                        {group.namespace}
+                      </td>
+                    </tr>
+                    {group.intents.map((intent, idx) => (
+                      <tr key={`${group.namespace}-${idx}`} data-highlight={intent.action} style={{ borderBottom: '1px solid #1E1E1E' }}>
+                        <td style={{ padding: '4px 8px', color: '#DAD4BC', fontFamily: 'monospace', fontSize: 12, wordBreak: 'break-all' }}>{intent.action}</td>
+                        <td style={{ padding: '4px 8px' }}>
+                          <span className={intent.type === 'systembroadcast' ? styles.badgeDirection : styles.badge}>
+                            {intent.type === 'localbroadcast' ? 'local' : 'system'}
+                          </span>
+                        </td>
+                        <td style={{ padding: '4px 8px', color: '#585858', fontFamily: 'monospace', fontSize: 11, overflow: 'hidden', textOverflow: 'ellipsis' }}>{intent.class}</td>
+                      </tr>
+                    ))}
+                  </>
+                ))}
+              </tbody>
+            </table>
           )}
         </section>
       )}
