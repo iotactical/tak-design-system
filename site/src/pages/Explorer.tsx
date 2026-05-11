@@ -851,12 +851,12 @@ function ComparePanel() {
               </div>
               <div className={styles.compareCard}>
                 <span className={styles.compareVersion}>2525D</span>
-                <MilSymRenderer sidc={dKey} affiliation="friendly" size={48} />
+                <MilSymRenderer sidc={mapping.b_sidc} affiliation="friendly" size={48} />
                 <span className={styles.compareSidc}>{dSidc}</span>
               </div>
               <div className={styles.compareCard}>
                 <span className={styles.compareVersion}>2525E</span>
-                <MilSymRenderer sidc={dKey} affiliation="friendly" size={48} />
+                <MilSymRenderer sidc={mapping.b_sidc} affiliation="friendly" size={48} />
                 <span className={styles.compareSidc}>{dSidc}</span>
               </div>
             </div>

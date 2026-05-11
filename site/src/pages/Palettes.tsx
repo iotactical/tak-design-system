@@ -445,7 +445,7 @@ function MarkersPanel() {
                     return (
                       <div key={dSidc} className={styles.markerCard}>
                         <MilSymRenderer
-                          sidc={`${mapping.d_ss}-${mapping.d_ec}`}
+                          sidc={mapping.b_sidc}
                           affiliation={affiliation.key === 'F' ? 'friendly' : affiliation.key === 'H' ? 'hostile' : affiliation.key === 'N' ? 'neutral' : 'unknown'}
                           size={36}
                         />
