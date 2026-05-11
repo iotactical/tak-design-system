@@ -384,6 +384,12 @@
     "passed": true
   },
   {
+    "req_id": "REQ-XW-100",
+    "test_name": "REQ-XW-100: 2525 Explorer page",
+    "test_file": "tests/site/test_2525_explorer.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-SITE-002",
     "test_name": "REQ-SITE-002: Component gallery page",
     "test_file": "tests/site/test_component_gallery.mjs",
@@ -396,9 +402,21 @@
     "passed": true
   },
   {
+    "req_id": "REQ-XW-119",
+    "test_name": "REQ-XW-119: Unified Build view with 4 SIDC versions",
+    "test_file": "tests/site/test_explorer_build.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-XW-084",
     "test_name": "REQ-XW-084: Favicon",
     "test_file": "tests/site/test_favicon.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-120",
+    "test_name": "REQ-XW-120: Fuse.js fuzzy matching in GlobalSearch",
+    "test_file": "tests/site/test_fusejs.mjs",
     "passed": true
   },
   {
@@ -411,6 +429,12 @@
     "req_id": "REQ-SITE-003",
     "test_name": "REQ-SITE-003: Icon and drawable browser",
     "test_file": "tests/site/test_icon_browser.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-113",
+    "test_name": "REQ-XW-113: ATAK intent catalog",
+    "test_file": "tests/site/test_intent_catalog.mjs",
     "passed": true
   },
   {
@@ -489,6 +513,36 @@
     "req_id": "REQ-SITE-004",
     "test_name": "REQ-SITE-004: Platform output reference pages",
     "test_file": "tests/site/test_platform_reference.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-122",
+    "test_name": "REQ-XW-122: Ancestor navigation in breadcrumbs",
+    "test_file": "tests/site/test_search_ancestors.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-121",
+    "test_name": "REQ-XW-121: Deep linking to leaf nodes",
+    "test_file": "tests/site/test_search_deeplink.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-123",
+    "test_name": "REQ-XW-123: Cmd+K / Ctrl+K hotkey",
+    "test_file": "tests/site/test_search_hotkey.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-118",
+    "test_name": "REQ-XW-118: Full taxonomy search index",
+    "test_file": "tests/site/test_search_taxonomy.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-117",
+    "test_name": "REQ-XW-117: Move search to top bar",
+    "test_file": "tests/site/test_search_topbar.mjs",
     "passed": true
   },
   {
@@ -624,6 +678,12 @@
     "passed": true
   },
   {
+    "req_id": "REQ-XW-152",
+    "test_name": "REQ-XW-152: MIL-STD-2525 delta analysis",
+    "test_file": "tests/symbology/test_delta_analysis.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-TOK-003",
     "test_name": "REQ-TOK-003: Component token references",
     "test_file": "tests/tokens/test_component.mjs",
@@ -708,6 +768,30 @@
     "passed": true
   },
   {
+    "req_id": "REQ-XW-151",
+    "test_name": "REQ-XW-151 (from tests/symbology/test_entity_extract.mjs)",
+    "test_file": "tests/symbology/test_entity_extract.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-130",
+    "test_name": "REQ-XW-130 (from tests/package/test_npm_react.mjs)",
+    "test_file": "tests/package/test_npm_react.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-131",
+    "test_name": "REQ-XW-131 (from tests/package/test_npm_tokens.mjs)",
+    "test_file": "tests/package/test_npm_tokens.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-132",
+    "test_name": "REQ-XW-132 (from tests/package/test_vscode_ext.mjs)",
+    "test_file": "tests/package/test_vscode_ext.mjs",
+    "passed": true
+  },
+  {
     "req_id": "REQ-CMP-004",
     "test_name": "REQ-CMP-004 (from tests/components/test_coordinate.mjs)",
     "test_file": "tests/components/test_coordinate.mjs",
@@ -747,6 +831,12 @@
     "req_id": "REQ-XW-015",
     "test_name": "REQ-XW-015 (inline in REQ-XW-010)",
     "test_file": "tests/components/test_skittle.mjs",
+    "passed": true
+  },
+  {
+    "req_id": "REQ-XW-135",
+    "test_name": "REQ-XW-135 (from tests/ci/test_ghpages.mjs)",
+    "test_file": "tests/ci/test_ghpages.mjs",
     "passed": true
   },
   {
