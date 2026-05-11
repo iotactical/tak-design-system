@@ -63,7 +63,38 @@ export function MilSymRenderer({ sidc, size = 50, affiliation }: MilSymRendererP
     return null;
   }, [sidc, affiliation]);
 
+  // Determine symbol category for fallback icon
+  const fallbackIcon = useMemo(() => {
+    if (!sidc || sidc.length < 3) return null;
+    const ch = sidc.charAt(0);
+    if (ch === 'W') {
+      // METOC: WO=Oceanographic, WA=Atmospheric, WS=Space
+      const dim = sidc.charAt(1);
+      if (dim === 'O') return { label: 'OCN', color: '#2196F3' };
+      if (dim === 'A') return { label: 'ATM', color: '#FF9800' };
+      if (dim === 'S') return { label: 'SPC', color: '#9C27B0' };
+      return { label: 'MET', color: '#607D8B' };
+    }
+    if (ch === 'G') {
+      return { label: 'TG', color: '#4CAF50' }; // Tactical Graphics / Control Measures
+    }
+    return null;
+  }, [sidc]);
+
   if (!imgSrc) {
+    if (fallbackIcon) {
+      return (
+        <div style={{
+          width: size, height: size,
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          border: '1px dashed #444', borderRadius: 4,
+          fontSize: Math.max(9, size * 0.22), fontWeight: 700,
+          color: fallbackIcon.color, fontFamily: "'Roboto Mono', monospace",
+        }}>
+          {fallbackIcon.label}
+        </div>
+      );
+    }
     return <div style={{ width: size, height: size }} />;
   }
 
