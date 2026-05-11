@@ -123,13 +123,31 @@ const TABS: { id: TabId; label: string }[] = [
 
 // ----- Helpers -----
 
-function buildSidc15(basic: string, affiliationChar: string): string {
+/** D/E echelon code -> B/C position 11 character */
+const ECHELON_D_TO_BC: Record<string, string> = {
+  '00': '-', '11': 'A', '12': 'B', '13': 'C', '14': 'D',
+  '15': 'E', '16': 'F', '17': 'G', '18': 'H', '21': 'I',
+  '22': 'J', '23': 'K', '24': 'L', '25': 'M', '26': 'N',
+};
+
+/** D/E HQ/TF/FD code -> B/C position 12 character */
+const HQTFFD_D_TO_BC: Record<string, string> = {
+  '0': '-', '1': 'D', '2': 'A', '3': 'E', '4': 'C', '5': 'F', '6': 'B', '7': 'G',
+};
+
+function buildSidc15(basic: string, affiliationChar: string, echelon?: string, hqtffd?: string): string {
   if (!basic || basic.length < 2) return basic;
   let sidc = basic.charAt(0) + affiliationChar + basic.substring(2);
   if (sidc.charAt(3) === '*') {
     sidc = sidc.substring(0, 3) + 'P' + sidc.substring(4);
   }
   sidc = sidc.replace(/\*/g, '-');
+  // Encode echelon at position 11 and HQ/TF/FD at position 12
+  if (echelon || hqtffd) {
+    const pos11 = (echelon && ECHELON_D_TO_BC[echelon]) || sidc.charAt(10);
+    const pos12 = (hqtffd && HQTFFD_D_TO_BC[hqtffd]) || sidc.charAt(11);
+    sidc = sidc.substring(0, 10) + pos11 + pos12 + sidc.substring(12);
+  }
   return sidc;
 }
 
@@ -646,13 +664,13 @@ function BuildPanel() {
     const cBasic = lookupD2C(newSs, newEc);
     if (cBasic) {
       const affilil = SI_TO_AFFIL[newSi] || 'F';
-      const cFull = buildSidc15(cBasic, affilil);
+      const cFull = buildSidc15(cBasic, affilil, newEchelon, newHqtffd);
       setCSidc(cFull);
 
       // Reverse to B
       const bBasic = lookupC2B(cBasic);
       if (bBasic) {
-        setBSidc(buildSidc15(bBasic, affilil));
+        setBSidc(buildSidc15(bBasic, affilil, newEchelon, newHqtffd));
       } else {
         setBSidc(cFull);
       }
@@ -881,7 +899,7 @@ function BuildPanel() {
             aria-label="B SIDC input"
             data-testid="b-sidc-input"
           />
-          {bSidc ? <MilSymRenderer sidc={bSidc} size={48} /> : (
+          {bSidc ? <MilSymRendererLive sidc={dSidc} size={48} /> : (
             <div style={{ fontSize: 11, color: '#585858', fontStyle: 'italic', padding: 8 }}>D/E only entity</div>
           )}
         </div>
@@ -898,7 +916,7 @@ function BuildPanel() {
             aria-label="C SIDC input"
             data-testid="c-sidc-input"
           />
-          {cSidc ? <MilSymRenderer sidc={cSidc} size={48} /> : (
+          {cSidc ? <MilSymRendererLive sidc={dSidc} size={48} /> : (
             <div style={{ fontSize: 11, color: '#585858', fontStyle: 'italic', padding: 8 }}>D/E only entity</div>
           )}
         </div>
