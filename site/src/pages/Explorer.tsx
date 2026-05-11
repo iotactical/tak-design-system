@@ -143,9 +143,24 @@ const c2dSymbols = (c2dRefData as { c2d: { symbols: C2DSymbol[] } }).c2d.symbols
 
 // ----- Browse Tab -----
 
+const BROWSE_AFFILIATIONS = [
+  { key: 'friendly', label: 'Friendly', color: '#80C0FF' },
+  { key: 'hostile', label: 'Hostile', color: '#FF8080' },
+  { key: 'neutral', label: 'Neutral', color: '#AAFFAA' },
+  { key: 'unknown', label: 'Unknown', color: '#FFFF80' },
+] as const;
+
+function contrastText(hex: string): string {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return (0.299 * r + 0.587 * g + 0.114 * b) / 255 > 0.5 ? '#000' : '#FFF';
+}
+
 function BrowsePanel() {
   const [selectedSS, setSelectedSS] = useState('01');
   const [search, setSearch] = useState('');
+  const [affiliation, setAffiliation] = useState<typeof BROWSE_AFFILIATIONS[number]>(BROWSE_AFFILIATIONS[0]);
 
   const symbolSets = useMemo(() => {
     return Object.entries(SYMBOL_SET_NAMES).sort(([a], [b]) => a.localeCompare(b));
@@ -169,7 +184,25 @@ function BrowsePanel() {
 
   return (
     <div>
-      <div className={styles.searchRow}>
+      <div style={{ display: 'flex', gap: 16, alignItems: 'center', flexWrap: 'wrap', marginBottom: 12 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+          <span style={{ fontSize: 13, color: '#878787', lineHeight: '32px' }}>Affiliation</span>
+          <div style={{ display: 'flex', gap: 2 }}>
+            {BROWSE_AFFILIATIONS.map((a) => (
+              <button
+                key={a.key}
+                style={{
+                  padding: '4px 12px', fontSize: 12, border: '1px solid #444', borderRadius: 4, cursor: 'pointer',
+                  borderLeft: `3px solid ${a.color}`,
+                  ...(affiliation.key === a.key ? { backgroundColor: a.color, color: contrastText(a.color), borderColor: a.color } : { backgroundColor: '#242424', color: '#C8C8C8' }),
+                }}
+                onClick={() => setAffiliation(a)}
+              >
+                {a.label}
+              </button>
+            ))}
+          </div>
+        </div>
         <input
           className={styles.searchInput}
           type="text"
@@ -177,6 +210,7 @@ function BrowsePanel() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           aria-label="Search MIL-STD-2525 entities"
+          style={{ flex: 1, minWidth: 200 }}
         />
         {search && (
           <span className={styles.searchCount}>
@@ -205,7 +239,7 @@ function BrowsePanel() {
           {filteredEntities.map((entity) => (
             <div key={entity.basic} className={styles.entityCard} data-highlight={entity.label}>
               <MilSymRenderer
-                sidc={entity.basic} affiliation="friendly"
+                sidc={entity.basic} affiliation={affiliation.key as any}
                 size={36}
               />
               <div className={styles.entityLabel} title={entity.label}>
@@ -807,6 +841,28 @@ function BuildPanel() {
 
 // ----- Compare Tab -----
 
+/** Determine crosswalk confidence for a B->D mapping */
+function getConfidence(mapping: B2DMapping): 'exact' | 'modifier' | 'unverified' {
+  // If lossy, the mapping required modifier-level approximation
+  if (mapping.lossy) return 'modifier';
+  // Check if there's a matching b2c entry (verified chain B->C->D)
+  const hasB2C = b2cMappings.some((m) => matchBSidc(m.b_sidc, mapping.b_sidc));
+  if (hasB2C) return 'exact';
+  return 'unverified';
+}
+
+const CONFIDENCE_COLORS: Record<string, string> = {
+  exact: '#4caf50',
+  modifier: '#ffb300',
+  unverified: '#ef5350',
+};
+
+const CONFIDENCE_LABELS: Record<string, string> = {
+  exact: 'Exact',
+  modifier: 'Modifier-based',
+  unverified: 'Unverified',
+};
+
 function ComparePanel() {
   const [search, setSearch] = useState('');
 
@@ -817,6 +873,15 @@ function ComparePanel() {
       .filter((m) => m.label.toLowerCase().includes(lower))
       .slice(0, 20);
   }, [search]);
+
+  // Confidence summary counts for current results
+  const confidenceCounts = useMemo(() => {
+    const counts = { exact: 0, modifier: 0, unverified: 0 };
+    for (const mapping of results) {
+      counts[getConfidence(mapping)]++;
+    }
+    return counts;
+  }, [results]);
 
   return (
     <div>
@@ -830,13 +895,50 @@ function ComparePanel() {
           aria-label="Search entity for comparison"
         />
       </div>
+      {results.length > 0 && (
+        <div
+          data-testid="confidence-summary"
+          style={{
+            display: 'flex',
+            gap: 16,
+            marginBottom: 16,
+            padding: '8px 12px',
+            background: '#1e1e1e',
+            borderRadius: 6,
+            fontSize: 13,
+          }}
+        >
+          <span style={{ color: CONFIDENCE_COLORS.exact }}>
+            {confidenceCounts.exact} exact
+          </span>
+          <span style={{ color: CONFIDENCE_COLORS.modifier }}>
+            {confidenceCounts.modifier} modifier-based
+          </span>
+          <span style={{ color: CONFIDENCE_COLORS.unverified }}>
+            {confidenceCounts.unverified} unverified
+          </span>
+        </div>
+      )}
       {results.map((mapping) => {
-        const dKey = `${mapping.d_ss}-${mapping.d_ec}`;
         const dSidc = buildDSidc(mapping, '03');
+        const confidence = getConfidence(mapping);
         return (
           <div key={mapping.b_sidc} style={{ marginBottom: 24 }}>
-            <div style={{ fontSize: 14, fontWeight: 600, color: '#DAD4BC', marginBottom: 8 }}>
+            <div style={{ fontSize: 14, fontWeight: 600, color: '#DAD4BC', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 10 }}>
               {mapping.label}
+              <span
+                data-testid="confidence-badge"
+                style={{
+                  fontSize: 11,
+                  padding: '2px 8px',
+                  borderRadius: 3,
+                  background: CONFIDENCE_COLORS[confidence],
+                  color: '#000',
+                  fontWeight: 600,
+                }}
+              >
+                {CONFIDENCE_LABELS[confidence]}
+              </span>
             </div>
             <div className={styles.compareGrid}>
               <div className={styles.compareCard}>

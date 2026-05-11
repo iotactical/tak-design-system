@@ -11,6 +11,7 @@ import Platforms from './pages/Platforms';
 import Palettes from './pages/Palettes';
 import Interfaces from './pages/Interfaces';
 import Explorer from './pages/Explorer';
+import SearchResults from './pages/SearchResults';
 
 const navItems = [
   { to: '/', label: 'Overview' },
@@ -64,6 +65,7 @@ export default function App() {
           <Route path="/platforms" element={<Platforms />} />
           <Route path="/interfaces/:tab?" element={<Interfaces />} />
           <Route path="/explorer/:tab?" element={<Explorer />} />
+          <Route path="/search" element={<SearchResults />} />
         </Routes>
       </main>
     </div>
