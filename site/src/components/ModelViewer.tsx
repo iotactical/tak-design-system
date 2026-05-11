@@ -68,13 +68,21 @@ export function ModelViewer({
     renderer.setPixelRatio(window.devicePixelRatio);
     container.appendChild(renderer.domElement);
 
-    // Lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+    // Lighting -- strong ambient + multi-directional to illuminate all faces
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
     scene.add(ambientLight);
 
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1.0);
     directionalLight.position.set(5, 10, 7);
     scene.add(directionalLight);
+
+    const fillLight = new THREE.DirectionalLight(0xffffff, 0.6);
+    fillLight.position.set(-5, 5, -5);
+    scene.add(fillLight);
+
+    const rimLight = new THREE.DirectionalLight(0xffffff, 0.4);
+    rimLight.position.set(0, -5, 5);
+    scene.add(rimLight);
 
     // Controls
     const controls = new OrbitControls(camera, renderer.domElement);
@@ -89,6 +97,41 @@ export function ModelViewer({
       modelPath,
       (collada) => {
         const model = collada.scene;
+
+        // Fix dark materials: ensure all meshes are lit and visible
+        model.traverse((child) => {
+          if (child instanceof THREE.Mesh) {
+            const mat = child.material;
+            if (mat && !Array.isArray(mat)) {
+              // If material is very dark, lighten it
+              if (mat instanceof THREE.MeshPhongMaterial || mat instanceof THREE.MeshLambertMaterial) {
+                const c = mat.color;
+                const luminance = 0.299 * c.r + 0.587 * c.g + 0.114 * c.b;
+                if (luminance < 0.15) {
+                  mat.color.setHex(0x888888);
+                }
+                mat.emissive?.setHex(0x111111);
+              } else if (mat instanceof THREE.MeshBasicMaterial) {
+                // MeshBasicMaterial is unlit -- convert to Phong so lights work
+                const newMat = new THREE.MeshPhongMaterial({
+                  color: mat.color.clone(),
+                  map: mat.map,
+                  side: mat.side,
+                  transparent: mat.transparent,
+                  opacity: mat.opacity,
+                });
+                const c = newMat.color;
+                const luminance = 0.299 * c.r + 0.587 * c.g + 0.114 * c.b;
+                if (luminance < 0.15) {
+                  newMat.color.setHex(0x888888);
+                }
+                child.material = newMat;
+                mat.dispose();
+              }
+            }
+          }
+        });
+
         scene.add(model);
 
         // Auto-fit camera to model bounds
