@@ -293,7 +293,9 @@ function MarkersPanel() {
     const groups = new Map<string, BEntity[]>();
     const lower = search.toLowerCase();
     const filtered = lower
-      ? bEntities.filter((e) => e.label.toLowerCase().includes(lower))
+      ? bEntities.filter((e) =>
+          e.label.toLowerCase().includes(lower) ||
+          (SYMBOL_SET_NAMES[e.ss] || '').toLowerCase().includes(lower))
       : bEntities;
     for (const entity of filtered) {
       const ss = entity.ss;
@@ -308,7 +310,9 @@ function MarkersPanel() {
     const groups = new Map<string, B2DMapping[]>();
     const lower = search.toLowerCase();
     const filtered = lower
-      ? b2dMappings.filter((m) => m.label.toLowerCase().includes(lower))
+      ? b2dMappings.filter((m) =>
+          m.label.toLowerCase().includes(lower) ||
+          (SYMBOL_SET_NAMES[m.d_ss] || '').toLowerCase().includes(lower))
       : b2dMappings;
     for (const mapping of filtered) {
       const ss = mapping.d_ss;
