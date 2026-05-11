@@ -1,0 +1,94 @@
+{
+  "$description": "Results of MIL-STD-2525 cross-version study from authoritative PDF documents.",
+  "extracted_from": "~/Downloads/MIL-STD-2525/ (10 PDF documents)",
+  "hypotheses_results": {
+    "H1": {
+      "status": "CONFIRMED",
+      "finding": "B and C use identical 15-character SIDC field positions.",
+      "evidence": {
+        "2525B": "Appendix A, Section A.5.2.1: Position 1=Coding Scheme, 2=Affiliation, 3=Battle Dimension, 4=Status, 5-10=Function ID, 11-12=Symbol Modifier, 13-14=Country Code, 15=Order of Battle",
+        "2525C": "Section 5.4.3 (same structure): Position 1=Code Scheme, 2=Standard Identity, 3=Battle Dimension, 4=Status, 5-10=Function ID, 11-12=Symbol Modifier, 13-14=Country Code, 15=Order of Battle",
+        "difference": "C renames 'Affiliation' to 'Standard Identity' but the field position and encoding are identical"
+      }
+    },
+    "H2": {
+      "status": "CONFIRMED",
+      "finding": "D and E use identical 20-character SIDC structure in two sets of 10.",
+      "evidence": {
+        "2525D": "Appendix A, Sections A.5.3 and A.5.4",
+        "2525E": "Appendix A, Sections A.5.3 and A.5.4",
+        "set_a": "Digits 1-2=Version, 3-4=Standard Identity (3=context, 4=identity), 5-6=Symbol Set, 7=Status, 8=HQ/TF/FD, 9-10=Amplifier/Descriptor",
+        "set_b": "Digits 11-12=Entity, 13-14=Entity Type, 15-16=Entity Subtype, 17-18=Modifier 1, 19-20=Modifier 2"
+      }
+    },
+    "H3": {
+      "status": "CONFIRMED",
+      "finding": "Entity code 110200 is 'Rotary Wing' in Air symbol set. Entity=11 (Military), Type=02 (Rotary Wing), Subtype=00 (Unspecified).",
+      "evidence": "The 6-digit entity code is hierarchical: Entity(2) + Type(2) + Subtype(2). Entity 11=Military in Air. Type 01=Fixed Wing, 02=Rotary Wing, 03=UAV."
+    },
+    "H4": {
+      "status": "CONFIRMED",
+      "finding": "Sector modifier 1 transforms the base entity visually. s1=11 on Air entities adds Command Post designation.",
+      "evidence": "Pre-rendered SVGs with s1 included (e.g. s1=11) produce different symbols than without. mil-sym-ts renders modifiers in the SVG. Our manifest correctly maps lossy entries with s1/s2 to their modified SVGs."
+    },
+    "H5": {
+      "status": "PARTIALLY CONFIRMED",
+      "finding": "Non-lossy entries map correctly (Function ID -> Entity code via NGA crosswalk). Lossy entries map to base entity + modifier composite, which is semantically correct but requires modifier rendering.",
+      "evidence": "438 of 1,915 entries are lossy. Lossy entries use s1/s2 to create composite symbols. The NGA crosswalk is technically correct but the visual representation requires modifier rendering."
+    },
+    "H6": {
+      "status": "CONFIRMED",
+      "finding": "D (version 10/11) and E (version 13/15) share the same SIDC structure. E adds version codes 13-15.",
+      "evidence": "2525E Table A-I shows version 10=2525D, 11=2525D(1), 13=2525E. Delta analysis: 2016 shared entities, 93 D-only, 150 E-only."
+    },
+    "H7": {
+      "status": "CONFIRMED",
+      "finding": "The 6-digit entity field IS a hierarchical 3-level code: Entity(2) + Entity Type(2) + Entity Subtype(2).",
+      "evidence": "2525E Section A.5.4: 'The SIDC structure is organized using a logical three-tier hierarchy based on first, second and third order military functions; each tier is expressed using a pair of values.'"
+    },
+    "H8": {
+      "status": "CONFIRMED",
+      "finding": "B/C Battle Dimension maps to D/E Symbol Set: A(Air)->01, P(Space)->05, G(Ground)->10, S(Sea Surface)->30, U(Sea Subsurface)->35, F(SOF)->not direct mapping, X(Other)->various.",
+      "evidence": "2525B Table A-I: Battle Dimension codes P,A,G,S,U,F,X. 2525D/E symbol sets: 01=Air, 02=Air Missile, 05=Space, 06=Space Missile, 10=Land Unit, 11=Land Civilian, 15=Land Equipment, 20=Land Installation, 25=Control Measures, 30=Sea Surface, 35=Sea Subsurface, 36=Mine Warfare, 40=Activities."
+    }
+  },
+  "field_definitions": {
+    "2525B_C_15char": {
+      "position_1": { "name": "Coding Scheme", "values": "S=Warfighting, G=Tactical Graphics, W=METOC, I=Intelligence, O=MOOTW" },
+      "position_2": { "name": "Standard Identity (Affiliation)", "values": "P=Pending, U=Unknown, A=Assumed Friend, F=Friend, N=Neutral, S=Suspect, H=Hostile, J=Joker, K=Faker" },
+      "position_3": { "name": "Battle Dimension", "values": "P=Space, A=Air, G=Ground, S=Sea Surface, U=Sea Subsurface, F=SOF, X=Other" },
+      "position_4": { "name": "Status", "values": "A=Anticipated/Planned, P=Present" },
+      "positions_5_10": { "name": "Function ID", "description": "6 characters identifying increasing detail of entity function" },
+      "positions_11_12": { "name": "Symbol Modifier", "description": "Echelon, installation, mobility, HQ/TF indicators" },
+      "positions_13_14": { "name": "Country Code", "description": "FIPS Pub 10 series country identifier" },
+      "position_15": { "name": "Order of Battle", "values": "A=Air OB, E=Electronic OB, C=Civilian, G=Ground OB, N=Naval OB, S=Strategic Force" }
+    },
+    "2525D_E_20char": {
+      "set_a": {
+        "positions_1_2": { "name": "Version", "values": "10=2525D, 11=2525D Ch1, 13=2525E, 15=2525E Ch1" },
+        "position_3": { "name": "Context", "values": "0=Reality, 1=Exercise, 2=Simulation" },
+        "position_4": { "name": "Standard Identity", "values": "0=Pending, 1=Unknown, 2=Assumed Friend, 3=Friend, 4=Neutral, 5=Suspect/Joker, 6=Hostile/Faker" },
+        "positions_5_6": { "name": "Symbol Set", "values": "01=Air, 02=Air Missile, 05=Space, 06=Space Missile, 10=Land Unit, 11=Land Civilian, 15=Land Equipment, 20=Land Installation, 25=Control Measures, 27=Stability Operations, 30=Sea Surface, 35=Sea Subsurface, 36=Mine Warfare, 40=Activities, 45=Atmospheric, 46=Oceanographic, 47=Meteorological Space, 50-54=SIGINT, 60=Cyberspace" },
+        "position_7": { "name": "Status", "values": "0=Present, 1=Planned/Anticipated, 2-5=Present variants (capable/damaged/destroyed/full)" },
+        "position_8": { "name": "HQ/Task Force/Dummy", "values": "0=Not applicable, 1=Feint/Dummy, 2=HQ, 3=Feint/Dummy HQ, 4=TF, 5=Feint/Dummy TF, 6=TF HQ, 7=Feint/Dummy TF HQ" },
+        "positions_9_10": { "name": "Echelon/Mobility/Towed Array", "description": "11-18=Team through Brigade, 21-26=Division through Command" }
+      },
+      "set_b": {
+        "positions_11_12": { "name": "Entity", "description": "First-order military function (2 digits)" },
+        "positions_13_14": { "name": "Entity Type", "description": "Second-order military function (2 digits)" },
+        "positions_15_16": { "name": "Entity Subtype", "description": "Third-order military function (2 digits)" },
+        "positions_17_18": { "name": "Sector Modifier 1", "description": "First modifier (varies by symbol set)" },
+        "positions_19_20": { "name": "Sector Modifier 2", "description": "Second modifier (varies by symbol set)" }
+      }
+    }
+  },
+  "battle_dimension_to_symbol_set": {
+    "A_Air": ["01_Air", "02_Air_Missile"],
+    "P_Space": ["05_Space", "06_Space_Missile"],
+    "G_Ground": ["10_Land_Unit", "11_Land_Civilian", "15_Land_Equipment", "20_Land_Installation"],
+    "S_Sea_Surface": ["30_Sea_Surface"],
+    "U_Sea_Subsurface": ["35_Sea_Subsurface", "36_Mine_Warfare"],
+    "F_SOF": "Mapped into Land Unit (10) with SOF entity codes",
+    "X_Other": "Mapped into Activities (40) and various sets"
+  }
+}
