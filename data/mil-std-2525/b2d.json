@@ -806,7 +806,7 @@
       "d_ec": "110000",
       "d_s1": "05",
       "d_s2": "00",
-      "label": "Anitballistic Missle (ABM)",
+      "label": "Antiballistic Missile (ABM)",
       "lossy": true
     },
     {
@@ -1598,7 +1598,7 @@
       "d_ec": "120800",
       "d_s1": "00",
       "d_s2": "49",
-      "label": "Verticl or Short Take-Off and Landing (VTOL/VSTOL)",
+      "label": "Vertical or Short Take-Off and Landing (VTOL/VSTOL)",
       "lossy": true
     },
     {
@@ -10967,7 +10967,7 @@
       "d_ec": "120206",
       "d_s1": "03",
       "d_s2": "00",
-      "label": "Littoral Combatant Ship, Anitsubmarine Warfare",
+      "label": "Littoral Combatant Ship, Antisubmarine Warfare",
       "lossy": true
     },
     {
@@ -11156,7 +11156,7 @@
       "d_ec": "120700",
       "d_s1": "03",
       "d_s2": "00",
-      "label": "Anitsubmarine Warfare",
+      "label": "Antisubmarine Warfare",
       "lossy": true
     },
     {
@@ -11597,7 +11597,7 @@
       "d_ec": "110400",
       "d_s1": "01",
       "d_s2": "00",
-      "label": "Anitsubmarine Warfare",
+      "label": "Antisubmarine Warfare",
       "lossy": true
     },
     {

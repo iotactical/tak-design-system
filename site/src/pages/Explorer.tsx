@@ -860,9 +860,9 @@ const CONFIDENCE_COLORS: Record<string, string> = {
 };
 
 const CONFIDENCE_LABELS: Record<string, string> = {
-  exact: 'Exact',
-  modifier: 'Modifier-based',
-  unverified: 'Unverified',
+  exact: '1:1 Match',
+  modifier: 'D/E Adds Modifiers',
+  unverified: 'Unmapped',
 };
 
 function ComparePanel() {
@@ -911,14 +911,16 @@ function ComparePanel() {
           }}
         >
           <span style={{ color: CONFIDENCE_COLORS.exact }}>
-            {confidenceCounts.exact} exact
+            {confidenceCounts.exact} 1:1
           </span>
           <span style={{ color: CONFIDENCE_COLORS.modifier }}>
-            {confidenceCounts.modifier} modifier-based
+            {confidenceCounts.modifier} modifier
           </span>
-          <span style={{ color: CONFIDENCE_COLORS.unverified }}>
-            {confidenceCounts.unverified} unverified
-          </span>
+          {confidenceCounts.unverified > 0 && (
+            <span style={{ color: CONFIDENCE_COLORS.unverified }}>
+              {confidenceCounts.unverified} unmapped
+            </span>
+          )}
         </div>
       )}
       {results.map((mapping) => {

@@ -827,7 +827,7 @@
     },
     {
       "b_sidc": "S*A*WMSB--*****",
-      "label": "Anitballistic Missle (ABM)",
+      "label": "Antiballistic Missile (ABM)",
       "lossy": true,
       "validation": "missing-svg",
       "status": "unverified",
@@ -1699,7 +1699,7 @@
     },
     {
       "b_sidc": "S*G*UCVV--*****",
-      "label": "Verticl or Short Take-Off and Landing (VTOL/VSTOL)",
+      "label": "Vertical or Short Take-Off and Landing (VTOL/VSTOL)",
       "lossy": true,
       "validation": "missing-svg",
       "status": "unverified",
@@ -9790,7 +9790,7 @@
     },
     {
       "b_sidc": "S*S*CLLLAS*****",
-      "label": "Littoral Combatant Ship, Anitsubmarine Warfare",
+      "label": "Littoral Combatant Ship, Antisubmarine Warfare",
       "lossy": true,
       "validation": "missing-svg",
       "status": "unverified",
@@ -9965,7 +9965,7 @@
     },
     {
       "b_sidc": "S*S*CUS---*****",
-      "label": "Anitsubmarine Warfare",
+      "label": "Antisubmarine Warfare",
       "lossy": true,
       "validation": "missing-svg",
       "status": "unverified",
@@ -10348,7 +10348,7 @@
     },
     {
       "b_sidc": "S*U*SUS---*****",
-      "label": "Anitsubmarine Warfare",
+      "label": "Antisubmarine Warfare",
       "lossy": true,
       "validation": "missing-svg",
       "status": "unverified",

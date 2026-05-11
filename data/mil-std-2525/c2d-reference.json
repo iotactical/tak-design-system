@@ -920,7 +920,7 @@
         "s2": "00",
         "e": "",
         "et": "",
-        "est": "Anitballistic Missle (ABM)",
+        "est": "Antiballistic Missile (ABM)",
         "__parsed_extra": [
           "",
           "Symbol is displayed differently between versions."
@@ -1834,7 +1834,7 @@
         "s2": "49",
         "e": "",
         "et": "",
-        "est": "Verticl or Short Take-Off and Landing (VTOL/VSTOL)"
+        "est": "Vertical or Short Take-Off and Landing (VTOL/VSTOL)"
       },
       {
         "basic": "S*G*UCVFR-*****",
@@ -12239,7 +12239,7 @@
         "s2": "00",
         "e": "",
         "et": "",
-        "est": "Littoral Combatant Ship, Anitsubmarine Warfare",
+        "est": "Littoral Combatant Ship, Antisubmarine Warfare",
         "__parsed_extra": [
           "",
           "Symbol is displayed differently between versions"
@@ -12479,7 +12479,7 @@
         "s2": "00",
         "e": "",
         "et": "",
-        "est": "Anitsubmarine Warfare"
+        "est": "Antisubmarine Warfare"
       },
       {
         "basic": "S*S*CUM---*****",
@@ -13029,7 +13029,7 @@
         "s2": "00",
         "e": "",
         "et": "",
-        "est": "Anitsubmarine Warfare"
+        "est": "Antisubmarine Warfare"
       },
       {
         "basic": "S*U*SUM---*****",
