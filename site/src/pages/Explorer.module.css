@@ -445,3 +445,16 @@
   color: #878787;
   font-size: 14px;
 }
+
+/* Modifier Inspector */
+.inspectorPanel {
+  width: 280px;
+  flex-shrink: 0;
+  background: #1e1e1e;
+  border: 1px solid #2E2E2E;
+  border-radius: 8px;
+  padding: 16px;
+  position: sticky;
+  top: 16px;
+  align-self: flex-start;
+}

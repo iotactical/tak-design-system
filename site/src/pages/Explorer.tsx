@@ -1,4 +1,6 @@
+// rtmx:req REQ-XW-093
 // rtmx:req REQ-XW-100
+// rtmx:req REQ-XW-105
 // rtmx:req REQ-XW-121
 // rtmx:req REQ-XW-140
 import { useEffect, useState, useMemo } from 'react';
@@ -141,6 +143,129 @@ const b2dMappings = (b2dData as { mappings: B2DMapping[] }).mappings;
 const b2cMappings = b2cData as B2CMapping[];
 const c2dSymbols = (c2dRefData as { c2d: { symbols: C2DSymbol[] } }).c2d.symbols;
 
+// ----- Modifier Helpers -----
+
+interface ModifierOption {
+  value: string;
+  label: string;
+}
+
+function getModifierOptions(symbolSet: string, field: 's1' | 's2'): ModifierOption[] {
+  const key = field === 's1' ? 'd_s1' : 'd_s2';
+  const seen = new Map<string, string>();
+  seen.set('00', 'None');
+  for (const m of b2dMappings) {
+    if (m.d_ss !== symbolSet) continue;
+    const val = m[key];
+    if (val === '00' || seen.has(val)) continue;
+    seen.set(val, `${val} - ${m.label}`);
+  }
+  return Array.from(seen.entries())
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([value, label]) => ({ value, label }));
+}
+
+function findB2DMapping(entity: BEntity): B2DMapping | undefined {
+  return b2dMappings.find((m) => m.d_ss === entity.ss && m.d_ec === entity.ec);
+}
+
+function buildDSidcFromEntity(entity: BEntity, si: string, s1: string, s2: string): string {
+  return `10${si}0${entity.ss}00${entity.ec}${s1}${s2}`;
+}
+
+// ----- Modifier Inspector -----
+
+function ModifierInspector({
+  entity, affiliation, onClose,
+}: {
+  entity: BEntity;
+  affiliation: typeof BROWSE_AFFILIATIONS[number];
+  onClose: () => void;
+}) {
+  const [s1, setS1] = useState('00');
+  const [s2, setS2] = useState('00');
+  const b2dMapping = useMemo(() => findB2DMapping(entity), [entity]);
+  const siDigit = useMemo(() => {
+    switch (affiliation.key) {
+      case 'friendly': return '3';
+      case 'hostile': return '6';
+      case 'neutral': return '4';
+      case 'unknown': return '1';
+      default: return '3';
+    }
+  }, [affiliation]);
+  const s1Options = useMemo(() => getModifierOptions(entity.ss, 's1'), [entity.ss]);
+  const s2Options = useMemo(() => getModifierOptions(entity.ss, 's2'), [entity.ss]);
+  const dSidc = useMemo(() => buildDSidcFromEntity(entity, siDigit, s1, s2), [entity, siDigit, s1, s2]);
+  const hasModifiers = s1Options.length > 1 || s2Options.length > 1;
+
+  useEffect(() => {
+    if (b2dMapping) { setS1(b2dMapping.d_s1); setS2(b2dMapping.d_s2); }
+    else { setS1('00'); setS2('00'); }
+  }, [b2dMapping]);
+
+  return (
+    <div className={styles.inspectorPanel} data-testid="modifier-inspector">
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
+        <span style={{ fontSize: 15, fontWeight: 700, color: '#DAD4BC' }}>{entity.label}</span>
+        <button onClick={onClose} style={{ background: 'none', border: 'none', color: '#878787', cursor: 'pointer', fontSize: 16 }} aria-label="Close inspector">X</button>
+      </div>
+      <div style={{ textAlign: 'center', marginBottom: 12 }}>
+        <MilSymRenderer sidc={dSidc} size={72} />
+        <div style={{ fontFamily: "'Roboto Mono', monospace", fontSize: 11, color: '#878787', marginTop: 4 }}>{dSidc}</div>
+        <div style={{ fontSize: 10, color: '#585858' }}>D/E 20-char SIDC</div>
+      </div>
+      <div style={{ fontSize: 12, marginBottom: 12 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', padding: '4px 0', borderBottom: '1px solid #2E2E2E' }}>
+          <span style={{ color: '#878787' }}>Symbol Set</span>
+          <span style={{ color: '#DAD4BC' }}>{SYMBOL_SET_NAMES[entity.ss] || entity.ss} ({entity.ss})</span>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', padding: '4px 0', borderBottom: '1px solid #2E2E2E' }}>
+          <span style={{ color: '#878787' }}>Entity Code</span>
+          <span style={{ color: '#DAD4BC' }}>{entity.ec}</span>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', padding: '4px 0', borderBottom: '1px solid #2E2E2E' }}>
+          <span style={{ color: '#878787' }}>B SIDC</span>
+          <span style={{ color: '#DAD4BC', fontFamily: "'Roboto Mono', monospace", fontSize: 11 }}>{entity.basic}</span>
+        </div>
+        {b2dMapping && (
+          <div style={{ display: 'flex', justifyContent: 'space-between', padding: '4px 0' }}>
+            <span style={{ color: '#878787' }}>Crosswalk</span>
+            <span style={{ color: b2dMapping.lossy ? '#ffb300' : '#4caf50' }}>
+              {b2dMapping.lossy ? 'D/E Adds Modifiers' : '1:1 Match'}
+            </span>
+          </div>
+        )}
+      </div>
+      {hasModifiers ? (
+        <div data-testid="modifier-controls">
+          <div style={{ fontSize: 13, fontWeight: 600, color: '#c8a951', marginBottom: 8 }}>Sector Modifiers</div>
+          {s1Options.length > 1 && (
+            <div style={{ marginBottom: 8 }}>
+              <label style={{ fontSize: 11, color: '#878787', display: 'block', marginBottom: 4 }}>Modifier 1 (s1) -- positions 17-18</label>
+              <select data-testid="modifier-s1-select" value={s1} onChange={(e) => setS1(e.target.value)}
+                style={{ width: '100%', padding: '6px 8px', background: '#1A1A1A', border: '1px solid #2E2E2E', borderRadius: 4, color: '#DAD4BC', fontSize: 12 }}>
+                {s1Options.map((opt) => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
+              </select>
+            </div>
+          )}
+          {s2Options.length > 1 && (
+            <div style={{ marginBottom: 8 }}>
+              <label style={{ fontSize: 11, color: '#878787', display: 'block', marginBottom: 4 }}>Modifier 2 (s2) -- positions 19-20</label>
+              <select data-testid="modifier-s2-select" value={s2} onChange={(e) => setS2(e.target.value)}
+                style={{ width: '100%', padding: '6px 8px', background: '#1A1A1A', border: '1px solid #2E2E2E', borderRadius: 4, color: '#DAD4BC', fontSize: 12 }}>
+                {s2Options.map((opt) => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
+              </select>
+            </div>
+          )}
+        </div>
+      ) : (
+        <div style={{ fontSize: 12, color: '#585858', fontStyle: 'italic' }}>No sector modifiers available for this symbol set.</div>
+      )}
+    </div>
+  );
+}
+
 // ----- Browse Tab -----
 
 const BROWSE_AFFILIATIONS = [
@@ -161,6 +286,7 @@ function BrowsePanel() {
   const [selectedSS, setSelectedSS] = useState('01');
   const [search, setSearch] = useState('');
   const [affiliation, setAffiliation] = useState<typeof BROWSE_AFFILIATIONS[number]>(BROWSE_AFFILIATIONS[0]);
+  const [inspectedEntity, setInspectedEntity] = useState<BEntity | null>(null);
 
   const symbolSets = useMemo(() => {
     return Object.entries(SYMBOL_SET_NAMES).sort(([a], [b]) => a.localeCompare(b));
@@ -239,7 +365,16 @@ function BrowsePanel() {
         )}
         <div className={styles.entityGrid}>
           {filteredEntities.map((entity) => (
-            <div key={entity.basic} className={styles.entityCard} data-highlight={entity.label}>
+            <div
+              key={entity.basic}
+              className={styles.entityCard}
+              data-highlight={entity.label}
+              onClick={() => setInspectedEntity(inspectedEntity?.basic === entity.basic ? null : entity)}
+              style={{
+                cursor: 'pointer',
+                borderColor: inspectedEntity?.basic === entity.basic ? '#c8a951' : undefined,
+              }}
+            >
               <MilSymRenderer
                 sidc={entity.basic} affiliation={affiliation.key as any}
                 size={36}
@@ -254,6 +389,13 @@ function BrowsePanel() {
             <div className={styles.emptyState}>No entities found.</div>
           )}
         </div>
+        {inspectedEntity && (
+          <ModifierInspector
+            entity={inspectedEntity}
+            affiliation={affiliation}
+            onClose={() => setInspectedEntity(null)}
+          />
+        )}
       </div>
     </div>
   );

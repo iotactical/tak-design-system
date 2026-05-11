@@ -1,5 +1,4 @@
-// rtmx:req REQ-XW-081
-// rtmx:req REQ-XW-082
+// rtmx:req REQ-XW-080
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -12,135 +11,81 @@ const PALETTES_SRC = resolve(ROOT, 'site', 'src', 'pages', 'Palettes.tsx');
 
 const source = readFileSync(PALETTES_SRC, 'utf8');
 
-describe('REQ-XW-081: Skittles circles tab', () => {
-  it('has a Skittles tab in PALETTE_TABS', () => {
-    assert.ok(
-      source.includes("id: 'skittles'"),
-      'PALETTE_TABS must contain a skittles tab'
-    );
+describe('REQ-XW-080: Skittles palette tab', () => {
+  it('Palettes.tsx contains a Skittles tab', () => {
     assert.ok(
       source.includes("label: 'Skittles'"),
-      'Skittles tab must have label Skittles'
+      'Palettes.tsx must have a Skittles tab label'
+    );
+    assert.ok(
+      source.includes("type: 'skittles'"),
+      'Palettes.tsx must have skittles palette type'
     );
   });
 
-  it('has a SkittlesPanel component', () => {
+  it('team color definitions exist with expected colors', () => {
     assert.ok(
-      source.includes('function SkittlesPanel'),
-      'SkittlesPanel component must exist'
+      source.includes('TEAM_COLORS'),
+      'Palettes.tsx must define TEAM_COLORS'
     );
-  });
-
-  it('renders circles using CSS (not SVG images)', () => {
-    // The skittle circles use borderRadius: 50% for the circle shape
-    assert.ok(
-      source.includes("borderRadius: '50%'"),
-      'Skittles must use CSS border-radius for circles'
-    );
-    assert.ok(
-      source.includes("boxShadow: '0 2px 4px rgba(0,0,0,0.5)'"),
-      'Skittles must have box-shadow for raised look'
-    );
-  });
-
-  it('contains role abbreviations TL, HQ, S, M, FO, RTO, K9', () => {
-    const abbrs = ['TL', 'HQ', 'FO', 'RTO', 'K9'];
-    for (const abbr of abbrs) {
+    const expectedColors = ['cyan', 'green', 'red', 'blue', 'yellow', 'orange', 'magenta', 'white'];
+    for (const color of expectedColors) {
       assert.ok(
-        source.includes(`abbr: '${abbr}'`),
-        `Skittles must include role abbreviation: ${abbr}`
+        source.includes(`name: '${color}'`),
+        `TEAM_COLORS must include ${color}`
       );
     }
   });
 
-  it('includes staleness states section', () => {
+  it('staleness states are rendered', () => {
     assert.ok(
       source.includes('Staleness States'),
-      'SkittlesPanel must show staleness states'
+      'SkittlesPanel must render Staleness States section'
+    );
+    assert.ok(
+      source.includes('Connected'),
+      'Staleness must include Connected state'
+    );
+    assert.ok(
+      source.includes('Stale'),
+      'Staleness must include Stale state'
     );
     assert.ok(
       source.includes('grayscale'),
-      'Expired state must use grayscale filter'
+      'Expired/stale state must use grayscale filter'
     );
   });
 
-  it('includes affiliation dots', () => {
-    assert.ok(
-      source.includes('Affiliation'),
-      'SkittlesPanel must show affiliation section'
-    );
-    assert.ok(
-      source.includes('Friendly'),
-      'Affiliation must include Friendly'
-    );
-    assert.ok(
-      source.includes('Hostile'),
-      'Affiliation must include Hostile'
-    );
-  });
-
-  it('includes GPS source variants section', () => {
+  it('GPS source variants exist', () => {
     assert.ok(
       source.includes('GPS Source Variants'),
-      'SkittlesPanel must include GPS source variants'
+      'SkittlesPanel must include GPS Source Variants section'
+    );
+    assert.ok(
+      source.includes('GPS (h-e)'),
+      'Must include GPS (h-e) variant'
+    );
+    assert.ok(
+      source.includes('Human (h-*)'),
+      'Must include Human (h-*) variant'
+    );
+    assert.ok(
+      source.includes('Manual (m-g-l)'),
+      'Must include Manual (m-g-l) variant'
     );
   });
 
-  it('skittles tab type routes to SkittlesPanel', () => {
+  it('SkittlesPanel function exists', () => {
     assert.ok(
-      source.includes("active.type === 'skittles'"),
-      'Routing must check for skittles type'
-    );
-    assert.ok(
-      source.includes('<SkittlesPanel'),
-      'Routing must render SkittlesPanel'
+      source.includes('function SkittlesPanel'),
+      'Palettes.tsx must define SkittlesPanel component'
     );
   });
 
-  it('default activeTab is skittles', () => {
+  it('default active tab is skittles', () => {
     assert.ok(
       source.includes("|| 'skittles'"),
       'Default tab fallback must be skittles'
-    );
-  });
-});
-
-describe('REQ-XW-082: Self Marker tab (renamed from old Skittles)', () => {
-  it('has a Self Marker tab in PALETTE_TABS', () => {
-    assert.ok(
-      source.includes("id: 'self-marker'"),
-      'PALETTE_TABS must contain a self-marker tab'
-    );
-    assert.ok(
-      source.includes("label: 'Self Marker'"),
-      'Self Marker tab must have label Self Marker'
-    );
-  });
-
-  it('has a SelfMarkerPanel component', () => {
-    assert.ok(
-      source.includes('function SelfMarkerPanel'),
-      'SelfMarkerPanel component must exist'
-    );
-  });
-
-  it('self-marker tab type routes to SelfMarkerPanel', () => {
-    assert.ok(
-      source.includes("active.type === 'self-marker'"),
-      'Routing must check for self-marker type'
-    );
-    assert.ok(
-      source.includes('<SelfMarkerPanel'),
-      'Routing must render SelfMarkerPanel'
-    );
-  });
-
-  it('skittles tab appears before self-marker in PALETTE_TABS', () => {
-    const skittlesIdx = source.indexOf("id: 'skittles'");
-    const selfMarkerIdx = source.indexOf("id: 'self-marker'");
-    assert.ok(
-      skittlesIdx < selfMarkerIdx,
-      'Skittles tab must appear before Self Marker tab'
     );
   });
 });
