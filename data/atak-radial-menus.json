@@ -21,11 +21,6 @@
           "selected": "${tracks_on}"
         },
         {
-          "action": "actions/dangerclose.xml",
-          "icon": "icons/blast_rings.png",
-          "dependsOnCapability": "capability.weapons"
-        },
-        {
           "icon": "icons/contact.png",
           "submenu": "menus/contact_submenu.xml"
         },
@@ -104,11 +99,6 @@
           "icon": "icons/breadcrumbs.xml",
           "submenu": "menus/trackhistory_submenu.xml",
           "selected": "${tracks_on}"
-        },
-        {
-          "action": "actions/dangerclose.xml",
-          "icon": "icons/blast_rings.png",
-          "dependsOnCapability": "capability.weapons"
         },
         {
           "action": "actions/9line.xml",
@@ -212,11 +202,6 @@
           "selected": "${tracks_on}"
         },
         {
-          "action": "actions/dangerclose.xml",
-          "icon": "icons/blast_rings.png",
-          "dependsOnCapability": "capability.weapons"
-        },
-        {
           "action": "actions/tasktoobject.xml",
           "icon": "icons/task.png",
           "disabled": "@{disableTasking}"
@@ -261,11 +246,6 @@
           "icon": "icons/breadcrumbs.xml",
           "submenu": "menus/trackhistory_submenu.xml",
           "selected": "${tracks_on}"
-        },
-        {
-          "action": "actions/dangerclose.xml",
-          "icon": "icons/blast_rings.png",
-          "dependsOnCapability": "capability.weapons"
         },
         {
           "action": "actions/tasktoobject.xml",
@@ -485,11 +465,6 @@
           "selected": "!{${hideLabel}}"
         },
         {
-          "action": "actions/dangerclose.xml",
-          "icon": "icons/blast_rings.png",
-          "dependsOnCapability": "capability.weapons"
-        },
-        {
           "action": "actions/9line_spi.xml",
           "icon": "icons/nineline.png",
           "dependsOnCapability": "capability.fires"
@@ -553,11 +528,6 @@
           "selected": "${tracks_on}"
         },
         {
-          "action": "actions/dangerclose.xml",
-          "icon": "icons/blast_rings.png",
-          "dependsOnCapability": "capability.weapons"
-        },
-        {
           "action": "actions/pairingline.xml",
           "icon": "icons/pairing_line.png"
         },
@@ -604,11 +574,6 @@
           "dependsOnCapability": "capability.fires"
         },
         {
-          "action": "actions/dangerclose.xml",
-          "icon": "icons/blast_rings.png",
-          "dependsOnCapability": "capability.weapons"
-        },
-        {
           "action": "actions/dropspitarget.xml",
           "icon": "icons/target.png",
           "submenu": "menus/drop_point_submenu.xml"
@@ -637,11 +602,6 @@
           "icon": "icons/delete.png",
           "angle": "-90",
           "disabled": "!{${removable}}"
-        },
-        {
-          "action": "actions/dangerclose.xml",
-          "icon": "icons/blast_rings.png",
-          "dependsOnCapability": "capability.weapons"
         },
         {
           "action": "actions/dropspitarget.xml",
@@ -1620,12 +1580,6 @@
       "name": "feature_point_menu",
       "items": [
         {
-          "action": "actions/dangerclose.xml",
-          "icon": "icons/blast_rings.png",
-          "angle": "-90",
-          "dependsOnCapability": "capability.weapons"
-        },
-        {
           "action": "actions/showdetails_feature.xml",
           "icon": "icons/details.png"
         },
@@ -1723,12 +1677,6 @@
       "name": "immutable_point",
       "items": [
         {
-          "action": "actions/dangerclose.xml",
-          "icon": "icons/blast_rings.png",
-          "angle": "-90",
-          "dependsOnCapability": "capability.weapons"
-        },
-        {
           "action": "actions/9line_spi.xml",
           "icon": "icons/nineline.png",
           "dependsOnCapability": "capability.fires"
@@ -1750,13 +1698,6 @@
     {
       "name": "immutable_shape",
       "items": [
-        {
-          "action": "actions/dangerclose.xml",
-          "icon": "icons/blast_rings.png",
-          "angle": "-90",
-          "disabled": "true",
-          "dependsOnCapability": "capability.weapons"
-        },
         {
           "action": "actions/9line_spi.xml",
           "icon": "icons/nineline.png",
@@ -1876,11 +1817,6 @@
           "icon": "icons/fah_redx.png",
           "submenu": "menus/spi_fah_submenu.xml",
           "dependsOnCapability": "capability.fires"
-        },
-        {
-          "action": "actions/dangerclose.xml",
-          "icon": "icons/blast_rings.png",
-          "dependsOnCapability": "capability.weapons"
         },
         {
           "action": "actions/pairingline.xml",
@@ -2127,11 +2063,6 @@
           "icon": "icons/ic_laser_selected.png",
           "selected": "${lbon}",
           "dependsOnCapability": "capability.fires"
-        },
-        {
-          "action": "actions/dangerclose.xml",
-          "icon": "icons/blast_rings.png",
-          "dependsOnCapability": "capability.weapons"
         }
       ]
     },
@@ -2396,11 +2327,6 @@
           "selected": "${camLocked}"
         },
         {
-          "action": "actions/dangerclose.xml",
-          "icon": "icons/blast_rings.png",
-          "dependsOnCapability": "capability.weapons"
-        },
-        {
           "action": "actions/pairingline.xml",
           "icon": "icons/pairing_line.png"
         },
@@ -2496,11 +2422,6 @@
           "icon": "icons/fah_redx.png",
           "submenu": "menus/spi_fah_submenu.xml",
           "dependsOnCapability": "capability.fires"
-        },
-        {
-          "action": "actions/dangerclose.xml",
-          "icon": "icons/blast_rings.png",
-          "dependsOnCapability": "capability.weapons"
         },
         {
           "action": "actions/pairingline.xml",
@@ -2606,11 +2527,6 @@
         {
           "action": "actions/showdetails.xml",
           "icon": "icons/details.png"
-        },
-        {
-          "action": "actions/dangerclose.xml",
-          "icon": "icons/blast_rings.png",
-          "dependsOnCapability": "capability.weapons"
         },
         {
           "action": "actions/9line.xml",

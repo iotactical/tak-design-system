@@ -345,7 +345,7 @@ const componentGallery: CategoryGroup[] = [
       },
       {
         name: 'NineLineForm',
-        description: 'Standardized 9-line CAS briefing form with template-driven fields.',
+        description: 'Standardized report form (MEDEVAC 9-line, SALUTE) with template-driven fields.',
         props: [
           { name: 'template', type: 'NineLineTemplate', required: true },
           { name: 'values', type: 'Record<string, string>', required: false },

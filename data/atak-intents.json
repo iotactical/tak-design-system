@@ -1,5 +1,5 @@
 {
-  "totalCount": 440,
+  "totalCount": 434,
   "groups": [
     {
       "namespace": "com.atak.plugins.impl",
@@ -557,7 +557,7 @@
           "type": "localbroadcast",
           "class": "com.atakmap.android.fires.HostileManagerDropDownReceiver",
           "action": "com.atakmap.android.maps.MANAGE_HOSTILES",
-          "description": "The event to bring up the hostile manager within the ATAK system.   This allows for manipulation of all CAS 9-lines within the system."
+          "description": "The event to bring up the hostile manager within the ATAK system.   This allows for management of hostile tracks within the system."
         },
         {
           "type": "localbroadcast",
@@ -1526,47 +1526,6 @@
           "class": "com.atakmap.android.model.viewer.DetailedModelViewerDropdownReceiver",
           "action": "com.l3t.visor.plugin.SHOW_3D_VIEW",
           "description": "Show the 3D Model"
-        }
-      ]
-    },
-    {
-      "namespace": "com.atakmap.android.munitions",
-      "intents": [
-        {
-          "type": "localbroadcast",
-          "class": "com.atakmap.android.munitions.DangerCloseReceiver",
-          "action": "com.atakmap.android.munitions.ADD",
-          "description": "Add a weapon to a target"
-        },
-        {
-          "type": "localbroadcast",
-          "class": "com.atakmap.android.munitions.DangerCloseReceiver",
-          "action": "com.atakmap.android.munitions.LABEL_TOGGLE",
-          "description": "Toggle labels on a range ring"
-        },
-        {
-          "type": "localbroadcast",
-          "class": "com.atakmap.android.munitions.DangerCloseReceiver",
-          "action": "com.atakmap.android.munitions.OPEN",
-          "description": "Open the REDs and MSDs drop-down"
-        },
-        {
-          "type": "localbroadcast",
-          "class": "com.atakmap.android.munitions.DangerCloseReceiver",
-          "action": "com.atakmap.android.munitions.REMOVE",
-          "description": "Remove a range ring"
-        },
-        {
-          "type": "localbroadcast",
-          "class": "com.atakmap.android.munitions.DangerCloseReceiver",
-          "action": "com.atakmap.android.munitions.REMOVE_MUNITION_FROM_ALL",
-          "description": "Remove a specific weapon from all targets"
-        },
-        {
-          "type": "localbroadcast",
-          "class": "com.atakmap.android.munitions.DangerCloseReceiver",
-          "action": "com.atakmap.android.munitions.TOGGLE",
-          "description": "Toggle weapon on a target - similar to add but with extra functionality"
         }
       ]
     },
