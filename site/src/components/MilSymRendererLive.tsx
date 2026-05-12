@@ -1,5 +1,7 @@
 // rtmx:req REQ-XW-137
+// rtmx:req REQ-XW-210
 import { useState, useEffect } from 'react';
+import DOMPurify from 'dompurify';
 import { useMilSymWorker } from '../hooks/useMilSymWorker';
 import { MilSymRenderer, MilSymRendererProps } from './MilSymRenderer';
 
@@ -81,7 +83,7 @@ export function MilSymRendererLive({
       <div
         style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
         aria-label={`Military symbol ${sidc}`}
-        dangerouslySetInnerHTML={{ __html: svg }}
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(svg, { USE_PROFILES: { svg: true } }) }}
       />
     );
   }

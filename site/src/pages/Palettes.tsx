@@ -382,11 +382,9 @@ function MarkersPanel() {
           onChange={(e) => setSearch(e.target.value)}
           aria-label="Search MIL-STD-2525 entities"
         />
-        {search && (
-          <span className={styles.searchCount}>
-            {filteredCount} of {totalCount}
-          </span>
-        )}
+        <span className={styles.searchCount} aria-live="polite" aria-atomic="true">
+          {search ? `${filteredCount} of ${totalCount}` : ''}
+        </span>
       </div>
 
       {(version === 'B' || version === 'C') && (
@@ -932,10 +930,14 @@ export default function Palettes() {
         Browse ATAK icon palettes. Matches the &quot;Select Icon Pallet&quot; dialog in ATAK.
       </p>
 
-      <div className={styles.tabBar}>
+      <div className={styles.tabBar} role="tablist" aria-label="Palette tabs">
         {PALETTE_TABS.map((t) => (
           <button
             key={t.id}
+            id={`palettes-tab-${t.id}`}
+            role="tab"
+            aria-selected={activeTab === t.id}
+            aria-controls={`palettes-panel-${activeTab}`}
             className={`${styles.tab} ${activeTab === t.id ? styles.tabActive : ''}`}
             onClick={() => navigate(`/palettes/${t.id}`)}
           >
@@ -944,12 +946,14 @@ export default function Palettes() {
         ))}
       </div>
 
-      {active.type === 'skittles' && <SkittlesPanel />}
-      {active.type === 'self-marker' && <SelfMarkerPanel />}
-      {active.type === 'spotmap' && <SpotMapPanel />}
-      {active.type === 'markers' && <MarkersPanel />}
-      {active.type === 'vehicle-models' && <VehicleModelsPanel />}
-      {(active.type === 'iconset' || active.type === 'sqlite-palette') && <IconsetPanel tab={active} />}
+      <div id={`palettes-panel-${activeTab}`} role="tabpanel" aria-labelledby={`palettes-tab-${activeTab}`}>
+        {active.type === 'skittles' && <SkittlesPanel />}
+        {active.type === 'self-marker' && <SelfMarkerPanel />}
+        {active.type === 'spotmap' && <SpotMapPanel />}
+        {active.type === 'markers' && <MarkersPanel />}
+        {active.type === 'vehicle-models' && <VehicleModelsPanel />}
+        {(active.type === 'iconset' || active.type === 'sqlite-palette') && <IconsetPanel tab={active} />}
+      </div>
     </div>
   );
 }

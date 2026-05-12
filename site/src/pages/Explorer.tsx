@@ -361,11 +361,9 @@ function BrowsePanel() {
           aria-label="Search MIL-STD-2525 entities"
           style={{ flex: 1, minWidth: 200 }}
         />
-        {search && (
-          <span className={styles.searchCount}>
-            {filteredEntities.length} results
-          </span>
-        )}
+        <span className={styles.searchCount} aria-live="polite" aria-atomic="true">
+          {search ? `${filteredEntities.length} results` : ''}
+        </span>
       </div>
       <div className={styles.browseLayout}>
         {!search && (
@@ -1179,10 +1177,14 @@ export default function Explorer() {
         Browse, decode, build, and compare MIL-STD-2525 symbology across versions.
       </p>
 
-      <div className={styles.tabBar}>
+      <div className={styles.tabBar} role="tablist" aria-label="2525 Explorer tabs">
         {TABS.map((t) => (
           <button
             key={t.id}
+            id={`explorer-tab-${t.id}`}
+            role="tab"
+            aria-selected={activeTab === t.id}
+            aria-controls={`explorer-panel-${t.id}`}
             className={`${styles.tab} ${activeTab === t.id ? styles.tabActive : ''}`}
             onClick={() => navigate(`/explorer/${t.id}`)}
           >
@@ -1191,10 +1193,12 @@ export default function Explorer() {
         ))}
       </div>
 
-      {activeTab === 'browse' && <BrowsePanel />}
-      {activeTab === 'decode' && <DecodePanel />}
-      {activeTab === 'build' && <BuildPanel />}
-      {activeTab === 'compare' && <ComparePanel />}
+      <div id={`explorer-panel-${activeTab}`} role="tabpanel" aria-labelledby={`explorer-tab-${activeTab}`}>
+        {activeTab === 'browse' && <BrowsePanel />}
+        {activeTab === 'decode' && <DecodePanel />}
+        {activeTab === 'build' && <BuildPanel />}
+        {activeTab === 'compare' && <ComparePanel />}
+      </div>
     </div>
   );
 }

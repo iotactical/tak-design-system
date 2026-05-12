@@ -302,10 +302,14 @@ export default function Interfaces() {
         External and internal interfaces in the TAK ecosystem.
       </p>
 
-      <div className={styles.tabBar}>
+      <div className={styles.tabBar} role="tablist" aria-label="Interface tabs">
         {TABS.map((t) => (
           <button
             key={t.id}
+            id={`interfaces-tab-${t.id}`}
+            role="tab"
+            aria-selected={activeTab === t.id}
+            aria-controls={`interfaces-panel-${activeTab}`}
             className={`${styles.tab} ${activeTab === t.id ? styles.tabActive : ''}`}
             onClick={() => navigate(`/interfaces/${t.id}`)}
           >
@@ -314,6 +318,7 @@ export default function Interfaces() {
         ))}
       </div>
 
+      <div id={`interfaces-panel-${activeTab}`} role="tabpanel" aria-labelledby={`interfaces-tab-${activeTab}`}>
       <input
         className={styles.searchBar}
         type="text"
@@ -510,6 +515,7 @@ export default function Interfaces() {
           )}
         </section>
       )}
+      </div>
     </div>
   );
 }
