@@ -382,6 +382,73 @@ StyleDictionary.registerFormat({
   }
 });
 
+// rtmx:req REQ-XW-161
+// Responsive CSS: maps ATAK mobile tokens to WinTAK desktop overrides at breakpoint
+StyleDictionary.registerFormat({
+  name: 'css/responsive',
+  format: ({ dictionary }) => {
+    // Collect dimension tokens from wintak.density and wintak.layout namespaces
+    const wintakDims = dictionary.allTokens.filter(
+      t => t.$type === 'dimension' && t.path[0] === 'wintak' && (t.path[1] === 'density' || t.path[1] === 'layout' || t.path[1] === 'spacing' || t.path[1] === 'typography')
+    );
+
+    // Build semantic CSS custom properties with mobile-first defaults from component/atak tokens
+    // then override at desktop breakpoint with wintak values
+    const mobileDefaults = [
+      ['--tak-density-button-height', '40px'],
+      ['--tak-density-list-item-height', '44px'],
+      ['--tak-density-nav-button-size', '48px'],
+      ['--tak-density-icon-size', '24px'],
+      ['--tak-density-touch-target', '44px'],
+      ['--tak-density-font-size', '14px'],
+      ['--tak-density-toolbar-height', '48px'],
+    ];
+
+    const desktopOverrides = [];
+    for (const t of wintakDims) {
+      const cssName = '--tak-' + t.path.join('-');
+      const v = typeof t.$value === 'string' ? t.$value : `${t.$value}px`;
+      desktopOverrides.push(`  ${cssName}: ${v};`);
+    }
+
+    // Map wintak density to semantic density vars at desktop
+    const densityMap = [
+      ['--tak-density-button-height', '--tak-wintak-density-button-height'],
+      ['--tak-density-list-item-height', '--tak-wintak-density-list-item-height'],
+      ['--tak-density-nav-button-size', '--tak-wintak-density-nav-button-size'],
+      ['--tak-density-icon-size', '--tak-wintak-density-icon-size'],
+      ['--tak-density-touch-target', '--tak-wintak-density-touch-target'],
+      ['--tak-density-font-size', '--tak-wintak-typography-base'],
+      ['--tak-density-toolbar-height', '--tak-wintak-layout-toolbar-height'],
+    ];
+
+    const mobileLines = mobileDefaults.map(([k, v]) => `  ${k}: ${v};`).join('\n');
+    const desktopMappings = densityMap.map(([semantic, source]) => `  ${semantic}: var(${source});`).join('\n');
+
+    return `/**
+ * TAK Design System - Responsive density tokens.
+ * Mobile-first (ATAK), overrides at desktop breakpoint (WinTAK).
+ * Generated. Do not edit manually.
+ */
+
+:root {
+  /* Mobile-first defaults (ATAK density) */
+${mobileLines}
+
+  /* WinTAK desktop dimension tokens */
+${desktopOverrides.join('\n')}
+}
+
+@media (min-width: 768px) {
+  :root {
+    /* Desktop density overrides (WinTAK) */
+${desktopMappings}
+  }
+}
+`;
+  }
+});
+
 // ---------------------------------------------------------------------------
 // Platform configurations
 // ---------------------------------------------------------------------------
@@ -468,6 +535,17 @@ const platforms = {
       {
         destination: 'tak-dark-theme.json',
         format: 'vscode/tak-theme'
+      }
+    ]
+  },
+  // rtmx:req REQ-XW-161
+  responsive: {
+    transforms: ['name/tak/css'],
+    buildPath: 'platforms/web/generated/',
+    files: [
+      {
+        destination: 'tak-responsive.css',
+        format: 'css/responsive'
       }
     ]
   }
