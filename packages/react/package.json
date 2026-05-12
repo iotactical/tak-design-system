@@ -4,6 +4,7 @@
   "description": "TAK Design System React component library",
   "license": "MIT",
   "type": "module",
+  "sideEffects": false,
   "main": "./dist/tak-react.cjs",
   "module": "./dist/tak-react.js",
   "types": "./dist/index.d.ts",

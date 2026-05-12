@@ -9,6 +9,8 @@ export interface MilSymRendererProps {
   size?: number;
   /** Affiliation: friendly, hostile, neutral, unknown */
   affiliation?: 'friendly' | 'hostile' | 'neutral' | 'unknown';
+  /** Human-readable label for alt text (e.g., entity name) */
+  label?: string;
 }
 
 const BASE = import.meta.env.BASE_URL;
@@ -23,7 +25,7 @@ function charToAffiliation(ch: string): string {
   }
 }
 
-export function MilSymRenderer({ sidc, size = 50, affiliation }: MilSymRendererProps) {
+export function MilSymRenderer({ sidc, size = 50, affiliation, label }: MilSymRendererProps) {
   const imgSrc = useMemo(() => {
     if (!sidc || sidc.length < 5) return null;
 
@@ -123,7 +125,7 @@ export function MilSymRenderer({ sidc, size = 50, affiliation }: MilSymRendererP
   return (
     <img
       src={imgSrc}
-      alt={sidc}
+      alt={label ? `${label} (${sidc})` : sidc}
       width={size}
       height={size}
       loading="lazy"

@@ -143,6 +143,11 @@
   border-color: #3A3A3A;
 }
 
+.entityCard:focus-visible {
+  outline: 2px solid #c8a951;
+  outline-offset: 2px;
+}
+
 .entityLabel {
   font-size: 10px;
   color: #DAD4BC;
@@ -158,7 +163,7 @@
 
 .entitySidc {
   font-size: 9px;
-  color: #585858;
+  color: #787878;
   font-family: 'Courier New', monospace;
   letter-spacing: 0.5px;
 }

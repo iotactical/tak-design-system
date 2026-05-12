@@ -457,7 +457,7 @@ export default function Interfaces() {
                                 {intent.type === 'localbroadcast' ? 'local' : 'system'}
                               </span>
                             </td>
-                            <td style={{ padding: '4px 8px', color: '#585858', fontFamily: 'monospace', fontSize: 11, overflow: 'hidden', textOverflow: 'ellipsis' }}>{intent.class}</td>
+                            <td style={{ padding: '4px 8px', color: '#787878', fontFamily: 'monospace', fontSize: 11, overflow: 'hidden', textOverflow: 'ellipsis' }}>{intent.class}</td>
                           </tr>
                           {isExpanded && snippets && (
                             <tr key={`${intentKey}-detail`}>

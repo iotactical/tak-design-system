@@ -232,9 +232,9 @@ function ModifierInspector({
         <button onClick={onClose} style={{ background: 'none', border: 'none', color: '#878787', cursor: 'pointer', fontSize: 16 }} aria-label="Close inspector">X</button>
       </div>
       <div style={{ textAlign: 'center', marginBottom: 12 }}>
-        <MilSymRenderer sidc={dSidc} size={72} />
+        <MilSymRenderer sidc={dSidc} size={72} label={entity.label} />
         <div style={{ fontFamily: "'Roboto Mono', monospace", fontSize: 11, color: '#878787', marginTop: 4 }}>{dSidc}</div>
-        <div style={{ fontSize: 10, color: '#585858' }}>D/E 20-char SIDC</div>
+        <div style={{ fontSize: 10, color: '#787878' }}>D/E 20-char SIDC</div>
       </div>
       <div style={{ fontSize: 12, marginBottom: 12 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', padding: '4px 0', borderBottom: '1px solid #2E2E2E' }}>
@@ -281,7 +281,7 @@ function ModifierInspector({
           )}
         </div>
       ) : (
-        <div style={{ fontSize: 12, color: '#585858', fontStyle: 'italic' }}>No sector modifiers available for this symbol set.</div>
+        <div style={{ fontSize: 12, color: '#787878', fontStyle: 'italic' }}>No sector modifiers available for this symbol set.</div>
       )}
     </div>
   );
@@ -377,7 +377,7 @@ function BrowsePanel() {
                 onClick={() => setSelectedSS(code)}
               >
                 {name}
-                <span style={{ fontSize: 11, color: '#585858', marginLeft: 6 }}>
+                <span style={{ fontSize: 11, color: '#787878', marginLeft: 6 }}>
                   ({bEntities.filter((e) => e.ss === code).length})
                 </span>
               </button>
@@ -398,7 +398,7 @@ function BrowsePanel() {
             >
               <MilSymRenderer
                 sidc={entity.basic} affiliation={affiliation.key as any}
-                size={36}
+                size={36} label={entity.label}
               />
               <div className={styles.entityLabel} title={entity.label}>
                 {entity.label}
@@ -538,7 +538,7 @@ function DecodePanel() {
             ))}
           </div>
           <div className={styles.symbolPreview}>
-            <MilSymRenderer sidc={parsed.sidc} size={64} />
+            <MilSymRenderer sidc={parsed.sidc} size={64} label={crosswalk?.label} />
             <div className={styles.entitySidc}>{parsed.sidc}</div>
           </div>
         </div>
@@ -900,7 +900,7 @@ function BuildPanel() {
             data-testid="b-sidc-input"
           />
           {bSidc ? <MilSymRendererLive sidc={dSidc} size={48} /> : (
-            <div style={{ fontSize: 11, color: '#585858', fontStyle: 'italic', padding: 8 }}>D/E only entity</div>
+            <div style={{ fontSize: 11, color: '#787878', fontStyle: 'italic', padding: 8 }}>D/E only entity</div>
           )}
         </div>
 
@@ -917,7 +917,7 @@ function BuildPanel() {
             data-testid="c-sidc-input"
           />
           {cSidc ? <MilSymRendererLive sidc={dSidc} size={48} /> : (
-            <div style={{ fontSize: 11, color: '#585858', fontStyle: 'italic', padding: 8 }}>D/E only entity</div>
+            <div style={{ fontSize: 11, color: '#787878', fontStyle: 'italic', padding: 8 }}>D/E only entity</div>
           )}
         </div>
 
@@ -1128,22 +1128,22 @@ function ComparePanel() {
             <div className={styles.compareGrid}>
               <div className={styles.compareCard}>
                 <span className={styles.compareVersion}>2525B</span>
-                <MilSymRenderer sidc={mapping.b_sidc} affiliation="friendly" size={48} />
+                <MilSymRenderer sidc={mapping.b_sidc} affiliation="friendly" size={48} label={mapping.label} />
                 <span className={styles.compareSidc}>{mapping.b_sidc}</span>
               </div>
               <div className={styles.compareCard}>
                 <span className={styles.compareVersion}>2525C</span>
-                <MilSymRenderer sidc={mapping.b_sidc} affiliation="friendly" size={48} />
+                <MilSymRenderer sidc={mapping.b_sidc} affiliation="friendly" size={48} label={mapping.label} />
                 <span className={styles.compareSidc}>{mapping.b_sidc}</span>
               </div>
               <div className={styles.compareCard}>
                 <span className={styles.compareVersion}>2525D</span>
-                <MilSymRenderer sidc={mapping.b_sidc} affiliation="friendly" size={48} />
+                <MilSymRenderer sidc={mapping.b_sidc} affiliation="friendly" size={48} label={mapping.label} />
                 <span className={styles.compareSidc}>{dSidc}</span>
               </div>
               <div className={styles.compareCard}>
                 <span className={styles.compareVersion}>2525E</span>
-                <MilSymRenderer sidc={mapping.b_sidc} affiliation="friendly" size={48} />
+                <MilSymRenderer sidc={mapping.b_sidc} affiliation="friendly" size={48} label={mapping.label} />
                 <span className={styles.compareSidc}>{dSidc}</span>
               </div>
             </div>

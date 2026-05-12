@@ -71,7 +71,7 @@
 }
 
 .searchBar::placeholder {
-  color: #5A5A5A;
+  color: #787878;
 }
 
 .searchBar:focus {
@@ -167,13 +167,13 @@
 .intentClass {
   font-size: 11px;
   font-family: 'Roboto Mono', monospace;
-  color: #5A5A5A;
+  color: #787878;
   margin: 0 0 6px 0;
   word-break: break-all;
 }
 
 .empty {
-  color: #5A5A5A;
+  color: #787878;
   font-style: italic;
   padding: 24px 0;
 }

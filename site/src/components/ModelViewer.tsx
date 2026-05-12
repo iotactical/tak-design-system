@@ -88,7 +88,8 @@ export function ModelViewer({
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.dampingFactor = 0.1;
-    controls.autoRotate = autoRotate;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    controls.autoRotate = autoRotate && !prefersReducedMotion;
     controls.autoRotateSpeed = 2.0;
 
     // Load model

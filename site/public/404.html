@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>TAK Design System</title>
+  <script>
+    // GitHub Pages SPA redirect: save the deep-link path and redirect to root
+    var path = location.pathname.replace('/tak-design-system', '');
+    if (path && path !== '/') {
+      sessionStorage.redirect = path + location.search + location.hash;
+    }
+    location.replace('/tak-design-system/');
+  </script>
+</head>
+<body></body>
+</html>

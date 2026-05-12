@@ -126,3 +126,39 @@
   0% { box-shadow: 0 0 0 4px #FFE35E; }
   100% { box-shadow: 0 0 0 0 transparent; }
 }
+
+/* Skip to main content link */
+.skipLink {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skipLink:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 8px 16px;
+  background: #c8a951;
+  color: #000;
+  font-weight: 700;
+  z-index: 9999;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  :global(.highlight-flash) {
+    animation: none;
+  }
+  * {
+    transition-duration: 0s !important;
+    animation-duration: 0s !important;
+  }
+}

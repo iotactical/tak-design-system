@@ -30,6 +30,7 @@ const navItems = [
 export default function App() {
   return (
     <div className={styles.layout}>
+      <a href="#main-content" className={styles.skipLink}>Skip to main content</a>
       <nav className={styles.sidebar}>
         <div className={styles.brand}>
           <span className={styles.brandAccent}>TAK</span> Design System
@@ -55,7 +56,7 @@ export default function App() {
       <div className={styles.topBar}>
         <GlobalSearch />
       </div>
-      <main className={styles.content}>
+      <main id="main-content" className={styles.content}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/colors" element={<Colors />} />
