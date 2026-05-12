@@ -9,6 +9,7 @@ on:
       - 'packages/**'
       - 'tests/**'
       - 'package.json'
+      - 'package-lock.json'
   pull_request:
     branches: [main]
   workflow_dispatch:
