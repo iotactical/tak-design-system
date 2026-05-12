@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>MilSymWpf</RootNamespace>
+
+    <!-- NuGet Package Metadata -->
+    <PackageId>IoTactical.MilSymWpf</PackageId>
+    <PackageVersion>0.1.0</PackageVersion>
+    <Authors>IoTactical</Authors>
+    <Description>WPF renderer for MIL-STD-2525D military symbology. Renders SIDC-based tactical symbols as WPF DrawingVisual objects.</Description>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/iotactical/tak-design-system</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/iotactical/tak-design-system</RepositoryUrl>
+    <PackageTags>mil-std-2525;military;symbology;wpf;tak</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\msd.json" />
+  </ItemGroup>
+
+</Project>

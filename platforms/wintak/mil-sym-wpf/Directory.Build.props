@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <!-- Allow building WPF projects on non-Windows (macOS/Linux) for CI validation -->
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+</Project>
