@@ -1,0 +1,6445 @@
+[
+  {
+    "id": "tak.core.alt-dip",
+    "name": "Alt Dip",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "alt"
+    ],
+    "formats": {
+      "png": "site/public/icons/alt_dip.png"
+    }
+  },
+  {
+    "id": "tak.core.alt-dip-gray",
+    "name": "Alt Dip Gray",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "alt"
+    ],
+    "formats": {
+      "png": "site/public/icons/alt_dip_gray.png"
+    }
+  },
+  {
+    "id": "tak.core.alt-dip-green",
+    "name": "Alt Dip Green",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "alt"
+    ],
+    "formats": {
+      "png": "site/public/icons/alt_dip_green.png"
+    }
+  },
+  {
+    "id": "tak.core.alt-phone-icon",
+    "name": "Alt Phone Icon",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "alt"
+    ],
+    "formats": {
+      "png": "site/public/icons/alt_phone_icon.png"
+    }
+  },
+  {
+    "id": "tak.core.attachment",
+    "name": "Attachment",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "attachment"
+    ],
+    "formats": {
+      "png": "site/public/icons/attachment.png"
+    }
+  },
+  {
+    "id": "tak.core.binos",
+    "name": "Binos",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "binos"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_binos.png"
+    }
+  },
+  {
+    "id": "tak.core.bloodhound",
+    "name": "Bloodhound",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "bloodhound"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_bloodhound.png"
+    }
+  },
+  {
+    "id": "tak.core.brightness",
+    "name": "Brightness",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "brightness"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_brightness.png"
+    }
+  },
+  {
+    "id": "tak.core.bullseye",
+    "name": "Bullseye",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "bullseye"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/bullseye.svg",
+      "png": "site/public/icons/bullseye.png"
+    }
+  },
+  {
+    "id": "tak.core.camera",
+    "name": "Camera",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "camera"
+    ],
+    "formats": {
+      "png": "site/public/icons/camera.png"
+    }
+  },
+  {
+    "id": "tak.core.cas",
+    "name": "Cas",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "cas"
+    ],
+    "formats": {
+      "png": "site/public/icons/cas.png"
+    }
+  },
+  {
+    "id": "tak.core.cas-stack",
+    "name": "Cas Stack",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "cas"
+    ],
+    "formats": {
+      "png": "site/public/icons/cas_stack.png"
+    }
+  },
+  {
+    "id": "tak.core.cff",
+    "name": "Cff",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "cff"
+    ],
+    "formats": {
+      "png": "site/public/icons/cff.png"
+    }
+  },
+  {
+    "id": "tak.core.chatsmall",
+    "name": "Chatsmall",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "chatsmall"
+    ],
+    "formats": {
+      "png": "site/public/icons/chatsmall.png"
+    }
+  },
+  {
+    "id": "tak.core.check",
+    "name": "Check",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "check"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_check.svg",
+      "png": "site/public/icons/check.png"
+    }
+  },
+  {
+    "id": "tak.core.circle",
+    "name": "Circle",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "circle"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_circle.png"
+    }
+  },
+  {
+    "id": "tak.core.close",
+    "name": "Close",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "close"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_close.svg",
+      "png": "site/public/icons/close.png"
+    }
+  },
+  {
+    "id": "tak.core.compass",
+    "name": "Compass",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "compass"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_compass.svg",
+      "png": "site/public/icons/ic_menu_compass.png"
+    }
+  },
+  {
+    "id": "tak.core.contact",
+    "name": "Contact",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "contact"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_contact.png"
+    }
+  },
+  {
+    "id": "tak.core.copy",
+    "name": "Copy",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "copy"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_copy.png"
+    }
+  },
+  {
+    "id": "tak.core.crosshair",
+    "name": "Crosshair",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "crosshair"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_crosshair.png"
+    }
+  },
+  {
+    "id": "tak.core.damaged",
+    "name": "Damaged",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "damaged"
+    ],
+    "formats": {
+      "png": "site/public/icons/damaged.png"
+    }
+  },
+  {
+    "id": "tak.core.details",
+    "name": "Details",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "details"
+    ],
+    "formats": {
+      "png": "site/public/icons/details.png"
+    }
+  },
+  {
+    "id": "tak.core.dip",
+    "name": "Dip",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "dip"
+    ],
+    "formats": {
+      "png": "site/public/icons/dip.png"
+    }
+  },
+  {
+    "id": "tak.core.document",
+    "name": "Document",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "document"
+    ],
+    "formats": {
+      "png": "site/public/icons/document.png"
+    }
+  },
+  {
+    "id": "tak.core.edit",
+    "name": "Edit",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "edit"
+    ],
+    "formats": {
+      "png": "site/public/icons/edit.png"
+    }
+  },
+  {
+    "id": "tak.core.email-icon",
+    "name": "Email Icon",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "email"
+    ],
+    "formats": {
+      "png": "site/public/icons/email_icon.png"
+    }
+  },
+  {
+    "id": "tak.core.emergency",
+    "name": "Emergency",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "emergency"
+    ],
+    "formats": {
+      "png": "site/public/icons/emergency.png"
+    }
+  },
+  {
+    "id": "tak.core.expand",
+    "name": "Expand",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "expand"
+    ],
+    "formats": {
+      "png": "site/public/icons/expand.png"
+    }
+  },
+  {
+    "id": "tak.core.feedback",
+    "name": "Feedback",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "feedback"
+    ],
+    "formats": {
+      "png": "site/public/icons/feedback.png"
+    }
+  },
+  {
+    "id": "tak.core.friendly",
+    "name": "Friendly",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "friendly"
+    ],
+    "formats": {
+      "png": "site/public/icons/friendly.png"
+    }
+  },
+  {
+    "id": "tak.core.geofence",
+    "name": "Geofence",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "geofence"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_geofence.png"
+    }
+  },
+  {
+    "id": "tak.core.gpx",
+    "name": "Gpx",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "gpx"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_gpx.png"
+    }
+  },
+  {
+    "id": "tak.core.green-flag",
+    "name": "Green Flag",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "green"
+    ],
+    "formats": {
+      "png": "site/public/icons/green_flag.png"
+    }
+  },
+  {
+    "id": "tak.core.info",
+    "name": "Info",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "info"
+    ],
+    "formats": {
+      "png": "site/public/icons/info.png"
+    }
+  },
+  {
+    "id": "tak.core.kml",
+    "name": "Kml",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "kml"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_kml.png"
+    }
+  },
+  {
+    "id": "tak.core.laser-selected",
+    "name": "Laser Selected",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "laser"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_laser_selected.svg"
+    }
+  },
+  {
+    "id": "tak.core.lrf-slide",
+    "name": "Lrf Slide",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "lrf"
+    ],
+    "formats": {
+      "png": "site/public/icons/lrf_slide.png"
+    }
+  },
+  {
+    "id": "tak.core.missionpackage",
+    "name": "Missionpackage",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "missionpackage"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_missionpackage.png"
+    }
+  },
+  {
+    "id": "tak.core.mortar",
+    "name": "Mortar",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "mortar"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_mortar.png"
+    }
+  },
+  {
+    "id": "tak.core.mvt",
+    "name": "Mvt",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "mvt"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_mvt.png"
+    }
+  },
+  {
+    "id": "tak.core.neutral",
+    "name": "Neutral",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "neutral"
+    ],
+    "formats": {
+      "png": "site/public/icons/neutral.png"
+    }
+  },
+  {
+    "id": "tak.core.nineline",
+    "name": "Nineline",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "nineline"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_nineline.png"
+    }
+  },
+  {
+    "id": "tak.core.no-icon",
+    "name": "No Icon",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "no"
+    ],
+    "formats": {
+      "png": "site/public/icons/no_icon.png"
+    }
+  },
+  {
+    "id": "tak.core.open",
+    "name": "Open",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "open"
+    ],
+    "formats": {
+      "png": "site/public/icons/open.png"
+    }
+  },
+  {
+    "id": "tak.core.phone-icon",
+    "name": "Phone Icon",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "phone"
+    ],
+    "formats": {
+      "png": "site/public/icons/phone_icon.png"
+    }
+  },
+  {
+    "id": "tak.core.piicon",
+    "name": "Piicon",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "piicon"
+    ],
+    "formats": {
+      "png": "site/public/icons/piicon.png"
+    }
+  },
+  {
+    "id": "tak.core.piicon-contact",
+    "name": "Piicon Contact",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "piicon"
+    ],
+    "formats": {
+      "png": "site/public/icons/piicon_contact.png"
+    }
+  },
+  {
+    "id": "tak.core.piicon-initial",
+    "name": "Piicon Initial",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "piicon"
+    ],
+    "formats": {
+      "png": "site/public/icons/piicon_initial.png"
+    }
+  },
+  {
+    "id": "tak.core.range",
+    "name": "Range",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "range"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_range.png"
+    }
+  },
+  {
+    "id": "tak.core.rectangle",
+    "name": "Rectangle",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "rectangle"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/rectangle.svg"
+    }
+  },
+  {
+    "id": "tak.core.reference-point",
+    "name": "Reference Point",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "reference"
+    ],
+    "formats": {
+      "png": "site/public/icons/reference_point.png"
+    }
+  },
+  {
+    "id": "tak.core.resection",
+    "name": "Resection",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "resection"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_resection.png"
+    }
+  },
+  {
+    "id": "tak.core.routes",
+    "name": "Routes",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "routes"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_routes.svg",
+      "png": "site/public/icons/ic_menu_routes.png"
+    }
+  },
+  {
+    "id": "tak.core.scalebar",
+    "name": "Scalebar",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "scalebar"
+    ],
+    "formats": {
+      "png": "site/public/icons/scalebar.png"
+    }
+  },
+  {
+    "id": "tak.core.select-point-icon",
+    "name": "Select Point Icon",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "select"
+    ],
+    "formats": {
+      "png": "site/public/icons/select_point_icon.png"
+    }
+  },
+  {
+    "id": "tak.core.self",
+    "name": "Self",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "self"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_self.png"
+    }
+  },
+  {
+    "id": "tak.core.sms-icon",
+    "name": "Sms Icon",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "sms"
+    ],
+    "formats": {
+      "png": "site/public/icons/sms_icon.png"
+    }
+  },
+  {
+    "id": "tak.core.spi1-icon",
+    "name": "Spi1 Icon",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "spi1"
+    ],
+    "formats": {
+      "png": "site/public/icons/spi1_icon.png"
+    }
+  },
+  {
+    "id": "tak.core.spi2-icon",
+    "name": "Spi2 Icon",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "spi2"
+    ],
+    "formats": {
+      "png": "site/public/icons/spi2_icon.png"
+    }
+  },
+  {
+    "id": "tak.core.spi3-icon",
+    "name": "Spi3 Icon",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "spi3"
+    ],
+    "formats": {
+      "png": "site/public/icons/spi3_icon.png"
+    }
+  },
+  {
+    "id": "tak.core.spip-icon",
+    "name": "Spip Icon",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "spip"
+    ],
+    "formats": {
+      "png": "site/public/icons/spip_icon.png"
+    }
+  },
+  {
+    "id": "tak.core.spoi-icon",
+    "name": "Spoi Icon",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "spoi"
+    ],
+    "formats": {
+      "png": "site/public/icons/spoi_icon.png"
+    }
+  },
+  {
+    "id": "tak.core.sse-slant",
+    "name": "Sse Slant",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "sse"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_sse_slant.png"
+    }
+  },
+  {
+    "id": "tak.core.target",
+    "name": "Target",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "target"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_target.svg",
+      "png": "site/public/icons/target.png"
+    }
+  },
+  {
+    "id": "tak.core.track",
+    "name": "Track",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "track"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_track.png"
+    }
+  },
+  {
+    "id": "tak.core.transparency",
+    "name": "Transparency",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "transparency"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_transparency.png"
+    }
+  },
+  {
+    "id": "tak.core.unknown",
+    "name": "Unknown",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "unknown"
+    ],
+    "formats": {
+      "png": "site/public/icons/unknown.png"
+    }
+  },
+  {
+    "id": "tak.core.video",
+    "name": "Video",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "video"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_video.svg",
+      "png": "site/public/icons/video.png"
+    }
+  },
+  {
+    "id": "tak.core.virtual-dz",
+    "name": "Virtual Dz",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "virtual"
+    ],
+    "formats": {
+      "png": "site/public/icons/virtual_dz.png"
+    }
+  },
+  {
+    "id": "tak.core.voip-icon",
+    "name": "Voip Icon",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "voip"
+    ],
+    "formats": {
+      "png": "site/public/icons/voip_icon.png"
+    }
+  },
+  {
+    "id": "tak.core.whitex",
+    "name": "Whitex",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "whitex"
+    ],
+    "formats": {
+      "png": "site/public/icons/whitex.png"
+    }
+  },
+  {
+    "id": "tak.core.xmpp-icon",
+    "name": "Xmpp Icon",
+    "source": "core",
+    "category": "other",
+    "tags": [
+      "other",
+      "xmpp"
+    ],
+    "formats": {
+      "png": "site/public/icons/xmpp_icon.png"
+    }
+  },
+  {
+    "id": "tak.menu.actionbar-placeholder",
+    "name": "actionbar placeholder",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "actionbar"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_actionbar_placeholder.png"
+    }
+  },
+  {
+    "id": "tak.menu.apps",
+    "name": "apps",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "apps"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_apps.png"
+    }
+  },
+  {
+    "id": "tak.menu.arrow-left",
+    "name": "arrow left",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "arrow"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_arrow_left.png"
+    }
+  },
+  {
+    "id": "tak.menu.binos",
+    "name": "binos",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "binos"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_binos.png"
+    }
+  },
+  {
+    "id": "tak.menu.bloodhound",
+    "name": "bloodhound",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "bloodhound"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_bloodhound.png"
+    }
+  },
+  {
+    "id": "tak.menu.bloodhound-lit",
+    "name": "bloodhound lit",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "bloodhound"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_bloodhound_lit.png"
+    }
+  },
+  {
+    "id": "tak.menu.casevac",
+    "name": "casevac",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "casevac"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_casevac.png"
+    }
+  },
+  {
+    "id": "tak.menu.chat",
+    "name": "chat",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "chat"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_chat.png"
+    }
+  },
+  {
+    "id": "tak.menu.circle",
+    "name": "circle",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "circle"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_menu_circle.svg"
+    }
+  },
+  {
+    "id": "tak.menu.circle-lit",
+    "name": "circle lit",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "circle"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_menu_circle_lit.svg"
+    }
+  },
+  {
+    "id": "tak.menu.clear-content",
+    "name": "clear content",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "clear"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_clear_content.png"
+    }
+  },
+  {
+    "id": "tak.menu.close-clear-cancel",
+    "name": "close clear cancel",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "close"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_close_clear_cancel.png"
+    }
+  },
+  {
+    "id": "tak.menu.compass",
+    "name": "compass",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "compass"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_compass.png"
+    }
+  },
+  {
+    "id": "tak.menu.contact",
+    "name": "contact",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "contact"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_contact.png"
+    }
+  },
+  {
+    "id": "tak.menu.copy",
+    "name": "copy",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "copy"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_copy.png"
+    }
+  },
+  {
+    "id": "tak.menu.cot",
+    "name": "cot",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "cot"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_cot.png"
+    }
+  },
+  {
+    "id": "tak.menu.delete",
+    "name": "delete",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "delete"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_delete.png"
+    }
+  },
+  {
+    "id": "tak.menu.delete-32",
+    "name": "delete 32",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "delete"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_delete_32.png"
+    }
+  },
+  {
+    "id": "tak.menu.drawing",
+    "name": "drawing",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "drawing"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_drawing.png"
+    }
+  },
+  {
+    "id": "tak.menu.ellipse",
+    "name": "ellipse",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "ellipse"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_menu_ellipse.svg"
+    }
+  },
+  {
+    "id": "tak.menu.ellipse-lit",
+    "name": "ellipse lit",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "ellipse"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_menu_ellipse_lit.svg"
+    }
+  },
+  {
+    "id": "tak.menu.emergency",
+    "name": "emergency",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "emergency"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_emergency.png"
+    }
+  },
+  {
+    "id": "tak.menu.enterlocation",
+    "name": "enterlocation",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "enterlocation"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_enterlocation.png"
+    }
+  },
+  {
+    "id": "tak.menu.error",
+    "name": "error",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "error"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_error.png"
+    }
+  },
+  {
+    "id": "tak.menu.fires",
+    "name": "fires",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "fires"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_fires.png"
+    }
+  },
+  {
+    "id": "tak.menu.geofence",
+    "name": "geofence",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "geofence"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_geofence.png"
+    }
+  },
+  {
+    "id": "tak.menu.goto",
+    "name": "goto",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "goto"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_goto.png"
+    }
+  },
+  {
+    "id": "tak.menu.goto-nav",
+    "name": "goto nav",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "goto"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_goto_nav.png"
+    }
+  },
+  {
+    "id": "tak.menu.handle",
+    "name": "handle",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "handle"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_menu_handle.svg"
+    }
+  },
+  {
+    "id": "tak.menu.help",
+    "name": "help",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "help"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_help.png"
+    }
+  },
+  {
+    "id": "tak.menu.import-file",
+    "name": "import file",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "import"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_import_file.png"
+    }
+  },
+  {
+    "id": "tak.menu.lock-lit",
+    "name": "lock lit",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "lock"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_lock_lit.png"
+    }
+  },
+  {
+    "id": "tak.menu.lock-unlit",
+    "name": "lock unlit",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "lock"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_lock_unlit.png"
+    }
+  },
+  {
+    "id": "tak.menu.map-brightness",
+    "name": "map brightness",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "map"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_map_brightness.png"
+    }
+  },
+  {
+    "id": "tak.menu.maps",
+    "name": "maps",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "maps"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_maps.png"
+    }
+  },
+  {
+    "id": "tak.menu.minus",
+    "name": "minus",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "minus"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_minus.png"
+    }
+  },
+  {
+    "id": "tak.menu.missionpackage",
+    "name": "missionpackage",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "missionpackage"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_missionpackage.png"
+    }
+  },
+  {
+    "id": "tak.menu.mylocation",
+    "name": "mylocation",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "mylocation"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_mylocation.png"
+    }
+  },
+  {
+    "id": "tak.menu.network",
+    "name": "network",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "network"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_network.png"
+    }
+  },
+  {
+    "id": "tak.menu.network-connections",
+    "name": "network connections",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "network"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_network_connections.png"
+    }
+  },
+  {
+    "id": "tak.menu.nineline",
+    "name": "nineline",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "nineline"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_nineline.png"
+    }
+  },
+  {
+    "id": "tak.menu.overlays",
+    "name": "overlays",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "overlays"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_overlays.png"
+    }
+  },
+  {
+    "id": "tak.menu.pairingline",
+    "name": "pairingline",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "pairingline"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_pairingline.png"
+    }
+  },
+  {
+    "id": "tak.menu.pairingline-lit",
+    "name": "pairingline lit",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "pairingline"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_pairingline_lit.png"
+    }
+  },
+  {
+    "id": "tak.menu.plugins",
+    "name": "plugins",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "plugins"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_plugins.png"
+    }
+  },
+  {
+    "id": "tak.menu.plus",
+    "name": "plus",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "plus"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_plus.png"
+    }
+  },
+  {
+    "id": "tak.menu.preferences",
+    "name": "preferences",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "preferences"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_preferences.png"
+    }
+  },
+  {
+    "id": "tak.menu.question",
+    "name": "question",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "question"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_question.png"
+    }
+  },
+  {
+    "id": "tak.menu.quickpic",
+    "name": "quickpic",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "quickpic"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_quickpic.png"
+    }
+  },
+  {
+    "id": "tak.menu.quit",
+    "name": "quit",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "quit"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_quit.png"
+    }
+  },
+  {
+    "id": "tak.menu.radio",
+    "name": "radio",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "radio"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_radio.png"
+    }
+  },
+  {
+    "id": "tak.menu.rb-circle",
+    "name": "rb circle",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "rb"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_menu_rb_circle.svg",
+      "png": "site/public/icons/ic_menu_rb_circle.png"
+    }
+  },
+  {
+    "id": "tak.menu.rb-circle-active",
+    "name": "rb circle active",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "rb"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_menu_rb_circle_active.svg",
+      "png": "site/public/icons/ic_menu_rb_circle_active.png"
+    }
+  },
+  {
+    "id": "tak.menu.routes",
+    "name": "routes",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "routes"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_routes.png"
+    }
+  },
+  {
+    "id": "tak.menu.ruler",
+    "name": "ruler",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "ruler"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_ruler.png"
+    }
+  },
+  {
+    "id": "tak.menu.save",
+    "name": "save",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "save"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_save.png"
+    }
+  },
+  {
+    "id": "tak.menu.save-pref",
+    "name": "save pref",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "save"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_save_pref.png"
+    }
+  },
+  {
+    "id": "tak.menu.save2",
+    "name": "save2",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "save2"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_save2.png"
+    }
+  },
+  {
+    "id": "tak.menu.select-point-disabled",
+    "name": "select point disabled",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "select"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_select_point_disabled.png"
+    }
+  },
+  {
+    "id": "tak.menu.select-point-enabled",
+    "name": "select point enabled",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "select"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_select_point_enabled.png"
+    }
+  },
+  {
+    "id": "tak.menu.select-point-off",
+    "name": "select point off",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "select"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_select_point_off.png"
+    }
+  },
+  {
+    "id": "tak.menu.selfhistory",
+    "name": "selfhistory",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "selfhistory"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_selfhistory.png"
+    }
+  },
+  {
+    "id": "tak.menu.send",
+    "name": "send",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "send"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_send.png"
+    }
+  },
+  {
+    "id": "tak.menu.settings",
+    "name": "settings",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "settings"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_settings.png"
+    }
+  },
+  {
+    "id": "tak.menu.share",
+    "name": "share",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "share"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_share.png"
+    }
+  },
+  {
+    "id": "tak.menu.sse-slant",
+    "name": "sse slant",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "sse"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_sse_slant.png"
+    }
+  },
+  {
+    "id": "tak.menu.stop",
+    "name": "stop",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "stop"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_stop.png"
+    }
+  },
+  {
+    "id": "tak.menu.support-info",
+    "name": "support info",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "support"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_support_info.png"
+    }
+  },
+  {
+    "id": "tak.menu.survey",
+    "name": "survey",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "survey"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_survey.png"
+    }
+  },
+  {
+    "id": "tak.menu.toggle-orientation",
+    "name": "toggle orientation",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "toggle"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_toggle_orientation.png"
+    }
+  },
+  {
+    "id": "tak.menu.tools",
+    "name": "tools",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "tools"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_tools.png"
+    }
+  },
+  {
+    "id": "tak.menu.upload-file",
+    "name": "upload file",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "upload"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_upload_file.png"
+    }
+  },
+  {
+    "id": "tak.menu.video",
+    "name": "video",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "video"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_video.png"
+    }
+  },
+  {
+    "id": "tak.menu.widget",
+    "name": "widget",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "widget"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_widget.png"
+    }
+  },
+  {
+    "id": "tak.menu.wr",
+    "name": "wr",
+    "source": "menu",
+    "category": "menu",
+    "tags": [
+      "menu",
+      "wr"
+    ],
+    "formats": {
+      "png": "site/public/icons/ic_menu_wr.png"
+    }
+  },
+  {
+    "id": "tak.nav.add-hostile",
+    "name": "Add Hostile",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "add"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_add_hostile.png"
+    }
+  },
+  {
+    "id": "tak.nav.alert",
+    "name": "Alert",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "alert"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_alert.png"
+    }
+  },
+  {
+    "id": "tak.nav.android",
+    "name": "Android",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "android"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_android.png"
+    }
+  },
+  {
+    "id": "tak.nav.bar",
+    "name": "Bar",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "bar"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_bar.png"
+    }
+  },
+  {
+    "id": "tak.nav.billboard",
+    "name": "Billboard",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "billboard"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_billboard.png"
+    }
+  },
+  {
+    "id": "tak.nav.billboard-disabled",
+    "name": "Billboard Disabled",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "billboard"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_billboard_disabled.png"
+    }
+  },
+  {
+    "id": "tak.nav.blank",
+    "name": "Blank",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "blank"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_blank.png"
+    }
+  },
+  {
+    "id": "tak.nav.bloodhound",
+    "name": "Bloodhound",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "bloodhound"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_bloodhound.png"
+    }
+  },
+  {
+    "id": "tak.nav.brightness",
+    "name": "Brightness",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "brightness"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_brightness.png"
+    }
+  },
+  {
+    "id": "tak.nav.camera",
+    "name": "Camera",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "camera"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_camera.png"
+    }
+  },
+  {
+    "id": "tak.nav.casevac",
+    "name": "Casevac",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "casevac"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_casevac.png"
+    }
+  },
+  {
+    "id": "tak.nav.center",
+    "name": "Center",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "center"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_center.png"
+    }
+  },
+  {
+    "id": "tak.nav.channels",
+    "name": "Channels",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "channels"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_channels.png"
+    }
+  },
+  {
+    "id": "tak.nav.chatnext",
+    "name": "Chatnext",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "chatnext"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_chatnext.png"
+    }
+  },
+  {
+    "id": "tak.nav.child-dropdown-horizontal",
+    "name": "Child Dropdown Horizontal",
+    "source": "nav",
+    "category": "nav_child",
+    "tags": [
+      "nav",
+      "nav_child",
+      "child"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/nav_child_dropdown_horizontal.svg"
+    }
+  },
+  {
+    "id": "tak.nav.collapse",
+    "name": "Collapse",
+    "source": "nav",
+    "category": "nav_collapse",
+    "tags": [
+      "nav",
+      "nav_collapse",
+      "collapse"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/nav_collapse.svg"
+    }
+  },
+  {
+    "id": "tak.nav.compass",
+    "name": "Compass",
+    "source": "nav",
+    "category": "nav_compass",
+    "tags": [
+      "nav",
+      "nav_compass",
+      "compass"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/nav_compass.svg"
+    }
+  },
+  {
+    "id": "tak.nav.compass-arrow",
+    "name": "Compass Arrow",
+    "source": "nav",
+    "category": "nav_compass",
+    "tags": [
+      "nav",
+      "nav_compass",
+      "compass"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/nav_compass_arrow.svg"
+    }
+  },
+  {
+    "id": "tak.nav.contacts",
+    "name": "Contacts",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "contacts"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_contacts.png"
+    }
+  },
+  {
+    "id": "tak.nav.cp-mode-toggle",
+    "name": "Cp Mode Toggle",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "cp"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_cp_mode_toggle.png"
+    }
+  },
+  {
+    "id": "tak.nav.data-package",
+    "name": "Data Package",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "data"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_data_package.png"
+    }
+  },
+  {
+    "id": "tak.nav.delete",
+    "name": "Delete",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "delete"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_delete.png"
+    }
+  },
+  {
+    "id": "tak.nav.display-backdrop",
+    "name": "Display Backdrop",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "display"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_display_backdrop.png"
+    }
+  },
+  {
+    "id": "tak.nav.draw",
+    "name": "Draw",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "draw"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_draw.png"
+    }
+  },
+  {
+    "id": "tak.nav.draw-circle",
+    "name": "Draw Circle",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "draw"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_draw_circle.png"
+    }
+  },
+  {
+    "id": "tak.nav.draw-rectangle",
+    "name": "Draw Rectangle",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "draw"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_draw_rectangle.png"
+    }
+  },
+  {
+    "id": "tak.nav.draw-shape",
+    "name": "Draw Shape",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "draw"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_draw_shape.png"
+    }
+  },
+  {
+    "id": "tak.nav.draw-telestration",
+    "name": "Draw Telestration",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "draw"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_draw_telestration.png"
+    }
+  },
+  {
+    "id": "tak.nav.dynamic-compass-arrow",
+    "name": "Dynamic Compass Arrow",
+    "source": "nav",
+    "category": "nav_dynamic",
+    "tags": [
+      "nav",
+      "nav_dynamic",
+      "dynamic"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/nav_dynamic_compass_arrow.svg"
+    }
+  },
+  {
+    "id": "tak.nav.dynamic-compass-background",
+    "name": "Dynamic Compass Background",
+    "source": "nav",
+    "category": "nav_dynamic",
+    "tags": [
+      "nav",
+      "nav_dynamic",
+      "dynamic"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/nav_dynamic_compass_background.svg"
+    }
+  },
+  {
+    "id": "tak.nav.dynamic-compass-circle",
+    "name": "Dynamic Compass Circle",
+    "source": "nav",
+    "category": "nav_dynamic",
+    "tags": [
+      "nav",
+      "nav_dynamic",
+      "dynamic"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/nav_dynamic_compass_circle.svg"
+    }
+  },
+  {
+    "id": "tak.nav.dynamic-compass-rotate",
+    "name": "Dynamic Compass Rotate",
+    "source": "nav",
+    "category": "nav_dynamic",
+    "tags": [
+      "nav",
+      "nav_dynamic",
+      "dynamic"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/nav_dynamic_compass_rotate.svg"
+    }
+  },
+  {
+    "id": "tak.nav.dynamic-compass-ticks",
+    "name": "Dynamic Compass Ticks",
+    "source": "nav",
+    "category": "nav_dynamic",
+    "tags": [
+      "nav",
+      "nav_dynamic",
+      "dynamic"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/nav_dynamic_compass_ticks.svg"
+    }
+  },
+  {
+    "id": "tak.nav.elevation",
+    "name": "Elevation",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "elevation"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_elevation.png"
+    }
+  },
+  {
+    "id": "tak.nav.empty",
+    "name": "Empty",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "empty"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_empty.png"
+    }
+  },
+  {
+    "id": "tak.nav.exit-button-img",
+    "name": "Exit Button Img",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "exit"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_exit_button_img.png"
+    }
+  },
+  {
+    "id": "tak.nav.export",
+    "name": "Export",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "export"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_export.png"
+    }
+  },
+  {
+    "id": "tak.nav.file",
+    "name": "File",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "file"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_file.png"
+    }
+  },
+  {
+    "id": "tak.nav.fire",
+    "name": "Fire",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "fire"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_fire.png"
+    }
+  },
+  {
+    "id": "tak.nav.fire-tools",
+    "name": "Fire Tools",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "fire"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_fire_tools.png"
+    }
+  },
+  {
+    "id": "tak.nav.firstperson",
+    "name": "Firstperson",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "firstperson"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_firstperson.png"
+    }
+  },
+  {
+    "id": "tak.nav.gallery",
+    "name": "Gallery",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "gallery"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_gallery.png"
+    }
+  },
+  {
+    "id": "tak.nav.geofence",
+    "name": "Geofence",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "geofence"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_geofence.png"
+    }
+  },
+  {
+    "id": "tak.nav.go-to",
+    "name": "Go To",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "go"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_go_to.png"
+    }
+  },
+  {
+    "id": "tak.nav.goto",
+    "name": "Goto",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "goto"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_goto.png"
+    }
+  },
+  {
+    "id": "tak.nav.grid",
+    "name": "Grid",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "grid"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_grid.png"
+    }
+  },
+  {
+    "id": "tak.nav.group-chat",
+    "name": "Group Chat",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "group"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_group_chat.png"
+    }
+  },
+  {
+    "id": "tak.nav.hostile-manager",
+    "name": "Hostile Manager",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "hostile"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_hostile_manager.png"
+    }
+  },
+  {
+    "id": "tak.nav.import",
+    "name": "Import",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "import"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_import.png"
+    }
+  },
+  {
+    "id": "tak.nav.info",
+    "name": "Info",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "info"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_info.png"
+    }
+  },
+  {
+    "id": "tak.nav.lasso",
+    "name": "Lasso",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "lasso"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_lasso.png"
+    }
+  },
+  {
+    "id": "tak.nav.left",
+    "name": "Left",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "left"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_left.png"
+    }
+  },
+  {
+    "id": "tak.nav.left-manual",
+    "name": "Left Manual",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "left"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_left_manual.png"
+    }
+  },
+  {
+    "id": "tak.nav.lock-on",
+    "name": "Lock On",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "lock"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_lock_on.png"
+    }
+  },
+  {
+    "id": "tak.nav.lock-on-selected",
+    "name": "Lock On Selected",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "lock"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_lock_on_selected.png"
+    }
+  },
+  {
+    "id": "tak.nav.maps",
+    "name": "Maps",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "maps"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_maps.png"
+    }
+  },
+  {
+    "id": "tak.nav.marker",
+    "name": "Marker",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "marker"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_marker.png"
+    }
+  },
+  {
+    "id": "tak.nav.menu-closed",
+    "name": "Menu Closed",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "menu"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_menu_closed.png"
+    }
+  },
+  {
+    "id": "tak.nav.menu-opened",
+    "name": "Menu Opened",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "menu"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_menu_opened.png"
+    }
+  },
+  {
+    "id": "tak.nav.more",
+    "name": "More",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "more"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_more.png"
+    }
+  },
+  {
+    "id": "tak.nav.mute",
+    "name": "Mute",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "mute"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_mute.png"
+    }
+  },
+  {
+    "id": "tak.nav.nightvision",
+    "name": "Nightvision",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "nightvision"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_nightvision.png"
+    }
+  },
+  {
+    "id": "tak.nav.orientation",
+    "name": "Orientation",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "orientation"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_orientation.png"
+    }
+  },
+  {
+    "id": "tak.nav.overlay-manager",
+    "name": "Overlay Manager",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "overlay"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_overlay_manager.png"
+    }
+  },
+  {
+    "id": "tak.nav.package",
+    "name": "Package",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "package"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_package.png"
+    }
+  },
+  {
+    "id": "tak.nav.plugins",
+    "name": "Plugins",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "plugins"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_plugins.png"
+    }
+  },
+  {
+    "id": "tak.nav.point",
+    "name": "Point",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "point"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_point.png"
+    }
+  },
+  {
+    "id": "tak.nav.point-at-intersect",
+    "name": "Point At Intersect",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "point"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_point_at_intersect.png"
+    }
+  },
+  {
+    "id": "tak.nav.point-at-self",
+    "name": "Point At Self",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "point"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_point_at_self.png"
+    }
+  },
+  {
+    "id": "tak.nav.point-dropper",
+    "name": "Point Dropper",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "point"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_point_dropper.png"
+    }
+  },
+  {
+    "id": "tak.nav.power",
+    "name": "Power",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "power"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_power.png"
+    }
+  },
+  {
+    "id": "tak.nav.quick-nav",
+    "name": "Quick Nav",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "quick"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_quick_nav.png"
+    }
+  },
+  {
+    "id": "tak.nav.quick-pic",
+    "name": "Quick Pic",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "quick"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_quick_pic.png"
+    }
+  },
+  {
+    "id": "tak.nav.rab",
+    "name": "Rab",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "rab"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_rab.png"
+    }
+  },
+  {
+    "id": "tak.nav.radio",
+    "name": "Radio",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "radio"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_radio.png"
+    }
+  },
+  {
+    "id": "tak.nav.range",
+    "name": "Range",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "range"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_range.png"
+    }
+  },
+  {
+    "id": "tak.nav.range-and-bearing",
+    "name": "Range And Bearing",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "range"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_range_and_bearing.png"
+    }
+  },
+  {
+    "id": "tak.nav.rb",
+    "name": "Rb",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "rb"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_rb.png"
+    }
+  },
+  {
+    "id": "tak.nav.rb-bullseye",
+    "name": "Rb Bullseye",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "rb"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_rb_bullseye.png"
+    }
+  },
+  {
+    "id": "tak.nav.rb-circle",
+    "name": "Rb Circle",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "rb"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_rb_circle.png"
+    }
+  },
+  {
+    "id": "tak.nav.rb-dynamic",
+    "name": "Rb Dynamic",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "rb"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_rb_dynamic.png"
+    }
+  },
+  {
+    "id": "tak.nav.rb-line",
+    "name": "Rb Line",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "rb"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_rb_line.png"
+    }
+  },
+  {
+    "id": "tak.nav.redx",
+    "name": "Redx",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "redx"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_redx.png"
+    }
+  },
+  {
+    "id": "tak.nav.redx-locked",
+    "name": "Redx Locked",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "redx"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_redx_locked.png"
+    }
+  },
+  {
+    "id": "tak.nav.resection",
+    "name": "Resection",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "resection"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_resection.png"
+    }
+  },
+  {
+    "id": "tak.nav.restart",
+    "name": "Restart",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "restart"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_restart.png"
+    }
+  },
+  {
+    "id": "tak.nav.right",
+    "name": "Right",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "right"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_right.png"
+    }
+  },
+  {
+    "id": "tak.nav.right-manual",
+    "name": "Right Manual",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "right"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_right_manual.png"
+    }
+  },
+  {
+    "id": "tak.nav.routes",
+    "name": "Routes",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "routes"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_routes.png"
+    }
+  },
+  {
+    "id": "tak.nav.rubber-sheet",
+    "name": "Rubber Sheet",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "rubber"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_rubber_sheet.png"
+    }
+  },
+  {
+    "id": "tak.nav.server",
+    "name": "Server",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "server"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_server.png"
+    }
+  },
+  {
+    "id": "tak.nav.settings",
+    "name": "Settings",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "settings"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_settings.png"
+    }
+  },
+  {
+    "id": "tak.nav.sharp-left",
+    "name": "Sharp Left",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "sharp"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_sharp_left.png"
+    }
+  },
+  {
+    "id": "tak.nav.sharp-right",
+    "name": "Sharp Right",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "sharp"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_sharp_right.png"
+    }
+  },
+  {
+    "id": "tak.nav.slight-left",
+    "name": "Slight Left",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "slight"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_slight_left.png"
+    }
+  },
+  {
+    "id": "tak.nav.slight-right",
+    "name": "Slight Right",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "slight"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_slight_right.png"
+    }
+  },
+  {
+    "id": "tak.nav.sp-icon",
+    "name": "Sp Icon",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "sp"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_sp_icon.png"
+    }
+  },
+  {
+    "id": "tak.nav.speak",
+    "name": "Speak",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "speak"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_speak.png"
+    }
+  },
+  {
+    "id": "tak.nav.speed-backdrop",
+    "name": "Speed Backdrop",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "speed"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_speed_backdrop.png"
+    }
+  },
+  {
+    "id": "tak.nav.spi",
+    "name": "Spi",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "spi"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_spi.png"
+    }
+  },
+  {
+    "id": "tak.nav.straight",
+    "name": "Straight",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "straight"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_straight.png"
+    }
+  },
+  {
+    "id": "tak.nav.symbols-copy-26",
+    "name": "Symbols Copy 26",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "symbols"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_symbols_copy_26.png"
+    }
+  },
+  {
+    "id": "tak.nav.thumb",
+    "name": "Thumb",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "thumb"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_thumb.png"
+    }
+  },
+  {
+    "id": "tak.nav.tool-delete",
+    "name": "Tool Delete",
+    "source": "nav",
+    "category": "nav_tool",
+    "tags": [
+      "nav",
+      "nav_tool",
+      "tool"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_tool_delete.png"
+    }
+  },
+  {
+    "id": "tak.nav.tool-hidden",
+    "name": "Tool Hidden",
+    "source": "nav",
+    "category": "nav_tool",
+    "tags": [
+      "nav",
+      "nav_tool",
+      "tool"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/nav_tool_hidden.svg"
+    }
+  },
+  {
+    "id": "tak.nav.tool-shown",
+    "name": "Tool Shown",
+    "source": "nav",
+    "category": "nav_tool",
+    "tags": [
+      "nav",
+      "nav_tool",
+      "tool"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/nav_tool_shown.svg"
+    }
+  },
+  {
+    "id": "tak.nav.toolbars",
+    "name": "Toolbars",
+    "source": "nav",
+    "category": "nav_tool",
+    "tags": [
+      "nav",
+      "nav_tool",
+      "toolbars"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_toolbars.png"
+    }
+  },
+  {
+    "id": "tak.nav.track-history",
+    "name": "Track History",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "track"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_track_history.png"
+    }
+  },
+  {
+    "id": "tak.nav.update-location",
+    "name": "Update Location",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "update"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_update_location.png"
+    }
+  },
+  {
+    "id": "tak.nav.vdo-icon",
+    "name": "Vdo Icon",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "vdo"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_vdo_icon.png"
+    }
+  },
+  {
+    "id": "tak.nav.vdo-mode-toggle",
+    "name": "Vdo Mode Toggle",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "vdo"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_vdo_mode_toggle.png"
+    }
+  },
+  {
+    "id": "tak.nav.video",
+    "name": "Video",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "video"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_video.png"
+    }
+  },
+  {
+    "id": "tak.nav.viewshed",
+    "name": "Viewshed",
+    "source": "nav",
+    "category": "other",
+    "tags": [
+      "nav",
+      "other",
+      "viewshed"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_viewshed.png"
+    }
+  },
+  {
+    "id": "tak.nav.zoom",
+    "name": "Zoom",
+    "source": "nav",
+    "category": "nav_zoom",
+    "tags": [
+      "nav",
+      "nav_zoom",
+      "zoom"
+    ],
+    "formats": {
+      "png": "site/public/icons/nav_zoom.png"
+    }
+  },
+  {
+    "id": "tak.nav.zoom-edit",
+    "name": "Zoom Edit",
+    "source": "nav",
+    "category": "nav_zoom",
+    "tags": [
+      "nav",
+      "nav_zoom",
+      "zoom"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/nav_zoom_edit.svg"
+    }
+  },
+  {
+    "id": "tak.radial.alt-phone-icon",
+    "name": "Alt Phone Icon",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "alt-phone-icon"
+    ],
+    "formats": {
+      "png": "site/public/icons/alt_phone_icon.png"
+    }
+  },
+  {
+    "id": "tak.radial.blast-rings",
+    "name": "Blast Rings",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "blast-rings"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.bloodhound",
+    "name": "Bloodhound",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "bloodhound"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.breadcrumbs",
+    "name": "Breadcrumbs",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "breadcrumbs"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.brightness",
+    "name": "Brightness",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "brightness"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.bullseye",
+    "name": "Bullseye",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "bullseye"
+    ],
+    "formats": {
+      "png": "site/public/icons/bullseye.png",
+      "svg": "icons/svg/atak/bullseye.svg"
+    }
+  },
+  {
+    "id": "tak.radial.camera",
+    "name": "Camera",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "camera"
+    ],
+    "formats": {
+      "png": "site/public/icons/camera.png"
+    }
+  },
+  {
+    "id": "tak.radial.camlock",
+    "name": "Camlock",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "camlock"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.cas",
+    "name": "Cas",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "cas"
+    ],
+    "formats": {
+      "png": "site/public/icons/cas.png"
+    }
+  },
+  {
+    "id": "tak.radial.cff",
+    "name": "Cff",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "cff"
+    ],
+    "formats": {
+      "png": "site/public/icons/cff.png"
+    }
+  },
+  {
+    "id": "tak.radial.cffplus",
+    "name": "Cffplus",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "cffplus"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.chatsmall",
+    "name": "Chatsmall",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "chatsmall"
+    ],
+    "formats": {
+      "png": "site/public/icons/chatsmall.png"
+    }
+  },
+  {
+    "id": "tak.radial.clamp",
+    "name": "Clamp",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "clamp"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.clear-tracks",
+    "name": "Clear Tracks",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "clear-tracks"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.color-wheel",
+    "name": "Color Wheel",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "color-wheel"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.compass-rose",
+    "name": "Compass Rose",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "compass-rose"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.contact",
+    "name": "Contact",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "contact"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.copy",
+    "name": "Copy",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "copy"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.damaged",
+    "name": "Damaged",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "damaged"
+    ],
+    "formats": {
+      "png": "site/public/icons/damaged.png"
+    }
+  },
+  {
+    "id": "tak.radial.degs-g",
+    "name": "Degs G",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "degs-g"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.degs-m",
+    "name": "Degs M",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "degs-m"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.degs-t",
+    "name": "Degs T",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "degs-t"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.delete",
+    "name": "Delete",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "delete"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_delete.svg"
+    }
+  },
+  {
+    "id": "tak.radial.details",
+    "name": "Details",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "details"
+    ],
+    "formats": {
+      "png": "site/public/icons/details.png"
+    }
+  },
+  {
+    "id": "tak.radial.details-progress",
+    "name": "Details Progress",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "details-progress"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.distance-lock",
+    "name": "Distance Lock",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "distance-lock"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.doghouse",
+    "name": "Doghouse",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "doghouse"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.drab-pin",
+    "name": "Drab Pin",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "drab-pin"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.edit2",
+    "name": "Edit2",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "edit2"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.email-icon",
+    "name": "Email Icon",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "email-icon"
+    ],
+    "formats": {
+      "png": "site/public/icons/email_icon.png"
+    }
+  },
+  {
+    "id": "tak.radial.expand",
+    "name": "Expand",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "expand"
+    ],
+    "formats": {
+      "png": "site/public/icons/expand.png"
+    }
+  },
+  {
+    "id": "tak.radial.eye",
+    "name": "Eye",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "eye"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.fah-redx",
+    "name": "Fah Redx",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "fah-redx"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.fov-direction",
+    "name": "Fov Direction",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "fov-direction"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.fov-size",
+    "name": "Fov Size",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "fov-size"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.fov-visibility",
+    "name": "Fov Visibility",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "fov-visibility"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.friendly",
+    "name": "Friendly",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "friendly"
+    ],
+    "formats": {
+      "png": "site/public/icons/friendly.png"
+    }
+  },
+  {
+    "id": "tak.radial.ftmi",
+    "name": "Ftmi",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "ftmi"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.general-entry",
+    "name": "General Entry",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "general-entry"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.geofence",
+    "name": "Geofence",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "geofence"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.go",
+    "name": "Go",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "go"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.gpserror",
+    "name": "Gpserror",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "gpserror"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.green-flag-radial",
+    "name": "Green Flag Radial",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "green-flag-radial"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.kmm",
+    "name": "Kmm",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "kmm"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.label",
+    "name": "Label",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "label"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.landing-pattern",
+    "name": "Landing Pattern",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "landing-pattern"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.laser-selected",
+    "name": "Laser Selected",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "laser-selected"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_laser_selected.svg"
+    }
+  },
+  {
+    "id": "tak.radial.lrf-slide",
+    "name": "Lrf Slide",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "lrf-slide"
+    ],
+    "formats": {
+      "png": "site/public/icons/lrf_slide.png"
+    }
+  },
+  {
+    "id": "tak.radial.mgrs-entry",
+    "name": "Mgrs Entry",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "mgrs-entry"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.middlepoint-radial",
+    "name": "Middlepoint Radial",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "middlepoint-radial"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.mils-g",
+    "name": "Mils G",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "mils-g"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.mils-m",
+    "name": "Mils M",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "mils-m"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.mils-t",
+    "name": "Mils T",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "mils-t"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.missionpackage",
+    "name": "Missionpackage",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "missionpackage"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.move",
+    "name": "Move",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "move"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.n3d-free-look",
+    "name": "3d Free Look",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "n3d-free-look"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.neutral",
+    "name": "Neutral",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "neutral"
+    ],
+    "formats": {
+      "png": "site/public/icons/neutral.png"
+    }
+  },
+  {
+    "id": "tak.radial.nineline",
+    "name": "Nineline",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "nineline"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.nm",
+    "name": "Nm",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "nm"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.pairing-line",
+    "name": "Pairing Line",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "pairing-line"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.pairing-line-to-self",
+    "name": "Pairing Line To Self",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "pairing-line-to-self"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.phone-icon",
+    "name": "Phone Icon",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "phone-icon"
+    ],
+    "formats": {
+      "png": "site/public/icons/phone_icon.png"
+    }
+  },
+  {
+    "id": "tak.radial.polar-coord",
+    "name": "Polar Coord",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "polar-coord"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.range-ring",
+    "name": "Range Ring",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "range-ring"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.reference-point",
+    "name": "Reference Point",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "reference-point"
+    ],
+    "formats": {
+      "png": "site/public/icons/reference_point.png"
+    }
+  },
+  {
+    "id": "tak.radial.right-angle",
+    "name": "Right Angle",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "right-angle"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.rotate",
+    "name": "Rotate",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "rotate"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.rotate-ac",
+    "name": "Rotate Ac",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "rotate-ac"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.rubber-sheet-rotate",
+    "name": "Rubber Sheet Rotate",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "rubber-sheet-rotate"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.self",
+    "name": "Self",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "self"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.send-icon",
+    "name": "Send Icon",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "send-icon"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.show-label",
+    "name": "Show Label",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "show-label"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.sms-icon",
+    "name": "Sms Icon",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "sms-icon"
+    ],
+    "formats": {
+      "png": "site/public/icons/sms_icon.png"
+    }
+  },
+  {
+    "id": "tak.radial.speech",
+    "name": "Speech",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "speech"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.sse-shape",
+    "name": "Sse Shape",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "sse-shape"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.sse-shape-delete",
+    "name": "Sse Shape Delete",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "sse-shape-delete"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.sse-slant",
+    "name": "Sse Slant",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "sse-slant"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.sse-survey-progress",
+    "name": "Sse Survey Progress",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "sse-survey-progress"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.target",
+    "name": "Target",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "target"
+    ],
+    "formats": {
+      "png": "site/public/icons/target.png",
+      "svg": "icons/svg/atak/ic_target.svg"
+    }
+  },
+  {
+    "id": "tak.radial.task",
+    "name": "Task",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "task"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.tilt-lock",
+    "name": "Tilt Lock",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "tilt-lock"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.to-from",
+    "name": "To From",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "to-from"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.toggle-3d",
+    "name": "Toggle 3d",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "toggle-3d"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.trackhistory-icon",
+    "name": "Trackhistory Icon",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "trackhistory-icon"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.transparency",
+    "name": "Transparency",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "transparency"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.unknown",
+    "name": "Unknown",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "unknown"
+    ],
+    "formats": {
+      "png": "site/public/icons/unknown.png"
+    }
+  },
+  {
+    "id": "tak.radial.vertex",
+    "name": "Vertex",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "vertex"
+    ],
+    "formats": {}
+  },
+  {
+    "id": "tak.radial.video",
+    "name": "Video",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "video"
+    ],
+    "formats": {
+      "png": "site/public/icons/video.png",
+      "svg": "icons/svg/atak/ic_video.svg"
+    }
+  },
+  {
+    "id": "tak.radial.voip-icon",
+    "name": "Voip Icon",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "voip-icon"
+    ],
+    "formats": {
+      "png": "site/public/icons/voip_icon.png"
+    }
+  },
+  {
+    "id": "tak.radial.xmpp-icon",
+    "name": "Xmpp Icon",
+    "source": "radial",
+    "category": "action",
+    "tags": [
+      "radial",
+      "action",
+      "xmpp-icon"
+    ],
+    "formats": {
+      "png": "site/public/icons/xmpp_icon.png"
+    }
+  },
+  {
+    "id": "tak.svg.add",
+    "name": "Add",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "add"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_add.svg"
+    }
+  },
+  {
+    "id": "tak.svg.arrow-right",
+    "name": "Arrow Right",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "arrow"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_arrow_right.svg"
+    }
+  },
+  {
+    "id": "tak.svg.attach-new",
+    "name": "Attach New",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "attach"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_attach_new.svg"
+    }
+  },
+  {
+    "id": "tak.svg.baseline-keyboard-arrow-right-24",
+    "name": "Baseline Keyboard Arrow Right 24",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "baseline"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_baseline_keyboard_arrow_right_24.svg"
+    }
+  },
+  {
+    "id": "tak.svg.bottom-closed",
+    "name": "Bottom Closed",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "bottom"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/bottom_closed.svg"
+    }
+  },
+  {
+    "id": "tak.svg.btn-check-off",
+    "name": "Btn Check Off",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "btn"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/btn_check_off.svg"
+    }
+  },
+  {
+    "id": "tak.svg.btn-check-on",
+    "name": "Btn Check On",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "btn"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/btn_check_on.svg"
+    }
+  },
+  {
+    "id": "tak.svg.btn-check-semi",
+    "name": "Btn Check Semi",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "btn"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/btn_check_semi.svg"
+    }
+  },
+  {
+    "id": "tak.svg.bullseye-lit",
+    "name": "Bullseye Lit",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "bullseye"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/bullseye_lit.svg",
+      "png": "site/public/icons/bullseye_lit.png"
+    }
+  },
+  {
+    "id": "tak.svg.button-close",
+    "name": "Button Close",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "button"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_button_close.svg"
+    }
+  },
+  {
+    "id": "tak.svg.button-confirm",
+    "name": "Button Confirm",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "button"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_button_confirm.svg"
+    }
+  },
+  {
+    "id": "tak.svg.cancel-widget",
+    "name": "Cancel Widget",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "cancel"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/cancel_widget.svg"
+    }
+  },
+  {
+    "id": "tak.svg.check-off",
+    "name": "Check Off",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "check"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_check_off.svg"
+    }
+  },
+  {
+    "id": "tak.svg.check-on",
+    "name": "Check On",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "check"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_check_on.svg"
+    }
+  },
+  {
+    "id": "tak.svg.checked-box",
+    "name": "Checked Box",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "checked"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/checked_box.svg"
+    }
+  },
+  {
+    "id": "tak.svg.child-arrow-horizontal",
+    "name": "Child Arrow Horizontal",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "child"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_nav_child_arrow_horizontal.svg"
+    }
+  },
+  {
+    "id": "tak.svg.child-arrow-vertical",
+    "name": "Child Arrow Vertical",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "child"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_nav_child_arrow_vertical.svg"
+    }
+  },
+  {
+    "id": "tak.svg.child-dropdown-vertical",
+    "name": "Child Dropdown Vertical",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "child"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_nav_child_dropdown_vertical.svg"
+    }
+  },
+  {
+    "id": "tak.svg.confirm-icon",
+    "name": "Confirm Icon",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "confirm"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/confirm_icon.svg"
+    }
+  },
+  {
+    "id": "tak.svg.confirm-widget",
+    "name": "Confirm Widget",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "confirm"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/confirm_widget.svg"
+    }
+  },
+  {
+    "id": "tak.svg.details-v2",
+    "name": "Details V2",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "details"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_details_v2.svg"
+    }
+  },
+  {
+    "id": "tak.svg.down-arrow",
+    "name": "Down Arrow",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "down"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_down_arrow.svg"
+    }
+  },
+  {
+    "id": "tak.svg.download",
+    "name": "Download",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "download"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_download.svg"
+    }
+  },
+  {
+    "id": "tak.svg.drag-ruler-selected",
+    "name": "Drag Ruler Selected",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "drag"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_drag_ruler_selected.svg"
+    }
+  },
+  {
+    "id": "tak.svg.drag-ruler-unselected",
+    "name": "Drag Ruler Unselected",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "drag"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_drag_ruler_unselected.svg"
+    }
+  },
+  {
+    "id": "tak.svg.dropdown-container",
+    "name": "Dropdown Container",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "dropdown"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_dropdown_container.svg"
+    }
+  },
+  {
+    "id": "tak.svg.dropdown-selector",
+    "name": "Dropdown Selector",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "dropdown"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/dropdown_selector.svg"
+    }
+  },
+  {
+    "id": "tak.svg.edit-calendar",
+    "name": "Edit Calendar",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "edit"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_edit_calendar.svg"
+    }
+  },
+  {
+    "id": "tak.svg.edit-features",
+    "name": "Edit Features",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "edit"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_edit_features.svg"
+    }
+  },
+  {
+    "id": "tak.svg.edit-outline",
+    "name": "Edit Outline",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "edit"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_edit_outline.svg"
+    }
+  },
+  {
+    "id": "tak.svg.empty-box",
+    "name": "Empty Box",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "empty"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/empty_box.svg"
+    }
+  },
+  {
+    "id": "tak.svg.forward",
+    "name": "Forward",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "forward"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_forward.svg"
+    }
+  },
+  {
+    "id": "tak.svg.group",
+    "name": "Group",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "group"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_group.svg"
+    }
+  },
+  {
+    "id": "tak.svg.hamburger",
+    "name": "Hamburger",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "hamburger"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_hamburger.svg"
+    }
+  },
+  {
+    "id": "tak.svg.hamburger-left",
+    "name": "Hamburger Left",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "hamburger"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_hamburger_left.svg"
+    }
+  },
+  {
+    "id": "tak.svg.hamburger-right",
+    "name": "Hamburger Right",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "hamburger"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_hamburger_right.svg"
+    }
+  },
+  {
+    "id": "tak.svg.hashtag-new",
+    "name": "Hashtag New",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "hashtag"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_hashtag_new.svg"
+    }
+  },
+  {
+    "id": "tak.svg.hide",
+    "name": "Hide",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "hide"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_hide.svg"
+    }
+  },
+  {
+    "id": "tak.svg.hierarchy-clear",
+    "name": "Hierarchy Clear",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "hierarchy"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/hierarchy_clear.svg"
+    }
+  },
+  {
+    "id": "tak.svg.hierarchy-delete",
+    "name": "Hierarchy Delete",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "hierarchy"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_hierarchy_delete.svg"
+    }
+  },
+  {
+    "id": "tak.svg.hostile-go-to-active",
+    "name": "Hostile Go To Active",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "hostile"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_hostile_go_to_active.svg"
+    }
+  },
+  {
+    "id": "tak.svg.hostile-go-to-default",
+    "name": "Hostile Go To Default",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "hostile"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_hostile_go_to_default.svg"
+    }
+  },
+  {
+    "id": "tak.svg.hostile-mgr-active",
+    "name": "Hostile Mgr Active",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "hostile"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_hostile_mgr_active.svg"
+    }
+  },
+  {
+    "id": "tak.svg.hostile-mgr-default",
+    "name": "Hostile Mgr Default",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "hostile"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_hostile_mgr_default.svg"
+    }
+  },
+  {
+    "id": "tak.svg.hostile-selected",
+    "name": "Hostile Selected",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "hostile"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_hostile_selected.svg"
+    }
+  },
+  {
+    "id": "tak.svg.hostile-unselected",
+    "name": "Hostile Unselected",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "hostile"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_hostile_unselected.svg"
+    }
+  },
+  {
+    "id": "tak.svg.imagery-scale",
+    "name": "Imagery Scale",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "imagery"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_imagery_scale.svg"
+    }
+  },
+  {
+    "id": "tak.svg.large-reticle-red",
+    "name": "Large Reticle Red",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "large"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/large_reticle_red.svg"
+    }
+  },
+  {
+    "id": "tak.svg.laser-unselected",
+    "name": "Laser Unselected",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "laser"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_laser_unselected.svg"
+    }
+  },
+  {
+    "id": "tak.svg.link-eud",
+    "name": "Link Eud",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "link"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_link_eud.svg"
+    }
+  },
+  {
+    "id": "tak.svg.lock-on-self",
+    "name": "Lock On Self",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "lock"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_lock_on_self.svg"
+    }
+  },
+  {
+    "id": "tak.svg.lock-on-self-active",
+    "name": "Lock On Self Active",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "lock"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_lock_on_self_active.svg"
+    }
+  },
+  {
+    "id": "tak.svg.multiselect",
+    "name": "Multiselect",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "multiselect"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_multiselect.svg"
+    }
+  },
+  {
+    "id": "tak.svg.n3d",
+    "name": "3d",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "n3d"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_3d.svg"
+    }
+  },
+  {
+    "id": "tak.svg.n3d-lock",
+    "name": "3d Lock",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "n3d"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_3d_lock.svg"
+    }
+  },
+  {
+    "id": "tak.svg.navstack-add",
+    "name": "Navstack Add",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "navstack"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_navstack_add.svg"
+    }
+  },
+  {
+    "id": "tak.svg.navstack-delete",
+    "name": "Navstack Delete",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "navstack"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_navstack_delete.svg"
+    }
+  },
+  {
+    "id": "tak.svg.navstack-edit",
+    "name": "Navstack Edit",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "navstack"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_navstack_edit.svg"
+    }
+  },
+  {
+    "id": "tak.svg.navstack-export",
+    "name": "Navstack Export",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "navstack"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_navstack_export.svg"
+    }
+  },
+  {
+    "id": "tak.svg.navstack-grid",
+    "name": "Navstack Grid",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "navstack"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_navstack_grid.svg"
+    }
+  },
+  {
+    "id": "tak.svg.navstack-import",
+    "name": "Navstack Import",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "navstack"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_navstack_import.svg"
+    }
+  },
+  {
+    "id": "tak.svg.navstack-list",
+    "name": "Navstack List",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "navstack"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_navstack_list.svg"
+    }
+  },
+  {
+    "id": "tak.svg.navstack-navigate",
+    "name": "Navstack Navigate",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "navstack"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_navstack_navigate.svg"
+    }
+  },
+  {
+    "id": "tak.svg.navstack-reverse",
+    "name": "Navstack Reverse",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "navstack"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_navstack_reverse.svg"
+    }
+  },
+  {
+    "id": "tak.svg.navstack-save",
+    "name": "Navstack Save",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "navstack"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_navstack_save.svg"
+    }
+  },
+  {
+    "id": "tak.svg.navstack-settings",
+    "name": "Navstack Settings",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "navstack"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_navstack_settings.svg"
+    }
+  },
+  {
+    "id": "tak.svg.navstack-vertical",
+    "name": "Navstack Vertical",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "navstack"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_navstack_vertical.svg"
+    }
+  },
+  {
+    "id": "tak.svg.overflow",
+    "name": "Overflow",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "overflow"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_nav_overflow.svg"
+    }
+  },
+  {
+    "id": "tak.svg.overlay-not-visible",
+    "name": "Overlay Not Visible",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "overlay"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/overlay_not_visible.svg"
+    }
+  },
+  {
+    "id": "tak.svg.overlay-semi-visible",
+    "name": "Overlay Semi Visible",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "overlay"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/overlay_semi_visible.svg"
+    }
+  },
+  {
+    "id": "tak.svg.overlay-visible",
+    "name": "Overlay Visible",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "overlay"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/overlay_visible.svg"
+    }
+  },
+  {
+    "id": "tak.svg.pick-date",
+    "name": "Pick Date",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "pick"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_pick_date.svg"
+    }
+  },
+  {
+    "id": "tak.svg.pick-time",
+    "name": "Pick Time",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "pick"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_pick_time.svg"
+    }
+  },
+  {
+    "id": "tak.svg.polygon",
+    "name": "Polygon",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "polygon"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/polygon.svg"
+    }
+  },
+  {
+    "id": "tak.svg.polygon-lit",
+    "name": "Polygon Lit",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "polygon"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/polygon_lit.svg"
+    }
+  },
+  {
+    "id": "tak.svg.pref-handle-shade",
+    "name": "Pref Handle Shade",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "pref"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_pref_handle_shade.svg"
+    }
+  },
+  {
+    "id": "tak.svg.pref-self-coord-info",
+    "name": "Pref Self Coord Info",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "pref"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_pref_self_coord_info.svg"
+    }
+  },
+  {
+    "id": "tak.svg.radio-btn-empty",
+    "name": "Radio Btn Empty",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "radio"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_radio_btn_empty.svg"
+    }
+  },
+  {
+    "id": "tak.svg.radio-btn-filled",
+    "name": "Radio Btn Filled",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "radio"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_radio_btn_filled.svg"
+    }
+  },
+  {
+    "id": "tak.svg.rectangle-lit",
+    "name": "Rectangle Lit",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "rectangle"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/rectangle_lit.svg"
+    }
+  },
+  {
+    "id": "tak.svg.remarks-new",
+    "name": "Remarks New",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "remarks"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_remarks_new.svg"
+    }
+  },
+  {
+    "id": "tak.svg.rotation",
+    "name": "Rotation",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "rotation"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_rotation.svg"
+    }
+  },
+  {
+    "id": "tak.svg.rotation-lock",
+    "name": "Rotation Lock",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "rotation"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_rotation_lock.svg"
+    }
+  },
+  {
+    "id": "tak.svg.row-back",
+    "name": "Row Back",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "row"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_row_back.svg"
+    }
+  },
+  {
+    "id": "tak.svg.row-boat",
+    "name": "Row Boat",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "row"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_row_boat.svg"
+    }
+  },
+  {
+    "id": "tak.svg.row-car",
+    "name": "Row Car",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "row"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_row_car.svg"
+    }
+  },
+  {
+    "id": "tak.svg.row-continue",
+    "name": "Row Continue",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "row"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_row_continue.svg"
+    }
+  },
+  {
+    "id": "tak.svg.row-contract",
+    "name": "Row Contract",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "row"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_row_contract.svg"
+    }
+  },
+  {
+    "id": "tak.svg.row-expand",
+    "name": "Row Expand",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "row"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_row_expand.svg"
+    }
+  },
+  {
+    "id": "tak.svg.row-plane",
+    "name": "Row Plane",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "row"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_row_plane.svg"
+    }
+  },
+  {
+    "id": "tak.svg.row-swim",
+    "name": "Row Swim",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "row"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_row_swim.svg"
+    }
+  },
+  {
+    "id": "tak.svg.row-walking",
+    "name": "Row Walking",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "row"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_row_walking.svg"
+    }
+  },
+  {
+    "id": "tak.svg.ruler-selected",
+    "name": "Ruler Selected",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "ruler"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_ruler_selected.svg",
+      "png": "site/public/icons/ic_ruler_selected.png"
+    }
+  },
+  {
+    "id": "tak.svg.ruler-unselected",
+    "name": "Ruler Unselected",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "ruler"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_ruler_unselected.svg",
+      "png": "site/public/icons/ic_ruler_unselected.png"
+    }
+  },
+  {
+    "id": "tak.svg.search",
+    "name": "Search",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "search"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_search.svg"
+    }
+  },
+  {
+    "id": "tak.svg.select-area-current-view",
+    "name": "Select Area Current View",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "select"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/select_area_current_view.svg"
+    }
+  },
+  {
+    "id": "tak.svg.select-area-drawn-objects",
+    "name": "Select Area Drawn Objects",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "select"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/select_area_drawn_objects.svg"
+    }
+  },
+  {
+    "id": "tak.svg.select-area-freeform",
+    "name": "Select Area Freeform",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "select"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/select_area_freeform.svg"
+    }
+  },
+  {
+    "id": "tak.svg.select-area-rectangle",
+    "name": "Select Area Rectangle",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "select"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/select_area_rectangle.svg"
+    }
+  },
+  {
+    "id": "tak.svg.send-alt",
+    "name": "Send Alt",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "send"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_send_alt.svg"
+    }
+  },
+  {
+    "id": "tak.svg.send-outline",
+    "name": "Send Outline",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "send"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_send_outline.svg"
+    }
+  },
+  {
+    "id": "tak.svg.show",
+    "name": "Show",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "show"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_show.svg"
+    }
+  },
+  {
+    "id": "tak.svg.side-closed",
+    "name": "Side Closed",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "side"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/side_closed.svg"
+    }
+  },
+  {
+    "id": "tak.svg.side-menu-trigger-bottom-close",
+    "name": "Side Menu Trigger Bottom Close",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "side"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_side_menu_trigger_bottom_close.svg"
+    }
+  },
+  {
+    "id": "tak.svg.side-menu-trigger-bottom-close-legacy",
+    "name": "Side Menu Trigger Bottom Close Legacy",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "side"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_side_menu_trigger_bottom_close_legacy.svg"
+    }
+  },
+  {
+    "id": "tak.svg.side-menu-trigger-bottom-open",
+    "name": "Side Menu Trigger Bottom Open",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "side"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_side_menu_trigger_bottom_open.svg"
+    }
+  },
+  {
+    "id": "tak.svg.side-menu-trigger-bottom-open-legacy",
+    "name": "Side Menu Trigger Bottom Open Legacy",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "side"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_side_menu_trigger_bottom_open_legacy.svg"
+    }
+  },
+  {
+    "id": "tak.svg.side-menu-trigger-close",
+    "name": "Side Menu Trigger Close",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "side"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_side_menu_trigger_close.svg"
+    }
+  },
+  {
+    "id": "tak.svg.side-menu-trigger-close-legacy",
+    "name": "Side Menu Trigger Close Legacy",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "side"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_side_menu_trigger_close_legacy.svg"
+    }
+  },
+  {
+    "id": "tak.svg.side-menu-trigger-open",
+    "name": "Side Menu Trigger Open",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "side"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_side_menu_trigger_open.svg"
+    }
+  },
+  {
+    "id": "tak.svg.side-menu-trigger-open-legacy",
+    "name": "Side Menu Trigger Open Legacy",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "side"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_side_menu_trigger_open_legacy.svg"
+    }
+  },
+  {
+    "id": "tak.svg.side-open",
+    "name": "Side Open",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "side"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/side_open.svg"
+    }
+  },
+  {
+    "id": "tak.svg.sidemenu-back",
+    "name": "Sidemenu Back",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "sidemenu"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/sidemenu_back.svg"
+    }
+  },
+  {
+    "id": "tak.svg.sort-asc",
+    "name": "Sort Asc",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "sort"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_sort_asc.svg"
+    }
+  },
+  {
+    "id": "tak.svg.sort-desc",
+    "name": "Sort Desc",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "sort"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_sort_desc.svg"
+    }
+  },
+  {
+    "id": "tak.svg.spi1-disabled",
+    "name": "Spi1 Disabled",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "spi1"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_spi1_disabled.svg"
+    }
+  },
+  {
+    "id": "tak.svg.spi1-enabled",
+    "name": "Spi1 Enabled",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "spi1"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_spi1_enabled.svg"
+    }
+  },
+  {
+    "id": "tak.svg.spi1-off",
+    "name": "Spi1 Off",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "spi1"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_spi1_off.svg"
+    }
+  },
+  {
+    "id": "tak.svg.spi2-disabled",
+    "name": "Spi2 Disabled",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "spi2"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_spi2_disabled.svg"
+    }
+  },
+  {
+    "id": "tak.svg.spi2-enabled",
+    "name": "Spi2 Enabled",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "spi2"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_spi2_enabled.svg"
+    }
+  },
+  {
+    "id": "tak.svg.spi2-off",
+    "name": "Spi2 Off",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "spi2"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_spi2_off.svg"
+    }
+  },
+  {
+    "id": "tak.svg.spi3-disabled",
+    "name": "Spi3 Disabled",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "spi3"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_spi3_disabled.svg"
+    }
+  },
+  {
+    "id": "tak.svg.spi3-enabled",
+    "name": "Spi3 Enabled",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "spi3"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_spi3_enabled.svg"
+    }
+  },
+  {
+    "id": "tak.svg.spi3-off",
+    "name": "Spi3 Off",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "spi3"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_spi3_off.svg"
+    }
+  },
+  {
+    "id": "tak.svg.switch",
+    "name": "Switch",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "switch"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_switch.svg"
+    }
+  },
+  {
+    "id": "tak.svg.telestrate",
+    "name": "Telestrate",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "telestrate"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/telestrate.svg"
+    }
+  },
+  {
+    "id": "tak.svg.telestrate-lit",
+    "name": "Telestrate Lit",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "telestrate"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/telestrate_lit.svg"
+    }
+  },
+  {
+    "id": "tak.svg.tile-indicator",
+    "name": "Tile Indicator",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "tile"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_tile_indicator.svg"
+    }
+  },
+  {
+    "id": "tak.svg.tilt-indicator",
+    "name": "Tilt Indicator",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "tilt"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/tilt_indicator.svg"
+    }
+  },
+  {
+    "id": "tak.svg.toolbar-corner-close",
+    "name": "Toolbar Corner Close",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "toolbar"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_toolbar_corner_close.svg"
+    }
+  },
+  {
+    "id": "tak.svg.toolbar-endcap",
+    "name": "Toolbar Endcap",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "toolbar"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/toolbar_endcap.svg"
+    }
+  },
+  {
+    "id": "tak.svg.trash-outline",
+    "name": "Trash Outline",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "trash"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_trash_outline.svg"
+    }
+  },
+  {
+    "id": "tak.svg.up-arrow",
+    "name": "Up Arrow",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "up"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_up_arrow.svg"
+    }
+  },
+  {
+    "id": "tak.svg.white-radio-empty",
+    "name": "White Radio Empty",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "white"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_white_radio_empty.svg"
+    }
+  },
+  {
+    "id": "tak.svg.white-radio-filled",
+    "name": "White Radio Filled",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "white"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_white_radio_filled.svg"
+    }
+  },
+  {
+    "id": "tak.svg.zoom-in-out",
+    "name": "Zoom In Out",
+    "source": "svg",
+    "category": "ui",
+    "tags": [
+      "svg",
+      "zoom"
+    ],
+    "formats": {
+      "svg": "icons/svg/atak/ic_zoom_in_out.svg"
+    }
+  }
+]

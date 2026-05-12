@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/iotactical/tak-design-system/schemas/tak-radial-action-icons.schema.json",
+  "title": "TAK Radial Action Icon Mapping",
+  "description": "Maps radial menu action XML files to stable semantic icon IDs.",
+  "type": "object",
+  "properties": {
+    "$schema": { "type": "string" },
+    "actions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/actionEntry" }
+    }
+  },
+  "required": ["actions"],
+  "additionalProperties": false,
+  "$defs": {
+    "actionEntry": {
+      "type": "object",
+      "properties": {
+        "action": {
+          "type": "string",
+          "pattern": "^actions/",
+          "description": "Action XML file path (e.g. actions/remove.xml)."
+        },
+        "iconId": {
+          "type": "string",
+          "pattern": "^tak\\.",
+          "description": "Semantic icon ID from the icon registry."
+        },
+        "label": {
+          "type": "string",
+          "description": "Human-readable action label."
+        },
+        "menus": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "Radial menu names where this action appears."
+        }
+      },
+      "required": ["action", "iconId", "label", "menus"],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/iotactical/tak-design-system/schemas/tak-icon-registry.schema.json",
+  "title": "TAK Icon Registry",
+  "description": "Canonical registry of all TAK icons with stable semantic IDs.",
+  "type": "array",
+  "items": { "$ref": "#/$defs/iconEntry" },
+  "$defs": {
+    "iconEntry": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^tak\\.[a-z][a-z0-9]*(\\.[a-z][a-z0-9-]*)*$",
+          "description": "Stable semantic ID. Dot-separated namespace: tak.{domain}.{name}[.{variant}]"
+        },
+        "name": {
+          "type": "string",
+          "description": "Human-readable display name."
+        },
+        "source": {
+          "type": "string",
+          "enum": ["core", "menu", "nav", "drawable", "iconset", "palette", "lpt", "svg", "radial", "custom"],
+          "description": "Which source catalog this icon originates from."
+        },
+        "category": {
+          "type": "string",
+          "description": "Functional category (altitude, nav, action, menu, ui, etc.)."
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Searchable tags for discovery."
+        },
+        "formats": {
+          "type": "object",
+          "properties": {
+            "svg": { "type": "string" },
+            "png": { "type": "string" },
+            "xml": { "type": "string" },
+            "webp": { "type": "string" }
+          },
+          "additionalProperties": { "type": "string" },
+          "description": "Available file format paths, relative to repo root."
+        },
+        "states": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "state": { "type": "string" },
+              "iconId": { "type": "string", "pattern": "^tak\\." }
+            },
+            "required": ["state", "iconId"]
+          },
+          "description": "Optional state variants (e.g. disabled, selected, lit)."
+        },
+        "deprecated": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "required": ["id", "name", "source", "category", "formats"],
+      "additionalProperties": false
+    }
+  }
+}

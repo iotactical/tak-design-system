@@ -1,0 +1,348 @@
+#!/usr/bin/env node
+// rtmx:req REQ-XW-250 REQ-XW-251
+// Build script: reads source icon catalogs and generates the canonical icon registry
+// and radial action mapping. Run via: node scripts/build-icon-registry.mjs
+
+import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
+import { resolve, dirname, basename, extname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = resolve(__dirname, '..');
+const DATA = resolve(ROOT, 'data');
+const ICONS_SVG = resolve(ROOT, 'icons', 'svg', 'atak');
+const ICONS_WEB = resolve(ROOT, 'site', 'public', 'icons');
+
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
+
+function readJSON(path) {
+  return JSON.parse(readFileSync(path, 'utf8'));
+}
+
+/** Convert a source name to a stable semantic ID segment. */
+function toIdSegment(name) {
+  let seg = name
+    .replace(/^ic_menu_/, '')
+    .replace(/^ic_/, '')
+    .replace(/^nav_/, '')
+    .replace(/_/g, '-');
+  // IDs must start with a letter; prefix digit-leading segments
+  if (/^\d/.test(seg)) seg = `n${seg}`;
+  return seg;
+}
+
+/** Derive a human-readable label from an icon name. */
+function toLabel(name) {
+  return name
+    .replace(/^ic_menu_/, '')
+    .replace(/^ic_/, '')
+    .replace(/^nav_/, '')
+    .replace(/_/g, ' ')
+    .replace(/\b\w/g, c => c.toUpperCase());
+}
+
+/** Check if a file exists relative to repo root. */
+function fileExists(relPath) {
+  return existsSync(resolve(ROOT, relPath));
+}
+
+/** Build formats object from a source name, checking for actual files. */
+function buildFormats(name) {
+  const formats = {};
+
+  // Check SVG variants
+  const svgCandidates = [
+    `icons/svg/atak/${name}.svg`,
+    `icons/svg/atak/ic_${name}.svg`,
+  ];
+  for (const p of svgCandidates) {
+    if (fileExists(p)) { formats.svg = p; break; }
+  }
+
+  // Check PNG in site/public/icons
+  const pngCandidates = [
+    `site/public/icons/${name}.png`,
+    `site/public/icons/ic_${name}.png`,
+    `site/public/icons/ic_menu_${name}.png`,
+    `site/public/icons/nav_${name}.png`,
+  ];
+  for (const p of pngCandidates) {
+    if (fileExists(p)) { formats.png = p; break; }
+  }
+
+  return formats;
+}
+
+// ---------------------------------------------------------------------------
+// Source: Core icons (atak-core-icons.json)
+// ---------------------------------------------------------------------------
+
+function processCoreIcons() {
+  const entries = [];
+  const data = readJSON(resolve(DATA, 'atak-core-icons.json'));
+
+  for (const item of data) {
+    const segment = toIdSegment(item.name);
+    const id = `tak.core.${segment}`;
+    const formats = buildFormats(item.name);
+
+    // Check site/public/icons directly by name
+    const directPng = `site/public/icons/${item.name}.png`;
+    if (!formats.png && fileExists(directPng)) formats.png = directPng;
+
+    if (Object.keys(formats).length === 0) continue; // skip entries with no files
+
+    entries.push({
+      id,
+      name: toLabel(item.name),
+      source: 'core',
+      category: item.category || 'other',
+      tags: [item.category, segment.split('-')[0]].filter(Boolean),
+      formats,
+    });
+  }
+  return entries;
+}
+
+// ---------------------------------------------------------------------------
+// Source: Menu icons (atak-menu-icons.json)
+// ---------------------------------------------------------------------------
+
+function processMenuIcons() {
+  const entries = [];
+  const data = readJSON(resolve(DATA, 'atak-menu-icons.json'));
+
+  for (const item of data) {
+    const segment = toIdSegment(item.name);
+    const id = `tak.menu.${segment}`;
+    const formats = {};
+
+    // Check SVG
+    const svgPath = `icons/svg/atak/${item.name}.svg`;
+    if (fileExists(svgPath)) formats.svg = svgPath;
+
+    // Check PNG
+    const pngPath = `site/public/icons/${item.name}.png`;
+    if (fileExists(pngPath)) formats.png = pngPath;
+
+    if (Object.keys(formats).length === 0) continue;
+
+    entries.push({
+      id,
+      name: item.description || toLabel(item.name),
+      source: 'menu',
+      category: 'menu',
+      tags: ['menu', segment.split('-')[0]].filter(Boolean),
+      formats,
+    });
+  }
+  return entries;
+}
+
+// ---------------------------------------------------------------------------
+// Source: Nav icons (atak-nav-icons.json)
+// ---------------------------------------------------------------------------
+
+function processNavIcons() {
+  const entries = [];
+  const data = readJSON(resolve(DATA, 'atak-nav-icons.json'));
+
+  for (const item of data) {
+    const segment = toIdSegment(item.name);
+    const id = `tak.nav.${segment}`;
+    const formats = {};
+
+    const svgPath = `icons/svg/atak/${item.name}.svg`;
+    if (fileExists(svgPath)) formats.svg = svgPath;
+
+    const pngPath = `site/public/icons/${item.name}.png`;
+    if (fileExists(pngPath)) formats.png = pngPath;
+
+    if (Object.keys(formats).length === 0) continue;
+
+    entries.push({
+      id,
+      name: toLabel(item.name),
+      source: 'nav',
+      category: item.section || 'other',
+      tags: ['nav', item.section, segment.split('-')[0]].filter(Boolean),
+      formats,
+    });
+  }
+  return entries;
+}
+
+// ---------------------------------------------------------------------------
+// Source: Radial menus (atak-radial-menus.json)
+// Extracts unique icon references and builds radial action map
+// ---------------------------------------------------------------------------
+
+function processRadialMenus() {
+  const data = readJSON(resolve(DATA, 'atak-radial-menus.json'));
+  const iconEntries = [];
+  const actionEntries = [];
+  const seenIcons = new Map(); // icon path -> semantic ID
+  const actionMap = new Map(); // action path -> { iconId, label, menus[] }
+
+  for (const menu of data.menus) {
+    for (const item of menu.items) {
+      if (!item.icon) continue;
+
+      const iconPath = item.icon; // e.g. "icons/delete.png"
+      const iconFile = basename(iconPath, extname(iconPath)); // "delete"
+
+      // Build or reuse semantic ID for this icon
+      if (!seenIcons.has(iconPath)) {
+        const segment = toIdSegment(iconFile);
+        const id = `tak.radial.${segment}`;
+        seenIcons.set(iconPath, id);
+
+        // Find actual files
+        const formats = {};
+        // Check site/public/icons for the referenced file
+        const webPng = `site/public/icons/${iconFile}.png`;
+        if (fileExists(webPng)) formats.png = webPng;
+        const webXml = `site/public/icons/${iconFile}.xml`;
+        if (fileExists(webXml)) formats.xml = webXml;
+        // Check SVG directory
+        const svgPath = `icons/svg/atak/ic_${iconFile}.svg`;
+        if (fileExists(svgPath)) formats.svg = svgPath;
+        const svgPathDirect = `icons/svg/atak/${iconFile}.svg`;
+        if (!formats.svg && fileExists(svgPathDirect)) formats.svg = svgPathDirect;
+
+        // Also check common name variants in site/public/icons
+        if (Object.keys(formats).length === 0) {
+          const altPng = `site/public/icons/${iconFile}.png`;
+          if (fileExists(altPng)) formats.png = altPng;
+        }
+
+        iconEntries.push({
+          id,
+          name: toLabel(iconFile),
+          source: 'radial',
+          category: 'action',
+          tags: ['radial', 'action', segment],
+          formats,
+        });
+      }
+
+      // Build action entry
+      if (item.action) {
+        const iconId = seenIcons.get(iconPath);
+        if (actionMap.has(item.action)) {
+          actionMap.get(item.action).menus.push(menu.name);
+        } else {
+          // Derive label from action path: "actions/remove.xml" -> "Remove"
+          const actionFile = basename(item.action, '.xml');
+          const label = actionFile
+            .replace(/_/g, ' ')
+            .replace(/\b\w/g, c => c.toUpperCase());
+
+          actionMap.set(item.action, {
+            action: item.action,
+            iconId,
+            label,
+            menus: [menu.name],
+          });
+        }
+      }
+    }
+  }
+
+  // Deduplicate menu lists
+  for (const entry of actionMap.values()) {
+    entry.menus = [...new Set(entry.menus)];
+    actionEntries.push(entry);
+  }
+
+  return { iconEntries, actionEntries };
+}
+
+// ---------------------------------------------------------------------------
+// Main
+// ---------------------------------------------------------------------------
+
+console.log('Building icon registry...');
+
+const coreEntries = processCoreIcons();
+console.log(`  Core icons: ${coreEntries.length}`);
+
+const menuEntries = processMenuIcons();
+console.log(`  Menu icons: ${menuEntries.length}`);
+
+const navEntries = processNavIcons();
+console.log(`  Nav icons: ${navEntries.length}`);
+
+const { iconEntries: radialIcons, actionEntries } = processRadialMenus();
+console.log(`  Radial icons: ${radialIcons.length}`);
+console.log(`  Radial actions: ${actionEntries.length}`);
+
+// Collect all IDs so far
+const allEntries = [...coreEntries, ...menuEntries, ...navEntries, ...radialIcons];
+const existingIds = new Set(allEntries.map(e => e.id));
+
+// Add SVG-only icons not already covered
+const svgFiles = readdirSync(ICONS_SVG).filter(f => f.endsWith('.svg'));
+const svgEntries = [];
+for (const file of svgFiles) {
+  const name = basename(file, '.svg');
+  const segment = toIdSegment(name);
+  const candidateIds = [
+    `tak.core.${segment}`,
+    `tak.menu.${segment}`,
+    `tak.nav.${segment}`,
+    `tak.radial.${segment}`,
+  ];
+  if (candidateIds.some(id => existingIds.has(id))) continue;
+
+  const id = `tak.svg.${segment}`;
+  if (existingIds.has(id)) continue;
+
+  const formats = { svg: `icons/svg/atak/${file}` };
+  const pngPath = `site/public/icons/${name}.png`;
+  if (fileExists(pngPath)) formats.png = pngPath;
+
+  svgEntries.push({
+    id,
+    name: toLabel(name),
+    source: 'svg',
+    category: 'ui',
+    tags: ['svg', segment.split('-')[0]].filter(Boolean),
+    formats,
+  });
+  existingIds.add(id);
+}
+console.log(`  SVG-only icons: ${svgEntries.length}`);
+
+// Merge and sort
+const registry = [...allEntries, ...svgEntries].sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
+
+// Deduplicate by ID (keep first occurrence -- source priority: radial > menu > nav > core > svg)
+const deduped = [];
+const finalIds = new Set();
+for (const entry of registry) {
+  if (!finalIds.has(entry.id)) {
+    finalIds.add(entry.id);
+    deduped.push(entry);
+  }
+}
+
+console.log(`  Total unique entries: ${deduped.length}`);
+
+// Write registry
+const registryPath = resolve(DATA, 'tak-icon-registry.json');
+writeFileSync(registryPath, JSON.stringify(deduped, null, 2) + '\n');
+console.log(`  Wrote ${registryPath}`);
+
+// Write radial action map
+const radialMap = {
+  $schema: '../schemas/tak-radial-action-icons.schema.json',
+  actions: actionEntries.sort((a, b) => a.action < b.action ? -1 : a.action > b.action ? 1 : 0),
+};
+const radialPath = resolve(DATA, 'tak-radial-action-icons.json');
+writeFileSync(radialPath, JSON.stringify(radialMap, null, 2) + '\n');
+console.log(`  Wrote ${radialPath}`);
+
+console.log('Icon registry build complete.');

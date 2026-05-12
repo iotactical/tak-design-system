@@ -1,0 +1,1454 @@
+{
+  "$schema": "../schemas/tak-radial-action-icons.schema.json",
+  "actions": [
+    {
+      "action": "actions/9line.xml",
+      "iconId": "tak.radial.cas",
+      "label": "9line",
+      "menus": [
+        "a-h",
+        "cff_submenu",
+        "sse_slant"
+      ]
+    },
+    {
+      "action": "actions/9line_spi.xml",
+      "iconId": "tak.radial.nineline",
+      "label": "9line Spi",
+      "menus": [
+        "b-i",
+        "b-m-p-s-m",
+        "feature_point_menu",
+        "immutable_point",
+        "immutable_shape"
+      ]
+    },
+    {
+      "action": "actions/add_pt_from_bearing.xml",
+      "iconId": "tak.radial.middlepoint-radial",
+      "label": "Add Pt From Bearing",
+      "menus": [
+        "waypoint_edit"
+      ]
+    },
+    {
+      "action": "actions/bearing_resection.xml",
+      "iconId": "tak.radial.compass-rose",
+      "label": "Bearing Resection",
+      "menus": [
+        "resection_landmark"
+      ]
+    },
+    {
+      "action": "actions/bloodhound.xml",
+      "iconId": "tak.radial.bloodhound",
+      "label": "Bloodhound",
+      "menus": [
+        "b-m-p-s-p-i",
+        "b-m-p-s-p-i-mgrs",
+        "damaged_friendly",
+        "drab_endpoint_menu",
+        "poi"
+      ]
+    },
+    {
+      "action": "actions/bloodhound_link.xml",
+      "iconId": "tak.radial.bloodhound",
+      "label": "Bloodhound Link",
+      "menus": [
+        "rab_menu"
+      ]
+    },
+    {
+      "action": "actions/breadcrumb_color.xml",
+      "iconId": "tak.radial.color-wheel",
+      "label": "Breadcrumb Color",
+      "menus": [
+        "breadcrumbs_prefs"
+      ]
+    },
+    {
+      "action": "actions/bullseye_compass.xml",
+      "iconId": "tak.radial.bullseye",
+      "label": "Bullseye Compass",
+      "menus": [
+        "compass_submenu",
+        "redx_compass_submenu"
+      ]
+    },
+    {
+      "action": "actions/bullseye_details.xml",
+      "iconId": "tak.radial.details",
+      "label": "Bullseye Details",
+      "menus": [
+        "rab_bullseye_menu"
+      ]
+    },
+    {
+      "action": "actions/cff.xml",
+      "iconId": "tak.radial.cff",
+      "label": "Cff",
+      "menus": [
+        "cff_submenu"
+      ]
+    },
+    {
+      "action": "actions/cffplus.xml",
+      "iconId": "tak.radial.cffplus",
+      "label": "Cffplus",
+      "menus": [
+        "cff_submenu"
+      ]
+    },
+    {
+      "action": "actions/clamp_toggle.xml",
+      "iconId": "tak.radial.clamp",
+      "label": "Clamp Toggle",
+      "menus": [
+        "b-m-r",
+        "b-m-r-air",
+        "drab_menu",
+        "multipolyline_shape_menu",
+        "rab_menu"
+      ]
+    },
+    {
+      "action": "actions/clear_self_tracks.xml",
+      "iconId": "tak.radial.clear-tracks",
+      "label": "Clear Self Tracks",
+      "menus": [
+        "self_track_submenu"
+      ]
+    },
+    {
+      "action": "actions/compass_lock_tilt.xml",
+      "iconId": "tak.radial.tilt-lock",
+      "label": "Compass Lock Tilt",
+      "menus": [
+        "compass_widget_menu",
+        "compass_widget_model_menu"
+      ]
+    },
+    {
+      "action": "actions/compass_toggle_3d.xml",
+      "iconId": "tak.radial.toggle-3d",
+      "label": "Compass Toggle 3d",
+      "menus": [
+        "compass_widget_menu",
+        "compass_widget_model_menu"
+      ]
+    },
+    {
+      "action": "actions/compass_toggle_free_look.xml",
+      "iconId": "tak.radial.n3d-free-look",
+      "label": "Compass Toggle Free Look",
+      "menus": [
+        "drawing_circle_geofence_menu",
+        "drawing_ellipse_menu",
+        "drawing_rectangle_geofence_menu",
+        "drawing_shape_geofence_menu",
+        "multipolyline_shape_menu",
+        "rubber_model_menu",
+        "vehicle_model_menu"
+      ]
+    },
+    {
+      "action": "actions/compass_toggle_user_up.xml",
+      "iconId": "tak.radial.rotate",
+      "label": "Compass Toggle User Up",
+      "menus": [
+        "compass_widget_menu",
+        "compass_widget_model_menu"
+      ]
+    },
+    {
+      "action": "actions/coord_copy.xml",
+      "iconId": "tak.radial.copy",
+      "label": "Coord Copy",
+      "menus": [
+        "coord_widget_menu"
+      ]
+    },
+    {
+      "action": "actions/coord_enlarge.xml",
+      "iconId": "tak.radial.expand",
+      "label": "Coord Enlarge",
+      "menus": [
+        "coord_widget_menu"
+      ]
+    },
+    {
+      "action": "actions/danger_label_toggle.xml",
+      "iconId": "tak.radial.label",
+      "label": "Danger Label Toggle",
+      "menus": [
+        "danger_close_menu"
+      ]
+    },
+    {
+      "action": "actions/doghouse_toggle.xml",
+      "iconId": "tak.radial.doghouse",
+      "label": "Doghouse Toggle",
+      "menus": [
+        "b-m-r-air"
+      ]
+    },
+    {
+      "action": "actions/drab_pin.xml",
+      "iconId": "tak.radial.drab-pin",
+      "label": "Drab Pin",
+      "menus": [
+        "drab_menu"
+      ]
+    },
+    {
+      "action": "actions/drop5Line.xml",
+      "iconId": "tak.radial.cff",
+      "label": "Drop5Line",
+      "menus": [
+        "cffdropper_submenu"
+      ]
+    },
+    {
+      "action": "actions/drop9Line.xml",
+      "iconId": "tak.radial.cas",
+      "label": "Drop9Line",
+      "menus": [
+        "b-m-p-s-p-i",
+        "cffdropper_submenu",
+        "poi",
+        "redx_menu",
+        "spi_menu"
+      ]
+    },
+    {
+      "action": "actions/dropcffplus.xml",
+      "iconId": "tak.radial.cffplus",
+      "label": "Dropcffplus",
+      "menus": [
+        "cffdropper_submenu"
+      ]
+    },
+    {
+      "action": "actions/dropdamaged.xml",
+      "iconId": "tak.radial.damaged",
+      "label": "Dropdamaged",
+      "menus": [
+        "default"
+      ]
+    },
+    {
+      "action": "actions/dropfriendly.xml",
+      "iconId": "tak.radial.friendly",
+      "label": "Dropfriendly",
+      "menus": [
+        "default",
+        "drop_point_submenu"
+      ]
+    },
+    {
+      "action": "actions/drophostile.xml",
+      "iconId": "tak.radial.target",
+      "label": "Drophostile",
+      "menus": [
+        "drab_endpoint_menu",
+        "drop_point_submenu",
+        "spi_menu"
+      ]
+    },
+    {
+      "action": "actions/dropneutral.xml",
+      "iconId": "tak.radial.neutral",
+      "label": "Dropneutral",
+      "menus": [
+        "default",
+        "drop_point_submenu"
+      ]
+    },
+    {
+      "action": "actions/dropspitarget.xml",
+      "iconId": "tak.radial.target",
+      "label": "Dropspitarget",
+      "menus": [
+        "b-m-p-s-p-i",
+        "b-m-p-s-p-i-lrf",
+        "b-m-p-s-p-i-mgrs",
+        "geofence-breach",
+        "poi",
+        "redx_menu"
+      ]
+    },
+    {
+      "action": "actions/droptarget.xml",
+      "iconId": "tak.radial.target",
+      "label": "Droptarget",
+      "menus": [
+        "default"
+      ]
+    },
+    {
+      "action": "actions/dropunknown.xml",
+      "iconId": "tak.radial.unknown",
+      "label": "Dropunknown",
+      "menus": [
+        "default",
+        "drop_point_submenu"
+      ]
+    },
+    {
+      "action": "actions/dropunknownatself.xml",
+      "iconId": "tak.radial.unknown",
+      "label": "Dropunknownatself",
+      "menus": [
+        "self_menu"
+      ]
+    },
+    {
+      "action": "actions/edit_cues.xml",
+      "iconId": "tak.radial.speech",
+      "label": "Edit Cues",
+      "menus": [
+        "route_corner_menu",
+        "waypoint_edit"
+      ]
+    },
+    {
+      "action": "actions/edit_route.xml",
+      "iconId": "tak.radial.edit2",
+      "label": "Edit Route",
+      "menus": [
+        "b-m-p-w",
+        "b-m-r",
+        "b-m-r-air"
+      ]
+    },
+    {
+      "action": "actions/edit_shape.xml",
+      "iconId": "tak.radial.edit2",
+      "label": "Edit Shape",
+      "menus": [
+        "drawing_circle_geofence_menu",
+        "drawing_ellipse_menu",
+        "drawing_rectangle_geofence_menu",
+        "drawing_shape_geofence_menu",
+        "drawing_shape_menu"
+      ]
+    },
+    {
+      "action": "actions/email.xml",
+      "iconId": "tak.radial.email-icon",
+      "label": "Email",
+      "menus": [
+        "contact_submenu"
+      ]
+    },
+    {
+      "action": "actions/general_entry.xml",
+      "iconId": "tak.radial.general-entry",
+      "label": "General Entry",
+      "menus": [
+        "b-m-p-w",
+        "drawing_rectangle_corner_menu",
+        "grid_center",
+        "mgrs_entry_submenu",
+        "waypoint_edit"
+      ]
+    },
+    {
+      "action": "actions/general_entry_vertex.xml",
+      "iconId": "tak.radial.general-entry",
+      "label": "General Entry Vertex",
+      "menus": [
+        "drawing_shape_corner_menu",
+        "mgrs_entry_vertex_submenu",
+        "route_corner_menu"
+      ]
+    },
+    {
+      "action": "actions/geochat.xml",
+      "iconId": "tak.radial.chatsmall",
+      "label": "Geochat",
+      "menus": [
+        "contact_submenu"
+      ]
+    },
+    {
+      "action": "actions/geofence.xml",
+      "iconId": "tak.radial.geofence",
+      "label": "Geofence",
+      "menus": [
+        "drawing_circle_geofence_menu",
+        "drawing_ellipse_menu",
+        "drawing_rectangle_geofence_menu",
+        "drawing_shape_geofence_menu"
+      ]
+    },
+    {
+      "action": "actions/grg_brightness.xml",
+      "iconId": "tak.radial.brightness",
+      "label": "Grg Brightness",
+      "menus": [
+        "grg_menu"
+      ]
+    },
+    {
+      "action": "actions/grg_color.xml",
+      "iconId": "tak.radial.color-wheel",
+      "label": "Grg Color",
+      "menus": [
+        "grg_menu"
+      ]
+    },
+    {
+      "action": "actions/grg_delete.xml",
+      "iconId": "tak.radial.delete",
+      "label": "Grg Delete",
+      "menus": [
+        "grg_menu"
+      ]
+    },
+    {
+      "action": "actions/grg_details.xml",
+      "iconId": "tak.radial.details-progress",
+      "label": "Grg Details",
+      "menus": [
+        "sse_grg_shape_menu"
+      ]
+    },
+    {
+      "action": "actions/grg_edit.xml",
+      "iconId": "tak.radial.edit2",
+      "label": "Grg Edit",
+      "menus": [
+        "sse_grg_shape_menu"
+      ]
+    },
+    {
+      "action": "actions/grg_remove.xml",
+      "iconId": "tak.radial.delete",
+      "label": "Grg Remove",
+      "menus": [
+        "sse_grg_shape_menu"
+      ]
+    },
+    {
+      "action": "actions/grg_toggle_visibility.xml",
+      "iconId": "tak.radial.eye",
+      "label": "Grg Toggle Visibility",
+      "menus": [
+        "grg_menu"
+      ]
+    },
+    {
+      "action": "actions/grg_transparency.xml",
+      "iconId": "tak.radial.transparency",
+      "label": "Grg Transparency",
+      "menus": [
+        "grg_menu"
+      ]
+    },
+    {
+      "action": "actions/hostile_compass.xml",
+      "iconId": "tak.radial.compass-rose",
+      "label": "Hostile Compass",
+      "menus": [
+        "a-h",
+        "compass_submenu",
+        "redx_compass_submenu",
+        "redx_menu",
+        "self_menu",
+        "sse_slant"
+      ]
+    },
+    {
+      "action": "actions/image.xml",
+      "iconId": "tak.radial.camera",
+      "label": "Image",
+      "menus": [
+        "b-i"
+      ]
+    },
+    {
+      "action": "actions/image_details.xml",
+      "iconId": "tak.radial.details",
+      "label": "Image Details",
+      "menus": [
+        "b-i"
+      ]
+    },
+    {
+      "action": "actions/insert_vertex.xml",
+      "iconId": "tak.radial.vertex",
+      "label": "Insert Vertex",
+      "menus": [
+        "route_line_menu"
+      ]
+    },
+    {
+      "action": "actions/insert_waypoint.xml",
+      "iconId": "tak.radial.reference-point",
+      "label": "Insert Waypoint",
+      "menus": [
+        "route_corner_menu",
+        "route_line_menu"
+      ]
+    },
+    {
+      "action": "actions/jm_reminder.xml",
+      "iconId": "tak.radial.details",
+      "label": "Jm Reminder",
+      "menus": [
+        "b-m-p-j"
+      ]
+    },
+    {
+      "action": "actions/jumpmaster_dip_circle.xml",
+      "iconId": "tak.radial.compass-rose",
+      "label": "Jumpmaster Dip Circle",
+      "menus": [
+        "b-m-p-j-alt"
+      ]
+    },
+    {
+      "action": "actions/jumpmaster_jump_to_alt.xml",
+      "iconId": "tak.radial.go",
+      "label": "Jumpmaster Jump To Alt",
+      "menus": [
+        "b-m-p-j-alt"
+      ]
+    },
+    {
+      "action": "actions/jumpmaster_landing_pattern.xml",
+      "iconId": "tak.radial.landing-pattern",
+      "label": "Jumpmaster Landing Pattern",
+      "menus": [
+        "b-m-p-j-alt"
+      ]
+    },
+    {
+      "action": "actions/label_toggle.xml",
+      "iconId": "tak.radial.label",
+      "label": "Label Toggle",
+      "menus": [
+        "b-m-r",
+        "b-m-r-air",
+        "drawing_circle_geofence_menu",
+        "drawing_ellipse_menu",
+        "drawing_rectangle_geofence_menu",
+        "drawing_shape_geofence_menu",
+        "drawing_shape_menu",
+        "feature_menu",
+        "multipolyline_shape_menu",
+        "range_circle_menu",
+        "rubber_image_menu",
+        "rubber_model_menu"
+      ]
+    },
+    {
+      "action": "actions/lockcam.xml",
+      "iconId": "tak.radial.camlock",
+      "label": "Lockcam",
+      "menus": [
+        "a-f",
+        "a-f-A-M-F-Q-k",
+        "a-j",
+        "a-k",
+        "a-n",
+        "a-u",
+        "b-m-p-s-p-i",
+        "b-m-p-s-p-i-lrf",
+        "self_menu"
+      ]
+    },
+    {
+      "action": "actions/lrfslide.xml",
+      "iconId": "tak.radial.lrf-slide",
+      "label": "Lrfslide",
+      "menus": [
+        "b-m-p-s-p-i-lrf"
+      ]
+    },
+    {
+      "action": "actions/mgrs_entry.xml",
+      "iconId": "tak.radial.mgrs-entry",
+      "label": "Mgrs Entry",
+      "menus": [
+        "drawing_rectangle_corner_menu",
+        "grid_center",
+        "mgrs_entry_submenu"
+      ]
+    },
+    {
+      "action": "actions/mgrs_entry_vertex.xml",
+      "iconId": "tak.radial.mgrs-entry",
+      "label": "Mgrs Entry Vertex",
+      "menus": [
+        "drawing_shape_corner_menu",
+        "mgrs_entry_vertex_submenu"
+      ]
+    },
+    {
+      "action": "actions/missionpackage.xml",
+      "iconId": "tak.radial.missionpackage",
+      "label": "Missionpackage",
+      "menus": [
+        "contact_submenu"
+      ]
+    },
+    {
+      "action": "actions/move.xml",
+      "iconId": "tak.radial.move",
+      "label": "Move",
+      "menus": [
+        "a-f",
+        "a-h",
+        "a-n",
+        "a-u",
+        "b-m-p-a",
+        "b-m-p-c",
+        "b-m-p-c-z",
+        "b-m-p-i",
+        "b-m-p-s-m",
+        "b-m-p-s-p-op",
+        "b-m-p-w-GOTO",
+        "damaged_friendly",
+        "drab_endpoint_menu",
+        "drawing_circle_geofence_menu",
+        "drawing_ellipse_menu",
+        "drawing_generic_point_menu",
+        "drawing_rectangle_corner_menu",
+        "rab_bullseye_menu",
+        "rab_endpoint_menu",
+        "range_circle_menu",
+        "resection_landmark",
+        "self_menu",
+        "sse_slant",
+        "vehicle_shape_marker_menu",
+        "viewshed_menu",
+        "waypoint_edit"
+      ]
+    },
+    {
+      "action": "actions/move_editable_polyline_vertex.xml",
+      "iconId": "tak.radial.move",
+      "label": "Move Editable Polyline Vertex",
+      "menus": [
+        "basic_assoc_marker",
+        "drawing_rectangle_geofence_menu",
+        "drawing_shape_corner_menu",
+        "drawing_shape_geofence_menu",
+        "drawing_shape_line_menu",
+        "drawing_shape_menu",
+        "route_corner_menu",
+        "route_line_menu",
+        "vehicle_shape_menu"
+      ]
+    },
+    {
+      "action": "actions/move_spi.xml",
+      "iconId": "tak.radial.move",
+      "label": "Move Spi",
+      "menus": [
+        "redx_menu",
+        "spi_menu"
+      ]
+    },
+    {
+      "action": "actions/move_survey_circle.xml",
+      "iconId": "tak.radial.move",
+      "label": "Move Survey Circle",
+      "menus": [
+        "survey_circle_menu"
+      ]
+    },
+    {
+      "action": "actions/pairingline.xml",
+      "iconId": "tak.radial.pairing-line",
+      "label": "Pairingline",
+      "menus": [
+        "a-f",
+        "a-f-A-M-F-Q-k",
+        "a-h",
+        "a-j",
+        "a-k",
+        "a-n",
+        "a-u",
+        "alert_menu",
+        "b-i",
+        "b-m-p-s-m",
+        "b-m-p-s-p-i",
+        "b-m-p-s-p-i-lrf",
+        "b-m-p-s-p-i-mgrs",
+        "b-m-p-s-p-loc",
+        "b-m-p-s-p-op",
+        "b-m-p-w",
+        "damaged_friendly",
+        "danger_close_menu",
+        "default_item",
+        "default_item_w_type",
+        "drawing_circle_geofence_menu",
+        "drawing_ellipse_menu",
+        "drawing_generic_point_menu",
+        "drawing_rectangle_geofence_menu",
+        "drawing_shape_geofence_menu",
+        "drawing_shape_menu",
+        "feature_menu",
+        "feature_point_menu",
+        "geofence-breach",
+        "immutable_point",
+        "immutable_shape",
+        "keyhole_menu",
+        "poi",
+        "range_circle_menu",
+        "range_ring_menu",
+        "redx_menu",
+        "resection_landmark",
+        "rubber_image_menu",
+        "rubber_model_menu",
+        "self_menu",
+        "spi_menu",
+        "sse_menu",
+        "sse_shape_menu",
+        "sse_slant",
+        "t-k-d",
+        "t-s-v-e",
+        "track_menu",
+        "vehicle_model_menu",
+        "vehicle_shape_marker_menu",
+        "vehicle_shape_menu",
+        "viewshed_menu"
+      ]
+    },
+    {
+      "action": "actions/pairingline_survey_circle.xml",
+      "iconId": "tak.radial.pairing-line",
+      "label": "Pairingline Survey Circle",
+      "menus": [
+        "survey_circle_menu"
+      ]
+    },
+    {
+      "action": "actions/pairinglineself.xml",
+      "iconId": "tak.radial.pairing-line-to-self",
+      "label": "Pairinglineself",
+      "menus": [
+        "redx_compass_submenu",
+        "redx_menu"
+      ]
+    },
+    {
+      "action": "actions/phonecall.xml",
+      "iconId": "tak.radial.phone-icon",
+      "label": "Phonecall",
+      "menus": [
+        "contact_submenu"
+      ]
+    },
+    {
+      "action": "actions/polarCoords.xml",
+      "iconId": "tak.radial.polar-coord",
+      "label": "PolarCoords",
+      "menus": [
+        "a-f",
+        "a-f-A-M-F-Q-k",
+        "a-h",
+        "a-j",
+        "a-k",
+        "a-n",
+        "a-u",
+        "b-i",
+        "b-m-p-s-m",
+        "b-m-p-s-p-i",
+        "b-m-p-s-p-i-lrf",
+        "drab_endpoint_menu",
+        "drab_menu",
+        "feature_menu",
+        "feature_point_menu",
+        "geofence-breach",
+        "immutable_point",
+        "poi",
+        "rab_bullseye_menu",
+        "rab_endpoint_menu",
+        "rab_menu",
+        "redx_menu",
+        "self_menu",
+        "spi_menu",
+        "sse_slant",
+        "vehicle_model_menu"
+      ]
+    },
+    {
+      "action": "actions/rab_action_delete.xml",
+      "iconId": "tak.radial.delete",
+      "label": "Rab Action Delete",
+      "menus": [
+        "drab_endpoint_menu",
+        "rab_endpoint_menu"
+      ]
+    },
+    {
+      "action": "actions/rab_distance_lock.xml",
+      "iconId": "tak.radial.distance-lock",
+      "label": "Rab Distance Lock",
+      "menus": [
+        "drab_menu"
+      ]
+    },
+    {
+      "action": "actions/rab_drop_down.xml",
+      "iconId": "tak.radial.details",
+      "label": "Rab Drop Down",
+      "menus": [
+        "drab_menu",
+        "rab_menu"
+      ]
+    },
+    {
+      "action": "actions/range_circle_dropdown.xml",
+      "iconId": "tak.radial.details",
+      "label": "Range Circle Dropdown",
+      "menus": [
+        "range_circle_menu"
+      ]
+    },
+    {
+      "action": "actions/range_circle_edit.xml",
+      "iconId": "tak.radial.edit2",
+      "label": "Range Circle Edit",
+      "menus": [
+        "range_circle_menu"
+      ]
+    },
+    {
+      "action": "actions/redx_fah.xml",
+      "iconId": "tak.radial.fah-redx",
+      "label": "Redx Fah",
+      "menus": [
+        "redx_fah_submenu",
+        "redx_menu"
+      ]
+    },
+    {
+      "action": "actions/redx_lb.xml",
+      "iconId": "tak.radial.laser-selected",
+      "label": "Redx Lb",
+      "menus": [
+        "redx_fah_submenu"
+      ]
+    },
+    {
+      "action": "actions/redx_remove.xml",
+      "iconId": "tak.radial.delete",
+      "label": "Redx Remove",
+      "menus": [
+        "redx_menu"
+      ]
+    },
+    {
+      "action": "actions/remove.xml",
+      "iconId": "tak.radial.delete",
+      "label": "Remove",
+      "menus": [
+        "a-f",
+        "a-f-A-M-F-Q-k",
+        "a-h",
+        "a-j",
+        "a-k",
+        "a-n",
+        "a-u",
+        "b-i",
+        "b-m-p-a",
+        "b-m-p-c",
+        "b-m-p-c-z",
+        "b-m-p-i",
+        "b-m-p-j",
+        "b-m-p-j-alt",
+        "b-m-p-s-m",
+        "b-m-p-s-p-i",
+        "b-m-p-s-p-i-lrf",
+        "b-m-p-s-p-i-mgrs",
+        "b-m-p-s-p-loc",
+        "b-m-p-s-p-op",
+        "b-m-p-w-GOTO",
+        "b-m-r",
+        "b-m-r-air",
+        "damaged_friendly",
+        "default_item",
+        "default_item_w_type",
+        "drab_menu",
+        "drawing_generic_point_menu",
+        "drawing_rectangle_corner_menu",
+        "geofence-breach",
+        "grid_center",
+        "poi",
+        "rab_bullseye_menu",
+        "rab_menu",
+        "resection_landmark",
+        "sse_slant",
+        "survey_circle_menu",
+        "t-k-d",
+        "t-s-v-e",
+        "viewshed_menu",
+        "waypoint_edit"
+      ]
+    },
+    {
+      "action": "actions/remove_alert.xml",
+      "iconId": "tak.radial.delete",
+      "label": "Remove Alert",
+      "menus": [
+        "alert_menu"
+      ]
+    },
+    {
+      "action": "actions/remove_editable_polyline_vertex.xml",
+      "iconId": "tak.radial.delete",
+      "label": "Remove Editable Polyline Vertex",
+      "menus": [
+        "drawing_shape_corner_menu",
+        "route_corner_menu"
+      ]
+    },
+    {
+      "action": "actions/remove_keyhole.xml",
+      "iconId": "tak.radial.delete",
+      "label": "Remove Keyhole",
+      "menus": [
+        "keyhole_menu"
+      ]
+    },
+    {
+      "action": "actions/remove_range_ring.xml",
+      "iconId": "tak.radial.delete",
+      "label": "Remove Range Ring",
+      "menus": [
+        "range_ring_menu"
+      ]
+    },
+    {
+      "action": "actions/remove_route.xml",
+      "iconId": "tak.radial.delete",
+      "label": "Remove Route",
+      "menus": [
+        "basic_assoc_marker",
+        "route_line_menu"
+      ]
+    },
+    {
+      "action": "actions/remove_shape.xml",
+      "iconId": "tak.radial.delete",
+      "label": "Remove Shape",
+      "menus": [
+        "drawing_shape_line_menu"
+      ]
+    },
+    {
+      "action": "actions/remove_spi.xml",
+      "iconId": "tak.radial.delete",
+      "label": "Remove Spi",
+      "menus": [
+        "spi_menu"
+      ]
+    },
+    {
+      "action": "actions/remove_sse.xml",
+      "iconId": "tak.radial.delete",
+      "label": "Remove Sse",
+      "menus": [
+        "sse_menu",
+        "sse_shape_menu"
+      ]
+    },
+    {
+      "action": "actions/remove_track.xml",
+      "iconId": "tak.radial.delete",
+      "label": "Remove Track",
+      "menus": [
+        "track_menu"
+      ]
+    },
+    {
+      "action": "actions/rotate.xml",
+      "iconId": "tak.radial.rotate-ac",
+      "label": "Rotate",
+      "menus": [
+        "vehicle_model_menu",
+        "vehicle_shape_marker_menu",
+        "vehicle_shape_menu"
+      ]
+    },
+    {
+      "action": "actions/rubber_sheet_details.xml",
+      "iconId": "tak.radial.details",
+      "label": "Rubber Sheet Details",
+      "menus": [
+        "rubber_image_menu",
+        "rubber_model_menu"
+      ]
+    },
+    {
+      "action": "actions/rubber_sheet_edit.xml",
+      "iconId": "tak.radial.edit2",
+      "label": "Rubber Sheet Edit",
+      "menus": [
+        "rubber_image_menu",
+        "rubber_model_menu"
+      ]
+    },
+    {
+      "action": "actions/rubber_sheet_move.xml",
+      "iconId": "tak.radial.move",
+      "label": "Rubber Sheet Move",
+      "menus": [
+        "rubber_image_menu",
+        "rubber_model_menu",
+        "vehicle_model_menu"
+      ]
+    },
+    {
+      "action": "actions/rubber_sheet_rotate.xml",
+      "iconId": "tak.radial.rubber-sheet-rotate",
+      "label": "Rubber Sheet Rotate",
+      "menus": [
+        "rubber_image_menu"
+      ]
+    },
+    {
+      "action": "actions/rubber_sheet_transparency.xml",
+      "iconId": "tak.radial.transparency",
+      "label": "Rubber Sheet Transparency",
+      "menus": [
+        "rubber_image_menu",
+        "rubber_model_menu",
+        "vehicle_model_menu"
+      ]
+    },
+    {
+      "action": "actions/search_trackhistory.xml",
+      "iconId": "tak.radial.trackhistory-icon",
+      "label": "Search Trackhistory",
+      "menus": [
+        "self_track_submenu",
+        "trackhistory_submenu"
+      ]
+    },
+    {
+      "action": "actions/send_action.xml",
+      "iconId": "tak.radial.send-icon",
+      "label": "Send Action",
+      "menus": [
+        "send_submenu"
+      ]
+    },
+    {
+      "action": "actions/sensor_fov_color.xml",
+      "iconId": "tak.radial.color-wheel",
+      "label": "Sensor Fov Color",
+      "menus": [
+        "b-m-p-s-p-loc"
+      ]
+    },
+    {
+      "action": "actions/sensor_fov_direction.xml",
+      "iconId": "tak.radial.fov-direction",
+      "label": "Sensor Fov Direction",
+      "menus": [
+        "b-m-p-s-p-loc"
+      ]
+    },
+    {
+      "action": "actions/sensor_fov_size.xml",
+      "iconId": "tak.radial.fov-size",
+      "label": "Sensor Fov Size",
+      "menus": [
+        "b-m-p-s-p-loc"
+      ]
+    },
+    {
+      "action": "actions/shape_delete.xml",
+      "iconId": "tak.radial.delete",
+      "label": "Shape Delete",
+      "menus": [
+        "drawing_circle_geofence_menu",
+        "drawing_ellipse_menu",
+        "drawing_rectangle_geofence_menu",
+        "drawing_shape_geofence_menu",
+        "drawing_shape_menu",
+        "multipolyline_shape_menu",
+        "range_circle_menu",
+        "rubber_image_menu",
+        "rubber_model_menu",
+        "vehicle_model_menu",
+        "vehicle_shape_marker_menu",
+        "vehicle_shape_menu"
+      ]
+    },
+    {
+      "action": "actions/shape_msd.xml",
+      "iconId": "tak.radial.blast-rings",
+      "label": "Shape Msd",
+      "menus": [
+        "drawing_circle_geofence_menu",
+        "drawing_ellipse_menu",
+        "drawing_rectangle_geofence_menu",
+        "drawing_shape_geofence_menu",
+        "rab_menu"
+      ]
+    },
+    {
+      "action": "actions/show_route.xml",
+      "iconId": "tak.radial.details",
+      "label": "Show Route",
+      "menus": [
+        "b-m-r",
+        "b-m-r-air"
+      ]
+    },
+    {
+      "action": "actions/show_route_for_wp.xml",
+      "iconId": "tak.radial.details",
+      "label": "Show Route For Wp",
+      "menus": [
+        "b-m-p-w"
+      ]
+    },
+    {
+      "action": "actions/showdetails.xml",
+      "iconId": "tak.radial.details",
+      "label": "Showdetails",
+      "menus": [
+        "a-f",
+        "a-h",
+        "a-n",
+        "a-u",
+        "alert_menu",
+        "b-m-p-c",
+        "b-m-p-i",
+        "b-m-p-s-p-op",
+        "b-m-p-w-GOTO",
+        "default_item_w_type",
+        "self_menu",
+        "sse_slant",
+        "t-k-d"
+      ]
+    },
+    {
+      "action": "actions/showdetails_circle.xml",
+      "iconId": "tak.radial.details",
+      "label": "Showdetails Circle",
+      "menus": [
+        "survey_circle_menu"
+      ]
+    },
+    {
+      "action": "actions/showdetails_feature.xml",
+      "iconId": "tak.radial.details",
+      "label": "Showdetails Feature",
+      "menus": [
+        "feature_menu",
+        "feature_point_menu"
+      ]
+    },
+    {
+      "action": "actions/showdetails_keyhole.xml",
+      "iconId": "tak.radial.details",
+      "label": "Showdetails Keyhole",
+      "menus": [
+        "keyhole_menu"
+      ]
+    },
+    {
+      "action": "actions/showdetails_multipolyline.xml",
+      "iconId": "tak.radial.details",
+      "label": "Showdetails Multipolyline",
+      "menus": [
+        "multipolyline_shape_menu"
+      ]
+    },
+    {
+      "action": "actions/showdetails_resection.xml",
+      "iconId": "tak.radial.details",
+      "label": "Showdetails Resection",
+      "menus": [
+        "resection_landmark"
+      ]
+    },
+    {
+      "action": "actions/showdetails_sensor.xml",
+      "iconId": "tak.radial.details",
+      "label": "Showdetails Sensor",
+      "menus": [
+        "b-m-p-s-p-loc"
+      ]
+    },
+    {
+      "action": "actions/showdetails_shape.xml",
+      "iconId": "tak.radial.details",
+      "label": "Showdetails Shape",
+      "menus": [
+        "drawing_circle_geofence_menu",
+        "drawing_ellipse_menu",
+        "drawing_generic_point_menu",
+        "drawing_rectangle_geofence_menu",
+        "drawing_shape_geofence_menu",
+        "drawing_shape_menu",
+        "vehicle_model_menu",
+        "vehicle_shape_marker_menu",
+        "vehicle_shape_menu"
+      ]
+    },
+    {
+      "action": "actions/showdetails_spotmap.xml",
+      "iconId": "tak.radial.details",
+      "label": "Showdetails Spotmap",
+      "menus": [
+        "b-m-p-s-m"
+      ]
+    },
+    {
+      "action": "actions/showdetails_sse.xml",
+      "iconId": "tak.radial.details",
+      "label": "Showdetails Sse",
+      "menus": [
+        "sse_menu",
+        "sse_shape_menu"
+      ]
+    },
+    {
+      "action": "actions/showdetails_track.xml",
+      "iconId": "tak.radial.details",
+      "label": "Showdetails Track",
+      "menus": [
+        "track_menu"
+      ]
+    },
+    {
+      "action": "actions/showmedline.xml",
+      "iconId": "tak.radial.details",
+      "label": "Showmedline",
+      "menus": [
+        "damaged_friendly"
+      ]
+    },
+    {
+      "action": "actions/showquick_sse_slant.xml",
+      "iconId": "tak.radial.sse-slant",
+      "label": "Showquick Sse Slant",
+      "menus": [
+        "sse_slant"
+      ]
+    },
+    {
+      "action": "actions/sms.xml",
+      "iconId": "tak.radial.sms-icon",
+      "label": "Sms",
+      "menus": [
+        "contact_submenu"
+      ]
+    },
+    {
+      "action": "actions/snaptoself.xml",
+      "iconId": "tak.radial.self",
+      "label": "Snaptoself",
+      "menus": [
+        "b-m-p-s-p-op"
+      ]
+    },
+    {
+      "action": "actions/spi_fah.xml",
+      "iconId": "tak.radial.fah-redx",
+      "label": "Spi Fah",
+      "menus": [
+        "b-m-p-s-p-i",
+        "b-m-p-s-p-i-lrf",
+        "poi",
+        "spi_fah_submenu",
+        "spi_menu"
+      ]
+    },
+    {
+      "action": "actions/spi_lb.xml",
+      "iconId": "tak.radial.laser-selected",
+      "label": "Spi Lb",
+      "menus": [
+        "spi_fah_submenu"
+      ]
+    },
+    {
+      "action": "actions/spipairinglineself.xml",
+      "iconId": "tak.radial.pairing-line-to-self",
+      "label": "Spipairinglineself",
+      "menus": [
+        "b-m-p-s-p-i",
+        "b-m-p-s-p-i-lrf",
+        "compass_submenu",
+        "spi_menu"
+      ]
+    },
+    {
+      "action": "actions/sse_shape_create.xml",
+      "iconId": "tak.radial.sse-shape",
+      "label": "Sse Shape Create",
+      "menus": [
+        "sse_shape_menu"
+      ]
+    },
+    {
+      "action": "actions/sse_shape_remove.xml",
+      "iconId": "tak.radial.sse-shape-delete",
+      "label": "Sse Shape Remove",
+      "menus": [
+        "sse_shape_menu"
+      ]
+    },
+    {
+      "action": "actions/sse_survey_completed_toggle.xml",
+      "iconId": "tak.radial.sse-survey-progress",
+      "label": "Sse Survey Completed Toggle",
+      "menus": [
+        "sse_grg_shape_menu"
+      ]
+    },
+    {
+      "action": "actions/startgoto.xml",
+      "iconId": "tak.radial.green-flag-radial",
+      "label": "Startgoto",
+      "menus": [
+        "b-m-p-s-m",
+        "b-m-p-s-p-op",
+        "b-m-p-w",
+        "b-m-p-w-GOTO",
+        "route_nav_menu"
+      ]
+    },
+    {
+      "action": "actions/startnav.xml",
+      "iconId": "tak.radial.green-flag-radial",
+      "label": "Startnav",
+      "menus": [
+        "b-m-r",
+        "b-m-r-air"
+      ]
+    },
+    {
+      "action": "actions/tasktoobject.xml",
+      "iconId": "tak.radial.task",
+      "label": "Tasktoobject",
+      "menus": [
+        "a-h",
+        "a-n",
+        "a-u"
+      ]
+    },
+    {
+      "action": "actions/toggleVisibility.xml",
+      "iconId": "tak.radial.eye",
+      "label": "ToggleVisibility",
+      "menus": [
+        "feature_menu",
+        "feature_point_menu",
+        "immutable_point",
+        "immutable_shape"
+      ]
+    },
+    {
+      "action": "actions/toggle_bullseye_rings.xml",
+      "iconId": "tak.radial.range-ring",
+      "label": "Toggle Bullseye Rings",
+      "menus": [
+        "rab_bullseye_menu"
+      ]
+    },
+    {
+      "action": "actions/toggle_bullseye_to_from.xml",
+      "iconId": "tak.radial.to-from",
+      "label": "Toggle Bullseye To From",
+      "menus": [
+        "rab_bullseye_menu"
+      ]
+    },
+    {
+      "action": "actions/toggle_crumb.xml",
+      "iconId": "tak.radial.breadcrumbs",
+      "label": "Toggle Crumb",
+      "menus": [
+        "a-f",
+        "a-f-A-M-F-Q-k",
+        "a-h",
+        "a-n",
+        "a-u",
+        "b-m-p-s-p-i",
+        "self_menu"
+      ]
+    },
+    {
+      "action": "actions/toggle_label.xml",
+      "iconId": "tak.radial.show-label",
+      "label": "Toggle Label",
+      "menus": [
+        "b-m-p-s-m",
+        "vehicle_shape_marker_menu",
+        "vehicle_shape_menu"
+      ]
+    },
+    {
+      "action": "actions/toggle_sensor_fov.xml",
+      "iconId": "tak.radial.fov-visibility",
+      "label": "Toggle Sensor Fov",
+      "menus": [
+        "b-m-p-s-p-loc"
+      ]
+    },
+    {
+      "action": "actions/toggle_slant_range.xml",
+      "iconId": "tak.radial.right-angle",
+      "label": "Toggle Slant Range",
+      "menus": [
+        "drab_menu",
+        "rab_menu"
+      ]
+    },
+    {
+      "action": "actions/togglegpserror.xml",
+      "iconId": "tak.radial.gpserror",
+      "label": "Togglegpserror",
+      "menus": [
+        "self_menu"
+      ]
+    },
+    {
+      "action": "actions/vehicle_model_edit.xml",
+      "iconId": "tak.radial.edit2",
+      "label": "Vehicle Model Edit",
+      "menus": [
+        "vehicle_model_menu"
+      ]
+    },
+    {
+      "action": "actions/video.xml",
+      "iconId": "tak.radial.video",
+      "label": "Video",
+      "menus": [
+        "a-f",
+        "b-m-p-s-p-loc",
+        "self_menu"
+      ]
+    },
+    {
+      "action": "actions/voip.xml",
+      "iconId": "tak.radial.voip-icon",
+      "label": "Voip",
+      "menus": [
+        "contact_submenu"
+      ]
+    },
+    {
+      "action": "actions/xmpp.xml",
+      "iconId": "tak.radial.xmpp-icon",
+      "label": "Xmpp",
+      "menus": [
+        "contact_submenu"
+      ]
+    }
+  ]
+}
