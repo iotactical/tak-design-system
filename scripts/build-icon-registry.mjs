@@ -446,8 +446,35 @@ console.log(`  Iconset icons: ${iconsetEntries.length}`);
 const paletteEntries = processPalettes(existingIds);
 console.log(`  Palette icons: ${paletteEntries.length}`);
 
+// rtmx:req REQ-XW-258
+// Merge custom icons if custom/icons.json exists
+const customPath = resolve(ROOT, 'custom', 'icons.json');
+let customEntries = [];
+if (existsSync(customPath)) {
+  const customData = readJSON(customPath);
+  if (Array.isArray(customData)) {
+    for (const entry of customData) {
+      if (!entry.id?.startsWith('tak.custom.')) {
+        console.warn(`  WARNING: Custom icon "${entry.id}" must use tak.custom.* namespace, skipping`);
+        continue;
+      }
+      if (existingIds.has(entry.id)) {
+        console.warn(`  WARNING: Custom icon "${entry.id}" conflicts with existing ID, skipping`);
+        continue;
+      }
+      customEntries.push({
+        ...entry,
+        source: 'custom',
+        tags: entry.tags || ['custom'],
+      });
+      existingIds.add(entry.id);
+    }
+    console.log(`  Custom icons: ${customEntries.length}`);
+  }
+}
+
 // Merge and sort
-const registry = [...allEntries, ...svgEntries, ...drawableEntries, ...iconsetEntries, ...paletteEntries]
+const registry = [...allEntries, ...svgEntries, ...drawableEntries, ...iconsetEntries, ...paletteEntries, ...customEntries]
   .sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
 
 // Deduplicate by ID (keep first occurrence -- source priority: radial > menu > nav > core > svg)

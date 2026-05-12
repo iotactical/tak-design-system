@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/iotactical/tak-design-system/schemas/tak-custom-icons.schema.json",
+  "title": "TAK Custom Icons",
+  "description": "Schema for user-provided custom icon entries. All IDs must use the tak.custom.* namespace.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^tak\\.custom\\.[a-z][a-z0-9]*(\\.[a-z][a-z0-9-]*)*$",
+        "description": "Must use tak.custom.* namespace."
+      },
+      "name": { "type": "string" },
+      "category": { "type": "string" },
+      "tags": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "formats": {
+        "type": "object",
+        "properties": {
+          "svg": { "type": "string" },
+          "png": { "type": "string" }
+        },
+        "minProperties": 1,
+        "additionalProperties": { "type": "string" }
+      }
+    },
+    "required": ["id", "name", "category", "formats"],
+    "additionalProperties": false
+  }
+}
