@@ -1,0 +1,152 @@
+/* rtmx:req REQ-XW-088 */
+
+.page {
+  max-width: 1200px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--tak-text-primary);
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--tak-text-secondary);
+  margin-bottom: 24px;
+}
+
+.filterRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  padding: 6px 14px;
+  font-size: 13px;
+  font-family: var(--tak-font-sans);
+  background: var(--tak-bg-secondary);
+  border: 1px solid var(--tak-border);
+  border-radius: 6px;
+  color: var(--tak-text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filterBtn:hover {
+  border-color: var(--tak-accent);
+  color: var(--tak-text-primary);
+}
+
+.filterBtnActive {
+  background: var(--tak-accent);
+  border-color: var(--tak-accent);
+  color: #fff;
+}
+
+.affiliationRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.affiliationLabel {
+  font-size: 13px;
+  color: var(--tak-text-secondary);
+  margin-right: 4px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--tak-bg-secondary);
+  border: 1px solid var(--tak-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--tak-accent);
+}
+
+.cardMap {
+  height: 180px;
+  background: #1a1a2e;
+}
+
+.cardBody {
+  padding: 12px 16px;
+}
+
+.cardName {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--tak-text-primary);
+  margin-bottom: 4px;
+}
+
+.cardSidc {
+  font-size: 12px;
+  font-family: var(--tak-font-mono);
+  color: var(--tak-text-secondary);
+  margin-bottom: 6px;
+}
+
+.cardMeta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--tak-text-secondary);
+  margin-bottom: 6px;
+}
+
+.cardDesc {
+  font-size: 13px;
+  color: var(--tak-text-secondary);
+  line-height: 1.4;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 500;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.badgeLine {
+  background: rgba(33, 150, 243, 0.15);
+  color: #64b5f6;
+}
+
+.badgeArea {
+  background: rgba(76, 175, 80, 0.15);
+  color: #81c784;
+}
+
+.badgeArrow {
+  background: rgba(255, 152, 0, 0.15);
+  color: #ffb74d;
+}
+
+.badgePoint {
+  background: rgba(156, 39, 176, 0.15);
+  color: #ce93d8;
+}
+
+.count {
+  font-size: 13px;
+  color: var(--tak-text-secondary);
+  margin-bottom: 16px;
+}

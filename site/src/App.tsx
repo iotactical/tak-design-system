@@ -15,6 +15,7 @@ const Platforms = lazy(() => import('./pages/Platforms'));
 const Palettes = lazy(() => import('./pages/Palettes'));
 const Interfaces = lazy(() => import('./pages/Interfaces'));
 const Explorer = lazy(() => import('./pages/Explorer'));
+const MultipointGallery = lazy(() => import('./pages/MultipointGallery'));
 const SearchResults = lazy(() => import('./pages/SearchResults'));
 
 const navItems = [
@@ -27,6 +28,7 @@ const navItems = [
   { to: '/palettes', label: 'Palettes' },
   { to: '/platforms', label: 'Platforms' },
   { to: '/interfaces', label: 'Interfaces' },
+  { to: '/multipoint', label: 'Multi-Point' },
   { to: '/explorer', label: '2525 Explorer' },
 ];
 
@@ -71,6 +73,7 @@ export default function App() {
             <Route path="/palettes/:tab?" element={<Palettes />} />
             <Route path="/platforms" element={<Platforms />} />
             <Route path="/interfaces/:tab?" element={<Interfaces />} />
+            <Route path="/multipoint" element={<MultipointGallery />} />
             <Route path="/explorer/:tab?" element={<Explorer />} />
             <Route path="/search" element={<SearchResults />} />
           </Routes>
