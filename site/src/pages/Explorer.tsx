@@ -1,6 +1,7 @@
 // rtmx:req REQ-XW-093
 // rtmx:req REQ-XW-100
 // rtmx:req REQ-XW-105
+// rtmx:req REQ-XW-106
 // rtmx:req REQ-XW-121
 // rtmx:req REQ-XW-140
 import { useEffect, useState, useMemo } from 'react';
@@ -9,6 +10,8 @@ import { useHighlight } from '../hooks/useHighlight';
 import styles from './Explorer.module.css';
 import { MilSymRenderer } from '../components/MilSymRenderer';
 import { MilSymRendererLive } from '../components/MilSymRendererLive';
+import { lazy, Suspense } from 'react';
+const ControlMeasuresPanel = lazy(() => import('../components/ControlMeasuresPanel'));
 import bEntitiesData from '../../../data/mil-std-2525/b-entities.json';
 import b2dData from '../../../data/mil-std-2525/b2d.json';
 import b2cData from '../../../data/mil-std-2525/b2c.json';
@@ -112,13 +115,14 @@ const HQ_TF_FD_NAMES: Record<string, string> = {
   '7': 'Feint/Dummy TF HQ',
 };
 
-type TabId = 'browse' | 'decode' | 'build' | 'compare';
+type TabId = 'browse' | 'decode' | 'build' | 'compare' | 'control-measures';
 
 const TABS: { id: TabId; label: string }[] = [
   { id: 'browse', label: 'Browse' },
   { id: 'decode', label: 'Decode' },
   { id: 'build', label: 'Build' },
   { id: 'compare', label: 'Compare' },
+  { id: 'control-measures', label: 'Control Measures' },
 ];
 
 // ----- Helpers -----
@@ -1198,6 +1202,11 @@ export default function Explorer() {
         {activeTab === 'decode' && <DecodePanel />}
         {activeTab === 'build' && <BuildPanel />}
         {activeTab === 'compare' && <ComparePanel />}
+        {activeTab === 'control-measures' && (
+          <Suspense fallback={<div style={{ color: '#878787', padding: 24 }}>Loading...</div>}>
+            <ControlMeasuresPanel />
+          </Suspense>
+        )}
       </div>
     </div>
   );
