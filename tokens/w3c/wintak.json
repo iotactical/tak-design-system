@@ -1,0 +1,82 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "TAK Design System - WinTAK desktop-specific tokens. Overrides and extensions for Windows desktop UI density, typography, layout, and interaction states.",
+  "wintak": {
+    "$description": "WinTAK desktop platform tokens. Mouse-driven UI with denser controls than ATAK mobile.",
+    "density": {
+      "$description": "Desktop density dimensions. Smaller touch targets for mouse-driven interaction.",
+      "button-height": { "$value": "32px", "$type": "dimension", "$description": "Desktop button height (ATAK mobile: 40px)" },
+      "button-min-width": { "$value": "72px", "$type": "dimension" },
+      "list-item-height": { "$value": "36px", "$type": "dimension", "$description": "Desktop list row height (ATAK mobile: 44px)" },
+      "nav-button-size": { "$value": "36px", "$type": "dimension", "$description": "Navigation icon button (ATAK mobile: 48px)" },
+      "icon-size": { "$value": "20px", "$type": "dimension", "$description": "Default icon size (ATAK mobile: 24px)" },
+      "icon-size-sm": { "$value": "16px", "$type": "dimension" },
+      "icon-size-lg": { "$value": "24px", "$type": "dimension" },
+      "touch-target": { "$value": "32px", "$type": "dimension", "$description": "Minimum interactive area (ATAK mobile: 44px)" },
+      "checkbox-size": { "$value": "18px", "$type": "dimension" },
+      "toggle-width": { "$value": "36px", "$type": "dimension" },
+      "toggle-height": { "$value": "20px", "$type": "dimension" }
+    },
+    "layout": {
+      "$description": "Desktop window and panel layout dimensions.",
+      "toolbar-height": { "$value": "40px", "$type": "dimension", "$description": "Desktop toolbar (ATAK: 48px)" },
+      "sidebar-width": { "$value": "260px", "$type": "dimension" },
+      "sidebar-width-collapsed": { "$value": "48px", "$type": "dimension" },
+      "tab-bar-height": { "$value": "36px", "$type": "dimension" },
+      "status-bar-height": { "$value": "24px", "$type": "dimension" },
+      "dialog-min-width": { "$value": "400px", "$type": "dimension" },
+      "dialog-max-width": { "$value": "640px", "$type": "dimension" },
+      "context-menu-width": { "$value": "200px", "$type": "dimension" },
+      "context-menu-item-height": { "$value": "28px", "$type": "dimension" },
+      "scrollbar-width": { "$value": "12px", "$type": "dimension" },
+      "tooltip-max-width": { "$value": "280px", "$type": "dimension" }
+    },
+    "spacing": {
+      "$description": "Tighter spacing scale for desktop density.",
+      "input-padding-x": { "$value": "10px", "$type": "dimension" },
+      "input-padding-y": { "$value": "6px", "$type": "dimension" },
+      "card-padding": { "$value": "12px", "$type": "dimension" },
+      "section-gap": { "$value": "16px", "$type": "dimension" },
+      "inline-gap": { "$value": "6px", "$type": "dimension" },
+      "stack-gap": { "$value": "4px", "$type": "dimension" }
+    },
+    "font": {
+      "$description": "WinTAK font families. Segoe UI is the native Windows UI font.",
+      "primary": { "$value": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif", "$type": "fontFamily", "$description": "Windows native UI font" },
+      "primary-bold": { "$value": "Segoe UI Bold, Tahoma Bold, sans-serif", "$type": "fontFamily" },
+      "mono": { "$value": "Cascadia Code, Consolas, Courier New, monospace", "$type": "fontFamily", "$description": "Windows monospace for coordinates and SIDCs" },
+      "condensed": { "$value": "Segoe UI Semibold, Tahoma, sans-serif", "$type": "fontFamily", "$description": "Space-constrained labels" }
+    },
+    "typography": {
+      "$description": "Desktop-optimized type scale. Slightly smaller than ATAK mobile.",
+      "base": { "$value": "13px", "$type": "dimension", "$description": "Body text (ATAK mobile: 14px)" },
+      "sm": { "$value": "11px", "$type": "dimension" },
+      "xs": { "$value": "10px", "$type": "dimension" },
+      "md": { "$value": "14px", "$type": "dimension" },
+      "lg": { "$value": "16px", "$type": "dimension" },
+      "xl": { "$value": "20px", "$type": "dimension" },
+      "heading": { "$value": "24px", "$type": "dimension" },
+      "line-height-tight": { "$value": "1.25", "$type": "number" },
+      "line-height-normal": { "$value": "1.4", "$type": "number" },
+      "line-height-relaxed": { "$value": "1.6", "$type": "number" }
+    },
+    "state": {
+      "$description": "Desktop interaction states. Mouse-driven UI has hover/focus/active that ATAK touch UI lacks.",
+      "hover-overlay": { "$value": "#0DFFFFFF", "$type": "color", "$description": "5% white overlay on hover" },
+      "active-overlay": { "$value": "#1AFFFFFF", "$type": "color", "$description": "10% white overlay on press" },
+      "focus-ring-color": { "$value": "#C8A951", "$type": "color", "$description": "Keyboard focus indicator" },
+      "focus-ring-width": { "$value": "2px", "$type": "dimension" },
+      "focus-ring-offset": { "$value": "2px", "$type": "dimension" },
+      "disabled-opacity": { "$value": "0.38", "$type": "number" },
+      "context-menu-hover": { "$value": "#242424", "$type": "color" },
+      "context-menu-separator": { "$value": "#2E2E2E", "$type": "color" },
+      "selection-background": { "$value": "#264F78", "$type": "color", "$description": "Text/list selection highlight" },
+      "scrollbar-thumb": { "$value": "#4A4A4A", "$type": "color" },
+      "scrollbar-thumb-hover": { "$value": "#5A5A5A", "$type": "color" },
+      "scrollbar-track": { "$value": "#1A1A1A", "$type": "color" },
+      "tooltip-background": { "$value": "#2D2D2D", "$type": "color" },
+      "tooltip-text": { "$value": "#DAD4BC", "$type": "color" },
+      "tooltip-border": { "$value": "#3E3E3E", "$type": "color" }
+    }
+  }
+}
