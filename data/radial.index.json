@@ -1,0 +1,570 @@
+{
+  "actions/9line.xml": {
+    "id": "tak.radial.cas",
+    "path": "site/public/icons/cas.png"
+  },
+  "actions/9line_spi.xml": {
+    "id": "tak.radial.nineline",
+    "path": ""
+  },
+  "actions/add_pt_from_bearing.xml": {
+    "id": "tak.radial.middlepoint-radial",
+    "path": ""
+  },
+  "actions/bearing_resection.xml": {
+    "id": "tak.radial.compass-rose",
+    "path": ""
+  },
+  "actions/bloodhound.xml": {
+    "id": "tak.radial.bloodhound",
+    "path": ""
+  },
+  "actions/bloodhound_link.xml": {
+    "id": "tak.radial.bloodhound",
+    "path": ""
+  },
+  "actions/breadcrumb_color.xml": {
+    "id": "tak.radial.color-wheel",
+    "path": ""
+  },
+  "actions/bullseye_compass.xml": {
+    "id": "tak.radial.bullseye",
+    "path": "site/public/icons/bullseye.png"
+  },
+  "actions/bullseye_details.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/cff.xml": {
+    "id": "tak.radial.cff",
+    "path": "site/public/icons/cff.png"
+  },
+  "actions/cffplus.xml": {
+    "id": "tak.radial.cffplus",
+    "path": ""
+  },
+  "actions/clamp_toggle.xml": {
+    "id": "tak.radial.clamp",
+    "path": ""
+  },
+  "actions/clear_self_tracks.xml": {
+    "id": "tak.radial.clear-tracks",
+    "path": ""
+  },
+  "actions/compass_lock_tilt.xml": {
+    "id": "tak.radial.tilt-lock",
+    "path": ""
+  },
+  "actions/compass_toggle_3d.xml": {
+    "id": "tak.radial.toggle-3d",
+    "path": ""
+  },
+  "actions/compass_toggle_free_look.xml": {
+    "id": "tak.radial.n3d-free-look",
+    "path": ""
+  },
+  "actions/compass_toggle_user_up.xml": {
+    "id": "tak.radial.rotate",
+    "path": ""
+  },
+  "actions/coord_copy.xml": {
+    "id": "tak.radial.copy",
+    "path": ""
+  },
+  "actions/coord_enlarge.xml": {
+    "id": "tak.radial.expand",
+    "path": "site/public/icons/expand.png"
+  },
+  "actions/danger_label_toggle.xml": {
+    "id": "tak.radial.label",
+    "path": ""
+  },
+  "actions/doghouse_toggle.xml": {
+    "id": "tak.radial.doghouse",
+    "path": ""
+  },
+  "actions/drab_pin.xml": {
+    "id": "tak.radial.drab-pin",
+    "path": ""
+  },
+  "actions/drop5Line.xml": {
+    "id": "tak.radial.cff",
+    "path": "site/public/icons/cff.png"
+  },
+  "actions/drop9Line.xml": {
+    "id": "tak.radial.cas",
+    "path": "site/public/icons/cas.png"
+  },
+  "actions/dropcffplus.xml": {
+    "id": "tak.radial.cffplus",
+    "path": ""
+  },
+  "actions/dropdamaged.xml": {
+    "id": "tak.radial.damaged",
+    "path": "site/public/icons/damaged.png"
+  },
+  "actions/dropfriendly.xml": {
+    "id": "tak.radial.friendly",
+    "path": "site/public/icons/friendly.png"
+  },
+  "actions/drophostile.xml": {
+    "id": "tak.radial.target",
+    "path": "site/public/icons/target.png"
+  },
+  "actions/dropneutral.xml": {
+    "id": "tak.radial.neutral",
+    "path": "site/public/icons/neutral.png"
+  },
+  "actions/dropspitarget.xml": {
+    "id": "tak.radial.target",
+    "path": "site/public/icons/target.png"
+  },
+  "actions/droptarget.xml": {
+    "id": "tak.radial.target",
+    "path": "site/public/icons/target.png"
+  },
+  "actions/dropunknown.xml": {
+    "id": "tak.radial.unknown",
+    "path": "site/public/icons/unknown.png"
+  },
+  "actions/dropunknownatself.xml": {
+    "id": "tak.radial.unknown",
+    "path": "site/public/icons/unknown.png"
+  },
+  "actions/edit_cues.xml": {
+    "id": "tak.radial.speech",
+    "path": ""
+  },
+  "actions/edit_route.xml": {
+    "id": "tak.radial.edit2",
+    "path": ""
+  },
+  "actions/edit_shape.xml": {
+    "id": "tak.radial.edit2",
+    "path": ""
+  },
+  "actions/email.xml": {
+    "id": "tak.radial.email-icon",
+    "path": "site/public/icons/email_icon.png"
+  },
+  "actions/general_entry.xml": {
+    "id": "tak.radial.general-entry",
+    "path": ""
+  },
+  "actions/general_entry_vertex.xml": {
+    "id": "tak.radial.general-entry",
+    "path": ""
+  },
+  "actions/geochat.xml": {
+    "id": "tak.radial.chatsmall",
+    "path": "site/public/icons/chatsmall.png"
+  },
+  "actions/geofence.xml": {
+    "id": "tak.radial.geofence",
+    "path": ""
+  },
+  "actions/grg_brightness.xml": {
+    "id": "tak.radial.brightness",
+    "path": ""
+  },
+  "actions/grg_color.xml": {
+    "id": "tak.radial.color-wheel",
+    "path": ""
+  },
+  "actions/grg_delete.xml": {
+    "id": "tak.radial.delete",
+    "path": "icons/svg/atak/ic_delete.svg"
+  },
+  "actions/grg_details.xml": {
+    "id": "tak.radial.details-progress",
+    "path": ""
+  },
+  "actions/grg_edit.xml": {
+    "id": "tak.radial.edit2",
+    "path": ""
+  },
+  "actions/grg_remove.xml": {
+    "id": "tak.radial.delete",
+    "path": "icons/svg/atak/ic_delete.svg"
+  },
+  "actions/grg_toggle_visibility.xml": {
+    "id": "tak.radial.eye",
+    "path": ""
+  },
+  "actions/grg_transparency.xml": {
+    "id": "tak.radial.transparency",
+    "path": ""
+  },
+  "actions/hostile_compass.xml": {
+    "id": "tak.radial.compass-rose",
+    "path": ""
+  },
+  "actions/image.xml": {
+    "id": "tak.radial.camera",
+    "path": "site/public/icons/camera.png"
+  },
+  "actions/image_details.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/insert_vertex.xml": {
+    "id": "tak.radial.vertex",
+    "path": ""
+  },
+  "actions/insert_waypoint.xml": {
+    "id": "tak.radial.reference-point",
+    "path": "site/public/icons/reference_point.png"
+  },
+  "actions/jm_reminder.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/jumpmaster_dip_circle.xml": {
+    "id": "tak.radial.compass-rose",
+    "path": ""
+  },
+  "actions/jumpmaster_jump_to_alt.xml": {
+    "id": "tak.radial.go",
+    "path": ""
+  },
+  "actions/jumpmaster_landing_pattern.xml": {
+    "id": "tak.radial.landing-pattern",
+    "path": ""
+  },
+  "actions/label_toggle.xml": {
+    "id": "tak.radial.label",
+    "path": ""
+  },
+  "actions/lockcam.xml": {
+    "id": "tak.radial.camlock",
+    "path": ""
+  },
+  "actions/lrfslide.xml": {
+    "id": "tak.radial.lrf-slide",
+    "path": "site/public/icons/lrf_slide.png"
+  },
+  "actions/mgrs_entry.xml": {
+    "id": "tak.radial.mgrs-entry",
+    "path": ""
+  },
+  "actions/mgrs_entry_vertex.xml": {
+    "id": "tak.radial.mgrs-entry",
+    "path": ""
+  },
+  "actions/missionpackage.xml": {
+    "id": "tak.radial.missionpackage",
+    "path": ""
+  },
+  "actions/move.xml": {
+    "id": "tak.radial.move",
+    "path": ""
+  },
+  "actions/move_editable_polyline_vertex.xml": {
+    "id": "tak.radial.move",
+    "path": ""
+  },
+  "actions/move_spi.xml": {
+    "id": "tak.radial.move",
+    "path": ""
+  },
+  "actions/move_survey_circle.xml": {
+    "id": "tak.radial.move",
+    "path": ""
+  },
+  "actions/pairingline.xml": {
+    "id": "tak.radial.pairing-line",
+    "path": ""
+  },
+  "actions/pairingline_survey_circle.xml": {
+    "id": "tak.radial.pairing-line",
+    "path": ""
+  },
+  "actions/pairinglineself.xml": {
+    "id": "tak.radial.pairing-line-to-self",
+    "path": ""
+  },
+  "actions/phonecall.xml": {
+    "id": "tak.radial.phone-icon",
+    "path": "site/public/icons/phone_icon.png"
+  },
+  "actions/polarCoords.xml": {
+    "id": "tak.radial.polar-coord",
+    "path": ""
+  },
+  "actions/rab_action_delete.xml": {
+    "id": "tak.radial.delete",
+    "path": "icons/svg/atak/ic_delete.svg"
+  },
+  "actions/rab_distance_lock.xml": {
+    "id": "tak.radial.distance-lock",
+    "path": ""
+  },
+  "actions/rab_drop_down.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/range_circle_dropdown.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/range_circle_edit.xml": {
+    "id": "tak.radial.edit2",
+    "path": ""
+  },
+  "actions/redx_fah.xml": {
+    "id": "tak.radial.fah-redx",
+    "path": ""
+  },
+  "actions/redx_lb.xml": {
+    "id": "tak.radial.laser-selected",
+    "path": "icons/svg/atak/ic_laser_selected.svg"
+  },
+  "actions/redx_remove.xml": {
+    "id": "tak.radial.delete",
+    "path": "icons/svg/atak/ic_delete.svg"
+  },
+  "actions/remove.xml": {
+    "id": "tak.radial.delete",
+    "path": "icons/svg/atak/ic_delete.svg"
+  },
+  "actions/remove_alert.xml": {
+    "id": "tak.radial.delete",
+    "path": "icons/svg/atak/ic_delete.svg"
+  },
+  "actions/remove_editable_polyline_vertex.xml": {
+    "id": "tak.radial.delete",
+    "path": "icons/svg/atak/ic_delete.svg"
+  },
+  "actions/remove_keyhole.xml": {
+    "id": "tak.radial.delete",
+    "path": "icons/svg/atak/ic_delete.svg"
+  },
+  "actions/remove_range_ring.xml": {
+    "id": "tak.radial.delete",
+    "path": "icons/svg/atak/ic_delete.svg"
+  },
+  "actions/remove_route.xml": {
+    "id": "tak.radial.delete",
+    "path": "icons/svg/atak/ic_delete.svg"
+  },
+  "actions/remove_shape.xml": {
+    "id": "tak.radial.delete",
+    "path": "icons/svg/atak/ic_delete.svg"
+  },
+  "actions/remove_spi.xml": {
+    "id": "tak.radial.delete",
+    "path": "icons/svg/atak/ic_delete.svg"
+  },
+  "actions/remove_sse.xml": {
+    "id": "tak.radial.delete",
+    "path": "icons/svg/atak/ic_delete.svg"
+  },
+  "actions/remove_track.xml": {
+    "id": "tak.radial.delete",
+    "path": "icons/svg/atak/ic_delete.svg"
+  },
+  "actions/rotate.xml": {
+    "id": "tak.radial.rotate-ac",
+    "path": ""
+  },
+  "actions/rubber_sheet_details.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/rubber_sheet_edit.xml": {
+    "id": "tak.radial.edit2",
+    "path": ""
+  },
+  "actions/rubber_sheet_move.xml": {
+    "id": "tak.radial.move",
+    "path": ""
+  },
+  "actions/rubber_sheet_rotate.xml": {
+    "id": "tak.radial.rubber-sheet-rotate",
+    "path": ""
+  },
+  "actions/rubber_sheet_transparency.xml": {
+    "id": "tak.radial.transparency",
+    "path": ""
+  },
+  "actions/search_trackhistory.xml": {
+    "id": "tak.radial.trackhistory-icon",
+    "path": ""
+  },
+  "actions/send_action.xml": {
+    "id": "tak.radial.send-icon",
+    "path": ""
+  },
+  "actions/sensor_fov_color.xml": {
+    "id": "tak.radial.color-wheel",
+    "path": ""
+  },
+  "actions/sensor_fov_direction.xml": {
+    "id": "tak.radial.fov-direction",
+    "path": ""
+  },
+  "actions/sensor_fov_size.xml": {
+    "id": "tak.radial.fov-size",
+    "path": ""
+  },
+  "actions/shape_delete.xml": {
+    "id": "tak.radial.delete",
+    "path": "icons/svg/atak/ic_delete.svg"
+  },
+  "actions/shape_msd.xml": {
+    "id": "tak.radial.blast-rings",
+    "path": ""
+  },
+  "actions/show_route.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/show_route_for_wp.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/showdetails.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/showdetails_circle.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/showdetails_feature.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/showdetails_keyhole.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/showdetails_multipolyline.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/showdetails_resection.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/showdetails_sensor.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/showdetails_shape.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/showdetails_spotmap.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/showdetails_sse.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/showdetails_track.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/showmedline.xml": {
+    "id": "tak.radial.details",
+    "path": "site/public/icons/details.png"
+  },
+  "actions/showquick_sse_slant.xml": {
+    "id": "tak.radial.sse-slant",
+    "path": ""
+  },
+  "actions/sms.xml": {
+    "id": "tak.radial.sms-icon",
+    "path": "site/public/icons/sms_icon.png"
+  },
+  "actions/snaptoself.xml": {
+    "id": "tak.radial.self",
+    "path": ""
+  },
+  "actions/spi_fah.xml": {
+    "id": "tak.radial.fah-redx",
+    "path": ""
+  },
+  "actions/spi_lb.xml": {
+    "id": "tak.radial.laser-selected",
+    "path": "icons/svg/atak/ic_laser_selected.svg"
+  },
+  "actions/spipairinglineself.xml": {
+    "id": "tak.radial.pairing-line-to-self",
+    "path": ""
+  },
+  "actions/sse_shape_create.xml": {
+    "id": "tak.radial.sse-shape",
+    "path": ""
+  },
+  "actions/sse_shape_remove.xml": {
+    "id": "tak.radial.sse-shape-delete",
+    "path": ""
+  },
+  "actions/sse_survey_completed_toggle.xml": {
+    "id": "tak.radial.sse-survey-progress",
+    "path": ""
+  },
+  "actions/startgoto.xml": {
+    "id": "tak.radial.green-flag-radial",
+    "path": ""
+  },
+  "actions/startnav.xml": {
+    "id": "tak.radial.green-flag-radial",
+    "path": ""
+  },
+  "actions/tasktoobject.xml": {
+    "id": "tak.radial.task",
+    "path": ""
+  },
+  "actions/toggleVisibility.xml": {
+    "id": "tak.radial.eye",
+    "path": ""
+  },
+  "actions/toggle_bullseye_rings.xml": {
+    "id": "tak.radial.range-ring",
+    "path": ""
+  },
+  "actions/toggle_bullseye_to_from.xml": {
+    "id": "tak.radial.to-from",
+    "path": ""
+  },
+  "actions/toggle_crumb.xml": {
+    "id": "tak.radial.breadcrumbs",
+    "path": ""
+  },
+  "actions/toggle_label.xml": {
+    "id": "tak.radial.show-label",
+    "path": ""
+  },
+  "actions/toggle_sensor_fov.xml": {
+    "id": "tak.radial.fov-visibility",
+    "path": ""
+  },
+  "actions/toggle_slant_range.xml": {
+    "id": "tak.radial.right-angle",
+    "path": ""
+  },
+  "actions/togglegpserror.xml": {
+    "id": "tak.radial.gpserror",
+    "path": ""
+  },
+  "actions/vehicle_model_edit.xml": {
+    "id": "tak.radial.edit2",
+    "path": ""
+  },
+  "actions/video.xml": {
+    "id": "tak.radial.video",
+    "path": "site/public/icons/video.png"
+  },
+  "actions/voip.xml": {
+    "id": "tak.radial.voip-icon",
+    "path": "site/public/icons/voip_icon.png"
+  },
+  "actions/xmpp.xml": {
+    "id": "tak.radial.xmpp-icon",
+    "path": "site/public/icons/xmpp_icon.png"
+  }
+}

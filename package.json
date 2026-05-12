@@ -35,6 +35,7 @@
     "test:build": "node --test tests/build/*.mjs",
     "test:assets": "node --test tests/assets/*.mjs",
     "validate": "node scripts/validate-tokens.mjs",
+    "validate:registry": "node scripts/validate-registry.mjs",
     "package": "node scripts/package-release.mjs"
   },
   "devDependencies": {

@@ -345,4 +345,51 @@ const radialPath = resolve(DATA, 'tak-radial-action-icons.json');
 writeFileSync(radialPath, JSON.stringify(radialMap, null, 2) + '\n');
 console.log(`  Wrote ${radialPath}`);
 
+// ---------------------------------------------------------------------------
+// rtmx:req REQ-XW-254
+// Generate focused index files for lightweight consumption
+// ---------------------------------------------------------------------------
+
+// icons.index.json: id -> primary format path (prefer svg > png)
+const iconsIndex = {};
+for (const entry of deduped) {
+  const path = entry.formats.svg || entry.formats.png || Object.values(entry.formats)[0];
+  if (path) iconsIndex[entry.id] = path;
+}
+const iconsIndexPath = resolve(DATA, 'icons.index.json');
+writeFileSync(iconsIndexPath, JSON.stringify(iconsIndex, null, 2) + '\n');
+console.log(`  Wrote ${iconsIndexPath} (${Object.keys(iconsIndex).length} entries)`);
+
+// radial.index.json: action path -> { id, format path }
+const radialIndex = {};
+for (const a of radialMap.actions) {
+  const entry = deduped.find(e => e.id === a.iconId);
+  const path = entry ? (entry.formats.png || entry.formats.svg || '') : '';
+  radialIndex[a.action] = { id: a.iconId, path };
+}
+const radialIndexPath = resolve(DATA, 'radial.index.json');
+writeFileSync(radialIndexPath, JSON.stringify(radialIndex, null, 2) + '\n');
+console.log(`  Wrote ${radialIndexPath} (${Object.keys(radialIndex).length} entries)`);
+
+// index.json: master manifest
+const manifest = {
+  version: '0.1.0',
+  generated: new Date().toISOString(),
+  indexes: {
+    icons: './icons.index.json',
+    radial: './radial.index.json',
+  },
+  registries: {
+    icons: './tak-icon-registry.json',
+    radialActions: './tak-radial-action-icons.json',
+  },
+  schemas: {
+    iconRegistry: '../schemas/tak-icon-registry.schema.json',
+    radialActions: '../schemas/tak-radial-action-icons.schema.json',
+  },
+};
+const manifestPath = resolve(DATA, 'index.json');
+writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
+console.log(`  Wrote ${manifestPath}`);
+
 console.log('Icon registry build complete.');

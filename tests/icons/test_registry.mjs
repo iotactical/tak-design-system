@@ -139,3 +139,43 @@ describe('REQ-XW-251: Radial action-to-icon mapping', () => {
     assert.ok(actionNames.has('actions/move.xml'), 'Missing move action');
   });
 });
+
+// rtmx:req REQ-XW-254
+describe('REQ-XW-254: Focused index files', () => {
+  it('index.json manifest exists with expected structure', () => {
+    const manifest = JSON.parse(readFileSync(resolve(DATA, 'index.json'), 'utf8'));
+    assert.ok(manifest.version, 'Missing version');
+    assert.ok(manifest.indexes?.icons, 'Missing icons index reference');
+    assert.ok(manifest.indexes?.radial, 'Missing radial index reference');
+    assert.ok(manifest.registries?.icons, 'Missing icons registry reference');
+    assert.ok(manifest.registries?.radialActions, 'Missing radial registry reference');
+  });
+
+  it('icons.index.json maps IDs to file paths', () => {
+    const index = JSON.parse(readFileSync(resolve(DATA, 'icons.index.json'), 'utf8'));
+    assert.ok(typeof index === 'object', 'Must be an object');
+    assert.ok(Object.keys(index).length >= 300, `Expected >= 300 entries, got ${Object.keys(index).length}`);
+    // Spot check a known entry
+    const sampleId = Object.keys(index)[0];
+    assert.ok(sampleId.startsWith('tak.'), 'Keys must be semantic IDs');
+    assert.ok(typeof index[sampleId] === 'string', 'Values must be file path strings');
+  });
+
+  it('radial.index.json maps actions to icon info', () => {
+    const index = JSON.parse(readFileSync(resolve(DATA, 'radial.index.json'), 'utf8'));
+    assert.ok(typeof index === 'object', 'Must be an object');
+    assert.ok(Object.keys(index).length >= 50, `Expected >= 50 entries, got ${Object.keys(index).length}`);
+    // Spot check
+    const removeEntry = index['actions/remove.xml'];
+    assert.ok(removeEntry, 'Missing actions/remove.xml entry');
+    assert.ok(removeEntry.id?.startsWith('tak.'), 'Must have semantic ID');
+  });
+
+  it('all icons.index.json IDs exist in full registry', () => {
+    const index = JSON.parse(readFileSync(resolve(DATA, 'icons.index.json'), 'utf8'));
+    const registry = JSON.parse(readFileSync(resolve(DATA, 'tak-icon-registry.json'), 'utf8'));
+    const registryIds = new Set(registry.map(e => e.id));
+    const orphans = Object.keys(index).filter(id => !registryIds.has(id));
+    assert.equal(orphans.length, 0, `Orphaned index IDs: ${orphans.join(', ')}`);
+  });
+});

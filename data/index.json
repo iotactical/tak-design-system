@@ -1,0 +1,16 @@
+{
+  "version": "0.1.0",
+  "generated": "2026-05-12T18:34:11.320Z",
+  "indexes": {
+    "icons": "./icons.index.json",
+    "radial": "./radial.index.json"
+  },
+  "registries": {
+    "icons": "./tak-icon-registry.json",
+    "radialActions": "./tak-radial-action-icons.json"
+  },
+  "schemas": {
+    "iconRegistry": "../schemas/tak-icon-registry.schema.json",
+    "radialActions": "../schemas/tak-radial-action-icons.schema.json"
+  }
+}

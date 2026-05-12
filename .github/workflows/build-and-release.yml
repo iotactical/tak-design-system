@@ -33,6 +33,9 @@ jobs:
       - name: Validate tokens
         run: npm run validate
 
+      - name: Build and validate data registry
+        run: npm run build:registry && node scripts/validate-registry.mjs
+
   test:
     needs: validate
     runs-on: ubuntu-latest
