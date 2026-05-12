@@ -12,6 +12,16 @@ export interface DockPaneProps extends Omit<HTMLAttributes<HTMLDivElement>, 'tit
   children?: ReactNode;
 }
 
+/**
+ * Dockable side panel that slides in from the left, right, or bottom. Supports minimize and close actions.
+ *
+ * @example
+ * ```tsx
+ * <DockPane open={isPaneOpen} onClose={() => setPaneOpen(false)} title="Layer Manager" position="right">
+ *   <ListView items={layers} />
+ * </DockPane>
+ * ```
+ */
 export const DockPane = forwardRef<HTMLDivElement, DockPaneProps>(
   (
     {

@@ -19,6 +19,18 @@ export interface ListViewProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onS
   children?: ReactNode;
 }
 
+/**
+ * Scrollable list with single or multi-select support, icon slots, and three-tier item layout.
+ *
+ * @example
+ * ```tsx
+ * <ListView
+ *   items={[{ key: '1', title: 'ALPHA-1', subtitle: 'Friendly' }]}
+ *   selectedKeys={['1']}
+ *   onItemClick={(item) => openDetail(item.key)}
+ * />
+ * ```
+ */
 export const ListView = forwardRef<HTMLDivElement, ListViewProps>(
   ({ items, onItemClick, selectedKeys = [], onSelectionChange, multiSelect, children, className, ...props }, ref) => {
     const classNames = [styles.listView, className].filter(Boolean).join(' ');

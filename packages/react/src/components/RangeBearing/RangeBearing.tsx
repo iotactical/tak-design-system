@@ -54,6 +54,20 @@ function formatCoord(lat: number, lon: number): string {
   return `${lat.toFixed(6)}\u00B0, ${lon.toFixed(6)}\u00B0`;
 }
 
+/**
+ * Range and bearing display showing distance and azimuth between two points, with configurable distance units.
+ *
+ * @example
+ * ```tsx
+ * <RangeBearing
+ *   distance={4500}
+ *   bearing={45.2}
+ *   unit="meters"
+ *   from={{ lat: 34.05, lon: -118.24 }}
+ *   to={{ lat: 34.08, lon: -118.20 }}
+ * />
+ * ```
+ */
 export const RangeBearing = forwardRef<HTMLDivElement, RangeBearingProps>(
   (
     {

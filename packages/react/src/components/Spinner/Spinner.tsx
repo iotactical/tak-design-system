@@ -8,6 +8,18 @@ export interface SpinnerProps extends SelectHTMLAttributes<HTMLSelectElement> {
   disabled?: boolean;
 }
 
+/**
+ * Dropdown select spinner for choosing from a list of predefined options.
+ *
+ * @example
+ * ```tsx
+ * <Spinner
+ *   options={[{ value: 'mgrs', label: 'MGRS' }, { value: 'dd', label: 'Decimal Degrees' }]}
+ *   value={coordFormat}
+ *   onChange={handleFormatChange}
+ * />
+ * ```
+ */
 export const Spinner = forwardRef<HTMLSelectElement, SpinnerProps>(
   ({ options, value, onChange, disabled, className, ...props }, ref) => {
     const selectClasses = [

@@ -62,6 +62,14 @@ function formatCoordinate(lat: number, lon: number, format: CoordinateFormat): s
   }
 }
 
+/**
+ * Coordinate readout displaying lat/lon/alt in MGRS, DD, DMS, or UTM format. Tap to cycle formats.
+ *
+ * @example
+ * ```tsx
+ * <CoordinateDisplay latitude={34.0522} longitude={-118.2437} altitude={120} format="MGRS" />
+ * ```
+ */
 export const CoordinateDisplay = forwardRef<HTMLDivElement, CoordinateDisplayProps>(
   (
     {

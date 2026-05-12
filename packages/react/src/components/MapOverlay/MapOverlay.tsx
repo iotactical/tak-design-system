@@ -24,6 +24,14 @@ function formatDistance(meters: number, unit: 'metric' | 'imperial'): string {
   return `${Math.round(meters)} m`;
 }
 
+/**
+ * Map scale bar overlay that renders a proportional distance indicator in metric or imperial units.
+ *
+ * @example
+ * ```tsx
+ * <ScaleBar distance={500} unit="metric" />
+ * ```
+ */
 export const ScaleBar = forwardRef<HTMLDivElement, ScaleBarProps>(
   ({ distance, unit = 'metric', className, style, ...props }, ref) => {
     const classNames = [styles.scaleBar, className].filter(Boolean).join(' ');
@@ -62,6 +70,14 @@ function headingToCardinal(heading: number): string {
   return CARDINALS[index];
 }
 
+/**
+ * Compass heading widget displaying the current bearing in degrees and cardinal direction.
+ *
+ * @example
+ * ```tsx
+ * <CompassHeading heading={270} size={54} />
+ * ```
+ */
 export const CompassHeading = forwardRef<HTMLDivElement, CompassHeadingProps>(
   ({ heading, size = 54, className, style, ...props }, ref) => {
     const classNames = [styles.compassHeading, className]
@@ -105,6 +121,14 @@ export interface ElevationProfileProps extends HTMLAttributes<HTMLDivElement> {
   height?: number;
 }
 
+/**
+ * SVG elevation profile chart plotting altitude over cumulative distance along a route.
+ *
+ * @example
+ * ```tsx
+ * <ElevationProfile points={[{ distance: 0, elevation: 100 }, { distance: 500, elevation: 150 }]} />
+ * ```
+ */
 export const ElevationProfile = forwardRef<HTMLDivElement, ElevationProfileProps>(
   ({ points, width = 200, height = 80, className, ...props }, ref) => {
     const classNames = [styles.elevationProfile, className]

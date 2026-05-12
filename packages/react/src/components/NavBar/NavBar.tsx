@@ -16,6 +16,14 @@ export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode;
 }
 
+/**
+ * Bottom navigation bar with menu toggle, search input, and configurable action buttons.
+ *
+ * @example
+ * ```tsx
+ * <NavBar title="Operations" onMenuClick={toggleDrawer} onSearch={handleSearch} />
+ * ```
+ */
 export const NavBar = forwardRef<HTMLDivElement, NavBarProps>(
   ({ onMenuClick, title, actions, onSearch, children, className, ...props }, ref) => {
     const [searchValue, setSearchValue] = useState('');

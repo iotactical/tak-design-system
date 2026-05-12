@@ -8,6 +8,14 @@ export interface EditTextProps extends InputHTMLAttributes<HTMLInputElement> {
   trailing?: ReactNode;
 }
 
+/**
+ * Text input field with optional label, error message, and leading/trailing adornments.
+ *
+ * @example
+ * ```tsx
+ * <EditText label="Callsign" placeholder="Enter callsign" error={errors.callsign} />
+ * ```
+ */
 export const EditText = forwardRef<HTMLInputElement, EditTextProps>(
   ({ label, error, leading, trailing, className, ...props }, ref) => {
     const wrapperClasses = [

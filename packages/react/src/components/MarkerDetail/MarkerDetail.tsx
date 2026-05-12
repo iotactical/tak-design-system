@@ -42,6 +42,19 @@ function formatTimestamp(date: Date): string {
   return `${hh}:${mm}:${ss}Z`;
 }
 
+/**
+ * Map marker detail view displaying callsign, affiliation, coordinates, staleness, and action buttons.
+ *
+ * @example
+ * ```tsx
+ * <MarkerDetail
+ *   callsign="BRAVO-6"
+ *   affiliation="friendly"
+ *   coordinate={{ lat: 34.0522, lon: -118.2437 }}
+ *   actions={[{ key: 'pan', label: 'Pan To', onClick: handlePan }]}
+ * />
+ * ```
+ */
 export const MarkerDetail = forwardRef<HTMLDivElement, MarkerDetailProps>(
   (
     {

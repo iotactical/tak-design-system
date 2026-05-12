@@ -1,18 +1,21 @@
+// rtmx:req REQ-XW-201
+import { lazy, Suspense } from 'react';
 import { Routes, Route, NavLink } from 'react-router-dom';
 import styles from './App.module.css';
 import { GlobalSearch } from './components/GlobalSearch';
 import { VersionSelector } from './components/VersionSelector';
 import Home from './pages/Home';
-import Colors from './pages/Colors';
-import Typography from './pages/Typography';
-import Spacing from './pages/Spacing';
-import Components from './pages/Components';
-import Icons from './pages/Icons';
-import Platforms from './pages/Platforms';
-import Palettes from './pages/Palettes';
-import Interfaces from './pages/Interfaces';
-import Explorer from './pages/Explorer';
-import SearchResults from './pages/SearchResults';
+
+const Colors = lazy(() => import('./pages/Colors'));
+const Typography = lazy(() => import('./pages/Typography'));
+const Spacing = lazy(() => import('./pages/Spacing'));
+const Components = lazy(() => import('./pages/Components'));
+const Icons = lazy(() => import('./pages/Icons'));
+const Platforms = lazy(() => import('./pages/Platforms'));
+const Palettes = lazy(() => import('./pages/Palettes'));
+const Interfaces = lazy(() => import('./pages/Interfaces'));
+const Explorer = lazy(() => import('./pages/Explorer'));
+const SearchResults = lazy(() => import('./pages/SearchResults'));
 
 const navItems = [
   { to: '/', label: 'Overview' },
@@ -57,19 +60,21 @@ export default function App() {
         <GlobalSearch />
       </div>
       <main id="main-content" className={styles.content}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/colors" element={<Colors />} />
-          <Route path="/typography" element={<Typography />} />
-          <Route path="/spacing" element={<Spacing />} />
-          <Route path="/components/:tab?" element={<Components />} />
-          <Route path="/icons" element={<Icons />} />
-          <Route path="/palettes/:tab?" element={<Palettes />} />
-          <Route path="/platforms" element={<Platforms />} />
-          <Route path="/interfaces/:tab?" element={<Interfaces />} />
-          <Route path="/explorer/:tab?" element={<Explorer />} />
-          <Route path="/search" element={<SearchResults />} />
-        </Routes>
+        <Suspense fallback={<div className={styles.page} style={{ padding: '48px 0', color: '#878787' }}>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/colors" element={<Colors />} />
+            <Route path="/typography" element={<Typography />} />
+            <Route path="/spacing" element={<Spacing />} />
+            <Route path="/components/:tab?" element={<Components />} />
+            <Route path="/icons" element={<Icons />} />
+            <Route path="/palettes/:tab?" element={<Palettes />} />
+            <Route path="/platforms" element={<Platforms />} />
+            <Route path="/interfaces/:tab?" element={<Interfaces />} />
+            <Route path="/explorer/:tab?" element={<Explorer />} />
+            <Route path="/search" element={<SearchResults />} />
+          </Routes>
+        </Suspense>
       </main>
     </div>
   );

@@ -18,6 +18,19 @@ export interface RadialMenuProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode;
 }
 
+/**
+ * Radial/pie context menu that displays action items in a circular layout around a center point.
+ *
+ * @example
+ * ```tsx
+ * <RadialMenu
+ *   open={menuOpen}
+ *   onClose={() => setMenuOpen(false)}
+ *   position={{ x: 200, y: 300 }}
+ *   items={[{ key: 'delete', label: 'Delete', onClick: handleDelete }]}
+ * />
+ * ```
+ */
 export const RadialMenu = forwardRef<HTMLDivElement, RadialMenuProps>(
   ({ open, onClose, items, position, sectors = 6, children, className, ...props }, ref) => {
     const handleKeyDown = useCallback(

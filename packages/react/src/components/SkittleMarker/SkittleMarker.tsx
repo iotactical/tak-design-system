@@ -76,6 +76,14 @@ const ROLE_LABELS: Record<SkittleRole, string> = {
   k9: 'K9',
 };
 
+/**
+ * Color-coded map marker dot (skittle) representing a team member on the COP. Supports arrow and dot variants with heading rotation, team color, and role badge.
+ *
+ * @example
+ * ```tsx
+ * <SkittleMarker teamColor="cyan" heading={135} state="connected" role="team-lead" />
+ * ```
+ */
 export const SkittleMarker = forwardRef<HTMLDivElement, SkittleMarkerProps>(
   (
     {

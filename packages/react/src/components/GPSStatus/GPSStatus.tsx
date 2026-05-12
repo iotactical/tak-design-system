@@ -15,6 +15,14 @@ const fixLabels: Record<GPSFixType, string> = {
   '3d': '3D Fix',
 };
 
+/**
+ * GPS fix status indicator showing fix type, satellite count, and positional accuracy.
+ *
+ * @example
+ * ```tsx
+ * <GPSStatus fixType="3d" satellites={12} accuracy={3.5} />
+ * ```
+ */
 export const GPSStatus = forwardRef<HTMLDivElement, GPSStatusProps>(
   ({ fixType, satellites, accuracy, className, ...props }, ref) => {
     const classNames = [

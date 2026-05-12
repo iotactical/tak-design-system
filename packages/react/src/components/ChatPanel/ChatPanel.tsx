@@ -20,6 +20,19 @@ export interface ChatPanelProps extends Omit<HTMLAttributes<HTMLDivElement>, 'ch
   children?: ReactNode;
 }
 
+/**
+ * Chat message panel with channel selection, auto-scrolling message list, and a text input bar for sending messages.
+ *
+ * @example
+ * ```tsx
+ * <ChatPanel
+ *   messages={messages}
+ *   onSend={handleSend}
+ *   channel="Team Alpha"
+ *   channels={['Team Alpha', 'All Chat']}
+ * />
+ * ```
+ */
 export const ChatPanel = forwardRef<HTMLDivElement, ChatPanelProps>(
   (
     {

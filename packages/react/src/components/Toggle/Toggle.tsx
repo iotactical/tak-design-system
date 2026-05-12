@@ -8,6 +8,14 @@ export interface ToggleProps extends Omit<InputHTMLAttributes<HTMLInputElement>,
   disabled?: boolean;
 }
 
+/**
+ * Toggle switch for binary on/off settings, rendered with ATAK dark styling.
+ *
+ * @example
+ * ```tsx
+ * <Toggle label="Night mode" checked={nightMode} onChange={handleChange} />
+ * ```
+ */
 export const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
   ({ checked, onChange, label, disabled, className, ...props }, ref) => {
     const wrapperClasses = [

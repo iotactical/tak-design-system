@@ -179,6 +179,29 @@ jobs:
             --generate-notes \
             || echo "Release v${VERSION} already exists, skipping"
 
+      - name: Publish @iotactical/tak-react to npm
+        if: success()
+        continue-on-error: true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          cd packages/react
+          npm publish --access public --provenance \
+            || echo "Publish skipped (version may already exist or NPM_TOKEN not configured)"
+
+      - name: Publish VS Code extension
+        if: success()
+        continue-on-error: true
+        run: |
+          if [ -f platforms/vscode/package.json ]; then
+            cd platforms/vscode
+            npx @vscode/vsce package --no-dependencies
+            npx @vscode/vsce publish --no-dependencies -p "${{ secrets.VSCE_PAT }}" \
+              || echo "VS Code publish skipped (VSCE_PAT not configured or extension not ready)"
+          else
+            echo "VS Code extension package.json not found, skipping publish"
+          fi
+
       - name: Notify defense-builders-sdk
         if: success()
         continue-on-error: true

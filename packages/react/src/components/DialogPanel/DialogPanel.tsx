@@ -17,6 +17,19 @@ export interface DialogPanelProps extends Omit<HTMLAttributes<HTMLDivElement>, '
   children?: ReactNode;
 }
 
+/**
+ * Dialog content panel with a title bar, focus trap, and configurable action buttons. Supports standard, alert, and fullscreen variants.
+ *
+ * @example
+ * ```tsx
+ * <DialogPanel
+ *   open={showConfirm}
+ *   onClose={() => setShowConfirm(false)}
+ *   title="Delete Marker"
+ *   actions={[{ label: 'Delete', onClick: handleDelete, variant: 'destructive' }]}
+ * />
+ * ```
+ */
 export const DialogPanel = forwardRef<HTMLDivElement, DialogPanelProps>(
   (
     {

@@ -7,6 +7,14 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
 }
 
+/**
+ * ATAK-styled button with support for primary, secondary, and danger variants.
+ *
+ * @example
+ * ```tsx
+ * <Button variant="primary" onClick={handleSave}>Save</Button>
+ * ```
+ */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ variant = 'primary', className, children, ...props }, ref) => {
     const classNames = [

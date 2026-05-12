@@ -7,6 +7,16 @@ export interface ModalProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'
   title?: ReactNode;
 }
 
+/**
+ * Modal dialog overlay that renders above the map surface. Closes on Escape key or backdrop click.
+ *
+ * @example
+ * ```tsx
+ * <Modal open={isOpen} onClose={() => setOpen(false)} title="Confirm Action">
+ *   <p>Proceed with mission update?</p>
+ * </Modal>
+ * ```
+ */
 export const Modal = forwardRef<HTMLDivElement, ModalProps>(
   ({ open, onClose, title, className, children, ...props }, ref) => {
     const backdropRef = useRef<HTMLDivElement>(null);

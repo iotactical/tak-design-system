@@ -14,6 +14,17 @@ export interface TabLayoutProps extends Omit<HTMLAttributes<HTMLDivElement>, 'on
   onChange?: (key: string) => void;
 }
 
+/**
+ * Tab navigation layout that switches between content panels. Supports controlled and uncontrolled active tab state.
+ *
+ * @example
+ * ```tsx
+ * <TabLayout tabs={[
+ *   { key: 'details', label: 'Details', content: <MarkerDetail callsign="ALPHA-1" /> },
+ *   { key: 'chat', label: 'Chat', content: <ChatPanel messages={msgs} /> },
+ * ]} />
+ * ```
+ */
 export const TabLayout = forwardRef<HTMLDivElement, TabLayoutProps>(
   ({ tabs, defaultActiveKey, activeKey: controlledKey, onChange, className, ...props }, ref) => {
     const [internalKey, setInternalKey] = useState(defaultActiveKey ?? tabs[0]?.key);

@@ -7,6 +7,14 @@ export interface ToolBarProps extends HTMLAttributes<HTMLDivElement> {
   trailing?: ReactNode;
 }
 
+/**
+ * Horizontal toolbar container with optional leading/trailing slots and a title.
+ *
+ * @example
+ * ```tsx
+ * <ToolBar title="Markers" trailing={<Button>Add</Button>} />
+ * ```
+ */
 export const ToolBar = forwardRef<HTMLDivElement, ToolBarProps>(
   ({ leading, title, trailing, className, children, ...props }, ref) => {
     const classNames = [styles.toolbar, className].filter(Boolean).join(' ');

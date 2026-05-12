@@ -82,7 +82,7 @@ describe('REQ-XW-100: 2525 Explorer page', () => {
       'utf8'
     );
     assert.ok(
-      appSource.includes("import Explorer from './pages/Explorer'"),
+      appSource.includes("./pages/Explorer"),
       'App.tsx must import Explorer'
     );
   });

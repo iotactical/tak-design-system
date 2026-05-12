@@ -43,7 +43,7 @@ describe('REQ-XW-063: Interface browser page', () => {
   it('App.tsx imports Interfaces component', () => {
     const content = readFileSync(appPath, 'utf8');
     assert.ok(
-      content.includes("import Interfaces from"),
+      content.includes("./pages/Interfaces"),
       'App.tsx must import Interfaces component'
     );
   });

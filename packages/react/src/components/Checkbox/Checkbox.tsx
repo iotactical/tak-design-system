@@ -8,6 +8,14 @@ export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement
   disabled?: boolean;
 }
 
+/**
+ * ATAK-styled checkbox input with an optional text label.
+ *
+ * @example
+ * ```tsx
+ * <Checkbox label="Show friendly markers" checked={show} onChange={handleToggle} />
+ * ```
+ */
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   ({ checked, onChange, label, disabled, className, ...props }, ref) => {
     const wrapperClasses = [

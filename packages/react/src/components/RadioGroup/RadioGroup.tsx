@@ -14,6 +14,19 @@ export interface RadioGroupProps extends Omit<HTMLAttributes<HTMLFieldSetElement
   disabled?: boolean;
 }
 
+/**
+ * Radio button group for single-selection among mutually exclusive options.
+ *
+ * @example
+ * ```tsx
+ * <RadioGroup
+ *   name="affiliation"
+ *   options={[{ value: 'friendly', label: 'Friendly' }, { value: 'hostile', label: 'Hostile' }]}
+ *   value={affiliation}
+ *   onChange={setAffiliation}
+ * />
+ * ```
+ */
 export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
   ({ options, value, onChange, name, disabled, className, ...props }, ref) => {
     const fieldsetClasses = [

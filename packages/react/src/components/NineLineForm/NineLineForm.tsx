@@ -23,6 +23,17 @@ export interface NineLineFormProps extends Omit<HTMLAttributes<HTMLDivElement>, 
   children?: ReactNode;
 }
 
+/**
+ * Structured 9-line CAS request form driven by a template definition. Supports controlled and uncontrolled field values.
+ *
+ * @example
+ * ```tsx
+ * <NineLineForm
+ *   template={{ name: '9-Line CAS', lines: [{ number: 1, label: 'IP/BP', field: 'ip', type: 'text' }] }}
+ *   onSubmit={(values) => sendCasRequest(values)}
+ * />
+ * ```
+ */
 export const NineLineForm = forwardRef<HTMLDivElement, NineLineFormProps>(
   (
     {

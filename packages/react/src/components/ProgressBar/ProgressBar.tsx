@@ -8,6 +8,14 @@ export interface ProgressBarProps extends HTMLAttributes<HTMLDivElement> {
   variant?: ProgressBarVariant;
 }
 
+/**
+ * Determinate progress indicator bar that displays a 0-100 percentage fill.
+ *
+ * @example
+ * ```tsx
+ * <ProgressBar value={65} variant="default" />
+ * ```
+ */
 export const ProgressBar = forwardRef<HTMLDivElement, ProgressBarProps>(
   ({ value, variant = 'default', className, ...props }, ref) => {
     const clampedValue = Math.min(100, Math.max(0, value));

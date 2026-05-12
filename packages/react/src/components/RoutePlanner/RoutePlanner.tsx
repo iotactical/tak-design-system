@@ -55,6 +55,22 @@ const waypointTypeLabel: Record<string, string> = {
   target: 'TGT',
 };
 
+/**
+ * Route planning panel with an ordered waypoint list, leg distances, reorder controls, and a distance/ETA summary bar.
+ *
+ * @example
+ * ```tsx
+ * <RoutePlanner
+ *   waypoints={[
+ *     { name: 'SP', coordinate: { lat: 34.05, lon: -118.24 }, type: 'checkpoint' },
+ *     { name: 'OBJ Alpha', coordinate: { lat: 34.08, lon: -118.20 }, type: 'target' },
+ *   ]}
+ *   totalDistance={4500}
+ *   estimatedTime={1800}
+ *   onWaypointRemove={(i) => removeWaypoint(i)}
+ * />
+ * ```
+ */
 export const RoutePlanner = forwardRef<HTMLDivElement, RoutePlannerProps>(
   (
     {

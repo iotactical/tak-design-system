@@ -8,6 +8,14 @@ export interface ConnectionStatusProps extends HTMLAttributes<HTMLDivElement> {
   label?: string;
 }
 
+/**
+ * Network connection status indicator with a color-coded dot for online, offline, connecting, or error states.
+ *
+ * @example
+ * ```tsx
+ * <ConnectionStatus status="online" label="TAK Server" />
+ * ```
+ */
 export const ConnectionStatus = forwardRef<HTMLDivElement, ConnectionStatusProps>(
   ({ status, label, className, ...props }, ref) => {
     const classNames = [
