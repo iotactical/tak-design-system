@@ -23,7 +23,7 @@ describe('REQ-XW-250: Canonical icon registry with stable semantic IDs', () => {
 
   it('has at least 400 entries', () => {
     registry = registry || JSON.parse(readFileSync(resolve(DATA, 'tak-icon-registry.json'), 'utf8'));
-    assert.ok(registry.length >= 400, `Expected >= 400 entries, got ${registry.length}`);
+    assert.ok(registry.length >= 5000, `Expected >= 5000 entries, got ${registry.length}`);
   });
 
   it('all entries have required fields', () => {
@@ -60,7 +60,7 @@ describe('REQ-XW-250: Canonical icon registry with stable semantic IDs', () => {
   it('has entries from all expected sources', () => {
     registry = registry || JSON.parse(readFileSync(resolve(DATA, 'tak-icon-registry.json'), 'utf8'));
     const sources = new Set(registry.map(e => e.source));
-    for (const expected of ['core', 'menu', 'nav', 'radial', 'svg']) {
+    for (const expected of ['core', 'menu', 'nav', 'radial', 'svg', 'drawable', 'iconset', 'palette']) {
       assert.ok(sources.has(expected), `Missing source: ${expected}`);
     }
   });
@@ -81,9 +81,9 @@ describe('REQ-XW-250: Canonical icon registry with stable semantic IDs', () => {
   it('most entries have at least one format', () => {
     registry = registry || JSON.parse(readFileSync(resolve(DATA, 'tak-icon-registry.json'), 'utf8'));
     const empty = registry.filter(e => Object.keys(e.formats).length === 0);
-    // Some radial icons reference Android-only drawables (.xml) not available as web assets
+    // Some icons reference Android-only drawables (.xml) or palette paths not available as web assets
     const ratio = (registry.length - empty.length) / registry.length;
-    assert.ok(ratio >= 0.8, `Only ${(ratio * 100).toFixed(0)}% of entries have formats (need >= 80%)`);
+    assert.ok(ratio >= 0.75, `Only ${(ratio * 100).toFixed(0)}% of entries have formats (need >= 75%)`);
   });
 });
 

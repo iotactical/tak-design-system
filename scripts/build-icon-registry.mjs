@@ -24,12 +24,18 @@ function readJSON(path) {
 /** Convert a source name to a stable semantic ID segment. */
 function toIdSegment(name) {
   let seg = name
+    .toLowerCase()
     .replace(/^ic_menu_/, '')
     .replace(/^ic_/, '')
     .replace(/^nav_/, '')
-    .replace(/_/g, '-');
+    .replace(/[_\s]+/g, '-')   // underscores and spaces to hyphens
+    .replace(/[^a-z0-9-]/g, '') // strip non-alphanumeric (except hyphens)
+    .replace(/-+/g, '-')        // collapse consecutive hyphens
+    .replace(/^-|-$/g, '');     // trim leading/trailing hyphens
   // IDs must start with a letter; prefix digit-leading segments
   if (/^\d/.test(seg)) seg = `n${seg}`;
+  // Ensure non-empty
+  if (!seg) seg = 'unknown';
   return seg;
 }
 
@@ -261,6 +267,120 @@ function processRadialMenus() {
 }
 
 // ---------------------------------------------------------------------------
+// rtmx:req REQ-XW-255
+// Source: Drawable catalog (atak-drawable-catalog.json)
+// ---------------------------------------------------------------------------
+
+function processDrawables(existingIds) {
+  const entries = [];
+  const data = readJSON(resolve(DATA, 'atak-drawable-catalog.json'));
+
+  for (const item of data) {
+    const segment = toIdSegment(item.name);
+    const id = `tak.drawable.${segment}`;
+    if (existingIds.has(id)) continue;
+
+    const formats = {};
+    // Only include entries with actual web-accessible files
+    const pngPath = `site/public/icons/${item.name}.png`;
+    if (fileExists(pngPath)) formats.png = pngPath;
+    if (item.format === 'png') {
+      const altPng = `site/public/icons/${item.name}.${item.format}`;
+      if (!formats.png && fileExists(altPng)) formats.png = altPng;
+    }
+
+    entries.push({
+      id,
+      name: toLabel(item.name),
+      source: 'drawable',
+      category: item.category || 'other',
+      tags: ['drawable', item.category, item.type].filter(Boolean),
+      formats,
+    });
+    existingIds.add(id);
+  }
+  return entries;
+}
+
+// ---------------------------------------------------------------------------
+// rtmx:req REQ-XW-256
+// Source: Iconsets (atak-iconset-*.json)
+// ---------------------------------------------------------------------------
+
+function processIconsets(existingIds) {
+  const entries = [];
+  const files = readdirSync(DATA).filter(f => f.startsWith('atak-iconset-') && f.endsWith('.json'));
+
+  for (const file of files) {
+    const data = readJSON(resolve(DATA, file));
+    const setName = data.iconset || file.replace('atak-iconset-', '').replace('.json', '');
+
+    for (const icon of data.icons || []) {
+      const iconName = basename(icon.name, extname(icon.name));
+      const segment = toIdSegment(iconName);
+      const id = `tak.iconset.${setName}.${segment}`;
+      if (existingIds.has(id)) continue;
+
+      const formats = {};
+      const palettePath = `site/public/palettes/${setName}/${icon.path || icon.name}`;
+      if (fileExists(palettePath)) formats.png = palettePath;
+
+      entries.push({
+        id,
+        name: toLabel(iconName),
+        source: 'iconset',
+        category: setName,
+        tags: ['iconset', setName],
+        formats,
+      });
+      existingIds.add(id);
+    }
+  }
+  return entries;
+}
+
+// ---------------------------------------------------------------------------
+// rtmx:req REQ-XW-256
+// Source: Palettes (atak-palette-*.json)
+// ---------------------------------------------------------------------------
+
+function processPalettes(existingIds) {
+  const entries = [];
+  const files = readdirSync(DATA).filter(f => f.startsWith('atak-palette-') && f.endsWith('.json'));
+
+  for (const file of files) {
+    const data = readJSON(resolve(DATA, file));
+    const paletteName = data.name?.toLowerCase().replace(/\s+/g, '-') || file.replace('atak-palette-', '').replace('.json', '');
+
+    for (const group of data.groups || []) {
+      const groupName = group.name?.toLowerCase().replace(/\s+/g, '-') || 'other';
+
+      for (const icon of group.icons || []) {
+        const iconName = basename(icon.filename, extname(icon.filename));
+        const segment = toIdSegment(iconName);
+        const id = `tak.palette.${paletteName}.${groupName}.${segment}`;
+        if (existingIds.has(id)) continue;
+
+        const formats = {};
+        const palettePath = `site/public/palettes/${paletteName}/${group.name}/${icon.filename}`;
+        if (fileExists(palettePath)) formats.png = palettePath;
+
+        entries.push({
+          id,
+          name: toLabel(iconName),
+          source: 'palette',
+          category: groupName,
+          tags: ['palette', paletteName, groupName],
+          formats,
+        });
+        existingIds.add(id);
+      }
+    }
+  }
+  return entries;
+}
+
+// ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
 
@@ -316,8 +436,19 @@ for (const file of svgFiles) {
 }
 console.log(`  SVG-only icons: ${svgEntries.length}`);
 
+// Process drawables, iconsets, and palettes
+const drawableEntries = processDrawables(existingIds);
+console.log(`  Drawable icons: ${drawableEntries.length}`);
+
+const iconsetEntries = processIconsets(existingIds);
+console.log(`  Iconset icons: ${iconsetEntries.length}`);
+
+const paletteEntries = processPalettes(existingIds);
+console.log(`  Palette icons: ${paletteEntries.length}`);
+
 // Merge and sort
-const registry = [...allEntries, ...svgEntries].sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
+const registry = [...allEntries, ...svgEntries, ...drawableEntries, ...iconsetEntries, ...paletteEntries]
+  .sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
 
 // Deduplicate by ID (keep first occurrence -- source priority: radial > menu > nav > core > svg)
 const deduped = [];
