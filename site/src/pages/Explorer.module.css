@@ -464,3 +464,44 @@
   top: 16px;
   align-self: flex-start;
 }
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 24px;
+  }
+  .browseLayout {
+    flex-direction: column;
+  }
+  .symbolSetList {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .entityGrid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  .decodeResult {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .fieldName {
+    width: auto;
+  }
+  .searchInput, .decodeInput, .buildSearchBox {
+    max-width: 100%;
+  }
+  .buildFields {
+    grid-template-columns: 1fr;
+  }
+  .buildVersionGrid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .compareGrid {
+    grid-template-columns: 1fr;
+  }
+  .inspectorPanel {
+    width: 100%;
+    position: static;
+  }
+}

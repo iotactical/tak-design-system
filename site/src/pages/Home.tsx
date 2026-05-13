@@ -98,7 +98,7 @@ export default function Home() {
 
       {/* Platform support matrix */}
       <h2 className={styles.sectionTitle}>Platform support</h2>
-      <table className={styles.matrixTable}>
+      <div className={styles.tableWrap}><table className={styles.matrixTable}>
         <thead>
           <tr>
             <th>Platform</th>
@@ -115,7 +115,7 @@ export default function Home() {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table></div>
 
       {/* Quick start */}
       <h2 className={styles.sectionTitle}>Quick start</h2>

@@ -150,3 +150,15 @@
   color: var(--tak-text-secondary);
   margin-bottom: 16px;
 }
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 22px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .cardMap {
+    height: 140px;
+  }
+}

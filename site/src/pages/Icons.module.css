@@ -226,3 +226,15 @@
   color: var(--tak-text-secondary);
   font-size: 14px;
 }
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 22px;
+  }
+  .searchInput {
+    max-width: 100%;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}

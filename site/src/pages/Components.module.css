@@ -152,3 +152,15 @@
 .backLink:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .page {
+    padding: 1rem;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+}

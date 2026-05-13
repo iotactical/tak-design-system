@@ -94,3 +94,22 @@
   max-height: 600px;
   overflow-y: auto;
 }
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .codeBlock {
+    overflow-x: auto;
+  }
+  .tab {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}

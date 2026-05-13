@@ -296,3 +296,21 @@
   color: #878787;
   font-size: 14px;
 }
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 24px;
+  }
+  .searchInput {
+    max-width: 100%;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  }
+  .spotGrid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  .markerGrid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
