@@ -1,5 +1,6 @@
 // rtmx:req REQ-XW-201
-import { lazy, Suspense } from 'react';
+// rtmx:req REQ-XW-263
+import { lazy, Suspense, useState, useCallback } from 'react';
 import { Routes, Route, NavLink } from 'react-router-dom';
 import styles from './App.module.css';
 import { GlobalSearch } from './components/GlobalSearch';
@@ -33,10 +34,17 @@ const navItems = [
 ];
 
 export default function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const closeSidebar = useCallback(() => setSidebarOpen(false), []);
+
   return (
     <div className={styles.layout}>
       <a href="#main-content" className={styles.skipLink}>Skip to main content</a>
-      <nav className={styles.sidebar}>
+      <div
+        className={`${styles.backdrop} ${sidebarOpen ? styles.backdropVisible : ''}`}
+        onClick={closeSidebar}
+      />
+      <nav className={`${styles.sidebar} ${sidebarOpen ? styles.sidebarOpen : ''}`}>
         <div className={styles.brand}>
           <span className={styles.brandAccent}>TAK</span> Design System
         </div>
@@ -49,6 +57,7 @@ export default function App() {
                 className={({ isActive }) =>
                   `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
                 }
+                onClick={closeSidebar}
               >
                 {item.label}
               </NavLink>
@@ -59,6 +68,13 @@ export default function App() {
         <div className={styles.sidebarFooter}>v0.1.0</div>
       </nav>
       <div className={styles.topBar}>
+        <button
+          className={styles.hamburger}
+          onClick={() => setSidebarOpen((o) => !o)}
+          aria-label="Toggle navigation"
+        >
+          &#9776;
+        </button>
         <GlobalSearch />
       </div>
       <main id="main-content" className={styles.content}>

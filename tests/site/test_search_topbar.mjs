@@ -22,7 +22,7 @@ describe('REQ-XW-117: Move search to top bar', () => {
     assert.ok(topBarMatch, 'GlobalSearch should be rendered inside topBar div');
 
     // Verify GlobalSearch is NOT between sidebar opening and closing tags
-    const sidebarSection = content.match(/<nav className=\{styles\.sidebar\}>([\s\S]*?)<\/nav>/);
+    const sidebarSection = content.match(/<nav[^>]*styles\.sidebar[^>]*>([\s\S]*?)<\/nav>/);
     assert.ok(sidebarSection, 'Should have a sidebar nav element');
     assert.ok(
       !sidebarSection[1].includes('GlobalSearch'),
