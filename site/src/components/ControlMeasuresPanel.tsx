@@ -35,7 +35,7 @@ function withAffiliation(sidc: string, affiliationChar: string): string {
 }
 
 function makeSidc25(entityCode: string): string {
-  return `10030025000${entityCode}0000`;
+  return `1003250000${entityCode}0000`;
 }
 
 function EntityCard({
