@@ -39,6 +39,7 @@
     "package": "node scripts/package-release.mjs"
   },
   "devDependencies": {
+    "playwright": "^1.60.0",
     "style-dictionary": "^4.0.0"
   },
   "dependencies": {

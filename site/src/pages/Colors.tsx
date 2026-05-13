@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import coreTokens from '@tokens/core.json';
 import semanticTokens from '@tokens/semantic.json';
 import atakTokens from '@tokens/atak.json';
+import styles from './Colors.module.css';
 
 interface TokenEntry {
   name: string;
@@ -44,9 +45,9 @@ function isLightColor(hex: string): boolean {
 }
 
 const colorGroups = [
+  { label: 'TAK', colors: extractColors((atakTokens as Record<string, unknown>).atak as Record<string, unknown>) },
   { label: 'Core', colors: extractColors((coreTokens as Record<string, unknown>).color as Record<string, unknown>) },
   { label: 'Semantic', colors: extractColors(semanticTokens as Record<string, unknown>) },
-  { label: 'ATAK', colors: extractColors((atakTokens as Record<string, unknown>).atak as Record<string, unknown>) },
 ];
 
 export default function Colors() {
@@ -61,7 +62,7 @@ export default function Colors() {
   }
 
   return (
-    <div style={{ maxWidth: 960 }}>
+    <div className={styles.page}>
       <h1 style={{ fontSize: 30, fontWeight: 700, color: '#FFE35E', marginBottom: 8 }}>Colors</h1>
       <p style={{ color: '#878787', marginBottom: 32 }}>
         Click any swatch to copy its hex value.
@@ -70,13 +71,7 @@ export default function Colors() {
       {colorGroups.map((group) => (
         <section key={group.label} style={{ marginBottom: 40 }}>
           <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>{group.label}</h2>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))',
-              gap: 12,
-            }}
-          >
+          <div className={styles.colorGrid}>
             {group.colors.map((c) => (
               <button
                 key={`${group.label}-${c.name}`}

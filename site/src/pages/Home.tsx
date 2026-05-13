@@ -1,57 +1,28 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
-import coreTokens from '@tokens/core.json';
-import semanticTokens from '@tokens/semantic.json';
-import atakTokens from '@tokens/atak.json';
-import catalog from '../../../data/atak-drawable-catalog.json';
-
-function countTokens(obj: Record<string, unknown>): number {
-  let count = 0;
-  for (const [key, value] of Object.entries(obj)) {
-    if (key.startsWith('$')) continue;
-    if (value && typeof value === 'object' && '$value' in (value as Record<string, unknown>)) {
-      count++;
-    } else if (value && typeof value === 'object') {
-      count += countTokens(value as Record<string, unknown>);
-    }
-  }
-  return count;
-}
-
-const totalTokens =
-  countTokens(coreTokens as Record<string, unknown>) +
-  countTokens(semanticTokens as Record<string, unknown>) +
-  countTokens(atakTokens as Record<string, unknown>);
-
-const stats = [
-  { label: 'Tokens', value: totalTokens },
-  { label: 'Components', value: 28 },
-  { label: 'Icons', value: (catalog as unknown[]).length },
-  { label: 'Palettes', value: 14 },
-  { label: 'Platforms', value: 6 },
-  { label: 'Tests', value: 584 },
-];
-
-const navCards = [
-  { to: '/colors', title: 'Colors', desc: 'Browse 365 design tokens' },
-  { to: '/components', title: 'Components', desc: '28 React components' },
-  { to: '/icons', title: 'Icons', desc: '1,317 drawable resources' },
-  { to: '/palettes', title: 'Palettes', desc: '14 ATAK icon palettes' },
-  { to: '/platforms', title: 'Platforms', desc: '6 platform outputs' },
-];
-
-const platformMatrix = [
-  { platform: 'ATAK', target: 'Android', output: 'XML resources' },
-  { platform: 'WinTAK', target: 'WPF', output: 'XAML dictionaries' },
-  { platform: 'WebTAK', target: 'CSS/React', output: 'CSS variables, React components' },
-  { platform: 'VS Code', target: 'Theme', output: 'VS Code color theme JSON' },
-];
 
 const INSTALL_CMD = 'npm install @iotactical/tak-react';
 
+const BASE = import.meta.env.BASE_URL;
+
+const pageCards = [
+  { to: '/colors', title: 'Colors', desc: 'Design tokens and color palettes', preview: 'preview-colors.png' },
+  { to: '/typography', title: 'Typography', desc: 'Type scale, weights, and font stacks', preview: 'preview-typography.png' },
+  { to: '/spacing', title: 'Spacing', desc: 'Spacing scale and layout primitives', preview: 'preview-spacing.png' },
+  { to: '/components', title: 'Components', desc: 'React components for TAK interfaces', preview: 'preview-components.png' },
+  { to: '/icons', title: 'Icons', desc: 'TAK drawable icon catalog', preview: 'preview-icons.png' },
+  { to: '/palettes', title: 'Palettes', desc: 'MIL-STD-2525 symbols, vehicles, markers', preview: 'preview-palettes.png' },
+  { to: '/platforms', title: 'Platforms', desc: 'Android, WPF, Web, and IDE outputs', preview: 'preview-platforms.png' },
+  { to: '/interfaces', title: 'Interfaces', desc: 'Reference UI patterns and layouts', preview: 'preview-interfaces.png' },
+  { to: '/multipoint', title: 'Tactical Graphics', desc: 'Tactical control measure graphics', preview: 'preview-multipoint.png' },
+  { to: '/explorer', title: '2525 Explorer', desc: 'Browse, decode, and build SIDCs', preview: 'preview-explorer.png' },
+];
+
 export default function Home() {
   const [copied, setCopied] = useState(false);
+  const [activeIdx, setActiveIdx] = useState(0);
+  const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     document.title = 'TAK Design System';
@@ -64,67 +35,101 @@ export default function Home() {
     });
   };
 
+  // Track carousel scroll position for dot indicators
+  const handleScroll = useCallback(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    const scrollLeft = track.scrollLeft;
+    const cardWidth = track.firstElementChild
+      ? (track.firstElementChild as HTMLElement).offsetWidth + 12
+      : 1;
+    setActiveIdx(Math.round(scrollLeft / cardWidth));
+  }, []);
+
+  const scrollTo = useCallback((idx: number) => {
+    const track = trackRef.current;
+    if (!track || !track.firstElementChild) return;
+    const cardWidth = (track.firstElementChild as HTMLElement).offsetWidth + 12;
+    track.scrollTo({ left: idx * cardWidth, behavior: 'smooth' });
+  }, []);
+
   return (
-    <div className={styles.dashboard}>
-      {/* Header */}
-      <div className={styles.header}>
+    <div className={styles.page}>
+      <div className={styles.hero}>
         <h1 className={styles.title}>
-          TAK Design System
-          <span className={styles.version}>v0.1.0</span>
+          <span className={styles.titleAccent}>TAK</span> Design System
         </h1>
-        <p className={styles.tagline}>ATAK on every OS</p>
+        <p className={styles.tagline}>One TAK for every device</p>
       </div>
 
-      {/* Live stats */}
-      <div className={styles.statsGrid}>
-        {stats.map((stat) => (
-          <div key={stat.label} className={styles.statCard}>
-            <div className={styles.statValue}>{stat.value}</div>
-            <div className={styles.statLabel}>{stat.label}</div>
-          </div>
-        ))}
+      <div className={styles.installBlock}>
+        <div className={styles.installBar}>
+          <span className={styles.installPrompt}>$</span>
+          <code className={styles.installCmd}>{INSTALL_CMD}</code>
+          <button className={styles.copyBtn} onClick={handleCopy}>
+            {copied ? 'Copied' : 'Copy'}
+          </button>
+        </div>
       </div>
 
-      {/* Navigation cards */}
-      <h2 className={styles.sectionTitle}>Explore</h2>
-      <div className={styles.navGrid}>
-        {navCards.map((card) => (
-          <Link key={card.to} to={card.to} className={styles.navCard}>
-            <div className={styles.navCardTitle}>{card.title}</div>
-            <div className={styles.navCardDesc}>{card.desc}</div>
+      {/* Desktop/tablet: flex grid */}
+      <div className={styles.cardGrid}>
+        {pageCards.map((card) => (
+          <Link key={card.to} to={card.to} className={styles.card}>
+            <div className={styles.cardPreview}>
+              <img
+                src={`${BASE}previews/${card.preview}`}
+                alt={`${card.title} preview`}
+                className={styles.cardImg}
+                loading="lazy"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = 'none';
+                }}
+              />
+            </div>
+            <div className={styles.cardBody}>
+              <div className={styles.cardTitle}>{card.title}</div>
+              <div className={styles.cardDesc}>{card.desc}</div>
+            </div>
           </Link>
         ))}
       </div>
 
-      {/* Platform support matrix */}
-      <h2 className={styles.sectionTitle}>Platform support</h2>
-      <div className={styles.tableWrap}><table className={styles.matrixTable}>
-        <thead>
-          <tr>
-            <th>Platform</th>
-            <th>Target</th>
-            <th>Output</th>
-          </tr>
-        </thead>
-        <tbody>
-          {platformMatrix.map((row) => (
-            <tr key={row.platform}>
-              <td>{row.platform}</td>
-              <td>{row.target}</td>
-              <td>{row.output}</td>
-            </tr>
+      {/* Mobile: horizontal carousel */}
+      <div className={styles.carousel}>
+        <div
+          ref={trackRef}
+          className={styles.carouselTrack}
+          onScroll={handleScroll}
+        >
+          {pageCards.map((card) => (
+            <Link key={card.to} to={card.to} className={styles.carouselCard}>
+              <div className={styles.carouselPreview}>
+                <img
+                  src={`${BASE}previews/${card.preview}`}
+                  alt={`${card.title} preview`}
+                  loading="lazy"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = 'none';
+                  }}
+                />
+              </div>
+              <div className={styles.carouselBody}>
+                <div className={styles.carouselTitle}>{card.title}</div>
+                <div className={styles.carouselDesc}>{card.desc}</div>
+              </div>
+            </Link>
           ))}
-        </tbody>
-      </table></div>
-
-      {/* Quick start */}
-      <h2 className={styles.sectionTitle}>Quick start</h2>
-      <div className={styles.quickStart}>
-        <div className={styles.codeBlock}>
-          <code>{INSTALL_CMD}</code>
-          <button className={styles.copyBtn} onClick={handleCopy}>
-            {copied ? 'Copied' : 'Copy'}
-          </button>
+        </div>
+        <div className={styles.carouselDots}>
+          {pageCards.map((card, i) => (
+            <button
+              key={card.to}
+              className={`${styles.dot} ${i === activeIdx ? styles.dotActive : ''}`}
+              onClick={() => scrollTo(i)}
+              aria-label={`Go to ${card.title}`}
+            />
+          ))}
         </div>
       </div>
     </div>

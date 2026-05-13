@@ -26,10 +26,10 @@ const atakFontSizes = getEntries((atak.dimension as Record<string, unknown>).fon
 export default function Typography() {
   useEffect(() => { document.title = 'Typography - TAK Design System'; }, []);
   return (
-    <div style={{ maxWidth: 960 }}>
+    <div style={{ maxWidth: '100%' }}>
       <h1 style={{ fontSize: 30, fontWeight: 700, color: '#FFE35E', marginBottom: 8 }}>Typography</h1>
       <p style={{ color: '#878787', marginBottom: 32 }}>
-        Font families, sizes, and weights from the core and ATAK token sets.
+        Font families, sizes, and weights from the core and TAK token sets.
       </p>
 
       <section style={{ marginBottom: 40 }}>
@@ -47,7 +47,7 @@ export default function Typography() {
       </section>
 
       <section style={{ marginBottom: 40 }}>
-        <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>ATAK font families</h2>
+        <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>TAK font families</h2>
         {atakFonts.map((f) => (
           <div key={f.name} style={{ marginBottom: 20 }}>
             <div style={{ fontSize: 12, color: '#878787', fontFamily: 'Roboto Mono, monospace', marginBottom: 4 }}>
@@ -63,11 +63,12 @@ export default function Typography() {
 
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>Core font size scale</h2>
-        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+        <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 400 }}>
           <thead>
             <tr style={{ borderBottom: '1px solid #2E2E2E', textAlign: 'left' }}>
-              <th style={{ padding: '8px 12px', color: '#878787', fontWeight: 500, width: 80 }}>Token</th>
-              <th style={{ padding: '8px 12px', color: '#878787', fontWeight: 500, width: 80 }}>Value</th>
+              <th style={{ padding: '8px 12px', color: '#878787', fontWeight: 500 }}>Token</th>
+              <th style={{ padding: '8px 12px', color: '#878787', fontWeight: 500 }}>Value</th>
               <th style={{ padding: '8px 12px', color: '#878787', fontWeight: 500 }}>Preview</th>
             </tr>
           </thead>
@@ -87,15 +88,17 @@ export default function Typography() {
             ))}
           </tbody>
         </table>
+        </div>
       </section>
 
       <section style={{ marginBottom: 40 }}>
-        <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>ATAK font sizes</h2>
-        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+        <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>TAK font sizes</h2>
+        <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 400 }}>
           <thead>
             <tr style={{ borderBottom: '1px solid #2E2E2E', textAlign: 'left' }}>
-              <th style={{ padding: '8px 12px', color: '#878787', fontWeight: 500, width: 180 }}>Token</th>
-              <th style={{ padding: '8px 12px', color: '#878787', fontWeight: 500, width: 80 }}>Value</th>
+              <th style={{ padding: '8px 12px', color: '#878787', fontWeight: 500 }}>Token</th>
+              <th style={{ padding: '8px 12px', color: '#878787', fontWeight: 500 }}>Value</th>
               <th style={{ padding: '8px 12px', color: '#878787', fontWeight: 500 }}>Preview</th>
             </tr>
           </thead>
@@ -115,11 +118,12 @@ export default function Typography() {
             ))}
           </tbody>
         </table>
+        </div>
       </section>
 
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>Font weights</h2>
-        <div style={{ display: 'flex', gap: 32 }}>
+        <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
           {fontWeights.map((w) => (
             <div key={w.name}>
               <div style={{ fontSize: 12, color: '#878787', fontFamily: 'Roboto Mono, monospace', marginBottom: 4 }}>

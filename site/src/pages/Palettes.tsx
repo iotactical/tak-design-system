@@ -6,7 +6,7 @@
 import { useEffect, useState, useMemo, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import styles from './Palettes.module.css';
-import { ModelViewer } from '../components/ModelViewer';
+import { ModelThumbnail, ModelViewerModal, type ModelDimensions } from '../components/ModelViewer';
 import { MilSymRenderer } from '../components/MilSymRenderer';
 
 // All iconset manifests - static imports for reliability
@@ -476,7 +476,7 @@ function MarkersPanel() {
 }
 
 // rtmx:req REQ-XW-075
-/** Lazy-loading wrapper for ModelViewer using IntersectionObserver */
+/** Lazy-loading wrapper: renders static thumbnail, click opens interactive modal */
 function LazyModelViewer({
   modelPath,
   modelName,
@@ -490,6 +490,7 @@ function LazyModelViewer({
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [modal, setModal] = useState<{ dims: ModelDimensions } | null>(null);
 
   useEffect(() => {
     const el = containerRef.current;
@@ -510,34 +511,44 @@ function LazyModelViewer({
   }, []);
 
   return (
-    <div ref={containerRef} style={{ width, height }}>
-      {isVisible ? (
-        <ModelViewer
+    <>
+      <div ref={containerRef} style={{ width, height }}>
+        {isVisible ? (
+          <ModelThumbnail
+            modelPath={modelPath}
+            width={width}
+            height={height}
+            onClick={(dims) => setModal({ dims })}
+          />
+        ) : (
+          <div
+            style={{
+              width,
+              height,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: '#1a1a1a',
+              color: '#878787',
+              fontSize: 11,
+              flexDirection: 'column',
+              gap: 4,
+            }}
+          >
+            <span>{modelName}</span>
+            <span style={{ fontSize: 9, opacity: 0.6 }}>Loading...</span>
+          </div>
+        )}
+      </div>
+      {modal && (
+        <ModelViewerModal
           modelPath={modelPath}
-          width={width}
-          height={height}
-          autoRotate
+          modelName={modelName}
+          dimensions={modal.dims}
+          onClose={() => setModal(null)}
         />
-      ) : (
-        <div
-          style={{
-            width,
-            height,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: '#1a1a1a',
-            color: '#878787',
-            fontSize: 11,
-            flexDirection: 'column',
-            gap: 4,
-          }}
-        >
-          <span>{modelName}</span>
-          <span style={{ fontSize: 9, opacity: 0.6 }}>Loading...</span>
-        </div>
       )}
-    </div>
+    </>
   );
 }
 
@@ -637,14 +648,15 @@ function SkittlesPanel() {
     <div>
       <div className={styles.paletteHeader}>
         <div className={styles.paletteName}>Skittles</div>
-        <div className={styles.paletteCount}>Team member circles -- ATAK spot map markers</div>
+        <div className={styles.paletteCount}>Team member circles -- spot map markers</div>
       </div>
 
       {/* Team Color header row with names */}
       <div className={styles.groupSection}>
         <div className={styles.groupName}>Team Colors</div>
         <div className={styles.groupCount}>15 colors</div>
-        <div style={{ display: 'flex', alignItems: 'flex-end', marginBottom: 6, height: 70 }}>
+        <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <div style={{ display: 'flex', alignItems: 'flex-end', marginBottom: 6, height: 70, minWidth: 720 }}>
           <span style={{ width: 130, flexShrink: 0 }} />
           {TEAM_COLORS.map((tc) => (
             <div key={tc.name} style={{ width: COL_W, flexShrink: 0, display: 'flex', justifyContent: 'center', alignItems: 'flex-end', height: '100%' }}>
@@ -662,6 +674,7 @@ function SkittlesPanel() {
               />
             </div>
           ))}
+        </div>
         </div>
       </div>
 
@@ -926,7 +939,7 @@ export default function Palettes() {
     <div className={styles.container}>
       <h1 className={styles.title}>Palettes</h1>
       <p className={styles.subtitle}>
-        Browse ATAK icon palettes. Matches the &quot;Select Icon Pallet&quot; dialog in ATAK.
+        Browse TAK icon palettes and symbol sets.
       </p>
 
       <div className={styles.tabBar} role="tablist" aria-label="Palette tabs">

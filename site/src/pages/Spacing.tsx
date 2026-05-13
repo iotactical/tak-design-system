@@ -24,7 +24,7 @@ const atakSpacing = getEntries((atak.dimension as Record<string, unknown>).spaci
 export default function Spacing() {
   useEffect(() => { document.title = 'Spacing - TAK Design System'; }, []);
   return (
-    <div style={{ maxWidth: 960 }}>
+    <div style={{ maxWidth: '100%' }}>
       <h1 style={{ fontSize: 30, fontWeight: 700, color: '#FFE35E', marginBottom: 8 }}>Spacing</h1>
       <p style={{ color: '#878787', marginBottom: 32 }}>
         Spacing scale and border radius tokens visualized with proportional bars.
@@ -32,14 +32,15 @@ export default function Spacing() {
 
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>Core spacing scale</h2>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, minWidth: 320 }}>
           {coreSpacing.map((s) => {
             const px = parseInt(s.value) || 0;
             return (
               <div key={s.name} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div
                   style={{
-                    width: 80,
+                    minWidth: 80,
                     fontFamily: 'Roboto Mono, monospace',
                     fontSize: 13,
                     color: '#FFE35E',
@@ -74,18 +75,20 @@ export default function Spacing() {
             );
           })}
         </div>
+        </div>
       </section>
 
       <section style={{ marginBottom: 40 }}>
-        <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>ATAK spacing</h2>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>TAK spacing</h2>
+        <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, minWidth: 360 }}>
           {atakSpacing.map((s) => {
             const px = parseInt(s.value) || 0;
             return (
               <div key={s.name} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div
                   style={{
-                    width: 140,
+                    minWidth: 140,
                     fontFamily: 'Roboto Mono, monospace',
                     fontSize: 13,
                     color: '#FFE35E',
@@ -97,7 +100,7 @@ export default function Spacing() {
                 </div>
                 <div
                   style={{
-                    width: 50,
+                    minWidth: 50,
                     fontFamily: 'Roboto Mono, monospace',
                     fontSize: 13,
                     color: '#878787',
@@ -119,6 +122,7 @@ export default function Spacing() {
               </div>
             );
           })}
+        </div>
         </div>
       </section>
 

@@ -28,7 +28,7 @@ const previews: Record<string, ReactNode> = {
     </div>
   ),
   ToolBar: (
-    <ToolBar leading={<span style={{opacity:0.6}}>&#9776;</span>} title="ATAK Toolbar" trailing={<span style={{opacity:0.6}}>&#8942;</span>} />
+    <ToolBar leading={<span style={{opacity:0.6}}>&#9776;</span>} title="TAK Toolbar" trailing={<span style={{opacity:0.6}}>&#8942;</span>} />
   ),
   EditText: (
     <div style={{ maxWidth: 260 }}>

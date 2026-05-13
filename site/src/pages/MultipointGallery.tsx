@@ -132,7 +132,7 @@ export default function MultipointGallery() {
 
   return (
     <div className={styles.page}>
-      <h1 className={styles.title}>Multi-Point Graphics</h1>
+      <h1 className={styles.title}>Tactical Graphics</h1>
       <p className={styles.subtitle}>
         MIL-STD-2525E tactical control measures (Symbol Set 25), rendered via
         mil-sym-ts WebRenderer on MapLibre GL. Defaults to 2525E; select B/C/D

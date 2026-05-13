@@ -34,11 +34,14 @@
 }
 
 .brand {
+  display: block;
   padding: 0 24px 24px;
   font-size: 18px;
   font-weight: 700;
   border-bottom: 1px solid #2E2E2E;
   margin-bottom: 16px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .brandAccent {

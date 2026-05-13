@@ -1,7 +1,7 @@
 // rtmx:req REQ-XW-201
 // rtmx:req REQ-XW-263
 import { lazy, Suspense, useState, useCallback } from 'react';
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { Routes, Route, NavLink, Link } from 'react-router-dom';
 import styles from './App.module.css';
 import { GlobalSearch } from './components/GlobalSearch';
 import { VersionSelector } from './components/VersionSelector';
@@ -20,7 +20,6 @@ const MultipointGallery = lazy(() => import('./pages/MultipointGallery'));
 const SearchResults = lazy(() => import('./pages/SearchResults'));
 
 const navItems = [
-  { to: '/', label: 'Overview' },
   { to: '/colors', label: 'Colors' },
   { to: '/typography', label: 'Typography' },
   { to: '/spacing', label: 'Spacing' },
@@ -29,7 +28,7 @@ const navItems = [
   { to: '/palettes', label: 'Palettes' },
   { to: '/platforms', label: 'Platforms' },
   { to: '/interfaces', label: 'Interfaces' },
-  { to: '/multipoint', label: 'Multi-Point' },
+  { to: '/multipoint', label: 'Tactical Graphics' },
   { to: '/explorer', label: '2525 Explorer' },
 ];
 
@@ -45,15 +44,14 @@ export default function App() {
         onClick={closeSidebar}
       />
       <nav className={`${styles.sidebar} ${sidebarOpen ? styles.sidebarOpen : ''}`}>
-        <div className={styles.brand}>
+        <Link to="/" className={styles.brand} onClick={closeSidebar}>
           <span className={styles.brandAccent}>TAK</span> Design System
-        </div>
+        </Link>
         <ul className={styles.navList}>
           {navItems.map((item) => (
             <li key={item.to}>
               <NavLink
                 to={item.to}
-                end={item.to === '/'}
                 className={({ isActive }) =>
                   `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
                 }

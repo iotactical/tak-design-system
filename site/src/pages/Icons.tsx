@@ -181,7 +181,7 @@ export default function Icons() {
     <div className="page">
       <h1 className={styles.title}>Icon and Drawable Browser</h1>
       <p className={styles.subtitle}>
-        Browse all 1,317 ATAK drawable resources. Vector drawables render as SVG.
+        Browse all 1,317 TAK drawable resources. Vector drawables render as SVG.
         Shape drawables render as CSS. Filter by category or type.
       </p>
 

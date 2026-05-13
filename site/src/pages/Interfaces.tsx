@@ -412,10 +412,10 @@ export default function Interfaces() {
 
       {activeTab === 'intents' && (
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>ATAK Intent Catalog</h2>
+          <h2 className={styles.sectionTitle}>TAK Intent Catalog</h2>
           <p className={styles.intentDescription}>
             {filteredIntentCount} intents across {filteredIntentGroups.length} namespaces,
-            parsed from the ATAK SDK broadcast registry.
+            parsed from the TAK SDK broadcast registry.
           </p>
           {filteredIntentGroups.length === 0 ? (
             <div className={styles.empty}>No intents match your filter.</div>
