@@ -6,7 +6,7 @@
 export interface MultipointWorkerRequest {
   id: string;
   symbolCode: string;
-  controlPoints: string;   // "lon,lat;lon,lat;..." format
+  controlPoints: string;   // "lon,lat lon,lat ..." format (space-separated)
   scale: number;
   bbox: string;            // "left,bottom,right,top" format
   modifiers?: Record<string, string>;
@@ -49,7 +49,7 @@ self.onmessage = async (e: MessageEvent<MultipointWorkerRequest>) => {
       '',              // name
       '',              // description
       symbolCode,      // symbolCode (20-char SIDC)
-      controlPoints,   // controlPoints "lon,lat;lon,lat;..."
+      controlPoints,   // controlPoints "lon,lat lon,lat ..." (space-separated)
       'clampToGround', // altitudeMode
       scale,           // scale
       bbox,            // bbox "left,bottom,right,top"

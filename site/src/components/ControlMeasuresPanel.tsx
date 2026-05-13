@@ -72,7 +72,7 @@ function EntityCard({
   useEffect(() => {
     if (!expanded || !ready || userPoints.length < 2) return;
     let cancelled = false;
-    const cp = userPoints.map(([lon, lat]) => `${lon},${lat}`).join(';');
+    const cp = userPoints.map(([lon, lat]) => `${lon},${lat}`).join(' ');
     const lons = userPoints.map((p) => p[0]);
     const lats = userPoints.map((p) => p[1]);
     const bbox = `${Math.min(...lons) - 1},${Math.min(...lats) - 1},${Math.max(...lons) + 1},${Math.max(...lats) + 1}`;
@@ -88,7 +88,7 @@ function EntityCard({
 
   const center = useMemo((): [number, number] => {
     if (example) {
-      const pts = example.controlPoints.split(';').map((p) => {
+      const pts = example.controlPoints.split(' ').map((p) => {
         const [lon, lat] = p.split(',').map(Number);
         return [lon, lat] as [number, number];
       });

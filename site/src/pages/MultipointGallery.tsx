@@ -63,7 +63,7 @@ function GalleryCard({
 
   // Compute center from control points
   const center = useMemo((): [number, number] => {
-    const pts = example.controlPoints.split(';').map((p) => {
+    const pts = example.controlPoints.split(' ').map((p) => {
       const [lon, lat] = p.split(',').map(Number);
       return [lon, lat] as [number, number];
     });
