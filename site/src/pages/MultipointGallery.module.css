@@ -1,7 +1,7 @@
 /* rtmx:req REQ-XW-088 */
 
 .page {
-  max-width: 1200px;
+  /* No max-width -- let grid fill available space */
 }
 
 .title {
@@ -17,12 +17,29 @@
   margin-bottom: 24px;
 }
 
-.filterRow {
+.controlBar {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 20px;
+  gap: 20px;
+  margin-bottom: 16px;
   flex-wrap: wrap;
+}
+
+.controlGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.controlLabel {
+  font-size: 13px;
+  color: var(--tak-text-secondary);
+  white-space: nowrap;
+}
+
+.btnGroup {
+  display: flex;
+  gap: 4px;
 }
 
 .filterBtn {
@@ -48,23 +65,23 @@
   color: #fff;
 }
 
-.affiliationRow {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.affiliationLabel {
+.affiliationBtn {
+  padding: 6px 14px;
   font-size: 13px;
+  font-family: var(--tak-font-sans);
+  background: var(--tak-bg-secondary);
+  border: 1px solid var(--tak-border);
+  border-left: 3px solid #888;
+  border-radius: 4px;
   color: var(--tak-text-secondary);
-  margin-right: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
 }
 
 .card {
@@ -80,76 +97,81 @@
 }
 
 .cardMap {
-  height: 180px;
+  position: relative;
+  height: 150px;
   background: #1a1a2e;
+  overflow: hidden;
 }
 
 .cardBody {
-  padding: 12px 16px;
+  padding: 6px 10px 8px;
 }
 
-.cardName {
-  font-size: 15px;
+.cardDesignation {
+  font-size: 13px;
   font-weight: 600;
-  color: var(--tak-text-primary);
-  margin-bottom: 4px;
-}
-
-.cardSidc {
-  font-size: 12px;
-  font-family: var(--tak-font-mono);
-  color: var(--tak-text-secondary);
-  margin-bottom: 6px;
+  color: var(--tak-accent, #FFE35E);
+  line-height: 1.3;
+  margin-bottom: 2px;
 }
 
 .cardMeta {
   display: flex;
-  gap: 12px;
-  font-size: 12px;
-  color: var(--tak-text-secondary);
-  margin-bottom: 6px;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+  line-height: 1.3;
 }
 
-.cardDesignation {
-  font-size: 12px;
+.cardSidc {
+  font-size: 10px;
   font-family: var(--tak-font-mono);
-  color: var(--tak-accent, #FFE35E);
-  margin-bottom: 4px;
+  color: var(--tak-text-secondary);
+}
+
+.cardPts {
+  font-size: 10px;
+  color: var(--tak-text-secondary);
+  white-space: nowrap;
 }
 
 .cardDesc {
-  font-size: 13px;
+  font-size: 11px;
   color: var(--tak-text-secondary);
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .badge {
-  display: inline-block;
+  position: absolute;
+  top: 6px;
+  right: 6px;
   padding: 2px 8px;
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 10px;
+  font-weight: 700;
   border-radius: 4px;
   text-transform: uppercase;
+  z-index: 1;
+  letter-spacing: 0.5px;
 }
 
 .badgeLine {
-  background: rgba(33, 150, 243, 0.15);
-  color: #64b5f6;
+  background: #1565c0;
+  color: #fff;
 }
 
 .badgeArea {
-  background: rgba(76, 175, 80, 0.15);
-  color: #81c784;
+  background: #2e7d32;
+  color: #fff;
 }
 
 .badgeArrow {
-  background: rgba(255, 152, 0, 0.15);
-  color: #ffb74d;
+  background: #e65100;
+  color: #fff;
 }
 
 .badgePoint {
-  background: rgba(156, 39, 176, 0.15);
-  color: #ce93d8;
+  background: #7b1fa2;
+  color: #fff;
 }
 
 .count {
@@ -162,21 +184,24 @@
   .title {
     font-size: 22px;
   }
-  .filterRow {
-    gap: 4px;
+  .controlBar {
+    gap: 10px;
+  }
+  .controlGroup {
+    width: 100%;
   }
   .filterBtn {
     padding: 5px 10px;
     font-size: 12px;
   }
-  .affiliationRow {
-    flex-wrap: wrap;
-    gap: 4px;
+  .affiliationBtn {
+    padding: 5px 10px;
+    font-size: 12px;
   }
   .grid {
     grid-template-columns: 1fr;
   }
   .cardMap {
-    height: 140px;
+    height: 120px;
   }
 }

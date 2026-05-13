@@ -47,6 +47,45 @@
   border-bottom-color: #FFE35E;
 }
 
+/* Control bar: Affiliation + search aligned */
+.controlBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.controlGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.controlLabel {
+  font-size: 13px;
+  color: #878787;
+  white-space: nowrap;
+}
+
+.affiliationGroup {
+  display: flex;
+  gap: 2px;
+}
+
+.affiliationBtn {
+  padding: 6px 14px;
+  font-size: 13px;
+  font-family: 'Nunito', sans-serif;
+  background: #242424;
+  border: 1px solid #444;
+  border-left: 3px solid #888;
+  border-radius: 4px;
+  color: #C8C8C8;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
 /* Search */
 .searchRow {
   margin-bottom: 20px;
@@ -475,6 +514,16 @@
   }
   .tab {
     padding: 8px 12px;
+    font-size: 12px;
+  }
+  .controlBar {
+    gap: 10px;
+  }
+  .controlGroup {
+    width: 100%;
+  }
+  .affiliationBtn {
+    padding: 5px 10px;
     font-size: 12px;
   }
   .browseLayout {

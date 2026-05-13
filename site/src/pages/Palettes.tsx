@@ -336,10 +336,10 @@ function MarkersPanel() {
         <div className={styles.paletteName}>Markers (MIL-STD-2525)</div>
         <div className={styles.paletteCount}>{totalCount} entities -- military symbology</div>
       </div>
-      <div style={{ display: 'flex', gap: 24, alignItems: 'center', flexWrap: 'wrap', marginBottom: 12 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-          <span style={{ fontSize: 13, color: '#878787', lineHeight: '32px' }}>Version</span>
-          <div className={styles.subToggle} style={{ display: 'flex', alignItems: 'center' }}>
+      <div className={styles.controlBar}>
+        <div className={styles.controlGroup}>
+          <span className={styles.controlLabel}>Version</span>
+          <div className={styles.subToggle}>
             {versions.map((v) => (
               <button
                 key={v}
@@ -351,18 +351,17 @@ function MarkersPanel() {
             ))}
           </div>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-          <span style={{ fontSize: 13, color: '#878787', lineHeight: '32px' }}>Affiliation</span>
-          <div style={{ display: 'flex', gap: 2 }}>
+        <div className={styles.controlGroup}>
+          <span className={styles.controlLabel}>Affiliation</span>
+          <div className={styles.affiliationGroup}>
             {AFFILIATIONS.map((a) => (
               <button
                 key={a.key}
+                className={styles.affiliationBtn}
                 style={{
-                  padding: '4px 12px', fontSize: 12, borderRadius: 4, cursor: 'pointer',
-                  borderTop: '1px solid #444', borderRight: '1px solid #444', borderBottom: '1px solid #444',
-                  borderLeft: `3px solid ${a.color}`,
-                  backgroundColor: affiliation.key === a.key ? a.color : '#242424',
-                  color: affiliation.key === a.key ? contrastText(a.color) : '#C8C8C8',
+                  borderLeftColor: a.color,
+                  backgroundColor: affiliation.key === a.key ? a.color : undefined,
+                  color: affiliation.key === a.key ? contrastText(a.color) : undefined,
                 }}
                 onClick={() => setAffiliation(a)}
               >

@@ -1,39 +1,33 @@
 // rtmx:req REQ-XW-138
-import { useEffect, useRef, useCallback, useState } from 'react';
+import { useEffect, useCallback, useState } from 'react';
 
 interface PendingRequest {
   resolve: (geojson: string | null) => void;
-  reject: (err: Error) => void;
 }
 
-/**
- * Hook that manages a Web Worker for multi-point tactical graphics rendering.
- * Returns a renderMultipoint function that queues render requests
- * and resolves with GeoJSON strings.
- *
- * Results are memoized by symbolCode+controlPoints+scale+bbox key.
- */
-export function useMultipointWorker() {
-  const workerRef = useRef<Worker | null>(null);
-  const pendingRef = useRef<Map<string, PendingRequest>>(new Map());
-  const cacheRef = useRef<Map<string, string>>(new Map());
-  const [ready, setReady] = useState(false);
+// Shared singleton worker -- all components share one worker instance
+let sharedWorker: Worker | null = null;
+let sharedPending: Map<string, PendingRequest> = new Map();
+let sharedCache: Map<string, string> = new Map();
+let refCount = 0;
 
-  useEffect(() => {
-    const worker = new Worker(
+function getWorker(): Worker {
+  if (!sharedWorker) {
+    sharedWorker = new Worker(
       new URL('../workers/multipoint-worker.ts', import.meta.url),
       { type: 'module' }
     );
 
-    worker.onmessage = (e: MessageEvent) => {
+    sharedWorker.onmessage = (e: MessageEvent) => {
       const { id, geojson, error } = e.data;
-      const pending = pendingRef.current.get(id);
+      const pending = sharedPending.get(id);
       if (pending) {
-        pendingRef.current.delete(id);
+        sharedPending.delete(id);
         if (error) {
+          console.warn('[multipoint-worker] error for', id, error);
           pending.resolve(null);
         } else if (geojson) {
-          cacheRef.current.set(id, geojson);
+          sharedCache.set(id, geojson);
           pending.resolve(geojson);
         } else {
           pending.resolve(null);
@@ -41,24 +35,40 @@ export function useMultipointWorker() {
       }
     };
 
-    worker.onerror = () => {
-      for (const [, pending] of pendingRef.current) {
+    sharedWorker.onerror = (e) => {
+      console.error('[multipoint-worker] worker error:', e);
+      for (const [, pending] of sharedPending) {
         pending.resolve(null);
       }
-      pendingRef.current.clear();
+      sharedPending.clear();
     };
+  }
+  return sharedWorker;
+}
 
-    workerRef.current = worker;
+function releaseWorker() {
+  refCount--;
+  if (refCount <= 0 && sharedWorker) {
+    sharedWorker.terminate();
+    sharedWorker = null;
+    sharedPending.clear();
+    sharedCache.clear();
+    refCount = 0;
+  }
+}
+
+/**
+ * Hook that manages a shared Web Worker for multi-point tactical graphics rendering.
+ * All components share a single worker instance. Results are memoized by key.
+ */
+export function useMultipointWorker() {
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    getWorker();
+    refCount++;
     setReady(true);
-
-    return () => {
-      worker.terminate();
-      workerRef.current = null;
-      for (const [, pending] of pendingRef.current) {
-        pending.resolve(null);
-      }
-      pendingRef.current.clear();
-    };
+    return () => { releaseWorker(); };
   }, []);
 
   const renderMultipoint = useCallback(
@@ -75,18 +85,19 @@ export function useMultipointWorker() {
         : '';
       const cacheKey = `${symbolCode}:${scale}:${controlPoints}:${bbox}:${modKey}`;
 
-      const cached = cacheRef.current.get(cacheKey);
+      const cached = sharedCache.get(cacheKey);
       if (cached) {
         return Promise.resolve(cached);
       }
 
-      if (!workerRef.current) {
+      const worker = sharedWorker;
+      if (!worker) {
         return Promise.resolve(null);
       }
 
       return new Promise((resolve) => {
-        pendingRef.current.set(cacheKey, { resolve, reject: () => resolve(null) });
-        workerRef.current!.postMessage({
+        sharedPending.set(cacheKey, { resolve });
+        worker.postMessage({
           id: cacheKey,
           symbolCode,
           controlPoints,

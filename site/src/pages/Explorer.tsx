@@ -336,19 +336,18 @@ function BrowsePanel() {
 
   return (
     <div>
-      <div style={{ display: 'flex', gap: 16, alignItems: 'center', flexWrap: 'wrap', marginBottom: 12 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-          <span style={{ fontSize: 13, color: '#878787', lineHeight: '32px' }}>Affiliation</span>
-          <div style={{ display: 'flex', gap: 2 }}>
+      <div className={styles.controlBar}>
+        <div className={styles.controlGroup}>
+          <span className={styles.controlLabel}>Affiliation</span>
+          <div className={styles.affiliationGroup}>
             {BROWSE_AFFILIATIONS.map((a) => (
               <button
                 key={a.key}
+                className={styles.affiliationBtn}
                 style={{
-                  padding: '4px 12px', fontSize: 12, borderRadius: 4, cursor: 'pointer',
-                  borderTop: '1px solid #444', borderRight: '1px solid #444', borderBottom: '1px solid #444',
-                  borderLeft: `3px solid ${a.color}`,
-                  backgroundColor: affiliation.key === a.key ? a.color : '#242424',
-                  color: affiliation.key === a.key ? contrastText(a.color) : '#C8C8C8',
+                  borderLeftColor: a.color,
+                  backgroundColor: affiliation.key === a.key ? a.color : undefined,
+                  color: affiliation.key === a.key ? contrastText(a.color) : undefined,
                 }}
                 onClick={() => setAffiliation(a)}
               >

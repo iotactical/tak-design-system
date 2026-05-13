@@ -64,12 +64,157 @@ export const BASEMAP_STYLES = [
   },
 ] as const;
 
-const DEFAULT_BASEMAP = BASEMAP_STYLES[0];
+const DEFAULT_BASEMAP = BASEMAP_STYLES[1]; // Terrain (Voyager) -- better contrast for tactical graphics
+
+/** Dark basemap for gallery thumbnails -- uses the same CARTO dark tiles as the
+ *  main dark basemap but adds a solid background fallback so tiles that haven't
+ *  loaded yet still look clean. */
+const THUMBNAIL_STYLE: import('maplibre-gl').StyleSpecification = {
+  version: 8,
+  sources: {
+    'carto-dark': {
+      type: 'raster',
+      tiles: [
+        'https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',
+        'https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',
+        'https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',
+      ],
+      tileSize: 256,
+      attribution: 'CARTO',
+    },
+  },
+  layers: [
+    { id: 'background', type: 'background', paint: { 'background-color': '#141422' } },
+    { id: 'carto-dark-layer', type: 'raster', source: 'carto-dark', minzoom: 0, maxzoom: 19 },
+  ],
+};
+
+/** Compute bounding box from parsed GeoJSON for auto-fit */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function computeBounds(geojson: any): [[number, number], [number, number]] | null {
+  let minLng = Infinity, minLat = Infinity, maxLng = -Infinity, maxLat = -Infinity;
+  let count = 0;
+
+  function visitCoords(coords: number[]) {
+    if (!Array.isArray(coords) || coords.length < 2) return;
+    minLng = Math.min(minLng, coords[0]);
+    minLat = Math.min(minLat, coords[1]);
+    maxLng = Math.max(maxLng, coords[0]);
+    maxLat = Math.max(maxLat, coords[1]);
+    count++;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  function walk(geometry: any) {
+    if (!geometry || !geometry.type) return;
+    switch (geometry.type) {
+      case 'Point': visitCoords(geometry.coordinates); break;
+      case 'MultiPoint':
+      case 'LineString': (geometry.coordinates || []).forEach(visitCoords); break;
+      case 'MultiLineString':
+      case 'Polygon': (geometry.coordinates || []).forEach((ring: number[][]) => ring.forEach(visitCoords)); break;
+      case 'MultiPolygon': (geometry.coordinates || []).forEach((poly: number[][][]) => poly.forEach(ring => ring.forEach(visitCoords))); break;
+      case 'GeometryCollection': (geometry.geometries || []).forEach(walk); break;
+    }
+  }
+
+  if (geojson.features) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    for (const f of geojson.features) { if (f.geometry) walk(f.geometry); }
+  } else if (geojson.geometry) {
+    walk(geojson.geometry);
+  } else if (geojson.type && geojson.type !== 'Feature' && geojson.type !== 'FeatureCollection') {
+    walk(geojson);
+  }
+
+  if (count === 0) return null;
+  if (minLng === maxLng) { minLng -= 0.5; maxLng += 0.5; }
+  if (minLat === maxLat) { minLat -= 0.5; maxLat += 0.5; }
+  return [[minLng, minLat], [maxLng, maxLat]];
+}
 
 const GEOJSON_SOURCE_ID = 'multipoint-source';
+const LINE_CASING_LAYER_ID = 'multipoint-line-casing';
 const LINE_LAYER_ID = 'multipoint-lines';
 const FILL_LAYER_ID = 'multipoint-fills';
 const LABEL_LAYER_ID = 'multipoint-labels';
+
+/** Add GeoJSON source + layers to a map instance */
+function addGeoJsonLayers(map: import('maplibre-gl').Map) {
+  if (map.getSource(GEOJSON_SOURCE_ID)) return;
+
+  map.addSource(GEOJSON_SOURCE_ID, {
+    type: 'geojson',
+    data: { type: 'FeatureCollection', features: [] },
+  });
+
+  // WebRenderer puts color in various property names depending on feature type:
+  // lines/fills: stroke, strokeColor, fill, fillColor
+  // labels: labelColor, fontColor, color
+  // Replace black (#000000) with blue -- MIL-STD uses black for friendly control
+  // measures which is invisible on dark backgrounds.
+  const rawColor: import('maplibre-gl').ExpressionSpecification =
+    ['coalesce', ['get', 'stroke'], ['get', 'strokeColor'], ['get', 'labelColor'], ['get', 'fontColor'], ['get', 'color'], '#4DA6FF'];
+  const colorExpr: import('maplibre-gl').ExpressionSpecification =
+    ['case', ['==', rawColor, '#000000'], '#4DA6FF', rawColor];
+  const widthExpr: import('maplibre-gl').ExpressionSpecification =
+    ['coalesce', ['get', 'stroke-width'], ['get', 'strokeWidth'], 3];
+  const rawFill: import('maplibre-gl').ExpressionSpecification =
+    ['coalesce', ['get', 'fill'], ['get', 'fillColor'], '#4DA6FF'];
+  const fillExpr: import('maplibre-gl').ExpressionSpecification =
+    ['case', ['==', rawFill, '#000000'], '#4DA6FF', rawFill];
+
+  map.addLayer({
+    id: FILL_LAYER_ID,
+    type: 'fill',
+    source: GEOJSON_SOURCE_ID,
+    filter: ['==', '$type', 'Polygon'],
+    paint: {
+      'fill-color': fillExpr,
+      'fill-opacity': 0.35,
+    },
+  });
+
+  // White outline behind colored lines for contrast on any background
+  map.addLayer({
+    id: LINE_CASING_LAYER_ID,
+    type: 'line',
+    source: GEOJSON_SOURCE_ID,
+    paint: {
+      'line-color': '#ffffff',
+      'line-width': widthExpr,
+      'line-gap-width': 1,
+      'line-opacity': 0.2,
+    },
+  });
+
+  map.addLayer({
+    id: LINE_LAYER_ID,
+    type: 'line',
+    source: GEOJSON_SOURCE_ID,
+    paint: {
+      'line-color': colorExpr,
+      'line-width': widthExpr,
+    },
+  });
+
+  map.addLayer({
+    id: LABEL_LAYER_ID,
+    type: 'symbol',
+    source: GEOJSON_SOURCE_ID,
+    layout: {
+      'text-field': ['coalesce', ['get', 'label'], ['get', 'name'], ''],
+      'text-size': 12,
+      'text-allow-overlap': true,
+      'text-ignore-placement': true,
+    },
+    paint: {
+      'text-color': colorExpr,
+      'text-halo-color': '#000000',
+      'text-halo-width': 2,
+    },
+  });
+}
 
 export interface MultipointMapProps {
   geojson: string | null;
@@ -94,7 +239,7 @@ export function MultipointMap({
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<InstanceType<typeof import('maplibre-gl').Map> | null>(null);
   const [loaded, setLoaded] = useState(false);
-  const [basemapIdx, setBasemapIdx] = useState(0);
+  const [basemapIdx, setBasemapIdx] = useState(1);
 
   // Initialize map
   useEffect(() => {
@@ -108,59 +253,16 @@ export function MultipointMap({
 
       map = new maplibregl.Map({
         container: containerRef.current,
-        style: DEFAULT_BASEMAP.style,
+        style: small ? THUMBNAIL_STYLE : DEFAULT_BASEMAP.style,
         center,
         zoom,
         attributionControl: false,
+        interactive: !small,
       });
 
       map.on('load', () => {
         if (cancelled || !map) return;
-
-        map.addSource(GEOJSON_SOURCE_ID, {
-          type: 'geojson',
-          data: { type: 'FeatureCollection', features: [] },
-        });
-
-        map.addLayer({
-          id: FILL_LAYER_ID,
-          type: 'fill',
-          source: GEOJSON_SOURCE_ID,
-          filter: ['==', '$type', 'Polygon'],
-          paint: {
-            'fill-color': ['coalesce', ['get', 'fill'], '#4fc3f7'],
-            'fill-opacity': 0.25,
-          },
-        });
-
-        map.addLayer({
-          id: LINE_LAYER_ID,
-          type: 'line',
-          source: GEOJSON_SOURCE_ID,
-          paint: {
-            'line-color': ['coalesce', ['get', 'stroke'], '#4fc3f7'],
-            'line-width': ['coalesce', ['get', 'stroke-width'], 2],
-          },
-        });
-
-        // REQ-XW-291: Symbol text labels from GeoJSON properties
-        map.addLayer({
-          id: LABEL_LAYER_ID,
-          type: 'symbol',
-          source: GEOJSON_SOURCE_ID,
-          layout: {
-            'text-field': ['coalesce', ['get', 'label'], ['get', 'name'], ''],
-            'text-size': 12,
-            'text-allow-overlap': true,
-            'text-ignore-placement': true,
-          },
-          paint: {
-            'text-color': ['coalesce', ['get', 'stroke'], '#ffffff'],
-            'text-halo-color': '#000000',
-            'text-halo-width': 1.5,
-          },
-        });
-
+        addGeoJsonLayers(map);
         mapRef.current = map;
         setLoaded(true);
       });
@@ -183,59 +285,25 @@ export function MultipointMap({
     };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // REQ-XW-276: Switch basemap style
+  // REQ-XW-276: Switch basemap style (interactive maps only)
+  const initialBasemapRef = useRef(basemapIdx);
   useEffect(() => {
-    if (!loaded || !mapRef.current) return;
+    if (!loaded || !mapRef.current || small) return;
+    // Skip the first run -- initial style is already set in the constructor
+    if (initialBasemapRef.current === basemapIdx) {
+      initialBasemapRef.current = -1; // mark as consumed
+      return;
+    }
     const bm = BASEMAP_STYLES[basemapIdx];
     const map = mapRef.current;
 
-    // setStyle removes all sources/layers, so we need to re-add after style loads
+    // setStyle removes all sources/layers, so re-add after style loads
     map.once('style.load', () => {
-      if (!map.getSource(GEOJSON_SOURCE_ID)) {
-        map.addSource(GEOJSON_SOURCE_ID, {
-          type: 'geojson',
-          data: { type: 'FeatureCollection', features: [] },
-        });
-        map.addLayer({
-          id: FILL_LAYER_ID,
-          type: 'fill',
-          source: GEOJSON_SOURCE_ID,
-          filter: ['==', '$type', 'Polygon'],
-          paint: {
-            'fill-color': ['coalesce', ['get', 'fill'], '#4fc3f7'],
-            'fill-opacity': 0.25,
-          },
-        });
-        map.addLayer({
-          id: LINE_LAYER_ID,
-          type: 'line',
-          source: GEOJSON_SOURCE_ID,
-          paint: {
-            'line-color': ['coalesce', ['get', 'stroke'], '#4fc3f7'],
-            'line-width': ['coalesce', ['get', 'stroke-width'], 2],
-          },
-        });
-        map.addLayer({
-          id: LABEL_LAYER_ID,
-          type: 'symbol',
-          source: GEOJSON_SOURCE_ID,
-          layout: {
-            'text-field': ['coalesce', ['get', 'label'], ['get', 'name'], ''],
-            'text-size': 12,
-            'text-allow-overlap': true,
-            'text-ignore-placement': true,
-          },
-          paint: {
-            'text-color': ['coalesce', ['get', 'stroke'], '#ffffff'],
-            'text-halo-color': '#000000',
-            'text-halo-width': 1.5,
-          },
-        });
-      }
+      addGeoJsonLayers(map);
     });
 
     map.setStyle(bm.style as string | import('maplibre-gl').StyleSpecification);
-  }, [basemapIdx, loaded]);
+  }, [basemapIdx, loaded, small]);
 
   // Update GeoJSON source when data changes
   useEffect(() => {
@@ -245,10 +313,36 @@ export function MultipointMap({
     if (!source || source.type !== 'geojson') return;
 
     if (geojson) {
+      let raw = typeof geojson === 'string' ? geojson : JSON.stringify(geojson);
+      // Sanitize WebRenderer output for strict JSON parsers (Firefox):
+      raw = raw
+        .replace(/,\s*}/g, '}')
+        .replace(/,\s*]/g, ']')
+        .replace(/:\s*NaN/g, ':0')
+        .replace(/:\s*-?Infinity/g, ':0')
+        .replace(/:\s*undefined/g, ':null');
       try {
-        const parsed = typeof geojson === 'string' ? JSON.parse(geojson) : geojson;
+        const parsed = JSON.parse(raw);
         (source as import('maplibre-gl').GeoJSONSource).setData(parsed);
-      } catch {
+
+        // Auto-fit: zoom map to graphic bounds so nothing is clipped.
+        // Use generous padding (30% of container size) to keep graphics
+        // well within the thumbnail and account for labels/arrowheads.
+        if (small && mapRef.current) {
+          const bounds = computeBounds(parsed);
+          if (bounds) {
+            const container = mapRef.current.getContainer();
+            const pad = Math.round(Math.min(container.clientWidth, container.clientHeight) * 0.3);
+            mapRef.current.fitBounds(bounds, { padding: pad, duration: 0, maxZoom: 12 });
+          }
+        }
+      } catch (e) {
+        const colMatch = String(e).match(/column (\d+)/);
+        const col = colMatch ? parseInt(colMatch[1], 10) : 0;
+        console.error('[MultipointMap] parse error at col', col,
+          'context:', JSON.stringify(raw.substring(Math.max(0, col - 40), col + 40)),
+          'charCode:', col > 0 ? raw.charCodeAt(col - 1) : -1,
+          'total length:', raw.length);
         (source as import('maplibre-gl').GeoJSONSource).setData({
           type: 'FeatureCollection',
           features: [],

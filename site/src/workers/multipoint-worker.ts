@@ -40,8 +40,6 @@ self.onmessage = async (e: MessageEvent<MultipointWorkerRequest>) => {
       }
     }
 
-    // WebRenderer.RenderSymbol returns a KML/GeoJSON/GeoSVG string
-    // OUTPUT_FORMAT_GEOJSON = 2
     const outputFormat = format ?? 2;
 
     const result = WebRenderer.RenderSymbol(
@@ -59,7 +57,11 @@ self.onmessage = async (e: MessageEvent<MultipointWorkerRequest>) => {
     );
 
     if (result) {
-      (self as unknown as Worker).postMessage({ id, geojson: result });
+      // Pass affiliation info alongside raw GeoJSON so the component can
+      // apply color mapping without needing to parse/re-stringify in the worker
+      // (avoids Firefox strict JSON parse failures on WebRenderer output).
+      const si = symbolCode.length >= 4 ? symbolCode.substring(2, 4) : '03';
+      (self as unknown as Worker).postMessage({ id, geojson: result, si });
     } else {
       (self as unknown as Worker).postMessage({ id, error: 'RenderSymbol returned null' });
     }

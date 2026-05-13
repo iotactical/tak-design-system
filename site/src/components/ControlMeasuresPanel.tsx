@@ -20,18 +20,18 @@ interface B2DMapping {
 }
 
 const AFFILIATIONS: { code: string; label: string }[] = [
-  { code: '3', label: 'Friendly' },
-  { code: '6', label: 'Hostile' },
-  { code: '4', label: 'Neutral' },
-  { code: '1', label: 'Unknown' },
+  { code: '03', label: 'Friendly' },
+  { code: '06', label: 'Hostile' },
+  { code: '04', label: 'Neutral' },
+  { code: '01', label: 'Unknown' },
 ];
 
 const DEFAULT_BBOX = '-100.0,35.0,-94.0,40.0';
 const DEFAULT_SCALE = 500000;
 
-function withAffiliation(sidc: string, affiliationChar: string): string {
+function withAffiliation(sidc: string, si: string): string {
   if (sidc.length < 20) return sidc;
-  return sidc.substring(0, 2) + affiliationChar + sidc.substring(3);
+  return sidc.substring(0, 2) + si + sidc.substring(4);
 }
 
 function makeSidc25(entityCode: string): string {
@@ -62,7 +62,7 @@ function EntityCard({
   useEffect(() => {
     if (!ready || !points) return;
     let cancelled = false;
-    renderMultipoint(sidc, points, DEFAULT_SCALE, DEFAULT_BBOX, example?.modifiers, example?.attributes).then((r) => {
+    renderMultipoint(sidc, points, DEFAULT_SCALE, DEFAULT_BBOX).then((r) => {
       if (!cancelled) setGeojson(r);
     });
     return () => { cancelled = true; };
