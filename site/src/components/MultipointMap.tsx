@@ -60,6 +60,7 @@ const DEFAULT_BASEMAP = BASEMAP_STYLES[0];
 const GEOJSON_SOURCE_ID = 'multipoint-source';
 const LINE_LAYER_ID = 'multipoint-lines';
 const FILL_LAYER_ID = 'multipoint-fills';
+const LABEL_LAYER_ID = 'multipoint-labels';
 
 export interface MultipointMapProps {
   geojson: string | null;
@@ -133,6 +134,24 @@ export function MultipointMap({
           },
         });
 
+        // REQ-XW-291: Symbol text labels from GeoJSON properties
+        map.addLayer({
+          id: LABEL_LAYER_ID,
+          type: 'symbol',
+          source: GEOJSON_SOURCE_ID,
+          layout: {
+            'text-field': ['coalesce', ['get', 'label'], ['get', 'name'], ''],
+            'text-size': 12,
+            'text-allow-overlap': true,
+            'text-ignore-placement': true,
+          },
+          paint: {
+            'text-color': ['coalesce', ['get', 'stroke'], '#ffffff'],
+            'text-halo-color': '#000000',
+            'text-halo-width': 1.5,
+          },
+        });
+
         mapRef.current = map;
         setLoaded(true);
       });
@@ -185,6 +204,22 @@ export function MultipointMap({
           paint: {
             'line-color': ['coalesce', ['get', 'stroke'], '#4fc3f7'],
             'line-width': ['coalesce', ['get', 'stroke-width'], 2],
+          },
+        });
+        map.addLayer({
+          id: LABEL_LAYER_ID,
+          type: 'symbol',
+          source: GEOJSON_SOURCE_ID,
+          layout: {
+            'text-field': ['coalesce', ['get', 'label'], ['get', 'name'], ''],
+            'text-size': 12,
+            'text-allow-overlap': true,
+            'text-ignore-placement': true,
+          },
+          paint: {
+            'text-color': ['coalesce', ['get', 'stroke'], '#ffffff'],
+            'text-halo-color': '#000000',
+            'text-halo-width': 1.5,
           },
         });
       }

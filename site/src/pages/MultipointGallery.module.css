@@ -110,6 +110,13 @@
   margin-bottom: 6px;
 }
 
+.cardDesignation {
+  font-size: 12px;
+  font-family: var(--tak-font-mono);
+  color: var(--tak-accent, #FFE35E);
+  margin-bottom: 4px;
+}
+
 .cardDesc {
   font-size: 13px;
   color: var(--tak-text-secondary);

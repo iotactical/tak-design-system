@@ -62,7 +62,7 @@ function EntityCard({
   useEffect(() => {
     if (!ready || !points) return;
     let cancelled = false;
-    renderMultipoint(sidc, points, DEFAULT_SCALE, DEFAULT_BBOX).then((r) => {
+    renderMultipoint(sidc, points, DEFAULT_SCALE, DEFAULT_BBOX, example?.modifiers, example?.attributes).then((r) => {
       if (!cancelled) setGeojson(r);
     });
     return () => { cancelled = true; };
@@ -156,6 +156,13 @@ function EntityCard({
               <div style={{ fontSize: 13, color: '#A0A0A0', marginBottom: 8 }}>
                 {example.description}
               </div>
+              {example.modifiers && Object.keys(example.modifiers).length > 0 && (
+                <div style={{ fontSize: 12, color: '#878787', marginBottom: 8 }}>
+                  {Object.entries(example.modifiers).map(([k, v]) => (
+                    <span key={k} style={{ marginRight: 12 }}>{k}: <span style={{ color: '#DAD4BC' }}>{v}</span></span>
+                  ))}
+                </div>
+              )}
               <div style={{ fontSize: 12, color: '#878787', marginBottom: 8 }}>
                 Points: {example.minPoints}{example.maxPoints > 0 ? `-${example.maxPoints}` : '+'} |
                 Click map to add points interactively

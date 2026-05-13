@@ -54,6 +54,8 @@ function GalleryCard({
       example.controlPoints,
       DEFAULT_SCALE,
       DEFAULT_BBOX,
+      example.modifiers,
+      example.attributes,
     ).then((result) => {
       if (!cancelled) setGeojson(result);
     });
@@ -89,6 +91,9 @@ function GalleryCard({
             {example.maxPoints > 0 ? `-${example.maxPoints}` : '+'} pts
           </span>
         </div>
+        {example.modifiers?.['T'] && (
+          <div className={styles.cardDesignation}>{example.modifiers['T']}</div>
+        )}
         <div className={styles.cardDesc}>{example.description}</div>
       </div>
     </div>
