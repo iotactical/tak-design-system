@@ -14,3 +14,43 @@
   overflow: hidden;
   background: #1a1a2e;
 }
+
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.basemapToggle {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 2px;
+  background: rgba(26, 26, 26, 0.85);
+  border-radius: 6px;
+  padding: 2px;
+  z-index: 10;
+}
+
+.basemapBtn {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #878787;
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+
+.basemapBtn:hover {
+  color: #DAD4BC;
+}
+
+.basemapBtnActive {
+  background: #2E2E2E;
+  color: #FFE35E;
+  border-color: #FFE35E;
+}
