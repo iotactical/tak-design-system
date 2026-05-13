@@ -162,6 +162,17 @@
   .title {
     font-size: 22px;
   }
+  .filterRow {
+    gap: 4px;
+  }
+  .filterBtn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  .affiliationRow {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
   .grid {
     grid-template-columns: 1fr;
   }

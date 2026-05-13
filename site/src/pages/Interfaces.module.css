@@ -185,6 +185,14 @@
   .title {
     font-size: 24px;
   }
+  .tabBar {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .tab {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
   .searchBar {
     max-width: 100%;
   }

@@ -301,6 +301,15 @@
   .title {
     font-size: 24px;
   }
+  .tabBar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .tab {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
   .searchInput {
     max-width: 100%;
   }
