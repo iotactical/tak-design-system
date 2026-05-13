@@ -12,46 +12,55 @@ function loadMaplibre() {
   return maplibrePromise;
 }
 
-// REQ-XW-275: Multiple basemap style definitions
+// REQ-XW-275: Multiple basemap style definitions (inline styles to avoid CORS issues)
+function makeRasterStyle(
+  id: string,
+  tiles: string[],
+  attribution: string,
+  tileSize = 256,
+): import('maplibre-gl').StyleSpecification {
+  return {
+    version: 8,
+    sources: {
+      [id]: { type: 'raster', tiles, tileSize, attribution },
+    },
+    layers: [
+      { id: `${id}-layer`, type: 'raster', source: id, minzoom: 0, maxzoom: 19 },
+    ],
+  };
+}
+
 export const BASEMAP_STYLES = [
   {
     id: 'dark',
     label: 'Dark',
-    style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
-    type: 'vector' as const,
+    style: makeRasterStyle(
+      'carto-dark',
+      ['https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',
+       'https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',
+       'https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png'],
+      'CARTO',
+    ),
   },
   {
     id: 'terrain',
     label: 'Terrain',
-    style: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',
-    type: 'vector' as const,
+    style: makeRasterStyle(
+      'carto-voyager',
+      ['https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png',
+       'https://b.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png',
+       'https://c.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png'],
+      'CARTO',
+    ),
   },
   {
     id: 'satellite',
     label: 'Satellite',
-    style: {
-      version: 8 as const,
-      sources: {
-        'esri-satellite': {
-          type: 'raster' as const,
-          tiles: [
-            'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-          ],
-          tileSize: 256,
-          attribution: 'Esri, Maxar, Earthstar Geographics',
-        },
-      },
-      layers: [
-        {
-          id: 'esri-satellite-layer',
-          type: 'raster' as const,
-          source: 'esri-satellite',
-          minzoom: 0,
-          maxzoom: 19,
-        },
-      ],
-    },
-    type: 'raster' as const,
+    style: makeRasterStyle(
+      'esri-satellite',
+      ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],
+      'Esri, Maxar, Earthstar Geographics',
+    ),
   },
 ] as const;
 

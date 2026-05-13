@@ -29,7 +29,7 @@
     "build:site": "npm -w site run build",
     "clean": "rm -rf platforms/atak/res platforms/atak/compose/generated platforms/web/generated platforms/vscode/generated platforms/flutter/generated platforms/swift/generated platforms/bridge packages/react/dist",
     "pretest": "npm run build && npm run build:bridge && npm run build:registry && npm run build:react && npm run build:site",
-    "test": "node --test tests/**/*.mjs",
+    "test": "node --test --test-concurrency=1 tests/**/*.mjs",
     "test:rtmx": "node scripts/run-tests-rtmx.mjs",
     "test:tokens": "node --test tests/tokens/*.mjs",
     "test:build": "node --test tests/build/*.mjs",

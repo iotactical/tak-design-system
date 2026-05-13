@@ -22,8 +22,8 @@ describe('REQ-XW-275: Multiple basemap style definitions', () => {
     assert.ok(src.includes("id: 'satellite'"), 'Should have satellite basemap');
   });
 
-  it('dark basemap uses CartoDB dark-matter', () => {
-    assert.ok(src.includes('dark-matter'), 'Dark basemap should use CartoDB dark-matter');
+  it('dark basemap uses CartoDB dark tiles', () => {
+    assert.ok(src.includes('dark_all'), 'Dark basemap should use CartoDB dark raster tiles');
   });
 
   it('terrain basemap uses CartoDB voyager', () => {
