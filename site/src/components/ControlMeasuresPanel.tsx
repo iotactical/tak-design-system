@@ -1,13 +1,16 @@
 // rtmx:req REQ-XW-106
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { MultipointMap } from './MultipointMap';
+import { MilSymRenderer } from './MilSymRenderer';
 import { useMultipointWorker } from '../hooks/useMultipointWorker';
 import {
-  MULTIPOINT_EXAMPLES,
   EXAMPLE_BY_ENTITY,
+  MULTIPOINT_CATEGORIES,
   type MultipointExample,
 } from '../data/multipoint-examples';
 import b2dData from '../../../data/mil-std-2525/b2d.json';
+import styles from '../pages/Explorer.module.css';
 
 interface B2DMapping {
   b_sidc: string;
@@ -19,6 +22,75 @@ interface B2DMapping {
   lossy: boolean;
 }
 
+const CATEGORY_NAMES: Record<string, string> = {
+  '11': 'Command & Control Lines',
+  '12': 'Areas of Interest',
+  '13': 'Control Points',
+  '14': 'Maneuver Lines',
+  '15': 'Maneuver Areas',
+  '16': 'Observation & Outposts',
+  '17': 'Air Corridors & Routes',
+  '18': 'Airspace Control Points',
+  '21': 'Maritime & Naval',
+  '22': 'Electronic Warfare',
+  '23': 'Deception',
+  '24': 'Fire Support',
+  '25': 'Fire Support Points',
+  '26': 'Fire Support Lines',
+  '27': 'Minefields & Obstacles',
+  '28': 'Obstacle Types',
+  '29': 'Obstacle Lines & Wire',
+  '31': 'Detainee & POW',
+  '32': 'Support & Supply Points',
+  '33': 'Convoys',
+  '34': 'Tactical Mission Tasks',
+};
+
+const SINGLE_POINT_PREFIXES = new Set(['13', '16', '18', '25']);
+
+function isSinglePoint(ec: string): boolean {
+  if (SINGLE_POINT_PREFIXES.has(ec.substring(0, 2))) return true;
+  return SINGLE_POINT_INDIVIDUALS.has(ec);
+}
+
+const SINGLE_POINT_INDIVIDUALS = new Set([
+  '210200','210400','210500','210700','210800','210900','211100','211400','211500',
+  '212000','212100','212300','212400','212600','212700','212800','212901','212902',
+  '212903','212904','213000','213100','213200','213300','213500','213501','213502',
+  '213504','213506','213507','213508','213510','213511','213512','213513','213514',
+  '213515','213600','213700','213800','213900','214200','214400','214500','214800',
+  '214900','215000','215100','215200','215300','215400','215500','215600','215700',
+  '215800','215900','216000','216100','216200','216300','216400','216500','216600',
+  '216700','216800','216900','217100','217200','217300','217500','217600','217700',
+  '218000','218100','218200','218300','218500','218600','218700','218800','218900',
+  '219000','219100','219200',
+  '240601','240602','240900',
+  '270705',
+  '280200','280201','280300','280400','280500','280600','280700','280800','280900',
+  '281000','281100','281200','281300','281400','281500','281600','281800','281801',
+  '281802','281803','281804','281805','281806','281901','281902','281903','282001','282002',
+  '320200','320300','320400','320500','320600','320700','320800','320900','321000',
+  '321100','321200','321300','321400','321500','321600','321700','321707','321708',
+  '321709','321710','321711','321712','321713','321714','321715','321716',
+  '340900','341400','341600','342800',
+]);
+
+interface TreeGroup {
+  prefix: string;
+  name: string;
+  entities: B2DMapping[];
+}
+
+/** A committed graphic in the session */
+interface CommittedGraphic {
+  id: number;
+  label: string;
+  sidc: string;
+  affiliation: string;
+  pointCount: number;
+  geojson: string;
+}
+
 const AFFILIATIONS: { code: string; label: string }[] = [
   { code: '03', label: 'Friendly' },
   { code: '06', label: 'Hostile' },
@@ -26,8 +98,9 @@ const AFFILIATIONS: { code: string; label: string }[] = [
   { code: '01', label: 'Unknown' },
 ];
 
-const DEFAULT_BBOX = '-100.0,35.0,-94.0,40.0';
-const DEFAULT_SCALE = 500000;
+const AFF_LABELS: Record<string, string> = {
+  '03': 'FRI', '06': 'HOS', '04': 'NEU', '01': 'UNK',
+};
 
 function withAffiliation(sidc: string, si: string): string {
   if (sidc.length < 20) return sidc;
@@ -38,177 +111,172 @@ function makeSidc25(entityCode: string): string {
   return `1003250000${entityCode}0000`;
 }
 
-function EntityCard({
-  entity,
-  example,
-  affiliation,
-  expanded,
-  onToggle,
-}: {
-  entity: B2DMapping;
-  example: MultipointExample | undefined;
-  affiliation: string;
-  expanded: boolean;
-  onToggle: () => void;
-}) {
-  const { renderMultipoint, ready } = useMultipointWorker();
-  const [geojson, setGeojson] = useState<string | null>(null);
-  const [userPoints, setUserPoints] = useState<[number, number][]>([]);
+type Point = [number, number];
 
-  const sidc = withAffiliation(makeSidc25(entity.d_ec), affiliation);
-  const points = example?.controlPoints || '';
+/** Parse canonical "lon,lat lon,lat" control-point string into Point[] */
+function parseControlPoints(cp: string): Point[] {
+  return cp.split(' ').map((p) => {
+    const [lon, lat] = p.split(',').map(Number);
+    return [lon, lat] as Point;
+  });
+}
 
-  // Render with canonical points
-  useEffect(() => {
-    if (!ready || !points) return;
-    let cancelled = false;
-    renderMultipoint(sidc, points, DEFAULT_SCALE, DEFAULT_BBOX).then((r) => {
-      if (!cancelled) setGeojson(r);
-    });
-    return () => { cancelled = true; };
-  }, [sidc, points, ready, renderMultipoint]);
+function usePointHistory() {
+  const [points, setPoints] = useState<Point[]>([]);
+  const redoStack = useRef<Point[]>([]);
 
-  // Re-render when user clicks points in interactive mode
-  useEffect(() => {
-    if (!expanded || !ready || userPoints.length < 2) return;
-    let cancelled = false;
-    const cp = userPoints.map(([lon, lat]) => `${lon},${lat}`).join(' ');
-    const lons = userPoints.map((p) => p[0]);
-    const lats = userPoints.map((p) => p[1]);
-    const bbox = `${Math.min(...lons) - 1},${Math.min(...lats) - 1},${Math.max(...lons) + 1},${Math.max(...lats) + 1}`;
-    renderMultipoint(sidc, cp, DEFAULT_SCALE, bbox).then((r) => {
-      if (!cancelled) setGeojson(r);
-    });
-    return () => { cancelled = true; };
-  }, [expanded, userPoints, sidc, ready, renderMultipoint]);
-
-  const handleClick = useCallback((lngLat: [number, number]) => {
-    setUserPoints((prev) => [...prev, lngLat]);
+  const addPoint = useCallback((pt: Point) => {
+    redoStack.current = [];
+    setPoints((prev) => [...prev, pt]);
   }, []);
 
-  const center = useMemo((): [number, number] => {
-    if (example) {
-      const pts = example.controlPoints.split(' ').map((p) => {
-        const [lon, lat] = p.split(',').map(Number);
-        return [lon, lat] as [number, number];
+  const undo = useCallback(() => {
+    setPoints((prev) => {
+      if (prev.length === 0) return prev;
+      redoStack.current.push(prev[prev.length - 1]);
+      return prev.slice(0, -1);
+    });
+  }, []);
+
+  const redo = useCallback(() => {
+    const pt = redoStack.current.pop();
+    if (pt) setPoints((prev) => [...prev, pt]);
+  }, []);
+
+  const updatePoint = useCallback((index: number, pt: Point) => {
+    setPoints((prev) => {
+      if (index < 0 || index >= prev.length) return prev;
+      const next = [...prev];
+      next[index] = pt;
+      return next;
+    });
+  }, []);
+
+  const translateAll = useCallback((dLng: number, dLat: number) => {
+    setPoints((prev) =>
+      prev.map(([lng, lat]) => [lng + dLng, lat + dLat] as Point)
+    );
+  }, []);
+
+  const rotateAll = useCallback((angleDeg: number) => {
+    setPoints((prev) => {
+      if (prev.length < 2) return prev;
+      const cx = prev.reduce((s, p) => s + p[0], 0) / prev.length;
+      const cy = prev.reduce((s, p) => s + p[1], 0) / prev.length;
+      const rad = (angleDeg * Math.PI) / 180;
+      const cos = Math.cos(rad);
+      const sin = Math.sin(rad);
+      return prev.map(([lng, lat]) => {
+        const dx = lng - cx;
+        const dy = lat - cy;
+        return [cx + dx * cos - dy * sin, cy + dx * sin + dy * cos] as Point;
       });
-      return [
-        pts.reduce((s, p) => s + p[0], 0) / pts.length,
-        pts.reduce((s, p) => s + p[1], 0) / pts.length,
-      ];
-    }
-    return [-98.5, 39.8];
-  }, [example]);
+    });
+  }, []);
 
-  return (
-    <div style={{
-      background: '#1E1E1E',
-      border: '1px solid #2E2E2E',
-      borderRadius: 8,
-      marginBottom: 8,
-      overflow: 'hidden',
-    }}>
-      <button
-        onClick={onToggle}
-        style={{
-          width: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          gap: 12,
-          padding: '10px 16px',
-          background: 'none',
-          border: 'none',
-          color: '#E0E0E0',
-          cursor: 'pointer',
-          textAlign: 'left',
-          fontFamily: 'inherit',
-        }}
-      >
-        <span style={{ fontFamily: 'var(--tak-font-mono)', fontSize: 12, color: '#878787', minWidth: 60 }}>
-          {entity.d_ec}
-        </span>
-        <span style={{ flex: 1, fontSize: 14 }}>{entity.label}</span>
-        {example && (
-          <span style={{
-            fontSize: 11,
-            padding: '2px 8px',
-            borderRadius: 4,
-            background: 'rgba(33,150,243,0.15)',
-            color: '#64b5f6',
-          }}>
-            {example.category}
-          </span>
-        )}
-        <span style={{ fontSize: 12, color: '#878787' }}>{expanded ? '\u25B2' : '\u25BC'}</span>
-      </button>
+  const scaleAll = useCallback((factor: number, anchorLng: number, anchorLat: number) => {
+    setPoints((prev) =>
+      prev.map(([lng, lat]) => [
+        anchorLng + (lng - anchorLng) * factor,
+        anchorLat + (lat - anchorLat) * factor,
+      ] as Point)
+    );
+  }, []);
 
-      {expanded && (
-        <div style={{ padding: '0 16px 16px' }}>
-          <div style={{ fontSize: 12, color: '#878787', marginBottom: 8 }}>
-            SIDC: <span style={{ fontFamily: 'var(--tak-font-mono)' }}>{sidc}</span>
-            {entity.b_sidc && (
-              <span> | B: <span style={{ fontFamily: 'var(--tak-font-mono)' }}>{entity.b_sidc}</span></span>
-            )}
-          </div>
+  const clear = useCallback(() => {
+    redoStack.current = [];
+    setPoints([]);
+  }, []);
 
-          {example ? (
-            <>
-              <div style={{ fontSize: 13, color: '#A0A0A0', marginBottom: 8 }}>
-                {example.description}
-              </div>
-              {example.modifiers && Object.keys(example.modifiers).length > 0 && (
-                <div style={{ fontSize: 12, color: '#878787', marginBottom: 8 }}>
-                  {Object.entries(example.modifiers).map(([k, v]) => (
-                    <span key={k} style={{ marginRight: 12 }}>{k}: <span style={{ color: '#DAD4BC' }}>{v}</span></span>
-                  ))}
-                </div>
-              )}
-              <div style={{ fontSize: 12, color: '#878787', marginBottom: 8 }}>
-                Points: {example.minPoints}{example.maxPoints > 0 ? `-${example.maxPoints}` : '+'} |
-                Click map to add points interactively
-                {userPoints.length > 0 && (
-                  <button
-                    onClick={(e) => { e.stopPropagation(); setUserPoints([]); }}
-                    style={{
-                      marginLeft: 8,
-                      padding: '2px 8px',
-                      fontSize: 11,
-                      background: 'rgba(244,67,54,0.15)',
-                      color: '#ef9a9a',
-                      border: '1px solid rgba(244,67,54,0.3)',
-                      borderRadius: 4,
-                      cursor: 'pointer',
-                    }}
-                  >
-                    Clear ({userPoints.length})
-                  </button>
-                )}
-              </div>
-              <div style={{ height: 300, borderRadius: 6, overflow: 'hidden' }}>
-                <MultipointMap
-                  geojson={geojson}
-                  center={center}
-                  zoom={6}
-                  onClick={handleClick}
-                />
-              </div>
-            </>
-          ) : (
-            <div style={{ fontSize: 13, color: '#878787', padding: '16px 0' }}>
-              No canonical example coordinates defined for this graphic type.
-              This entity may be a single-point control measure.
-            </div>
-          )}
-        </div>
-      )}
-    </div>
-  );
+  const canUndo = points.length > 0;
+  const canRedo = redoStack.current.length > 0;
+
+  return {
+    points, addPoint, updatePoint, translateAll, rotateAll, scaleAll,
+    undo, redo, clear, canUndo, canRedo, setPoints,
+  };
 }
+
+/** Merge multiple GeoJSON strings into one FeatureCollection */
+function mergeGeoJson(items: string[]): string {
+  const allFeatures: unknown[] = [];
+  for (const raw of items) {
+    try {
+      const sanitized = raw
+        .replace(/,\s*}/g, '}')
+        .replace(/,\s*]/g, ']')
+        .replace(/:\s*NaN/g, ':0')
+        .replace(/:\s*-?Infinity/g, ':0')
+        .replace(/:\s*undefined/g, ':null');
+      const parsed = JSON.parse(sanitized);
+      if (parsed.features) {
+        for (const f of parsed.features) allFeatures.push(f);
+      }
+    } catch { /* skip unparseable */ }
+  }
+  return JSON.stringify({ type: 'FeatureCollection', features: allFeatures });
+}
+
+/** Generate a simple GeoJSON preview of user-plotted points (circles + connecting line)
+ *  for visual feedback before the minimum point count is met. */
+function buildPointPreviewGeoJson(pts: Point[]): string {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const features: any[] = [];
+  if (pts.length >= 2) {
+    features.push({
+      type: 'Feature',
+      geometry: { type: 'LineString', coordinates: pts.map(([lon, lat]) => [lon, lat]) },
+      properties: { stroke: '#FFE35E', 'stroke-width': 2, strokeDasharray: '6,4' },
+    });
+  }
+  for (let i = 0; i < pts.length; i++) {
+    const [lon, lat] = pts[i];
+    const d = 0.03;
+    features.push({
+      type: 'Feature',
+      geometry: {
+        type: 'Polygon',
+        coordinates: [[[lon - d, lat - d], [lon + d, lat - d], [lon + d, lat + d], [lon - d, lat + d], [lon - d, lat - d]]],
+      },
+      properties: { fill: '#FFE35E', fillColor: '#FFE35E', stroke: '#FFE35E', 'stroke-width': 1, label: `${i + 1}` },
+    });
+  }
+  return JSON.stringify({ type: 'FeatureCollection', features });
+}
+
+const DESKTOP_MIN_WIDTH = 768;
 
 export default function ControlMeasuresPanel() {
   const [search, setSearch] = useState('');
-  const [affiliation, setAffiliation] = useState('3');
-  const [expandedEntity, setExpandedEntity] = useState<string | null>(null);
+  const [affiliation, setAffiliation] = useState('03');
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+  const [selectedEc, setSelectedEc] = useState<string | null>(null);
+  const [activeGeojson, setActiveGeojson] = useState<string | null>(null);
+  const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set());
+  const [committed, setCommitted] = useState<CommittedGraphic[]>([]);
+  const [isDesktop, setIsDesktop] = useState(
+    typeof window !== 'undefined' ? window.innerWidth >= DESKTOP_MIN_WIDTH : true
+  );
+  // After committing, suppress canonical rendering until user starts a new graphic
+  const justCommittedRef = useRef(false);
+  const nextId = useRef(1);
+  const mapWrapRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+
+  const {
+    points: userPoints, addPoint, updatePoint, translateAll, rotateAll, scaleAll,
+    undo, redo, clear, canUndo, canRedo, setPoints,
+  } = usePointHistory();
+  const { renderMultipoint, ready } = useMultipointWorker();
+
+  // Desktop gate
+  useEffect(() => {
+    function onResize() {
+      setIsDesktop(window.innerWidth >= DESKTOP_MIN_WIDTH);
+    }
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
 
   const ss25Entities = useMemo(() => {
     return (b2dData as { mappings: B2DMapping[] }).mappings.filter(
@@ -216,82 +284,532 @@ export default function ControlMeasuresPanel() {
     );
   }, []);
 
-  const filtered = useMemo(() => {
-    if (!search) return ss25Entities;
-    const q = search.toLowerCase();
-    return ss25Entities.filter(
-      (e) => e.label.toLowerCase().includes(q) || e.d_ec.includes(q) || e.b_sidc.includes(q.toUpperCase())
+  const entityByEc = useMemo(() => {
+    const map = new Map<string, B2DMapping>();
+    for (const e of ss25Entities) map.set(e.d_ec, e);
+    return map;
+  }, [ss25Entities]);
+
+  const tree = useMemo((): TreeGroup[] => {
+    const groupMap = new Map<string, B2DMapping[]>();
+    let entities = ss25Entities;
+
+    if (search) {
+      const q = search.toLowerCase();
+      entities = entities.filter((e) =>
+        e.label.toLowerCase().includes(q) ||
+        e.d_ec.includes(q) ||
+        e.b_sidc.toLowerCase().includes(q)
+      );
+    }
+
+    if (categoryFilter) {
+      entities = entities.filter((e) => {
+        const ex = EXAMPLE_BY_ENTITY[e.d_ec];
+        return ex ? ex.category === categoryFilter : false;
+      });
+    }
+
+    for (const e of entities) {
+      const prefix = e.d_ec.substring(0, 2);
+      let group = groupMap.get(prefix);
+      if (!group) { group = []; groupMap.set(prefix, group); }
+      group.push(e);
+    }
+
+    return Array.from(groupMap.entries())
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([prefix, ents]) => ({
+        prefix,
+        name: CATEGORY_NAMES[prefix] || `Group ${prefix}`,
+        entities: ents,
+      }));
+  }, [ss25Entities, search, categoryFilter]);
+
+  useEffect(() => {
+    if (search) setExpandedGroups(new Set(tree.map((g) => g.prefix)));
+  }, [search, tree]);
+
+  const selectedEntity = useMemo(
+    () => (selectedEc ? entityByEc.get(selectedEc) ?? null : null),
+    [entityByEc, selectedEc]
+  );
+  const example: MultipointExample | undefined = selectedEc
+    ? EXAMPLE_BY_ENTITY[selectedEc]
+    : undefined;
+  const singlePoint = selectedEc ? isSinglePoint(selectedEc) : false;
+
+  const sidc = selectedEc
+    ? withAffiliation(makeSidc25(selectedEc), affiliation)
+    : '';
+
+  // Whether we should show the canonical example (no user points, not just committed)
+  const showCanonical = !justCommittedRef.current && userPoints.length === 0 && !!example && !singlePoint;
+
+  // Active vertices: user points, or canonical example points for editing
+  const activeVertices = useMemo((): Point[] => {
+    if (userPoints.length > 0) return userPoints;
+    if (showCanonical && example) return parseControlPoints(example.controlPoints);
+    return [];
+  }, [userPoints, showCanonical, example]);
+
+  // Commit the current in-progress graphic
+  const commitCurrent = useCallback(() => {
+    if (!activeGeojson || !selectedEc || singlePoint || activeVertices.length === 0) return;
+    const entity = entityByEc.get(selectedEc);
+    setCommitted((prev) => [
+      {
+        id: nextId.current++,
+        label: entity?.label || selectedEc,
+        sidc,
+        affiliation,
+        pointCount: activeVertices.length,
+        geojson: activeGeojson,
+      },
+      ...prev,
+    ]);
+    justCommittedRef.current = true;
+    clear();
+    setActiveGeojson(null);
+  }, [activeGeojson, selectedEc, singlePoint, activeVertices.length, entityByEc, sidc, affiliation, clear]);
+
+  // Auto-commit when switching entities (if user has plotted points with rendered result)
+  const prevSelectedEc = useRef(selectedEc);
+  useEffect(() => {
+    if (prevSelectedEc.current !== selectedEc && prevSelectedEc.current !== null) {
+      commitCurrent();
+    }
+    prevSelectedEc.current = selectedEc;
+  }, [selectedEc, commitCurrent]);
+
+  // Reset state when selection changes
+  useEffect(() => {
+    justCommittedRef.current = false;
+    clear();
+  }, [selectedEc, clear]);
+
+  // Adopt canonical points into editable user points (called on first drag/transform)
+  const adoptCanonical = useCallback(() => {
+    if (userPoints.length > 0 || !example) return;
+    justCommittedRef.current = false;
+    setPoints(parseControlPoints(example.controlPoints));
+  }, [userPoints.length, example, setPoints]);
+
+  // Render the active (in-progress) graphic
+  useEffect(() => {
+    if (!ready || !selectedEc || singlePoint) {
+      setActiveGeojson(null);
+      return;
+    }
+
+    // After commit, don't re-render canonical
+    if (justCommittedRef.current && userPoints.length === 0) {
+      setActiveGeojson(null);
+      return;
+    }
+
+    const minPts = example?.minPoints ?? 1;
+    const hasUserPoints = userPoints.length >= minPts;
+    const canonicalPoints = example?.controlPoints || '';
+    const points = hasUserPoints
+      ? userPoints.map(([lon, lat]) => `${lon},${lat}`).join(' ')
+      : canonicalPoints;
+
+    // Below minimum: show point preview markers instead of the full graphic
+    if (!points && userPoints.length > 0) {
+      setActiveGeojson(buildPointPreviewGeoJson(userPoints));
+      return;
+    }
+    if (userPoints.length > 0 && !hasUserPoints) {
+      setActiveGeojson(buildPointPreviewGeoJson(userPoints));
+      return;
+    }
+
+    if (!points) {
+      setActiveGeojson(null);
+      return;
+    }
+
+    const parsedPts = hasUserPoints
+      ? userPoints
+      : parseControlPoints(canonicalPoints);
+    const lons = parsedPts.map((p) => p[0]);
+    const lats = parsedPts.map((p) => p[1]);
+    const pad = hasUserPoints ? 1 : 2;
+    const bbox = `${Math.min(...lons) - pad},${Math.min(...lats) - pad},${Math.max(...lons) + pad},${Math.max(...lats) + pad}`;
+
+    const el = mapWrapRef.current;
+    const pw = el ? el.clientWidth : 800;
+    const ph = el ? el.clientHeight : 500;
+    const [, bBottom, , bTop] = bbox.split(',').map(Number);
+    const midLat = (bBottom + bTop) / 2;
+    const bboxParts = bbox.split(',').map(Number);
+    const geoWidth = (bboxParts[2] - bboxParts[0]) * Math.cos((midLat * Math.PI) / 180) * 111;
+    const geoHeight = (bTop - bBottom) * 111;
+    const geoAspect = geoWidth / geoHeight;
+    const pxW = Math.round(Math.max(pw, ph * geoAspect));
+    const pxH = Math.round(pxW / geoAspect);
+
+    let cancelled = false;
+    const delay = userPoints.length > 0 ? 80 : 0;
+    const timer = setTimeout(() => {
+      renderMultipoint(
+        sidc, points, 5000000, bbox,
+        undefined, undefined, pxW, pxH,
+      ).then((r) => {
+        if (!cancelled) setActiveGeojson(r);
+      });
+    }, delay);
+
+    return () => { cancelled = true; clearTimeout(timer); };
+  }, [selectedEc, affiliation, userPoints, ready, renderMultipoint, sidc, example, singlePoint]);
+
+  // Merge committed + active GeoJSON for the map
+  const mergedGeojson = useMemo(() => {
+    const sources: string[] = [];
+    for (const c of committed) sources.push(c.geojson);
+    if (activeGeojson) sources.push(activeGeojson);
+    if (sources.length === 0) return null;
+    if (sources.length === 1) return sources[0];
+    return mergeGeoJson(sources);
+  }, [committed, activeGeojson]);
+
+  const handleMapClick = useCallback((lngLat: Point) => {
+    if (!selectedEc || singlePoint) return;
+    justCommittedRef.current = false;
+    addPoint(lngLat);
+  }, [selectedEc, singlePoint, addPoint]);
+
+  // Transform callbacks -- adopt canonical on first interaction
+  const handleVertexDrag = useCallback((index: number, lngLat: Point) => {
+    if (userPoints.length === 0 && example) {
+      // Adopt canonical points, then apply the drag
+      const pts = parseControlPoints(example.controlPoints);
+      pts[index] = lngLat;
+      justCommittedRef.current = false;
+      setPoints(pts);
+    } else {
+      updatePoint(index, lngLat);
+    }
+  }, [userPoints.length, example, updatePoint, setPoints]);
+
+  const handleShapeTranslate = useCallback((dLng: number, dLat: number) => {
+    if (userPoints.length === 0) adoptCanonical();
+    translateAll(dLng, dLat);
+  }, [userPoints.length, adoptCanonical, translateAll]);
+
+  const handleRotate = useCallback((angleDeg: number) => {
+    if (userPoints.length === 0) adoptCanonical();
+    rotateAll(angleDeg);
+  }, [userPoints.length, adoptCanonical, rotateAll]);
+
+  const handleResize = useCallback((factor: number, anchorLng: number, anchorLat: number) => {
+    if (userPoints.length === 0) adoptCanonical();
+    scaleAll(factor, anchorLng, anchorLat);
+  }, [userPoints.length, adoptCanonical, scaleAll]);
+
+  // Keyboard shortcuts
+  useEffect(() => {
+    function onKeyDown(e: KeyboardEvent) {
+      const mod = e.metaKey || e.ctrlKey;
+      if (mod && e.key === 'z' && !e.shiftKey) { e.preventDefault(); undo(); }
+      else if (mod && e.key === 'z' && e.shiftKey) { e.preventDefault(); redo(); }
+      else if (mod && e.key === 'y') { e.preventDefault(); redo(); }
+      else if (e.key === 'Escape' && userPoints.length > 0) { clear(); }
+      else if (e.key === 'Enter' && activeVertices.length > 0) {
+        e.preventDefault();
+        commitCurrent();
+      }
+    }
+    const el = panelRef.current;
+    if (el) {
+      el.addEventListener('keydown', onKeyDown);
+      return () => el.removeEventListener('keydown', onKeyDown);
+    }
+  }, [undo, redo, clear, userPoints.length, activeVertices.length, commitCurrent]);
+
+  const center = useMemo((): Point => {
+    if (activeVertices.length > 0) {
+      return [
+        activeVertices.reduce((s, p) => s + p[0], 0) / activeVertices.length,
+        activeVertices.reduce((s, p) => s + p[1], 0) / activeVertices.length,
+      ];
+    }
+    return [-97.5, 37.5];
+  }, [activeVertices]);
+
+  const handleSelect = useCallback((ec: string) => {
+    setSelectedEc((prev) => (prev === ec ? null : ec));
+  }, []);
+
+  const toggleGroup = useCallback((prefix: string) => {
+    setExpandedGroups((prev) => {
+      const next = new Set(prev);
+      if (next.has(prefix)) next.delete(prefix); else next.add(prefix);
+      return next;
+    });
+  }, []);
+
+  const deleteGraphic = useCallback((id: number) => {
+    setCommitted((prev) => prev.filter((g) => g.id !== id));
+  }, []);
+
+  const clearAll = useCallback(() => {
+    setCommitted([]);
+    clear();
+    setActiveGeojson(null);
+  }, [clear]);
+
+  // Plotting instruction text
+  const minPts = example?.minPoints ?? 1;
+  const maxPts = example?.maxPoints ?? 0;
+  const plotInstruction = useMemo(() => {
+    if (!selectedEc || singlePoint) return null;
+    if (showCanonical) return 'Drag vertices or handles to edit. Click map to plot new points.';
+    if (justCommittedRef.current && userPoints.length === 0) return 'Graphic committed. Click to plot another, or select a different entity.';
+    if (userPoints.length === 0) return null;
+    const n = userPoints.length + 1;
+    if (userPoints.length < minPts) {
+      if (maxPts > 0) return `Click to place point ${n} of ${maxPts}`;
+      return `Click to place point ${n} (${minPts}+ required)`;
+    }
+    if (maxPts > 0 && userPoints.length < maxPts) {
+      return `Click to place point ${n} of ${maxPts}`;
+    }
+    return `${userPoints.length} points plotted -- Enter to commit, click to add more`;
+  }, [selectedEc, singlePoint, showCanonical, userPoints.length, minPts, maxPts]);
+
+  const totalFiltered = tree.reduce((s, g) => s + g.entities.length, 0);
+
+  // REQ-SITE-016: Desktop-only gate
+  if (!isDesktop) {
+    return (
+      <div className={styles.cmEmpty} style={{ minHeight: 300, flexDirection: 'column', gap: 16 }}>
+        <div style={{ fontSize: 40, opacity: 0.3 }}>&#9000;</div>
+        <div style={{ fontSize: 15, color: '#A0A0A0', maxWidth: 360, textAlign: 'center', lineHeight: 1.6 }}>
+          Interactive tactical graphic plotting requires a desktop browser
+          with a larger screen and mouse input.
+        </div>
+        <div style={{ fontSize: 13, color: '#666' }}>
+          Minimum viewport width: {DESKTOP_MIN_WIDTH}px
+        </div>
+      </div>
     );
-  }, [ss25Entities, search]);
+  }
 
   return (
-    <div>
-      <div style={{ marginBottom: 16 }}>
-        <p style={{ fontSize: 14, color: '#A0A0A0', marginBottom: 12 }}>
-          Symbol Set 25 (Control Measures) -- {ss25Entities.length} entities.
-          Multi-point graphics require 2+ geographic coordinates to render.
-        </p>
+    <div ref={panelRef} tabIndex={-1} style={{ outline: 'none' }}>
+      {/* Top bar */}
+      <div className={styles.cmTopBar}>
+        <input
+          type="text"
+          placeholder="Search control measures..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className={styles.cmSearch}
+          style={{ flex: 1, maxWidth: 360 }}
+        />
+        <div style={{ display: 'flex', gap: 4 }}>
+          {AFFILIATIONS.map((a) => (
+            <button
+              key={a.code}
+              onClick={() => setAffiliation(a.code)}
+              className={styles.affiliationBtn}
+              style={
+                affiliation === a.code
+                  ? { background: 'var(--tak-accent, #FFE35E)', color: '#000', borderColor: '#FFE35E' }
+                  : undefined
+              }
+            >
+              {a.label}
+            </button>
+          ))}
+        </div>
+        <div style={{ display: 'flex', gap: 4 }}>
+          <button
+            onClick={() => setCategoryFilter(null)}
+            className={styles.cmFilterBtn}
+            style={
+              categoryFilter === null
+                ? { background: 'var(--tak-accent, #FFE35E)', color: '#000', borderColor: '#FFE35E' }
+                : undefined
+            }
+          >
+            All
+          </button>
+          {MULTIPOINT_CATEGORIES.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setCategoryFilter(categoryFilter === cat ? null : cat)}
+              className={styles.cmFilterBtn}
+              style={
+                categoryFilter === cat
+                  ? { background: 'var(--tak-accent, #FFE35E)', color: '#000', borderColor: '#FFE35E' }
+                  : undefined
+              }
+            >
+              {cat.charAt(0).toUpperCase() + cat.slice(1)}
+            </button>
+          ))}
+        </div>
+        <span className={styles.cmCount}>
+          {totalFiltered} entities{search && ` matching "${search}"`}
+        </span>
+      </div>
 
-        <div style={{ display: 'flex', gap: 12, marginBottom: 12, flexWrap: 'wrap' }}>
-          <input
-            type="text"
-            placeholder="Search control measures..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            style={{
-              flex: 1,
-              minWidth: 200,
-              maxWidth: 400,
-              padding: '8px 12px',
-              fontSize: 14,
-              background: '#1E1E1E',
-              border: '1px solid #2E2E2E',
-              borderRadius: 6,
-              color: '#E0E0E0',
-              outline: 'none',
-              fontFamily: 'inherit',
-            }}
-          />
-          <div style={{ display: 'flex', gap: 4 }}>
-            {AFFILIATIONS.map((a) => (
-              <button
-                key={a.code}
-                onClick={() => setAffiliation(a.code)}
-                style={{
-                  padding: '6px 12px',
-                  fontSize: 12,
-                  background: affiliation === a.code ? 'var(--tak-accent, #FFE35E)' : '#1E1E1E',
-                  color: affiliation === a.code ? '#000' : '#878787',
-                  border: '1px solid #2E2E2E',
-                  borderRadius: 6,
-                  cursor: 'pointer',
-                }}
-              >
-                {a.label}
-              </button>
+      {/* Main layout: sidebar | map | log */}
+      <div className={styles.cmLayout}>
+        {/* Sidebar tree */}
+        <div className={styles.cmSidebar}>
+          <div className={styles.cmList}>
+            {tree.map((group) => (
+              <div key={group.prefix}>
+                <button
+                  className={styles.cmGroupHeader}
+                  onClick={() => toggleGroup(group.prefix)}
+                >
+                  <span className={styles.cmGroupArrow}>
+                    {expandedGroups.has(group.prefix) ? '\u25BC' : '\u25B6'}
+                  </span>
+                  <span className={styles.cmGroupName}>{group.name}</span>
+                  <span className={styles.cmGroupCount}>{group.entities.length}</span>
+                </button>
+                {expandedGroups.has(group.prefix) &&
+                  group.entities.map((entity) => {
+                    const ex = EXAMPLE_BY_ENTITY[entity.d_ec];
+                    const sp = isSinglePoint(entity.d_ec);
+                    return (
+                      <button
+                        key={entity.d_ec + entity.b_sidc}
+                        className={`${styles.cmRow} ${selectedEc === entity.d_ec ? styles.cmRowActive : ''}`}
+                        onClick={() => handleSelect(entity.d_ec)}
+                        title={entity.label}
+                      >
+                        <span className={styles.cmRowIcon}>{sp ? '\u2022' : '\u2500'}</span>
+                        <span className={styles.cmRowLabel}>{entity.label}</span>
+                        {ex && <span className={styles.cmRowBadge}>{ex.category}</span>}
+                      </button>
+                    );
+                  })}
+              </div>
             ))}
           </div>
         </div>
 
-        <p style={{ fontSize: 12, color: '#878787' }}>
-          {filtered.length} result{filtered.length !== 1 ? 's' : ''}
-          {' | '}{MULTIPOINT_EXAMPLES.length} have map previews
-        </p>
-      </div>
+        {/* Map + info */}
+        <div className={styles.cmMain}>
+          <div className={styles.cmMapWrap} ref={mapWrapRef}>
+            {plotInstruction && (
+              <div className={styles.cmToast}>{plotInstruction}</div>
+            )}
 
-      <div>
-        {filtered.map((entity) => (
-          <EntityCard
-            key={entity.d_ec + entity.b_sidc}
-            entity={entity}
-            example={EXAMPLE_BY_ENTITY[entity.d_ec]}
-            affiliation={affiliation}
-            expanded={expandedEntity === entity.d_ec}
-            onToggle={() =>
-              setExpandedEntity((prev) => (prev === entity.d_ec ? null : entity.d_ec))
-            }
-          />
-        ))}
+            {selectedEc && singlePoint ? (
+              <div className={styles.cmEmpty}>
+                <div style={{ marginBottom: 12 }}>
+                  <MilSymRenderer sidc={sidc} size={80} label={selectedEntity?.label} />
+                </div>
+                <div style={{ fontSize: 13, color: '#A0A0A0' }}>
+                  Single-point symbol -- rendered as an icon overlay.
+                  <br />
+                  <Link to="/explorer/browse" style={{ color: '#FFE35E', textDecoration: 'underline' }}>
+                    View in Browse tab (Symbol Set 25)
+                  </Link>
+                </div>
+              </div>
+            ) : (selectedEc || committed.length > 0) ? (
+              <MultipointMap
+                geojson={mergedGeojson}
+                center={center}
+                zoom={6}
+                onClick={handleMapClick}
+                vertices={activeVertices}
+                onVertexDrag={handleVertexDrag}
+                onShapeTranslate={handleShapeTranslate}
+                onRotate={handleRotate}
+                onResize={handleResize}
+              />
+            ) : (
+              <div className={styles.cmEmpty}>
+                Select a control measure from the tree to render it on the map.
+                <br />
+                Click the map to plot points interactively.
+              </div>
+            )}
+          </div>
+
+          {/* Info bar */}
+          {selectedEntity && (
+            <div className={styles.cmInfo}>
+              <span className={styles.cmInfoName}>{selectedEntity.label}</span>
+              <span className={styles.cmInfoSidc}>{sidc}</span>
+              {selectedEntity.b_sidc && (
+                <span className={styles.cmInfoSidc}>B: {selectedEntity.b_sidc}</span>
+              )}
+              {example && (
+                <span className={styles.cmInfoPoints}>
+                  {example.minPoints}{example.maxPoints > 0 ? `-${example.maxPoints}` : '+'} pts
+                </span>
+              )}
+              {example && (
+                <span className={styles.cmInfoDesc}>{example.description}</span>
+              )}
+
+              {!singlePoint && (
+                <div style={{ display: 'flex', gap: 4, marginLeft: 'auto' }}>
+                  <button className={styles.cmToolBtn} onClick={undo} disabled={!canUndo} title="Undo (Ctrl+Z)">Undo</button>
+                  <button className={styles.cmToolBtn} onClick={redo} disabled={!canRedo} title="Redo (Ctrl+Shift+Z)">Redo</button>
+                  {activeVertices.length > 0 && (
+                    <button className={styles.cmToolBtn} onClick={commitCurrent} title="Commit graphic (Enter)">Commit</button>
+                  )}
+                  {userPoints.length > 0 && (
+                    <button className={styles.cmClearBtn} onClick={clear} title="Clear points (Esc)">
+                      Clear {userPoints.length} pt{userPoints.length !== 1 ? 's' : ''}
+                    </button>
+                  )}
+                </div>
+              )}
+
+              {!example && !singlePoint && userPoints.length === 0 && (
+                <span className={styles.cmInfoDesc}>
+                  No example data. Click the map to plot points.
+                </span>
+              )}
+            </div>
+          )}
+        </div>
+
+        {/* Graphics log (right side) */}
+        {committed.length > 0 && (
+          <div className={styles.cmLog}>
+            <div className={styles.cmLogHeader}>
+              <span style={{ fontSize: 12, fontWeight: 600, color: '#DAD4BC' }}>
+                Graphics ({committed.length})
+              </span>
+              <button className={styles.cmClearBtn} onClick={clearAll} title="Clear all graphics">
+                Clear All
+              </button>
+            </div>
+            <div className={styles.cmLogList}>
+              {committed.map((g) => (
+                <div key={g.id} className={styles.cmLogItem}>
+                  <div className={styles.cmLogItemInfo}>
+                    <span className={styles.cmLogItemName}>{g.label}</span>
+                    <span className={styles.cmLogItemMeta}>
+                      {AFF_LABELS[g.affiliation] || '?'} | {g.pointCount} pts
+                    </span>
+                  </div>
+                  <button
+                    className={styles.cmLogDeleteBtn}
+                    onClick={() => deleteGraphic(g.id)}
+                    title="Remove this graphic"
+                  >
+                    &#x2715;
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -64,7 +64,7 @@ export const BASEMAP_STYLES = [
   },
 ] as const;
 
-const DEFAULT_BASEMAP = BASEMAP_STYLES[1]; // Terrain (Voyager) -- better contrast for tactical graphics
+const DEFAULT_BASEMAP = BASEMAP_STYLES[0]; // Dark -- matches site theme, good contrast for colored tactical graphics
 
 /** Dark basemap for gallery thumbnails -- uses the same CARTO dark tiles as the
  *  main dark basemap but adds a solid background fallback so tiles that haven't
@@ -133,14 +133,138 @@ function computeBounds(geojson: any): [[number, number], [number, number]] | nul
   return [[minLng, minLat], [maxLng, maxLat]];
 }
 
+// ---------- Layer IDs ----------
 const GEOJSON_SOURCE_ID = 'multipoint-source';
 const LINE_CASING_LAYER_ID = 'multipoint-line-casing';
 const LINE_LAYER_ID = 'multipoint-lines';
 const FILL_LAYER_ID = 'multipoint-fills';
 const LABEL_LAYER_ID = 'multipoint-labels';
+const VERTEX_SOURCE_ID = 'vertex-source';
+const VERTEX_LAYER_ID = 'vertex-squares';
+const VERTEX_LABEL_LAYER_ID = 'vertex-labels';
+const HANDLE_SOURCE_ID = 'handle-source';
+const HANDLE_BBOX_LAYER_ID = 'handle-bbox';
+const HANDLE_CORNER_LAYER_ID = 'handle-corners';
+const HANDLE_STEM_LAYER_ID = 'handle-stem';
+const HANDLE_ROTATE_LAYER_ID = 'handle-rotate';
 
+// ---------- Custom map images ----------
+function createSquareImageData(
+  size: number, fill: number[], stroke: number[], border = 2,
+): { width: number; height: number; data: Uint8Array } {
+  const data = new Uint8Array(size * size * 4);
+  for (let y = 0; y < size; y++) {
+    for (let x = 0; x < size; x++) {
+      const i = (y * size + x) * 4;
+      const isBorder = x < border || x >= size - border || y < border || y >= size - border;
+      const c = isBorder ? stroke : fill;
+      data[i] = c[0]; data[i + 1] = c[1]; data[i + 2] = c[2]; data[i + 3] = 255;
+    }
+  }
+  return { width: size, height: size, data };
+}
+
+function createCircleImageData(
+  size: number, fill: number[], stroke: number[],
+): { width: number; height: number; data: Uint8Array } {
+  const data = new Uint8Array(size * size * 4);
+  const r = size / 2;
+  for (let y = 0; y < size; y++) {
+    for (let x = 0; x < size; x++) {
+      const i = (y * size + x) * 4;
+      const dx = x - r + 0.5;
+      const dy = y - r + 0.5;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist <= r - 2) {
+        data[i] = fill[0]; data[i + 1] = fill[1]; data[i + 2] = fill[2]; data[i + 3] = 255;
+      } else if (dist <= r) {
+        data[i] = stroke[0]; data[i + 1] = stroke[1]; data[i + 2] = stroke[2]; data[i + 3] = 255;
+      }
+    }
+  }
+  return { width: size, height: size, data };
+}
+
+// ---------- GeoJSON helpers ----------
+function vertexFeatureCollection(vertices: [number, number][]): GeoJSON.FeatureCollection {
+  return {
+    type: 'FeatureCollection',
+    features: vertices.map(([lng, lat], i) => ({
+      type: 'Feature' as const,
+      geometry: { type: 'Point' as const, coordinates: [lng, lat] },
+      properties: { idx: i, label: `${i + 1}` },
+    })),
+  };
+}
+
+function computeHandleGeoJson(vertices: [number, number][]): GeoJSON.FeatureCollection {
+  if (vertices.length < 2) return { type: 'FeatureCollection', features: [] };
+
+  let minLng = Infinity, maxLng = -Infinity, minLat = Infinity, maxLat = -Infinity;
+  for (const [lng, lat] of vertices) {
+    minLng = Math.min(minLng, lng);
+    maxLng = Math.max(maxLng, lng);
+    minLat = Math.min(minLat, lat);
+    maxLat = Math.max(maxLat, lat);
+  }
+
+  const padLng = Math.max((maxLng - minLng) * 0.08, 0.05);
+  const padLat = Math.max((maxLat - minLat) * 0.08, 0.05);
+  const bL = minLng - padLng, bR = maxLng + padLng;
+  const bB = minLat - padLat, bT = maxLat + padLat;
+
+  const features: GeoJSON.Feature[] = [];
+
+  // Bounding box outline
+  features.push({
+    type: 'Feature',
+    geometry: {
+      type: 'LineString',
+      coordinates: [[bL, bB], [bR, bB], [bR, bT], [bL, bT], [bL, bB]],
+    },
+    properties: { handleType: 'bbox' },
+  });
+
+  // Corner resize handles
+  const corners: [string, number, number][] = [
+    ['sw', bL, bB], ['se', bR, bB], ['ne', bR, bT], ['nw', bL, bT],
+  ];
+  for (const [corner, lng, lat] of corners) {
+    features.push({
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [lng, lat] },
+      properties: { handleType: 'resize', corner },
+    });
+  }
+
+  // Rotation handle: stem extending upward from top-center + circular grip
+  const midLng = (bL + bR) / 2;
+  const stemLen = (bT - bB) * 0.2;
+  features.push({
+    type: 'Feature',
+    geometry: {
+      type: 'LineString',
+      coordinates: [[midLng, bT], [midLng, bT + stemLen]],
+    },
+    properties: { handleType: 'rotate-stem' },
+  });
+  features.push({
+    type: 'Feature',
+    geometry: { type: 'Point', coordinates: [midLng, bT + stemLen] },
+    properties: { handleType: 'rotate' },
+  });
+
+  return { type: 'FeatureCollection', features };
+}
+
+/** Opposite corner for resize anchor */
+const OPPOSITE_CORNER: Record<string, string> = {
+  sw: 'ne', se: 'nw', ne: 'sw', nw: 'se',
+};
+
+// ---------- Map layer setup ----------
 /** Add GeoJSON source + layers to a map instance */
-function addGeoJsonLayers(map: import('maplibre-gl').Map) {
+function addGeoJsonLayers(map: import('maplibre-gl').Map, small = false) {
   if (map.getSource(GEOJSON_SOURCE_ID)) return;
 
   map.addSource(GEOJSON_SOURCE_ID, {
@@ -148,11 +272,6 @@ function addGeoJsonLayers(map: import('maplibre-gl').Map) {
     data: { type: 'FeatureCollection', features: [] },
   });
 
-  // WebRenderer puts color in various property names depending on feature type:
-  // lines/fills: stroke, strokeColor, fill, fillColor
-  // labels: labelColor, fontColor, color
-  // Replace black (#000000) with blue -- MIL-STD uses black for friendly control
-  // measures which is invisible on dark backgrounds.
   const rawColor: import('maplibre-gl').ExpressionSpecification =
     ['coalesce', ['get', 'stroke'], ['get', 'strokeColor'], ['get', 'labelColor'], ['get', 'fontColor'], ['get', 'color'], '#4DA6FF'];
   const colorExpr: import('maplibre-gl').ExpressionSpecification =
@@ -169,33 +288,28 @@ function addGeoJsonLayers(map: import('maplibre-gl').Map) {
     type: 'fill',
     source: GEOJSON_SOURCE_ID,
     filter: ['==', '$type', 'Polygon'],
-    paint: {
-      'fill-color': fillExpr,
-      'fill-opacity': 0.35,
-    },
+    paint: { 'fill-color': fillExpr, 'fill-opacity': 0.35 },
   });
 
-  // White outline behind colored lines for contrast on any background
-  map.addLayer({
-    id: LINE_CASING_LAYER_ID,
-    type: 'line',
-    source: GEOJSON_SOURCE_ID,
-    paint: {
-      'line-color': '#ffffff',
-      'line-width': widthExpr,
-      'line-gap-width': 1,
-      'line-opacity': 0.2,
-    },
-  });
+  if (!small) {
+    map.addLayer({
+      id: LINE_CASING_LAYER_ID,
+      type: 'line',
+      source: GEOJSON_SOURCE_ID,
+      paint: {
+        'line-color': '#ffffff',
+        'line-width': widthExpr,
+        'line-gap-width': 1,
+        'line-opacity': 0.2,
+      },
+    });
+  }
 
   map.addLayer({
     id: LINE_LAYER_ID,
     type: 'line',
     source: GEOJSON_SOURCE_ID,
-    paint: {
-      'line-color': colorExpr,
-      'line-width': widthExpr,
-    },
+    paint: { 'line-color': colorExpr, 'line-width': widthExpr },
   });
 
   map.addLayer({
@@ -216,30 +330,174 @@ function addGeoJsonLayers(map: import('maplibre-gl').Map) {
   });
 }
 
+/** Add vertex marker + transform handle layers to an interactive map */
+function addEditLayers(map: import('maplibre-gl').Map) {
+  if (map.getSource(VERTEX_SOURCE_ID)) return;
+
+  // Register custom images
+  if (!map.hasImage('vertex-square')) {
+    map.addImage('vertex-square', createSquareImageData(14, [255, 255, 255], [0, 0, 0]));
+  }
+  if (!map.hasImage('corner-square')) {
+    map.addImage('corner-square', createSquareImageData(16, [255, 255, 255], [60, 60, 60]));
+  }
+  if (!map.hasImage('rotate-circle')) {
+    map.addImage('rotate-circle', createCircleImageData(18, [255, 255, 255], [60, 60, 60]));
+  }
+
+  // --- Vertex source + layers ---
+  map.addSource(VERTEX_SOURCE_ID, {
+    type: 'geojson',
+    data: { type: 'FeatureCollection', features: [] },
+  });
+
+  map.addLayer({
+    id: VERTEX_LAYER_ID,
+    type: 'symbol',
+    source: VERTEX_SOURCE_ID,
+    layout: {
+      'icon-image': 'vertex-square',
+      'icon-allow-overlap': true,
+      'icon-ignore-placement': true,
+    },
+  });
+
+  map.addLayer({
+    id: VERTEX_LABEL_LAYER_ID,
+    type: 'symbol',
+    source: VERTEX_SOURCE_ID,
+    layout: {
+      'text-field': ['get', 'label'],
+      'text-size': 10,
+      'text-offset': [0, -1.4],
+      'text-allow-overlap': true,
+      'text-ignore-placement': true,
+    },
+    paint: {
+      'text-color': '#ffffff',
+      'text-halo-color': '#000',
+      'text-halo-width': 1.5,
+    },
+  });
+
+  // --- Handle source + layers ---
+  map.addSource(HANDLE_SOURCE_ID, {
+    type: 'geojson',
+    data: { type: 'FeatureCollection', features: [] },
+  });
+
+  // Bounding box dashed line
+  map.addLayer({
+    id: HANDLE_BBOX_LAYER_ID,
+    type: 'line',
+    source: HANDLE_SOURCE_ID,
+    filter: ['==', ['get', 'handleType'], 'bbox'],
+    paint: {
+      'line-color': '#ffffff',
+      'line-width': 1,
+      'line-opacity': 0.4,
+      'line-dasharray': [4, 4],
+    },
+  });
+
+  // Rotation stem
+  map.addLayer({
+    id: HANDLE_STEM_LAYER_ID,
+    type: 'line',
+    source: HANDLE_SOURCE_ID,
+    filter: ['==', ['get', 'handleType'], 'rotate-stem'],
+    paint: {
+      'line-color': '#ffffff',
+      'line-width': 1.5,
+      'line-opacity': 0.6,
+    },
+  });
+
+  // Corner resize squares
+  map.addLayer({
+    id: HANDLE_CORNER_LAYER_ID,
+    type: 'symbol',
+    source: HANDLE_SOURCE_ID,
+    filter: ['==', ['get', 'handleType'], 'resize'],
+    layout: {
+      'icon-image': 'corner-square',
+      'icon-allow-overlap': true,
+      'icon-ignore-placement': true,
+    },
+  });
+
+  // Rotation grip circle
+  map.addLayer({
+    id: HANDLE_ROTATE_LAYER_ID,
+    type: 'symbol',
+    source: HANDLE_SOURCE_ID,
+    filter: ['==', ['get', 'handleType'], 'rotate'],
+    layout: {
+      'icon-image': 'rotate-circle',
+      'icon-allow-overlap': true,
+      'icon-ignore-placement': true,
+    },
+  });
+}
+
+// ---------- Drag state ----------
+type DragState =
+  | { type: 'vertex'; idx: number }
+  | { type: 'translate'; lastLng: number; lastLat: number }
+  | { type: 'rotate'; cx: number; cy: number; lastAngle: number }
+  | { type: 'resize'; anchorLng: number; anchorLat: number; lastDist: number }
+  | null;
+
+// ---------- Component ----------
 export interface MultipointMapProps {
   geojson: string | null;
   center?: [number, number];
   zoom?: number;
   small?: boolean;
-  /** Called when user clicks the map -- returns [lng, lat] */
   onClick?: (lngLat: [number, number]) => void;
+  /** Vertex positions for draggable markers (interactive maps only) */
+  vertices?: [number, number][];
+  /** Called when a vertex is dragged to a new position */
+  onVertexDrag?: (index: number, lngLat: [number, number]) => void;
+  /** Called when the entire shape is translated by dragging the graphic body */
+  onShapeTranslate?: (deltaLng: number, deltaLat: number) => void;
+  /** Called when the shape is rotated via the rotation handle (delta in degrees) */
+  onRotate?: (angleDeltaDeg: number) => void;
+  /** Called when the shape is resized via a corner handle */
+  onResize?: (scaleFactor: number, anchorLng: number, anchorLat: number) => void;
 }
 
-/**
- * MapLibre GL component for rendering multi-point tactical graphics as GeoJSON.
- * Lazy-loads maplibre-gl on first render.
- */
 export function MultipointMap({
   geojson,
   center = [-98.5, 39.8],
   zoom = 4,
   small = false,
   onClick,
+  vertices,
+  onVertexDrag,
+  onShapeTranslate,
+  onRotate,
+  onResize,
 }: MultipointMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<InstanceType<typeof import('maplibre-gl').Map> | null>(null);
   const [loaded, setLoaded] = useState(false);
-  const [basemapIdx, setBasemapIdx] = useState(1);
+  const [basemapIdx, setBasemapIdx] = useState(0);
+
+  // Stable refs for callbacks so map event handlers always use the latest
+  const draggingRef = useRef<DragState>(null);
+  const onClickRef = useRef(onClick);
+  const onVertexDragRef = useRef(onVertexDrag);
+  const onShapeTranslateRef = useRef(onShapeTranslate);
+  const onRotateRef = useRef(onRotate);
+  const onResizeRef = useRef(onResize);
+  const verticesRef = useRef(vertices);
+  onClickRef.current = onClick;
+  onVertexDragRef.current = onVertexDrag;
+  onShapeTranslateRef.current = onShapeTranslate;
+  onRotateRef.current = onRotate;
+  onResizeRef.current = onResize;
+  verticesRef.current = vertices;
 
   // Initialize map
   useEffect(() => {
@@ -262,14 +520,182 @@ export function MultipointMap({
 
       map.on('load', () => {
         if (cancelled || !map) return;
-        addGeoJsonLayers(map);
+        addGeoJsonLayers(map, small);
+        if (!small) addEditLayers(map);
         mapRef.current = map;
         setLoaded(true);
       });
 
-      if (onClick) {
+      if (!small) {
+        // --- Vertex drag ---
+        map.on('mousedown', VERTEX_LAYER_ID, (e) => {
+          if (!e.features || e.features.length === 0) return;
+          e.preventDefault();
+          const idx = e.features[0].properties?.idx;
+          if (typeof idx !== 'number') return;
+          draggingRef.current = { type: 'vertex', idx };
+          map!.getCanvas().style.cursor = 'grabbing';
+          map!.dragPan.disable();
+        });
+
+        // --- Resize drag (corner handles) ---
+        map.on('mousedown', HANDLE_CORNER_LAYER_ID, (e) => {
+          if (draggingRef.current) return;
+          if (!e.features || e.features.length === 0) return;
+          e.preventDefault();
+          const corner = e.features[0].properties?.corner as string;
+          const opp = OPPOSITE_CORNER[corner];
+          if (!opp) return;
+          // Find anchor coords from handle features
+          const src = map!.getSource(HANDLE_SOURCE_ID);
+          if (!src) return;
+          // Compute anchor from vertices bounding box
+          const verts = verticesRef.current;
+          if (!verts || verts.length < 2) return;
+          let minLng = Infinity, maxLng = -Infinity, minLat = Infinity, maxLat = -Infinity;
+          for (const [lng, lat] of verts) {
+            minLng = Math.min(minLng, lng); maxLng = Math.max(maxLng, lng);
+            minLat = Math.min(minLat, lat); maxLat = Math.max(maxLat, lat);
+          }
+          const padLng = Math.max((maxLng - minLng) * 0.08, 0.05);
+          const padLat = Math.max((maxLat - minLat) * 0.08, 0.05);
+          const bL = minLng - padLng, bR = maxLng + padLng;
+          const bB = minLat - padLat, bT = maxLat + padLat;
+          const cornerCoords: Record<string, [number, number]> = {
+            sw: [bL, bB], se: [bR, bB], ne: [bR, bT], nw: [bL, bT],
+          };
+          const anchor = cornerCoords[opp];
+          const dist = Math.sqrt(
+            (e.lngLat.lng - anchor[0]) ** 2 + (e.lngLat.lat - anchor[1]) ** 2,
+          );
+          draggingRef.current = {
+            type: 'resize',
+            anchorLng: anchor[0],
+            anchorLat: anchor[1],
+            lastDist: Math.max(dist, 0.001),
+          };
+          map!.getCanvas().style.cursor = 'nwse-resize';
+          map!.dragPan.disable();
+        });
+
+        // --- Rotation drag ---
+        map.on('mousedown', HANDLE_ROTATE_LAYER_ID, (e) => {
+          if (draggingRef.current) return;
+          e.preventDefault();
+          const verts = verticesRef.current;
+          if (!verts || verts.length < 2) return;
+          const cx = verts.reduce((s, p) => s + p[0], 0) / verts.length;
+          const cy = verts.reduce((s, p) => s + p[1], 0) / verts.length;
+          const angle = Math.atan2(e.lngLat.lat - cy, e.lngLat.lng - cx);
+          draggingRef.current = { type: 'rotate', cx, cy, lastAngle: angle };
+          map!.getCanvas().style.cursor = 'crosshair';
+          map!.dragPan.disable();
+        });
+
+        // --- Shape body translate drag ---
+        for (const layerId of [FILL_LAYER_ID, LINE_LAYER_ID]) {
+          map.on('mousedown', layerId, (e) => {
+            if (draggingRef.current) return;
+            // Don't start translate if on a vertex or handle
+            const hits = map!.queryRenderedFeatures(e.point, {
+              layers: [VERTEX_LAYER_ID, HANDLE_CORNER_LAYER_ID, HANDLE_ROTATE_LAYER_ID],
+            });
+            if (hits.length > 0) return;
+            e.preventDefault();
+            draggingRef.current = {
+              type: 'translate',
+              lastLng: e.lngLat.lng,
+              lastLat: e.lngLat.lat,
+            };
+            map!.getCanvas().style.cursor = 'move';
+            map!.dragPan.disable();
+          });
+        }
+
+        // --- Global mousemove: dispatch to active drag type ---
+        map.on('mousemove', (e) => {
+          const d = draggingRef.current;
+          if (!d) return;
+          switch (d.type) {
+            case 'vertex':
+              onVertexDragRef.current?.(d.idx, [e.lngLat.lng, e.lngLat.lat]);
+              break;
+            case 'translate': {
+              const dLng = e.lngLat.lng - d.lastLng;
+              const dLat = e.lngLat.lat - d.lastLat;
+              d.lastLng = e.lngLat.lng;
+              d.lastLat = e.lngLat.lat;
+              onShapeTranslateRef.current?.(dLng, dLat);
+              break;
+            }
+            case 'rotate': {
+              const newAngle = Math.atan2(e.lngLat.lat - d.cy, e.lngLat.lng - d.cx);
+              const delta = (newAngle - d.lastAngle) * (180 / Math.PI);
+              d.lastAngle = newAngle;
+              onRotateRef.current?.(delta);
+              break;
+            }
+            case 'resize': {
+              const dist = Math.sqrt(
+                (e.lngLat.lng - d.anchorLng) ** 2 + (e.lngLat.lat - d.anchorLat) ** 2,
+              );
+              const scale = dist / d.lastDist;
+              d.lastDist = Math.max(dist, 0.001);
+              onResizeRef.current?.(scale, d.anchorLng, d.anchorLat);
+              break;
+            }
+          }
+        });
+
+        // --- Global mouseup: end drag ---
+        map.on('mouseup', () => {
+          if (draggingRef.current) {
+            draggingRef.current = null;
+            map!.getCanvas().style.cursor = '';
+            map!.dragPan.enable();
+          }
+        });
+
+        // --- Cursor hints ---
+        map.on('mouseenter', VERTEX_LAYER_ID, () => {
+          if (!draggingRef.current) map!.getCanvas().style.cursor = 'grab';
+        });
+        map.on('mouseleave', VERTEX_LAYER_ID, () => {
+          if (!draggingRef.current) map!.getCanvas().style.cursor = '';
+        });
+        map.on('mouseenter', HANDLE_CORNER_LAYER_ID, () => {
+          if (!draggingRef.current) map!.getCanvas().style.cursor = 'nwse-resize';
+        });
+        map.on('mouseleave', HANDLE_CORNER_LAYER_ID, () => {
+          if (!draggingRef.current) map!.getCanvas().style.cursor = '';
+        });
+        map.on('mouseenter', HANDLE_ROTATE_LAYER_ID, () => {
+          if (!draggingRef.current) map!.getCanvas().style.cursor = 'crosshair';
+        });
+        map.on('mouseleave', HANDLE_ROTATE_LAYER_ID, () => {
+          if (!draggingRef.current) map!.getCanvas().style.cursor = '';
+        });
+        for (const layerId of [FILL_LAYER_ID, LINE_LAYER_ID]) {
+          map.on('mouseenter', layerId, () => {
+            if (!draggingRef.current) map!.getCanvas().style.cursor = 'move';
+          });
+          map.on('mouseleave', layerId, () => {
+            if (!draggingRef.current) map!.getCanvas().style.cursor = '';
+          });
+        }
+
+        // --- Click: suppress on interactive handles ---
         map.on('click', (e) => {
-          onClick([e.lngLat.lng, e.lngLat.lat]);
+          if (!onClickRef.current) return;
+          const hits = map!.queryRenderedFeatures(e.point, {
+            layers: [VERTEX_LAYER_ID, HANDLE_CORNER_LAYER_ID, HANDLE_ROTATE_LAYER_ID],
+          });
+          if (hits.length > 0) return;
+          onClickRef.current([e.lngLat.lng, e.lngLat.lat]);
+        });
+      } else if (onClick) {
+        map.on('click', (e) => {
+          onClickRef.current?.([e.lngLat.lng, e.lngLat.lat]);
         });
       }
     });
@@ -289,19 +715,16 @@ export function MultipointMap({
   const initialBasemapRef = useRef(basemapIdx);
   useEffect(() => {
     if (!loaded || !mapRef.current || small) return;
-    // Skip the first run -- initial style is already set in the constructor
     if (initialBasemapRef.current === basemapIdx) {
-      initialBasemapRef.current = -1; // mark as consumed
+      initialBasemapRef.current = -1;
       return;
     }
     const bm = BASEMAP_STYLES[basemapIdx];
     const map = mapRef.current;
-
-    // setStyle removes all sources/layers, so re-add after style loads
     map.once('style.load', () => {
       addGeoJsonLayers(map);
+      addEditLayers(map);
     });
-
     map.setStyle(bm.style as string | import('maplibre-gl').StyleSpecification);
   }, [basemapIdx, loaded, small]);
 
@@ -314,7 +737,6 @@ export function MultipointMap({
 
     if (geojson) {
       let raw = typeof geojson === 'string' ? geojson : JSON.stringify(geojson);
-      // Sanitize WebRenderer output for strict JSON parsers (Firefox):
       raw = raw
         .replace(/,\s*}/g, '}')
         .replace(/,\s*]/g, ']')
@@ -325,9 +747,6 @@ export function MultipointMap({
         const parsed = JSON.parse(raw);
         (source as import('maplibre-gl').GeoJSONSource).setData(parsed);
 
-        // Auto-fit: zoom map to graphic bounds so nothing is clipped.
-        // Use generous padding (30% of container size) to keep graphics
-        // well within the thumbnail and account for labels/arrowheads.
         if (small && mapRef.current) {
           const bounds = computeBounds(parsed);
           if (bounds) {
@@ -355,6 +774,27 @@ export function MultipointMap({
       });
     }
   }, [geojson, loaded]);
+
+  // Update vertex markers + transform handles when vertices change
+  useEffect(() => {
+    if (!loaded || !mapRef.current || small) return;
+
+    const vertSrc = mapRef.current.getSource(VERTEX_SOURCE_ID);
+    if (vertSrc && vertSrc.type === 'geojson') {
+      const data = vertices && vertices.length > 0
+        ? vertexFeatureCollection(vertices)
+        : { type: 'FeatureCollection' as const, features: [] as GeoJSON.Feature[] };
+      (vertSrc as import('maplibre-gl').GeoJSONSource).setData(data);
+    }
+
+    const handleSrc = mapRef.current.getSource(HANDLE_SOURCE_ID);
+    if (handleSrc && handleSrc.type === 'geojson') {
+      const data = vertices && vertices.length >= 2
+        ? computeHandleGeoJson(vertices)
+        : { type: 'FeatureCollection' as const, features: [] as GeoJSON.Feature[] };
+      (handleSrc as import('maplibre-gl').GeoJSONSource).setData(data);
+    }
+  }, [vertices, loaded, small]);
 
   return (
     <div className={styles.mapWrapper}>
