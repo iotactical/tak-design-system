@@ -445,7 +445,7 @@ type DragState =
   | { type: 'vertex'; idx: number }
   | { type: 'translate'; lastLng: number; lastLat: number }
   | { type: 'rotate'; cx: number; cy: number; lastAngle: number }
-  | { type: 'resize'; anchorLng: number; anchorLat: number; lastDist: number }
+  | { type: 'resize'; anchorLng: number; anchorLat: number; lastLng: number; lastLat: number }
   | null;
 
 // ---------- Component ----------
@@ -463,8 +463,8 @@ export interface MultipointMapProps {
   onShapeTranslate?: (deltaLng: number, deltaLat: number) => void;
   /** Called when the shape is rotated via the rotation handle (delta in degrees) */
   onRotate?: (angleDeltaDeg: number) => void;
-  /** Called when the shape is resized via a corner handle */
-  onResize?: (scaleFactor: number, anchorLng: number, anchorLat: number) => void;
+  /** Called when the shape is resized via a corner handle (independent X/Y) */
+  onResize?: (scaleX: number, scaleY: number, anchorLng: number, anchorLat: number) => void;
 }
 
 export function MultipointMap({
@@ -565,14 +565,12 @@ export function MultipointMap({
             sw: [bL, bB], se: [bR, bB], ne: [bR, bT], nw: [bL, bT],
           };
           const anchor = cornerCoords[opp];
-          const dist = Math.sqrt(
-            (e.lngLat.lng - anchor[0]) ** 2 + (e.lngLat.lat - anchor[1]) ** 2,
-          );
           draggingRef.current = {
             type: 'resize',
             anchorLng: anchor[0],
             anchorLat: anchor[1],
-            lastDist: Math.max(dist, 0.001),
+            lastLng: e.lngLat.lng,
+            lastLat: e.lngLat.lat,
           };
           map!.getCanvas().style.cursor = 'nwse-resize';
           map!.dragPan.disable();
@@ -630,18 +628,24 @@ export function MultipointMap({
             }
             case 'rotate': {
               const newAngle = Math.atan2(e.lngLat.lat - d.cy, e.lngLat.lng - d.cx);
-              const delta = (newAngle - d.lastAngle) * (180 / Math.PI);
+              let delta = (newAngle - d.lastAngle) * (180 / Math.PI);
+              // Normalize to [-180, 180] to prevent jumps at the atan2 discontinuity
+              if (delta > 180) delta -= 360;
+              if (delta < -180) delta += 360;
               d.lastAngle = newAngle;
               onRotateRef.current?.(delta);
               break;
             }
             case 'resize': {
-              const dist = Math.sqrt(
-                (e.lngLat.lng - d.anchorLng) ** 2 + (e.lngLat.lat - d.anchorLat) ** 2,
-              );
-              const scale = dist / d.lastDist;
-              d.lastDist = Math.max(dist, 0.001);
-              onResizeRef.current?.(scale, d.anchorLng, d.anchorLat);
+              const prevDx = d.lastLng - d.anchorLng;
+              const prevDy = d.lastLat - d.anchorLat;
+              const newDx = e.lngLat.lng - d.anchorLng;
+              const newDy = e.lngLat.lat - d.anchorLat;
+              const scaleX = Math.abs(prevDx) > 0.0001 ? newDx / prevDx : 1;
+              const scaleY = Math.abs(prevDy) > 0.0001 ? newDy / prevDy : 1;
+              d.lastLng = e.lngLat.lng;
+              d.lastLat = e.lngLat.lat;
+              onResizeRef.current?.(scaleX, scaleY, d.anchorLng, d.anchorLat);
               break;
             }
           }

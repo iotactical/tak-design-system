@@ -174,11 +174,11 @@ function usePointHistory() {
     });
   }, []);
 
-  const scaleAll = useCallback((factor: number, anchorLng: number, anchorLat: number) => {
+  const scaleAll = useCallback((factorX: number, factorY: number, anchorLng: number, anchorLat: number) => {
     setPoints((prev) =>
       prev.map(([lng, lat]) => [
-        anchorLng + (lng - anchorLng) * factor,
-        anchorLat + (lat - anchorLat) * factor,
+        anchorLng + (lng - anchorLng) * factorX,
+        anchorLat + (lat - anchorLat) * factorY,
       ] as Point)
     );
   }, []);
@@ -388,11 +388,14 @@ export default function ControlMeasuresPanel() {
     clear();
   }, [selectedEc, clear]);
 
-  // Adopt canonical points into editable user points (called on first drag/transform)
-  const adoptCanonical = useCallback(() => {
-    if (userPoints.length > 0 || !example) return;
+  // Adopt canonical points into editable user points (called on first drag/transform).
+  // Returns the adopted points so callers can use them immediately.
+  const adoptCanonical = useCallback((): Point[] | null => {
+    if (userPoints.length > 0 || !example) return null;
+    const pts = parseControlPoints(example.controlPoints);
     justCommittedRef.current = false;
-    setPoints(parseControlPoints(example.controlPoints));
+    setPoints(pts);
+    return pts;
   }, [userPoints.length, example, setPoints]);
 
   // Render the active (in-progress) graphic
@@ -503,9 +506,9 @@ export default function ControlMeasuresPanel() {
     rotateAll(angleDeg);
   }, [userPoints.length, adoptCanonical, rotateAll]);
 
-  const handleResize = useCallback((factor: number, anchorLng: number, anchorLat: number) => {
+  const handleResize = useCallback((factorX: number, factorY: number, anchorLng: number, anchorLat: number) => {
     if (userPoints.length === 0) adoptCanonical();
-    scaleAll(factor, anchorLng, anchorLat);
+    scaleAll(factorX, factorY, anchorLng, anchorLat);
   }, [userPoints.length, adoptCanonical, scaleAll]);
 
   // Keyboard shortcuts
