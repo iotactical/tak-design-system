@@ -47,15 +47,36 @@ export function rotateAllPoints(pts: Point[], angleDeg: number): Point[] {
   });
 }
 
-/** Scale all points by factorX/factorY relative to an anchor */
+/** Scale all points by factorX/factorY relative to an anchor.
+ *  When rotationDeg is non-zero, scales along the rotated axes instead of global X/Y. */
 export function scaleAllPoints(
   pts: Point[], factorX: number, factorY: number,
   anchorLng: number, anchorLat: number,
+  rotationDeg = 0,
 ): Point[] {
-  return pts.map(([lng, lat]) => [
-    anchorLng + (lng - anchorLng) * factorX,
-    anchorLat + (lat - anchorLat) * factorY,
-  ] as Point);
+  if (rotationDeg === 0) {
+    return pts.map(([lng, lat]) => [
+      anchorLng + (lng - anchorLng) * factorX,
+      anchorLat + (lat - anchorLat) * factorY,
+    ] as Point);
+  }
+  const rad = rotationDeg * Math.PI / 180;
+  const cosR = Math.cos(rad);
+  const sinR = Math.sin(rad);
+  return pts.map(([lng, lat]) => {
+    const dx = lng - anchorLng;
+    const dy = lat - anchorLat;
+    // Un-rotate into bbox-local frame
+    const localU =  dx * cosR + dy * sinR;
+    const localV = -dx * sinR + dy * cosR;
+    // Scale in local frame
+    const scaledU = localU * factorX;
+    const scaledV = localV * factorY;
+    // Rotate back to global frame
+    const newDx = scaledU * cosR - scaledV * sinR;
+    const newDy = scaledU * sinR + scaledV * cosR;
+    return [anchorLng + newDx, anchorLat + newDy] as Point;
+  });
 }
 
 /** Translate all points by delta */
@@ -127,7 +148,7 @@ export class PointHistory {
   scaleAll(factorX: number, factorY: number, anchorLng: number, anchorLat: number) {
     if (!this.dragActive) this.pushUndo();
     this.dragActive = true;
-    this.points = scaleAllPoints(this.points, factorX, factorY, anchorLng, anchorLat);
+    this.points = scaleAllPoints(this.points, factorX, factorY, anchorLng, anchorLat, this.rotation);
   }
 
   commitDrag() {

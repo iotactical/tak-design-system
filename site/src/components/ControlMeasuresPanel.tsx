@@ -214,13 +214,27 @@ function usePointHistory() {
   }, [pushUndo]);
 
   const scaleAll = useCallback((factorX: number, factorY: number, anchorLng: number, anchorLat: number) => {
+    // Scale in the rotated coordinate frame so rotated graphics don't shear
+    const rad = rotationRef.current * Math.PI / 180;
+    const cosR = Math.cos(rad);
+    const sinR = Math.sin(rad);
     setPoints((prev) => {
       if (!skipSnapshotRef.current) pushUndo(prev);
       skipSnapshotRef.current = true;
-      return prev.map(([lng, lat]) => [
-        anchorLng + (lng - anchorLng) * factorX,
-        anchorLat + (lat - anchorLat) * factorY,
-      ] as Point);
+      return prev.map(([lng, lat]) => {
+        const dx = lng - anchorLng;
+        const dy = lat - anchorLat;
+        // Un-rotate offset into bbox-local frame
+        const localU =  dx * cosR + dy * sinR;
+        const localV = -dx * sinR + dy * cosR;
+        // Scale in local frame
+        const scaledU = localU * factorX;
+        const scaledV = localV * factorY;
+        // Rotate back to global frame
+        const newDx = scaledU * cosR - scaledV * sinR;
+        const newDy = scaledU * sinR + scaledV * cosR;
+        return [anchorLng + newDx, anchorLat + newDy] as Point;
+      });
     });
   }, [pushUndo]);
 
@@ -323,6 +337,10 @@ export default function ControlMeasuresPanel() {
   } = usePointHistory();
   const { renderMultipoint, ready } = useMultipointWorker();
 
+  // Refs for commitCurrent to avoid stale closures
+  const selectedEcRef = useRef(selectedEc);
+  selectedEcRef.current = selectedEc;
+
   // Desktop gate
   useEffect(() => {
     function onResize() {
@@ -407,18 +425,30 @@ export default function ControlMeasuresPanel() {
     return [];
   }, [userPoints, showCanonical, example]);
 
-  // Commit the current in-progress graphic
+  // Ref to always have current activeVertices for commitCurrent
+  const activeVerticesRef = useRef(activeVertices);
+  activeVerticesRef.current = activeVertices;
+  const singlePointRef = useRef(singlePoint);
+  singlePointRef.current = singlePoint;
+  const sidcRef = useRef(sidc);
+  sidcRef.current = sidc;
+  const affiliationRef = useRef(affiliation);
+  affiliationRef.current = affiliation;
+
+  // Commit the current in-progress graphic -- uses refs to avoid stale closures
   const commitCurrent = useCallback(() => {
     const gjson = activeGeojsonRef.current;
-    if (!gjson || !selectedEc || singlePoint || activeVertices.length === 0) return;
-    const entity = entityByEc.get(selectedEc);
+    const ec = selectedEcRef.current;
+    const verts = activeVerticesRef.current;
+    if (!gjson || !ec || singlePointRef.current || verts.length === 0) return;
+    const entity = entityByEc.get(ec);
     setCommitted((prev) => [
       {
         id: nextId.current++,
-        label: entity?.label || selectedEc,
-        sidc,
-        affiliation,
-        pointCount: activeVertices.length,
+        label: entity?.label || ec,
+        sidc: sidcRef.current,
+        affiliation: affiliationRef.current,
+        pointCount: verts.length,
         geojson: gjson,
       },
       ...prev,
@@ -427,7 +457,7 @@ export default function ControlMeasuresPanel() {
     adoptedRef.current = false;
     clear();
     setActiveGeojson(null);
-  }, [selectedEc, singlePoint, activeVertices.length, entityByEc, sidc, affiliation, clear]);
+  }, [entityByEc, clear]);
 
   // Note: state reset on entity change is handled synchronously in handleSelect
   // to avoid showing stale vertices for one frame between render and effect.

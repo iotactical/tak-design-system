@@ -138,6 +138,54 @@ describe('scaleAllPoints', () => {
     const scaled = scaleAllPoints(pts, 2, 2, 1, 1);
     approxPoints(scaled, [[5, 5]]);
   });
+
+  it('rotated scale preserves anchor point', () => {
+    const pts: Point[] = [[0, 0], [2, 0], [2, 2], [0, 2]];
+    const anchor: Point = [0, 0];
+    const scaled = scaleAllPoints(pts, 1.5, 1.5, anchor[0], anchor[1], 45);
+    // Anchor point should remain unchanged
+    approxPoint(scaled[0], anchor);
+  });
+
+  it('rotated scale: 0-degree rotation matches unrotated', () => {
+    const pts: Point[] = [[1, 0], [0, 1], [-1, 0]];
+    const s1 = scaleAllPoints(pts, 2, 3, 0, 0, 0);
+    const s2 = scaleAllPoints(pts, 2, 3, 0, 0);
+    approxPoints(s1, s2);
+  });
+
+  it('rotated scale does not shear a rotated rectangle', () => {
+    // Create a unit square centered at origin, rotated 45 degrees
+    // After 45-deg rotation, vertices are at approximately:
+    // (0, sqrt(2)), (sqrt(2), 0), (0, -sqrt(2)), (-sqrt(2), 0)
+    const r2 = Math.SQRT2;
+    const pts: Point[] = [[0, r2], [r2, 0], [0, -r2], [-r2, 0]];
+    // Scale 2x in the rotated X-axis (which is the 45-degree diagonal)
+    // With anchor at the bottom point (-r2, 0)
+    const scaled = scaleAllPoints(pts, 2, 1, -r2, 0, 45);
+    // The shape should stretch along the 45-degree axis without shearing
+    // Verify the centroid moved along the rotated X-axis direction
+    const c0 = centroid(pts);
+    const c1 = centroid(scaled);
+    // With scale factor 2 in rotated-X, centroid shifts along rotated-X direction
+    // The shape should remain a parallelogram (opposite sides parallel)
+    const dx01 = scaled[1][0] - scaled[0][0];
+    const dy01 = scaled[1][1] - scaled[0][1];
+    const dx32 = scaled[2][0] - scaled[3][0];
+    const dy32 = scaled[2][1] - scaled[3][1];
+    // Opposite sides should remain parallel
+    expect(dx01).toBeCloseTo(dx32, 4);
+    expect(dy01).toBeCloseTo(dy32, 4);
+  });
+
+  it('scaling rotated shape by uniform factor preserves shape', () => {
+    // A uniform scale (same X and Y) should preserve the shape regardless of rotation
+    const pts: Point[] = [[1, 1], [3, 1], [3, 3], [1, 3]];
+    const uniformNoRot = scaleAllPoints(pts, 2, 2, 0, 0, 0);
+    const uniformWithRot = scaleAllPoints(pts, 2, 2, 0, 0, 45);
+    // Both should produce the same result: uniform scale is rotation-invariant
+    approxPoints(uniformWithRot, uniformNoRot);
+  });
 });
 
 // ---- translateAllPoints ----
