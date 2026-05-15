@@ -309,6 +309,9 @@ export default function ControlMeasuresPanel() {
   const justCommittedRef = useRef(false);
   // Track whether canonical points have been adopted into editable state
   const adoptedRef = useRef(false);
+  // Ref for activeGeojson so commitCurrent always sees the latest value
+  const activeGeojsonRef = useRef(activeGeojson);
+  activeGeojsonRef.current = activeGeojson;
   const nextId = useRef(1);
   const mapWrapRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -406,7 +409,8 @@ export default function ControlMeasuresPanel() {
 
   // Commit the current in-progress graphic
   const commitCurrent = useCallback(() => {
-    if (!activeGeojson || !selectedEc || singlePoint || activeVertices.length === 0) return;
+    const gjson = activeGeojsonRef.current;
+    if (!gjson || !selectedEc || singlePoint || activeVertices.length === 0) return;
     const entity = entityByEc.get(selectedEc);
     setCommitted((prev) => [
       {
@@ -415,7 +419,7 @@ export default function ControlMeasuresPanel() {
         sidc,
         affiliation,
         pointCount: activeVertices.length,
-        geojson: activeGeojson,
+        geojson: gjson,
       },
       ...prev,
     ]);
@@ -423,7 +427,7 @@ export default function ControlMeasuresPanel() {
     adoptedRef.current = false;
     clear();
     setActiveGeojson(null);
-  }, [activeGeojson, selectedEc, singlePoint, activeVertices.length, entityByEc, sidc, affiliation, clear]);
+  }, [selectedEc, singlePoint, activeVertices.length, entityByEc, sidc, affiliation, clear]);
 
   // Auto-commit when switching entities (if user has plotted points with rendered result)
   const prevSelectedEc = useRef(selectedEc);

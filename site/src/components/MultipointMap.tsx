@@ -503,7 +503,7 @@ type DragState =
   | { type: 'vertex'; idx: number }
   | { type: 'translate'; lastLng: number; lastLat: number }
   | { type: 'rotate'; cx: number; cy: number; lastAngle: number }
-  | { type: 'resize'; anchorLng: number; anchorLat: number; lastLng: number; lastLat: number }
+  | { type: 'resize'; anchorLng: number; anchorLat: number; lastLng: number; lastLat: number; cosR: number; sinR: number }
   | null;
 
 // ---------- Component ----------
@@ -557,6 +557,7 @@ export function MultipointMap({
   const onResizeRef = useRef(onResize);
   const onDragEndRef = useRef(onDragEnd);
   const verticesRef = useRef(vertices);
+  const rotationAngleRef = useRef(rotationAngle);
   onClickRef.current = onClick;
   onVertexDragRef.current = onVertexDrag;
   onShapeTranslateRef.current = onShapeTranslate;
@@ -564,6 +565,7 @@ export function MultipointMap({
   onResizeRef.current = onResize;
   onDragEndRef.current = onDragEnd;
   verticesRef.current = vertices;
+  rotationAngleRef.current = rotationAngle;
 
   // Initialize map
   useEffect(() => {
@@ -621,12 +623,15 @@ export function MultipointMap({
           const oppFeature = allCorners.find((f) => f.properties?.corner === opp);
           if (!oppFeature || oppFeature.geometry.type !== 'Point') return;
           const [anchorLng, anchorLat] = (oppFeature.geometry as GeoJSON.Point).coordinates;
+          const rad = (rotationAngleRef.current * Math.PI) / 180;
           draggingRef.current = {
             type: 'resize',
             anchorLng,
             anchorLat,
             lastLng: e.lngLat.lng,
             lastLat: e.lngLat.lat,
+            cosR: Math.cos(rad),
+            sinR: Math.sin(rad),
           };
           map!.getCanvas().style.cursor = 'nwse-resize';
           map!.dragPan.disable();
@@ -693,12 +698,19 @@ export function MultipointMap({
               break;
             }
             case 'resize': {
-              const prevDx = d.lastLng - d.anchorLng;
-              const prevDy = d.lastLat - d.anchorLat;
-              const newDx = e.lngLat.lng - d.anchorLng;
-              const newDy = e.lngLat.lat - d.anchorLat;
-              const scaleX = Math.abs(prevDx) > 0.0001 ? newDx / prevDx : 1;
-              const scaleY = Math.abs(prevDy) > 0.0001 ? newDy / prevDy : 1;
+              // Project deltas onto the rotated bbox axes
+              const { cosR, sinR } = d;
+              const rawPrevDx = d.lastLng - d.anchorLng;
+              const rawPrevDy = d.lastLat - d.anchorLat;
+              const rawNewDx = e.lngLat.lng - d.anchorLng;
+              const rawNewDy = e.lngLat.lat - d.anchorLat;
+              // Rotate deltas into bbox-local frame (un-rotate by -angle)
+              const prevU =  rawPrevDx * cosR + rawPrevDy * sinR;
+              const prevV = -rawPrevDx * sinR + rawPrevDy * cosR;
+              const newU =  rawNewDx * cosR + rawNewDy * sinR;
+              const newV = -rawNewDx * sinR + rawNewDy * cosR;
+              const scaleX = Math.abs(prevU) > 0.0001 ? newU / prevU : 1;
+              const scaleY = Math.abs(prevV) > 0.0001 ? newV / prevV : 1;
               d.lastLng = e.lngLat.lng;
               d.lastLat = e.lngLat.lat;
               onResizeRef.current?.(scaleX, scaleY, d.anchorLng, d.anchorLat);
