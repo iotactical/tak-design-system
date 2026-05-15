@@ -612,29 +612,19 @@ export function MultipointMap({
           const corner = e.features[0].properties?.corner as string;
           const opp = OPPOSITE_CORNER[corner];
           if (!opp) return;
-          // Find anchor coords from handle features
-          const src = map!.getSource(HANDLE_SOURCE_ID);
-          if (!src) return;
-          // Compute anchor from vertices bounding box
-          const verts = verticesRef.current;
-          if (!verts || verts.length < 2) return;
-          let minLng = Infinity, maxLng = -Infinity, minLat = Infinity, maxLat = -Infinity;
-          for (const [lng, lat] of verts) {
-            minLng = Math.min(minLng, lng); maxLng = Math.max(maxLng, lng);
-            minLat = Math.min(minLat, lat); maxLat = Math.max(maxLat, lat);
-          }
-          const padLng = Math.max((maxLng - minLng) * 0.08, 0.05);
-          const padLat = Math.max((maxLat - minLat) * 0.08, 0.05);
-          const bL = minLng - padLng, bR = maxLng + padLng;
-          const bB = minLat - padLat, bT = maxLat + padLat;
-          const cornerCoords: Record<string, [number, number]> = {
-            sw: [bL, bB], se: [bR, bB], ne: [bR, bT], nw: [bL, bT],
-          };
-          const anchor = cornerCoords[opp];
+          // Find the opposite corner's coordinates from rendered handle features
+          const { width, height } = map!.getCanvas();
+          const allCorners = map!.queryRenderedFeatures(
+            [[0, 0], [width, height]],
+            { layers: [HANDLE_CORNER_LAYER_ID] },
+          );
+          const oppFeature = allCorners.find((f) => f.properties?.corner === opp);
+          if (!oppFeature || oppFeature.geometry.type !== 'Point') return;
+          const [anchorLng, anchorLat] = (oppFeature.geometry as GeoJSON.Point).coordinates;
           draggingRef.current = {
             type: 'resize',
-            anchorLng: anchor[0],
-            anchorLat: anchor[1],
+            anchorLng,
+            anchorLat,
             lastLng: e.lngLat.lng,
             lastLat: e.lngLat.lat,
           };

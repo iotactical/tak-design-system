@@ -653,7 +653,7 @@ export default function ControlMeasuresPanel() {
   }
 
   return (
-    <div ref={panelRef} tabIndex={-1} style={{ outline: 'none' }}>
+    <div ref={panelRef} tabIndex={-1} style={{ outline: 'none', overflow: 'hidden' }}>
       {/* Top bar */}
       <div className={styles.cmTopBar}>
         <input
