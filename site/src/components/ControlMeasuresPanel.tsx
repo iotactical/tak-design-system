@@ -429,15 +429,6 @@ export default function ControlMeasuresPanel() {
     setActiveGeojson(null);
   }, [selectedEc, singlePoint, activeVertices.length, entityByEc, sidc, affiliation, clear]);
 
-  // Auto-commit when switching entities (if user has plotted points with rendered result)
-  const prevSelectedEc = useRef(selectedEc);
-  useEffect(() => {
-    if (prevSelectedEc.current !== selectedEc && prevSelectedEc.current !== null) {
-      commitCurrent();
-    }
-    prevSelectedEc.current = selectedEc;
-  }, [selectedEc, commitCurrent]);
-
   // Reset state when selection changes
   useEffect(() => {
     justCommittedRef.current = false;
@@ -598,8 +589,10 @@ export default function ControlMeasuresPanel() {
   }, [activeVertices]);
 
   const handleSelect = useCallback((ec: string) => {
+    // Commit current graphic before switching entities
+    commitCurrent();
     setSelectedEc((prev) => (prev === ec ? null : ec));
-  }, []);
+  }, [commitCurrent]);
 
   const toggleGroup = useCallback((prefix: string) => {
     setExpandedGroups((prev) => {
