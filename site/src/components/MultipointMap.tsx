@@ -143,6 +143,7 @@ const VERTEX_SOURCE_ID = 'vertex-source';
 const VERTEX_LAYER_ID = 'vertex-squares';
 const VERTEX_LABEL_LAYER_ID = 'vertex-labels';
 const HANDLE_SOURCE_ID = 'handle-source';
+const HANDLE_BBOX_FILL_LAYER_ID = 'handle-bbox-fill';
 const HANDLE_BBOX_LAYER_ID = 'handle-bbox';
 const HANDLE_CORNER_LAYER_ID = 'handle-corners';
 const HANDLE_STEM_LAYER_ID = 'handle-stem';
@@ -246,6 +247,16 @@ function computeHandleGeoJson(
   const sw = rot(bL, bB), se = rot(bR, bB), ne = rot(bR, bT), nw = rot(bL, bT);
 
   const features: GeoJSON.Feature[] = [];
+
+  // Bounding box fill (transparent, for translate hit area)
+  features.push({
+    type: 'Feature',
+    geometry: {
+      type: 'Polygon',
+      coordinates: [[sw, se, ne, nw, sw]],
+    },
+    properties: { handleType: 'bbox-fill' },
+  });
 
   // Bounding box outline (oriented)
   features.push({
@@ -419,6 +430,18 @@ function addEditLayers(map: import('maplibre-gl').Map) {
   map.addSource(HANDLE_SOURCE_ID, {
     type: 'geojson',
     data: { type: 'FeatureCollection', features: [] },
+  });
+
+  // Bounding box transparent fill (translate hit area)
+  map.addLayer({
+    id: HANDLE_BBOX_FILL_LAYER_ID,
+    type: 'fill',
+    source: HANDLE_SOURCE_ID,
+    filter: ['==', ['get', 'handleType'], 'bbox-fill'],
+    paint: {
+      'fill-color': '#ffffff',
+      'fill-opacity': 0.01,
+    },
   });
 
   // Bounding box dashed line
@@ -633,8 +656,8 @@ export function MultipointMap({
           map!.dragPan.disable();
         });
 
-        // --- Shape body translate drag ---
-        for (const layerId of [FILL_LAYER_ID, LINE_LAYER_ID]) {
+        // --- Shape body translate drag (graphic layers + bbox fill) ---
+        for (const layerId of [FILL_LAYER_ID, LINE_LAYER_ID, HANDLE_BBOX_FILL_LAYER_ID]) {
           map.on('mousedown', layerId, (e) => {
             if (draggingRef.current) return;
             // Don't start translate if on a vertex or handle
@@ -723,7 +746,7 @@ export function MultipointMap({
         map.on('mouseleave', HANDLE_ROTATE_LAYER_ID, () => {
           if (!draggingRef.current) map!.getCanvas().style.cursor = '';
         });
-        for (const layerId of [FILL_LAYER_ID, LINE_LAYER_ID]) {
+        for (const layerId of [FILL_LAYER_ID, LINE_LAYER_ID, HANDLE_BBOX_FILL_LAYER_ID]) {
           map.on('mouseenter', layerId, () => {
             if (!draggingRef.current) map!.getCanvas().style.cursor = 'move';
           });
