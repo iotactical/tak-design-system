@@ -5,6 +5,9 @@ import { resolve } from 'path';
 export default defineConfig({
   plugins: [react()],
   base: '/tak-design-system/',
+  test: {
+    include: ['src/**/*.test.ts', 'src/**/*.test.tsx'],
+  },
   worker: {
     format: 'es',
   },
