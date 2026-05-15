@@ -164,12 +164,16 @@ function usePointHistory() {
       const cx = prev.reduce((s, p) => s + p[0], 0) / prev.length;
       const cy = prev.reduce((s, p) => s + p[1], 0) / prev.length;
       const rad = (angleDeg * Math.PI) / 180;
-      const cos = Math.cos(rad);
-      const sin = Math.sin(rad);
+      const cosA = Math.cos(rad);
+      const sinA = Math.sin(rad);
+      // Scale longitude by cos(latitude) so rotation is isotropic in local space
+      const latScale = Math.cos((cy * Math.PI) / 180);
       return prev.map(([lng, lat]) => {
-        const dx = lng - cx;
+        const dx = (lng - cx) * latScale;
         const dy = lat - cy;
-        return [cx + dx * cos - dy * sin, cy + dx * sin + dy * cos] as Point;
+        const rx = dx * cosA - dy * sinA;
+        const ry = dx * sinA + dy * cosA;
+        return [cx + rx / latScale, cy + ry] as Point;
       });
     });
   }, []);
