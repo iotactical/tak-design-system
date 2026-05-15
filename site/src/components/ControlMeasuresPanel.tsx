@@ -435,7 +435,11 @@ export default function ControlMeasuresPanel() {
   const affiliationRef = useRef(affiliation);
   affiliationRef.current = affiliation;
 
-  // Commit the current in-progress graphic -- uses refs to avoid stale closures
+  // Commit the current in-progress graphic -- uses refs to avoid stale closures.
+  // Does NOT call setActiveGeojson(null) -- the render effect handles clearing it
+  // via the justCommittedRef check.  This prevents the ref from going null before
+  // the next entity's render completes, which would silently skip auto-commit
+  // when the user switches entities.
   const commitCurrent = useCallback(() => {
     const gjson = activeGeojsonRef.current;
     const ec = selectedEcRef.current;
@@ -456,7 +460,6 @@ export default function ControlMeasuresPanel() {
     justCommittedRef.current = true;
     adoptedRef.current = false;
     clear();
-    setActiveGeojson(null);
   }, [entityByEc, clear]);
 
   // Note: state reset on entity change is handled synchronously in handleSelect
