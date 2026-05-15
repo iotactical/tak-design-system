@@ -259,6 +259,8 @@ export default function ControlMeasuresPanel() {
   );
   // After committing, suppress canonical rendering until user starts a new graphic
   const justCommittedRef = useRef(false);
+  // Track whether canonical points have been adopted into editable state
+  const adoptedRef = useRef(false);
   const nextId = useRef(1);
   const mapWrapRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -369,6 +371,7 @@ export default function ControlMeasuresPanel() {
       ...prev,
     ]);
     justCommittedRef.current = true;
+    adoptedRef.current = false;
     clear();
     setActiveGeojson(null);
   }, [activeGeojson, selectedEc, singlePoint, activeVertices.length, entityByEc, sidc, affiliation, clear]);
@@ -385,17 +388,17 @@ export default function ControlMeasuresPanel() {
   // Reset state when selection changes
   useEffect(() => {
     justCommittedRef.current = false;
+    adoptedRef.current = false;
     clear();
   }, [selectedEc, clear]);
 
   // Adopt canonical points into editable user points (called on first drag/transform).
-  // Returns the adopted points so callers can use them immediately.
-  const adoptCanonical = useCallback((): Point[] | null => {
-    if (userPoints.length > 0 || !example) return null;
-    const pts = parseControlPoints(example.controlPoints);
+  // Idempotent: only runs once per entity selection via adoptedRef.
+  const adoptCanonical = useCallback(() => {
+    if (adoptedRef.current || userPoints.length > 0 || !example) return;
+    adoptedRef.current = true;
     justCommittedRef.current = false;
-    setPoints(pts);
-    return pts;
+    setPoints(parseControlPoints(example.controlPoints));
   }, [userPoints.length, example, setPoints]);
 
   // Render the active (in-progress) graphic
