@@ -792,6 +792,39 @@ export default function ControlMeasuresPanel() {
                 Click the map to plot points interactively.
               </div>
             )}
+
+            {/* Graphics log (overlay inside map area) */}
+            {committed.length > 0 && (
+              <div className={styles.cmLog}>
+                <div className={styles.cmLogHeader}>
+                  <span style={{ fontSize: 12, fontWeight: 600, color: '#DAD4BC' }}>
+                    Graphics ({committed.length})
+                  </span>
+                  <button className={styles.cmClearBtn} onClick={clearAll} title="Clear all graphics">
+                    Clear All
+                  </button>
+                </div>
+                <div className={styles.cmLogList}>
+                  {committed.map((g) => (
+                    <div key={g.id} className={styles.cmLogItem}>
+                      <div className={styles.cmLogItemInfo}>
+                        <span className={styles.cmLogItemName}>{g.label}</span>
+                        <span className={styles.cmLogItemMeta}>
+                          {AFF_LABELS[g.affiliation] || '?'} | {g.pointCount} pts
+                        </span>
+                      </div>
+                      <button
+                        className={styles.cmLogDeleteBtn}
+                        onClick={() => deleteGraphic(g.id)}
+                        title="Remove this graphic"
+                      >
+                        &#x2715;
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Info bar */}
@@ -834,39 +867,6 @@ export default function ControlMeasuresPanel() {
             </div>
           )}
         </div>
-
-        {/* Graphics log (right side) */}
-        {committed.length > 0 && (
-          <div className={styles.cmLog}>
-            <div className={styles.cmLogHeader}>
-              <span style={{ fontSize: 12, fontWeight: 600, color: '#DAD4BC' }}>
-                Graphics ({committed.length})
-              </span>
-              <button className={styles.cmClearBtn} onClick={clearAll} title="Clear all graphics">
-                Clear All
-              </button>
-            </div>
-            <div className={styles.cmLogList}>
-              {committed.map((g) => (
-                <div key={g.id} className={styles.cmLogItem}>
-                  <div className={styles.cmLogItemInfo}>
-                    <span className={styles.cmLogItemName}>{g.label}</span>
-                    <span className={styles.cmLogItemMeta}>
-                      {AFF_LABELS[g.affiliation] || '?'} | {g.pointCount} pts
-                    </span>
-                  </div>
-                  <button
-                    className={styles.cmLogDeleteBtn}
-                    onClick={() => deleteGraphic(g.id)}
-                    title="Remove this graphic"
-                  >
-                    &#x2715;
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );
