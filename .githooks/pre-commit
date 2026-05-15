@@ -1,0 +1,28 @@
+#!/bin/sh
+# Pre-commit checks: tests + build for staged site files
+# Install: git config core.hooksPath .githooks
+
+set -e
+
+# RTM validation
+STAGED_RTM=$(git diff --cached --name-only --diff-filter=ACM | grep -E '^\.rtmx/.*\.csv$' || true)
+if [ -n "$STAGED_RTM" ]; then
+    echo "[pre-commit] Validating RTM files..."
+    if command -v rtmx >/dev/null 2>&1; then
+        rtmx validate-staged $STAGED_RTM
+    else
+        echo "Warning: rtmx not found, skipping RTM validation"
+    fi
+fi
+
+# Site tests + build
+STAGED_SITE=$(git diff --cached --name-only --diff-filter=ACM | grep -E '^site/' || true)
+if [ -n "$STAGED_SITE" ]; then
+    echo "[pre-commit] Running site unit tests..."
+    (cd site && npx vitest run --reporter=dot)
+
+    echo "[pre-commit] Verifying site build..."
+    (cd site && npx vite build --logLevel error)
+
+    echo "[pre-commit] All checks passed."
+fi

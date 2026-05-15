@@ -429,12 +429,8 @@ export default function ControlMeasuresPanel() {
     setActiveGeojson(null);
   }, [selectedEc, singlePoint, activeVertices.length, entityByEc, sidc, affiliation, clear]);
 
-  // Reset state when selection changes
-  useEffect(() => {
-    justCommittedRef.current = false;
-    adoptedRef.current = false;
-    clear();
-  }, [selectedEc, clear]);
+  // Note: state reset on entity change is handled synchronously in handleSelect
+  // to avoid showing stale vertices for one frame between render and effect.
 
   // Adopt canonical points into editable user points (called on first drag/transform).
   // Idempotent: only runs once per entity selection via adoptedRef.
@@ -591,8 +587,12 @@ export default function ControlMeasuresPanel() {
   const handleSelect = useCallback((ec: string) => {
     // Commit current graphic before switching entities
     commitCurrent();
+    // Reset state synchronously so stale vertices don't flash
+    justCommittedRef.current = false;
+    adoptedRef.current = false;
+    clear();
     setSelectedEc((prev) => (prev === ec ? null : ec));
-  }, [commitCurrent]);
+  }, [commitCurrent, clear]);
 
   const toggleGroup = useCallback((prefix: string) => {
     setExpandedGroups((prev) => {
