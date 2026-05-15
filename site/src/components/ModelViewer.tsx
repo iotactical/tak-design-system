@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import { ColladaLoader } from 'three/examples/jsm/loaders/ColladaLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import styles from './ModelViewer.module.css';
+import { Spinner } from './Spinner';
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -353,7 +354,7 @@ export function ModelThumbnail({
       style={{ width, height, cursor: onClick ? 'pointer' : undefined }}
       onClick={dims && onClick ? () => onClick(dims) : undefined}
     >
-      {loading && <span className={styles.loading}>Loading...</span>}
+      {loading && <div className={styles.loading}><Spinner size={16} /></div>}
       {thumbnailUrl && (
         <img src={thumbnailUrl} alt="3D model" style={{ width, height, display: 'block' }} />
       )}

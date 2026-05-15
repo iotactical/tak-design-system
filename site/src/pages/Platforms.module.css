@@ -59,7 +59,7 @@
   background: #1A1A1A;
   border: 1px solid #2E2E2E;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .copyButton {

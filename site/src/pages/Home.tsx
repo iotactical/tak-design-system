@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 
 const INSTALL_CMD = 'npm install @iotactical/tak-react';
-
 const BASE = import.meta.env.BASE_URL;
 
 const pageCards = [
@@ -17,6 +16,7 @@ const pageCards = [
   { to: '/interfaces', title: 'Interfaces', desc: 'Reference UI patterns and layouts', preview: 'preview-interfaces.png' },
   { to: '/multipoint', title: 'Tactical Graphics', desc: 'Tactical control measure graphics', preview: 'preview-multipoint.png' },
   { to: '/explorer', title: '2525 Explorer', desc: 'Browse, decode, and build SIDCs', preview: 'preview-explorer.png' },
+  { to: '/sources', title: 'Sources', desc: 'Figma, TAK Product Center, MIL-STD-2525', preview: 'preview-sources.png' },
 ];
 
 export default function Home() {
@@ -34,6 +34,7 @@ export default function Home() {
       setTimeout(() => setCopied(false), 2000);
     });
   };
+
 
   // Track carousel scroll position for dot indicators
   const handleScroll = useCallback(() => {

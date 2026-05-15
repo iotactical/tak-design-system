@@ -194,3 +194,21 @@
   color: #555;
   text-align: right;
 }
+
+/* Mobile: search bar at bottom, dropdown opens upward */
+@media (max-width: 767px) {
+  .dropdown {
+    position: fixed;
+    bottom: 48px;
+    left: 8px;
+    right: 8px;
+    top: auto;
+    max-height: 50vh;
+  }
+  .searchInput {
+    font-size: 16px; /* prevents iOS zoom on focus */
+  }
+  .resultDescription {
+    max-width: 100px;
+  }
+}

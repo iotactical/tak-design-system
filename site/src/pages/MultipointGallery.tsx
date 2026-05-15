@@ -8,6 +8,7 @@ import {
   type MultipointExample,
 } from '../data/multipoint-examples';
 import styles from './MultipointGallery.module.css';
+import { LoadingCenter } from '../components/Spinner';
 
 const AFFILIATIONS = [
   { code: '03', label: 'Friendly', color: '#80C0FF' },
@@ -50,7 +51,16 @@ function withAffiliation(sidc: string, si: string): string {
 
 /** Default bbox covering the continental US for gallery rendering */
 const DEFAULT_BBOX = '-100.0,35.0,-94.0,40.0';
-const DEFAULT_SCALE = 500000;
+const DEFAULT_SCALE = 5000000;
+/**
+ * Pixel dimensions for RenderSymbol2D must match the geographic aspect ratio
+ * of the bbox to avoid stretching decorations. The bbox is 6 deg lon x 5 deg
+ * lat. At ~37.5 deg latitude, 1 deg lon ~ 88 km, 1 deg lat ~ 111 km, giving
+ * a geographic extent of ~528 x 555 km (roughly square). We use square pixel
+ * dimensions; MapLibre crops to the card viewport independently.
+ */
+const THUMBNAIL_PX_WIDTH = 400;
+const THUMBNAIL_PX_HEIGHT = 420;
 
 function GalleryCard({
   example,
@@ -61,7 +71,7 @@ function GalleryCard({
   affiliation: string;
   version: 'B' | 'C' | 'D' | 'E';
 }) {
-  const { renderMultipoint, ready } = useMultipointWorker();
+  const { renderMultipoint, ready, unsupported } = useMultipointWorker();
   const [geojson, setGeojson] = useState<string | null>(null);
 
   const baseSidc = (version === 'B' || version === 'C') ? example.bSidc : example.sidc;
@@ -71,14 +81,19 @@ function GalleryCard({
     if (!ready) return;
     let cancelled = false;
 
-    // Don't pass modifiers/attributes to gallery thumbnails -- WebRenderer
-    // embeds raw modifier Maps in GeoJSON output without proper JSON escaping,
-    // which breaks strict parsers (Firefox). Graphics render fine without them.
+    // Use RenderSymbol2D with pixel dimensions matching the gallery card so
+    // the renderer generates decoration density appropriate for thumbnails.
+    // Don't pass modifiers -- WebRenderer embeds raw modifier Maps in GeoJSON
+    // output without proper JSON escaping, breaking strict parsers (Firefox).
     renderMultipoint(
       sidc,
       example.controlPoints,
       DEFAULT_SCALE,
       DEFAULT_BBOX,
+      undefined,  // no modifiers
+      undefined,  // no extra attributes
+      THUMBNAIL_PX_WIDTH,
+      THUMBNAIL_PX_HEIGHT,
     ).then((result) => {
       if (!cancelled) setGeojson(result);
     });
@@ -100,7 +115,20 @@ function GalleryCard({
   return (
     <div className={styles.card}>
       <div className={styles.cardMap}>
-        <MultipointMap geojson={geojson} center={center} zoom={6} small />
+        {unsupported ? (
+          <div style={{
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            width: '100%', height: '100%', background: '#1a1a2e', color: '#888',
+            fontSize: '0.8rem', textAlign: 'center', padding: '1rem',
+          }}>
+            Tactical graphics rendering requires a browser with Web Worker support.
+            Try Chrome, Firefox, or Safari.
+          </div>
+        ) : !geojson ? (
+          <LoadingCenter size={20} />
+        ) : (
+          <MultipointMap geojson={geojson} center={center} zoom={6} small />
+        )}
         <span className={`${styles.badge} ${BADGE_CLASS[example.category] || ''}`}>
           {example.category}
         </span>

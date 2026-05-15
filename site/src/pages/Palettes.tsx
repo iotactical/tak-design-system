@@ -625,19 +625,25 @@ const AFFILIATION_COLORS: { label: string; hex: string }[] = [
   { label: 'Unknown', hex: '#FFCC00' },
 ];
 
-const COL_W = 38; // column width for consistent alignment
+const COL_W = 34; // column width for consistent alignment
+const LABEL_W = 100; // label width
 
 const skittleCircleBase: React.CSSProperties = {
-  width: 28,
-  height: 28,
+  width: 26,
+  height: 26,
   borderRadius: '50%',
   boxShadow: '0 2px 4px rgba(0,0,0,0.5)',
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
   fontWeight: 'bold',
-  fontSize: 10,
+  fontSize: 9,
   flexShrink: 0,
+};
+
+const scrollRow: React.CSSProperties = {
+  overflowX: 'auto',
+  WebkitOverflowScrolling: 'touch',
 };
 
 // rtmx:req REQ-XW-081
@@ -655,17 +661,17 @@ function SkittlesPanel() {
       <div className={styles.groupSection}>
         <div className={styles.groupName}>Team Colors</div>
         <div className={styles.groupCount}>15 colors</div>
-        <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
-        <div style={{ display: 'flex', alignItems: 'flex-end', marginBottom: 6, height: 70, minWidth: 720 }}>
-          <span style={{ width: 130, flexShrink: 0 }} />
+        <div style={scrollRow}>
+        <div style={{ display: 'flex', alignItems: 'flex-end', marginBottom: 6, height: 70, minWidth: LABEL_W + COL_W * TEAM_COLORS.length }}>
+          <span style={{ width: LABEL_W, flexShrink: 0 }} />
           {TEAM_COLORS.map((tc) => (
             <div key={tc.name} style={{ width: COL_W, flexShrink: 0, display: 'flex', justifyContent: 'center', alignItems: 'flex-end', height: '100%' }}>
-              <span style={{ fontSize: 11, color: '#AAA', transform: 'rotate(-45deg)', transformOrigin: '0% 100%', display: 'inline-block', whiteSpace: 'nowrap', position: 'relative', left: 14 }}>{tc.name}</span>
+              <span style={{ fontSize: 10, color: '#AAA', transform: 'rotate(-45deg)', transformOrigin: '0% 100%', display: 'inline-block', whiteSpace: 'nowrap', position: 'relative', left: 12 }}>{tc.name}</span>
             </div>
           ))}
         </div>
         <div style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
-          <span style={{ width: 130, fontSize: 12, color: '#DAD4BC', flexShrink: 0 }}>(base)</span>
+          <span style={{ width: LABEL_W, fontSize: 11, color: '#DAD4BC', flexShrink: 0 }}>(base)</span>
           {TEAM_COLORS.map((tc) => (
             <div key={tc.name} style={{ width: COL_W, flexShrink: 0, display: 'flex', justifyContent: 'center' }}>
               <div
@@ -682,10 +688,10 @@ function SkittlesPanel() {
       <div className={styles.groupSection}>
         <div className={styles.groupName}>Roles</div>
         <div className={styles.groupCount}>{SKITTLE_ROLES.length} roles x {TEAM_COLORS.length} colors</div>
-        <div style={{ overflowX: 'auto' }}>
+        <div style={scrollRow}>
           {SKITTLE_ROLES.map((role) => (
             <div key={role.label} style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
-              <span style={{ width: 130, fontSize: 12, color: '#DAD4BC', flexShrink: 0 }}>{role.label}</span>
+              <span style={{ width: LABEL_W, fontSize: 11, color: '#DAD4BC', flexShrink: 0 }}>{role.label}</span>
               {TEAM_COLORS.map((tc) => (
                 <div key={tc.name} style={{ width: COL_W, flexShrink: 0, display: 'flex', justifyContent: 'center' }}>
                   <div
@@ -705,76 +711,76 @@ function SkittlesPanel() {
       <div className={styles.groupSection}>
         <div className={styles.groupName}>Staleness States</div>
         <div className={styles.groupCount}>Connected, stale, expired -- all 15 colors</div>
-        {[
-          { label: 'Connected', opacity: 1, filter: 'none', note: 'CoT received within staleness threshold. Full color.' },
-          { label: 'Stale', opacity: 0.5, filter: 'none', note: 'No update received past staleness time. Faded to 50% opacity.' },
-          { label: 'Expired', opacity: 0.3, filter: 'grayscale(1)', note: 'No update well past threshold. Grayed out, may be removed.' },
-        ].map((state) => (
-          <div key={state.label} style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
-            <span style={{ width: 130, fontSize: 12, color: '#DAD4BC', flexShrink: 0 }}>{state.label}</span>
-            {TEAM_COLORS.map((tc) => (
-              <div key={tc.name} style={{ width: COL_W, flexShrink: 0, display: 'flex', justifyContent: 'center' }}>
-                <div
-                  style={{
-                    ...skittleCircleBase,
-                    backgroundColor: tc.hex,
-                    color: contrastText(tc.hex),
-                    opacity: state.opacity,
-                    filter: state.filter,
-                  }}
-                />
-              </div>
-            ))}
-            <span style={{ fontSize: 11, color: '#878787', marginLeft: 8, flexShrink: 0 }}>
-              {state.note}
-            </span>
-          </div>
-        ))}
+        <div style={scrollRow}>
+          {[
+            { label: 'Connected', opacity: 1, filter: 'none', note: 'Full color.' },
+            { label: 'Stale', opacity: 0.5, filter: 'none', note: 'Faded to 50% opacity.' },
+            { label: 'Expired', opacity: 0.3, filter: 'grayscale(1)', note: 'Grayed out.' },
+          ].map((state) => (
+            <div key={state.label} style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
+              <span style={{ width: LABEL_W, fontSize: 11, color: '#DAD4BC', flexShrink: 0 }}>{state.label}</span>
+              {TEAM_COLORS.map((tc) => (
+                <div key={tc.name} style={{ width: COL_W, flexShrink: 0, display: 'flex', justifyContent: 'center' }}>
+                  <div
+                    style={{
+                      ...skittleCircleBase,
+                      backgroundColor: tc.hex,
+                      color: contrastText(tc.hex),
+                      opacity: state.opacity,
+                      filter: state.filter,
+                    }}
+                  />
+                </div>
+              ))}
+              <span style={{ fontSize: 10, color: '#878787', marginLeft: 8, whiteSpace: 'nowrap' }}>{state.note}</span>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* GPS Source Variants */}
       <div className={styles.groupSection}>
         <div className={styles.groupName}>GPS Source Variants</div>
         <div className={styles.groupCount}>
-          CoT &quot;how&quot; field: h-e (GPS), h-* (human/device), m-g-l (manual entry with slash)
+          CoT &quot;how&quot; field: h-e (GPS), h-* (human/device), m-g-l (manual)
         </div>
-        {[
-          { label: 'GPS (h-e)', suffix: '', note: 'Device GPS fix. Standard rendering, no overlay.' },
-          { label: 'Human (h-*)', suffix: 'human', note: 'External GPS source (PLI puck, BT GPS, radio). Green dot indicator.' },
-          { label: 'Manual (m-g-l)', suffix: 'nogps', note: 'Hand-entered MGRS/lat-lon. Black slash indicates no GPS hardware.' },
-        ].map((variant) => (
-          <div key={variant.label} style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
-            <span style={{ width: 130, fontSize: 12, color: '#DAD4BC', flexShrink: 0 }}>
-              {variant.label}
-            </span>
-            {TEAM_COLORS.map((tc) => (
-              <div key={tc.name} style={{ width: COL_W, flexShrink: 0, display: 'flex', justifyContent: 'center' }}>
-                <div
-                  style={{
-                    ...skittleCircleBase,
-                    backgroundColor: tc.hex,
-                    color: contrastText(tc.hex),
-                    position: 'relative',
-                  }}
-                >
-                {variant.suffix === 'nogps' && (
-                  <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} viewBox="0 0 28 28">
-                    <line x1="6" y1="22" x2="22" y2="6" stroke="#000" strokeWidth="3" strokeLinecap="round" />
-                  </svg>
-                )}
-                {variant.suffix === 'human' && (
-                  <svg style={{ position: 'absolute', bottom: -2, right: -2, width: 10, height: 10 }} viewBox="0 0 10 10">
-                    <circle cx="5" cy="5" r="4" fill="#92A844" stroke="#000" strokeWidth="1" />
-                  </svg>
-                )}
+        <div style={scrollRow}>
+          {[
+            { label: 'GPS (h-e)', suffix: '', note: 'Standard rendering.' },
+            { label: 'Human (h-*)', suffix: 'human', note: 'Green dot indicator.' },
+            { label: 'Manual (m-g-l)', suffix: 'nogps', note: 'Black slash overlay.' },
+          ].map((variant) => (
+            <div key={variant.label} style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
+              <span style={{ width: LABEL_W, fontSize: 11, color: '#DAD4BC', flexShrink: 0 }}>
+                {variant.label}
+              </span>
+              {TEAM_COLORS.map((tc) => (
+                <div key={tc.name} style={{ width: COL_W, flexShrink: 0, display: 'flex', justifyContent: 'center' }}>
+                  <div
+                    style={{
+                      ...skittleCircleBase,
+                      backgroundColor: tc.hex,
+                      color: contrastText(tc.hex),
+                      position: 'relative',
+                    }}
+                  >
+                  {variant.suffix === 'nogps' && (
+                    <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} viewBox="0 0 28 28">
+                      <line x1="6" y1="22" x2="22" y2="6" stroke="#000" strokeWidth="3" strokeLinecap="round" />
+                    </svg>
+                  )}
+                  {variant.suffix === 'human' && (
+                    <svg style={{ position: 'absolute', bottom: -2, right: -2, width: 10, height: 10 }} viewBox="0 0 10 10">
+                      <circle cx="5" cy="5" r="4" fill="#92A844" stroke="#000" strokeWidth="1" />
+                    </svg>
+                  )}
+                  </div>
                 </div>
-              </div>
-            ))}
-            <span style={{ fontSize: 11, color: '#878787', marginLeft: 8, flexShrink: 0 }}>
-              {variant.note}
-            </span>
-          </div>
-        ))}
+              ))}
+              <span style={{ fontSize: 10, color: '#878787', marginLeft: 8, whiteSpace: 'nowrap' }}>{variant.note}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

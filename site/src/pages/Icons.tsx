@@ -5,6 +5,7 @@ import { useHighlight } from '../hooks/useHighlight';
 import styles from './Icons.module.css';
 import catalog from '../../../data/atak-drawable-catalog.json';
 import shapeData from '../../../data/atak-shapes.json';
+import selectorData from '../../../data/atak-selectors.json';
 
 const CATEGORIES = [
   'ic_menu', 'nav', 'btn', 'enter_location', 'toolbar', 'tab', 'toggle', 'other',
@@ -31,10 +32,52 @@ type ShapeEntry = {
   gradient?: { startColor?: string; endColor?: string; angle?: string };
 };
 
+type SelectorState = {
+  drawable: string;
+  conditions?: Record<string, boolean>;
+};
+
+type SelectorEntry = {
+  name: string;
+  states: SelectorState[];
+};
+
 const allItems: CatalogEntry[] = catalog as CatalogEntry[];
 const shapeMap = new Map<string, ShapeEntry>();
 for (const s of shapeData as ShapeEntry[]) {
   shapeMap.set(s.name, s);
+}
+
+/** Map from selector name to its resolved default drawable name */
+const catMap = new Map<string, CatalogEntry>();
+for (const e of allItems) catMap.set(e.name, e);
+
+const selectorDefaultMap = new Map<string, string>();
+for (const sel of selectorData as SelectorEntry[]) {
+  // Default state is the last entry (Android evaluates top-to-bottom, last is fallback)
+  for (let i = sel.states.length - 1; i >= 0; i--) {
+    const ref = sel.states[i].drawable || '';
+    if (ref.startsWith('@drawable/')) {
+      const name = ref.replace('@drawable/', '');
+      if (catMap.has(name)) {
+        selectorDefaultMap.set(sel.name, name);
+        break;
+      }
+    }
+  }
+  // If no default found, try first state with a resolvable drawable
+  if (!selectorDefaultMap.has(sel.name)) {
+    for (const state of sel.states) {
+      const ref = state.drawable || '';
+      if (ref.startsWith('@drawable/')) {
+        const name = ref.replace('@drawable/', '');
+        if (catMap.has(name)) {
+          selectorDefaultMap.set(sel.name, name);
+          break;
+        }
+      }
+    }
+  }
 }
 
 /** Vector SVGs served from site/public/icons/ */
@@ -145,7 +188,18 @@ function CardPreview({ entry }: { entry: CatalogEntry }) {
     );
   }
 
-  // Selector/layer-list: metadata-only, no visual preview
+  // Selector: resolve default state drawable and render it
+  if (entry.type === 'selector') {
+    const defaultDrawable = selectorDefaultMap.get(entry.name);
+    if (defaultDrawable) {
+      const resolved = catMap.get(defaultDrawable);
+      if (resolved) {
+        return <CardPreview entry={resolved} />;
+      }
+    }
+  }
+
+  // Unresolvable selector or layer-list: show placeholder
   const icon = entry.type === 'selector' ? '\u21C4' : '\u29C9';
   return (
     <div className={styles.noPreview}>

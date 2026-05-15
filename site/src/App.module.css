@@ -171,6 +171,50 @@
   justify-content: center;
 }
 
+/* GitHub link -- top right on desktop, hidden on mobile (in sidebar instead) */
+.githubLink {
+  position: fixed;
+  top: 12px;
+  right: 16px;
+  z-index: 101;
+  color: #878787;
+  text-decoration: none;
+  transition: color 0.15s;
+  line-height: 1;
+}
+
+.githubLink:hover {
+  color: #FFE35E;
+}
+
+/* Share FAB -- hidden on desktop, visible on mobile.
+   Centered horizontally over the 66px hamburger (right:16).
+   Hamburger center = 16 + 33 = 49px from right.
+   Share offset = 49 - 22 = 27px from right. */
+.shareFab {
+  display: none;
+  position: fixed;
+  z-index: 150;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #FFE35E;
+  color: #131415;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: opacity 0.15s;
+  bottom: 148px;
+  right: 27px;
+}
+
+.shareFab:active {
+  opacity: 0.8;
+}
+
 /* Sidebar overlay backdrop -- hidden on desktop */
 .backdrop {
   display: none;
@@ -197,6 +241,9 @@
 
 /* Mobile: < 768px */
 @media (max-width: 767px) {
+  .layout {
+    display: block;
+  }
   .sidebar {
     width: 240px;
     transform: translateX(-100%);
@@ -214,14 +261,42 @@
   }
   .hamburger {
     display: flex;
+    position: fixed;
+    bottom: 62px;
+    right: 16px;
+    z-index: 150;
+    width: 66px;
+    height: 66px;
+    font-size: 30px;
+    border-radius: 50%;
+    background: #242424;
+    border: 1px solid #2E2E2E;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    margin: 0;
+    padding: 0;
+  }
+  .shareFab {
+    display: flex;
+  }
+  .githubLink {
+    display: none;
   }
   .topBar {
     left: 0;
+    top: auto;
+    bottom: 0;
+    border-top: 1px solid #2E2E2E;
+    border-bottom: none;
+    height: 48px;
+    padding: 0 12px;
   }
   .content {
     margin-left: 0;
+    width: 100%;
     padding-right: 16px;
     padding-left: 16px;
+    padding-bottom: 64px;
+    padding-top: 16px;
   }
   .pageTitle {
     font-size: 24px;

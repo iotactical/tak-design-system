@@ -10,38 +10,68 @@ let sharedWorker: Worker | null = null;
 let sharedPending: Map<string, PendingRequest> = new Map();
 let sharedCache: Map<string, string> = new Map();
 let refCount = 0;
+let workerFailed = false;
+let workerReady = false;
+/** Subscribers notified when ready/failed state changes */
+let stateListeners: Set<() => void> = new Set();
 
-function getWorker(): Worker {
+function notifyListeners() {
+  for (const fn of stateListeners) fn();
+}
+
+function getWorker(): Worker | null {
+  if (workerFailed) return null;
   if (!sharedWorker) {
-    sharedWorker = new Worker(
-      new URL('../workers/multipoint-worker.ts', import.meta.url),
-      { type: 'module' }
-    );
+    try {
+      sharedWorker = new Worker(
+        new URL('../workers/multipoint-worker.ts', import.meta.url),
+        { type: 'module' }
+      );
 
-    sharedWorker.onmessage = (e: MessageEvent) => {
-      const { id, geojson, error } = e.data;
-      const pending = sharedPending.get(id);
-      if (pending) {
-        sharedPending.delete(id);
-        if (error) {
-          console.warn('[multipoint-worker] error for', id, error);
-          pending.resolve(null);
-        } else if (geojson) {
-          sharedCache.set(id, geojson);
-          pending.resolve(geojson);
-        } else {
+      sharedWorker.onmessage = (e: MessageEvent) => {
+        // Worker sends { type: 'ready' } once the module loads successfully
+        if (e.data && e.data.type === 'ready') {
+          workerReady = true;
+          notifyListeners();
+          return;
+        }
+
+        const { id, geojson, error } = e.data;
+        const pending = sharedPending.get(id);
+        if (pending) {
+          sharedPending.delete(id);
+          if (error) {
+            console.warn('[multipoint-worker] error for', id, error);
+            pending.resolve(null);
+          } else if (geojson) {
+            sharedCache.set(id, geojson);
+            pending.resolve(geojson);
+          } else {
+            pending.resolve(null);
+          }
+        }
+      };
+
+      sharedWorker.onerror = (e) => {
+        console.error('[multipoint-worker] worker error:', e);
+        // If the worker errored before becoming ready, it means module
+        // loading failed (e.g. browser doesn't support module Workers)
+        if (!workerReady) {
+          workerFailed = true;
+          sharedWorker?.terminate();
+          sharedWorker = null;
+        }
+        for (const [, pending] of sharedPending) {
           pending.resolve(null);
         }
-      }
-    };
-
-    sharedWorker.onerror = (e) => {
-      console.error('[multipoint-worker] worker error:', e);
-      for (const [, pending] of sharedPending) {
-        pending.resolve(null);
-      }
-      sharedPending.clear();
-    };
+        sharedPending.clear();
+        notifyListeners();
+      };
+    } catch (e) {
+      console.warn('[multipoint-worker] Worker creation failed:', e);
+      workerFailed = true;
+      return null;
+    }
   }
   return sharedWorker;
 }
@@ -53,6 +83,7 @@ function releaseWorker() {
     sharedWorker = null;
     sharedPending.clear();
     sharedCache.clear();
+    workerReady = false;
     refCount = 0;
   }
 }
@@ -62,13 +93,32 @@ function releaseWorker() {
  * All components share a single worker instance. Results are memoized by key.
  */
 export function useMultipointWorker() {
-  const [ready, setReady] = useState(false);
+  const [ready, setReady] = useState(workerReady);
+  const [unsupported, setUnsupported] = useState(workerFailed);
 
   useEffect(() => {
-    getWorker();
+    const w = getWorker();
+    if (!w) {
+      setUnsupported(true);
+      return;
+    }
     refCount++;
-    setReady(true);
-    return () => { releaseWorker(); };
+
+    // If already ready (cached worker), set immediately
+    if (workerReady) setReady(true);
+    if (workerFailed) setUnsupported(true);
+
+    // Subscribe to future state changes
+    const listener = () => {
+      if (workerReady) setReady(true);
+      if (workerFailed) setUnsupported(true);
+    };
+    stateListeners.add(listener);
+
+    return () => {
+      stateListeners.delete(listener);
+      releaseWorker();
+    };
   }, []);
 
   const renderMultipoint = useCallback(
@@ -78,12 +128,15 @@ export function useMultipointWorker() {
       scale: number,
       bbox: string,
       modifiers?: Record<string, string>,
-      attributes?: Record<string, string>
+      attributes?: Record<string, string>,
+      pixelWidth?: number,
+      pixelHeight?: number,
     ): Promise<string | null> => {
       const modKey = modifiers
         ? JSON.stringify(Object.entries(modifiers).sort())
         : '';
-      const cacheKey = `${symbolCode}:${scale}:${controlPoints}:${bbox}:${modKey}`;
+      const pxKey = pixelWidth ? `:${pixelWidth}x${pixelHeight}` : '';
+      const cacheKey = `${symbolCode}:${scale}:${controlPoints}:${bbox}:${modKey}${pxKey}`;
 
       const cached = sharedCache.get(cacheKey);
       if (cached) {
@@ -105,13 +158,15 @@ export function useMultipointWorker() {
           bbox,
           modifiers,
           attributes,
+          pixelWidth,
+          pixelHeight,
         });
       });
     },
     []
   );
 
-  return { renderMultipoint, ready };
+  return { renderMultipoint, ready, unsupported };
 }
 
 export default useMultipointWorker;

@@ -29,8 +29,8 @@ describe('REQ-XW-138: Multi-point graphics runtime renderer', () => {
     const p = resolve(SITE, 'hooks', 'useMultipointWorker.ts');
     assert.ok(existsSync(p), 'useMultipointWorker.ts should exist');
     const src = readFileSync(p, 'utf8');
-    assert.ok(src.includes('cacheRef'), 'Hook should have cache');
-    assert.ok(src.includes('pendingRef'), 'Hook should have pending map');
+    assert.ok(src.includes('sharedCache') || src.includes('cacheRef'), 'Hook should have cache');
+    assert.ok(src.includes('sharedPending') || src.includes('pendingRef'), 'Hook should have pending map');
     assert.ok(src.includes('renderMultipoint'), 'Hook should export renderMultipoint');
     assert.ok(src.includes('ready'), 'Hook should export ready state');
   });

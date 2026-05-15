@@ -1172,7 +1172,7 @@ export default function Explorer() {
 
   useEffect(() => { document.title = '2525 Explorer - TAK Design System'; }, []);
   useHighlight();
-  const activeTab: TabId = (tab && ['browse', 'decode', 'build', 'compare'].includes(tab) ? tab : 'browse') as TabId;
+  const activeTab: TabId = (tab && ['browse', 'decode', 'build', 'compare', 'control-measures'].includes(tab) ? tab : 'browse') as TabId;
 
   return (
     <div className={styles.container}>

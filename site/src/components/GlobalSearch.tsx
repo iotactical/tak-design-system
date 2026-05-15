@@ -119,6 +119,11 @@ function useDebounce(value: string, delay: number): string {
   return debounced;
 }
 
+/** True on touch-primary devices (phones/tablets) */
+const isTouchDevice =
+  typeof window !== 'undefined' &&
+  (window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 768);
+
 export function GlobalSearch() {
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
@@ -271,7 +276,7 @@ export function GlobalSearch() {
           ref={inputRef}
           className={styles.searchInput}
           type="text"
-          placeholder="Search... (Cmd+K)"
+          placeholder={isTouchDevice ? 'Search...' : 'Search... (Cmd+K)'}
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);

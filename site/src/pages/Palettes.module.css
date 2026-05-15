@@ -366,7 +366,27 @@
     max-width: 100%;
   }
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .iconCard {
+    overflow: hidden;
+  }
+  .iconCard canvas,
+  .iconCard img {
+    max-width: 100%;
+    height: auto;
+  }
+  .paletteName {
+    font-size: 20px;
+  }
+  .groupName {
+    font-size: 15px;
+  }
+  .groupCount {
+    font-size: 11px;
+  }
+  .paletteHeader {
+    padding: 0 4px;
   }
   .spotGrid {
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));

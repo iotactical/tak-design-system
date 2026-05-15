@@ -1,6 +1,6 @@
 {
   "name": "@iotactical/tak-design-system",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "TAK Design System - Design tokens and platform-specific assets for ATAK, WinTAK, TAKX, and WebTAK development",
   "license": "MIT",
