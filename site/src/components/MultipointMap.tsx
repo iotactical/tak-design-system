@@ -197,15 +197,38 @@ function vertexFeatureCollection(vertices: [number, number][]): GeoJSON.FeatureC
   };
 }
 
-function computeHandleGeoJson(vertices: [number, number][]): GeoJSON.FeatureCollection {
+/** Rotate a point around a center by angleDeg, accounting for latitude scaling */
+function rotatePoint(
+  lng: number, lat: number, cx: number, cy: number,
+  cosA: number, sinA: number, latScale: number,
+): [number, number] {
+  const dx = (lng - cx) * latScale;
+  const dy = lat - cy;
+  return [cx + (dx * cosA - dy * sinA) / latScale, cy + dx * sinA + dy * cosA];
+}
+
+function computeHandleGeoJson(
+  vertices: [number, number][],
+  rotationDeg = 0,
+): GeoJSON.FeatureCollection {
   if (vertices.length < 2) return { type: 'FeatureCollection', features: [] };
+
+  const cx = vertices.reduce((s, p) => s + p[0], 0) / vertices.length;
+  const cy = vertices.reduce((s, p) => s + p[1], 0) / vertices.length;
+  const latScale = Math.cos((cy * Math.PI) / 180);
+
+  // Undo rotation to find the axis-aligned bbox of the unrotated shape
+  const negRad = (-rotationDeg * Math.PI) / 180;
+  const cosNeg = Math.cos(negRad);
+  const sinNeg = Math.sin(negRad);
 
   let minLng = Infinity, maxLng = -Infinity, minLat = Infinity, maxLat = -Infinity;
   for (const [lng, lat] of vertices) {
-    minLng = Math.min(minLng, lng);
-    maxLng = Math.max(maxLng, lng);
-    minLat = Math.min(minLat, lat);
-    maxLat = Math.max(maxLat, lat);
+    const [uLng, uLat] = rotatePoint(lng, lat, cx, cy, cosNeg, sinNeg, latScale);
+    minLng = Math.min(minLng, uLng);
+    maxLng = Math.max(maxLng, uLng);
+    minLat = Math.min(minLat, uLat);
+    maxLat = Math.max(maxLat, uLat);
   }
 
   const padLng = Math.max((maxLng - minLng) * 0.08, 0.05);
@@ -213,44 +236,56 @@ function computeHandleGeoJson(vertices: [number, number][]): GeoJSON.FeatureColl
   const bL = minLng - padLng, bR = maxLng + padLng;
   const bB = minLat - padLat, bT = maxLat + padLat;
 
+  // Rotate the bbox corners and handles by +rotationDeg
+  const posRad = (rotationDeg * Math.PI) / 180;
+  const cosPos = Math.cos(posRad);
+  const sinPos = Math.sin(posRad);
+  const rot = (lng: number, lat: number): [number, number] =>
+    rotatePoint(lng, lat, cx, cy, cosPos, sinPos, latScale);
+
+  const sw = rot(bL, bB), se = rot(bR, bB), ne = rot(bR, bT), nw = rot(bL, bT);
+
   const features: GeoJSON.Feature[] = [];
 
-  // Bounding box outline
+  // Bounding box outline (oriented)
   features.push({
     type: 'Feature',
     geometry: {
       type: 'LineString',
-      coordinates: [[bL, bB], [bR, bB], [bR, bT], [bL, bT], [bL, bB]],
+      coordinates: [sw, se, ne, nw, sw],
     },
     properties: { handleType: 'bbox' },
   });
 
   // Corner resize handles
-  const corners: [string, number, number][] = [
-    ['sw', bL, bB], ['se', bR, bB], ['ne', bR, bT], ['nw', bL, bT],
+  const cornerPairs: [string, [number, number]][] = [
+    ['sw', sw], ['se', se], ['ne', ne], ['nw', nw],
   ];
-  for (const [corner, lng, lat] of corners) {
+  for (const [corner, coords] of cornerPairs) {
     features.push({
       type: 'Feature',
-      geometry: { type: 'Point', coordinates: [lng, lat] },
+      geometry: { type: 'Point', coordinates: coords },
       properties: { handleType: 'resize', corner },
     });
   }
 
-  // Rotation handle: stem extending upward from top-center + circular grip
-  const midLng = (bL + bR) / 2;
+  // Rotation handle: stem from top-center of oriented bbox
+  const topMidLng = (nw[0] + ne[0]) / 2;
+  const topMidLat = (nw[1] + ne[1]) / 2;
   const stemLen = (bT - bB) * 0.2;
+  const stemEnd = rot((bL + bR) / 2, bT + stemLen);
+
   features.push({
     type: 'Feature',
     geometry: {
       type: 'LineString',
-      coordinates: [[midLng, bT], [midLng, bT + stemLen]],
+      coordinates: [[topMidLng, topMidLat], stemEnd],
     },
     properties: { handleType: 'rotate-stem' },
   });
   features.push({
     type: 'Feature',
-    geometry: { type: 'Point', coordinates: [midLng, bT + stemLen] },
+    geometry: { type: 'Point', coordinates: stemEnd },
     properties: { handleType: 'rotate' },
   });
 
@@ -457,6 +492,8 @@ export interface MultipointMapProps {
   onClick?: (lngLat: [number, number]) => void;
   /** Vertex positions for draggable markers (interactive maps only) */
   vertices?: [number, number][];
+  /** Cumulative rotation angle (degrees) for oriented bounding box */
+  rotationAngle?: number;
   /** Called when a vertex is dragged to a new position */
   onVertexDrag?: (index: number, lngLat: [number, number]) => void;
   /** Called when the entire shape is translated by dragging the graphic body */
@@ -465,6 +502,8 @@ export interface MultipointMapProps {
   onRotate?: (angleDeltaDeg: number) => void;
   /** Called when the shape is resized via a corner handle (independent X/Y) */
   onResize?: (scaleX: number, scaleY: number, anchorLng: number, anchorLat: number) => void;
+  /** Called when any drag interaction ends (mouseup) */
+  onDragEnd?: () => void;
 }
 
 export function MultipointMap({
@@ -474,10 +513,12 @@ export function MultipointMap({
   small = false,
   onClick,
   vertices,
+  rotationAngle = 0,
   onVertexDrag,
   onShapeTranslate,
   onRotate,
   onResize,
+  onDragEnd,
 }: MultipointMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<InstanceType<typeof import('maplibre-gl').Map> | null>(null);
@@ -491,12 +532,14 @@ export function MultipointMap({
   const onShapeTranslateRef = useRef(onShapeTranslate);
   const onRotateRef = useRef(onRotate);
   const onResizeRef = useRef(onResize);
+  const onDragEndRef = useRef(onDragEnd);
   const verticesRef = useRef(vertices);
   onClickRef.current = onClick;
   onVertexDragRef.current = onVertexDrag;
   onShapeTranslateRef.current = onShapeTranslate;
   onRotateRef.current = onRotate;
   onResizeRef.current = onResize;
+  onDragEndRef.current = onDragEnd;
   verticesRef.current = vertices;
 
   // Initialize map
@@ -657,6 +700,7 @@ export function MultipointMap({
             draggingRef.current = null;
             map!.getCanvas().style.cursor = '';
             map!.dragPan.enable();
+            onDragEndRef.current?.();
           }
         });
 
@@ -794,11 +838,11 @@ export function MultipointMap({
     const handleSrc = mapRef.current.getSource(HANDLE_SOURCE_ID);
     if (handleSrc && handleSrc.type === 'geojson') {
       const data = vertices && vertices.length >= 2
-        ? computeHandleGeoJson(vertices)
+        ? computeHandleGeoJson(vertices, rotationAngle)
         : { type: 'FeatureCollection' as const, features: [] as GeoJSON.Feature[] };
       (handleSrc as import('maplibre-gl').GeoJSONSource).setData(data);
     }
-  }, [vertices, loaded, small]);
+  }, [vertices, rotationAngle, loaded, small]);
 
   return (
     <div className={styles.mapWrapper}>

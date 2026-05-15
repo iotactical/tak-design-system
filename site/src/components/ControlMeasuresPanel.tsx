@@ -121,52 +121,85 @@ function parseControlPoints(cp: string): Point[] {
   });
 }
 
+interface Snapshot {
+  points: Point[];
+  rotation: number;
+}
+
 function usePointHistory() {
   const [points, setPoints] = useState<Point[]>([]);
-  const redoStack = useRef<Point[]>([]);
+  const [rotation, setRotation] = useState(0);
+  // Full snapshot undo/redo stacks
+  const undoStack = useRef<Snapshot[]>([]);
+  const redoStack = useRef<Snapshot[]>([]);
+  // Track whether the current drag is already snapshotted (coalesce frames)
+  const skipSnapshotRef = useRef(false);
+  // Current rotation ref for snapshot capture inside setPoints callbacks
+  const rotationRef = useRef(0);
 
-  const addPoint = useCallback((pt: Point) => {
+  const pushUndo = useCallback((prevPts: Point[]) => {
+    undoStack.current.push({ points: prevPts, rotation: rotationRef.current });
     redoStack.current = [];
-    setPoints((prev) => [...prev, pt]);
   }, []);
 
-  const undo = useCallback(() => {
+  const addPoint = useCallback((pt: Point) => {
     setPoints((prev) => {
-      if (prev.length === 0) return prev;
-      redoStack.current.push(prev[prev.length - 1]);
-      return prev.slice(0, -1);
+      pushUndo(prev);
+      return [...prev, pt];
     });
+  }, [pushUndo]);
+
+  const undo = useCallback(() => {
+    const snapshot = undoStack.current.pop();
+    if (!snapshot) return;
+    setPoints((prev) => {
+      redoStack.current.push({ points: prev, rotation: rotationRef.current });
+      return snapshot.points;
+    });
+    rotationRef.current = snapshot.rotation;
+    setRotation(snapshot.rotation);
   }, []);
 
   const redo = useCallback(() => {
-    const pt = redoStack.current.pop();
-    if (pt) setPoints((prev) => [...prev, pt]);
+    const snapshot = redoStack.current.pop();
+    if (!snapshot) return;
+    setPoints((prev) => {
+      undoStack.current.push({ points: prev, rotation: rotationRef.current });
+      return snapshot.points;
+    });
+    rotationRef.current = snapshot.rotation;
+    setRotation(snapshot.rotation);
   }, []);
 
   const updatePoint = useCallback((index: number, pt: Point) => {
     setPoints((prev) => {
       if (index < 0 || index >= prev.length) return prev;
+      if (!skipSnapshotRef.current) pushUndo(prev);
+      skipSnapshotRef.current = true;
       const next = [...prev];
       next[index] = pt;
       return next;
     });
-  }, []);
+  }, [pushUndo]);
 
   const translateAll = useCallback((dLng: number, dLat: number) => {
-    setPoints((prev) =>
-      prev.map(([lng, lat]) => [lng + dLng, lat + dLat] as Point)
-    );
-  }, []);
+    setPoints((prev) => {
+      if (!skipSnapshotRef.current) pushUndo(prev);
+      skipSnapshotRef.current = true;
+      return prev.map(([lng, lat]) => [lng + dLng, lat + dLat] as Point);
+    });
+  }, [pushUndo]);
 
   const rotateAll = useCallback((angleDeg: number) => {
     setPoints((prev) => {
       if (prev.length < 2) return prev;
+      if (!skipSnapshotRef.current) pushUndo(prev);
+      skipSnapshotRef.current = true;
       const cx = prev.reduce((s, p) => s + p[0], 0) / prev.length;
       const cy = prev.reduce((s, p) => s + p[1], 0) / prev.length;
       const rad = (angleDeg * Math.PI) / 180;
       const cosA = Math.cos(rad);
       const sinA = Math.sin(rad);
-      // Scale longitude by cos(latitude) so rotation is isotropic in local space
       const latScale = Math.cos((cy * Math.PI) / 180);
       return prev.map(([lng, lat]) => {
         const dx = (lng - cx) * latScale;
@@ -176,28 +209,39 @@ function usePointHistory() {
         return [cx + rx / latScale, cy + ry] as Point;
       });
     });
-  }, []);
+    rotationRef.current += angleDeg;
+    setRotation(rotationRef.current);
+  }, [pushUndo]);
 
   const scaleAll = useCallback((factorX: number, factorY: number, anchorLng: number, anchorLat: number) => {
-    setPoints((prev) =>
-      prev.map(([lng, lat]) => [
+    setPoints((prev) => {
+      if (!skipSnapshotRef.current) pushUndo(prev);
+      skipSnapshotRef.current = true;
+      return prev.map(([lng, lat]) => [
         anchorLng + (lng - anchorLng) * factorX,
         anchorLat + (lat - anchorLat) * factorY,
-      ] as Point)
-    );
+      ] as Point);
+    });
+  }, [pushUndo]);
+
+  const commitDrag = useCallback(() => {
+    skipSnapshotRef.current = false;
   }, []);
 
   const clear = useCallback(() => {
+    undoStack.current = [];
     redoStack.current = [];
+    rotationRef.current = 0;
+    setRotation(0);
     setPoints([]);
   }, []);
 
-  const canUndo = points.length > 0;
+  const canUndo = undoStack.current.length > 0;
   const canRedo = redoStack.current.length > 0;
 
   return {
-    points, addPoint, updatePoint, translateAll, rotateAll, scaleAll,
-    undo, redo, clear, canUndo, canRedo, setPoints,
+    points, rotation, addPoint, updatePoint, translateAll, rotateAll, scaleAll,
+    undo, redo, clear, canUndo, canRedo, setPoints, commitDrag,
   };
 }
 
@@ -270,8 +314,9 @@ export default function ControlMeasuresPanel() {
   const panelRef = useRef<HTMLDivElement>(null);
 
   const {
-    points: userPoints, addPoint, updatePoint, translateAll, rotateAll, scaleAll,
-    undo, redo, clear, canUndo, canRedo, setPoints,
+    points: userPoints, rotation: rotationAngle, addPoint, updatePoint,
+    translateAll, rotateAll, scaleAll,
+    undo, redo, clear, canUndo, canRedo, setPoints, commitDrag,
   } = usePointHistory();
   const { renderMultipoint, ready } = useMultipointWorker();
 
@@ -733,10 +778,12 @@ export default function ControlMeasuresPanel() {
                 zoom={6}
                 onClick={handleMapClick}
                 vertices={activeVertices}
+                rotationAngle={rotationAngle}
                 onVertexDrag={handleVertexDrag}
                 onShapeTranslate={handleShapeTranslate}
                 onRotate={handleRotate}
                 onResize={handleResize}
+                onDragEnd={commitDrag}
               />
             ) : (
               <div className={styles.cmEmpty}>
