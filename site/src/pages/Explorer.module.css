@@ -503,7 +503,7 @@
 }
 
 .cmSidebar {
-  width: 300px;
+  width: 260px;
   flex-shrink: 0;
   min-width: 0;
   display: flex;
@@ -791,20 +791,16 @@
 }
 
 .cmLog {
-  position: absolute;
-  top: 8px;
-  right: 8px;
   width: 200px;
-  max-height: calc(100% - 16px);
-  z-index: 6;
+  flex-shrink: 0;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: 0;
-  background: rgba(20, 20, 20, 0.92);
+  background: #141414;
   border: 1px solid #2E2E2E;
   border-radius: 8px;
   overflow: hidden;
-  backdrop-filter: blur(4px);
 }
 
 .cmLogHeader {
