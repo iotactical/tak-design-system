@@ -14,7 +14,15 @@
       "require": "./dist/tak-react.cjs",
       "types": "./dist/index.d.ts"
     },
-    "./styles": "./dist/style.css"
+    "./styles": "./dist/style.css",
+    "./data/icons": "./dist/data/tak-icon-registry.json",
+    "./data/icons/index": "./dist/data/icons.index.json",
+    "./data/radial": "./dist/data/tak-radial-action-icons.json",
+    "./data/radial/index": "./dist/data/radial.index.json",
+    "./data/doctrine": "./dist/data/doctrine/ss25-control-measures.json",
+    "./schemas/icons": "./dist/schemas/tak-icon-registry.schema.json",
+    "./schemas/radial": "./dist/schemas/tak-radial-action-icons.schema.json",
+    "./schemas/doctrine": "./dist/schemas/mil-std-2525-doctrine.schema.json"
   },
   "files": [
     "dist"
@@ -27,7 +35,8 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite build --watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build && npm run copy-data",
+    "copy-data": "mkdir -p dist/data/doctrine dist/schemas && cp ../../data/tak-icon-registry.json ../../data/tak-radial-action-icons.json ../../data/index.json ../../data/icons.index.json ../../data/radial.index.json dist/data/ && cp ../../data/mil-std-2525/doctrine/*.json dist/data/doctrine/ && cp ../../schemas/tak-icon-registry.schema.json ../../schemas/tak-radial-action-icons.schema.json ../../schemas/mil-std-2525-doctrine.schema.json dist/schemas/"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
