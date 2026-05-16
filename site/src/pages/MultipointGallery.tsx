@@ -1,5 +1,5 @@
 // rtmx:req REQ-XW-088
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { MultipointMap } from '../components/MultipointMap';
 import { useMultipointWorker } from '../hooks/useMultipointWorker';
 import {
@@ -62,6 +62,31 @@ const DEFAULT_SCALE = 5000000;
 const THUMBNAIL_PX_WIDTH = 400;
 const THUMBNAIL_PX_HEIGHT = 420;
 
+/** Compute center from control points string */
+function computeCenter(cp: string): [number, number] {
+  const pts = cp.split(' ').map((p) => {
+    const [lon, lat] = p.split(',').map(Number);
+    return [lon, lat] as [number, number];
+  });
+  const avgLon = pts.reduce((s, p) => s + p[0], 0) / pts.length;
+  const avgLat = pts.reduce((s, p) => s + p[1], 0) / pts.length;
+  return [avgLon, avgLat];
+}
+
+/** Detect mobile viewport */
+function useIsMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== 'undefined' && window.innerWidth < breakpoint,
+  );
+  useEffect(() => {
+    const mq = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, [breakpoint]);
+  return isMobile;
+}
+
 function GalleryCard({
   example,
   affiliation,
@@ -81,17 +106,13 @@ function GalleryCard({
     if (!ready) return;
     let cancelled = false;
 
-    // Use RenderSymbol2D with pixel dimensions matching the gallery card so
-    // the renderer generates decoration density appropriate for thumbnails.
-    // Don't pass modifiers -- WebRenderer embeds raw modifier Maps in GeoJSON
-    // output without proper JSON escaping, breaking strict parsers (Firefox).
     renderMultipoint(
       sidc,
       example.controlPoints,
       DEFAULT_SCALE,
       DEFAULT_BBOX,
-      undefined,  // no modifiers
-      undefined,  // no extra attributes
+      undefined,
+      undefined,
       THUMBNAIL_PX_WIDTH,
       THUMBNAIL_PX_HEIGHT,
     ).then((result) => {
@@ -101,16 +122,7 @@ function GalleryCard({
     return () => { cancelled = true; };
   }, [sidc, example.controlPoints, ready, renderMultipoint]);
 
-  // Compute center from control points
-  const center = useMemo((): [number, number] => {
-    const pts = example.controlPoints.split(' ').map((p) => {
-      const [lon, lat] = p.split(',').map(Number);
-      return [lon, lat] as [number, number];
-    });
-    const avgLon = pts.reduce((s, p) => s + p[0], 0) / pts.length;
-    const avgLat = pts.reduce((s, p) => s + p[1], 0) / pts.length;
-    return [avgLon, avgLat];
-  }, [example.controlPoints]);
+  const center = useMemo(() => computeCenter(example.controlPoints), [example.controlPoints]);
 
   return (
     <div className={styles.card}>
@@ -148,10 +160,130 @@ function GalleryCard({
   );
 }
 
+/** Mobile single-map viewer: one large map + scrollable list */
+function MobileGallery({
+  filtered,
+  affiliation,
+  version,
+}: {
+  filtered: MultipointExample[];
+  affiliation: string;
+  version: 'B' | 'C' | 'D' | 'E';
+}) {
+  const { renderMultipoint, ready, unsupported } = useMultipointWorker();
+  const [selectedIdx, setSelectedIdx] = useState(0);
+  const [geojson, setGeojson] = useState<string | null>(null);
+  const [search, setSearch] = useState('');
+
+  const searchFiltered = useMemo(() => {
+    if (!search.trim()) return filtered;
+    const q = search.toLowerCase();
+    return filtered.filter(
+      (e) => e.name.toLowerCase().includes(q) || e.entityCode.toLowerCase().includes(q),
+    );
+  }, [filtered, search]);
+
+  const selected = searchFiltered[selectedIdx] || searchFiltered[0];
+
+  const baseSidc = selected
+    ? (version === 'B' || version === 'C') ? selected.bSidc : selected.sidc
+    : '';
+  const sidc = selected ? withAffiliation(baseSidc, affiliation) : '';
+
+  useEffect(() => {
+    if (!ready || !selected) { setGeojson(null); return; }
+    let cancelled = false;
+    setGeojson(null);
+    renderMultipoint(
+      sidc,
+      selected.controlPoints,
+      DEFAULT_SCALE,
+      DEFAULT_BBOX,
+      undefined,
+      undefined,
+      THUMBNAIL_PX_WIDTH,
+      THUMBNAIL_PX_HEIGHT,
+    ).then((result) => {
+      if (!cancelled) setGeojson(result);
+    });
+    return () => { cancelled = true; };
+  }, [sidc, selected, ready, renderMultipoint]);
+
+  const center = useMemo(
+    () => selected ? computeCenter(selected.controlPoints) : [-98.5, 39.8] as [number, number],
+    [selected],
+  );
+
+  // Reset selection when filter changes
+  useEffect(() => { setSelectedIdx(0); }, [searchFiltered.length]);
+
+  const handleSelect = useCallback((idx: number) => {
+    setSelectedIdx(idx);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  return (
+    <div className={styles.mobileLayout}>
+      <div className={styles.mobileMap}>
+        {unsupported ? (
+          <div className={styles.mobileUnsupported}>
+            Tactical graphics rendering requires Web Worker support.
+          </div>
+        ) : !geojson ? (
+          <LoadingCenter size={24} />
+        ) : (
+          <MultipointMap geojson={geojson} center={center} zoom={6} small />
+        )}
+      </div>
+      {selected && (
+        <div className={styles.mobileSelected}>
+          <span className={styles.mobileSelectedName}>{selected.name}</span>
+          <span className={`${styles.badge} ${styles.badgeInline} ${BADGE_CLASS[selected.category] || ''}`}>
+            {selected.category}
+          </span>
+          <div className={styles.cardMeta}>
+            <span className={styles.cardSidc}>{sidc}</span>
+            <span className={styles.cardPts}>
+              {selected.minPoints}
+              {selected.maxPoints > 0 ? `-${selected.maxPoints}` : '+'} pts
+            </span>
+          </div>
+          <div className={styles.cardDesc}>{selected.description}</div>
+        </div>
+      )}
+      <input
+        type="text"
+        className={styles.mobileSearch}
+        placeholder="Search graphics..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      <div className={styles.mobileList}>
+        {searchFiltered.map((ex, i) => (
+          <button
+            key={ex.entityCode}
+            className={`${styles.mobileListItem} ${i === selectedIdx ? styles.mobileListItemActive : ''}`}
+            onClick={() => handleSelect(i)}
+          >
+            <span className={styles.mobileListName}>{ex.name}</span>
+            <span className={`${styles.badge} ${styles.badgeInline} ${BADGE_CLASS[ex.category] || ''}`}>
+              {ex.category}
+            </span>
+          </button>
+        ))}
+        {searchFiltered.length === 0 && (
+          <div className={styles.mobileListEmpty}>No matching graphics</div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export default function MultipointGallery() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [version, setVersion] = useState<'B' | 'C' | 'D' | 'E'>('E');
   const [affiliation, setAffiliation] = useState('03');
+  const isMobile = useIsMobile();
 
   const filtered = useMemo(() => {
     if (!activeCategory) return MULTIPOINT_EXAMPLES;
@@ -229,16 +361,24 @@ export default function MultipointGallery() {
         {version === 'D' && ' (D uses 20-char SIDCs)'}
       </p>
 
-      <div className={styles.grid}>
-        {filtered.map((example) => (
-          <GalleryCard
-            key={example.entityCode + version}
-            example={example}
-            affiliation={affiliation}
-            version={version}
-          />
-        ))}
-      </div>
+      {isMobile ? (
+        <MobileGallery
+          filtered={filtered}
+          affiliation={affiliation}
+          version={version}
+        />
+      ) : (
+        <div className={styles.grid}>
+          {filtered.map((example) => (
+            <GalleryCard
+              key={example.entityCode + version}
+              example={example}
+              affiliation={affiliation}
+              version={version}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

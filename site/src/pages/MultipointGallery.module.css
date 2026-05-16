@@ -180,6 +180,121 @@
   margin-bottom: 16px;
 }
 
+/* Inline badge variant (no absolute positioning) */
+.badgeInline {
+  position: static;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* ---- Mobile single-map layout ---- */
+.mobileLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobileMap {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background: #1a1a2e;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.mobileUnsupported {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #888;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.mobileSelected {
+  padding: 8px 0 12px;
+  border-bottom: 1px solid var(--tak-border);
+  margin-bottom: 8px;
+}
+
+.mobileSelectedName {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--tak-accent, #FFE35E);
+  margin-right: 8px;
+}
+
+.mobileSearch {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: var(--tak-font-sans);
+  background: var(--tak-bg-secondary);
+  border: 1px solid var(--tak-border);
+  border-radius: 6px;
+  color: var(--tak-text-primary);
+  outline: none;
+  margin-bottom: 8px;
+}
+
+.mobileSearch::placeholder {
+  color: var(--tak-text-secondary);
+}
+
+.mobileSearch:focus {
+  border-color: var(--tak-accent);
+}
+
+.mobileList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mobileListItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: var(--tak-text-primary);
+  font-size: 14px;
+  font-family: var(--tak-font-sans);
+  text-align: left;
+  cursor: pointer;
+}
+
+.mobileListItem:active {
+  background: var(--tak-bg-secondary);
+}
+
+.mobileListItemActive {
+  background: var(--tak-bg-secondary);
+  border-color: var(--tak-accent);
+}
+
+.mobileListName {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mobileListEmpty {
+  padding: 24px;
+  text-align: center;
+  color: var(--tak-text-secondary);
+  font-size: 13px;
+}
+
 @media (max-width: 767px) {
   .title {
     font-size: 22px;
