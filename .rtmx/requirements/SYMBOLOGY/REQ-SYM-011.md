@@ -1,23 +1,23 @@
-# REQ-SYM-011: @iotactical/tak-data Doctrine Export
+# REQ-SYM-011: Doctrine Data Package Export
 
 ## Description
-Add doctrine data files to the @iotactical/tak-data npm package exports.
-Consumers can import doctrine definitions and schema directly from the
-published package without manual file copying.
+Doctrine data files are accessible via subpath exports from the consolidated
+@iotactical/tak-react npm package (per REQ-PKG-005). Consumers can import
+doctrine definitions and schema directly without manual file copying.
 
 ## Approach
-- Add conditional exports to packages/data/package.json for doctrine paths
-- Copy doctrine files in prepublish script to dist/doctrine/
-- Add schema export at @iotactical/tak-data/schemas/doctrine
-- Add control measures export at @iotactical/tak-data/doctrine/control-measures
+- Add subpath exports to packages/react/package.json for doctrine paths
+- Copy doctrine files in prepublishOnly script to dist/data/doctrine/
+- Add schema export at @iotactical/tak-react/schemas/doctrine
+- Add control measures export at @iotactical/tak-react/data/doctrine
 - Verify files included via npm pack --dry-run
 
 ## Acceptance Criteria
-- [ ] `@iotactical/tak-data/doctrine/control-measures` resolves to ss25-control-measures.json
-- [ ] `@iotactical/tak-data/schemas/doctrine` resolves to mil-std-2525-doctrine.schema.json
+- [ ] `@iotactical/tak-react/data/doctrine` resolves to ss25-control-measures.json
+- [ ] `@iotactical/tak-react/schemas/doctrine` resolves to doctrine schema
 - [ ] npm pack includes all doctrine files in tarball
-- [ ] Package exports work in both ESM and CJS consumers
-- [ ] No breaking changes to existing package exports
+- [ ] Importing data subpaths does not require React peer dependency
+- [ ] No breaking changes to existing component exports
 
 ## Validation
 - **Test**: npm pack --dry-run
