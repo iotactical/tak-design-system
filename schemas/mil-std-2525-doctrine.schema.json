@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://iotactical.github.io/tak-design-system/schemas/mil-std-2525-doctrine.schema.json",
+  "title": "MIL-STD-2525 Doctrinal Definitions",
+  "description": "Per-symbol doctrinal definitions, usage guidance, and safety constraints for AI/NLU validation of tactical graphics.",
+  "type": "object",
+  "required": ["symbolSet", "symbolSetName", "entities"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "symbolSet": {
+      "type": "string",
+      "pattern": "^[0-9]{2}$",
+      "description": "Two-digit symbol set code (e.g., '25' for Control Measures)"
+    },
+    "symbolSetName": {
+      "type": "string",
+      "description": "Human-readable symbol set name"
+    },
+    "entities": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/DoctrineEntity" }
+    }
+  },
+  "$defs": {
+    "DoctrineEntity": {
+      "type": "object",
+      "required": ["entityCode", "label", "definitions", "usageGuidance", "safetyConstraints", "embeddingText"],
+      "properties": {
+        "entityCode": {
+          "type": "string",
+          "pattern": "^[0-9]{6}$",
+          "description": "Six-digit entity code within the symbol set"
+        },
+        "label": {
+          "type": "string",
+          "description": "Canonical name of the graphic"
+        },
+        "bSidc": {
+          "type": ["string", "null"],
+          "description": "B-series 15-character SIDC pattern (null if no B equivalent)"
+        },
+        "definitions": {
+          "$ref": "#/$defs/VersionDefinitions"
+        },
+        "usageGuidance": {
+          "$ref": "#/$defs/UsageGuidance"
+        },
+        "safetyConstraints": {
+          "$ref": "#/$defs/SafetyConstraints"
+        },
+        "embeddingText": {
+          "type": "string",
+          "minLength": 50,
+          "description": "Pre-flattened plain-text combining definition, usage, and constraints for vector embedding"
+        }
+      }
+    },
+    "VersionDefinitions": {
+      "type": "object",
+      "required": ["b", "c", "d", "e"],
+      "properties": {
+        "b": { "type": ["string", "null"], "description": "MIL-STD-2525B definition (null if absent)" },
+        "c": { "type": ["string", "null"], "description": "MIL-STD-2525C definition (null if absent)" },
+        "d": { "type": ["string", "null"], "description": "MIL-STD-2525D definition (null if absent)" },
+        "e": { "type": ["string", "null"], "description": "MIL-STD-2525E definition (null if absent)" }
+      },
+      "additionalProperties": false
+    },
+    "UsageGuidance": {
+      "type": "object",
+      "required": ["purpose", "establishedBy", "requiredModifiers", "doctrinalRules"],
+      "properties": {
+        "purpose": {
+          "type": "string",
+          "description": "One-paragraph description of the graphic's tactical purpose"
+        },
+        "establishedBy": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Echelons or authorities that may establish this measure"
+        },
+        "requiredModifiers": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Modifier codes required by doctrine (T, W, AM, etc.)"
+        },
+        "optionalModifiers": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Modifier codes recommended but not required"
+        },
+        "geometryType": {
+          "type": "string",
+          "enum": ["line", "area", "point", "arrow"],
+          "description": "Primary geometry type"
+        },
+        "minPoints": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Minimum anchor points required"
+        },
+        "maxPoints": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Maximum anchor points (0 = unlimited)"
+        },
+        "doctrinalRules": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "Free-text doctrinal rules for correct usage"
+        }
+      }
+    },
+    "SafetyConstraints": {
+      "type": "object",
+      "required": ["riskLevel"],
+      "properties": {
+        "riskLevel": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "critical"],
+          "description": "Risk level if this measure is misplaced or misconfigured by AI"
+        },
+        "proximityRules": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Rules about spatial relationships with other graphics or forces"
+        },
+        "temporalRules": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Time-based constraints (DTG requirements, duration limits)"
+        },
+        "hierarchyRules": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Authority/echelon requirements for establishment"
+        },
+        "mutualExclusions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Graphics that must not overlap with this one"
+        },
+        "aiValidation": {
+          "$ref": "#/$defs/AIValidation"
+        }
+      }
+    },
+    "AIValidation": {
+      "type": "object",
+      "description": "Machine-readable rules for runtime AI validation",
+      "properties": {
+        "mustNotOverlap": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Entity labels or codes that must not spatially overlap"
+        },
+        "mustBeContainedIn": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Parent graphics that must contain this measure"
+        },
+        "requiresDateTimeGroup": {
+          "type": "boolean",
+          "description": "Whether W modifier (DTG) is mandatory"
+        },
+        "requiresDesignation": {
+          "type": "boolean",
+          "description": "Whether T modifier (designation) is mandatory"
+        },
+        "maxDurationHours": {
+          "type": ["integer", "null"],
+          "description": "Maximum allowed duration in hours (null = no limit)"
+        }
+      }
+    }
+  }
+}

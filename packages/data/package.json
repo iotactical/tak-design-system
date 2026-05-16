@@ -4,15 +4,17 @@
   "description": "TAK Design System - Machine-consumable icon registry, radial action maps, and data indexes",
   "license": "MIT",
   "main": "registry/index.json",
-  "files": ["registry/", "schemas/"],
+  "files": ["registry/", "schemas/", "doctrine/"],
   "exports": {
     ".": "./registry/index.json",
     "./icons": "./registry/tak-icon-registry.json",
     "./icons/index": "./registry/icons.index.json",
     "./radial": "./registry/tak-radial-action-icons.json",
     "./radial/index": "./registry/radial.index.json",
+    "./doctrine/control-measures": "./doctrine/ss25-control-measures.json",
     "./schemas/icon-registry": "./schemas/tak-icon-registry.schema.json",
-    "./schemas/radial-actions": "./schemas/tak-radial-action-icons.schema.json"
+    "./schemas/radial-actions": "./schemas/tak-radial-action-icons.schema.json",
+    "./schemas/doctrine": "./schemas/mil-std-2525-doctrine.schema.json"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,6 @@
   },
   "keywords": ["tak", "atak", "design-system", "icons", "radial-menu", "military", "tactical"],
   "scripts": {
-    "prepublish": "mkdir -p registry schemas && cp ../../data/tak-icon-registry.json ../../data/tak-radial-action-icons.json ../../data/index.json ../../data/icons.index.json ../../data/radial.index.json registry/ && cp ../../schemas/tak-icon-registry.schema.json ../../schemas/tak-radial-action-icons.schema.json schemas/"
+    "prepublish": "mkdir -p registry schemas doctrine && cp ../../data/tak-icon-registry.json ../../data/tak-radial-action-icons.json ../../data/index.json ../../data/icons.index.json ../../data/radial.index.json registry/ && cp ../../schemas/tak-icon-registry.schema.json ../../schemas/tak-radial-action-icons.schema.json ../../schemas/mil-std-2525-doctrine.schema.json schemas/ && cp ../../data/mil-std-2525/doctrine/*.json doctrine/"
   }
 }

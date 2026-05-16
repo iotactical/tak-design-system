@@ -1,0 +1,3146 @@
+{
+  "$schema": "../../../schemas/mil-std-2525-doctrine.schema.json",
+  "symbolSet": "25",
+  "symbolSetName": "Control Measures",
+  "entities": [
+    {
+      "entityCode": "110100",
+      "label": "Boundary",
+      "bSidc": "G*G*GLB---****X",
+      "definitions": {
+        "b": "Line separating areas of responsibility between adjacent units.",
+        "c": "Line separating areas of responsibility between adjacent units.",
+        "d": "Line separating areas of responsibility between adjacent units.",
+        "e": "Line separating areas of responsibility between adjacent units."
+      },
+      "usageGuidance": {
+        "purpose": "Line separating areas of responsibility between adjacent units.",
+        "establishedBy": [
+          "division",
+          "corps",
+          "theater"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Boundary: Line separating areas of responsibility between adjacent units. Established by division or corps or theater. Must be disseminated to all units operating in or near the area. Risk level: high."
+    },
+    {
+      "entityCode": "140300",
+      "label": "Phase Line",
+      "bSidc": "G*G*GLP---****X",
+      "definitions": {
+        "b": "Named line used for coordination and control of operations (e.g., PL ALPHA).",
+        "c": "Named line used for coordination and control of operations (e.g., PL ALPHA).",
+        "d": "Named line used for coordination and control of operations (e.g., PL ALPHA).",
+        "e": "Named line used for coordination and control of operations (e.g., PL ALPHA)."
+      },
+      "usageGuidance": {
+        "purpose": "Named line used for coordination and control of operations (e.g., PL ALPHA).",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Must be tied to identifiable terrain features where possible"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Phase Line: Named line used for coordination and control of operations (e.g., PL ALPHA). Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Risk level: medium."
+    },
+    {
+      "entityCode": "140100",
+      "label": "Forward Line of Troops (FLOT)",
+      "bSidc": "G*G*GLF---****X",
+      "definitions": {
+        "b": "Forward-most positions of friendly forces at a given time.",
+        "c": "Forward-most positions of friendly forces at a given time.",
+        "d": "Forward-most positions of friendly forces at a given time.",
+        "e": "Forward-most positions of friendly forces at a given time."
+      },
+      "usageGuidance": {
+        "purpose": "Forward-most positions of friendly forces at a given time.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Must be tied to identifiable terrain features where possible",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Forward Line of Troops (FLOT): Forward-most positions of friendly forces at a given time. Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: high."
+    },
+    {
+      "entityCode": "140200",
+      "label": "Line of Contact",
+      "bSidc": "G*G*GLC---****X",
+      "definitions": {
+        "b": "General trace of contact between opposing forces.",
+        "c": "General trace of contact between opposing forces.",
+        "d": "General trace of contact between opposing forces.",
+        "e": "General trace of contact between opposing forces."
+      },
+      "usageGuidance": {
+        "purpose": "General trace of contact between opposing forces.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Must be tied to identifiable terrain features where possible",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Line of Contact: General trace of contact between opposing forces. Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: high."
+    },
+    {
+      "entityCode": "120100",
+      "label": "Area of Operations",
+      "bSidc": "G*G*SAO---****X",
+      "definitions": {
+        "b": "Defined geographic area for a unit to conduct military operations.",
+        "c": "Defined geographic area for a unit to conduct military operations.",
+        "d": "Defined geographic area for a unit to conduct military operations.",
+        "e": "Defined geographic area for a unit to conduct military operations."
+      },
+      "usageGuidance": {
+        "purpose": "Defined geographic area for a unit to conduct military operations.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Area of Operations: Defined geographic area for a unit to conduct military operations. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+    },
+    {
+      "entityCode": "120200",
+      "label": "Named Area of Interest",
+      "bSidc": "G*G*SAN---****X",
+      "definitions": {
+        "b": "Defined area where enemy activity is expected to provide intelligence.",
+        "c": "Defined area where enemy activity is expected to provide intelligence.",
+        "d": "Defined area where enemy activity is expected to provide intelligence.",
+        "e": "Defined area where enemy activity is expected to provide intelligence."
+      },
+      "usageGuidance": {
+        "purpose": "Defined area where enemy activity is expected to provide intelligence.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Named Area of Interest: Defined area where enemy activity is expected to provide intelligence. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+    },
+    {
+      "entityCode": "151300",
+      "label": "Engagement Area",
+      "bSidc": "G*G*GAE---****X",
+      "definitions": {
+        "b": "Area where the commander plans to mass fires to destroy an enemy force.",
+        "c": "Area where the commander plans to mass fires to destroy an enemy force.",
+        "d": "Area where the commander plans to mass fires to destroy an enemy force.",
+        "e": "Area where the commander plans to mass fires to destroy an enemy force."
+      },
+      "usageGuidance": {
+        "purpose": "Area where the commander plans to mass fires to destroy an enemy force.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Engagement Area: Area where the commander plans to mass fires to destroy an enemy force. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high."
+    },
+    {
+      "entityCode": "150100",
+      "label": "Area",
+      "bSidc": "G*G*GAG---****X",
+      "definitions": {
+        "b": "General area for a tactical operation or assignment.",
+        "c": "General area for a tactical operation or assignment.",
+        "d": "General area for a tactical operation or assignment.",
+        "e": "General area for a tactical operation or assignment."
+      },
+      "usageGuidance": {
+        "purpose": "General area for a tactical operation or assignment.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Area: General area for a tactical operation or assignment. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+    },
+    {
+      "entityCode": "151401",
+      "label": "Axis of Advance",
+      "bSidc": "G*G*OLAV--****X",
+      "definitions": {
+        "b": "General route of advance for a maneuver element.",
+        "c": "General route of advance for a maneuver element.",
+        "d": "General route of advance for a maneuver element.",
+        "e": "General route of advance for a maneuver element."
+      },
+      "usageGuidance": {
+        "purpose": "General route of advance for a maneuver element.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "arrow",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Standard tactical graphic -- coordinate with adjacent and higher units"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Axis of Advance: General route of advance for a maneuver element. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
+    },
+    {
+      "entityCode": "140602",
+      "label": "Direction of Attack",
+      "bSidc": "G*G*OLKGM-****X",
+      "definitions": {
+        "b": "Arrow indicating the primary direction of an attack.",
+        "c": "Arrow indicating the primary direction of an attack.",
+        "d": "Arrow indicating the primary direction of an attack.",
+        "e": "Arrow indicating the primary direction of an attack."
+      },
+      "usageGuidance": {
+        "purpose": "Arrow indicating the primary direction of an attack.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "arrow",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Standard tactical graphic -- coordinate with adjacent and higher units"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Direction of Attack: Arrow indicating the primary direction of an attack. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
+    },
+    {
+      "entityCode": "260100",
+      "label": "Fire Support Coordination Line (FSCL)",
+      "bSidc": "G*F*LCF---****X",
+      "definitions": {
+        "b": "Line beyond which fire support may be delivered without additional coordination.",
+        "c": "Line beyond which fire support may be delivered without additional coordination.",
+        "d": "Line beyond which fire support may be delivered without additional coordination.",
+        "e": "Line beyond which fire support may be delivered without additional coordination."
+      },
+      "usageGuidance": {
+        "purpose": "Line beyond which fire support may be delivered without additional coordination.",
+        "establishedBy": [
+          "division",
+          "corps",
+          "JFC"
+        ],
+        "requiredModifiers": [
+          "T",
+          "W"
+        ],
+        "optionalModifiers": [
+          "W1"
+        ],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Must be coordinated with all affected units and components",
+          "Requires explicit activation and deactivation date-time groups",
+          "Fire support coordination measure -- misplacement risks fratricide",
+          "Must be tied to identifiable terrain features where possible",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "critical",
+        "proximityRules": [
+          "Must not overlap with friendly assembly areas or positions"
+        ],
+        "temporalRules": [
+          "Must have explicit activation DTG (W modifier)"
+        ],
+        "hierarchyRules": [
+          "Must be established by JFC or higher authority"
+        ],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": true,
+          "requiresDesignation": true,
+          "maxDurationHours": 72
+        }
+      },
+      "embeddingText": "Fire Support Coordination Line (FSCL): Line beyond which fire support may be delivered without additional coordination. Established by division or corps or JFC. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Requires date-time group."
+    },
+    {
+      "entityCode": "260200",
+      "label": "Coordinated Fire Line (CFL)",
+      "bSidc": "G*F*LCC---****X",
+      "definitions": {
+        "b": "Line beyond which fires may be delivered without coordination with the affected commander.",
+        "c": "Line beyond which fires may be delivered without coordination with the affected commander.",
+        "d": "Line beyond which fires may be delivered without coordination with the affected commander.",
+        "e": "Line beyond which fires may be delivered without coordination with the affected commander."
+      },
+      "usageGuidance": {
+        "purpose": "Line beyond which fires may be delivered without coordination with the affected commander.",
+        "establishedBy": [
+          "division",
+          "corps",
+          "JFC"
+        ],
+        "requiredModifiers": [
+          "T",
+          "W"
+        ],
+        "optionalModifiers": [
+          "W1"
+        ],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Must be coordinated with all affected units and components",
+          "Requires explicit activation and deactivation date-time groups",
+          "Fire support coordination measure -- misplacement risks fratricide",
+          "Must be tied to identifiable terrain features where possible",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "critical",
+        "proximityRules": [
+          "Must not overlap with friendly assembly areas or positions"
+        ],
+        "temporalRules": [
+          "Must have explicit activation DTG (W modifier)"
+        ],
+        "hierarchyRules": [
+          "Must be established by JFC or higher authority"
+        ],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": true,
+          "requiresDesignation": true,
+          "maxDurationHours": 72
+        }
+      },
+      "embeddingText": "Coordinated Fire Line (CFL): Line beyond which fires may be delivered without coordination with the affected commander. Established by division or corps or JFC. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Requires date-time group."
+    },
+    {
+      "entityCode": "141500",
+      "label": "Holding Line",
+      "bSidc": "G*G*SLH---****X",
+      "definitions": {
+        "b": "Line behind which a unit must remain until ordered to advance.",
+        "c": "Line behind which a unit must remain until ordered to advance.",
+        "d": "Line behind which a unit must remain until ordered to advance.",
+        "e": "Line behind which a unit must remain until ordered to advance."
+      },
+      "usageGuidance": {
+        "purpose": "Line behind which a unit must remain until ordered to advance.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Must be tied to identifiable terrain features where possible"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Holding Line: Line behind which a unit must remain until ordered to advance. Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Risk level: medium."
+    },
+    {
+      "entityCode": "140400",
+      "label": "Forward Edge of Battle Area (FEBA)",
+      "bSidc": "G*G*DLF---****X",
+      "definitions": {
+        "b": "Forward limit of the area where ground combat takes place.",
+        "c": "Forward limit of the area where ground combat takes place.",
+        "d": "Forward limit of the area where ground combat takes place.",
+        "e": "Forward limit of the area where ground combat takes place."
+      },
+      "usageGuidance": {
+        "purpose": "Forward limit of the area where ground combat takes place.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Must be tied to identifiable terrain features where possible",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Forward Edge of Battle Area (FEBA): Forward limit of the area where ground combat takes place. Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: high."
+    },
+    {
+      "entityCode": "140500",
+      "label": "Principal Direction of Fire",
+      "bSidc": "G*G*DLP---****X",
+      "definitions": {
+        "b": "Direction of most effective fire from a weapon or unit.",
+        "c": "Direction of most effective fire from a weapon or unit.",
+        "d": "Direction of most effective fire from a weapon or unit.",
+        "e": "Direction of most effective fire from a weapon or unit."
+      },
+      "usageGuidance": {
+        "purpose": "Direction of most effective fire from a weapon or unit.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 3,
+        "maxPoints": 3,
+        "doctrinalRules": [
+          "Must be tied to identifiable terrain features where possible"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Principal Direction of Fire: Direction of most effective fire from a weapon or unit. Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Risk level: medium."
+    },
+    {
+      "entityCode": "140700",
+      "label": "Final Coordination Line",
+      "bSidc": "G*G*OLF---****X",
+      "definitions": {
+        "b": "Last coordinated fire line before assault forces reach the objective.",
+        "c": "Last coordinated fire line before assault forces reach the objective.",
+        "d": "Last coordinated fire line before assault forces reach the objective.",
+        "e": "Last coordinated fire line before assault forces reach the objective."
+      },
+      "usageGuidance": {
+        "purpose": "Last coordinated fire line before assault forces reach the objective.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Must be tied to identifiable terrain features where possible"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Final Coordination Line: Last coordinated fire line before assault forces reach the objective. Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Risk level: medium."
+    },
+    {
+      "entityCode": "140800",
+      "label": "Infiltration Lane",
+      "bSidc": "G*G*OLI---****X",
+      "definitions": {
+        "b": "Lane designated for infiltration by friendly forces.",
+        "c": "Lane designated for infiltration by friendly forces.",
+        "d": "Lane designated for infiltration by friendly forces.",
+        "e": "Lane designated for infiltration by friendly forces."
+      },
+      "usageGuidance": {
+        "purpose": "Lane designated for infiltration by friendly forces.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Must be tied to identifiable terrain features where possible"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Infiltration Lane: Lane designated for infiltration by friendly forces. Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Risk level: medium."
+    },
+    {
+      "entityCode": "141000",
+      "label": "Line of Departure",
+      "bSidc": "G*G*OLT---****X",
+      "definitions": {
+        "b": "Line at which the attack begins, normally the FEBA.",
+        "c": "Line at which the attack begins, normally the FEBA.",
+        "d": "Line at which the attack begins, normally the FEBA.",
+        "e": "Line at which the attack begins, normally the FEBA."
+      },
+      "usageGuidance": {
+        "purpose": "Line at which the attack begins, normally the FEBA.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Must be tied to identifiable terrain features where possible"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Line of Departure: Line at which the attack begins, normally the FEBA. Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Risk level: medium."
+    },
+    {
+      "entityCode": "260300",
+      "label": "No Fire Line (NFL)",
+      "bSidc": "G*F*LCN---****X",
+      "definitions": {
+        "b": "Line beyond which friendly fires may not be delivered.",
+        "c": "Line beyond which friendly fires may not be delivered.",
+        "d": "Line beyond which friendly fires may not be delivered.",
+        "e": "Line beyond which friendly fires may not be delivered."
+      },
+      "usageGuidance": {
+        "purpose": "Line beyond which friendly fires may not be delivered.",
+        "establishedBy": [
+          "division",
+          "corps",
+          "JFC"
+        ],
+        "requiredModifiers": [
+          "T",
+          "W"
+        ],
+        "optionalModifiers": [
+          "W1"
+        ],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Must be coordinated with all affected units and components",
+          "Requires explicit activation and deactivation date-time groups",
+          "Fire support coordination measure -- misplacement risks fratricide",
+          "Must be tied to identifiable terrain features where possible",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "critical",
+        "proximityRules": [
+          "Must not overlap with friendly assembly areas or positions"
+        ],
+        "temporalRules": [
+          "Must have explicit activation DTG (W modifier)"
+        ],
+        "hierarchyRules": [
+          "Must be established by JFC or higher authority"
+        ],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": true,
+          "requiresDesignation": true,
+          "maxDurationHours": 72
+        }
+      },
+      "embeddingText": "No Fire Line (NFL): Line beyond which friendly fires may not be delivered. Established by division or corps or JFC. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Requires date-time group."
+    },
+    {
+      "entityCode": "260500",
+      "label": "Restrictive Fire Line (RFL)",
+      "bSidc": "G*F*LCR---****X",
+      "definitions": {
+        "b": "Line between converging friendly forces that limits fires.",
+        "c": "Line between converging friendly forces that limits fires.",
+        "d": "Line between converging friendly forces that limits fires.",
+        "e": "Line between converging friendly forces that limits fires."
+      },
+      "usageGuidance": {
+        "purpose": "Line between converging friendly forces that limits fires.",
+        "establishedBy": [
+          "division",
+          "corps",
+          "JFC"
+        ],
+        "requiredModifiers": [
+          "T",
+          "W"
+        ],
+        "optionalModifiers": [
+          "W1"
+        ],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Must be coordinated with all affected units and components",
+          "Requires explicit activation and deactivation date-time groups",
+          "Fire support coordination measure -- misplacement risks fratricide",
+          "Must be tied to identifiable terrain features where possible",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "critical",
+        "proximityRules": [
+          "Must not overlap with friendly assembly areas or positions"
+        ],
+        "temporalRules": [
+          "Must have explicit activation DTG (W modifier)"
+        ],
+        "hierarchyRules": [
+          "Must be established by JFC or higher authority"
+        ],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": true,
+          "requiresDesignation": true,
+          "maxDurationHours": 72
+        }
+      },
+      "embeddingText": "Restrictive Fire Line (RFL): Line between converging friendly forces that limits fires. Established by division or corps or JFC. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Requires date-time group."
+    },
+    {
+      "entityCode": "242301",
+      "label": "Kill Box (BKB)",
+      "bSidc": "G*F*AKBI--****X",
+      "definitions": {
+        "b": "Blue kill box -- air-to-ground attack restricted; ground forces have priority.",
+        "c": "Blue kill box -- air-to-ground attack restricted; ground forces have priority.",
+        "d": "Blue kill box -- air-to-ground attack restricted; ground forces have priority.",
+        "e": "Blue kill box -- air-to-ground attack restricted; ground forces have priority."
+      },
+      "usageGuidance": {
+        "purpose": "Blue kill box -- air-to-ground attack restricted; ground forces have priority.",
+        "establishedBy": [
+          "division",
+          "corps",
+          "JFC"
+        ],
+        "requiredModifiers": [
+          "T",
+          "W"
+        ],
+        "optionalModifiers": [
+          "W1"
+        ],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Must be coordinated with all affected units and components",
+          "Requires explicit activation and deactivation date-time groups",
+          "Fire support coordination measure -- misplacement risks fratricide",
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "critical",
+        "proximityRules": [
+          "Must not overlap with friendly assembly areas or positions"
+        ],
+        "temporalRules": [
+          "Must have explicit activation DTG (W modifier)"
+        ],
+        "hierarchyRules": [
+          "Must be established by JFC or higher authority"
+        ],
+        "mutualExclusions": [
+          "No Fire Area"
+        ],
+        "aiValidation": {
+          "mustNotOverlap": [
+            "NFA",
+            "friendly assembly area"
+          ],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": true,
+          "requiresDesignation": true,
+          "maxDurationHours": 72
+        }
+      },
+      "embeddingText": "Kill Box (BKB): Blue kill box -- air-to-ground attack restricted; ground forces have priority. Established by division or corps or JFC. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Must not overlap with: No Fire Area. Requires date-time group."
+    },
+    {
+      "entityCode": "150200",
+      "label": "Assembly Area",
+      "bSidc": "G*G*GAA---****X",
+      "definitions": {
+        "b": "Area where a command assembles before an operation.",
+        "c": "Area where a command assembles before an operation.",
+        "d": "Area where a command assembles before an operation.",
+        "e": "Area where a command assembles before an operation."
+      },
+      "usageGuidance": {
+        "purpose": "Area where a command assembles before an operation.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Assembly Area: Area where a command assembles before an operation. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+    },
+    {
+      "entityCode": "150600",
+      "label": "Drop Zone",
+      "bSidc": "G*G*GAD---****X",
+      "definitions": {
+        "b": "Area designated for airdrop of personnel and equipment.",
+        "c": "Area designated for airdrop of personnel and equipment.",
+        "d": "Area designated for airdrop of personnel and equipment.",
+        "e": "Area designated for airdrop of personnel and equipment."
+      },
+      "usageGuidance": {
+        "purpose": "Area designated for airdrop of personnel and equipment.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Drop Zone: Area designated for airdrop of personnel and equipment. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+    },
+    {
+      "entityCode": "150800",
+      "label": "Landing Zone",
+      "bSidc": "G*G*GAL---****X",
+      "definitions": {
+        "b": "Area designated for helicopter landing operations.",
+        "c": "Area designated for helicopter landing operations.",
+        "d": "Area designated for helicopter landing operations.",
+        "e": "Area designated for helicopter landing operations."
+      },
+      "usageGuidance": {
+        "purpose": "Area designated for helicopter landing operations.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Landing Zone: Area designated for helicopter landing operations. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+    },
+    {
+      "entityCode": "151000",
+      "label": "Fortified Area",
+      "bSidc": "G*G*GAF---****X",
+      "definitions": {
+        "b": "Area with fortified defensive positions.",
+        "c": "Area with fortified defensive positions.",
+        "d": "Area with fortified defensive positions.",
+        "e": "Area with fortified defensive positions."
+      },
+      "usageGuidance": {
+        "purpose": "Area with fortified defensive positions.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Fortified Area: Area with fortified defensive positions. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+    },
+    {
+      "entityCode": "151404",
+      "label": "Axis of Advance -- Supporting Attack",
+      "bSidc": "G*G*OLAGS-****X",
+      "definitions": {
+        "b": "Supporting attack axis showing direction and area of advance.",
+        "c": "Supporting attack axis showing direction and area of advance.",
+        "d": "Supporting attack axis showing direction and area of advance.",
+        "e": "Supporting attack axis showing direction and area of advance."
+      },
+      "usageGuidance": {
+        "purpose": "Supporting attack axis showing direction and area of advance.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "arrow",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Standard tactical graphic -- coordinate with adjacent and higher units"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Axis of Advance -- Supporting Attack: Supporting attack axis showing direction and area of advance. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
+    },
+    {
+      "entityCode": "151406",
+      "label": "Axis of Advance -- Feint",
+      "bSidc": "G*G*PA----****X",
+      "definitions": {
+        "b": "Feint axis of advance to deceive the enemy.",
+        "c": "Feint axis of advance to deceive the enemy.",
+        "d": "Feint axis of advance to deceive the enemy.",
+        "e": "Feint axis of advance to deceive the enemy."
+      },
+      "usageGuidance": {
+        "purpose": "Feint axis of advance to deceive the enemy.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "arrow",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Standard tactical graphic -- coordinate with adjacent and higher units"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Axis of Advance -- Feint: Feint axis of advance to deceive the enemy. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
+    },
+    {
+      "entityCode": "340700",
+      "label": "Counterattack by Fire",
+      "bSidc": "G*T*KF----****X",
+      "definitions": {
+        "b": "Attack by a defending force to regain the initiative.",
+        "c": "Attack by a defending force to regain the initiative.",
+        "d": "Attack by a defending force to regain the initiative.",
+        "e": "Attack by a defending force to regain the initiative."
+      },
+      "usageGuidance": {
+        "purpose": "Attack by a defending force to regain the initiative.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "arrow",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Standard tactical graphic -- coordinate with adjacent and higher units"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Counterattack by Fire: Attack by a defending force to regain the initiative. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
+    },
+    {
+      "entityCode": "151700",
+      "label": "Objective",
+      "bSidc": "G*G*OAO---****X",
+      "definitions": {
+        "b": "Clearly defined and attainable goal toward which operations are directed.",
+        "c": "Clearly defined and attainable goal toward which operations are directed.",
+        "d": "Clearly defined and attainable goal toward which operations are directed.",
+        "e": "Clearly defined and attainable goal toward which operations are directed."
+      },
+      "usageGuidance": {
+        "purpose": "Clearly defined and attainable goal toward which operations are directed.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Objective: Clearly defined and attainable goal toward which operations are directed. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+    },
+    {
+      "entityCode": "151200",
+      "label": "Battle Position",
+      "bSidc": "G*G*DAB---****X",
+      "definitions": {
+        "b": "Defensive location oriented on a likely enemy avenue of approach.",
+        "c": "Defensive location oriented on a likely enemy avenue of approach.",
+        "d": "Defensive location oriented on a likely enemy avenue of approach.",
+        "e": "Defensive location oriented on a likely enemy avenue of approach."
+      },
+      "usageGuidance": {
+        "purpose": "Defensive location oriented on a likely enemy avenue of approach.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Battle Position: Defensive location oriented on a likely enemy avenue of approach. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+    },
+    {
+      "entityCode": "342400",
+      "label": "Withdraw",
+      "bSidc": "G*T*W-----****X",
+      "definitions": {
+        "b": "Planned disengagement and movement to the rear.",
+        "c": "Planned disengagement and movement to the rear.",
+        "d": "Planned disengagement and movement to the rear.",
+        "e": "Planned disengagement and movement to the rear."
+      },
+      "usageGuidance": {
+        "purpose": "Planned disengagement and movement to the rear.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "arrow",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Standard tactical graphic -- coordinate with adjacent and higher units"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Withdraw: Planned disengagement and movement to the rear. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
+    },
+    {
+      "entityCode": "270100",
+      "label": "Obstacle Belt",
+      "bSidc": "G*M*OGB---****X",
+      "definitions": {
+        "b": "Band of connected obstacle zones.",
+        "c": "Band of connected obstacle zones.",
+        "d": "Band of connected obstacle zones.",
+        "e": "Band of connected obstacle zones."
+      },
+      "usageGuidance": {
+        "purpose": "Band of connected obstacle zones.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [
+          "AM"
+        ],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Obstacle Belt: Band of connected obstacle zones. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+    },
+    {
+      "entityCode": "270200",
+      "label": "Obstacle Zone",
+      "bSidc": "G*M*OGZ---****X",
+      "definitions": {
+        "b": "Division or corps commander obstacle planning area.",
+        "c": "Division or corps commander obstacle planning area.",
+        "d": "Division or corps commander obstacle planning area.",
+        "e": "Division or corps commander obstacle planning area."
+      },
+      "usageGuidance": {
+        "purpose": "Division or corps commander obstacle planning area.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [
+          "AM"
+        ],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Obstacle Zone: Division or corps commander obstacle planning area. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+    },
+    {
+      "entityCode": "270300",
+      "label": "Obstacle Free Zone",
+      "bSidc": "G*M*OGF---****X",
+      "definitions": {
+        "b": "Area free of obstacles to allow maneuver.",
+        "c": "Area free of obstacles to allow maneuver.",
+        "d": "Area free of obstacles to allow maneuver.",
+        "e": "Area free of obstacles to allow maneuver."
+      },
+      "usageGuidance": {
+        "purpose": "Area free of obstacles to allow maneuver.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [
+          "AM"
+        ],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Obstacle Free Zone: Area free of obstacles to allow maneuver. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+    },
+    {
+      "entityCode": "270800",
+      "label": "Mined Area",
+      "bSidc": "G*M*OFA---****X",
+      "definitions": {
+        "b": "Area containing mines laid per a pattern.",
+        "c": "Area containing mines laid per a pattern.",
+        "d": "Area containing mines laid per a pattern.",
+        "e": "Area containing mines laid per a pattern."
+      },
+      "usageGuidance": {
+        "purpose": "Area containing mines laid per a pattern.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [
+          "AM"
+        ],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Mined Area: Area containing mines laid per a pattern. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high."
+    },
+    {
+      "entityCode": "270900",
+      "label": "Decoy Mined Area",
+      "bSidc": "G*G*PM----****X",
+      "definitions": {
+        "b": "Simulated minefield for deception.",
+        "c": "Simulated minefield for deception.",
+        "d": "Simulated minefield for deception.",
+        "e": "Simulated minefield for deception."
+      },
+      "usageGuidance": {
+        "purpose": "Simulated minefield for deception.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [
+          "AM"
+        ],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "low",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Decoy Mined Area: Simulated minefield for deception. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
+    },
+    {
+      "entityCode": "271000",
+      "label": "UXO Area",
+      "bSidc": "G*M*OU----****X",
+      "definitions": {
+        "b": "Area containing unexploded explosive ordnance.",
+        "c": "Area containing unexploded explosive ordnance.",
+        "d": "Area containing unexploded explosive ordnance.",
+        "e": "Area containing unexploded explosive ordnance."
+      },
+      "usageGuidance": {
+        "purpose": "Area containing unexploded explosive ordnance.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [
+          "AM"
+        ],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [
+          "Must include buffer zone around contaminated area",
+          "Must not overlap with active supply routes without decontamination procedures"
+        ],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "UXO Area: Area containing unexploded explosive ordnance. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
+    },
+    {
+      "entityCode": "290100",
+      "label": "Obstacle Line",
+      "bSidc": "G*M*OGL---****X",
+      "definitions": {
+        "b": "General obstacle line across terrain.",
+        "c": "General obstacle line across terrain.",
+        "d": "General obstacle line across terrain.",
+        "e": "General obstacle line across terrain."
+      },
+      "usageGuidance": {
+        "purpose": "General obstacle line across terrain.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Standard tactical graphic -- coordinate with adjacent and higher units"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "low",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Obstacle Line: General obstacle line across terrain. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
+    },
+    {
+      "entityCode": "290301",
+      "label": "Unspecified Wire",
+      "bSidc": "G*M*OWU---****X",
+      "definitions": {
+        "b": "Wire obstacle of unspecified type.",
+        "c": "Wire obstacle of unspecified type.",
+        "d": "Wire obstacle of unspecified type.",
+        "e": "Wire obstacle of unspecified type."
+      },
+      "usageGuidance": {
+        "purpose": "Wire obstacle of unspecified type.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Standard tactical graphic -- coordinate with adjacent and higher units"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "low",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Unspecified Wire: Wire obstacle of unspecified type. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
+    },
+    {
+      "entityCode": "290304",
+      "label": "Double Apron Fence",
+      "bSidc": "G*M*OWA---****X",
+      "definitions": {
+        "b": "Double apron wire fence obstacle.",
+        "c": "Double apron wire fence obstacle.",
+        "d": "Double apron wire fence obstacle.",
+        "e": "Double apron wire fence obstacle."
+      },
+      "usageGuidance": {
+        "purpose": "Double apron wire fence obstacle.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Standard tactical graphic -- coordinate with adjacent and higher units"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "low",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Double Apron Fence: Double apron wire fence obstacle. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
+    },
+    {
+      "entityCode": "240103",
+      "label": "Airspace Coordination Area",
+      "bSidc": "G*F*ACAC--****X",
+      "definitions": {
+        "b": "Area established for fire support coordination in which aircraft may operate.",
+        "c": "Area established for fire support coordination in which aircraft may operate.",
+        "d": "Area established for fire support coordination in which aircraft may operate.",
+        "e": "Area established for fire support coordination in which aircraft may operate."
+      },
+      "usageGuidance": {
+        "purpose": "Area established for fire support coordination in which aircraft may operate.",
+        "establishedBy": [
+          "JFACC",
+          "ACA",
+          "component commander"
+        ],
+        "requiredModifiers": [
+          "T",
+          "W"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": true,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Airspace Coordination Area: Area established for fire support coordination in which aircraft may operate. Established by JFACC or ACA or component commander. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Requires date-time group."
+    },
+    {
+      "entityCode": "170900",
+      "label": "High-Density Airspace Control Zone",
+      "bSidc": "G*G*AAH---****X",
+      "definitions": {
+        "b": "Airspace requiring enhanced coordination and control.",
+        "c": "Airspace requiring enhanced coordination and control.",
+        "d": "Airspace requiring enhanced coordination and control.",
+        "e": "Airspace requiring enhanced coordination and control."
+      },
+      "usageGuidance": {
+        "purpose": "Airspace requiring enhanced coordination and control.",
+        "establishedBy": [
+          "JFACC",
+          "ACA",
+          "component commander"
+        ],
+        "requiredModifiers": [
+          "T",
+          "W"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": true,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "High-Density Airspace Control Zone: Airspace requiring enhanced coordination and control. Established by JFACC or ACA or component commander. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Requires date-time group."
+    },
+    {
+      "entityCode": "171000",
+      "label": "Restricted Operations Zone (ROZ)",
+      "bSidc": "G*G*AAR---****X",
+      "definitions": {
+        "b": "Airspace restricted to specific operations.",
+        "c": "Airspace restricted to specific operations.",
+        "d": "Airspace restricted to specific operations.",
+        "e": "Airspace restricted to specific operations."
+      },
+      "usageGuidance": {
+        "purpose": "Airspace restricted to specific operations.",
+        "establishedBy": [
+          "JFACC",
+          "ACA",
+          "component commander"
+        ],
+        "requiredModifiers": [
+          "T",
+          "W"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": true,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Restricted Operations Zone (ROZ): Airspace restricted to specific operations. Established by JFACC or ACA or component commander. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Requires date-time group."
+    },
+    {
+      "entityCode": "171600",
+      "label": "Missile Engagement Zone (MEZ)",
+      "bSidc": "G*G*AAM---****X",
+      "definitions": {
+        "b": "Airspace for surface-to-air missile engagement.",
+        "c": "Airspace for surface-to-air missile engagement.",
+        "d": "Airspace for surface-to-air missile engagement.",
+        "e": "Airspace for surface-to-air missile engagement."
+      },
+      "usageGuidance": {
+        "purpose": "Airspace for surface-to-air missile engagement.",
+        "establishedBy": [
+          "JFACC",
+          "ACA",
+          "component commander"
+        ],
+        "requiredModifiers": [
+          "T",
+          "W"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": true,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Missile Engagement Zone (MEZ): Airspace for surface-to-air missile engagement. Established by JFACC or ACA or component commander. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Requires date-time group."
+    },
+    {
+      "entityCode": "171900",
+      "label": "Short Range Air Defense Engagement Zone",
+      "bSidc": "G*G*AAF---****X",
+      "definitions": {
+        "b": "Engagement zone for short range air defense systems.",
+        "c": "Engagement zone for short range air defense systems.",
+        "d": "Engagement zone for short range air defense systems.",
+        "e": "Engagement zone for short range air defense systems."
+      },
+      "usageGuidance": {
+        "purpose": "Engagement zone for short range air defense systems.",
+        "establishedBy": [
+          "JFACC",
+          "ACA",
+          "component commander"
+        ],
+        "requiredModifiers": [
+          "T",
+          "W"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": true,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Short Range Air Defense Engagement Zone: Engagement zone for short range air defense systems. Established by JFACC or ACA or component commander. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Requires date-time group."
+    },
+    {
+      "entityCode": "172000",
+      "label": "Weapons Free Zone",
+      "bSidc": "G*G*AAW---****X",
+      "definitions": {
+        "b": "Airspace where weapons may be fired at any target.",
+        "c": "Airspace where weapons may be fired at any target.",
+        "d": "Airspace where weapons may be fired at any target.",
+        "e": "Airspace where weapons may be fired at any target."
+      },
+      "usageGuidance": {
+        "purpose": "Airspace where weapons may be fired at any target.",
+        "establishedBy": [
+          "JFACC",
+          "ACA",
+          "component commander"
+        ],
+        "requiredModifiers": [
+          "T",
+          "W"
+        ],
+        "optionalModifiers": [
+          "W1"
+        ],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Must be coordinated with all affected units and components",
+          "Requires explicit activation and deactivation date-time groups",
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "critical",
+        "proximityRules": [
+          "Must not overlap with friendly assembly areas or positions"
+        ],
+        "temporalRules": [
+          "Must have explicit activation DTG (W modifier)"
+        ],
+        "hierarchyRules": [
+          "Must be established by component commander or higher authority"
+        ],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": true,
+          "requiresDesignation": true,
+          "maxDurationHours": 72
+        }
+      },
+      "embeddingText": "Weapons Free Zone: Airspace where weapons may be fired at any target. Established by JFACC or ACA or component commander. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Requires date-time group."
+    },
+    {
+      "entityCode": "120300",
+      "label": "Targeted Area of Interest (TAI)",
+      "bSidc": "G*G*SAT---****X",
+      "definitions": {
+        "b": "Area where targets can be acquired and engaged by friendly forces.",
+        "c": "Area where targets can be acquired and engaged by friendly forces.",
+        "d": "Area where targets can be acquired and engaged by friendly forces.",
+        "e": "Area where targets can be acquired and engaged by friendly forces."
+      },
+      "usageGuidance": {
+        "purpose": "Area where targets can be acquired and engaged by friendly forces.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "medium",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Targeted Area of Interest (TAI): Area where targets can be acquired and engaged by friendly forces. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+    },
+    {
+      "entityCode": "152200",
+      "label": "Search Area/Reconnaissance Area",
+      "bSidc": "G*G*GAS---****X",
+      "definitions": {
+        "b": "Area designated for reconnaissance or search operations.",
+        "c": "Area designated for reconnaissance or search operations.",
+        "d": "Area designated for reconnaissance or search operations.",
+        "e": "Area designated for reconnaissance or search operations."
+      },
+      "usageGuidance": {
+        "purpose": "Area designated for reconnaissance or search operations.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "low",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Search Area/Reconnaissance Area: Area designated for reconnaissance or search operations. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
+    },
+    {
+      "entityCode": "240701",
+      "label": "Linear Target",
+      "bSidc": "G*F*LT----****X",
+      "definitions": {
+        "b": "Target along a linear feature (road, ridge, etc.).",
+        "c": "Target along a linear feature (road, ridge, etc.).",
+        "d": "Target along a linear feature (road, ridge, etc.).",
+        "e": "Target along a linear feature (road, ridge, etc.)."
+      },
+      "usageGuidance": {
+        "purpose": "Target along a linear feature (road, ridge, etc.).",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Standard tactical graphic -- coordinate with adjacent and higher units"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "low",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Linear Target: Target along a linear feature (road, ridge, etc.). Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
+    },
+    {
+      "entityCode": "240702",
+      "label": "Linear Smoke Target",
+      "bSidc": "G*F*LTS---****X",
+      "definitions": {
+        "b": "Smoke target along a linear feature for obscuration.",
+        "c": "Smoke target along a linear feature for obscuration.",
+        "d": "Smoke target along a linear feature for obscuration.",
+        "e": "Smoke target along a linear feature for obscuration."
+      },
+      "usageGuidance": {
+        "purpose": "Smoke target along a linear feature for obscuration.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Standard tactical graphic -- coordinate with adjacent and higher units"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "low",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Linear Smoke Target: Smoke target along a linear feature for obscuration. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
+    },
+    {
+      "entityCode": "240703",
+      "label": "Final Protective Fire (FPF)",
+      "bSidc": "G*F*LTF---****X",
+      "definitions": {
+        "b": "Immediately available preplanned barrier of fire.",
+        "c": "Immediately available preplanned barrier of fire.",
+        "d": "Immediately available preplanned barrier of fire.",
+        "e": "Immediately available preplanned barrier of fire."
+      },
+      "usageGuidance": {
+        "purpose": "Immediately available preplanned barrier of fire.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T",
+          "W"
+        ],
+        "optionalModifiers": [
+          "W1"
+        ],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 2,
+        "doctrinalRules": [
+          "Must be coordinated with all affected units and components",
+          "Requires explicit activation and deactivation date-time groups",
+          "Fire support coordination measure -- misplacement risks fratricide",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "critical",
+        "proximityRules": [
+          "Must not overlap with friendly assembly areas or positions"
+        ],
+        "temporalRules": [
+          "Must have explicit activation DTG (W modifier)"
+        ],
+        "hierarchyRules": [
+          "Must be established by division or higher authority"
+        ],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": true,
+          "requiresDesignation": true,
+          "maxDurationHours": 72
+        }
+      },
+      "embeddingText": "Final Protective Fire (FPF): Immediately available preplanned barrier of fire. Established by battalion or brigade or division. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Requires date-time group."
+    },
+    {
+      "entityCode": "240801",
+      "label": "Area Target",
+      "bSidc": "G*F*AT----****X",
+      "definitions": {
+        "b": "Target area for fire support.",
+        "c": "Target area for fire support.",
+        "d": "Target area for fire support.",
+        "e": "Target area for fire support."
+      },
+      "usageGuidance": {
+        "purpose": "Target area for fire support.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "low",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Area Target: Target area for fire support. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
+    },
+    {
+      "entityCode": "240808",
+      "label": "Bomb Area",
+      "bSidc": "G*F*ATB---****X",
+      "definitions": {
+        "b": "Area designated for aerial bombardment.",
+        "c": "Area designated for aerial bombardment.",
+        "d": "Area designated for aerial bombardment.",
+        "e": "Area designated for aerial bombardment."
+      },
+      "usageGuidance": {
+        "purpose": "Area designated for aerial bombardment.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T",
+          "W"
+        ],
+        "optionalModifiers": [
+          "W1"
+        ],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Must be coordinated with all affected units and components",
+          "Requires explicit activation and deactivation date-time groups",
+          "Fire support coordination measure -- misplacement risks fratricide",
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "critical",
+        "proximityRules": [
+          "Must not overlap with friendly assembly areas or positions"
+        ],
+        "temporalRules": [
+          "Must have explicit activation DTG (W modifier)"
+        ],
+        "hierarchyRules": [
+          "Must be established by division or higher authority"
+        ],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": true,
+          "requiresDesignation": true,
+          "maxDurationHours": 72
+        }
+      },
+      "embeddingText": "Bomb Area: Area designated for aerial bombardment. Established by battalion or brigade or division. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Requires date-time group."
+    },
+    {
+      "entityCode": "240201",
+      "label": "Free Fire Area",
+      "bSidc": "G*F*ACFI--****X",
+      "definitions": {
+        "b": "Area into which any weapon may fire without coordination.",
+        "c": "Area into which any weapon may fire without coordination.",
+        "d": "Area into which any weapon may fire without coordination.",
+        "e": "Area into which any weapon may fire without coordination."
+      },
+      "usageGuidance": {
+        "purpose": "Area into which any weapon may fire without coordination.",
+        "establishedBy": [
+          "division",
+          "corps",
+          "JFC"
+        ],
+        "requiredModifiers": [
+          "T",
+          "W"
+        ],
+        "optionalModifiers": [
+          "W1"
+        ],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Must be coordinated with all affected units and components",
+          "Requires explicit activation and deactivation date-time groups",
+          "Fire support coordination measure -- misplacement risks fratricide",
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "critical",
+        "proximityRules": [
+          "Must not overlap with friendly assembly areas or positions"
+        ],
+        "temporalRules": [
+          "Must have explicit activation DTG (W modifier)"
+        ],
+        "hierarchyRules": [
+          "Must be established by JFC or higher authority"
+        ],
+        "mutualExclusions": [
+          "No Fire Area",
+          "Restrictive Fire Area"
+        ],
+        "aiValidation": {
+          "mustNotOverlap": [
+            "NFA",
+            "RFA",
+            "friendly positions"
+          ],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": true,
+          "requiresDesignation": true,
+          "maxDurationHours": 72
+        }
+      },
+      "embeddingText": "Free Fire Area: Area into which any weapon may fire without coordination. Established by division or corps or JFC. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Must not overlap with: No Fire Area, Restrictive Fire Area. Requires date-time group."
+    },
+    {
+      "entityCode": "271800",
+      "label": "Chemical Contaminated Area",
+      "bSidc": "G*M*NC----****X",
+      "definitions": {
+        "b": "Area contaminated by chemical agents.",
+        "c": "Area contaminated by chemical agents.",
+        "d": "Area contaminated by chemical agents.",
+        "e": "Area contaminated by chemical agents."
+      },
+      "usageGuidance": {
+        "purpose": "Area contaminated by chemical agents.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [
+          "AM"
+        ],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [
+          "Must include buffer zone around contaminated area",
+          "Must not overlap with active supply routes without decontamination procedures"
+        ],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Chemical Contaminated Area: Area contaminated by chemical agents. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
+    },
+    {
+      "entityCode": "280100",
+      "label": "Abatis",
+      "bSidc": "G*M*OS----****X",
+      "definitions": {
+        "b": "Obstacle created by felling trees toward the enemy.",
+        "c": "Obstacle created by felling trees toward the enemy.",
+        "d": "Obstacle created by felling trees toward the enemy.",
+        "e": "Obstacle created by felling trees toward the enemy."
+      },
+      "usageGuidance": {
+        "purpose": "Obstacle created by felling trees toward the enemy.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Standard tactical graphic -- coordinate with adjacent and higher units"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "low",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Abatis: Obstacle created by felling trees toward the enemy. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
+    },
+    {
+      "entityCode": "271900",
+      "label": "Nuclear Contaminated Area",
+      "bSidc": "G*M*NR----****X",
+      "definitions": {
+        "b": "Area contaminated by nuclear/radiological materials.",
+        "c": "Area contaminated by nuclear/radiological materials.",
+        "d": "Area contaminated by nuclear/radiological materials.",
+        "e": "Area contaminated by nuclear/radiological materials."
+      },
+      "usageGuidance": {
+        "purpose": "Area contaminated by nuclear/radiological materials.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [
+          "AM"
+        ],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [
+          "Must include buffer zone around contaminated area",
+          "Must not overlap with active supply routes without decontamination procedures"
+        ],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Nuclear Contaminated Area: Area contaminated by nuclear/radiological materials. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
+    },
+    {
+      "entityCode": "272100",
+      "label": "Minimum Safe Distance Zone",
+      "bSidc": "G*M*NM----****X",
+      "definitions": {
+        "b": "Area requiring minimum safe distance from nuclear detonation.",
+        "c": "Area requiring minimum safe distance from nuclear detonation.",
+        "d": "Area requiring minimum safe distance from nuclear detonation.",
+        "e": "Area requiring minimum safe distance from nuclear detonation."
+      },
+      "usageGuidance": {
+        "purpose": "Area requiring minimum safe distance from nuclear detonation.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [
+          "AM"
+        ],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [
+          "Must include buffer zone around contaminated area",
+          "Must not overlap with active supply routes without decontamination procedures"
+        ],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Minimum Safe Distance Zone: Area requiring minimum safe distance from nuclear detonation. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
+    },
+    {
+      "entityCode": "270707",
+      "label": "Dynamic Depiction Minefield",
+      "bSidc": "G*M*OFD---****X",
+      "definitions": {
+        "b": "Minefield with dynamic depiction showing current state of emplacement.",
+        "c": "Minefield with dynamic depiction showing current state of emplacement.",
+        "d": "Minefield with dynamic depiction showing current state of emplacement.",
+        "e": "Minefield with dynamic depiction showing current state of emplacement."
+      },
+      "usageGuidance": {
+        "purpose": "Minefield with dynamic depiction showing current state of emplacement.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [
+          "AM"
+        ],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Dynamic Depiction Minefield: Minefield with dynamic depiction showing current state of emplacement. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high."
+    },
+    {
+      "entityCode": "271700",
+      "label": "Biological Contaminated Area",
+      "bSidc": "G*M*NB----****X",
+      "definitions": {
+        "b": "Area contaminated by biological agents.",
+        "c": "Area contaminated by biological agents.",
+        "d": "Area contaminated by biological agents.",
+        "e": "Area contaminated by biological agents."
+      },
+      "usageGuidance": {
+        "purpose": "Area contaminated by biological agents.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [
+          "AM"
+        ],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [
+          "Must include buffer zone around contaminated area",
+          "Must not overlap with active supply routes without decontamination procedures"
+        ],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Biological Contaminated Area: Area contaminated by biological agents. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
+    },
+    {
+      "entityCode": "272200",
+      "label": "Radiation Dose Rate Contour Lines",
+      "bSidc": "G*M*NL----****X",
+      "definitions": {
+        "b": "Contour lines depicting radiation dose rates from a nuclear event.",
+        "c": "Contour lines depicting radiation dose rates from a nuclear event.",
+        "d": "Contour lines depicting radiation dose rates from a nuclear event.",
+        "e": "Contour lines depicting radiation dose rates from a nuclear event."
+      },
+      "usageGuidance": {
+        "purpose": "Contour lines depicting radiation dose rates from a nuclear event.",
+        "establishedBy": [
+          "battalion",
+          "brigade",
+          "division"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [
+          "AM"
+        ],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures",
+          "Must be disseminated to all units operating in or near the area"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "high",
+        "proximityRules": [
+          "Must include buffer zone around contaminated area",
+          "Must not overlap with active supply routes without decontamination procedures"
+        ],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Radiation Dose Rate Contour Lines: Contour lines depicting radiation dose rates from a nuclear event. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
+    },
+    {
+      "entityCode": "310100",
+      "label": "Detainee Holding Area",
+      "bSidc": "G*S*AD----****X",
+      "definitions": {
+        "b": "Area designated for temporary holding of detainees.",
+        "c": "Area designated for temporary holding of detainees.",
+        "d": "Area designated for temporary holding of detainees.",
+        "e": "Area designated for temporary holding of detainees."
+      },
+      "usageGuidance": {
+        "purpose": "Area designated for temporary holding of detainees.",
+        "establishedBy": [
+          "brigade",
+          "division",
+          "corps"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "low",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Detainee Holding Area: Area designated for temporary holding of detainees. Established by brigade or division or corps. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
+    },
+    {
+      "entityCode": "310600",
+      "label": "Brigade Support Area",
+      "bSidc": "G*S*ASB---****X",
+      "definitions": {
+        "b": "Area for brigade support operations and logistics.",
+        "c": "Area for brigade support operations and logistics.",
+        "d": "Area for brigade support operations and logistics.",
+        "e": "Area for brigade support operations and logistics."
+      },
+      "usageGuidance": {
+        "purpose": "Area for brigade support operations and logistics.",
+        "establishedBy": [
+          "brigade",
+          "division",
+          "corps"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "low",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Brigade Support Area: Area for brigade support operations and logistics. Established by brigade or division or corps. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
+    },
+    {
+      "entityCode": "310700",
+      "label": "Division Support Area",
+      "bSidc": "G*S*ASD---****X",
+      "definitions": {
+        "b": "Area for division support operations and logistics.",
+        "c": "Area for division support operations and logistics.",
+        "d": "Area for division support operations and logistics.",
+        "e": "Area for division support operations and logistics."
+      },
+      "usageGuidance": {
+        "purpose": "Area for division support operations and logistics.",
+        "establishedBy": [
+          "brigade",
+          "division",
+          "corps"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "low",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Division Support Area: Area for division support operations and logistics. Established by brigade or division or corps. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
+    },
+    {
+      "entityCode": "330300",
+      "label": "Main Supply Route (MSR)",
+      "bSidc": "G*S*LRM---****X",
+      "definitions": {
+        "b": "Route designated for main supply and logistics traffic.",
+        "c": "Route designated for main supply and logistics traffic.",
+        "d": "Route designated for main supply and logistics traffic.",
+        "e": "Route designated for main supply and logistics traffic."
+      },
+      "usageGuidance": {
+        "purpose": "Route designated for main supply and logistics traffic.",
+        "establishedBy": [
+          "brigade",
+          "division",
+          "corps"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Standard tactical graphic -- coordinate with adjacent and higher units"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "low",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Main Supply Route (MSR): Route designated for main supply and logistics traffic. Established by brigade or division or corps. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
+    },
+    {
+      "entityCode": "330400",
+      "label": "Alternate Supply Route (ASR)",
+      "bSidc": "G*S*LRA---****X",
+      "definitions": {
+        "b": "Alternative route for supply convoy routing.",
+        "c": "Alternative route for supply convoy routing.",
+        "d": "Alternative route for supply convoy routing.",
+        "e": "Alternative route for supply convoy routing."
+      },
+      "usageGuidance": {
+        "purpose": "Alternative route for supply convoy routing.",
+        "establishedBy": [
+          "brigade",
+          "division",
+          "corps"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "line",
+        "minPoints": 2,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Standard tactical graphic -- coordinate with adjacent and higher units"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "low",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Alternate Supply Route (ASR): Alternative route for supply convoy routing. Established by brigade or division or corps. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
+    },
+    {
+      "entityCode": "310400",
+      "label": "Refugee Holding Area",
+      "bSidc": "G*S*AH----****X",
+      "definitions": {
+        "b": "Area designated for temporary holding of refugees.",
+        "c": "Area designated for temporary holding of refugees.",
+        "d": "Area designated for temporary holding of refugees.",
+        "e": "Area designated for temporary holding of refugees."
+      },
+      "usageGuidance": {
+        "purpose": "Area designated for temporary holding of refugees.",
+        "establishedBy": [
+          "brigade",
+          "division",
+          "corps"
+        ],
+        "requiredModifiers": [
+          "T"
+        ],
+        "optionalModifiers": [],
+        "geometryType": "area",
+        "minPoints": 3,
+        "maxPoints": 0,
+        "doctrinalRules": [
+          "Boundaries must be clearly defined and not overlap with conflicting measures"
+        ]
+      },
+      "safetyConstraints": {
+        "riskLevel": "low",
+        "proximityRules": [],
+        "temporalRules": [],
+        "hierarchyRules": [],
+        "mutualExclusions": [],
+        "aiValidation": {
+          "mustNotOverlap": [],
+          "mustBeContainedIn": [],
+          "requiresDateTimeGroup": false,
+          "requiresDesignation": true,
+          "maxDurationHours": null
+        }
+      },
+      "embeddingText": "Refugee Holding Area: Area designated for temporary holding of refugees. Established by brigade or division or corps. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
+    }
+  ]
+}
