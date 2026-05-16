@@ -5,7 +5,55 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.0] - 2026-05-12
+## [Unreleased]
+
+### Added
+- MIL-STD-2525 doctrinal definitions data (67 entities with safety constraints, embedding text)
+- JSON Schema for doctrine data validation (`schemas/mil-std-2525-doctrine.schema.json`)
+- Doctrine CI validation script (`scripts/validate-doctrine.mjs`)
+- Mobile-optimized tactical graphics page (single map with search/filter list)
+- Subpath exports for data and schemas in `@iotactical/tak-react`
+- Comprehensive API documentation (README with prop tables for all 26 components)
+- Platform stub directories (Flutter, Swift, WinTAK)
+- Sources page on design system site
+- Spinner component
+
+### Changed
+- Consolidated `@iotactical/tak-data` into `@iotactical/tak-react` (single npm package)
+- Kill Box (Blue) renamed to Kill Box (BKB) per MIL-STD-2525 doctrine
+- Disabled pinch-zoom on mobile site
+
+### Removed
+- `packages/data/` directory (merged into `packages/react`)
+
+## [0.2.0] - 2026-05-15
+
+### Added
+- MIL-STD-2525 Explorer with unified Build view and cross-updating SIDCs
+- Fuse.js fuzzy search across 4,000+ taxonomy items
+- Search UX: deep linking, clickable breadcrumbs, Cmd+K hotkey
+- Interactive 3D vehicle model viewer (GLB/GLTF)
+- Skittles circles tab with consistent column alignment
+- Multipoint tactical graphics renderer (67 control measures)
+- Graphics editing: translate, rotate, resize with bounding box
+- Persistent graphics log panel
+- Geo-transform unit tests with vitest
+- Pre-commit checks (lint, type-check)
+- 820 ATAK PNG icons
+- 9 asset pack inventories
+
+### Fixed
+- Rotated scaling distortion
+- Auto-commit dropping graphics when switching entities
+- Stale vertices on entity switch
+- First graphic not appearing in log
+- Resize on rotated graphics
+- Container and panel overflow issues
+- Palette rendering with ZIP iconsets
+- Icon previews with static imports and path fallbacks
+- Skittle column alignment
+
+## [0.1.0] - 2026-02-17
 
 ### Added
 
@@ -39,3 +87,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - aria-live regions for dynamic search counts (REQ-XW-224)
 - Meaningful alt text on military symbol images (REQ-XW-225)
 - Skip-to-main-content link (REQ-XW-226)
+
+[Unreleased]: https://github.com/iotactical/tak-design-system/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/iotactical/tak-design-system/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/iotactical/tak-design-system/releases/tag/v0.1.0
