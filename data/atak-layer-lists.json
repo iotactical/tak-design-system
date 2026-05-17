@@ -1,0 +1,1168 @@
+[
+  {
+    "name": "attachment_badge",
+    "atakSourceFile": "attachment_badge.xml",
+    "layers": [
+      {
+        "index": 0,
+        "id": "@+id/details_base",
+        "gravity": "center",
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "@drawable/attachment"
+      },
+      {
+        "index": 1,
+        "id": "@+id/ic_badge",
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "@drawable/attachment"
+      }
+    ]
+  },
+  {
+    "name": "btn_default_normal_arrow",
+    "atakSourceFile": "btn_default_normal_arrow.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "@drawable/btn_default_normal"
+      },
+      {
+        "index": 1,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "@drawable/arrowright",
+        "gravity": "right|center"
+      }
+    ]
+  },
+  {
+    "name": "btn_default_selected_arrow",
+    "atakSourceFile": "btn_default_selected_arrow.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "@drawable/btn_default_selected"
+      },
+      {
+        "index": 1,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "@drawable/arrowright",
+        "gravity": "right"
+      }
+    ]
+  },
+  {
+    "name": "cell_dark_pressed",
+    "atakSourceFile": "cell_dark_pressed.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#CBCBCB",
+          "stroke": {
+            "width": "1dp",
+            "color": "#7733B5E5"
+          }
+        }
+      },
+      {
+        "index": 1,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#7733B5E5"
+        }
+      }
+    ]
+  },
+  {
+    "name": "cell_light_pressed",
+    "atakSourceFile": "cell_light_pressed.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#E7E7E7",
+          "stroke": {
+            "width": "1dp",
+            "color": "#7733B5E5"
+          }
+        }
+      },
+      {
+        "index": 1,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#7733B5E5"
+        }
+      }
+    ]
+  },
+  {
+    "name": "cell_title_pressed",
+    "atakSourceFile": "cell_title_pressed.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#999",
+          "stroke": {
+            "width": "1dp",
+            "color": "#7733B5E5"
+          }
+        }
+      },
+      {
+        "index": 1,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#7733B5E5"
+        }
+      }
+    ]
+  },
+  {
+    "name": "color_well_background",
+    "atakSourceFile": "color_well_background.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/black",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/pastel_gray"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "details_badge",
+    "atakSourceFile": "details_badge.xml",
+    "layers": [
+      {
+        "index": 0,
+        "id": "@+id/details_base",
+        "gravity": "center",
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "@drawable/details"
+      },
+      {
+        "index": 1,
+        "id": "@+id/ic_badge",
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "@drawable/details"
+      }
+    ]
+  },
+  {
+    "name": "dot_selected",
+    "atakSourceFile": "dot_selected.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "ring",
+          "solidColor": "@color/light_blue"
+        }
+      }
+    ]
+  },
+  {
+    "name": "dot_unselected",
+    "atakSourceFile": "dot_unselected.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "ring",
+          "solidColor": "@color/light_gray"
+        }
+      }
+    ]
+  },
+  {
+    "name": "drawable_d_shape_transparent",
+    "atakSourceFile": "drawable_d_shape_transparent.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#00000000",
+          "corners": {
+            "topLeftRadius": "5dp",
+            "topRightRadius": "5dp"
+          }
+        }
+      },
+      {
+        "index": 1,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "gradient": {
+            "startColor": "#FF000000",
+            "endColor": "#00000000",
+            "centerColor": "#00000000",
+            "angle": "90",
+            "type": "linear"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "edit_badge",
+    "atakSourceFile": "edit_badge.xml",
+    "layers": [
+      {
+        "index": 0,
+        "gravity": "center",
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "@drawable/edit"
+      },
+      {
+        "index": 1,
+        "id": "@+id/ic_badge",
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "@drawable/edit"
+      }
+    ]
+  },
+  {
+    "name": "ic_menu_chat_layers",
+    "atakSourceFile": "ic_menu_chat_layers.xml",
+    "layers": [
+      {
+        "index": 0,
+        "id": "@+id/ic_menu_chat",
+        "gravity": "center",
+        "left": "1dp",
+        "top": "1dp",
+        "right": "1dp",
+        "bottom": "1dp",
+        "width": null,
+        "height": null,
+        "drawable": "@drawable/ic_menu_chat"
+      },
+      {
+        "index": 1,
+        "id": "@+id/ic_badge",
+        "left": "1dp",
+        "top": "1dp",
+        "right": "1dp",
+        "bottom": "1dp",
+        "width": null,
+        "height": null,
+        "drawable": "@drawable/ic_menu_chat"
+      }
+    ]
+  },
+  {
+    "name": "ic_menu_contact_layers",
+    "atakSourceFile": "ic_menu_contact_layers.xml",
+    "layers": [
+      {
+        "index": 0,
+        "id": "@+id/ic_menu_contact",
+        "gravity": "center",
+        "left": "1dp",
+        "top": "1dp",
+        "right": "1dp",
+        "bottom": "1dp",
+        "width": null,
+        "height": null,
+        "drawable": "@drawable/ic_menu_contact"
+      },
+      {
+        "index": 1,
+        "id": "@+id/ic_badge",
+        "left": "1dp",
+        "top": "1dp",
+        "right": "1dp",
+        "bottom": "1dp",
+        "width": null,
+        "height": null,
+        "drawable": "@drawable/ic_menu_contact"
+      }
+    ]
+  },
+  {
+    "name": "loadout_deselected",
+    "atakSourceFile": "loadout_deselected.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "8dp",
+        "top": "8dp",
+        "right": "8dp",
+        "bottom": "8dp",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "oval",
+          "solidColor": "@android:color/transparent",
+          "height": "120dp",
+          "width": "120dp"
+        }
+      },
+      {
+        "index": 1,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "oval",
+          "stroke": {
+            "width": "4dp",
+            "color": "@color/white"
+          },
+          "height": "130dp",
+          "width": "130dp"
+        }
+      }
+    ]
+  },
+  {
+    "name": "loadout_selected",
+    "atakSourceFile": "loadout_selected.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "oval",
+          "stroke": {
+            "width": "4dp",
+            "color": "@color/white"
+          },
+          "height": "130dp",
+          "width": "130dp"
+        }
+      },
+      {
+        "index": 1,
+        "left": "8dp",
+        "top": "8dp",
+        "right": "8dp",
+        "bottom": "8dp",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "oval",
+          "solidColor": "@color/white",
+          "height": "120dp",
+          "width": "120dp"
+        }
+      }
+    ]
+  },
+  {
+    "name": "method_button_not_selected",
+    "atakSourceFile": "method_button_not_selected.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "1dp",
+        "right": "1dp",
+        "bottom": "1dp",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "corners": {
+            "topLeftRadius": "0dp",
+            "topRightRadius": "10dp",
+            "bottomLeftRadius": "0dp",
+            "bottomRightRadius": "10dp"
+          },
+          "gradient": {
+            "startColor": "#6A6A6A",
+            "endColor": "#7B7B7B",
+            "angle": "270",
+            "type": "linear"
+          }
+        }
+      },
+      {
+        "index": 1,
+        "left": "0",
+        "top": "20dp",
+        "right": "1dp",
+        "bottom": "1dp",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#60000000",
+          "corners": {
+            "topLeftRadius": "0dp",
+            "topRightRadius": "0dp",
+            "bottomLeftRadius": "0dp",
+            "bottomRightRadius": "10dp"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "method_button_selected",
+    "atakSourceFile": "method_button_selected.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "1dp",
+        "top": "1dp",
+        "right": "1dp",
+        "bottom": "1dp",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "corners": {
+            "topLeftRadius": "0dp",
+            "topRightRadius": "10dp",
+            "bottomLeftRadius": "0dp",
+            "bottomRightRadius": "10dp"
+          },
+          "gradient": {
+            "startColor": "#6A6A6A",
+            "endColor": "#7B7B7B",
+            "angle": "270",
+            "type": "linear"
+          }
+        }
+      },
+      {
+        "index": 1,
+        "left": "1dp",
+        "top": "20dp",
+        "right": "1dp",
+        "bottom": "1dp",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#60000000",
+          "corners": {
+            "topLeftRadius": "0dp",
+            "topRightRadius": "0dp",
+            "bottomLeftRadius": "0dp",
+            "bottomRightRadius": "10dp"
+          }
+        }
+      },
+      {
+        "index": 2,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "stroke": {
+            "width": "2dp",
+            "color": "#00FFFF"
+          },
+          "corners": {
+            "topLeftRadius": "0dp",
+            "topRightRadius": "10dp",
+            "bottomLeftRadius": "0dp",
+            "bottomRightRadius": "10dp"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "new_dark_button_bg",
+    "atakSourceFile": "new_dark_button_bg.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "1dp",
+        "top": "1dp",
+        "right": "1dp",
+        "bottom": "1dp",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "stroke": {
+            "width": "1dp",
+            "color": "#585858"
+          },
+          "corners": {
+            "radius": "3dp"
+          },
+          "gradient": {
+            "startColor": "#000000",
+            "endColor": "#383838",
+            "angle": "90"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "new_dark_button_disabled",
+    "atakSourceFile": "new_dark_button_disabled.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "1dp",
+        "top": "1dp",
+        "right": "1dp",
+        "bottom": "1dp",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#484848",
+          "stroke": {
+            "width": "1dp",
+            "color": "#484848"
+          },
+          "corners": {
+            "radius": "3dp"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "new_dark_button_selected",
+    "atakSourceFile": "new_dark_button_selected.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "1dp",
+        "top": "1dp",
+        "right": "1dp",
+        "bottom": "1dp",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "stroke": {
+            "width": "1dp",
+            "color": "#17b219"
+          },
+          "corners": {
+            "radius": "3dp"
+          },
+          "gradient": {
+            "startColor": "#000000",
+            "endColor": "#383838",
+            "angle": "90"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "open_chat_layers",
+    "atakSourceFile": "open_chat_layers.xml",
+    "layers": [
+      {
+        "index": 0,
+        "id": "@+id/open_chat",
+        "gravity": "center",
+        "left": "1dp",
+        "top": "1dp",
+        "right": "1dp",
+        "bottom": "1dp",
+        "width": null,
+        "height": null,
+        "drawable": "@drawable/open_chat"
+      },
+      {
+        "index": 1,
+        "id": "@+id/ic_badge",
+        "left": "1dp",
+        "top": "1dp",
+        "right": "1dp",
+        "bottom": "1dp",
+        "width": null,
+        "height": null,
+        "drawable": "@drawable/open_chat"
+      }
+    ]
+  },
+  {
+    "name": "oval_button_normal",
+    "atakSourceFile": "oval_button_normal.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "oval",
+          "solidColor": "#000000",
+          "stroke": {
+            "width": "1dp",
+            "color": "#FFFFFF"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "oval_button_pressed",
+    "atakSourceFile": "oval_button_pressed.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "oval",
+          "stroke": {
+            "width": "1dp",
+            "color": "#FFFFFF"
+          }
+        }
+      },
+      {
+        "index": 1,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "oval",
+          "solidColor": "#AAFFFFFF"
+        }
+      }
+    ]
+  },
+  {
+    "name": "progress_horizontal",
+    "atakSourceFile": "progress_horizontal.xml",
+    "layers": [
+      {
+        "index": 0,
+        "id": "@android:id/background",
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/black",
+          "corners": {
+            "radius": "8.5dp"
+          }
+        }
+      },
+      {
+        "index": 1,
+        "id": "@android:id/progress",
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:clip+shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "radius": "8.5dp"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "progress_horizontal_small",
+    "atakSourceFile": "progress_horizontal_small.xml",
+    "layers": [
+      {
+        "index": 0,
+        "id": "@android:id/background",
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "@android:color/transparent",
+          "height": "4dp"
+        }
+      },
+      {
+        "index": 1,
+        "id": "@android:id/progress",
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:clip+shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/maize",
+          "height": "4dp"
+        }
+      }
+    ]
+  },
+  {
+    "name": "splash_progress_drawable",
+    "atakSourceFile": "splash_progress_drawable.xml",
+    "layers": [
+      {
+        "index": 0,
+        "id": "@android:id/background",
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "corners": {
+            "radius": "12dp"
+          },
+          "gradient": {
+            "startColor": "@color/black",
+            "endColor": "@color/black",
+            "centerColor": "@color/black",
+            "angle": "270"
+          }
+        }
+      },
+      {
+        "index": 1,
+        "id": "@android:id/progress",
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:clip+shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "corners": {
+            "radius": "12dp"
+          },
+          "gradient": {
+            "startColor": "@color/hilight_yellow",
+            "endColor": "@color/hilight_yellow",
+            "centerColor": "@color/hilight_yellow",
+            "angle": "270"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "switch_track",
+    "atakSourceFile": "switch_track.xml",
+    "layers": [
+      {
+        "index": 0,
+        "gravity": "center_vertical|fill_horizontal",
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "corners": {
+            "radius": "7dp"
+          },
+          "height": "14dp"
+        }
+      }
+    ]
+  },
+  {
+    "name": "toolbar_item_gray_normal",
+    "atakSourceFile": "toolbar_item_gray_normal.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#00C0C0C0",
+          "stroke": {
+            "width": "1dp",
+            "color": "#FF5A5A5A"
+          },
+          "corners": {
+            "radius": "2dp"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "toolbar_item_gray_selected",
+    "atakSourceFile": "toolbar_item_gray_selected.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#00C0C0C0",
+          "stroke": {
+            "width": "2dp",
+            "color": "#FF0000FF"
+          },
+          "corners": {
+            "radius": "2dp"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "toolbar_item_green_normal",
+    "atakSourceFile": "toolbar_item_green_normal.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#FF8AB345",
+          "corners": {
+            "radius": "2dp"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "toolbar_item_green_selected",
+    "atakSourceFile": "toolbar_item_green_selected.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#FF8AB345",
+          "stroke": {
+            "width": "2dp",
+            "color": "#FF0000FF"
+          },
+          "corners": {
+            "radius": "2dp"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "toolbar_item_red_normal",
+    "atakSourceFile": "toolbar_item_red_normal.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#FFFF0000",
+          "corners": {
+            "radius": "2dp"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "toolbar_item_red_selected",
+    "atakSourceFile": "toolbar_item_red_selected.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#FFFF0000",
+          "stroke": {
+            "width": "2dp",
+            "color": "#FF0000FF"
+          },
+          "corners": {
+            "radius": "2dp"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "toolbar_item_yellow_normal",
+    "atakSourceFile": "toolbar_item_yellow_normal.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#FFFFFF00",
+          "corners": {
+            "radius": "2dp"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "toolbar_item_yellow_selected",
+    "atakSourceFile": "toolbar_item_yellow_selected.xml",
+    "layers": [
+      {
+        "index": 0,
+        "left": "0",
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "width": null,
+        "height": null,
+        "drawable": "inline:shape",
+        "inlineShape": {
+          "shapeType": "rectangle",
+          "solidColor": "#FFFFFF00",
+          "stroke": {
+            "width": "2dp",
+            "color": "#FF0000FF"
+          },
+          "corners": {
+            "radius": "2dp"
+          }
+        }
+      }
+    ]
+  }
+]

@@ -83,11 +83,22 @@
     "name": "atak_list_item",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "#5C8D2B"
+        },
         "conditions": {
           "state_pressed": true
         }
       },
-      {}
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "#333"
+        }
+      }
     ]
   },
   {
@@ -122,11 +133,14 @@
     "name": "atak_menu_text_color",
     "states": [
       {
+        "color": "#FFF",
         "conditions": {
           "state_pressed": true
         }
       },
-      {}
+      {
+        "color": "#333"
+      }
     ]
   },
   {
@@ -279,15 +293,22 @@
     "name": "border_bottom_pastel_gray",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray"
+        },
         "conditions": {
           "state_selected": true
         }
       },
-      {},
-      {},
-      {},
-      {},
-      {}
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray"
+        }
+      }
     ]
   },
   {
@@ -398,7 +419,10 @@
     "name": "btn_expandable",
     "states": [
       {
-        "drawable": "@drawable/ic_row_contract"
+        "drawable": "@drawable/ic_row_contract",
+        "conditions": {
+          "state_expanded": true
+        }
       },
       {
         "drawable": "@drawable/ic_row_expand"
@@ -492,81 +516,194 @@
     "name": "button_background",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/taupe"
+        },
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true,
+          "state_error": true
+        }
+      },
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/deep_carmine_pink"
+        },
+        "conditions": {
+          "state_enabled": true,
+          "state_error": true
+        }
+      },
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/taupe"
+        },
         "conditions": {
           "state_pressed": true,
           "state_enabled": true
         }
       },
       {
-        "conditions": {
-          "state_enabled": true
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray"
         }
-      },
-      {
-        "conditions": {
-          "state_pressed": true,
-          "state_enabled": true
-        }
-      },
-      {}
+      }
     ]
   },
   {
     "name": "button_background_inverse",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/taupe"
+        },
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true,
+          "state_error": true
+        }
+      },
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/deep_carmine_pink"
+        },
+        "conditions": {
+          "state_enabled": true,
+          "state_error": true
+        }
+      },
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/taupe"
+        },
         "conditions": {
           "state_pressed": true,
           "state_enabled": true
         }
       },
       {
-        "conditions": {
-          "state_enabled": true
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@android:color/transparent"
         }
-      },
-      {
-        "conditions": {
-          "state_pressed": true,
-          "state_enabled": true
-        }
-      },
-      {}
+      }
     ]
   },
   {
     "name": "button_black_secondary_background",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "radius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": true,
           "state_enabled": true
         }
       },
-      {}
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/black",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/pastel_gray"
+          },
+          "corners": {
+            "radius": "2dp"
+          }
+        }
+      }
     ]
   },
   {
     "name": "button_marker_background",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/taupe",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/pastel_gray"
+          },
+          "corners": {
+            "radius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": true
         }
       },
-      {}
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/black",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/pastel_gray"
+          },
+          "corners": {
+            "radius": "2dp"
+          }
+        }
+      }
     ]
   },
   {
     "name": "button_secondary_background",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "radius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": true,
           "state_enabled": true
         }
       },
-      {}
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/medium_jungle_green",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/pastel_gray"
+          },
+          "corners": {
+            "radius": "2dp"
+          }
+        }
+      }
     ]
   },
   {
@@ -666,69 +803,210 @@
     "name": "dialog_alert_left_button_background",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/taupe",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/black"
+          },
+          "corners": {
+            "bottomLeftRadius": "@dimen/alert_dialog_corner_radius"
+          }
+        },
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true,
+          "state_error": true
+        }
+      },
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/deep_carmine_pink",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/black"
+          },
+          "corners": {
+            "bottomLeftRadius": "@dimen/alert_dialog_corner_radius"
+          }
+        },
+        "conditions": {
+          "state_enabled": true,
+          "state_error": true
+        }
+      },
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/taupe",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/black"
+          },
+          "corners": {
+            "bottomLeftRadius": "@dimen/alert_dialog_corner_radius"
+          }
+        },
         "conditions": {
           "state_pressed": true,
           "state_enabled": true
         }
       },
       {
-        "conditions": {
-          "state_enabled": true
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/black"
+          },
+          "corners": {
+            "bottomLeftRadius": "@dimen/alert_dialog_corner_radius"
+          }
         }
-      },
-      {
-        "conditions": {
-          "state_pressed": true,
-          "state_enabled": true
-        }
-      },
-      {}
+      }
     ]
   },
   {
     "name": "dialog_alert_right_button_background",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/taupe",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/black"
+          },
+          "corners": {
+            "bottomRightRadius": "@dimen/alert_dialog_corner_radius"
+          }
+        },
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true,
+          "state_error": true
+        }
+      },
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/deep_carmine_pink",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/black"
+          },
+          "corners": {
+            "bottomRightRadius": "@dimen/alert_dialog_corner_radius"
+          }
+        },
+        "conditions": {
+          "state_enabled": true,
+          "state_error": true
+        }
+      },
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/taupe",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/black"
+          },
+          "corners": {
+            "bottomRightRadius": "@dimen/alert_dialog_corner_radius"
+          }
+        },
         "conditions": {
           "state_pressed": true,
           "state_enabled": true
         }
       },
       {
-        "conditions": {
-          "state_enabled": true
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/black"
+          },
+          "corners": {
+            "bottomRightRadius": "@dimen/alert_dialog_corner_radius"
+          }
         }
-      },
-      {
-        "conditions": {
-          "state_pressed": true,
-          "state_enabled": true
-        }
-      },
-      {}
+      }
     ]
   },
   {
     "name": "dialog_standard_button_background",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/taupe",
+          "corners": {
+            "bottomLeftRadius": "@dimen/standard_dialog_corner_radius",
+            "bottomRightRadius": "@dimen/standard_dialog_corner_radius"
+          }
+        },
+        "conditions": {
+          "state_pressed": true,
+          "state_enabled": true,
+          "state_error": true
+        }
+      },
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/deep_carmine_pink",
+          "corners": {
+            "bottomLeftRadius": "@dimen/standard_dialog_corner_radius",
+            "bottomRightRadius": "@dimen/standard_dialog_corner_radius"
+          }
+        },
+        "conditions": {
+          "state_enabled": true,
+          "state_error": true
+        }
+      },
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/taupe",
+          "corners": {
+            "bottomLeftRadius": "@dimen/standard_dialog_corner_radius",
+            "bottomRightRadius": "@dimen/standard_dialog_corner_radius"
+          }
+        },
         "conditions": {
           "state_pressed": true,
           "state_enabled": true
         }
       },
       {
-        "conditions": {
-          "state_enabled": true
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "bottomLeftRadius": "@dimen/standard_dialog_corner_radius",
+            "bottomRightRadius": "@dimen/standard_dialog_corner_radius"
+          }
         }
-      },
-      {
-        "conditions": {
-          "state_pressed": true,
-          "state_enabled": true
-        }
-      },
-      {}
+      }
     ]
   },
   {
@@ -748,15 +1026,33 @@
   {
     "name": "edit_text_new_background",
     "states": [
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {}
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/deep_carmine_pink"
+        },
+        "conditions": {
+          "state_error": true
+        }
+      },
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/black"
+        },
+        "conditions": {
+          "state_entered": true
+        }
+      },
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pale_silver"
+        }
+      }
     ]
   },
   {
@@ -1153,42 +1449,52 @@
     "name": "fastfwdforeground",
     "states": [
       {
+        "drawable": "@drawable/fastfwd_pressed",
         "conditions": {
           "state_pressed": true
         }
       },
       {
+        "drawable": "@drawable/fastfwd_hover",
         "conditions": {
           "state_focused": true
         }
       },
       {
+        "drawable": "@drawable/fastfwd_disabled",
         "conditions": {
           "state_enabled": false
         }
       },
-      {}
+      {
+        "drawable": "@drawable/fastfwd"
+      }
     ]
   },
   {
     "name": "fastrevforeground",
     "states": [
       {
+        "drawable": "@drawable/fastrev_pressed",
         "conditions": {
           "state_pressed": true
         }
       },
       {
+        "drawable": "@drawable/fastrev_hover",
         "conditions": {
           "state_focused": true
         }
       },
       {
+        "drawable": "@drawable/fastrev_disabled",
         "conditions": {
           "state_enabled": false
         }
       },
-      {}
+      {
+        "drawable": "@drawable/fastrev"
+      }
     ]
   },
   {
@@ -1521,11 +1827,22 @@
     "name": "item_background",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/taupe"
+        },
         "conditions": {
           "state_pressed": true
         }
       },
-      {}
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@android:color/transparent"
+        }
+      }
     ]
   },
   {
@@ -1548,7 +1865,16 @@
   {
     "name": "marker",
     "states": [
-      {}
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "oval",
+          "solidColor": "@color/white",
+          "corners": {
+            "radius": "25dp"
+          }
+        }
+      }
     ]
   },
   {
@@ -1575,11 +1901,36 @@
     "name": "message_bar_background",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/taupe",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/pastel_gray"
+          },
+          "corners": {
+            "radius": "@dimen/message_bar_height"
+          }
+        },
         "conditions": {
           "state_pressed": true
         }
       },
-      {}
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/black",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/pastel_gray"
+          },
+          "corners": {
+            "radius": "@dimen/message_bar_height"
+          }
+        }
+      }
     ]
   },
   {
@@ -1684,28 +2035,35 @@
   {
     "name": "pauseforeground",
     "states": [
-      {}
+      {
+        "drawable": "@drawable/pause"
+      }
     ]
   },
   {
     "name": "playforeground",
     "states": [
       {
+        "drawable": "@drawable/play_pressed",
         "conditions": {
           "state_pressed": true
         }
       },
       {
+        "drawable": "@drawable/play_hover",
         "conditions": {
           "state_focused": true
         }
       },
       {
+        "drawable": "@drawable/play_disabled",
         "conditions": {
           "state_enabled": false
         }
       },
-      {}
+      {
+        "drawable": "@drawable/play"
+      }
     ]
   },
   {
@@ -1832,42 +2190,52 @@
     "name": "slowfwdforeground",
     "states": [
       {
+        "drawable": "@drawable/slowfwd_pressed",
         "conditions": {
           "state_pressed": true
         }
       },
       {
+        "drawable": "@drawable/slowfwd_hover",
         "conditions": {
           "state_focused": true
         }
       },
       {
+        "drawable": "@drawable/slowfwd_disabled",
         "conditions": {
           "state_enabled": false
         }
       },
-      {}
+      {
+        "drawable": "@drawable/slowfwd"
+      }
     ]
   },
   {
     "name": "slowrevforeground",
     "states": [
       {
+        "drawable": "@drawable/slowrev_pressed",
         "conditions": {
           "state_pressed": true
         }
       },
       {
+        "drawable": "@drawable/slowrev_hover",
         "conditions": {
           "state_focused": true
         }
       },
       {
+        "drawable": "@drawable/slowrev_disabled",
         "conditions": {
           "state_enabled": false
         }
       },
-      {}
+      {
+        "drawable": "@drawable/slowrev"
+      }
     ]
   },
   {
@@ -1954,11 +2322,12 @@
   {
     "name": "spinner_new",
     "states": [
-      {},
-      {},
-      {},
       {
-        "drawable": "@drawable/dropdown_selector"
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/black"
+        }
       }
     ]
   },
@@ -2006,32 +2375,52 @@
     "name": "switch_thumb",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "oval",
+          "solidColor": "@color/white"
+        },
         "conditions": {
           "state_checked": true
         }
       },
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "oval",
+          "solidColor": "@color/black_overlay_transparent"
+        },
         "conditions": {
           "state_enabled": false
         }
       },
-      {}
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "oval",
+          "solidColor": "@color/pale_silver"
+        }
+      }
     ]
   },
   {
     "name": "switch_track_selector",
     "states": [
       {
+        "color": "@color/trolley_grey",
         "conditions": {
           "state_enabled": false
         }
       },
       {
+        "color": "@color/mint_green",
         "conditions": {
           "state_checked": true
         }
       },
-      {}
+      {
+        "color": "@color/trolley_grey"
+      }
     ]
   },
   {
@@ -2066,218 +2455,405 @@
     "name": "tab_indicator_background",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@android:color/transparent",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/pastel_gray"
+          }
+        },
         "conditions": {
           "state_pressed": false,
           "state_selected": false,
           "state_focused": false
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray"
+        },
         "conditions": {
           "state_pressed": false,
           "state_selected": true,
           "state_focused": false
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@android:color/transparent",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/pastel_gray"
+          }
+        },
         "conditions": {
           "state_pressed": false,
           "state_selected": false,
           "state_focused": true
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray"
+        },
         "conditions": {
           "state_pressed": false,
           "state_selected": true,
           "state_focused": true
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray"
+        },
         "conditions": {
           "state_pressed": true,
           "state_selected": false,
           "state_focused": false
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray"
+        },
         "conditions": {
           "state_pressed": true,
           "state_selected": true,
           "state_focused": false
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray"
+        },
         "conditions": {
           "state_pressed": true,
           "state_selected": false,
           "state_focused": true
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray"
+        },
         "conditions": {
           "state_pressed": true,
           "state_selected": true,
           "state_focused": true
         }
-      },
-      {}
+      }
     ]
   },
   {
     "name": "tab_indicator_left_background",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@android:color/transparent",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/pastel_gray"
+          },
+          "corners": {
+            "topLeftRadius": "2dp",
+            "bottomLeftRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": false,
           "state_selected": false,
           "state_focused": false
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "topLeftRadius": "2dp",
+            "bottomLeftRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": false,
           "state_selected": true,
           "state_focused": false
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@android:color/transparent",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/pastel_gray"
+          },
+          "corners": {
+            "topLeftRadius": "2dp",
+            "bottomLeftRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": false,
           "state_selected": false,
           "state_focused": true
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "topLeftRadius": "2dp",
+            "bottomLeftRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": false,
           "state_selected": true,
           "state_focused": true
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "topLeftRadius": "2dp",
+            "bottomLeftRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": true,
           "state_selected": false,
           "state_focused": false
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "topLeftRadius": "2dp",
+            "bottomLeftRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": true,
           "state_selected": true,
           "state_focused": false
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "topLeftRadius": "2dp",
+            "bottomLeftRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": true,
           "state_selected": false,
           "state_focused": true
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "topLeftRadius": "2dp",
+            "bottomLeftRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": true,
           "state_selected": true,
           "state_focused": true
         }
-      },
-      {}
+      }
     ]
   },
   {
     "name": "tab_indicator_right_background",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@android:color/transparent",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/pastel_gray"
+          },
+          "corners": {
+            "topRightRadius": "2dp",
+            "bottomRightRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": false,
           "state_selected": false,
           "state_focused": false
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "topRightRadius": "2dp",
+            "bottomRightRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": false,
           "state_selected": true,
           "state_focused": false
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@android:color/transparent",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/pastel_gray"
+          },
+          "corners": {
+            "topRightRadius": "2dp",
+            "bottomRightRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": false,
           "state_selected": false,
           "state_focused": true
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "topRightRadius": "2dp",
+            "bottomRightRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": false,
           "state_selected": true,
           "state_focused": true
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "topRightRadius": "2dp",
+            "bottomRightRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": true,
           "state_selected": false,
           "state_focused": false
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "topRightRadius": "2dp",
+            "bottomRightRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": true,
           "state_selected": true,
           "state_focused": false
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "topRightRadius": "2dp",
+            "bottomRightRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": true,
           "state_selected": false,
           "state_focused": true
         }
       },
-      {},
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "topRightRadius": "2dp",
+            "bottomRightRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": true,
           "state_selected": true,
           "state_focused": true
         }
-      },
-      {}
+      }
     ]
   },
   {
     "name": "tab_text_selector",
     "states": [
       {
+        "color": "#FFF",
         "conditions": {
           "state_pressed": true
         }
       },
-      {}
+      {
+        "color": "#000"
+      }
     ]
   },
   {
@@ -2298,31 +2874,84 @@
     "name": "toggle_button_left_background",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/taupe",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/pastel_gray"
+          },
+          "corners": {
+            "topLeftRadius": "2dp",
+            "bottomLeftRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": true
         }
       },
-      {},
-      {}
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "topLeftRadius": "2dp",
+            "bottomLeftRadius": "2dp"
+          }
+        }
+      }
     ]
   },
   {
     "name": "toggle_button_right_background",
     "states": [
       {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/taupe",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/pastel_gray"
+          },
+          "corners": {
+            "topRightRadius": "2dp",
+            "bottomRightRadius": "2dp"
+          }
+        },
         "conditions": {
           "state_pressed": true
         }
       },
-      {},
-      {}
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/pastel_gray",
+          "corners": {
+            "topRightRadius": "2dp",
+            "bottomRightRadius": "2dp"
+          }
+        }
+      }
     ]
   },
   {
     "name": "toggle_textview_background",
     "states": [
-      {},
-      {}
+      {
+        "drawable": "inline:shape",
+        "inlineDrawable": {
+          "shapeType": "rectangle",
+          "solidColor": "@color/medium_jungle_green",
+          "stroke": {
+            "width": "1dp",
+            "color": "@color/pastel_gray"
+          }
+        }
+      }
     ]
   },
   {

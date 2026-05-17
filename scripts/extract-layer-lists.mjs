@@ -133,7 +133,14 @@ function parseLayerItem(itemBlock, index) {
     return layer;
   }
 
-  // Check for inline content: <shape>, <bitmap>, <clip>
+  // Check for inline content: clip+shape first (before bare shape)
+  const clipShape = itemBlock.match(/<clip>[\s\S]*?(<shape\b[\s\S]*?<\/shape>)[\s\S]*?<\/clip>/);
+  if (clipShape) {
+    layer.drawable = 'inline:clip+shape';
+    layer.inlineShape = parseInlineShape(clipShape[1]);
+    return layer;
+  }
+
   const shapeMatch = itemBlock.match(/<shape\b[\s\S]*?<\/shape>/);
   if (shapeMatch) {
     layer.drawable = 'inline:shape';
@@ -148,14 +155,6 @@ function parseLayerItem(itemBlock, index) {
     const grav = ba.match(/android:gravity\s*=\s*"([^"]+)"/);
     layer.drawable = src ? src[1] : 'inline:bitmap';
     if (grav) layer.gravity = grav[1];
-    return layer;
-  }
-
-  // <clip> wrapping a shape
-  const clipShape = itemBlock.match(/<clip>[\s\S]*?(<shape\b[\s\S]*?<\/shape>)[\s\S]*?<\/clip>/);
-  if (clipShape) {
-    layer.drawable = 'inline:clip+shape';
-    layer.inlineShape = parseInlineShape(clipShape[1]);
     return layer;
   }
 
@@ -177,8 +176,11 @@ function parseLayerList(name) {
   const xml = readXml(name);
   if (!xml) return null;
 
+  // Strip XML comments to avoid parsing commented-out items
+  const cleanXml = xml.replace(/<!--[\s\S]*?-->/g, '');
+
   // Verify it's actually a layer-list (not a selector wrapping layer-lists)
-  if (!xml.match(/<layer-list\b[^>]*>/)) return null;
+  if (!cleanXml.match(/<layer-list\b[^>]*>/)) return null;
 
   const warnings = [];
   const layers = [];
@@ -193,7 +195,7 @@ function parseLayerList(name) {
   // Find all <item and </item> positions
   const tagRegex = /<(\/?)item\b([^>]*?)(\/?)>/gs;
   let m;
-  while ((m = tagRegex.exec(xml)) !== null) {
+  while ((m = tagRegex.exec(cleanXml)) !== null) {
     const isClosing = m[1] === '/';
     const isSelfClosing = m[3] === '/';
     const pos = m.index;
@@ -204,7 +206,7 @@ function parseLayerList(name) {
     } else if (isClosing) {
       depth--;
       if (depth === 0 && currentStart >= 0) {
-        items.push(xml.substring(currentStart, pos + m[0].length));
+        items.push(cleanXml.substring(currentStart, pos + m[0].length));
         currentStart = -1;
       }
     } else if (isSelfClosing) {

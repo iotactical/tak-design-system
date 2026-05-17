@@ -79,18 +79,84 @@ function parseSelector(name) {
   const xml = readDrawableXml(name);
   if (!xml) return null;
 
+  // Strip XML comments
+  const cleanXml = xml.replace(/<!--[\s\S]*?-->/g, '');
+
   const states = [];
-  // Match each <item ...> tag (may span multiple lines)
-  const itemRegex = /<item\b([^>]*)\/?>/gs;
-  let match;
-  while ((match = itemRegex.exec(xml)) !== null) {
-    const attrs = match[1];
+
+  // Extract full <item>...</item> blocks using depth tracking
+  const itemBlocks = [];
+  const tagRegex = /<(\/?)item\b([^>]*?)(\/?)>/gs;
+  let m;
+  let depth = 0;
+  let currentStart = -1;
+  while ((m = tagRegex.exec(cleanXml)) !== null) {
+    const isClosing = m[1] === '/';
+    const isSelfClosing = m[3] === '/';
+    const pos = m.index;
+    if (!isClosing && !isSelfClosing) {
+      if (depth === 0) currentStart = pos;
+      depth++;
+    } else if (isClosing) {
+      depth--;
+      if (depth === 0 && currentStart >= 0) {
+        itemBlocks.push(cleanXml.substring(currentStart, pos + m[0].length));
+        currentStart = -1;
+      }
+    } else if (isSelfClosing) {
+      if (depth === 0) itemBlocks.push(m[0]);
+    }
+  }
+
+  for (const itemBlock of itemBlocks) {
+    const openTag = itemBlock.match(/<item\b([^>]*?)(?:\/>|>)/s);
+    const attrs = openTag ? openTag[1] : '';
     const state = {};
 
-    // Extract drawable reference
+    // Extract drawable reference from item attributes
     const drawableMatch = attrs.match(/android:drawable\s*=\s*"([^"]+)"/);
     if (drawableMatch) {
       state.drawable = drawableMatch[1];
+    }
+
+    // Extract color reference from item attributes
+    const colorAttrMatch = attrs.match(/android:color\s*=\s*"([^"]+)"/);
+    if (colorAttrMatch) {
+      state.color = colorAttrMatch[1];
+    }
+
+    // If no drawable attribute, check for inline content (REQ-ICN-012)
+    if (!state.drawable && !state.color) {
+      // Inline <shape>
+      const shapeMatch = itemBlock.match(/<shape\b[\s\S]*?<\/shape>/);
+      if (shapeMatch) {
+        state.drawable = 'inline:shape';
+        state.inlineDrawable = parseInlineShape(shapeMatch[0]);
+      }
+      // Inline <bitmap>
+      if (!state.drawable) {
+        const bitmapMatch = itemBlock.match(/<bitmap\b([^>]*)\/?>/s);
+        if (bitmapMatch) {
+          const ba = bitmapMatch[1];
+          const src = ba.match(/android:src\s*=\s*"([^"]+)"/);
+          state.drawable = src ? src[1] : 'inline:bitmap';
+        }
+      }
+      // Inline <layer-list>
+      if (!state.drawable) {
+        const layerListMatch = itemBlock.match(/<layer-list\b[\s\S]*?<\/layer-list>/);
+        if (layerListMatch) {
+          state.drawable = 'inline:layer-list';
+        }
+      }
+      // Inline <color>
+      if (!state.drawable) {
+        const colorMatch = itemBlock.match(/<color\b[^>]*android:color\s*=\s*"([^"]+)"/);
+        if (colorMatch) {
+          state.drawable = 'inline:color';
+          state.inlineColor = colorMatch[1];
+        }
+      }
     }
 
     // Extract state conditions
@@ -101,6 +167,11 @@ function parseSelector(name) {
         conditions[stateAttr] = stateMatch[1] === 'true';
       }
     }
+    // Also check for custom app: namespace state attrs (e.g., app:state_error)
+    const appStateMatch = attrs.matchAll(/app:state_(\w+)\s*=\s*"([^"]+)"/g);
+    for (const sm of appStateMatch) {
+      conditions[`state_${sm[1]}`] = sm[2] === 'true';
+    }
     if (Object.keys(conditions).length > 0) {
       state.conditions = conditions;
     }
@@ -110,6 +181,44 @@ function parseSelector(name) {
 
   if (states.length === 0) return null;
   return { name, states };
+}
+
+// Parse an inline <shape> block (shared by selector and layer-list extraction)
+function parseInlineShape(shapeXml) {
+  const result = {};
+  const typeMatch = shapeXml.match(/android:shape\s*=\s*"([^"]+)"/);
+  result.shapeType = typeMatch ? typeMatch[1] : 'rectangle';
+  const solidMatch = shapeXml.match(/<solid\b[^>]*android:color\s*=\s*"([^"]+)"/);
+  if (solidMatch) result.solidColor = solidMatch[1];
+  const strokeW = shapeXml.match(/<stroke\b[^>]*android:width\s*=\s*"([^"]+)"/);
+  const strokeC = shapeXml.match(/<stroke\b[^>]*android:color\s*=\s*"([^"]+)"/);
+  if (strokeW || strokeC) {
+    result.stroke = {};
+    if (strokeW) result.stroke.width = strokeW[1];
+    if (strokeC) result.stroke.color = strokeC[1];
+  }
+  const radiusMatch = shapeXml.match(/<corners\b[^>]*android:radius\s*=\s*"([^"]+)"/);
+  if (radiusMatch) {
+    result.corners = { radius: radiusMatch[1] };
+  } else {
+    const corners = {};
+    for (const attr of ['topLeftRadius', 'topRightRadius', 'bottomLeftRadius', 'bottomRightRadius']) {
+      const cm = shapeXml.match(new RegExp(`android:${attr}\\s*=\\s*"([^"]+)"`));
+      if (cm) corners[attr] = cm[1];
+    }
+    if (Object.keys(corners).length > 0) result.corners = corners;
+  }
+  const gradMatch = shapeXml.match(/<gradient\b([^>]*)\/?>/s);
+  if (gradMatch) {
+    const ga = gradMatch[1];
+    const gradient = {};
+    for (const f of ['startColor', 'endColor', 'centerColor', 'angle', 'type', 'gradientRadius']) {
+      const gm = ga.match(new RegExp(`android:${f}\\s*=\\s*"([^"]+)"`));
+      if (gm) gradient[f] = gm[1];
+    }
+    if (Object.keys(gradient).length > 0) result.gradient = gradient;
+  }
+  return result;
 }
 
 // ---------------------------------------------------------------------------
