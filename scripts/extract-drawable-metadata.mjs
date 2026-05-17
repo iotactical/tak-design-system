@@ -21,9 +21,10 @@ import { fileURLToPath } from 'node:url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 
-const ATAK_DRAWABLE = resolve(
+// Support ATAK_DRAWABLE env var or default to the atak-civ GitHub checkout
+const ATAK_DRAWABLE = process.env.ATAK_DRAWABLE || resolve(
   process.env.HOME,
-  'Downloads/atak-master/ATAK/app/src/main/res/drawable'
+  'code/github.com/TAK-Product-Center/atak-civ/atak/ATAK/app/src/main/res/drawable'
 );
 
 if (!existsSync(ATAK_DRAWABLE)) {

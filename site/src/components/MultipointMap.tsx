@@ -21,6 +21,7 @@ function makeRasterStyle(
 ): import('maplibre-gl').StyleSpecification {
   return {
     version: 8,
+    glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
     sources: {
       [id]: { type: 'raster', tiles, tileSize, attribution },
     },
@@ -71,6 +72,7 @@ const DEFAULT_BASEMAP = BASEMAP_STYLES[0]; // Dark -- matches site theme, good c
  *  loaded yet still look clean. */
 const THUMBNAIL_STYLE: import('maplibre-gl').StyleSpecification = {
   version: 8,
+  glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
   sources: {
     'carto-dark': {
       type: 'raster',
