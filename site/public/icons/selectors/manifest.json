@@ -1,0 +1,587 @@
+[
+  {
+    "name": "all_tools_grid",
+    "path": "icons/selectors/all_tools_grid.png",
+    "method": "inline"
+  },
+  {
+    "name": "atak_button",
+    "path": "icons/selectors/atak_button.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "atak_dropdown",
+    "path": "icons/selectors/atak_dropdown.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "atak_list_item",
+    "path": "icons/selectors/atak_list_item.png",
+    "method": "inline"
+  },
+  {
+    "name": "atak_menu_export",
+    "path": "icons/selectors/atak_menu_export.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "atak_menu_send",
+    "path": "icons/selectors/atak_menu_send.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "atak_menu_text_color",
+    "path": "icons/selectors/atak_menu_text_color.png",
+    "method": "inline"
+  },
+  {
+    "name": "atak_spinner",
+    "path": "icons/selectors/atak_spinner.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "atak_textfield",
+    "path": "icons/selectors/atak_textfield.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "atak_toggle",
+    "path": "icons/selectors/atak_toggle.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "border_bottom_pastel_gray",
+    "path": "icons/selectors/border_bottom_pastel_gray.png",
+    "method": "inline"
+  },
+  {
+    "name": "btn_check",
+    "path": "icons/selectors/btn_check.png",
+    "method": "drawable_ref_placeholder"
+  },
+  {
+    "name": "btn_check_use_btn",
+    "path": "icons/selectors/btn_check_use_btn.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "btn_default",
+    "path": "icons/selectors/btn_default.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "btn_expandable",
+    "path": "icons/selectors/btn_expandable.png",
+    "method": "drawable_ref_placeholder"
+  },
+  {
+    "name": "btn_gray",
+    "path": "icons/selectors/btn_gray.png",
+    "method": "drawable_ref_layerlist"
+  },
+  {
+    "name": "btn_gray_no_checked_highlight",
+    "path": "icons/selectors/btn_gray_no_checked_highlight.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "btn_toggle_holo_dark",
+    "path": "icons/selectors/btn_toggle_holo_dark.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "button_background",
+    "path": "icons/selectors/button_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "button_background_inverse",
+    "path": "icons/selectors/button_background_inverse.png",
+    "method": "inline"
+  },
+  {
+    "name": "button_black_secondary_background",
+    "path": "icons/selectors/button_black_secondary_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "button_marker_background",
+    "path": "icons/selectors/button_marker_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "button_secondary_background",
+    "path": "icons/selectors/button_secondary_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "buttonback",
+    "path": "icons/selectors/buttonback.png",
+    "method": "drawable_ref_shape"
+  },
+  {
+    "name": "cell_dark_clickable",
+    "path": "icons/selectors/cell_dark_clickable.png",
+    "method": "drawable_ref_shape"
+  },
+  {
+    "name": "cell_light_clickable",
+    "path": "icons/selectors/cell_light_clickable.png",
+    "method": "drawable_ref_shape"
+  },
+  {
+    "name": "cell_title_clickable",
+    "path": "icons/selectors/cell_title_clickable.png",
+    "method": "drawable_ref_shape"
+  },
+  {
+    "name": "cell_title_dark_clickable",
+    "path": "icons/selectors/cell_title_dark_clickable.png",
+    "method": "drawable_ref_shape"
+  },
+  {
+    "name": "chat_title_background",
+    "path": "icons/selectors/chat_title_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "dialog_alert_left_button_background",
+    "path": "icons/selectors/dialog_alert_left_button_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "dialog_alert_right_button_background",
+    "path": "icons/selectors/dialog_alert_right_button_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "dialog_standard_button_background",
+    "path": "icons/selectors/dialog_standard_button_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "dot_selector",
+    "path": "icons/selectors/dot_selector.png",
+    "method": "drawable_ref_layerlist"
+  },
+  {
+    "name": "edit_text_new_background",
+    "path": "icons/selectors/edit_text_new_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "enter_location_label",
+    "path": "icons/selectors/enter_location_label.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "enter_location_spot_black",
+    "path": "icons/selectors/enter_location_spot_black.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "enter_location_spot_blue",
+    "path": "icons/selectors/enter_location_spot_blue.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "enter_location_spot_brown",
+    "path": "icons/selectors/enter_location_spot_brown.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "enter_location_spot_custom_center",
+    "path": "icons/selectors/enter_location_spot_custom_center.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "enter_location_spot_custom_first",
+    "path": "icons/selectors/enter_location_spot_custom_first.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "enter_location_spot_custom_last",
+    "path": "icons/selectors/enter_location_spot_custom_last.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "enter_location_spot_cyan",
+    "path": "icons/selectors/enter_location_spot_cyan.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "enter_location_spot_green",
+    "path": "icons/selectors/enter_location_spot_green.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "enter_location_spot_grey",
+    "path": "icons/selectors/enter_location_spot_grey.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "enter_location_spot_magenta",
+    "path": "icons/selectors/enter_location_spot_magenta.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "enter_location_spot_orange",
+    "path": "icons/selectors/enter_location_spot_orange.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "enter_location_spot_red",
+    "path": "icons/selectors/enter_location_spot_red.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "enter_location_spot_white",
+    "path": "icons/selectors/enter_location_spot_white.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "enter_location_spot_yellow",
+    "path": "icons/selectors/enter_location_spot_yellow.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "fastfwdforeground",
+    "path": "icons/selectors/fastfwdforeground.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "fastrevforeground",
+    "path": "icons/selectors/fastrevforeground.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "freetext_list_selector",
+    "path": "icons/selectors/freetext_list_selector.png",
+    "method": "inline"
+  },
+  {
+    "name": "friendly_radio",
+    "path": "icons/selectors/friendly_radio.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "group_checkbox",
+    "path": "icons/selectors/group_checkbox.png",
+    "method": "drawable_ref_placeholder"
+  },
+  {
+    "name": "hostile_radio",
+    "path": "icons/selectors/hostile_radio.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "ic_arrow_down",
+    "path": "icons/selectors/ic_arrow_down.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "ic_arrow_up",
+    "path": "icons/selectors/ic_arrow_up.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "ic_drag_ruler_toggle",
+    "path": "icons/selectors/ic_drag_ruler_toggle.png",
+    "method": "drawable_ref_placeholder"
+  },
+  {
+    "name": "ic_hostile_mgr",
+    "path": "icons/selectors/ic_hostile_mgr.png",
+    "method": "drawable_ref_placeholder"
+  },
+  {
+    "name": "ic_hostile_toggle",
+    "path": "icons/selectors/ic_hostile_toggle.png",
+    "method": "drawable_ref_placeholder"
+  },
+  {
+    "name": "ic_laser_toggle",
+    "path": "icons/selectors/ic_laser_toggle.png",
+    "method": "drawable_ref_placeholder"
+  },
+  {
+    "name": "ic_menu_drawing_circle_toggle",
+    "path": "icons/selectors/ic_menu_drawing_circle_toggle.png",
+    "method": "drawable_ref_placeholder"
+  },
+  {
+    "name": "ic_menu_drawing_rect_toggle",
+    "path": "icons/selectors/ic_menu_drawing_rect_toggle.png",
+    "method": "drawable_ref_placeholder"
+  },
+  {
+    "name": "ic_menu_drawing_telestrate_toggle",
+    "path": "icons/selectors/ic_menu_drawing_telestrate_toggle.png",
+    "method": "drawable_ref_placeholder"
+  },
+  {
+    "name": "ic_menu_ellipse_toggle",
+    "path": "icons/selectors/ic_menu_ellipse_toggle.png",
+    "method": "drawable_ref_placeholder"
+  },
+  {
+    "name": "ic_menu_rb_circle_toggle",
+    "path": "icons/selectors/ic_menu_rb_circle_toggle.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "ic_mgrs_goto",
+    "path": "icons/selectors/ic_mgrs_goto.png",
+    "method": "drawable_ref_placeholder"
+  },
+  {
+    "name": "ic_password_toggle",
+    "path": "icons/selectors/ic_password_toggle.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "ic_rab_bullseye",
+    "path": "icons/selectors/ic_rab_bullseye.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "ic_radio_btn",
+    "path": "icons/selectors/ic_radio_btn.png",
+    "method": "drawable_ref_placeholder"
+  },
+  {
+    "name": "ic_ruler_toggle",
+    "path": "icons/selectors/ic_ruler_toggle.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "image_radio_button",
+    "path": "icons/selectors/image_radio_button.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "item_background",
+    "path": "icons/selectors/item_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "loadout_selection_drawable",
+    "path": "icons/selectors/loadout_selection_drawable.png",
+    "method": "drawable_ref_placeholder"
+  },
+  {
+    "name": "marker",
+    "path": "icons/selectors/marker.png",
+    "method": "inline"
+  },
+  {
+    "name": "menu_bloodhound",
+    "path": "icons/selectors/menu_bloodhound.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "message_bar_background",
+    "path": "icons/selectors/message_bar_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "missionpackage_list_group_indicator",
+    "path": "icons/selectors/missionpackage_list_group_indicator.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "neutral_radio",
+    "path": "icons/selectors/neutral_radio.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "oval_button",
+    "path": "icons/selectors/oval_button.png",
+    "method": "drawable_ref_layerlist"
+  },
+  {
+    "name": "overlay_title_background",
+    "path": "icons/selectors/overlay_title_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "panto_button",
+    "path": "icons/selectors/panto_button.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "pauseforeground",
+    "path": "icons/selectors/pauseforeground.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "playforeground",
+    "path": "icons/selectors/playforeground.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "select_grids_button",
+    "path": "icons/selectors/select_grids_button.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "selector_methodbutton",
+    "path": "icons/selectors/selector_methodbutton.png",
+    "method": "drawable_ref_layerlist"
+  },
+  {
+    "name": "sliderback",
+    "path": "icons/selectors/sliderback.png",
+    "method": "drawable_ref_placeholder"
+  },
+  {
+    "name": "sliderback_close",
+    "path": "icons/selectors/sliderback_close.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "sliderback_open",
+    "path": "icons/selectors/sliderback_open.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "slowfwdforeground",
+    "path": "icons/selectors/slowfwdforeground.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "slowrevforeground",
+    "path": "icons/selectors/slowrevforeground.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "small_dark_btn",
+    "path": "icons/selectors/small_dark_btn.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "small_dark_btn2",
+    "path": "icons/selectors/small_dark_btn2.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "spinner_background_holo",
+    "path": "icons/selectors/spinner_background_holo.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "spinner_new",
+    "path": "icons/selectors/spinner_new.png",
+    "method": "inline"
+  },
+  {
+    "name": "sse_shape",
+    "path": "icons/selectors/sse_shape.png",
+    "method": "drawable_ref_placeholder"
+  },
+  {
+    "name": "survey_entry_button",
+    "path": "icons/selectors/survey_entry_button.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "switch_thumb",
+    "path": "icons/selectors/switch_thumb.png",
+    "method": "inline"
+  },
+  {
+    "name": "switch_track_selector",
+    "path": "icons/selectors/switch_track_selector.png",
+    "method": "inline"
+  },
+  {
+    "name": "tab_bg_selector",
+    "path": "icons/selectors/tab_bg_selector.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "tab_indicator_background",
+    "path": "icons/selectors/tab_indicator_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "tab_indicator_left_background",
+    "path": "icons/selectors/tab_indicator_left_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "tab_indicator_right_background",
+    "path": "icons/selectors/tab_indicator_right_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "tab_text_selector",
+    "path": "icons/selectors/tab_text_selector.png",
+    "method": "inline"
+  },
+  {
+    "name": "thumbback_small",
+    "path": "icons/selectors/thumbback_small.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "toggle_button_left_background",
+    "path": "icons/selectors/toggle_button_left_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "toggle_button_right_background",
+    "path": "icons/selectors/toggle_button_right_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "toggle_textview_background",
+    "path": "icons/selectors/toggle_textview_background.png",
+    "method": "inline"
+  },
+  {
+    "name": "togglebutton",
+    "path": "icons/selectors/togglebutton.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "toolbar_item_gray",
+    "path": "icons/selectors/toolbar_item_gray.png",
+    "method": "drawable_ref_layerlist"
+  },
+  {
+    "name": "toolbar_item_green",
+    "path": "icons/selectors/toolbar_item_green.png",
+    "method": "drawable_ref_layerlist"
+  },
+  {
+    "name": "toolbar_item_red",
+    "path": "icons/selectors/toolbar_item_red.png",
+    "method": "drawable_ref_layerlist"
+  },
+  {
+    "name": "toolbar_item_yellow",
+    "path": "icons/selectors/toolbar_item_yellow.png",
+    "method": "drawable_ref_layerlist"
+  },
+  {
+    "name": "trackhistory_list_item_background",
+    "path": "icons/selectors/trackhistory_list_item_background.png",
+    "method": "drawable_ref_shape"
+  },
+  {
+    "name": "unknown_radio",
+    "path": "icons/selectors/unknown_radio.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "video_btn2",
+    "path": "icons/selectors/video_btn2.png",
+    "method": "drawable_ref"
+  },
+  {
+    "name": "zeroize_switch_bg",
+    "path": "icons/selectors/zeroize_switch_bg.png",
+    "method": "drawable_ref_shape"
+  }
+]
