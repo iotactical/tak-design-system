@@ -25,6 +25,10 @@ export { RoutePlanner, type RoutePlannerProps, type Waypoint } from './component
 export { NineLineForm, type NineLineFormProps, type NineLineTemplate, type NineLineLine } from './components/NineLineForm';
 export { ScaleBar, type ScaleBarProps, CompassHeading, type CompassHeadingProps, ElevationProfile, type ElevationProfileProps, type ElevationPoint } from './components/MapOverlay';
 export { SkittleMarker, type SkittleMarkerProps } from './components/SkittleMarker';
+export { TakIcon, type TakIconProps, type TakIconSize } from './components/TakIcon';
+export { ShapeRenderer } from './components/TakIcon';
+export { SelectorRenderer } from './components/TakIcon';
+export { LayerListRenderer } from './components/TakIcon';
 
 // Theme
 export { TakThemeProvider, useTakTheme, type TakThemeProviderProps } from './theme/TakThemeProvider';
