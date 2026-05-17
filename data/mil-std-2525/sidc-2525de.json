@@ -1,0 +1,142 @@
+{
+  "description": "MIL-STD-2525D/E 20-character SIDC field definitions",
+  "format": "20-character numeric Symbol Identification Code",
+  "versions": {
+    "10": "MIL-STD-2525D (2014)",
+    "11": "MIL-STD-2525D Change 1",
+    "15": "MIL-STD-2525E (2021)",
+    "16": "MIL-STD-2525E Change 1"
+  },
+  "fields": [
+    { "name": "version", "position": [0, 2], "description": "Standard version (10=D, 15=E)" },
+    { "name": "context", "position": [2, 3], "description": "Context: 0=Reality, 1=Exercise, 2=Simulation" },
+    { "name": "standardIdentity", "position": [3, 4], "description": "Standard Identity (affiliation)" },
+    { "name": "symbolSet", "position": [4, 6], "description": "Symbol set (01=Air, 10=Land, 25=Control Measures, etc.)" },
+    { "name": "status", "position": [6, 7], "description": "Status: 0=Present, 1=Planned/Anticipated" },
+    { "name": "hqTfDummy", "position": [7, 8], "description": "HQ/Task Force/Dummy indicator" },
+    { "name": "amplifier", "position": [8, 10], "description": "Echelon/mobility/towed array amplifier" },
+    { "name": "descriptor", "position": [10, 12], "description": "Amplifier descriptor" },
+    { "name": "entity", "position": [12, 14], "description": "Entity code" },
+    { "name": "entityType", "position": [14, 16], "description": "Entity type code" },
+    { "name": "entitySubtype", "position": [16, 18], "description": "Entity subtype code" },
+    { "name": "modifier1", "position": [18, 19], "description": "Sector 1 modifier" },
+    { "name": "modifier2", "position": [19, 20], "description": "Sector 2 modifier" }
+  ],
+  "standardIdentity": {
+    "0": "Pending",
+    "1": "Unknown",
+    "2": "Assumed Friend",
+    "3": "Friend",
+    "4": "Neutral",
+    "5": "Suspect/Joker",
+    "6": "Hostile/Faker"
+  },
+  "symbolSets": {
+    "00": "Unspecified",
+    "01": "Air",
+    "02": "Air Missile",
+    "05": "Space",
+    "06": "Space Missile",
+    "10": "Land Unit",
+    "11": "Land Civilian",
+    "15": "Land Equipment",
+    "20": "Land Installation",
+    "25": "Control Measures",
+    "27": "Stability Operations",
+    "30": "Sea Surface",
+    "35": "Sea Subsurface",
+    "36": "Mine Warfare",
+    "40": "Activities",
+    "45": "Atmospheric",
+    "46": "Oceanographic",
+    "47": "Meteorological Space",
+    "50": "Signals Intelligence - Space",
+    "51": "Signals Intelligence - Air",
+    "52": "Signals Intelligence - Land",
+    "53": "Signals Intelligence - Surface",
+    "54": "Signals Intelligence - Subsurface",
+    "60": "Cyberspace"
+  },
+  "context": {
+    "0": "Reality",
+    "1": "Exercise",
+    "2": "Simulation"
+  },
+  "status": {
+    "0": "Present",
+    "1": "Planned/Anticipated/Suspect"
+  },
+  "affiliationMapping": {
+    "0": "pending",
+    "1": "unknown",
+    "2": "assumed_friend",
+    "3": "friend",
+    "4": "neutral",
+    "5": "suspect",
+    "6": "hostile"
+  },
+  "examples": [
+    {
+      "sidc": "10031000001211000000",
+      "description": "Friend, Land Unit, Infantry, Present",
+      "parsed": {
+        "version": "10",
+        "context": "0",
+        "standardIdentity": "3",
+        "symbolSet": "10",
+        "status": "0",
+        "hqTfDummy": "0",
+        "amplifier": "00",
+        "descriptor": "12",
+        "entity": "11",
+        "entityType": "00",
+        "entitySubtype": "00",
+        "modifier1": "0",
+        "modifier2": "0"
+      }
+    },
+    {
+      "sidc": "15031000001211000000",
+      "description": "2525E: Friend, Land Unit, Infantry, Present",
+      "parsed": {
+        "version": "15",
+        "context": "0",
+        "standardIdentity": "3",
+        "symbolSet": "10",
+        "status": "0",
+        "hqTfDummy": "0",
+        "amplifier": "00",
+        "descriptor": "12",
+        "entity": "11",
+        "entityType": "00",
+        "entitySubtype": "00",
+        "modifier1": "0",
+        "modifier2": "0"
+      }
+    },
+    {
+      "sidc": "10062500001100000000",
+      "description": "Hostile, Control Measures, Boundary",
+      "parsed": {
+        "version": "10",
+        "context": "0",
+        "standardIdentity": "6",
+        "symbolSet": "25",
+        "status": "0",
+        "hqTfDummy": "0",
+        "amplifier": "00",
+        "descriptor": "11",
+        "entity": "00",
+        "entityType": "00",
+        "entitySubtype": "00",
+        "modifier1": "0",
+        "modifier2": "0"
+      }
+    }
+  ],
+  "entityCounts": {
+    "2525D": 2114,
+    "2525E": 2192,
+    "crosswalk_B_to_D": 1915
+  }
+}

@@ -39,6 +39,9 @@ jobs:
       - name: Build and validate data registry
         run: npm run build:registry && node scripts/validate-registry.mjs
 
+      - name: Validate doctrine data
+        run: node scripts/validate-doctrine.mjs
+
   test:
     needs: validate
     runs-on: ubuntu-latest

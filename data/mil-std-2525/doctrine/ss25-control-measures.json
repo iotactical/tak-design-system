@@ -45,7 +45,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Boundary: Line separating areas of responsibility between adjacent units. Established by division or corps or theater. Must be disseminated to all units operating in or near the area. Risk level: high."
+      "embeddingText": "Boundary (G*G*GLB---****X) Line separating areas of responsibility between adjacent units. Established by: division, corps, theater. Required modifiers: T. Geometry: line. Must be disseminated to all units operating in or near the area. Risk level: high."
     },
     {
       "entityCode": "140300",
@@ -89,7 +89,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Phase Line: Named line used for coordination and control of operations (e.g., PL ALPHA). Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Risk level: medium."
+      "embeddingText": "Phase Line (G*G*GLP---****X) Named line used for coordination and control of operations (e.g., PL ALPHA). Established by: battalion, brigade, division. Required modifiers: T. Geometry: line. Must be tied to identifiable terrain features where possible. Risk level: medium."
     },
     {
       "entityCode": "140100",
@@ -134,7 +134,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Forward Line of Troops (FLOT): Forward-most positions of friendly forces at a given time. Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: high."
+      "embeddingText": "Forward Line of Troops (FLOT) (G*G*GLF---****X) Forward-most positions of friendly forces at a given time. Established by: battalion, brigade, division. Required modifiers: T. Geometry: line. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: high."
     },
     {
       "entityCode": "140200",
@@ -179,7 +179,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Line of Contact: General trace of contact between opposing forces. Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: high."
+      "embeddingText": "Line of Contact (G*G*GLC---****X) General trace of contact between opposing forces. Established by: battalion, brigade, division. Required modifiers: T. Geometry: line. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: high."
     },
     {
       "entityCode": "120100",
@@ -223,7 +223,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Area of Operations: Defined geographic area for a unit to conduct military operations. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+      "embeddingText": "Area of Operations (G*G*SAO---****X) Defined geographic area for a unit to conduct military operations. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
     },
     {
       "entityCode": "120200",
@@ -267,7 +267,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Named Area of Interest: Defined area where enemy activity is expected to provide intelligence. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+      "embeddingText": "Named Area of Interest (G*G*SAN---****X) Defined area where enemy activity is expected to provide intelligence. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
     },
     {
       "entityCode": "151300",
@@ -312,7 +312,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Engagement Area: Area where the commander plans to mass fires to destroy an enemy force. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high."
+      "embeddingText": "Engagement Area (G*G*GAE---****X) Area where the commander plans to mass fires to destroy an enemy force. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high."
     },
     {
       "entityCode": "150100",
@@ -356,7 +356,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Area: General area for a tactical operation or assignment. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+      "embeddingText": "Area (G*G*GAG---****X) General area for a tactical operation or assignment. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
     },
     {
       "entityCode": "151401",
@@ -400,7 +400,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Axis of Advance: General route of advance for a maneuver element. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
+      "embeddingText": "Axis of Advance (G*G*OLAV--****X) General route of advance for a maneuver element. Established by: battalion, brigade, division. Required modifiers: T. Geometry: arrow. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
     },
     {
       "entityCode": "140602",
@@ -444,7 +444,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Direction of Attack: Arrow indicating the primary direction of an attack. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
+      "embeddingText": "Direction of Attack (G*G*OLKGM-****X) Arrow indicating the primary direction of an attack. Established by: battalion, brigade, division. Required modifiers: T. Geometry: arrow. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
     },
     {
       "entityCode": "260100",
@@ -501,7 +501,7 @@
           "maxDurationHours": 72
         }
       },
-      "embeddingText": "Fire Support Coordination Line (FSCL): Line beyond which fire support may be delivered without additional coordination. Established by division or corps or JFC. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Requires date-time group."
+      "embeddingText": "Fire Support Coordination Line (FSCL) (G*F*LCF---****X) Line beyond which fire support may be delivered without additional coordination. Established by: division, corps, JFC. Required modifiers: T, W. Geometry: line. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Must have explicit activation DTG (W modifier)."
     },
     {
       "entityCode": "260200",
@@ -558,7 +558,7 @@
           "maxDurationHours": 72
         }
       },
-      "embeddingText": "Coordinated Fire Line (CFL): Line beyond which fires may be delivered without coordination with the affected commander. Established by division or corps or JFC. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Requires date-time group."
+      "embeddingText": "Coordinated Fire Line (CFL) (G*F*LCC---****X) Line beyond which fires may be delivered without coordination with the affected commander. Established by: division, corps, JFC. Required modifiers: T, W. Geometry: line. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Must have explicit activation DTG (W modifier)."
     },
     {
       "entityCode": "141500",
@@ -602,7 +602,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Holding Line: Line behind which a unit must remain until ordered to advance. Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Risk level: medium."
+      "embeddingText": "Holding Line (G*G*SLH---****X) Line behind which a unit must remain until ordered to advance. Established by: battalion, brigade, division. Required modifiers: T. Geometry: line. Must be tied to identifiable terrain features where possible. Risk level: medium."
     },
     {
       "entityCode": "140400",
@@ -647,7 +647,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Forward Edge of Battle Area (FEBA): Forward limit of the area where ground combat takes place. Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: high."
+      "embeddingText": "Forward Edge of Battle Area (FEBA) (G*G*DLF---****X) Forward limit of the area where ground combat takes place. Established by: battalion, brigade, division. Required modifiers: T. Geometry: line. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: high."
     },
     {
       "entityCode": "140500",
@@ -691,7 +691,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Principal Direction of Fire: Direction of most effective fire from a weapon or unit. Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Risk level: medium."
+      "embeddingText": "Principal Direction of Fire (G*G*DLP---****X) Direction of most effective fire from a weapon or unit. Established by: battalion, brigade, division. Required modifiers: T. Geometry: line. Must be tied to identifiable terrain features where possible. Risk level: medium."
     },
     {
       "entityCode": "140700",
@@ -735,7 +735,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Final Coordination Line: Last coordinated fire line before assault forces reach the objective. Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Risk level: medium."
+      "embeddingText": "Final Coordination Line (G*G*OLF---****X) Last coordinated fire line before assault forces reach the objective. Established by: battalion, brigade, division. Required modifiers: T. Geometry: line. Must be tied to identifiable terrain features where possible. Risk level: medium."
     },
     {
       "entityCode": "140800",
@@ -779,7 +779,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Infiltration Lane: Lane designated for infiltration by friendly forces. Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Risk level: medium."
+      "embeddingText": "Infiltration Lane (G*G*OLI---****X) Lane designated for infiltration by friendly forces. Established by: battalion, brigade, division. Required modifiers: T. Geometry: line. Must be tied to identifiable terrain features where possible. Risk level: medium."
     },
     {
       "entityCode": "141000",
@@ -823,7 +823,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Line of Departure: Line at which the attack begins, normally the FEBA. Established by battalion or brigade or division. Must be tied to identifiable terrain features where possible. Risk level: medium."
+      "embeddingText": "Line of Departure (G*G*OLT---****X) Line at which the attack begins, normally the FEBA. Established by: battalion, brigade, division. Required modifiers: T. Geometry: line. Must be tied to identifiable terrain features where possible. Risk level: medium."
     },
     {
       "entityCode": "260300",
@@ -880,7 +880,7 @@
           "maxDurationHours": 72
         }
       },
-      "embeddingText": "No Fire Line (NFL): Line beyond which friendly fires may not be delivered. Established by division or corps or JFC. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Requires date-time group."
+      "embeddingText": "No Fire Line (NFL) (G*F*LCN---****X) Line beyond which friendly fires may not be delivered. Established by: division, corps, JFC. Required modifiers: T, W. Geometry: line. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Must have explicit activation DTG (W modifier)."
     },
     {
       "entityCode": "260500",
@@ -937,7 +937,7 @@
           "maxDurationHours": 72
         }
       },
-      "embeddingText": "Restrictive Fire Line (RFL): Line between converging friendly forces that limits fires. Established by division or corps or JFC. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Requires date-time group."
+      "embeddingText": "Restrictive Fire Line (RFL) (G*F*LCR---****X) Line between converging friendly forces that limits fires. Established by: division, corps, JFC. Required modifiers: T, W. Geometry: line. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Must be tied to identifiable terrain features where possible. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Must have explicit activation DTG (W modifier)."
     },
     {
       "entityCode": "242301",
@@ -999,7 +999,7 @@
           "maxDurationHours": 72
         }
       },
-      "embeddingText": "Kill Box (BKB): Blue kill box -- air-to-ground attack restricted; ground forces have priority. Established by division or corps or JFC. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Must not overlap with: No Fire Area. Requires date-time group."
+      "embeddingText": "Kill Box (BKB) (G*F*AKBI--****X) Blue kill box -- air-to-ground attack restricted; ground forces have priority. Established by: division, corps, JFC. Required modifiers: T, W. Geometry: area. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Must have explicit activation DTG (W modifier). Must not overlap: No Fire Area."
     },
     {
       "entityCode": "150200",
@@ -1043,7 +1043,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Assembly Area: Area where a command assembles before an operation. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+      "embeddingText": "Assembly Area (G*G*GAA---****X) Area where a command assembles before an operation. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
     },
     {
       "entityCode": "150600",
@@ -1087,7 +1087,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Drop Zone: Area designated for airdrop of personnel and equipment. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+      "embeddingText": "Drop Zone (G*G*GAD---****X) Area designated for airdrop of personnel and equipment. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
     },
     {
       "entityCode": "150800",
@@ -1131,7 +1131,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Landing Zone: Area designated for helicopter landing operations. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+      "embeddingText": "Landing Zone (G*G*GAL---****X) Area designated for helicopter landing operations. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
     },
     {
       "entityCode": "151000",
@@ -1175,7 +1175,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Fortified Area: Area with fortified defensive positions. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+      "embeddingText": "Fortified Area (G*G*GAF---****X) Area with fortified defensive positions. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
     },
     {
       "entityCode": "151404",
@@ -1219,7 +1219,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Axis of Advance -- Supporting Attack: Supporting attack axis showing direction and area of advance. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
+      "embeddingText": "Axis of Advance -- Supporting Attack (G*G*OLAGS-****X) Supporting attack axis showing direction and area of advance. Established by: battalion, brigade, division. Required modifiers: T. Geometry: arrow. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
     },
     {
       "entityCode": "151406",
@@ -1263,7 +1263,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Axis of Advance -- Feint: Feint axis of advance to deceive the enemy. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
+      "embeddingText": "Axis of Advance -- Feint (G*G*PA----****X) Feint axis of advance to deceive the enemy. Established by: battalion, brigade, division. Required modifiers: T. Geometry: arrow. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
     },
     {
       "entityCode": "340700",
@@ -1307,7 +1307,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Counterattack by Fire: Attack by a defending force to regain the initiative. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
+      "embeddingText": "Counterattack by Fire (G*T*KF----****X) Attack by a defending force to regain the initiative. Established by: battalion, brigade, division. Required modifiers: T. Geometry: arrow. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
     },
     {
       "entityCode": "151700",
@@ -1351,7 +1351,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Objective: Clearly defined and attainable goal toward which operations are directed. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+      "embeddingText": "Objective (G*G*OAO---****X) Clearly defined and attainable goal toward which operations are directed. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
     },
     {
       "entityCode": "151200",
@@ -1395,7 +1395,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Battle Position: Defensive location oriented on a likely enemy avenue of approach. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+      "embeddingText": "Battle Position (G*G*DAB---****X) Defensive location oriented on a likely enemy avenue of approach. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
     },
     {
       "entityCode": "342400",
@@ -1439,7 +1439,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Withdraw: Planned disengagement and movement to the rear. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
+      "embeddingText": "Withdraw (G*T*W-----****X) Planned disengagement and movement to the rear. Established by: battalion, brigade, division. Required modifiers: T. Geometry: arrow. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: medium."
     },
     {
       "entityCode": "270100",
@@ -1485,7 +1485,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Obstacle Belt: Band of connected obstacle zones. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+      "embeddingText": "Obstacle Belt (G*M*OGB---****X) Band of connected obstacle zones. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
     },
     {
       "entityCode": "270200",
@@ -1531,7 +1531,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Obstacle Zone: Division or corps commander obstacle planning area. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+      "embeddingText": "Obstacle Zone (G*M*OGZ---****X) Division or corps commander obstacle planning area. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
     },
     {
       "entityCode": "270300",
@@ -1577,7 +1577,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Obstacle Free Zone: Area free of obstacles to allow maneuver. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+      "embeddingText": "Obstacle Free Zone (G*M*OGF---****X) Area free of obstacles to allow maneuver. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
     },
     {
       "entityCode": "270800",
@@ -1624,7 +1624,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Mined Area: Area containing mines laid per a pattern. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high."
+      "embeddingText": "Mined Area (G*M*OFA---****X) Area containing mines laid per a pattern. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high."
     },
     {
       "entityCode": "270900",
@@ -1670,7 +1670,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Decoy Mined Area: Simulated minefield for deception. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
+      "embeddingText": "Decoy Mined Area (G*G*PM----****X) Simulated minefield for deception. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
     },
     {
       "entityCode": "271000",
@@ -1720,7 +1720,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "UXO Area: Area containing unexploded explosive ordnance. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
+      "embeddingText": "UXO Area (G*M*OU----****X) Area containing unexploded explosive ordnance. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
     },
     {
       "entityCode": "290100",
@@ -1764,7 +1764,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Obstacle Line: General obstacle line across terrain. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
+      "embeddingText": "Obstacle Line (G*M*OGL---****X) General obstacle line across terrain. Established by: battalion, brigade, division. Required modifiers: T. Geometry: line. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
     },
     {
       "entityCode": "290301",
@@ -1808,7 +1808,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Unspecified Wire: Wire obstacle of unspecified type. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
+      "embeddingText": "Unspecified Wire (G*M*OWU---****X) Wire obstacle of unspecified type. Established by: battalion, brigade, division. Required modifiers: T. Geometry: line. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
     },
     {
       "entityCode": "290304",
@@ -1852,7 +1852,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Double Apron Fence: Double apron wire fence obstacle. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
+      "embeddingText": "Double Apron Fence (G*M*OWA---****X) Double apron wire fence obstacle. Established by: battalion, brigade, division. Required modifiers: T. Geometry: line. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
     },
     {
       "entityCode": "240103",
@@ -1898,7 +1898,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Airspace Coordination Area: Area established for fire support coordination in which aircraft may operate. Established by JFACC or ACA or component commander. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Requires date-time group."
+      "embeddingText": "Airspace Coordination Area (G*F*ACAC--****X) Area established for fire support coordination in which aircraft may operate. Established by: JFACC, ACA, component commander. Required modifiers: T, W. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high."
     },
     {
       "entityCode": "170900",
@@ -1944,7 +1944,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "High-Density Airspace Control Zone: Airspace requiring enhanced coordination and control. Established by JFACC or ACA or component commander. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Requires date-time group."
+      "embeddingText": "High-Density Airspace Control Zone (G*G*AAH---****X) Airspace requiring enhanced coordination and control. Established by: JFACC, ACA, component commander. Required modifiers: T, W. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high."
     },
     {
       "entityCode": "171000",
@@ -1990,7 +1990,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Restricted Operations Zone (ROZ): Airspace restricted to specific operations. Established by JFACC or ACA or component commander. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Requires date-time group."
+      "embeddingText": "Restricted Operations Zone (ROZ) (G*G*AAR---****X) Airspace restricted to specific operations. Established by: JFACC, ACA, component commander. Required modifiers: T, W. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high."
     },
     {
       "entityCode": "171600",
@@ -2036,7 +2036,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Missile Engagement Zone (MEZ): Airspace for surface-to-air missile engagement. Established by JFACC or ACA or component commander. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Requires date-time group."
+      "embeddingText": "Missile Engagement Zone (MEZ) (G*G*AAM---****X) Airspace for surface-to-air missile engagement. Established by: JFACC, ACA, component commander. Required modifiers: T, W. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high."
     },
     {
       "entityCode": "171900",
@@ -2082,7 +2082,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Short Range Air Defense Engagement Zone: Engagement zone for short range air defense systems. Established by JFACC or ACA or component commander. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Requires date-time group."
+      "embeddingText": "Short Range Air Defense Engagement Zone (G*G*AAF---****X) Engagement zone for short range air defense systems. Established by: JFACC, ACA, component commander. Required modifiers: T, W. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high."
     },
     {
       "entityCode": "172000",
@@ -2138,7 +2138,7 @@
           "maxDurationHours": 72
         }
       },
-      "embeddingText": "Weapons Free Zone: Airspace where weapons may be fired at any target. Established by JFACC or ACA or component commander. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Requires date-time group."
+      "embeddingText": "Weapons Free Zone (G*G*AAW---****X) Airspace where weapons may be fired at any target. Established by: JFACC, ACA, component commander. Required modifiers: T, W. Geometry: area. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Must have explicit activation DTG (W modifier)."
     },
     {
       "entityCode": "120300",
@@ -2182,7 +2182,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Targeted Area of Interest (TAI): Area where targets can be acquired and engaged by friendly forces. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
+      "embeddingText": "Targeted Area of Interest (TAI) (G*G*SAT---****X) Area where targets can be acquired and engaged by friendly forces. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: medium."
     },
     {
       "entityCode": "152200",
@@ -2226,7 +2226,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Search Area/Reconnaissance Area: Area designated for reconnaissance or search operations. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
+      "embeddingText": "Search Area/Reconnaissance Area (G*G*GAS---****X) Area designated for reconnaissance or search operations. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
     },
     {
       "entityCode": "240701",
@@ -2270,7 +2270,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Linear Target: Target along a linear feature (road, ridge, etc.). Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
+      "embeddingText": "Linear Target (G*F*LT----****X) Target along a linear feature (road, ridge, etc.). Established by: battalion, brigade, division. Required modifiers: T. Geometry: line. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
     },
     {
       "entityCode": "240702",
@@ -2314,7 +2314,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Linear Smoke Target: Smoke target along a linear feature for obscuration. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
+      "embeddingText": "Linear Smoke Target (G*F*LTS---****X) Smoke target along a linear feature for obscuration. Established by: battalion, brigade, division. Required modifiers: T. Geometry: line. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
     },
     {
       "entityCode": "240703",
@@ -2370,7 +2370,7 @@
           "maxDurationHours": 72
         }
       },
-      "embeddingText": "Final Protective Fire (FPF): Immediately available preplanned barrier of fire. Established by battalion or brigade or division. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Requires date-time group."
+      "embeddingText": "Final Protective Fire (FPF) (G*F*LTF---****X) Immediately available preplanned barrier of fire. Established by: battalion, brigade, division. Required modifiers: T, W. Geometry: line. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Must have explicit activation DTG (W modifier)."
     },
     {
       "entityCode": "240801",
@@ -2414,7 +2414,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Area Target: Target area for fire support. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
+      "embeddingText": "Area Target (G*F*AT----****X) Target area for fire support. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
     },
     {
       "entityCode": "240808",
@@ -2471,7 +2471,7 @@
           "maxDurationHours": 72
         }
       },
-      "embeddingText": "Bomb Area: Area designated for aerial bombardment. Established by battalion or brigade or division. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Requires date-time group."
+      "embeddingText": "Bomb Area (G*F*ATB---****X) Area designated for aerial bombardment. Established by: battalion, brigade, division. Required modifiers: T, W. Geometry: area. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Must have explicit activation DTG (W modifier)."
     },
     {
       "entityCode": "240201",
@@ -2535,7 +2535,7 @@
           "maxDurationHours": 72
         }
       },
-      "embeddingText": "Free Fire Area: Area into which any weapon may fire without coordination. Established by division or corps or JFC. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Must not overlap with: No Fire Area, Restrictive Fire Area. Requires date-time group."
+      "embeddingText": "Free Fire Area (G*F*ACFI--****X) Area into which any weapon may fire without coordination. Established by: division, corps, JFC. Required modifiers: T, W. Geometry: area. Must be coordinated with all affected units and components. Requires explicit activation and deactivation date-time groups. Fire support coordination measure -- misplacement risks fratricide. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: critical. Must not overlap with friendly assembly areas or positions. Must have explicit activation DTG (W modifier). Must not overlap: No Fire Area, Restrictive Fire Area."
     },
     {
       "entityCode": "271800",
@@ -2585,7 +2585,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Chemical Contaminated Area: Area contaminated by chemical agents. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
+      "embeddingText": "Chemical Contaminated Area (G*M*NC----****X) Area contaminated by chemical agents. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
     },
     {
       "entityCode": "280100",
@@ -2629,7 +2629,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Abatis: Obstacle created by felling trees toward the enemy. Established by battalion or brigade or division. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
+      "embeddingText": "Abatis (G*M*OS----****X) Obstacle created by felling trees toward the enemy. Established by: battalion, brigade, division. Required modifiers: T. Geometry: line. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
     },
     {
       "entityCode": "271900",
@@ -2679,7 +2679,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Nuclear Contaminated Area: Area contaminated by nuclear/radiological materials. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
+      "embeddingText": "Nuclear Contaminated Area (G*M*NR----****X) Area contaminated by nuclear/radiological materials. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
     },
     {
       "entityCode": "272100",
@@ -2729,7 +2729,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Minimum Safe Distance Zone: Area requiring minimum safe distance from nuclear detonation. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
+      "embeddingText": "Minimum Safe Distance Zone (G*M*NM----****X) Area requiring minimum safe distance from nuclear detonation. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
     },
     {
       "entityCode": "270707",
@@ -2776,7 +2776,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Dynamic Depiction Minefield: Minefield with dynamic depiction showing current state of emplacement. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high."
+      "embeddingText": "Dynamic Depiction Minefield (G*M*OFD---****X) Minefield with dynamic depiction showing current state of emplacement. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high."
     },
     {
       "entityCode": "271700",
@@ -2826,7 +2826,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Biological Contaminated Area: Area contaminated by biological agents. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
+      "embeddingText": "Biological Contaminated Area (G*M*NB----****X) Area contaminated by biological agents. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
     },
     {
       "entityCode": "272200",
@@ -2876,7 +2876,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Radiation Dose Rate Contour Lines: Contour lines depicting radiation dose rates from a nuclear event. Established by battalion or brigade or division. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
+      "embeddingText": "Radiation Dose Rate Contour Lines (G*M*NL----****X) Contour lines depicting radiation dose rates from a nuclear event. Established by: battalion, brigade, division. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Must be disseminated to all units operating in or near the area. Risk level: high. Must include buffer zone around contaminated area. Must not overlap with active supply routes without decontamination procedures."
     },
     {
       "entityCode": "310100",
@@ -2920,7 +2920,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Detainee Holding Area: Area designated for temporary holding of detainees. Established by brigade or division or corps. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
+      "embeddingText": "Detainee Holding Area (G*S*AD----****X) Area designated for temporary holding of detainees. Established by: brigade, division, corps. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
     },
     {
       "entityCode": "310600",
@@ -2964,7 +2964,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Brigade Support Area: Area for brigade support operations and logistics. Established by brigade or division or corps. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
+      "embeddingText": "Brigade Support Area (G*S*ASB---****X) Area for brigade support operations and logistics. Established by: brigade, division, corps. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
     },
     {
       "entityCode": "310700",
@@ -3008,7 +3008,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Division Support Area: Area for division support operations and logistics. Established by brigade or division or corps. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
+      "embeddingText": "Division Support Area (G*S*ASD---****X) Area for division support operations and logistics. Established by: brigade, division, corps. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
     },
     {
       "entityCode": "330300",
@@ -3052,7 +3052,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Main Supply Route (MSR): Route designated for main supply and logistics traffic. Established by brigade or division or corps. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
+      "embeddingText": "Main Supply Route (MSR) (G*S*LRM---****X) Route designated for main supply and logistics traffic. Established by: brigade, division, corps. Required modifiers: T. Geometry: line. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
     },
     {
       "entityCode": "330400",
@@ -3096,7 +3096,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Alternate Supply Route (ASR): Alternative route for supply convoy routing. Established by brigade or division or corps. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
+      "embeddingText": "Alternate Supply Route (ASR) (G*S*LRA---****X) Alternative route for supply convoy routing. Established by: brigade, division, corps. Required modifiers: T. Geometry: line. Standard tactical graphic -- coordinate with adjacent and higher units. Risk level: low."
     },
     {
       "entityCode": "310400",
@@ -3140,7 +3140,7 @@
           "maxDurationHours": null
         }
       },
-      "embeddingText": "Refugee Holding Area: Area designated for temporary holding of refugees. Established by brigade or division or corps. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
+      "embeddingText": "Refugee Holding Area (G*S*AH----****X) Area designated for temporary holding of refugees. Established by: brigade, division, corps. Required modifiers: T. Geometry: area. Boundaries must be clearly defined and not overlap with conflicting measures. Risk level: low."
     }
   ]
 }

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MIL-STD-2525 Safety Constraint Taxonomy",
+  "description": "Controlled vocabulary for safety metadata in doctrinal definitions",
+  "definitions": {
+    "riskLevel": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "Risk classification for tactical graphics",
+      "semantics": {
+        "low": "Informational graphics with no fire coordination impact (e.g., phase lines, checkpoints)",
+        "medium": "Coordination measures requiring unit-level awareness (e.g., boundaries, assembly areas)",
+        "high": "Fire coordination measures with risk of fratricide if misused (e.g., FSCL, CFL, restricted areas)",
+        "critical": "Lethal engagement zones or fire permission areas requiring JFC-level authority (e.g., kill boxes, free fire areas)"
+      }
+    },
+    "proximityRule": {
+      "type": "object",
+      "properties": {
+        "description": { "type": "string" },
+        "referenceType": {
+          "type": "string",
+          "enum": ["friendly_position", "civilian_area", "assembly_area", "logistics_site", "airfield", "boundary", "fire_support_area"]
+        },
+        "constraint": {
+          "type": "string",
+          "enum": ["must_not_overlap", "minimum_distance", "must_not_contain", "must_be_within"]
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["meters", "kilometers", "nautical_miles"]
+        }
+      },
+      "required": ["description"]
+    },
+    "temporalRule": {
+      "type": "object",
+      "properties": {
+        "description": { "type": "string" },
+        "constraint": {
+          "type": "string",
+          "enum": ["requires_activation_dtg", "requires_deactivation_dtg", "max_duration", "periodic_review"]
+        },
+        "maxDurationHours": { "type": "number" }
+      },
+      "required": ["description"]
+    },
+    "hierarchyLevel": {
+      "type": "string",
+      "enum": [
+        "squad", "platoon", "company", "battalion", "brigade",
+        "division", "corps", "theater", "JFC", "JFACC",
+        "component_commander", "national_authority"
+      ],
+      "description": "Echelon/authority level for establishment and modification"
+    },
+    "mutualExclusion": {
+      "type": "object",
+      "properties": {
+        "graphic": { "type": "string", "description": "Entity label of conflicting graphic" },
+        "entityCode": { "type": "string", "pattern": "^\\d{6}$" },
+        "reason": { "type": "string" }
+      },
+      "required": ["graphic", "reason"]
+    },
+    "geometryType": {
+      "type": "string",
+      "enum": ["point", "line", "area", "arrow"],
+      "description": "Spatial representation type for the tactical graphic"
+    }
+  },
+  "mutualExclusionPairs": [
+    { "a": "Kill Box (Blue)", "b": "No Fire Area", "reason": "Contradictory fire permissions" },
+    { "a": "Kill Box (Purple)", "b": "No Fire Area", "reason": "Contradictory fire permissions" },
+    { "a": "Free Fire Area", "b": "No Fire Area", "reason": "Contradictory fire permissions" },
+    { "a": "Free Fire Area", "b": "Restricted Fire Area", "reason": "Conflicting fire restriction levels" },
+    { "a": "Restricted Fire Area", "b": "Free Fire Area", "reason": "Conflicting fire restriction levels" },
+    { "a": "Airspace Coordination Area", "b": "No Fire Area", "reason": "ACA permits fires; NFA prohibits" }
+  ],
+  "establishmentAuthority": {
+    "critical": ["JFC", "JFACC", "component_commander", "national_authority"],
+    "high": ["division", "corps", "theater", "JFC"],
+    "medium": ["battalion", "brigade", "division"],
+    "low": ["company", "battalion", "brigade"]
+  }
+}
