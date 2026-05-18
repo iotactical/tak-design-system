@@ -504,7 +504,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Area established for fire support coordination in which aircraft may operate.',
     category: 'area',
-    modifiers: { T: 'ACA RAPTOR', W: '120600ZMAY2026', W1: '121800ZMAY2026' },
+    modifiers: { T: 'ACA RAPTOR', W: '120600ZMAY2026', W1: '121800ZMAY2026', AM: '5000' },
   },
   {
     name: 'High-Density Airspace Control Zone',

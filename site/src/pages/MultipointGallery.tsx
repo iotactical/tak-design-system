@@ -111,8 +111,8 @@ function GalleryCard({
       example.controlPoints,
       DEFAULT_SCALE,
       DEFAULT_BBOX,
-      undefined,
-      undefined,
+      example.modifiers,
+      example.attributes,
       THUMBNAIL_PX_WIDTH,
       THUMBNAIL_PX_HEIGHT,
     ).then((result) => {
@@ -120,7 +120,7 @@ function GalleryCard({
     });
 
     return () => { cancelled = true; };
-  }, [sidc, example.controlPoints, ready, renderMultipoint]);
+  }, [sidc, example.controlPoints, example.modifiers, example.attributes, ready, renderMultipoint]);
 
   const center = useMemo(() => computeCenter(example.controlPoints), [example.controlPoints]);
 
@@ -206,15 +206,15 @@ function MobileGallery({
       selected.controlPoints,
       DEFAULT_SCALE,
       DEFAULT_BBOX,
-      undefined,
-      undefined,
+      selected.modifiers,
+      selected.attributes,
       THUMBNAIL_PX_WIDTH,
       THUMBNAIL_PX_HEIGHT,
     ).then((result) => {
       if (!cancelled) setGeojson(result);
     });
     return () => { cancelled = true; };
-  }, [sidc, selected, ready, renderMultipoint]);
+  }, [sidc, selected, selected?.modifiers, selected?.attributes, ready, renderMultipoint]);
 
   const center = useMemo(
     () => selected ? computeCenter(selected.controlPoints) : [-98.5, 39.8] as [number, number],

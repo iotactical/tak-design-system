@@ -72,6 +72,7 @@ const DEFAULT_BASEMAP = BASEMAP_STYLES[0]; // Dark -- matches site theme, good c
  *  loaded yet still look clean. */
 const THUMBNAIL_STYLE: import('maplibre-gl').StyleSpecification = {
   version: 8,
+  glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
   sources: {
     'carto-dark': {
       type: 'raster',
@@ -359,26 +360,22 @@ function addGeoJsonLayers(map: import('maplibre-gl').Map, small = false) {
     paint: { 'line-color': colorExpr, 'line-width': widthExpr },
   });
 
-  // Skip text labels on thumbnails -- they require glyphs which are blocked by
-  // GitHub Pages CSP, and tiny thumbnails don't benefit from label text anyway.
-  if (!small) {
-    map.addLayer({
-      id: LABEL_LAYER_ID,
-      type: 'symbol',
-      source: GEOJSON_SOURCE_ID,
-      layout: {
-        'text-field': ['coalesce', ['get', 'label'], ['get', 'name'], ''],
-        'text-size': 12,
-        'text-allow-overlap': true,
-        'text-ignore-placement': true,
-      },
-      paint: {
-        'text-color': colorExpr,
-        'text-halo-color': '#000000',
-        'text-halo-width': 2,
-      },
-    });
-  }
+  map.addLayer({
+    id: LABEL_LAYER_ID,
+    type: 'symbol',
+    source: GEOJSON_SOURCE_ID,
+    layout: {
+      'text-field': ['coalesce', ['get', 'label'], ['get', 'name'], ''],
+      'text-size': 12,
+      'text-allow-overlap': true,
+      'text-ignore-placement': true,
+    },
+    paint: {
+      'text-color': colorExpr,
+      'text-halo-color': '#000000',
+      'text-halo-width': 2,
+    },
+  });
 }
 
 /** Add vertex marker + transform handle layers to an interactive map */
