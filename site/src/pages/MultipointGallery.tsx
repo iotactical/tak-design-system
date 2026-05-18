@@ -1,6 +1,12 @@
 // rtmx:req REQ-XW-088
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
-import { MultipointMap } from '../components/MultipointMap';
+import {
+  MultipointMap,
+  THUMBNAIL_STYLE,
+  GEOJSON_SOURCE_ID,
+  addGeoJsonLayers,
+  loadMaplibre,
+} from '../components/MultipointMap';
 import { useMultipointWorker } from '../hooks/useMultipointWorker';
 import {
   MULTIPOINT_EXAMPLES,
@@ -62,6 +68,114 @@ const DEFAULT_SCALE = 5000000;
 const THUMBNAIL_PX_WIDTH = 400;
 const THUMBNAIL_PX_HEIGHT = 420;
 
+// ---------- Single-map thumbnail renderer ----------
+// Uses one off-screen MapLibre instance to render all gallery thumbnails
+// sequentially, capturing each as a static PNG data URL. This avoids the
+// "Too many active WebGL contexts" browser limit.
+
+type ThumbnailRequest = {
+  geojson: string;
+  center: [number, number];
+  zoom: number;
+  resolve: (dataUrl: string) => void;
+  reject: (err: Error) => void;
+};
+
+let thumbnailQueue: ThumbnailRequest[] = [];
+let thumbnailProcessing = false;
+let thumbnailMap: InstanceType<typeof import('maplibre-gl').Map> | null = null;
+let thumbnailContainer: HTMLDivElement | null = null;
+
+async function ensureThumbnailMap() {
+  if (thumbnailMap) return thumbnailMap;
+  const maplibregl = await loadMaplibre();
+  thumbnailContainer = document.createElement('div');
+  thumbnailContainer.style.width = '400px';
+  thumbnailContainer.style.height = '300px';
+  // Position off-screen but keep visible -- MapLibre won't render if the
+  // container has visibility:hidden or display:none.
+  thumbnailContainer.style.position = 'fixed';
+  thumbnailContainer.style.left = '-9999px';
+  thumbnailContainer.style.top = '-9999px';
+  thumbnailContainer.style.opacity = '0';
+  thumbnailContainer.style.pointerEvents = 'none';
+  document.body.appendChild(thumbnailContainer);
+
+  // preserveDrawingBuffer is required for canvas.toDataURL() but isn't in
+  // MapLibre's strict TS types -- cast to pass it through.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const map = new maplibregl.Map({
+    container: thumbnailContainer,
+    style: THUMBNAIL_STYLE,
+    center: [-98.5, 39.8],
+    zoom: 6,
+    interactive: false,
+    preserveDrawingBuffer: true,
+    attributionControl: false,
+  } as any);
+
+  await new Promise<void>((resolve) => map.on('load', () => resolve()));
+  addGeoJsonLayers(map, true);
+  thumbnailMap = map;
+  return map;
+}
+
+async function processThumbnailQueue() {
+  if (thumbnailProcessing) return;
+  thumbnailProcessing = true;
+
+  try {
+    const map = await ensureThumbnailMap();
+    while (thumbnailQueue.length > 0) {
+      const req = thumbnailQueue.shift()!;
+      try {
+        // Update the GeoJSON source data
+        const parsed = JSON.parse(req.geojson);
+        const source = map.getSource(GEOJSON_SOURCE_ID) as import('maplibre-gl').GeoJSONSource;
+        source.setData(parsed);
+
+        // Move the camera
+        map.jumpTo({ center: req.center, zoom: req.zoom });
+
+        // Wait for the map to finish rendering
+        await new Promise<void>((resolve) => {
+          map.once('idle', () => resolve());
+        });
+
+        const dataUrl = map.getCanvas().toDataURL('image/png');
+        req.resolve(dataUrl);
+      } catch (err) {
+        req.reject(err as Error);
+      }
+    }
+  } finally {
+    thumbnailProcessing = false;
+  }
+}
+
+function requestThumbnail(
+  geojson: string,
+  center: [number, number],
+  zoom: number,
+): Promise<string> {
+  return new Promise((resolve, reject) => {
+    thumbnailQueue.push({ geojson, center, zoom, resolve, reject });
+    processThumbnailQueue();
+  });
+}
+
+function destroyThumbnailMap() {
+  if (thumbnailMap) {
+    thumbnailMap.remove();
+    thumbnailMap = null;
+  }
+  if (thumbnailContainer) {
+    document.body.removeChild(thumbnailContainer);
+    thumbnailContainer = null;
+  }
+  thumbnailQueue = [];
+}
+
 /** Compute center from control points string */
 function computeCenter(cp: string): [number, number] {
   const pts = cp.split(' ').map((p) => {
@@ -97,29 +211,16 @@ function GalleryCard({
   version: 'B' | 'C' | 'D' | 'E';
 }) {
   const { renderMultipoint, ready, unsupported } = useMultipointWorker();
-  const [geojson, setGeojson] = useState<string | null>(null);
-  const [visible, setVisible] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null);
+  const [thumbnailUrl, setThumbnailUrl] = useState<string | null>(null);
 
   const baseSidc = (version === 'B' || version === 'C') ? example.bSidc : example.sidc;
   const sidc = withAffiliation(baseSidc, affiliation);
-
-  // IntersectionObserver: only mount the live map when the card is near the viewport.
-  // This limits concurrent WebGL contexts to the number of visible cards (~8-12).
-  useEffect(() => {
-    const el = cardRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => setVisible(entry.isIntersecting),
-      { rootMargin: '200px' },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
+  const center = useMemo(() => computeCenter(example.controlPoints), [example.controlPoints]);
 
   useEffect(() => {
     if (!ready) return;
     let cancelled = false;
+    setThumbnailUrl(null);
 
     renderMultipoint(
       sidc,
@@ -130,17 +231,21 @@ function GalleryCard({
       example.attributes,
       THUMBNAIL_PX_WIDTH,
       THUMBNAIL_PX_HEIGHT,
-    ).then((result) => {
-      if (!cancelled) setGeojson(result);
-    });
+    )
+      .then((geojson) => {
+        if (cancelled || !geojson) return;
+        return requestThumbnail(geojson, center, 6);
+      })
+      .then((dataUrl) => {
+        if (!cancelled && dataUrl) setThumbnailUrl(dataUrl);
+      })
+      .catch(() => {});
 
     return () => { cancelled = true; };
-  }, [sidc, example.controlPoints, example.modifiers, example.attributes, ready, renderMultipoint]);
-
-  const center = useMemo(() => computeCenter(example.controlPoints), [example.controlPoints]);
+  }, [sidc, example.controlPoints, example.modifiers, example.attributes, center, ready, renderMultipoint]);
 
   return (
-    <div className={styles.card} ref={cardRef} data-testid="gallery-card">
+    <div className={styles.card} data-testid="gallery-card">
       <div className={styles.cardMap}>
         {unsupported ? (
           <div style={{
@@ -151,10 +256,14 @@ function GalleryCard({
             Tactical graphics rendering requires a browser with Web Worker support.
             Try Chrome, Firefox, or Safari.
           </div>
-        ) : !geojson || !visible ? (
+        ) : !thumbnailUrl ? (
           <LoadingCenter size={20} />
         ) : (
-          <MultipointMap geojson={geojson} center={center} zoom={6} small />
+          <img
+            src={thumbnailUrl}
+            alt={example.name}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
         )}
         <span className={`${styles.badge} ${BADGE_CLASS[example.category] || ''}`}>
           {example.category}
@@ -299,6 +408,11 @@ export default function MultipointGallery() {
   const [version, setVersion] = useState<'B' | 'C' | 'D' | 'E'>('E');
   const [affiliation, setAffiliation] = useState('03');
   const isMobile = useIsMobile();
+
+  // Clean up the shared thumbnail renderer when the gallery unmounts
+  useEffect(() => {
+    return () => destroyThumbnailMap();
+  }, []);
 
   const filtered = useMemo(() => {
     if (!activeCategory) return MULTIPOINT_EXAMPLES;

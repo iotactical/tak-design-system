@@ -61,14 +61,15 @@ test.describe('Tactical Graphics - Desktop Grid', () => {
     expect(count).toBeGreaterThanOrEqual(40);
   });
 
-  test('cards contain canvas elements (maps rendered)', async ({ page }) => {
+  test('cards contain rendered thumbnails', async ({ page }) => {
     const cards = page.locator('[data-testid="gallery-card"]');
     await expect(cards.first()).toBeVisible({ timeout: 15_000 });
 
-    const canvases = page.locator('[data-testid="gallery-card"] canvas');
-    await expect(canvases.first()).toBeVisible({ timeout: 30_000 });
-    const canvasCount = await canvases.count();
-    expect(canvasCount).toBeGreaterThanOrEqual(1);
+    // Thumbnails are rendered as static <img> from a shared off-screen map
+    const thumbnails = page.locator('[data-testid="gallery-card"] img');
+    await expect(thumbnails.first()).toBeVisible({ timeout: 60_000 });
+    const thumbCount = await thumbnails.count();
+    expect(thumbCount).toBeGreaterThanOrEqual(1);
   });
 
   test('version selector switches SIDC format', async ({ page }) => {

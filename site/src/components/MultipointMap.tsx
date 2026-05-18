@@ -5,7 +5,7 @@ import styles from './MultipointMap.module.css';
 
 // Lazy-load maplibre-gl to avoid bundle bloat on other pages
 let maplibrePromise: Promise<typeof import('maplibre-gl')> | null = null;
-function loadMaplibre() {
+export function loadMaplibre() {
   if (!maplibrePromise) {
     maplibrePromise = import('maplibre-gl');
   }
@@ -70,7 +70,7 @@ const DEFAULT_BASEMAP = BASEMAP_STYLES[0]; // Dark -- matches site theme, good c
 /** Dark basemap for gallery thumbnails -- uses the same CARTO dark tiles as the
  *  main dark basemap but adds a solid background fallback so tiles that haven't
  *  loaded yet still look clean. */
-const THUMBNAIL_STYLE: import('maplibre-gl').StyleSpecification = {
+export const THUMBNAIL_STYLE: import('maplibre-gl').StyleSpecification = {
   version: 8,
   glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
   sources: {
@@ -136,7 +136,7 @@ function computeBounds(geojson: any): [[number, number], [number, number]] | nul
 }
 
 // ---------- Layer IDs ----------
-const GEOJSON_SOURCE_ID = 'multipoint-source';
+export const GEOJSON_SOURCE_ID = 'multipoint-source';
 const LINE_CASING_LAYER_ID = 'multipoint-line-casing';
 const LINE_LAYER_ID = 'multipoint-lines';
 const FILL_LAYER_ID = 'multipoint-fills';
@@ -312,7 +312,7 @@ const OPPOSITE_CORNER: Record<string, string> = {
 
 // ---------- Map layer setup ----------
 /** Add GeoJSON source + layers to a map instance */
-function addGeoJsonLayers(map: import('maplibre-gl').Map, small = false) {
+export function addGeoJsonLayers(map: import('maplibre-gl').Map, small = false) {
   if (map.getSource(GEOJSON_SOURCE_ID)) return;
 
   map.addSource(GEOJSON_SOURCE_ID, {
