@@ -1,6 +1,6 @@
 // rtmx:req REQ-XW-088
-import { useState, useEffect, useMemo, useCallback } from 'react';
-import { MultipointMap, useThumbnail } from '../components/MultipointMap';
+import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
+import { MultipointMap } from '../components/MultipointMap';
 import { useMultipointWorker } from '../hooks/useMultipointWorker';
 import {
   MULTIPOINT_EXAMPLES,
@@ -98,9 +98,24 @@ function GalleryCard({
 }) {
   const { renderMultipoint, ready, unsupported } = useMultipointWorker();
   const [geojson, setGeojson] = useState<string | null>(null);
+  const [visible, setVisible] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   const baseSidc = (version === 'B' || version === 'C') ? example.bSidc : example.sidc;
   const sidc = withAffiliation(baseSidc, affiliation);
+
+  // IntersectionObserver: only mount the live map when the card is near the viewport.
+  // This limits concurrent WebGL contexts to the number of visible cards (~8-12).
+  useEffect(() => {
+    const el = cardRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setVisible(entry.isIntersecting),
+      { rootMargin: '200px' },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (!ready) return;
@@ -124,11 +139,8 @@ function GalleryCard({
 
   const center = useMemo(() => computeCenter(example.controlPoints), [example.controlPoints]);
 
-  // Use shared offscreen renderer instead of a live map per card
-  const thumbnailUrl = useThumbnail(geojson, center);
-
   return (
-    <div className={styles.card}>
+    <div className={styles.card} ref={cardRef} data-testid="gallery-card">
       <div className={styles.cardMap}>
         {unsupported ? (
           <div style={{
@@ -139,14 +151,10 @@ function GalleryCard({
             Tactical graphics rendering requires a browser with Web Worker support.
             Try Chrome, Firefox, or Safari.
           </div>
-        ) : !thumbnailUrl ? (
+        ) : !geojson || !visible ? (
           <LoadingCenter size={20} />
         ) : (
-          <img
-            src={thumbnailUrl}
-            alt={example.name}
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          />
+          <MultipointMap geojson={geojson} center={center} zoom={6} small />
         )}
         <span className={`${styles.badge} ${BADGE_CLASS[example.category] || ''}`}>
           {example.category}

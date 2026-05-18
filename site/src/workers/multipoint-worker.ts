@@ -23,11 +23,17 @@ export interface MultipointWorkerResponse {
   error?: string;
 }
 
+let renderCounter = 0;
+
 // Signal to the host that the worker loaded successfully as a module
 (self as unknown as Worker).postMessage({ type: 'ready' });
 
 self.onmessage = async (e: MessageEvent<MultipointWorkerRequest>) => {
   const { id, symbolCode, controlPoints, scale, bbox, modifiers, attributes, format, pixelWidth, pixelHeight } = e.data;
+  // Use a simple numeric ID for the renderer call -- the full cache key (id)
+  // may contain JSON brackets/quotes from modifiers which corrupt GeoJSON output
+  // when WebRenderer embeds the ID in its result strings.
+  const renderId = String(++renderCounter);
   try {
     const milsym = await import('@armyc2.c5isr.renderer/mil-sym-ts-web');
     const { WebRenderer, C2DLookup } = milsym;
@@ -69,12 +75,12 @@ self.onmessage = async (e: MessageEvent<MultipointWorkerRequest>) => {
     // producing cleaner scallops/zigzags for small gallery thumbnails.
     const result = (pixelWidth && pixelHeight)
       ? WebRenderer.RenderSymbol2D(
-          id, '', '', renderCode, controlPoints,
+          renderId, '', '', renderCode, controlPoints,
           pixelWidth, pixelHeight, bbox,
           mods, attrs, outputFormat
         )
       : WebRenderer.RenderSymbol(
-          id, '', '', renderCode, controlPoints,
+          renderId, '', '', renderCode, controlPoints,
           'clampToGround', scale, bbox,
           mods, attrs, outputFormat
         );

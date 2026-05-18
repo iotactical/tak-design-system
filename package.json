@@ -34,6 +34,7 @@
     "test:tokens": "node --test tests/tokens/*.mjs",
     "test:build": "node --test tests/build/*.mjs",
     "test:assets": "node --test tests/assets/*.mjs",
+    "test:e2e": "npx playwright test",
     "validate": "node scripts/validate-tokens.mjs",
     "validate:registry": "node scripts/validate-registry.mjs",
     "package": "node scripts/package-release.mjs"
