@@ -54,6 +54,9 @@ function normalizeGeoJson(geojsonStr: string, symbolCode: string): string {
     if (p.strokeWidth && !p['stroke-width']) p['stroke-width'] = p.strokeWidth;
     if (p.stroke === '#000000') p.stroke = blackReplace;
     if (p.fill === '#000000') p.fill = blackReplace;
+    if (p.labelColor === '#000000') p.labelColor = blackReplace;
+    if (p.fontColor === '#000000') p.fontColor = blackReplace;
+    if (p.color === '#000000') p.color = blackReplace;
   }
 
   json.features = json.features.filter((f: { geometry?: { type?: string; coordinates?: unknown[] } }) => {
