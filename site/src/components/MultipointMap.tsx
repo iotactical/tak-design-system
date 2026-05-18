@@ -364,6 +364,7 @@ export function addGeoJsonLayers(map: import('maplibre-gl').Map, small = false) 
     source: GEOJSON_SOURCE_ID,
     layout: {
       'text-field': ['coalesce', ['get', 'label'], ['get', 'name'], ''],
+      'text-font': ['Open Sans Semibold'],
       'text-size': 12,
       'text-allow-overlap': true,
       'text-ignore-placement': true,
