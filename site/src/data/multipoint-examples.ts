@@ -56,7 +56,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     maxPoints: 0,
     description: 'Named line used for coordination and control of operations (e.g., PL ALPHA).',
     category: 'line',
-    modifiers: { T: 'PL ALPHA' },
+    modifiers: { T: 'ALPHA' },
   },
   {
     name: 'Forward Line of Troops (FLOT)',
@@ -68,7 +68,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     maxPoints: 0,
     description: 'Forward-most positions of friendly forces at a given time.',
     category: 'line',
-    modifiers: { T: 'FLOT', W: '281400ZJAN2026' },
+    modifiers: { W: '281400ZJAN2026' },
   },
   {
     name: 'Line of Contact',
@@ -80,7 +80,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     maxPoints: 0,
     description: 'General trace of contact between opposing forces.',
     category: 'line',
-    modifiers: { T: 'LC NORTH', W: '281400ZJAN2026' },
+    modifiers: { T: 'NORTH', W: '281400ZJAN2026' },
   },
   {
     name: 'Area of Operations',
@@ -92,7 +92,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     maxPoints: 0,
     description: 'Defined geographic area for a unit to conduct military operations.',
     category: 'area',
-    modifiers: { T: 'AO THUNDER' },
+    modifiers: { T: 'THUNDER' },
   },
   {
     name: 'Named Area of Interest',
@@ -116,7 +116,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     maxPoints: 0,
     description: 'Area where the commander plans to mass fires to destroy an enemy force.',
     category: 'area',
-    modifiers: { T: 'EA WOLF' },
+    modifiers: { T: 'WOLF' },
   },
   {
     name: 'Area',
@@ -128,7 +128,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     maxPoints: 0,
     description: 'General area for a tactical operation or assignment.',
     category: 'area',
-    modifiers: { T: 'AO WOLF' },
+    modifiers: { T: 'WOLF' },
   },
   {
     name: 'Axis of Advance',
@@ -140,7 +140,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     maxPoints: 0,
     description: 'General route of advance for a maneuver element.',
     category: 'arrow',
-    modifiers: { T: 'AXIS RAPTOR' },
+    modifiers: { T: 'RAPTOR' },
   },
   {
     name: 'Direction of Attack',
@@ -152,7 +152,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     maxPoints: 0,
     description: 'Arrow indicating the primary direction of an attack.',
     category: 'arrow',
-    modifiers: { T: 'DOA MAIN' },
+    modifiers: { T: 'MAIN' },
   },
   {
     name: 'Fire Support Coordination Line (FSCL)',
@@ -164,7 +164,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     maxPoints: 0,
     description: 'Line beyond which fire support may be delivered without additional coordination.',
     category: 'line',
-    modifiers: { T: 'FSCL ROMEO', W: '281400ZJAN2026', W1: '301400ZJAN2026' },
+    modifiers: { T: 'ROMEO', W: '281400ZJAN2026', W1: '301400ZJAN2026' },
   },
   {
     name: 'Coordinated Fire Line (CFL)',
@@ -176,7 +176,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     maxPoints: 0,
     description: 'Line beyond which fires may be delivered without coordination with the affected commander.',
     category: 'line',
-    modifiers: { T: 'CFL SIERRA', W: '281400ZJAN2026', W1: '301400ZJAN2026' },
+    modifiers: { T: 'SIERRA', W: '281400ZJAN2026', W1: '301400ZJAN2026' },
   },
   {
     name: 'Holding Line',
@@ -188,7 +188,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     maxPoints: 0,
     description: 'Line behind which a unit must remain until ordered to advance.',
     category: 'line',
-    modifiers: { T: 'HL EAGLE' },
+    modifiers: { T: 'EAGLE' },
   },
 
   // === FIRE SUPPORT (14xxxx, 26xxxx) ===
@@ -201,7 +201,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 2, maxPoints: 0,
     description: 'Forward limit of the area where ground combat takes place.',
     category: 'line',
-    modifiers: { T: 'FEBA' },
+    modifiers: {},
   },
   {
     name: 'Principal Direction of Fire',
@@ -223,7 +223,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 2, maxPoints: 0,
     description: 'Last coordinated fire line before assault forces reach the objective.',
     category: 'line',
-    modifiers: { T: 'FCL BRAVO' },
+    modifiers: { T: 'BRAVO' },
   },
   {
     name: 'Infiltration Lane',
@@ -234,7 +234,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 2, maxPoints: 0,
     description: 'Lane designated for infiltration by friendly forces.',
     category: 'line',
-    modifiers: { T: 'INF LANE 1' },
+    modifiers: { T: 'LANE 1' },
   },
   {
     name: 'Line of Departure',
@@ -256,7 +256,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 2, maxPoints: 0,
     description: 'Line beyond which friendly fires may not be delivered.',
     category: 'line',
-    modifiers: { T: 'NFL CHARLIE', W: '120600ZMAY2026', W1: '131800ZMAY2026' },
+    modifiers: { T: 'CHARLIE', W: '120600ZMAY2026', W1: '131800ZMAY2026' },
   },
   {
     name: 'Restrictive Fire Line (RFL)',
@@ -267,7 +267,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 2, maxPoints: 0,
     description: 'Line between converging friendly forces that limits fires.',
     category: 'line',
-    modifiers: { T: 'RFL DELTA' },
+    modifiers: { T: 'DELTA' },
   },
   {
     name: 'Kill Box (BKB)',
@@ -278,7 +278,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Blue kill box -- air-to-ground attack restricted; ground forces have priority.',
     category: 'area',
-    modifiers: { T: 'KB ALPHA', W: '120800ZMAY2026' },
+    modifiers: { T: 'ALPHA', W: '120800ZMAY2026' },
   },
 
   // === MANEUVER (15xxxx) ===
@@ -291,7 +291,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Area where a command assembles before an operation.',
     category: 'area',
-    modifiers: { T: 'AA COBRA' },
+    modifiers: { T: 'COBRA' },
   },
   {
     name: 'Drop Zone',
@@ -302,7 +302,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Area designated for airdrop of personnel and equipment.',
     category: 'area',
-    modifiers: { T: 'DZ HAWK' },
+    modifiers: { T: 'HAWK' },
   },
   {
     name: 'Landing Zone',
@@ -313,7 +313,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Area designated for helicopter landing operations.',
     category: 'area',
-    modifiers: { T: 'LZ FALCON' },
+    modifiers: { T: 'FALCON' },
   },
   {
     name: 'Fortified Area',
@@ -324,7 +324,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Area with fortified defensive positions.',
     category: 'area',
-    modifiers: { T: 'FA IRON' },
+    modifiers: { T: 'IRON' },
   },
   {
     name: 'Axis of Advance -- Supporting Attack',
@@ -335,7 +335,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Supporting attack axis showing direction and area of advance.',
     category: 'arrow',
-    modifiers: { T: 'SPT ATTACK' },
+    modifiers: { T: 'ALPHA' },
   },
   {
     name: 'Axis of Advance -- Feint',
@@ -357,7 +357,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 2, maxPoints: 0,
     description: 'Attack by a defending force to regain the initiative.',
     category: 'arrow',
-    modifiers: { T: 'CATK FIRE' },
+    modifiers: { T: 'FIRE' },
   },
   {
     name: 'Objective',
@@ -368,7 +368,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Clearly defined and attainable goal toward which operations are directed.',
     category: 'area',
-    modifiers: { T: 'OBJ LION' },
+    modifiers: { T: 'LION' },
   },
   {
     name: 'Battle Position',
@@ -390,7 +390,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Planned disengagement and movement to the rear.',
     category: 'arrow',
-    modifiers: { T: 'WDRAW SOUTH' },
+    modifiers: { T: 'SOUTH' },
   },
 
   // === OBSTACLE AND BARRIER (27xxxx, 29xxxx) ===
@@ -403,7 +403,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Band of connected obstacle zones.',
     category: 'area',
-    modifiers: { T: 'OB ALPHA' },
+    modifiers: { T: 'ALPHA' },
   },
   {
     name: 'Obstacle Zone',
@@ -425,7 +425,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Area free of obstacles to allow maneuver.',
     category: 'area',
-    modifiers: { T: 'OFZ BRAVO' },
+    modifiers: { T: 'BRAVO' },
   },
   {
     name: 'Mined Area',
@@ -436,7 +436,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Area containing mines laid per a pattern.',
     category: 'area',
-    modifiers: { T: 'MF ECHO' },
+    modifiers: { T: 'ECHO' },
   },
   {
     name: 'Decoy Mined Area',
@@ -447,7 +447,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Simulated minefield for deception.',
     category: 'area',
-    modifiers: { T: 'DUMMY MF' },
+    modifiers: { T: 'DUMMY' },
   },
   {
     name: 'UXO Area',
@@ -469,7 +469,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 2, maxPoints: 0,
     description: 'General obstacle line across terrain.',
     category: 'line',
-    modifiers: { T: 'OL FOXTROT' },
+    modifiers: { T: 'FOXTROT' },
   },
   {
     name: 'Unspecified Wire',
@@ -480,7 +480,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 2, maxPoints: 0,
     description: 'Wire obstacle of unspecified type.',
     category: 'line',
-    modifiers: { T: 'WIRE GOLF' },
+    modifiers: { T: 'GOLF' },
   },
   {
     name: 'Double Apron Fence',
@@ -504,7 +504,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Area established for fire support coordination in which aircraft may operate.',
     category: 'area',
-    modifiers: { T: 'ACA RAPTOR', W: '120600ZMAY2026', W1: '121800ZMAY2026', AM: '5000' },
+    modifiers: { T: 'RAPTOR', W: '120600ZMAY2026', W1: '121800ZMAY2026', AM: '5000' },
   },
   {
     name: 'High-Density Airspace Control Zone',
@@ -515,7 +515,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Airspace requiring enhanced coordination and control.',
     category: 'area',
-    modifiers: { T: 'HIDACZ ALPHA' },
+    modifiers: { T: 'ALPHA' },
   },
   {
     name: 'Restricted Operations Zone (ROZ)',
@@ -526,7 +526,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Airspace restricted to specific operations.',
     category: 'area',
-    modifiers: { T: 'ROZ THUNDER', W: '120800ZMAY2026', W1: '121600ZMAY2026' },
+    modifiers: { T: 'THUNDER', W: '120800ZMAY2026', W1: '121600ZMAY2026' },
   },
   {
     name: 'Missile Engagement Zone (MEZ)',
@@ -537,7 +537,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Airspace for surface-to-air missile engagement.',
     category: 'area',
-    modifiers: { T: 'MEZ PATRIOT' },
+    modifiers: { T: 'PATRIOT' },
   },
   {
     name: 'Short Range Air Defense Engagement Zone',
@@ -548,7 +548,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Engagement zone for short range air defense systems.',
     category: 'area',
-    modifiers: { T: 'SHORADEZ STORM' },
+    modifiers: { T: 'STORM' },
   },
   {
     name: 'Weapons Free Zone',
@@ -559,7 +559,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Airspace where weapons may be fired at any target.',
     category: 'area',
-    modifiers: { T: 'WFZ LIGHTNING' },
+    modifiers: { T: 'LIGHTNING' },
   },
 
   // === TARGETS (21xxxx, 24xxxx) ===
@@ -649,7 +649,7 @@ export const MULTIPOINT_EXAMPLES: MultipointExample[] = [
     minPoints: 3, maxPoints: 0,
     description: 'Area into which any weapon may fire without coordination.',
     category: 'area',
-    modifiers: { T: 'FFA GOLF' },
+    modifiers: { T: 'GOLF' },
   },
   {
     name: 'Chemical Contaminated Area',
