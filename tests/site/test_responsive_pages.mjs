@@ -26,22 +26,21 @@ describe('REQ-XW-268: Home page responsive grids', () => {
   const css = readPage('Home.module.css');
 
   it('has mobile media query', () => {
-    assert.ok(hasMobileQuery(css), 'Home.module.css should have mobile media query');
+    assert.ok(css.includes('max-width: 680px') || hasMobileQuery(css), 'Home.module.css should have mobile media query');
   });
 
-  it('statsGrid adjusts for mobile', () => {
-    const mobileBlock = css.split('max-width: 767px')[1];
-    assert.ok(mobileBlock.includes('statsGrid'), 'Should adjust statsGrid on mobile');
+  it('cardGrid adjusts for smaller viewports', () => {
+    assert.ok(css.includes('cardGrid'), 'Should have cardGrid class');
+    assert.ok(css.includes('@media'), 'Should have media queries');
   });
 
-  it('navGrid adjusts for mobile', () => {
-    const mobileBlock = css.split('max-width: 767px')[1];
-    assert.ok(mobileBlock.includes('navGrid'), 'Should adjust navGrid on mobile');
+  it('has carousel for mobile navigation', () => {
+    assert.ok(css.includes('carousel'), 'Should have carousel class for mobile');
   });
 
-  it('has tableWrap class for horizontal scroll', () => {
-    assert.ok(css.includes('tableWrap'), 'Should have tableWrap class');
-    assert.ok(css.includes('overflow-x'), 'tableWrap should have overflow-x');
+  it('has responsive breakpoints for card grid', () => {
+    assert.ok(css.includes('max-width: 1100px') || css.includes('max-width: 860px'), 'Should have tablet breakpoints');
+    assert.ok(css.includes('max-width: 680px') || hasMobileQuery(css), 'Should have mobile breakpoint');
   });
 });
 

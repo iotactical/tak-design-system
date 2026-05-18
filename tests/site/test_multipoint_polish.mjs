@@ -48,7 +48,7 @@ describe('REQ-XW-293: Explorer Control Measures interactive mode verified', () =
     assert.ok(panel.includes("join(' ')"), 'Should use space separator');
   });
 
-  it('Panel has clear points button', () => {
-    assert.ok(panel.includes('setUserPoints([])'), 'Should have clear points functionality');
+  it('Panel has clear points functionality', () => {
+    assert.ok(panel.includes('clear()') || panel.includes('clear,'), 'Should have clear points functionality');
   });
 });

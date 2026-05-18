@@ -82,7 +82,7 @@ npm run build
 npm test
 ```
 
-962 tests across 158 suites covering tokens, components, icons, symbology, site pages, and interfaces.
+1,300+ tests across 230+ suites covering tokens, components, icons, symbology, site pages, and interfaces.
 
 ### Validate tokens
 
@@ -103,7 +103,7 @@ npx rtmx verify    # Verify all requirements have passing tests
 npx rtmx status    # Show RTM coverage summary
 ```
 
-Current: 166/178 requirements verified (93.2%).
+Current: 291/291 requirements verified (100%).
 
 ## Figma Source
 

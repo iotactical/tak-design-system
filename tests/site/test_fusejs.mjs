@@ -16,11 +16,11 @@ describe('REQ-XW-120: Fuse.js fuzzy matching in GlobalSearch', () => {
     );
   });
 
-  it('GlobalSearch.tsx imports Fuse from fuse.js', () => {
+  it('GlobalSearch.tsx imports Fuse from fuse.js (static or dynamic)', () => {
     const filePath = join(ROOT, 'site', 'src', 'components', 'GlobalSearch.tsx');
     const content = readFileSync(filePath, 'utf8');
     assert.ok(
-      content.includes("import Fuse from 'fuse.js'"),
+      content.includes("import Fuse from 'fuse.js'") || content.includes("import('fuse.js')"),
       'GlobalSearch.tsx should import Fuse from fuse.js',
     );
   });
@@ -64,7 +64,7 @@ describe('REQ-XW-120: Fuse.js fuzzy matching in GlobalSearch', () => {
     const content = readFileSync(filePath, 'utf8');
 
     assert.ok(
-      content.includes('fuse.search('),
+      content.includes('fuse.search(') || content.includes('.search(debouncedQuery)'),
       'GlobalSearch.tsx should call fuse.search()',
     );
     assert.ok(

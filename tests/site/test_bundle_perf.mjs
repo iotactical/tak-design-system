@@ -2,6 +2,7 @@
 // rtmx:req REQ-SITE-019
 // rtmx:req REQ-SITE-020
 // rtmx:req REQ-SITE-021
+// rtmx:req REQ-SITE-022
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, statSync } from 'node:fs';
@@ -110,5 +111,43 @@ describe('REQ-SITE-021: Virtualized gallery grid', () => {
     assert.ok(src.includes('observer.disconnect'), 'Observer should disconnect after first intersection');
     // Cards should have data-testid for E2E tests
     assert.ok(src.includes('data-testid="gallery-card"'), 'Lazy cards should have gallery-card testid');
+  });
+});
+
+describe('REQ-SITE-022: IndexedDB thumbnail cache', () => {
+  const galleryPath = resolve(__dirname, '..', '..', 'site', 'src', 'pages', 'MultipointGallery.tsx');
+
+  it('gallery opens IndexedDB cache database', () => {
+    const src = readFileSync(galleryPath, 'utf8');
+    assert.ok(src.includes('indexedDB.open'), 'Should open IndexedDB');
+    assert.ok(src.includes('mpg-thumb-cache'), 'Should use mpg-thumb-cache database name');
+  });
+
+  it('cache key includes SIDC and modifiers', () => {
+    const src = readFileSync(galleryPath, 'utf8');
+    assert.ok(src.includes('thumbCacheKey'), 'Should have thumbCacheKey function');
+    assert.ok(src.includes('sidc') && src.includes('modifiers'), 'Cache key should incorporate SIDC and modifiers');
+  });
+
+  it('checks cache before rendering thumbnail', () => {
+    const src = readFileSync(galleryPath, 'utf8');
+    assert.ok(src.includes('getCachedThumbnail'), 'Should check cache before render');
+    // getCachedThumbnail should appear before renderMultipoint in the effect
+    const cacheCheck = src.indexOf('getCachedThumbnail(cacheKey)');
+    const render = src.indexOf('renderMultipoint(', cacheCheck);
+    assert.ok(cacheCheck < render, 'Cache check should precede render call');
+  });
+
+  it('stores rendered thumbnail in cache', () => {
+    const src = readFileSync(galleryPath, 'utf8');
+    assert.ok(src.includes('setCachedThumbnail'), 'Should store thumbnail in cache after render');
+  });
+
+  it('cache includes version key for invalidation', () => {
+    const src = readFileSync(galleryPath, 'utf8');
+    assert.ok(src.includes('CACHE_APP_VERSION'), 'Should have app version constant for cache invalidation');
+    // Version should be part of cache key
+    assert.ok(src.includes('CACHE_APP_VERSION') && src.includes('thumbCacheKey'),
+      'Cache key should include version for invalidation');
   });
 });

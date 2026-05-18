@@ -118,7 +118,15 @@ export default function SearchResults() {
           {group.items.map(({ entry, score }, idx) => (
             <div
               key={`${entry.category}-${entry.name}-${idx}`}
+              role="button"
+              tabIndex={0}
               onClick={() => navigate(entry.path)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  navigate(entry.path);
+                }
+              }}
               style={{
                 padding: '10px 12px',
                 marginBottom: 4,

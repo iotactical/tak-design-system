@@ -14,39 +14,12 @@ const homeSource = readFileSync(homePath, 'utf-8');
 const homeCss = readFileSync(homeCssPath, 'utf-8');
 
 describe('REQ-XW-083: Overview dashboard redesign', () => {
-  it('displays TAK Design System title with version', () => {
+  it('displays TAK Design System title', () => {
     assert.ok(homeSource.includes('TAK Design System'), 'should contain title');
-    assert.ok(homeSource.includes('v0.1.0'), 'should contain version');
   });
 
-  it('displays tagline "ATAK on every OS"', () => {
-    assert.ok(homeSource.includes('ATAK on every OS'), 'should contain tagline');
-  });
-
-  it('has live stats section with token count', () => {
-    assert.ok(homeSource.includes('countTokens'), 'should count tokens from JSON');
-    assert.ok(homeSource.includes('totalTokens'), 'should compute total tokens');
-  });
-
-  it('stats include Tokens, Components, Icons, Palettes, Platforms, Tests', () => {
-    const expected = ['Tokens', 'Components', 'Icons', 'Palettes', 'Platforms', 'Tests'];
-    for (const label of expected) {
-      assert.ok(
-        homeSource.includes(`label: '${label}'`),
-        `stats should include ${label}`
-      );
-    }
-  });
-
-  it('imports catalog for icon count', () => {
-    assert.ok(
-      homeSource.includes('atak-drawable-catalog.json'),
-      'should import drawable catalog'
-    );
-    assert.ok(
-      homeSource.includes('.length'),
-      'should use catalog length for icon count'
-    );
+  it('displays tagline', () => {
+    assert.ok(homeSource.includes('One TAK for every device'), 'should contain tagline');
   });
 
   it('has navigation cards linking to sections', () => {
@@ -68,16 +41,6 @@ describe('REQ-XW-083: Overview dashboard redesign', () => {
       homeSource.includes('<Link'),
       'should render Link components'
     );
-  });
-
-  it('has platform support matrix', () => {
-    const platforms = ['ATAK', 'WinTAK', 'WebTAK', 'VS Code'];
-    for (const p of platforms) {
-      assert.ok(
-        homeSource.includes(p),
-        `platform matrix should include ${p}`
-      );
-    }
   });
 
   it('has quick-start install snippet with copy button', () => {
@@ -104,10 +67,10 @@ describe('REQ-XW-083: Overview dashboard redesign', () => {
 
   it('CSS module defines expected classes', () => {
     const classes = [
-      'dashboard', 'header', 'title', 'version', 'tagline',
-      'statsGrid', 'statCard', 'statValue', 'statLabel',
-      'navGrid', 'navCard', 'navCardTitle', 'navCardDesc',
-      'matrixTable', 'quickStart', 'codeBlock', 'copyBtn',
+      'page', 'hero', 'title', 'tagline',
+      'cardGrid', 'card', 'cardTitle', 'cardDesc',
+      'installBlock', 'copyBtn',
+      'carousel', 'carouselTrack', 'carouselCard',
     ];
     for (const cls of classes) {
       assert.ok(
@@ -126,5 +89,17 @@ describe('REQ-XW-083: Overview dashboard redesign', () => {
       homeSource.includes('useEffect'),
       'should use useEffect hook'
     );
+  });
+
+  it('has mobile carousel for small viewports', () => {
+    assert.ok(homeSource.includes('carousel'), 'should have carousel');
+    assert.ok(homeSource.includes('carouselTrack'), 'should have carousel track');
+    assert.ok(homeSource.includes('handleScroll'), 'should handle scroll');
+  });
+
+  it('has platform and tactical graphics cards', () => {
+    assert.ok(homeSource.includes('Tactical Graphics'), 'should have Tactical Graphics card');
+    assert.ok(homeSource.includes('2525 Explorer'), 'should have 2525 Explorer card');
+    assert.ok(homeSource.includes('Platforms'), 'should have Platforms card');
   });
 });

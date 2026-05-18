@@ -15,7 +15,7 @@ const pkg = JSON.parse(readFileSync(resolve(root, 'packages/react/package.json')
 assert.equal(pkg.name, '@iotactical/tak-react', 'package name must be @iotactical/tak-react');
 
 // Version
-assert.equal(pkg.version, '0.1.0', 'version must be 0.1.0');
+assert.equal(pkg.version, '0.2.0', 'version must be 0.2.0');
 
 // Files field includes dist
 assert.ok(Array.isArray(pkg.files), 'files field must be an array');

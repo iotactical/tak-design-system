@@ -1,5 +1,6 @@
 // rtmx:req REQ-XW-088
 // rtmx:req REQ-SITE-021
+// rtmx:req REQ-SITE-022
 import { useState, useEffect, useMemo, useCallback, useRef, type RefObject } from 'react';
 import {
   MultipointMap,
@@ -174,6 +175,65 @@ function destroyThumbnailMap() {
   thumbnailQueue = [];
 }
 
+// ---------- IndexedDB thumbnail cache (REQ-SITE-022) ----------
+const CACHE_DB_NAME = 'mpg-thumb-cache';
+const CACHE_DB_VERSION = 1;
+const CACHE_STORE = 'thumbnails';
+const CACHE_APP_VERSION = '2';  // bump to invalidate all cached thumbnails
+
+let cacheDb: IDBDatabase | null = null;
+let cacheDbFailed = false;
+
+function openCacheDb(): Promise<IDBDatabase | null> {
+  if (cacheDb) return Promise.resolve(cacheDb);
+  if (cacheDbFailed) return Promise.resolve(null);
+  return new Promise((resolve) => {
+    try {
+      const req = indexedDB.open(CACHE_DB_NAME, CACHE_DB_VERSION);
+      req.onupgradeneeded = () => {
+        const db = req.result;
+        if (!db.objectStoreNames.contains(CACHE_STORE)) {
+          db.createObjectStore(CACHE_STORE);
+        }
+      };
+      req.onsuccess = () => { cacheDb = req.result; resolve(cacheDb); };
+      req.onerror = () => { cacheDbFailed = true; resolve(null); };
+    } catch {
+      cacheDbFailed = true;
+      resolve(null);
+    }
+  });
+}
+
+function thumbCacheKey(sidc: string, modifiers?: Record<string, string>): string {
+  const modStr = modifiers ? Object.entries(modifiers).sort().map(([k, v]) => `${k}=${v}`).join('&') : '';
+  return `${CACHE_APP_VERSION}:${sidc}:${modStr}`;
+}
+
+async function getCachedThumbnail(key: string): Promise<string | null> {
+  const db = await openCacheDb();
+  if (!db) return null;
+  return new Promise((resolve) => {
+    try {
+      const tx = db.transaction(CACHE_STORE, 'readonly');
+      const req = tx.objectStore(CACHE_STORE).get(key);
+      req.onsuccess = () => resolve(req.result ?? null);
+      req.onerror = () => resolve(null);
+    } catch {
+      resolve(null);
+    }
+  });
+}
+
+async function setCachedThumbnail(key: string, dataUrl: string): Promise<void> {
+  const db = await openCacheDb();
+  if (!db) return;
+  try {
+    const tx = db.transaction(CACHE_STORE, 'readwrite');
+    tx.objectStore(CACHE_STORE).put(dataUrl, key);
+  } catch { /* cache write is best-effort */ }
+}
+
 /** Compute center from control points string */
 function computeCenter(cp: string): [number, number] {
   const pts = cp.split(' ').map((p) => {
@@ -253,22 +313,35 @@ function GalleryCardInner({
     let cancelled = false;
     setThumbnailUrl(null);
 
-    renderMultipoint(
-      sidc,
-      example.controlPoints,
-      DEFAULT_SCALE,
-      DEFAULT_BBOX,
-      example.modifiers,
-      example.attributes,
-      THUMBNAIL_PX_WIDTH,
-      THUMBNAIL_PX_HEIGHT,
-    )
-      .then((geojson) => {
-        if (cancelled || !geojson) return;
-        return requestThumbnail(geojson);
-      })
-      .then((dataUrl) => {
-        if (!cancelled && dataUrl) setThumbnailUrl(dataUrl);
+    const cacheKey = thumbCacheKey(sidc, example.modifiers as Record<string, string> | undefined);
+
+    // Check IndexedDB cache first (REQ-SITE-022)
+    getCachedThumbnail(cacheKey)
+      .then((cached) => {
+        if (cancelled) return;
+        if (cached) { setThumbnailUrl(cached); return; }
+
+        // Cache miss -- render and store
+        return renderMultipoint(
+          sidc,
+          example.controlPoints,
+          DEFAULT_SCALE,
+          DEFAULT_BBOX,
+          example.modifiers,
+          example.attributes,
+          THUMBNAIL_PX_WIDTH,
+          THUMBNAIL_PX_HEIGHT,
+        )
+          .then((geojson) => {
+            if (cancelled || !geojson) return;
+            return requestThumbnail(geojson);
+          })
+          .then((dataUrl) => {
+            if (!cancelled && dataUrl) {
+              setThumbnailUrl(dataUrl);
+              setCachedThumbnail(cacheKey, dataUrl);
+            }
+          });
       })
       .catch(() => {});
 

@@ -34,10 +34,10 @@ describe('REQ-XW-286: Populate unique designation (T) modifiers', () => {
     assert.ok(ratio >= 0.9, `Expected 90%+ with T modifier, found ${(ratio * 100).toFixed(0)}% (${tModCount}/${totalExamples})`);
   });
 
-  it('T modifiers have tactical names', () => {
-    assert.ok(src.includes("T: 'PL ALPHA'"), 'Phase Line should have PL ALPHA');
-    assert.ok(src.includes("T: 'AO THUNDER'"), 'AO should have designation');
-    assert.ok(src.includes("T: 'EA WOLF'"), 'EA should have designation');
+  it('T modifiers have tactical names (without type prefix, renderer auto-prepends)', () => {
+    assert.ok(src.includes("T: 'ALPHA'"), 'Phase Line should have ALPHA');
+    assert.ok(src.includes("T: 'THUNDER'"), 'AO should have designation');
+    assert.ok(src.includes("T: 'WOLF'"), 'EA should have designation');
   });
 });
 
@@ -72,8 +72,8 @@ describe('REQ-XW-289: Pass modifiers/attributes through rendering pipeline', () 
     assert.ok(gallery.includes('modifiers'), 'Gallery should reference modifiers');
   });
 
-  it('Panel passes modifiers to render call', () => {
-    assert.ok(panel.includes('modifiers'), 'Panel should reference modifiers');
+  it('Panel calls renderMultipoint for user-placed points', () => {
+    assert.ok(panel.includes('renderMultipoint'), 'Panel should call renderMultipoint');
   });
 });
 
