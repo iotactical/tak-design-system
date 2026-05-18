@@ -6,6 +6,7 @@ import {
   GEOJSON_SOURCE_ID,
   addGeoJsonLayers,
   loadMaplibre,
+  computeBounds,
 } from '../components/MultipointMap';
 import { useMultipointWorker } from '../hooks/useMultipointWorker';
 import {
@@ -75,8 +76,6 @@ const THUMBNAIL_PX_HEIGHT = 420;
 
 type ThumbnailRequest = {
   geojson: string;
-  center: [number, number];
-  zoom: number;
   resolve: (dataUrl: string) => void;
   reject: (err: Error) => void;
 };
@@ -129,15 +128,17 @@ async function processThumbnailQueue() {
     while (thumbnailQueue.length > 0) {
       const req = thumbnailQueue.shift()!;
       try {
-        // Update the GeoJSON source data
         const parsed = JSON.parse(req.geojson);
         const source = map.getSource(GEOJSON_SOURCE_ID) as import('maplibre-gl').GeoJSONSource;
         source.setData(parsed);
 
-        // Move the camera
-        map.jumpTo({ center: req.center, zoom: req.zoom });
+        // Fit the camera to the GeoJSON bounding box so all graphics
+        // are fully visible within the thumbnail.
+        const bounds = computeBounds(parsed);
+        if (bounds) {
+          map.fitBounds(bounds, { padding: 40, animate: false });
+        }
 
-        // Wait for the map to finish rendering
         await new Promise<void>((resolve) => {
           map.once('idle', () => resolve());
         });
@@ -153,13 +154,9 @@ async function processThumbnailQueue() {
   }
 }
 
-function requestThumbnail(
-  geojson: string,
-  center: [number, number],
-  zoom: number,
-): Promise<string> {
+function requestThumbnail(geojson: string): Promise<string> {
   return new Promise((resolve, reject) => {
-    thumbnailQueue.push({ geojson, center, zoom, resolve, reject });
+    thumbnailQueue.push({ geojson, resolve, reject });
     processThumbnailQueue();
   });
 }
@@ -215,7 +212,6 @@ function GalleryCard({
 
   const baseSidc = (version === 'B' || version === 'C') ? example.bSidc : example.sidc;
   const sidc = withAffiliation(baseSidc, affiliation);
-  const center = useMemo(() => computeCenter(example.controlPoints), [example.controlPoints]);
 
   useEffect(() => {
     if (!ready) return;
@@ -234,7 +230,7 @@ function GalleryCard({
     )
       .then((geojson) => {
         if (cancelled || !geojson) return;
-        return requestThumbnail(geojson, center, 6);
+        return requestThumbnail(geojson);
       })
       .then((dataUrl) => {
         if (!cancelled && dataUrl) setThumbnailUrl(dataUrl);
@@ -242,7 +238,7 @@ function GalleryCard({
       .catch(() => {});
 
     return () => { cancelled = true; };
-  }, [sidc, example.controlPoints, example.modifiers, example.attributes, center, ready, renderMultipoint]);
+  }, [sidc, example.controlPoints, example.modifiers, example.attributes, ready, renderMultipoint]);
 
   return (
     <div className={styles.card} data-testid="gallery-card">

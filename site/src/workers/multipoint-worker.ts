@@ -54,12 +54,33 @@ self.onmessage = async (e: MessageEvent<MultipointWorkerRequest>) => {
       }
     }
 
+    // mil-sym-ts expects full modifier key names (e.g. 'AM_DISTANCE' not 'AM').
+    // Map short MIL-STD modifier letters to the internal property names.
+    const MOD_KEY_MAP: Record<string, string> = {
+      AM: 'AM_DISTANCE',
+      AN: 'AN_AZIMUTH',
+      T: 'T_UNIQUE_DESIGNATION_1',
+      T1: 'T1_UNIQUE_DESIGNATION_2',
+      W: 'W_DTG_1',
+      W1: 'W1_DTG_2',
+      X: 'X_ALTITUDE_DEPTH',
+      C: 'C_QUANTITY',
+      H: 'H_ADDITIONAL_INFO_1',
+      H1: 'H1_ADDITIONAL_INFO_2',
+      H2: 'H2_ADDITIONAL_INFO_3',
+      N: 'N_HOSTILE',
+      Q: 'Q_DIRECTION_OF_MOVEMENT',
+      V: 'V_EQUIP_TYPE',
+      Y: 'Y_LOCATION',
+      AP: 'AP_TARGET_NUMBER',
+      AS: 'AS_COUNTRY',
+    };
     const mods = new Map<string, string>();
     const attrs = new Map<string, string>();
 
     if (modifiers) {
       for (const [key, value] of Object.entries(modifiers)) {
-        mods.set(key, value);
+        mods.set(MOD_KEY_MAP[key] || key, value);
       }
     }
     if (attributes) {

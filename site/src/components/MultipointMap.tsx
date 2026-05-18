@@ -93,7 +93,7 @@ export const THUMBNAIL_STYLE: import('maplibre-gl').StyleSpecification = {
 
 /** Compute bounding box from parsed GeoJSON for auto-fit */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function computeBounds(geojson: any): [[number, number], [number, number]] | null {
+export function computeBounds(geojson: any): [[number, number], [number, number]] | null {
   let minLng = Infinity, minLat = Infinity, maxLng = -Infinity, maxLat = -Infinity;
   let count = 0;
 
