@@ -89,7 +89,7 @@ async function ensureThumbnailMap() {
   if (thumbnailMap) return thumbnailMap;
   const maplibregl = await loadMaplibre();
   thumbnailContainer = document.createElement('div');
-  thumbnailContainer.style.width = '400px';
+  thumbnailContainer.style.width = '520px';
   thumbnailContainer.style.height = '300px';
   // Position off-screen but keep visible -- MapLibre won't render if the
   // container has visibility:hidden or display:none.
@@ -136,7 +136,7 @@ async function processThumbnailQueue() {
         // are fully visible within the thumbnail.
         const bounds = computeBounds(parsed);
         if (bounds) {
-          map.fitBounds(bounds, { padding: 40, animate: false });
+          map.fitBounds(bounds, { padding: 80, animate: false });
         }
 
         await new Promise<void>((resolve) => {
