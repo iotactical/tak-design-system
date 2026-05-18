@@ -1,8 +1,7 @@
 // rtmx:req REQ-XW-112
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
-import Fuse from 'fuse.js';
-import { searchIndex, type SearchEntry, type SearchCategory } from '../data/searchIndex';
+import type { SearchEntry, SearchCategory } from '../data/searchIndex';
 
 /** Category display order */
 const CATEGORY_ORDER: SearchCategory[] = [
@@ -26,10 +25,19 @@ export default function SearchResults() {
       : 'Search - TAK Design System';
   }, [query]);
 
-  // Build Fuse index
-  const fuse = useMemo(
-    () =>
-      new Fuse(searchIndex, {
+  // Lazy-load search index + Fuse on mount (REQ-SITE-020)
+  type FuseType = import('fuse.js').default<SearchEntry>;
+  const fuseRef = useRef<FuseType | null>(null);
+  const [fuseReady, setFuseReady] = useState(false);
+
+  const ensureFuse = useCallback(() => {
+    if (fuseRef.current) return;
+    Promise.all([
+      import('fuse.js'),
+      import('../data/searchIndex'),
+    ]).then(([fuseModule, searchModule]) => {
+      const Fuse = fuseModule.default;
+      fuseRef.current = new Fuse(searchModule.searchIndex, {
         keys: [
           { name: 'name', weight: 3 },
           { name: 'breadcrumb', weight: 1 },
@@ -38,15 +46,18 @@ export default function SearchResults() {
         threshold: 0.4,
         includeScore: true,
         minMatchCharLength: 2,
-      }),
-    [],
-  );
+      });
+      setFuseReady(true);
+    });
+  }, []);
+
+  useEffect(() => { ensureFuse(); }, [ensureFuse]);
 
   // Full results (no cap)
   const results = useMemo(() => {
-    if (!query || query.length < 2) return [];
-    return fuse.search(query);
-  }, [query, fuse]);
+    if (!fuseReady || !fuseRef.current || !query || query.length < 2) return [];
+    return fuseRef.current.search(query);
+  }, [query, fuseReady]);
 
   // Group by category (no limit per category)
   const grouped = useMemo(() => {

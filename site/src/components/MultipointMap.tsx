@@ -320,16 +320,14 @@ export function addGeoJsonLayers(map: import('maplibre-gl').Map, small = false) 
     data: { type: 'FeatureCollection', features: [] },
   });
 
-  const rawColor: import('maplibre-gl').ExpressionSpecification =
-    ['coalesce', ['get', 'stroke'], ['get', 'strokeColor'], ['get', 'labelColor'], ['get', 'fontColor'], ['get', 'color'], '#4DA6FF'];
+  // Worker normalizeGeoJson already copies style -> properties and replaces
+  // #000000 with affiliation color, so no black-replacement case needed here.
   const colorExpr: import('maplibre-gl').ExpressionSpecification =
-    ['case', ['==', rawColor, '#000000'], '#4DA6FF', rawColor];
+    ['coalesce', ['get', 'stroke'], ['get', 'strokeColor'], ['get', 'labelColor'], ['get', 'fontColor'], ['get', 'color'], '#4DA6FF'];
   const widthExpr: import('maplibre-gl').ExpressionSpecification =
     ['coalesce', ['get', 'stroke-width'], ['get', 'strokeWidth'], 3];
-  const rawFill: import('maplibre-gl').ExpressionSpecification =
-    ['coalesce', ['get', 'fill'], ['get', 'fillColor'], '#4DA6FF'];
   const fillExpr: import('maplibre-gl').ExpressionSpecification =
-    ['case', ['==', rawFill, '#000000'], '#4DA6FF', rawFill];
+    ['coalesce', ['get', 'fill'], ['get', 'fillColor'], '#4DA6FF'];
 
   map.addLayer({
     id: FILL_LAYER_ID,

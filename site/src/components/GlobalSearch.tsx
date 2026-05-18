@@ -7,8 +7,7 @@
 // rtmx:req REQ-XW-123
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Fuse from 'fuse.js';
-import { searchIndex, type SearchEntry, type SearchCategory } from '../data/searchIndex';
+import type { SearchEntry, SearchCategory } from '../data/searchIndex';
 import styles from './GlobalSearch.module.css';
 
 /** Category display order */
@@ -134,10 +133,21 @@ export function GlobalSearch() {
 
   const debouncedQuery = useDebounce(query, 200);
 
-  // Build Fuse index once on mount
-  const fuse = useMemo(
-    () =>
-      new Fuse(searchIndex, {
+  // Lazy-load search index + Fuse on first search activation (REQ-SITE-020)
+  type FuseType = import('fuse.js').default<SearchEntry>;
+  const fuseRef = useRef<FuseType | null>(null);
+  const fuseLoadingRef = useRef<Promise<FuseType> | null>(null);
+  const [fuseReady, setFuseReady] = useState(false);
+
+  const ensureFuse = useCallback(() => {
+    if (fuseRef.current) return Promise.resolve(fuseRef.current);
+    if (fuseLoadingRef.current) return fuseLoadingRef.current;
+    fuseLoadingRef.current = Promise.all([
+      import('fuse.js'),
+      import('../data/searchIndex'),
+    ]).then(([fuseModule, searchModule]) => {
+      const Fuse = fuseModule.default;
+      const fuse = new Fuse(searchModule.searchIndex, {
         keys: [
           { name: 'name', weight: 3 },
           { name: 'breadcrumb', weight: 1 },
@@ -146,15 +156,24 @@ export function GlobalSearch() {
         threshold: 0.4,
         includeScore: true,
         minMatchCharLength: 2,
-      }),
-    [],
-  );
+      });
+      fuseRef.current = fuse;
+      setFuseReady(true);
+      return fuse;
+    });
+    return fuseLoadingRef.current;
+  }, []);
+
+  // Trigger lazy load when query becomes non-empty
+  useEffect(() => {
+    if (query.length >= 2) ensureFuse();
+  }, [query, ensureFuse]);
 
   // Fuzzy search results (sorted by score via Fuse)
   const fuseResults = useMemo(() => {
-    if (!debouncedQuery || debouncedQuery.length < 2) return [];
-    return fuse.search(debouncedQuery);
-  }, [debouncedQuery, fuse]);
+    if (!fuseReady || !fuseRef.current || !debouncedQuery || debouncedQuery.length < 2) return [];
+    return fuseRef.current.search(debouncedQuery);
+  }, [debouncedQuery, fuseReady]);
 
   // Flat SearchEntry list for counting and highlight helper
   const results = useMemo(

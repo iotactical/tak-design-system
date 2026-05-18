@@ -19,8 +19,9 @@ export interface MilSymWorkerResponse {
 self.onmessage = async (e: MessageEvent<MilSymWorkerRequest>) => {
   const { id, sidc, size, modifiers } = e.data;
   try {
-    // Dynamic import mil-sym-ts inside worker -- uses OffscreenCanvas for font metrics
-    const milsym = await import('@armyc2.c5isr.renderer/mil-sym-ts');
+    // Dynamic import mil-sym-ts-web (superset of mil-sym-ts) so both workers share
+    // one renderer package, eliminating a duplicate 6.9 MB chunk from the build.
+    const milsym = await import('@armyc2.c5isr.renderer/mil-sym-ts-web');
     const { MilStdIconRenderer, RendererSettings } = milsym;
 
     const rs = RendererSettings.getInstance();

@@ -1,5 +1,6 @@
 // rtmx:req REQ-XW-088
-import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
+// rtmx:req REQ-SITE-021
+import { useState, useEffect, useMemo, useCallback, useRef, type RefObject } from 'react';
 import {
   MultipointMap,
   THUMBNAIL_STYLE,
@@ -198,14 +199,48 @@ function useIsMobile(breakpoint = 768) {
   return isMobile;
 }
 
-function GalleryCard({
+/** Hook: returns true once the element referenced by ref scrolls into view */
+function useInView(ref: RefObject<HTMLElement | null>, rootMargin = '200px'): boolean {
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setInView(true); observer.disconnect(); } },
+      { rootMargin },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [ref, rootMargin]);
+  return inView;
+}
+
+/** Wrapper that defers GalleryCard rendering until the card scrolls into view */
+function LazyGalleryCard(props: {
+  example: MultipointExample;
+  affiliation: string;
+  version: 'B' | 'C' | 'D' | 'E';
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref);
+
+  return (
+    <div ref={ref} className={styles.card} data-testid="gallery-card" style={{ minHeight: 220 }}>
+      {inView ? <GalleryCardInner {...props} containerRef={ref} /> : null}
+    </div>
+  );
+}
+
+function GalleryCardInner({
   example,
   affiliation,
   version,
+  containerRef: _containerRef,
 }: {
   example: MultipointExample;
   affiliation: string;
   version: 'B' | 'C' | 'D' | 'E';
+  containerRef: RefObject<HTMLDivElement | null>;
 }) {
   const { renderMultipoint, ready, unsupported } = useMultipointWorker();
   const [thumbnailUrl, setThumbnailUrl] = useState<string | null>(null);
@@ -241,7 +276,7 @@ function GalleryCard({
   }, [sidc, example.controlPoints, example.modifiers, example.attributes, ready, renderMultipoint]);
 
   return (
-    <div className={styles.card} data-testid="gallery-card">
+    <>
       <div className={styles.cardMap}>
         {unsupported ? (
           <div style={{
@@ -276,7 +311,7 @@ function GalleryCard({
         </div>
         <div className={styles.cardDesc}>{example.description}</div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -495,7 +530,7 @@ export default function MultipointGallery() {
       ) : (
         <div className={styles.grid}>
           {filtered.map((example) => (
-            <GalleryCard
+            <LazyGalleryCard
               key={example.entityCode + version}
               example={example}
               affiliation={affiliation}

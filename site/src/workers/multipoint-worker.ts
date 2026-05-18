@@ -23,6 +23,50 @@ export interface MultipointWorkerResponse {
   error?: string;
 }
 
+const AFFILIATION_COLORS: Record<string, string> = {
+  '03': '#4DA6FF',  // Friendly -> blue
+  '06': '#FF4444',  // Hostile -> red
+  '04': '#00CC00',  // Neutral -> green
+  '01': '#FFFF00',  // Unknown -> yellow
+};
+
+/** Normalize WebRenderer GeoJSON for MapLibre consumption.
+ *  - Copies feature.style.stroke/fill/stroke-width into feature.properties
+ *  - Falls back camelCase properties (strokeColor, strokeWidth) to simplestyle
+ *  - Replaces #000000 with affiliation-appropriate color
+ *  - Filters out empty polygon features */
+function normalizeGeoJson(geojsonStr: string, symbolCode: string): string {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const json = JSON.parse(geojsonStr) as any;
+  if (json.type === 'error') return geojsonStr;
+
+  const si = symbolCode.length >= 4 ? symbolCode.substring(2, 4) : '03';
+  const blackReplace = AFFILIATION_COLORS[si] || '#4DA6FF';
+
+  for (const f of json.features) {
+    const p = f.properties || (f.properties = {});
+    if (f.style) {
+      if (f.style.stroke) p.stroke = f.style.stroke;
+      if (f.style['stroke-width'] != null) p['stroke-width'] = f.style['stroke-width'];
+      if (f.style.fill) p.fill = f.style.fill;
+    }
+    if (p.strokeColor && !p.stroke) p.stroke = p.strokeColor;
+    if (p.strokeWidth && !p['stroke-width']) p['stroke-width'] = p.strokeWidth;
+    if (p.stroke === '#000000') p.stroke = blackReplace;
+    if (p.fill === '#000000') p.fill = blackReplace;
+  }
+
+  json.features = json.features.filter((f: { geometry?: { type?: string; coordinates?: unknown[] } }) => {
+    const coords = f.geometry?.coordinates;
+    if (!coords) return false;
+    if (Array.isArray(coords) && coords.length === 0) return false;
+    if (f.geometry!.type === 'Polygon' && (coords as unknown[][])[0]?.length === 0) return false;
+    return true;
+  });
+
+  return JSON.stringify(json);
+}
+
 let renderCounter = 0;
 
 // Signal to the host that the worker loaded successfully as a module
@@ -117,11 +161,10 @@ self.onmessage = async (e: MessageEvent<MultipointWorkerRequest>) => {
         });
         return;
       }
-      // Pass affiliation info alongside raw GeoJSON so the component can
-      // apply color mapping without needing to parse/re-stringify in the worker
-      // (avoids Firefox strict JSON parse failures on WebRenderer output).
-      const si = renderCode.length >= 4 ? renderCode.substring(2, 4) : '03';
-      (self as unknown as Worker).postMessage({ id, geojson: result, si });
+      // Normalize: copy style -> properties, replace black with affiliation color,
+      // filter empty polygons. This makes GeoJSON directly consumable by MapLibre.
+      const normalized = normalizeGeoJson(result, renderCode);
+      (self as unknown as Worker).postMessage({ id, geojson: normalized });
     } else {
       (self as unknown as Worker).postMessage({ id, error: 'RenderSymbol returned null' });
     }
