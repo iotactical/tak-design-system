@@ -1,6 +1,6 @@
 // rtmx:req REQ-XW-088
 import { useState, useEffect, useMemo, useCallback } from 'react';
-import { MultipointMap } from '../components/MultipointMap';
+import { MultipointMap, useThumbnail } from '../components/MultipointMap';
 import { useMultipointWorker } from '../hooks/useMultipointWorker';
 import {
   MULTIPOINT_EXAMPLES,
@@ -124,6 +124,9 @@ function GalleryCard({
 
   const center = useMemo(() => computeCenter(example.controlPoints), [example.controlPoints]);
 
+  // Use shared offscreen renderer instead of a live map per card
+  const thumbnailUrl = useThumbnail(geojson, center);
+
   return (
     <div className={styles.card}>
       <div className={styles.cardMap}>
@@ -136,10 +139,14 @@ function GalleryCard({
             Tactical graphics rendering requires a browser with Web Worker support.
             Try Chrome, Firefox, or Safari.
           </div>
-        ) : !geojson ? (
+        ) : !thumbnailUrl ? (
           <LoadingCenter size={20} />
         ) : (
-          <MultipointMap geojson={geojson} center={center} zoom={6} small />
+          <img
+            src={thumbnailUrl}
+            alt={example.name}
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          />
         )}
         <span className={`${styles.badge} ${BADGE_CLASS[example.category] || ''}`}>
           {example.category}

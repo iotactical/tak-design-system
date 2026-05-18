@@ -72,7 +72,6 @@ const DEFAULT_BASEMAP = BASEMAP_STYLES[0]; // Dark -- matches site theme, good c
  *  loaded yet still look clean. */
 const THUMBNAIL_STYLE: import('maplibre-gl').StyleSpecification = {
   version: 8,
-  glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
   sources: {
     'carto-dark': {
       type: 'raster',
@@ -360,22 +359,26 @@ function addGeoJsonLayers(map: import('maplibre-gl').Map, small = false) {
     paint: { 'line-color': colorExpr, 'line-width': widthExpr },
   });
 
-  map.addLayer({
-    id: LABEL_LAYER_ID,
-    type: 'symbol',
-    source: GEOJSON_SOURCE_ID,
-    layout: {
-      'text-field': ['coalesce', ['get', 'label'], ['get', 'name'], ''],
-      'text-size': 12,
-      'text-allow-overlap': true,
-      'text-ignore-placement': true,
-    },
-    paint: {
-      'text-color': colorExpr,
-      'text-halo-color': '#000000',
-      'text-halo-width': 2,
-    },
-  });
+  // Skip text labels on thumbnails -- they require glyphs which are blocked by
+  // GitHub Pages CSP, and tiny thumbnails don't benefit from label text anyway.
+  if (!small) {
+    map.addLayer({
+      id: LABEL_LAYER_ID,
+      type: 'symbol',
+      source: GEOJSON_SOURCE_ID,
+      layout: {
+        'text-field': ['coalesce', ['get', 'label'], ['get', 'name'], ''],
+        'text-size': 12,
+        'text-allow-overlap': true,
+        'text-ignore-placement': true,
+      },
+      paint: {
+        'text-color': colorExpr,
+        'text-halo-color': '#000000',
+        'text-halo-width': 2,
+      },
+    });
+  }
 }
 
 /** Add vertex marker + transform handle layers to an interactive map */
@@ -892,6 +895,153 @@ export function MultipointMap({
       )}
     </div>
   );
+}
+
+// ---------- Shared offscreen thumbnail renderer ----------
+// Instead of creating 66+ WebGL contexts (one per gallery card), we maintain a
+// single hidden MapLibre map and sequentially render each thumbnail to a canvas
+// data URL. This keeps WebGL context count at 1 for the entire gallery.
+
+type ThumbnailJob = {
+  geojson: string;
+  center: [number, number];
+  resolve: (url: string) => void;
+  reject: (err: Error) => void;
+};
+
+let thumbnailMap: InstanceType<typeof import('maplibre-gl').Map> | null = null;
+let thumbnailReady = false;
+let thumbnailQueue: ThumbnailJob[] = [];
+let thumbnailProcessing = false;
+let thumbnailContainer: HTMLDivElement | null = null;
+
+async function ensureThumbnailMap() {
+  if (thumbnailMap && thumbnailReady) return thumbnailMap;
+
+  const maplibregl = await loadMaplibre();
+
+  if (!thumbnailContainer) {
+    thumbnailContainer = document.createElement('div');
+    thumbnailContainer.style.position = 'fixed';
+    thumbnailContainer.style.left = '-9999px';
+    thumbnailContainer.style.top = '-9999px';
+    thumbnailContainer.style.width = '300px';
+    thumbnailContainer.style.height = '200px';
+    thumbnailContainer.style.visibility = 'hidden';
+    thumbnailContainer.style.pointerEvents = 'none';
+    document.body.appendChild(thumbnailContainer);
+  }
+
+  if (thumbnailMap) {
+    await new Promise<void>((r) => {
+      if (thumbnailReady) { r(); return; }
+      thumbnailMap!.once('load', () => { thumbnailReady = true; r(); });
+    });
+    return thumbnailMap;
+  }
+
+  thumbnailMap = new maplibregl.Map({
+    container: thumbnailContainer,
+    style: THUMBNAIL_STYLE,
+    center: [-98, 38],
+    zoom: 4,
+    attributionControl: false,
+    interactive: false,
+    preserveDrawingBuffer: true,
+  });
+
+  await new Promise<void>((resolve) => {
+    thumbnailMap!.once('load', () => {
+      addGeoJsonLayers(thumbnailMap!, true);
+      thumbnailReady = true;
+      resolve();
+    });
+  });
+
+  return thumbnailMap;
+}
+
+async function processQueue() {
+  if (thumbnailProcessing) return;
+  thumbnailProcessing = true;
+
+  while (thumbnailQueue.length > 0) {
+    const job = thumbnailQueue.shift()!;
+    try {
+      const map = await ensureThumbnailMap();
+      const source = map.getSource(GEOJSON_SOURCE_ID);
+      if (!source || source.type !== 'geojson') {
+        job.reject(new Error('GeoJSON source missing'));
+        continue;
+      }
+
+      let raw = job.geojson
+        .replace(/,\s*}/g, '}')
+        .replace(/,\s*]/g, ']')
+        .replace(/:\s*NaN/g, ':0')
+        .replace(/:\s*-?Infinity/g, ':0')
+        .replace(/:\s*undefined/g, ':null');
+      const parsed = JSON.parse(raw);
+      (source as import('maplibre-gl').GeoJSONSource).setData(parsed);
+
+      const bounds = computeBounds(parsed);
+      if (bounds) {
+        const pad = Math.round(Math.min(300, 200) * 0.3);
+        map.fitBounds(bounds, { padding: pad, duration: 0, maxZoom: 12 });
+      } else {
+        map.setCenter(job.center);
+        map.setZoom(6);
+      }
+
+      // Wait for map to finish rendering
+      await new Promise<void>((r) => {
+        map.once('idle', () => r());
+        // Safety timeout in case idle never fires
+        setTimeout(r, 2000);
+      });
+
+      const canvas = map.getCanvas();
+      const dataUrl = canvas.toDataURL('image/png');
+      job.resolve(dataUrl);
+    } catch (err) {
+      job.reject(err instanceof Error ? err : new Error(String(err)));
+    }
+  }
+
+  thumbnailProcessing = false;
+}
+
+/** Queue a thumbnail render and return a data URL. Uses a single shared map. */
+export function renderThumbnail(
+  geojson: string,
+  center: [number, number],
+): Promise<string> {
+  return new Promise((resolve, reject) => {
+    thumbnailQueue.push({ geojson, center, resolve, reject });
+    processQueue();
+  });
+}
+
+/** Hook: render a GeoJSON tactical graphic to a static thumbnail image. */
+export function useThumbnail(
+  geojson: string | null,
+  center: [number, number],
+): string | null {
+  const [dataUrl, setDataUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!geojson) { setDataUrl(null); return; }
+
+    let cancelled = false;
+    renderThumbnail(geojson, center).then((url) => {
+      if (!cancelled) setDataUrl(url);
+    }).catch(() => {
+      // Silently fail -- card will show loading state
+    });
+    return () => { cancelled = true; };
+  }, [geojson, center]);
+
+  return dataUrl;
 }
 
 export default MultipointMap;
