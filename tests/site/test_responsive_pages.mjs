@@ -34,8 +34,8 @@ describe('REQ-XW-268: Home page responsive grids', () => {
     assert.ok(css.includes('@media'), 'Should have media queries');
   });
 
-  it('has carousel for mobile navigation', () => {
-    assert.ok(css.includes('carousel'), 'Should have carousel class for mobile');
+  it('has compact mobile grid for small viewports', () => {
+    assert.ok(css.includes('mobileGrid'), 'Should have mobileGrid class for mobile');
   });
 
   it('has responsive breakpoints for card grid', () => {

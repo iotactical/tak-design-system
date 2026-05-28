@@ -70,7 +70,7 @@ describe('REQ-XW-083: Overview dashboard redesign', () => {
       'page', 'hero', 'title', 'tagline',
       'cardGrid', 'card', 'cardTitle', 'cardDesc',
       'installBlock', 'copyBtn',
-      'carousel', 'carouselTrack', 'carouselCard',
+      'mobileGrid', 'mobileCard', 'mobileTitle',
     ];
     for (const cls of classes) {
       assert.ok(
@@ -91,10 +91,10 @@ describe('REQ-XW-083: Overview dashboard redesign', () => {
     );
   });
 
-  it('has mobile carousel for small viewports', () => {
-    assert.ok(homeSource.includes('carousel'), 'should have carousel');
-    assert.ok(homeSource.includes('carouselTrack'), 'should have carousel track');
-    assert.ok(homeSource.includes('handleScroll'), 'should handle scroll');
+  it('has mobile compact grid for small viewports', () => {
+    assert.ok(homeSource.includes('mobileGrid'), 'should have mobile grid');
+    assert.ok(homeSource.includes('mobileCard'), 'should have mobile card');
+    assert.ok(homeSource.includes('mobileIcon'), 'should have mobile icon');
   });
 
   it('has platform and tactical graphics cards', () => {

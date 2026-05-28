@@ -1,4 +1,7 @@
-import { useEffect, useState, useRef, useCallback } from 'react';
+// rtmx:req REQ-SITE-024
+// rtmx:req REQ-SITE-025
+// rtmx:req REQ-SITE-026
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 
@@ -6,23 +9,21 @@ const INSTALL_CMD = 'npm install @iotactical/tak-react';
 const BASE = import.meta.env.BASE_URL;
 
 const pageCards = [
-  { to: '/colors', title: 'Colors', desc: 'Design tokens and color palettes', preview: 'preview-colors.png' },
-  { to: '/typography', title: 'Typography', desc: 'Type scale, weights, and font stacks', preview: 'preview-typography.png' },
-  { to: '/spacing', title: 'Spacing', desc: 'Spacing scale and layout primitives', preview: 'preview-spacing.png' },
-  { to: '/components', title: 'Components', desc: 'React components for TAK interfaces', preview: 'preview-components.png' },
-  { to: '/icons', title: 'Icons', desc: 'TAK drawable icon catalog', preview: 'preview-icons.png' },
-  { to: '/palettes', title: 'Palettes', desc: 'MIL-STD-2525 symbols, vehicles, markers', preview: 'preview-palettes.png' },
-  { to: '/platforms', title: 'Platforms', desc: 'Android, WPF, Web, and IDE outputs', preview: 'preview-platforms.png' },
-  { to: '/interfaces', title: 'Interfaces', desc: 'Reference UI patterns and layouts', preview: 'preview-interfaces.png' },
-  { to: '/multipoint', title: 'Tactical Graphics', desc: 'Tactical control measure graphics', preview: 'preview-multipoint.png' },
-  { to: '/explorer', title: '2525 Explorer', desc: 'Browse, decode, and build SIDCs', preview: 'preview-explorer.png' },
-  { to: '/sources', title: 'Sources', desc: 'Figma, TAK Product Center, MIL-STD-2525', preview: 'preview-sources.png' },
+  { to: '/colors', title: 'Colors', desc: 'Design tokens and color palettes', preview: 'preview-colors.png', icon: 'C' },
+  { to: '/typography', title: 'Typography', desc: 'Type scale, weights, and font stacks', preview: 'preview-typography.png', icon: 'T' },
+  { to: '/spacing', title: 'Spacing', desc: 'Spacing scale and layout primitives', preview: 'preview-spacing.png', icon: 'S' },
+  { to: '/components', title: 'Components', desc: 'React components for TAK interfaces', preview: 'preview-components.png', icon: 'R' },
+  { to: '/icons', title: 'Icons', desc: 'TAK drawable icon catalog', preview: 'preview-icons.png', icon: 'I' },
+  { to: '/palettes', title: 'Palettes', desc: 'MIL-STD-2525 symbols, vehicles, markers', preview: 'preview-palettes.png', icon: 'P' },
+  { to: '/platforms', title: 'Platforms', desc: 'Android, WPF, Web, and IDE outputs', preview: 'preview-platforms.png', icon: 'X' },
+  { to: '/interfaces', title: 'Interfaces', desc: 'Reference UI patterns and layouts', preview: 'preview-interfaces.png', icon: 'IF' },
+  { to: '/multipoint', title: 'Tactical Graphics', desc: 'Tactical control measure graphics', preview: 'preview-multipoint.png', icon: 'TG' },
+  { to: '/explorer', title: '2525 Explorer', desc: 'Browse, decode, and build SIDCs', preview: 'preview-explorer.png', icon: '25' },
+  { to: '/sources', title: 'Sources', desc: 'Figma, TAK Product Center, MIL-STD-2525', preview: 'preview-sources.png', icon: 'Fg' },
 ];
 
 export default function Home() {
   const [copied, setCopied] = useState(false);
-  const [activeIdx, setActiveIdx] = useState(0);
-  const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     document.title = 'TAK Design System';
@@ -34,25 +35,6 @@ export default function Home() {
       setTimeout(() => setCopied(false), 2000);
     });
   };
-
-
-  // Track carousel scroll position for dot indicators
-  const handleScroll = useCallback(() => {
-    const track = trackRef.current;
-    if (!track) return;
-    const scrollLeft = track.scrollLeft;
-    const cardWidth = track.firstElementChild
-      ? (track.firstElementChild as HTMLElement).offsetWidth + 12
-      : 1;
-    setActiveIdx(Math.round(scrollLeft / cardWidth));
-  }, []);
-
-  const scrollTo = useCallback((idx: number) => {
-    const track = trackRef.current;
-    if (!track || !track.firstElementChild) return;
-    const cardWidth = (track.firstElementChild as HTMLElement).offsetWidth + 12;
-    track.scrollTo({ left: idx * cardWidth, behavior: 'smooth' });
-  }, []);
 
   return (
     <div className={styles.page}>
@@ -96,42 +78,17 @@ export default function Home() {
         ))}
       </div>
 
-      {/* Mobile: horizontal carousel */}
-      <div className={styles.carousel}>
-        <div
-          ref={trackRef}
-          className={styles.carouselTrack}
-          onScroll={handleScroll}
-        >
-          {pageCards.map((card) => (
-            <Link key={card.to} to={card.to} className={styles.carouselCard}>
-              <div className={styles.carouselPreview}>
-                <img
-                  src={`${BASE}previews/${card.preview}`}
-                  alt={`${card.title} preview`}
-                  loading="lazy"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none';
-                  }}
-                />
-              </div>
-              <div className={styles.carouselBody}>
-                <div className={styles.carouselTitle}>{card.title}</div>
-                <div className={styles.carouselDesc}>{card.desc}</div>
-              </div>
-            </Link>
-          ))}
-        </div>
-        <div className={styles.carouselDots}>
-          {pageCards.map((card, i) => (
-            <button
-              key={card.to}
-              className={`${styles.dot} ${i === activeIdx ? styles.dotActive : ''}`}
-              onClick={() => scrollTo(i)}
-              aria-label={`Go to ${card.title}`}
-            />
-          ))}
-        </div>
+      {/* Mobile: compact vertical 2-column grid (REQ-SITE-024) */}
+      <div className={styles.mobileGrid} data-testid="mobile-grid">
+        {pageCards.map((card) => (
+          <Link key={card.to} to={card.to} className={styles.mobileCard}>
+            <span className={styles.mobileIcon}>{card.icon}</span>
+            <div className={styles.mobileCardText}>
+              <div className={styles.mobileTitle}>{card.title}</div>
+              <div className={styles.mobileDesc}>{card.desc}</div>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );
