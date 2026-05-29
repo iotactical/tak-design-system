@@ -345,8 +345,9 @@
     -webkit-overflow-scrolling: touch;
   }
   .tab {
-    padding: 8px 10px;
+    padding: 12px 10px;
     font-size: 11px;
+    min-height: 44px;
   }
   .controlBar {
     gap: 10px;
