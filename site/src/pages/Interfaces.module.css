@@ -178,6 +178,28 @@
   padding: 24px 0;
 }
 
+/* Intent catalog table */
+.intentTableWrap {
+  -webkit-overflow-scrolling: touch;
+}
+
+.intentTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  table-layout: fixed;
+}
+
+.intentTableHead {
+  border-bottom: 1px solid #444;
+  color: #878787;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  background: #1A1A1A;
+  z-index: 1;
+}
+
 @media (max-width: 767px) {
   .container {
     max-width: 100%;
@@ -199,5 +221,22 @@
   }
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  /*
+   * REQ-SITE-031: Three columns of monospace identifiers cannot share a phone
+   * viewport legibly, so the table keeps a usable minimum width and scrolls
+   * inside its wrapper instead of squeezing the action and class columns.
+   */
+  .intentTableWrap {
+    overflow-x: auto;
+  }
+  .intentTable {
+    min-width: 560px;
+  }
+  .intentTableHead {
+    /* A scroll container on the wrapper would pin the header to the wrapper
+       rather than the viewport, so it stops sticking on mobile. */
+    position: static;
   }
 }

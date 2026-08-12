@@ -8,6 +8,9 @@
   "main": "./dist/tak-react.cjs",
   "module": "./dist/tak-react.js",
   "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "import": "./dist/tak-react.js",
@@ -29,14 +32,20 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/iotactical/tak-design-system.git"
+    "url": "git+https://github.com/iotactical/tak-design-system.git"
   },
-  "keywords": ["tak", "atak", "design-system", "react", "military"],
+  "keywords": [
+    "tak",
+    "atak",
+    "design-system",
+    "react",
+    "military"
+  ],
   "scripts": {
     "build": "vite build",
     "dev": "vite build --watch",
     "prepublishOnly": "npm run build && npm run copy-data",
-    "copy-data": "mkdir -p dist/data/doctrine dist/schemas && cp ../../data/tak-icon-registry.json ../../data/tak-radial-action-icons.json ../../data/index.json ../../data/icons.index.json ../../data/radial.index.json dist/data/ && cp ../../data/mil-std-2525/doctrine/*.json dist/data/doctrine/ && cp ../../schemas/tak-icon-registry.schema.json ../../schemas/tak-radial-action-icons.schema.json ../../schemas/mil-std-2525-doctrine.schema.json dist/schemas/"
+    "copy-data": "cp ../../LICENSE . && mkdir -p dist/data/doctrine dist/schemas && cp ../../data/tak-icon-registry.json ../../data/tak-radial-action-icons.json ../../data/index.json ../../data/icons.index.json ../../data/radial.index.json dist/data/ && cp ../../data/mil-std-2525/doctrine/*.json dist/data/doctrine/ && cp ../../schemas/tak-icon-registry.schema.json ../../schemas/tak-radial-action-icons.schema.json ../../schemas/mil-std-2525-doctrine.schema.json dist/schemas/"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",

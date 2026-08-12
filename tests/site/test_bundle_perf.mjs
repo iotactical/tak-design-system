@@ -93,24 +93,30 @@ describe('REQ-SITE-020: Lazy-load search index', () => {
 });
 
 describe('REQ-SITE-021: Virtualized gallery grid', () => {
+  const gallerySrc = readFileSync(
+    resolve(__dirname, '..', '..', 'site', 'src', 'pages', 'MultipointGallery.tsx'),
+    'utf8',
+  );
+  // Shared with the Icons grid since REQ-SITE-029.
+  const hookSrc = readFileSync(
+    resolve(__dirname, '..', '..', 'site', 'src', 'hooks', 'useInView.ts'),
+    'utf8',
+  );
+
   it('gallery uses IntersectionObserver for lazy card rendering', () => {
-    const src = readFileSync(
-      resolve(__dirname, '..', '..', 'site', 'src', 'pages', 'MultipointGallery.tsx'),
-      'utf8',
-    );
-    assert.ok(src.includes('IntersectionObserver'), 'Gallery should use IntersectionObserver');
-    assert.ok(src.includes('LazyGalleryCard'), 'Gallery grid should use LazyGalleryCard wrapper');
+    assert.ok(hookSrc.includes('IntersectionObserver'), 'useInView should use IntersectionObserver');
+    assert.ok(gallerySrc.includes('useInView'), 'Gallery should drive laziness from useInView');
+    assert.ok(gallerySrc.includes('LazyGalleryCard'), 'Gallery grid should use LazyGalleryCard wrapper');
   });
 
   it('lazy wrapper defers rendering until in view', () => {
-    const src = readFileSync(
-      resolve(__dirname, '..', '..', 'site', 'src', 'pages', 'MultipointGallery.tsx'),
-      'utf8',
+    assert.ok(hookSrc.includes('observer.disconnect'), 'Observer should disconnect after first intersection');
+    assert.ok(
+      gallerySrc.includes('once: true'),
+      'Gallery cards should latch on first view because worker rendering is expensive',
     );
-    // The useInView hook should disconnect after first intersection
-    assert.ok(src.includes('observer.disconnect'), 'Observer should disconnect after first intersection');
     // Cards should have data-testid for E2E tests
-    assert.ok(src.includes('data-testid="gallery-card"'), 'Lazy cards should have gallery-card testid');
+    assert.ok(gallerySrc.includes('data-testid="gallery-card"'), 'Lazy cards should have gallery-card testid');
   });
 });
 

@@ -1,0 +1,126 @@
+/* rtmx:req REQ-SITE-030 */
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #FFE35E;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #878787;
+  margin-bottom: 32px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.sample {
+  margin-bottom: 20px;
+}
+
+.sampleMeta {
+  font-size: 12px;
+  color: #878787;
+  font-family: 'Roboto Mono', monospace;
+  margin-bottom: 4px;
+}
+
+.sampleText {
+  font-size: 24px;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 400px;
+}
+
+.table th {
+  padding: 8px 12px;
+  color: #878787;
+  font-weight: 500;
+  text-align: left;
+  border-bottom: 1px solid #2E2E2E;
+}
+
+.table td {
+  padding: 10px 12px;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #2E2E2E;
+}
+
+.tokenCell,
+.valueCell {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 13px;
+}
+
+.tokenCell {
+  color: #FFE35E;
+}
+
+.weightGrid {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.weightMeta {
+  font-size: 12px;
+  color: #878787;
+  font-family: 'Roboto Mono', monospace;
+  margin-bottom: 4px;
+}
+
+.weightSample {
+  font-size: 24px;
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 24px;
+  }
+  .sampleText {
+    font-size: 20px;
+  }
+}
+
+/*
+ * REQ-SITE-030: The 400px minimum width is what forces the sideways scroll; the
+ * columns themselves hold short token names, pixel values, and a wrappable
+ * preview. Releasing the minimum and trimming padding lets the table reflow
+ * within a 360px viewport while staying a real table for assistive technology.
+ */
+@media (max-width: 479px) {
+  .tableWrap {
+    overflow-x: visible;
+  }
+
+  .table {
+    min-width: 0;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px 6px;
+  }
+
+  .previewCell {
+    overflow-wrap: anywhere;
+  }
+}

@@ -5,6 +5,8 @@ platforms/atak/compose/generated/
 platforms/web/generated/
 platforms/vscode/generated/
 packages/react/dist/
+packages/tokens/w3c/
+packages/*/LICENSE
 .DS_Store
 data/mil-std-2525/raw/
 .claude/worktrees/

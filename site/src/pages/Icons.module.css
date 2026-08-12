@@ -371,3 +371,27 @@
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
+
+/*
+ * REQ-SITE-032: On a phone the inspector's 24px overlay inset plus 20px panel
+ * padding leaves too little room for state rows, so both tighten to 12px and
+ * the panel is allowed to use more of the viewport height.
+ */
+@media (max-width: 479px) {
+  .inspectorOverlay {
+    padding: 12px;
+  }
+  .inspectorPanel {
+    max-height: 90vh;
+  }
+  .inspectorHeader {
+    padding: 12px;
+  }
+  .inspectorBody {
+    padding: 12px;
+  }
+  .inspectorClose {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}

@@ -29,6 +29,21 @@ Add steps to the release workflow in `.github/workflows/build-and-release.yml` t
 - Consider uploading the `.vsix` file as a GitHub Release artifact in addition to publishing to the Marketplace, for users who install extensions manually.
 - The `vsce package` step can be run in CI even without publishing (e.g., on PRs) to catch packaging errors early.
 
+## As Implemented
+
+- `npx @vscode/vsce` is used instead of a global install
+- The extension lives in `vscode-extension/`; the earlier workflow gated on
+  `platforms/vscode/package.json`, a path that holds only generated theme JSON and
+  never a manifest, so the publish step silently skipped every release
+- The generated `platforms/vscode/generated/tak-dark-theme.json` is copied over the
+  committed theme before packaging so the published extension cannot drift from the
+  tokens
+- `vsce package` writes a `.vsix`, `vsce publish --packagePath` publishes that exact
+  file, and it is attached to the GitHub release for manual installation
+- A version already on the marketplace is skipped with an explanation; any other
+  failure fails the job
+- When `VSCE_PAT` is absent the step is skipped and the job annotates a warning
+
 ## Effort Estimate
 
 0.25 weeks

@@ -335,6 +335,11 @@
   font-size: 14px;
 }
 
+/* rtmx:req REQ-SITE-033 */
+.skittlesPanel {
+  --skittle-label-w: 100px;
+}
+
 @media (max-width: 767px) {
   .title {
     font-size: 24px;
@@ -394,5 +399,16 @@
   }
   .markerGrid {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
+
+/*
+ * REQ-SITE-033: A 100px role label consumes a third of a phone viewport before
+ * the first circle, so it halves below 480px. Circle columns keep their 34px
+ * pitch, so the matrix stays aligned and only the label column narrows.
+ */
+@media (max-width: 479px) {
+  .skittlesPanel {
+    --skittle-label-w: 50px;
   }
 }

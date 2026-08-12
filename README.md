@@ -38,10 +38,11 @@ Browse the design system at [iotactical.github.io/tak-design-system](https://iot
 
 ```
 tokens/w3c/
-  core.json         Primitive values (colors, spacing, typography)
+  core.json          Primitive values (colors, spacing, typography)
   semantic.json      Intent-based aliases (affiliation, status, surfaces)
   component.json     Component-specific tokens (buttons, toolbar, markers)
-  responsive.json    Breakpoints, touch targets, responsive spacing
+  atak.json          ATAK platform dimensions, fonts, and overrides
+  wintak.json        WinTAK platform dimensions and overrides
 ```
 
 Tokens follow the [W3C Design Tokens](https://tr.designtokens.org/format/) specification and are transformed by [Style Dictionary v4](https://amzn.github.io/style-dictionary/) into platform-specific outputs.
@@ -66,6 +67,24 @@ The design system encodes MIL-STD-2525 / APP-6 affiliation colors:
 - **Unknown** (yellow) -- `affiliation.unknown`
 
 Map overlay tokens cover danger zones, safe zones, route lines, range rings, and grid overlays.
+
+## Packages
+
+| Package | Contents |
+|---------|----------|
+| [`@iotactical/tak-react`](packages/react) | 28 React components, theme provider, plus icon registry, radial menu, doctrine, and schema data under `./data/*` and `./schemas/*` subpaths |
+| [`@iotactical/tak-tokens`](packages/tokens) | W3C design tokens as JSON, one export per token set |
+
+```bash
+npm install @iotactical/tak-react
+```
+
+Data subpaths are plain JSON and do not pull React into scope:
+
+```js
+import icons from '@iotactical/tak-react/data/icons';
+import coreTokens from '@iotactical/tak-tokens/core';
+```
 
 ## Usage
 
@@ -103,7 +122,33 @@ npx rtmx verify    # Verify all requirements have passing tests
 npx rtmx status    # Show RTM coverage summary
 ```
 
-Current: 291/291 requirements verified (100%).
+Current: 302/302 requirements verified (100%).
+
+## Releasing
+
+Pushing to `main` builds, tests, cuts a GitHub release from the version in
+`package.json`, and publishes. Bumping the version is what triggers a new
+release; unbumped pushes skip the release and publish steps rather than failing.
+
+Publishing requires two repository secrets. Without them the release job emits a
+warning and skips the corresponding step:
+
+| Secret | Purpose |
+|--------|---------|
+| `NPM_TOKEN` | Publish rights to the `@iotactical` npm scope |
+| `VSCE_PAT` | Publish rights to the `iotactical` VS Code marketplace publisher |
+
+To publish by hand:
+
+```bash
+npm ci
+npm run build && npm run build:registry && npm run build:react
+cd packages/react && npm pack --dry-run   # inspect the tarball first
+NODE_AUTH_TOKEN=<token> ./scripts/publish-npm.sh
+```
+
+`scripts/publish-npm.sh` skips any package whose version is already on the
+registry and fails on any other npm error.
 
 ## Figma Source
 

@@ -118,3 +118,19 @@
     min-height: 44px;
   }
 }
+
+/*
+ * REQ-SITE-034: Floating the copy button over the top-right of the code covers
+ * the first line once the viewport is narrow, so below 480px it leaves the
+ * overlay and becomes a full-width bar above the code.
+ */
+@media (max-width: 479px) {
+  .copyButton {
+    position: static;
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    border-width: 0 0 1px 0;
+    border-radius: 8px 8px 0 0;
+  }
+}

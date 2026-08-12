@@ -11,6 +11,7 @@ import {
   computeBounds,
 } from '../components/MultipointMap';
 import { useMultipointWorker } from '../hooks/useMultipointWorker';
+import { useInView } from '../hooks/useInView';
 import {
   MULTIPOINT_EXAMPLES,
   MULTIPOINT_CATEGORIES,
@@ -259,22 +260,6 @@ function useIsMobile(breakpoint = 768) {
   return isMobile;
 }
 
-/** Hook: returns true once the element referenced by ref scrolls into view */
-function useInView(ref: RefObject<HTMLElement | null>, rootMargin = '200px'): boolean {
-  const [inView, setInView] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setInView(true); observer.disconnect(); } },
-      { rootMargin },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [ref, rootMargin]);
-  return inView;
-}
-
 /** Wrapper that defers GalleryCard rendering until the card scrolls into view */
 function LazyGalleryCard(props: {
   example: MultipointExample;
@@ -282,7 +267,9 @@ function LazyGalleryCard(props: {
   version: 'B' | 'C' | 'D' | 'E';
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref);
+  // Symbol rendering goes through a Web Worker and is expensive to repeat, so
+  // cards stay mounted once seen.
+  const inView = useInView(ref, { once: true });
 
   return (
     <div ref={ref} className={styles.card} data-testid="gallery-card" style={{ minHeight: 220 }}>

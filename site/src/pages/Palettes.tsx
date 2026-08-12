@@ -626,7 +626,9 @@ const AFFILIATION_COLORS: { label: string; hex: string }[] = [
 ];
 
 const COL_W = 34; // column width for consistent alignment
-const LABEL_W = 100; // label width
+// REQ-SITE-033: Every label column reads the same custom property so the circle
+// columns stay aligned when Palettes.module.css narrows it on small screens.
+const LABEL_W = 'var(--skittle-label-w)';
 
 const skittleCircleBase: React.CSSProperties = {
   width: 26,
@@ -647,11 +649,12 @@ const scrollRow: React.CSSProperties = {
 };
 
 // rtmx:req REQ-XW-081
+// rtmx:req REQ-SITE-033
 function SkittlesPanel() {
   const stalenessColors = TEAM_COLORS.slice(0, 5);
 
   return (
-    <div>
+    <div className={styles.skittlesPanel}>
       <div className={styles.paletteHeader}>
         <div className={styles.paletteName}>Skittles</div>
         <div className={styles.paletteCount}>Team member circles -- spot map markers</div>
@@ -662,7 +665,7 @@ function SkittlesPanel() {
         <div className={styles.groupName}>Team Colors</div>
         <div className={styles.groupCount}>15 colors</div>
         <div style={scrollRow}>
-        <div style={{ display: 'flex', alignItems: 'flex-end', marginBottom: 6, height: 70, minWidth: LABEL_W + COL_W * TEAM_COLORS.length }}>
+        <div style={{ display: 'flex', alignItems: 'flex-end', marginBottom: 6, height: 70, minWidth: `calc(${LABEL_W} + ${COL_W * TEAM_COLORS.length}px)` }}>
           <span style={{ width: LABEL_W, flexShrink: 0 }} />
           {TEAM_COLORS.map((tc) => (
             <div key={tc.name} style={{ width: COL_W, flexShrink: 0, display: 'flex', justifyContent: 'center', alignItems: 'flex-end', height: '100%' }}>

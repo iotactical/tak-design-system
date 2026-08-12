@@ -9,6 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..', '..');
 const INTERFACES = resolve(ROOT, 'site', 'src', 'pages', 'Interfaces.tsx');
 const source = readFileSync(INTERFACES, 'utf8');
+const css = readFileSync(resolve(ROOT, 'site', 'src', 'pages', 'Interfaces.module.css'), 'utf8');
 
 describe('REQ-XW-171: Intents unified table', () => {
   it('Interfaces.tsx uses a table layout for intents (not cards)', () => {
@@ -27,17 +28,16 @@ describe('REQ-XW-171: Intents unified table', () => {
   });
 
   it('table header is sticky', () => {
+    // Styling moved to the CSS module with REQ-SITE-031 so the mobile
+    // breakpoint can release sticky positioning inside the scroll wrapper.
     assert.ok(
-      source.includes("position: 'sticky'"),
-      'Table header row must have sticky positioning'
+      source.includes('className={styles.intentTableHead}'),
+      'Table header row must use the intentTableHead class'
     );
-    assert.ok(
-      source.includes('top: 0'),
-      'Sticky header must be pinned to top'
-    );
-    assert.ok(
-      source.includes('zIndex: 1'),
-      'Sticky header must have z-index for layering'
+    assert.match(
+      css,
+      /\.intentTableHead \{[^}]*position: sticky;[^}]*top: 0;[^}]*z-index: 1;/s,
+      'Header must be sticky, pinned to top, and layered above rows'
     );
   });
 

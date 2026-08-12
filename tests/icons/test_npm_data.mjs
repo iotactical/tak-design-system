@@ -6,37 +6,41 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..', '..');
-const PKG_DIR = resolve(ROOT, 'packages', 'data');
 
 // rtmx:req REQ-XW-257
-describe('REQ-XW-257: @iotactical/tak-data npm package', () => {
-  it('packages/data/package.json exists', () => {
-    assert.ok(existsSync(resolve(PKG_DIR, 'package.json')));
+describe('REQ-XW-257: icon registry data distributed via @iotactical/tak-react', () => {
+  const pkg = JSON.parse(readFileSync(resolve(ROOT, 'packages', 'react', 'package.json'), 'utf8'));
+
+  it('packages/data/ no longer exists', () => {
+    assert.ok(
+      !existsSync(resolve(ROOT, 'packages', 'data', 'package.json')),
+      'packages/data was consolidated into packages/react (REQ-PKG-005) and must not be publishable'
+    );
   });
 
-  it('package.json has correct name and version', () => {
-    const pkg = JSON.parse(readFileSync(resolve(PKG_DIR, 'package.json'), 'utf8'));
-    assert.equal(pkg.name, '@iotactical/tak-data');
-    assert.ok(pkg.version, 'Missing version');
+  it('registry and index data are reachable via subpath exports', () => {
+    for (const subpath of ['./data/icons', './data/icons/index', './data/radial', './data/radial/index']) {
+      assert.ok(pkg.exports[subpath], `Missing ${subpath} export`);
+    }
   });
 
-  it('package.json has exports for registry and indexes', () => {
-    const pkg = JSON.parse(readFileSync(resolve(PKG_DIR, 'package.json'), 'utf8'));
-    assert.ok(pkg.exports['.'], 'Missing root export');
-    assert.ok(pkg.exports['./icons'], 'Missing icons export');
-    assert.ok(pkg.exports['./icons/index'], 'Missing icons/index export');
-    assert.ok(pkg.exports['./radial'], 'Missing radial export');
-    assert.ok(pkg.exports['./radial/index'], 'Missing radial/index export');
+  it('exported data files exist in the source tree', () => {
+    const sources = [
+      'data/tak-icon-registry.json',
+      'data/icons.index.json',
+      'data/tak-radial-action-icons.json',
+      'data/radial.index.json'
+    ];
+    for (const source of sources) {
+      assert.ok(existsSync(resolve(ROOT, source)), `Missing source data file ${source}`);
+    }
   });
 
-  it('package.json has files field including registry and schemas', () => {
-    const pkg = JSON.parse(readFileSync(resolve(PKG_DIR, 'package.json'), 'utf8'));
-    assert.ok(pkg.files.includes('registry/'), 'Missing registry/ in files');
-    assert.ok(pkg.files.includes('schemas/'), 'Missing schemas/ in files');
-  });
-
-  it('package.json has prepublish script', () => {
-    const pkg = JSON.parse(readFileSync(resolve(PKG_DIR, 'package.json'), 'utf8'));
-    assert.ok(pkg.scripts?.prepublish, 'Missing prepublish script');
+  it('copy-data stages every exported data and schema file', () => {
+    const copyData = pkg.scripts['copy-data'];
+    assert.ok(copyData, 'copy-data script must exist');
+    for (const source of ['tak-icon-registry.json', 'icons.index.json', 'tak-radial-action-icons.json', 'radial.index.json']) {
+      assert.ok(copyData.includes(source), `copy-data must stage ${source}`);
+    }
   });
 });

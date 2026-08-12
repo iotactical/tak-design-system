@@ -30,6 +30,20 @@ The release workflow in `.github/workflows/build-and-release.yml` currently buil
 - The `--access public` flag is required for scoped packages (`@org/pkg`) that should be publicly accessible.
 - Publish steps should be ordered: tokens first, then react (in case react depends on tokens).
 
+## As Implemented
+
+- `actions/setup-node` with `registry-url: https://registry.npmjs.org` writes the
+  `.npmrc`; no explicit `.npmrc` step is needed
+- The secret is named `NPM_TOKEN` and is exposed to npm as `NODE_AUTH_TOKEN`
+- `scripts/publish-npm.sh` publishes `packages/tokens` then `packages/react`, adding
+  `--provenance` when an OIDC token is present
+- Versions already on the registry are skipped, per the idempotency note above, so
+  a push to `main` without a version bump is a no-op instead of a failure. Every
+  other npm error fails the job: the script runs under `set -euo pipefail` and no
+  publish is followed by a `||` fallback
+- When `NPM_TOKEN` is absent the step is skipped and the job annotates a warning,
+  rather than reporting a successful release that published nothing
+
 ## Effort Estimate
 
 0.5 weeks

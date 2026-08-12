@@ -2,9 +2,12 @@
 // rtmx:req REQ-SITE-010
 // rtmx:req REQ-SITE-011
 // rtmx:req REQ-SITE-012
+// rtmx:req REQ-SITE-029
+// rtmx:req REQ-SITE-032
 // rtmx:req REQ-XW-121
 import { useEffect, useState, useMemo, useCallback, useRef, type CSSProperties } from 'react';
 import { useHighlight } from '../hooks/useHighlight';
+import { useInView } from '../hooks/useInView';
 import styles from './Icons.module.css';
 import catalog from '../../../data/atak-drawable-catalog.json';
 import shapeData from '../../../data/atak-shapes.json';
@@ -310,6 +313,21 @@ function CardPreview({ entry }: { entry: CatalogEntry }) {
   );
 }
 
+// REQ-SITE-029: The catalog holds 1,317 drawables, and mounting every preview at
+// once costs thousands of image requests and DOM nodes. Previews mount when their
+// card nears the viewport and unmount once it is well clear of it. The preview box
+// is a fixed 80px tall, so swapping its contents never shifts the grid.
+function LazyCardPreview({ entry }: { entry: CatalogEntry }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { rootMargin: '400px' });
+
+  return (
+    <div ref={ref} className={styles.cardPreview} data-testid="card-preview">
+      {inView ? <CardPreview entry={entry} /> : null}
+    </div>
+  );
+}
+
 // REQ-SITE-011: Selector Inspector Panel
 function SelectorInspector({ selector, onClose }: { selector: SelectorEntry; onClose: () => void }) {
   const panelRef = useRef<HTMLDivElement>(null);
@@ -602,9 +620,7 @@ export default function Icons() {
             data-highlight={entry.name}
             onClick={() => handleCardClick(entry)}
           >
-            <div className={styles.cardPreview}>
-              <CardPreview entry={entry} />
-            </div>
+            <LazyCardPreview entry={entry} />
             <div className={styles.cardBody}>
               <div className={styles.cardName} title={entry.name}>
                 {entry.name}

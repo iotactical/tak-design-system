@@ -420,14 +420,15 @@ export default function Interfaces() {
           {filteredIntentGroups.length === 0 ? (
             <div className={styles.empty}>No intents match your filter.</div>
           ) : (
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, tableLayout: 'fixed' }}>
+            <div className={styles.intentTableWrap}>
+            <table className={styles.intentTable}>
               <colgroup>
                 <col style={{ width: '45%' }} />
                 <col style={{ width: '12%' }} />
                 <col style={{ width: '43%' }} />
               </colgroup>
               <thead>
-                <tr style={{ borderBottom: '1px solid #444', color: '#878787', textAlign: 'left', position: 'sticky', top: 0, background: '#1A1A1A', zIndex: 1 }}>
+                <tr className={styles.intentTableHead}>
                   <th style={{ padding: '8px', fontWeight: 500 }}>Action</th>
                   <th style={{ padding: '8px', fontWeight: 500 }}>Type</th>
                   <th style={{ padding: '8px', fontWeight: 500 }}>Class</th>
@@ -512,6 +513,7 @@ export default function Interfaces() {
                 ))}
               </tbody>
             </table>
+            </div>
           )}
         </section>
       )}

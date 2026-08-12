@@ -1,6 +1,8 @@
+// rtmx:req REQ-SITE-030
 import { useEffect } from 'react';
 import coreTokens from '@tokens/core.json';
 import atakTokens from '@tokens/atak.json';
+import styles from './Spacing.module.css';
 
 const core = coreTokens as Record<string, unknown>;
 const atak = (atakTokens as Record<string, unknown>).atak as Record<string, unknown>;
@@ -21,134 +23,66 @@ const coreSpacing = getEntries(core.spacing as Record<string, unknown>);
 const coreBorderRadius = getEntries(core.borderRadius as Record<string, unknown>);
 const atakSpacing = getEntries((atak.dimension as Record<string, unknown>).spacing as Record<string, unknown>);
 
+function ScaleSection({
+  caption,
+  entries,
+  labelPrefix,
+  wide = false,
+}: {
+  caption: string;
+  entries: { name: string; value: string }[];
+  labelPrefix?: string;
+  wide?: boolean;
+}) {
+  return (
+    <section className={styles.section}>
+      <h2 className={styles.sectionTitle}>{caption}</h2>
+      <div className={styles.scaleWrap}>
+        <div className={`${styles.scale} ${wide ? styles.scaleWide : ''}`}>
+          {entries.map((s) => {
+            const px = parseInt(s.value) || 0;
+            return (
+              <div key={s.name} className={styles.row}>
+                <div className={`${styles.rowName} ${wide ? styles.rowNameWide : ''}`}>
+                  {labelPrefix}{s.name}
+                </div>
+                <div className={styles.rowValue}>{s.value}</div>
+                <div
+                  className={`${styles.bar} ${wide ? styles.barAtak : ''} ${px === 0 ? styles.barZero : ''}`}
+                  style={{ width: px * 4 || 2 }}
+                />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Spacing() {
   useEffect(() => { document.title = 'Spacing - TAK Design System'; }, []);
   return (
     <div style={{ maxWidth: '100%' }}>
-      <h1 style={{ fontSize: 30, fontWeight: 700, color: '#FFE35E', marginBottom: 8 }}>Spacing</h1>
-      <p style={{ color: '#878787', marginBottom: 32 }}>
+      <h1 className={styles.title}>Spacing</h1>
+      <p className={styles.subtitle}>
         Spacing scale and border radius tokens visualized with proportional bars.
       </p>
 
-      <section style={{ marginBottom: 40 }}>
-        <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>Core spacing scale</h2>
-        <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, minWidth: 320 }}>
-          {coreSpacing.map((s) => {
-            const px = parseInt(s.value) || 0;
-            return (
-              <div key={s.name} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                <div
-                  style={{
-                    minWidth: 80,
-                    fontFamily: 'Roboto Mono, monospace',
-                    fontSize: 13,
-                    color: '#FFE35E',
-                    textAlign: 'right',
-                    flexShrink: 0,
-                  }}
-                >
-                  spacing.{s.name}
-                </div>
-                <div
-                  style={{
-                    width: 50,
-                    fontFamily: 'Roboto Mono, monospace',
-                    fontSize: 13,
-                    color: '#878787',
-                    textAlign: 'right',
-                    flexShrink: 0,
-                  }}
-                >
-                  {s.value}
-                </div>
-                <div
-                  style={{
-                    height: 20,
-                    width: px * 4 || 2,
-                    background: '#FFE35E',
-                    borderRadius: 3,
-                    opacity: px === 0 ? 0.3 : 1,
-                  }}
-                />
-              </div>
-            );
-          })}
-        </div>
-        </div>
-      </section>
+      <ScaleSection caption="Core spacing scale" entries={coreSpacing} labelPrefix="spacing." />
+      <ScaleSection caption="TAK spacing" entries={atakSpacing} wide />
 
-      <section style={{ marginBottom: 40 }}>
-        <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>TAK spacing</h2>
-        <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, minWidth: 360 }}>
-          {atakSpacing.map((s) => {
-            const px = parseInt(s.value) || 0;
-            return (
-              <div key={s.name} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                <div
-                  style={{
-                    minWidth: 140,
-                    fontFamily: 'Roboto Mono, monospace',
-                    fontSize: 13,
-                    color: '#FFE35E',
-                    textAlign: 'right',
-                    flexShrink: 0,
-                  }}
-                >
-                  {s.name}
-                </div>
-                <div
-                  style={{
-                    minWidth: 50,
-                    fontFamily: 'Roboto Mono, monospace',
-                    fontSize: 13,
-                    color: '#878787',
-                    textAlign: 'right',
-                    flexShrink: 0,
-                  }}
-                >
-                  {s.value}
-                </div>
-                <div
-                  style={{
-                    height: 20,
-                    width: px * 4 || 2,
-                    background: '#42A5F5',
-                    borderRadius: 3,
-                    opacity: px === 0 ? 0.3 : 1,
-                  }}
-                />
-              </div>
-            );
-          })}
-        </div>
-        </div>
-      </section>
-
-      <section style={{ marginBottom: 40 }}>
-        <h2 style={{ fontSize: 20, fontWeight: 600, marginBottom: 16 }}>Border radius</h2>
-        <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>Border radius</h2>
+        <div className={styles.radiusGrid}>
           {coreBorderRadius.map((r) => {
             const px = parseInt(r.value) || 0;
             const radius = px > 100 ? '50%' : `${px}px`;
             return (
-              <div key={r.name} style={{ textAlign: 'center' }}>
-                <div
-                  style={{
-                    width: 64,
-                    height: 64,
-                    background: '#FFE35E',
-                    borderRadius: radius,
-                    marginBottom: 8,
-                  }}
-                />
-                <div style={{ fontSize: 12, fontFamily: 'Roboto Mono, monospace', color: '#FFE35E' }}>
-                  {r.name}
-                </div>
-                <div style={{ fontSize: 11, fontFamily: 'Roboto Mono, monospace', color: '#878787' }}>
-                  {r.value}
-                </div>
+              <div key={r.name} className={styles.radiusItem}>
+                <div className={styles.radiusSwatch} style={{ borderRadius: radius }} />
+                <div className={styles.radiusName}>{r.name}</div>
+                <div className={styles.radiusValue}>{r.value}</div>
               </div>
             );
           })}

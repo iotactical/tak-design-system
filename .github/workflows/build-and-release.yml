@@ -194,6 +194,11 @@ jobs:
     permissions:
       contents: write
       id-token: write
+    env:
+      # Surfaced as env so the publish steps can be skipped via `if:` when a
+      # credential is absent; the `secrets` context is not available in `if:`.
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      VSCE_PAT: ${{ secrets.VSCE_PAT }}
     steps:
       - uses: actions/checkout@v4
 
@@ -218,33 +223,48 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           VERSION="${{ steps.version.outputs.version }}"
+          if gh release view "v${VERSION}" >/dev/null 2>&1; then
+            echo "Release v${VERSION} already exists; bump package.json to cut a new one."
+            exit 0
+          fi
           gh release create "v${VERSION}" dist/*.tar.gz \
             --title "TAK Design System v${VERSION}" \
-            --generate-notes \
-            || echo "Release v${VERSION} already exists, skipping"
+            --generate-notes
 
-      - name: Publish @iotactical/tak-react to npm
-        if: success()
-        continue-on-error: true
+      - name: Publish npm packages
+        if: env.NPM_TOKEN != ''
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: ./scripts/publish-npm.sh
+
+      - name: Warn when npm publishing is not configured
+        if: env.NPM_TOKEN == ''
         run: |
-          cd packages/react
-          npm publish --access public --provenance \
-            || echo "Publish skipped (version may already exist or NPM_TOKEN not configured)"
+          echo "::warning title=npm publish skipped::NPM_TOKEN secret is not configured; no packages were published."
 
       - name: Publish VS Code extension
-        if: success()
-        continue-on-error: true
+        if: env.VSCE_PAT != ''
         run: |
-          if [ -f platforms/vscode/package.json ]; then
-            cd platforms/vscode
-            npx @vscode/vsce package --no-dependencies
-            npx @vscode/vsce publish --no-dependencies -p "${{ secrets.VSCE_PAT }}" \
-              || echo "VS Code publish skipped (VSCE_PAT not configured or extension not ready)"
-          else
-            echo "VS Code extension package.json not found, skipping publish"
+          cp platforms/vscode/generated/tak-dark-theme.json vscode-extension/themes/tak-dark-theme.json
+          cd vscode-extension
+          LOCAL=$(jq -r .version package.json)
+          EXTENSION="$(jq -r .publisher package.json).$(jq -r .name package.json)"
+          PUBLISHED=$(npx @vscode/vsce show "$EXTENSION" --json 2>/dev/null | jq -r '.versions[0].version // empty' || true)
+          if [ "$LOCAL" = "$PUBLISHED" ]; then
+            echo "$EXTENSION $LOCAL is already on the marketplace; bump vscode-extension/package.json to publish."
+            exit 0
           fi
+          VSIX="tak-dark-theme-${LOCAL}.vsix"
+          npx @vscode/vsce package --no-dependencies --out "$VSIX"
+          npx @vscode/vsce publish --packagePath "$VSIX" -p "$VSCE_PAT"
+          gh release upload "v${{ steps.version.outputs.version }}" "$VSIX" --clobber
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Warn when VS Code publishing is not configured
+        if: env.VSCE_PAT == ''
+        run: |
+          echo "::warning title=VS Code publish skipped::VSCE_PAT secret is not configured; the extension was not published."
 
       - name: Notify defense-builders-sdk
         if: success()

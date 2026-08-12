@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- `scripts/publish-npm.sh`, publishing every public workspace package and skipping versions already on the registry
+- Shared `useInView` hook, replacing the local copy in MultipointGallery
+- `publishConfig.access: public` and a bundled LICENSE on both published packages
+- `@iotactical/tak-tokens/wintak` export for the WinTAK token set
+- E2E coverage for icon virtualization and 360px responsiveness
+- Releasing section in the README covering required secrets and manual publish steps
 - MIL-STD-2525 doctrinal definitions data (67 entities with safety constraints, embedding text)
 - JSON Schema for doctrine data validation (`schemas/mil-std-2525-doctrine.schema.json`)
 - Doctrine CI validation script (`scripts/validate-doctrine.mjs`)
@@ -20,11 +26,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Consolidated `@iotactical/tak-data` into `@iotactical/tak-react` (single npm package)
+- Typography and Spacing pages moved from inline styles to CSS modules so they can carry breakpoints
+- Intent catalog table styling moved into the CSS module; its sticky header is released on mobile, where it would otherwise pin to the scroll wrapper
 - Kill Box (Blue) renamed to Kill Box (BKB) per MIL-STD-2525 doctrine
 - Disabled pinch-zoom on mobile site
 
+### Fixed
+- npm publishing, which had never produced a package: `@iotactical/tak-tokens` relied on a `prepublish` hook that npm has not run on publish since npm 5, so it would have shipped without any token files
+- VS Code extension publish step gated on `platforms/vscode/package.json`, a path that is never generated, so it silently skipped every release
+- Release pipeline masked publish failures with `continue-on-error` and `|| echo`, reporting success when a missing `NPM_TOKEN` meant nothing was published
+- Icons page mounted all 1,317 drawable previews at once; previews now mount and unmount around the viewport (REQ-SITE-029)
+- Typography and Spacing token tables forced horizontal scrolling below 480px (REQ-SITE-030)
+- Interfaces intent table squeezed three columns of identifiers into a phone viewport (REQ-SITE-031)
+- Icon inspector padding, Skittles label width, and the Platforms copy button on narrow screens (REQ-SITE-032, REQ-SITE-033, REQ-SITE-034)
+
 ### Removed
-- `packages/data/` directory (merged into `packages/react`)
+- `packages/data/` directory and its leftover manifest, whose `files` and `exports` pointed at directories that no longer existed (merged into `packages/react`)
 
 ## [0.2.0] - 2026-05-15
 
