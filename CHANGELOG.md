@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- REQ-SITE-035 through REQ-SITE-037 covering Sources page links, Home grid fit, and floating control visibility, areas that had no requirement and therefore no coverage
+- `aria-expanded` and a close glyph on the mobile menu button
 - `scripts/publish-npm.sh`, publishing every public workspace package and skipping versions already on the registry
 - Shared `useInView` hook, replacing the local copy in MultipointGallery
 - `publishConfig.access: public` and a bundled LICENSE on both published packages
@@ -32,6 +34,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Disabled pinch-zoom on mobile site
 
 ### Fixed
+- Home card grid ran its second column off the right edge of the screen, scrolling the page 181px sideways at 430px: the `1fr` tracks took their minimum from the cards' nowrap descriptions. Now one column below 560px and two above it (REQ-SITE-036)
+- Share and menu buttons vanished behind the nav drawer backdrop, leaving no visible way to close the drawer; the menu button was also nested in the bottom bar's stacking context, where no z-index could lift it (REQ-SITE-037)
 - Sources page linked ATAK-CIV and TAK Server to a personal account that returns 404; both now point at the TAK Product Center repositories
 - Both Figma entries on the Sources page shared one community file ID that 404s on mobile browsers; they now point at the separate ATAK and WinTAK files and say they are unofficial
 - Test job piped `npm test` through `tee`, so the step took its exit code from `tee` and a failing suite reported green; one test had been failing unnoticed

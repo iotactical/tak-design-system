@@ -192,10 +192,12 @@
    Centered horizontally over the 66px hamburger (right:16).
    Hamburger center = 16 + 33 = 49px from right.
    Share offset = 49 - 22 = 27px from right. */
+/* Above the drawer and its backdrop (199/200) so the controls stay visible and
+   tappable while the nav is open -- the hamburger is what closes it. */
 .shareFab {
   display: none;
   position: fixed;
-  z-index: 150;
+  z-index: 201;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -265,7 +267,7 @@
     position: fixed;
     bottom: 62px;
     right: 16px;
-    z-index: 150;
+    z-index: 201;
     width: 66px;
     height: 66px;
     font-size: 30px;

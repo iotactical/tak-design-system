@@ -9,7 +9,8 @@ the initial payload drops.
 
 ## Acceptance Criteria
 - [x] `mobileGrid` replaces the carousel markup, tagged `data-testid="mobile-grid"`
-- [x] Grid is two columns below 680px and one column below 400px
+- [x] Grid is one column below 560px and two columns from 560px to 680px
+      (revised by REQ-SITE-036, which found that two columns did not fit)
 - [x] Carousel track, dots, and scroll-snap styles are removed
 - [x] Mobile cards render no `<img>` previews
 - [x] All eleven page links remain reachable

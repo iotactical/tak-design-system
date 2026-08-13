@@ -219,17 +219,21 @@
   .cardGrid {
     display: none;
   }
+  /* One column by default. minmax(0, ...) is load-bearing: a bare `1fr` track
+     takes its minimum from the card's min-content, and the nowrap description
+     then widens the track past the viewport instead of ellipsizing. */
   .mobileGrid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     gap: 8px;
   }
 }
 
-/* Single column on very narrow screens */
-@media (max-width: 400px) {
+/* Two columns only once a card still has room for its title and description
+   alongside the icon; below this they would each be a truncated stub. */
+@media (min-width: 560px) and (max-width: 680px) {
   .mobileGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

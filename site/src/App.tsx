@@ -107,14 +107,17 @@ export default function App() {
           </svg>
         )}
       </button>
+      {/* Sibling of the share button rather than a child of the bottom bar: the
+          bar's own stacking context would trap it under the drawer backdrop. */}
+      <button
+        className={styles.hamburger}
+        onClick={() => setSidebarOpen((o) => !o)}
+        aria-label="Toggle navigation"
+        aria-expanded={sidebarOpen}
+      >
+        {sidebarOpen ? '\u00D7' : '\u2630'}
+      </button>
       <div className={styles.topBar}>
-        <button
-          className={styles.hamburger}
-          onClick={() => setSidebarOpen((o) => !o)}
-          aria-label="Toggle navigation"
-        >
-          &#9776;
-        </button>
         <GlobalSearch />
       </div>
       <main id="main-content" className={styles.content}>

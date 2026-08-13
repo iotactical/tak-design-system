@@ -122,7 +122,7 @@ npx rtmx verify    # Verify all requirements have passing tests
 npx rtmx status    # Show RTM coverage summary
 ```
 
-Current: 302/302 requirements verified (100%).
+Current: 305/305 requirements verified (100%).
 
 ## Releasing
 

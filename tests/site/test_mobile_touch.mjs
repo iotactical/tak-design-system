@@ -1,5 +1,6 @@
 // rtmx:req REQ-SITE-027
 // rtmx:req REQ-SITE-028
+// rtmx:req REQ-SITE-037
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -58,5 +59,47 @@ describe('REQ-SITE-028: Safe-area-inset handling for notched phones', () => {
       'Should not block user zoom (WCAG violation)');
     assert.ok(!indexHtml.includes('maximum-scale=1'),
       'Should not restrict maximum scale');
+  });
+});
+
+describe('REQ-SITE-037: Floating navigation controls stay visible with the drawer open', () => {
+  const appCss = readFileSync(resolve(siteDir, 'App.module.css'), 'utf8');
+  const appTsx = readFileSync(resolve(siteDir, 'App.tsx'), 'utf8');
+
+  function zIndexOf(selector) {
+    const rules = [...appCss.matchAll(new RegExp(`\\${selector}\\s*\\{([^}]*)\\}`, 'g'))];
+    const values = rules
+      .map((m) => m[1].match(/z-index:\s*(\d+)/))
+      .filter(Boolean)
+      .map((m) => Number(m[1]));
+    assert.ok(values.length > 0, `${selector} declares no z-index`);
+    return Math.max(...values);
+  }
+
+  it('paints both controls above the backdrop and the drawer', () => {
+    const backdrop = zIndexOf('.backdrop');
+    const sidebar = zIndexOf('.sidebar');
+    for (const control of ['.hamburger', '.shareFab']) {
+      const z = zIndexOf(control);
+      assert.ok(z > backdrop, `${control} (${z}) must paint above the backdrop (${backdrop})`);
+      assert.ok(z > sidebar, `${control} (${z}) must paint above the drawer (${sidebar})`);
+    }
+  });
+
+  // The bottom bar is positioned with a z-index of its own, so a control nested
+  // inside it can only be ordered against its siblings, never the backdrop.
+  it('keeps the menu button out of the bottom bar stacking context', () => {
+    const topBar = appTsx.match(/<div className=\{styles\.topBar\}>([\s\S]*?)<\/div>/);
+    assert.ok(topBar, 'expected a topBar element');
+    assert.ok(
+      !topBar[1].includes('styles.hamburger'),
+      'menu button must not be nested inside the bottom bar',
+    );
+    assert.ok(appTsx.includes('styles.hamburger'), 'menu button must still be rendered');
+  });
+
+  it('reflects drawer state on the menu button', () => {
+    assert.match(appTsx, /aria-expanded=\{sidebarOpen\}/, 'menu button should carry aria-expanded');
+    assert.match(appTsx, /sidebarOpen \? '\\u00D7'/, 'menu button should show a close glyph while open');
   });
 });
