@@ -32,6 +32,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Disabled pinch-zoom on mobile site
 
 ### Fixed
+- Sources page linked ATAK-CIV and TAK Server to a personal account that returns 404; both now point at the TAK Product Center repositories
+- Both Figma entries on the Sources page shared one community file ID that 404s on mobile browsers; they now point at the separate ATAK and WinTAK files and say they are unofficial
 - Test job piped `npm test` through `tee`, so the step took its exit code from `tee` and a failing suite reported green; one test had been failing unnoticed
 - `REQ-CI-002` asserted that the newest build artifact had not expired yet, which failed whenever main went untouched longer than the retention window; it now measures the 30-day window the artifact was given
 - `REQ-CI-001` shelled out to the `gh` CLI without a skip guard, so it failed anywhere unauthenticated instead of skipping

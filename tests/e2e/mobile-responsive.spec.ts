@@ -20,6 +20,7 @@ const PAGES = [
   ['Interfaces', '/tak-design-system/interfaces'],
   ['Platforms', '/tak-design-system/platforms'],
   ['Icons', '/tak-design-system/icons'],
+  ['Sources', '/tak-design-system/sources'],
 ] as const;
 
 test.describe('Mobile responsiveness at 360px', () => {

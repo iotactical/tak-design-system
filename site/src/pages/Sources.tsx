@@ -6,6 +6,7 @@ interface SourceEntry {
   url: string;
   description: string;
   category: string;
+  note?: string;
 }
 
 const SOURCES: SourceEntry[] = [
@@ -25,27 +26,29 @@ const SOURCES: SourceEntry[] = [
   // Figma
   {
     name: 'ATAK Design System (Figma)',
-    url: 'https://www.figma.com/community/file/1235289359498293053',
-    description: 'Figma design file for the ATAK Design System. Contains Android component specifications, color tokens, typography scales, and layout patterns.',
+    url: 'https://www.figma.com/community/file/1571370238280853168/atak-design-system-tactical-assault-kit-team-awareness-kit',
+    description: 'Community Figma UI kit for ATAK. Android component specifications, color tokens, typography scales, and layout patterns. Unofficial and not affiliated with the TAK Product Center.',
     category: 'Design',
+    note: 'Figma community file -- duplicating it into a library needs a desktop browser',
   },
   {
     name: 'WinTAK Design System (Figma)',
-    url: 'https://www.figma.com/community/file/1235289359498293053',
-    description: 'Figma design file for the WinTAK Design System. Contains Windows component specifications, WPF control styles, and desktop layout patterns.',
+    url: 'https://www.figma.com/community/file/1573375430276099247/wintak-design-system-windows-tactical-assault-kit-team-awareness-kit',
+    description: 'Community Figma UI kit for WinTAK. Windows component specifications, WPF control styles, and desktop layout patterns. Unofficial and not affiliated with the TAK Product Center.',
     category: 'Design',
+    note: 'Figma community file -- duplicating it into a library needs a desktop browser',
   },
   // GitHub
   {
     name: 'ATAK-CIV (GitHub)',
-    url: 'https://github.com/nicktacik/ATAK-CIV',
-    description: 'Official ATAK civilian distribution. Source of icon palettes, color definitions, vehicle models, and CoT schema used by this design system.',
+    url: 'https://github.com/TAK-Product-Center/atak-civ',
+    description: 'Official ATAK civilian source, published by the TAK Product Center. Source of icon palettes, color definitions, vehicle models, and CoT schema used by this design system.',
     category: 'GitHub',
   },
   {
     name: 'TAK Server (GitHub)',
-    url: 'https://github.com/nicktacik/TAKServer',
-    description: 'TAK Server distribution. Reference for server-side CoT handling, mission packages, and data sync protocols.',
+    url: 'https://github.com/TAK-Product-Center/Server',
+    description: 'Official TAK Server source, published by the TAK Product Center. Reference for server-side CoT handling, mission packages, and data sync protocols.',
     category: 'GitHub',
   },
   // Standards
@@ -77,7 +80,7 @@ export default function Sources() {
           <div className={styles.grid}>
             {SOURCES.filter((s) => s.category === cat).map((source) => (
               <a
-                key={source.url}
+                key={source.name}
                 href={source.url}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -85,6 +88,7 @@ export default function Sources() {
               >
                 <div className={styles.cardName}>{source.name}</div>
                 <div className={styles.cardDesc}>{source.description}</div>
+                {source.note && <div className={styles.cardNote}>{source.note}</div>}
                 <div className={styles.cardUrl}>{new URL(source.url).hostname}</div>
               </a>
             ))}
