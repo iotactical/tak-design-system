@@ -26,4 +26,16 @@ assert.ok(
   'Workflow must upload site/dist artifact path'
 );
 
+// The badge this workflow publishes is only meaningful if the REQ-CI-* tests
+// can reach the Actions API; without a token and the actions:read scope they
+// fail and the README advertises failures that do not exist.
+assert.ok(
+  /actions:\s*read/.test(content),
+  'Workflow must grant actions:read so the CI tests can query workflow runs'
+);
+assert.ok(
+  /GH_TOKEN:\s*\$\{\{\s*secrets\.GITHUB_TOKEN\s*\}\}/.test(content),
+  'Badge step must pass GH_TOKEN so gh is authenticated'
+);
+
 console.log('REQ-XW-135: GitHub Pages deployment workflow tests passed');

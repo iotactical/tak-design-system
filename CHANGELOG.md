@@ -32,6 +32,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Disabled pinch-zoom on mobile site
 
 ### Fixed
+- Test job piped `npm test` through `tee`, so the step took its exit code from `tee` and a failing suite reported green; one test had been failing unnoticed
+- `REQ-CI-002` asserted that the newest build artifact had not expired yet, which failed whenever main went untouched longer than the retention window; it now measures the 30-day window the artifact was given
+- `REQ-CI-001` shelled out to the `gh` CLI without a skip guard, so it failed anywhere unauthenticated instead of skipping
+- Tests badge showed failures that did not exist: the job that generates it lacked `GH_TOKEN` and the `actions: read` scope the CI tests need to reach the workflow API
 - npm publishing, which had never produced a package: `@iotactical/tak-tokens` relied on a `prepublish` hook that npm has not run on publish since npm 5, so it would have shipped without any token files
 - VS Code extension publish step gated on `platforms/vscode/package.json`, a path that is never generated, so it silently skipped every release
 - Release pipeline masked publish failures with `continue-on-error` and `|| echo`, reporting success when a missing `NPM_TOKEN` meant nothing was published
@@ -42,6 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 - `packages/data/` directory and its leftover manifest, whose `files` and `exports` pointed at directories that no longer existed (merged into `packages/react`)
+- Badge artifact plumbing in the release workflow, which uploaded nothing because `upload-artifact@v4` skips dot-directories; the badges are generated and published by the Pages workflow
 
 ## [0.2.0] - 2026-05-15
 
