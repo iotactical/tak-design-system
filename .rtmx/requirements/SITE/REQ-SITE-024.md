@@ -13,7 +13,8 @@ the initial payload drops.
       (revised by REQ-SITE-036, which found that two columns did not fit)
 - [x] Carousel track, dots, and scroll-snap styles are removed
 - [x] Mobile cards render no `<img>` previews
-- [x] All eleven page links remain reachable
+- [x] All page links remain reachable (eleven at the time of implementation;
+      REQ-SITE-038 adds a twelfth for Sandbox)
 
 ## Validation
 - **Test**: tests/site/test_mobile_home.mjs

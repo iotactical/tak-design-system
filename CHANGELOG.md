@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- REQ-SITE-038 through REQ-SITE-042 specifying a standalone Symbol Sandbox: own route, canvas-first mobile layout, fullscreen preview, native touch on the symbol, and a shareable SIDC query parameter
 - REQ-SITE-035 through REQ-SITE-037 covering Sources page links, Home grid fit, and floating control visibility, areas that had no requirement and therefore no coverage
 - `aria-expanded` and a close glyph on the mobile menu button
 - `scripts/publish-npm.sh`, publishing every public workspace package and skipping versions already on the registry
