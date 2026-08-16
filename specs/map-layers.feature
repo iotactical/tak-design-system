@@ -1,35 +1,41 @@
-Feature: Map Layer Management
+Feature: Maps and Favorites
+  Source: ATAK Civilian Software User Manual · Maps & Favorites
+
   As a TAK operator
-  I need to select scan and toggle map layers
-  So that imagery GRGs and overlays can be shown without hiding the COP
+  I need Imagery, Mobile, and Favorites layers as the Software User Manual describes
+  So that online, local, and GRG products can be selected without hiding the COP
 
   Background:
     Given the TAK application is running
-    And at least one offline imagery layer and one GRG are installed
+    And the operator selects the [Maps & Favorites] icon
 
-  Scenario: Select an imagery layer
-    Given the operator opens the layer manager
-    When the operator selects layer "Natural Earth"
-    Then the map basemap should switch to "Natural Earth"
-    And previously selected imagery should be deselected
+  Scenario: Toggle Online versus Local on the Mobile tab
+    # SUM: "Select [Online/Local] on the Mobile tab to toggle between using an online map source or locally stored map layers over a desired area."
+    Given the Mobile tab is open
+    When the operator toggles to Local
+    Then intent "com.atakmap.android.maps.SELECT_LAYER" should choose a local tileset
+    And MapOverlay should render that imagery
+    And preference "map_scale_visible" should keep the map scale widget in view
 
-  Scenario: Toggle GRG visibility
-    Given GRG "airfield-east" is loaded and visible
-    When the operator toggles visibility off for "airfield-east"
-    Then the GRG should not render on the map
-    And the overlay hierarchy entry should show hidden
-    When the operator toggles visibility on
-    Then the GRG should render at its native georeference
+  Scenario: Save a local copy of a map layer
+    # SUM: "To save a local copy of a map layer, choose the MOBILE tab and toggle to [Online]. Select the right arrow to expand the Map Source option, then tap [Select Area] to define a region of interest."
+    Given the Mobile tab is Online
+    When the operator Select Area as Rectangle and downloads
+    Then intent "com.atakmap.android.layers.SCAN_LAYERS_START" should scan the new tileset
+    And ProgressBar should show download progress
+    And CoT type "b-m-p-s-p-loc" should not be created for the tileset itself
 
-  Scenario: Zoom to a layer extent
-    Given layer "sector-north" has a bounding box
-    When the operator chooses Zoom To Layer for "sector-north"
-    Then the map viewport should fit that bounding box
-    And the layer should remain selected
+  Scenario: Zoom to a layer
+    # SUM: "When the user selects a layer from the list, map source data corresponding to that downloaded layer will be used as the source for map data."
+    Given local layer "sector-north" is listed
+    When the operator chooses that layer
+    Then intent "com.atakmap.android.maps.ZOOM_TO_LAYER" should fit its bounds
+    And preference "prefs_layer_grg_map_interaction" should allow GRG interaction when a GRG is selected
 
-  Scenario: Report scan failure when a layer file is unreadable
-    Given the layer scan finds a file that is not a supported tile format
-    When the scan finishes
+  Scenario: Layer scan failure does not drop loaded imagery
+    # SUM: "If [Show All] is checked, all the layers are shown. Otherwise, only layers that are visible in the current map screen will be displayed."
+    Given a file is not a supported imagery type
+    When intent "com.atakmap.android.maps.ERROR_LOADING_LAYERS" is received
     Then that file should not appear as a selectable layer
-    And an error should be recorded for layer loading
-    And already-loaded layers should stay available
+    And already-loaded MapOverlay layers should stay available
+    And a CoT type "a-f-G-U-C" SA marker should be unaffected

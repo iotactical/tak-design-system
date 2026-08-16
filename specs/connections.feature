@@ -1,63 +1,57 @@
-Feature: Connection and Plugin Management
+Feature: Connection Widget, Mesh Encryption, and TAK Package Management
+  Source: ATAK Civilian Software User Manual · ATAK Civilian Overview · Encrypted Mesh Communications · TAK Package Management
+
   As a TAK operator
-  I need to manage server connections and load plugins
-  So that I can extend functionality and maintain communication links
+  I need the connection widget, AES-256 mesh keys, and TAK Package Mgmt as the Software User Manual describes
+  So that server, mesh, and plug-in lifecycle match ATAK Settings paths
 
   Background:
     Given the TAK application is running
-    And the operator has a valid client certificate installed
+    And the operator has a client certificate
 
-  Scenario: Connect to a TAK Server
-    Given the operator opens the server connection settings
-    And the operator enters server address "takserver.example.mil"
-    And the operator enters server port "8089"
-    And the operator selects protocol "SSL"
-    When the operator taps "Connect"
-    Then the application should initiate a TLS handshake with the server
-    And the connection status should change to "Connected"
-    And the operator's SA marker should begin broadcasting to the server
+  Scenario: Display Connection Widget
+    # SUM: "The optional connection widget indicates whether or not the user is connected to a TAK Server. ... Toggle this display on at Settings > Network Connections > Network Connections > Display Connection Widget."
+    Given preference "displayServerConnectionWidget" is true
+    When the operator connects to a TAK Server
+    Then ConnectionStatus should show Connected
+    And a CoT type "a-f-G-U-C" SA event should begin broadcasting
+    And preference "monitorServerConnections" should control monitoring
 
-  Scenario: Connection status indicator
-    Given the operator is connected to TAK Server "takserver.example.mil"
-    When the operator views the status bar
-    Then the connection indicator should display "Connected" in green
-    And the indicator should show the server hostname
-    And the indicator should show the connection uptime
+  Scenario: Mesh AES-256 from Network Connection Preferences
+    # SUM: "To configure encryption, navigate to Settings > Network Preferences > Network Connection Preferences > Configure AES-256 Mesh Encryption."
+    Given preference "enableNonStreamingConnections" is true
+    When the operator Generates a Key
+    Then preference "configureNonStreamingEncryption" should store that key
+    And CoT type "b-t-f" chat on the mesh should use that key once loaded
+    And DialogPanel should offer Generate Key, Load Key, and Forget Key
 
-  Scenario: Reconnect on connection failure
-    Given the operator is connected to TAK Server "takserver.example.mil"
-    When the network connection is interrupted
-    Then the connection status should change to "Disconnected"
-    And the connection indicator should display in red
-    And the application should attempt automatic reconnection
-    When the network connection is restored
-    Then the connection status should return to "Connected"
-    And any queued CoT messages should be transmitted
+  Scenario: Encrypted mesh cannot talk to unencrypted peers
+    # SUM: "Encrypted devices cannot communicate on the mesh network with non-encrypted devices and vice versa."
+    Given mesh encryption is enabled
+    When an unencrypted peer is discovered
+    Then SA CoT type "a-f-G-U-C" from that peer should not be accepted
+    And ConnectionStatus should not imply a TAK Server session for that peer
+    And intent "com.atakmap.android.contact.REFRESH_LIST" should omit them as plaintext mesh contacts
 
-  Scenario: Load a plugin
-    Given the operator opens the plugin manager
-    And a plugin package "DataSync.apk" is available in the plugin directory
-    When the operator selects "DataSync.apk" from the available plugins list
-    And the operator taps "Load Plugin"
-    Then the plugin "DataSync" should initialize
-    And the plugin should appear in the active plugins list
-    And the plugin status should display "Running"
+  Scenario: TAK Package Management for plug-ins
+    # SUM: "To install tools or plug-ins into Android OS and load them, select Settings > Tool Preferences > TAK Package Mgmt."
+    Given the operator opens TAK Package Mgmt
+    When a plug-in is installed and Sync completes
+    Then preference "appsPref" should list the product
+    And ToolBar should show the plug-in when the toolbar manager includes it
+    And ConnectionStatus should not drop the TAK Server link
 
-  Scenario: Plugin lifecycle start and stop
-    Given plugin "DataSync" is loaded and running
-    When the operator selects plugin "DataSync" in the active plugins list
-    And the operator taps "Stop Plugin"
-    Then the plugin status should change to "Stopped"
-    And plugin resources should be released
-    When the operator taps "Start Plugin"
-    Then the plugin status should change to "Running"
-    And the plugin should re-register its CoT handlers
+  Scenario: Reconnect after interrupt
+    # SUM: "The optional connection widget indicates whether or not the user is connected to a TAK Server."
+    Given the operator is Connected
+    When the network is interrupted
+    Then ConnectionStatus should show Disconnected
+    And queued CoT type "a-f-G-U-C" events should send after restore
+    And preference "displayServerConnectionWidget" should stay visible in red until Connected
 
-  Scenario: Mesh network device discovery
-    Given the operator has a mesh networking radio connected
-    And the radio is configured on frequency "462.5625 MHz"
-    When the operator opens the network discovery panel
-    And the operator initiates a mesh scan
-    Then discovered mesh nodes should appear in the device list
-    And each node should display its callsign and signal strength
-    And the operator should be able to select a node for direct messaging
+  Scenario: Inactive plug-in status
+    # SUM: "Note: The status of installed but inactive plug-ins will appear as STATUS: Not Loaded."
+    Given an installed plug-in is incompatible
+    When TAK Package Mgmt refreshes
+    Then ListView should show STATUS: Not Loaded
+    And intent "com.atakmap.app.COMPONENTS_CREATED" should not register that plug-in

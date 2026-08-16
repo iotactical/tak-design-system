@@ -1,41 +1,45 @@
-Feature: Icon Palette Selection and Marker Customization
+Feature: Point Dropper and Iconsets
+  Source: ATAK Civilian Software User Manual · Placement · Point Dropper
+
   As a TAK operator
-  I need to choose icons from ATAK palettes when placing markers
-  So that map points match the iconography teammates already know
+  I need Point Dropper iconsets and Iconset Manager as the Software User Manual describes
+  So that markers match ATAK affiliations and custom iconsets
 
   Background:
     Given the TAK application is running
     And the map view is displayed
-    And the default ATAK icon palettes are loaded
 
-  Scenario: Place a marker from the default palette
-    Given the operator opens the marker palette
-    When the operator selects the "Spot Map" palette
-    And the operator taps icon "lp"
+  Scenario: Drop a marker from the basic affiliation palette
+    # SUM: "The basic Markers symbology affiliations are: Unknown, Neutral, Red and Friendly. Select a marker from the pallet, then tap a location on the map to drop the marker."
+    Given the operator selects the [Point Dropper] icon
+    When the operator chooses affiliation Friendly
     And the operator taps the map at "38.8977 N, 77.0365 W"
-    Then a marker should appear at those coordinates
-    And the marker should render using TakIcon name "lp"
-    And the CoT type should match the palette mapping for "lp"
+    Then TakIcon should render the friendly marker at that point
+    And intent "com.atakmap.android.maps.PLACE" should drop the point
+    And a CoT type "a-f-G-U-C" event should be created
+    And MarkerDetail should show the generated name
 
-  Scenario: Switch iconsets without losing placed markers
-    Given a marker exists that was placed from the "Default" palette
-    When the operator installs iconset "incident"
-    And the operator sets "incident" as the active iconset
-    Then previously placed markers should keep their original icons
-    And new placements should use icons from "incident"
+  Scenario: Enter coordinates instead of tapping the map
+    # SUM: "To add a marker by manually entering coordinates, choose the marker and long-press a location on the map. A window will open allowing the user to enter the desired coordinates (MGRS, Lat./Long, etc.)."
+    Given a Point Dropper affiliation is selected
+    When the operator long-presses the map
+    And CoordinateDisplay accepts an MGRS or lat/long value
+    Then intent "com.atakmap.android.maps.MANUAL_POINT_ENTRY" should open
+    And the marker should appear at the entered coordinate
+    And a CoT type "a-u-G" event should use that point when Unknown was selected
 
-  Scenario: Customize marker color and label
-    Given the operator has selected a generic point icon
-    When the operator sets label "RP BRAVO"
-    And the operator sets team color "Yellow"
-    And the operator confirms placement
-    Then the marker label should display "RP BRAVO"
-    And the marker should use team color "Yellow"
-    And the CoT detail should include that label and color
+  Scenario: Switch iconsets from the Iconset Name field
+    # SUM: "Swipe in the iconset area or select the [Iconset Name] field, bringing up the Iconset drop-down, to move between iconset pallets."
+    Given Point Dropper is open
+    When the operator selects a mission-specific iconset
+    Then intent "com.atakmap.android.icons.DISPLAY_DROPDOWN" should show that palette
+    And TakIcon should list Waypoint, Sensor, and Observation Point icons
+    And previously dropped CoT type "a-f-G-U-C" markers should keep their icons
 
-  Scenario: Reject an unknown icon name
-    Given the operator attempts to place a marker with icon name "not-a-real-icon"
-    When the palette lookup runs
-    Then placement should fail
-    And the operator should see "Unknown icon"
-    And no CoT marker should be created
+  Scenario: Iconset Manager add and default mapping
+    # SUM: "Select the [Iconset Manager] (gear) button to add or delete icontsets or to set the default Marker Mapping."
+    Given the operator opens Iconset Manager
+    When the operator adds iconset "incident"
+    Then intent "com.atakmap.android.icons.ADD_ICONSET" should run
+    And intent "com.atakmap.android.icons.DEFAULT_MAPPING_CHANGED" should fire if it is set as default
+    And preference "relativeOverlaysScalingRadioList" should still scale overlay icons

@@ -1,38 +1,42 @@
-Feature: Geofence Creation and Alerting
+Feature: Geofencing
+  Source: ATAK Civilian Software User Manual · Drawing Tools · Geofencing
+
   As a TAK operator
-  I need to draw geofences and receive breach alerts
-  So that entry and exit of an area are visible without watching the map constantly
+  I need Geo Fence entry and exit alerts as the Software User Manual describes
+  So that a shape boundary can monitor TAK Users, Friendly, Hostile, Custom, or All
 
   Background:
     Given the TAK application is running
-    And the operator is connected to a TAK Server
-    And GPS is reporting a valid fix
+    And a drawing shape exists on the map
 
-  Scenario: Create a circular geofence
-    Given the geofence tool is selected
-    When the operator taps a center at "38.8977 N, 77.0365 W"
-    And the operator sets radius 500 meters
-    And the operator names the fence "AO BRAVO"
-    Then a circular geofence "AO BRAVO" should appear on the map
-    And the fence should be listed under Geofences in the overlay hierarchy
+  Scenario: Add a Geo Fence from the shape radial
+    # SUM: "After a shape has been added, the Geo Fence Tool can be accessed either by selecting the [Geo Fence] icon from the menu items or selecting it from the radial."
+    Given the operator selects the shape
+    When the operator chooses [Geo Fence] on RadialMenu
+    Then intent "com.atakmap.android.geofence.ADD" should open the Create Geo Fence window
+    And DialogPanel should default Tracking to on
+    And the shape CoT type "u-d-c-c" should remain the fence geometry
 
-  Scenario: Alert when self marker enters the fence
-    Given geofence "AO BRAVO" is armed for entry
-    And the self marker is outside "AO BRAVO"
-    When the self marker position updates inside "AO BRAVO"
-    Then an entry alert should display
-    And a geofence CoT event should be transmitted
-    And the fence should highlight on the map
+  Scenario: Configure trigger and monitor set
+    # SUM: "Use the Trigger field to define which types of Geo Fence breach to monitor. Choose between Entry, Exit or Both. Use the Monitor field to define which entities the Geo Fence will track. Choose between TAK Users, Friendly, Hostile, Custom or All."
+    Given the Create Geo Fence window is open
+    When the operator sets Trigger to Entry and Monitor to TAK Users
+    And the operator selects [OK]
+    Then intent "com.atakmap.android.geofence.EDIT" should persist those parameters
+    And preference "alert_audible" should control whether the breach is audible
 
-  Scenario: Edit an existing geofence
-    Given geofence "AO BRAVO" exists with radius 500 meters
-    When the operator opens geofence edit
-    And the operator changes the radius to 800 meters
-    Then the map graphic should update to 800 meters
-    And subsequent alerts should use the new radius
+  Scenario: Alert notification widget lists the breach
+    # SUM: "Alerts appear in the lower left on the map interface. Selecting the [Alert Notification] widget will open the alerts menu, detailing the activity monitored in the user defined region."
+    Given the fence is Tracking TAK Users
+    And the Self-Marker crosses the boundary
+    When the breach is detected
+    Then intent "com.atakmap.android.geofence.DISPLAY_ALERTING" should show the widget
+    And a CoT type "b-a-o-tbl" Geo Fence Breached emergency should not fire unless the operator selected that emergency type
 
-  Scenario: Ignore a breach from an untracked marker
-    Given geofence "AO BRAVO" is armed only for the self marker
-    When a remote marker crosses the fence boundary
-    Then no entry alert should display for the self operator
-    And the remote marker should still render on the map
+  Scenario: Tracking off keeps the fence but stops alerts
+    # SUM: "If the user wishes to keep the Geo Fence, but disable tracking, the user can set the tracking [Enabled] to off in the Edit Window."
+    Given an armed fence exists
+    When the operator sets Tracking to Off
+    Then intent "com.atakmap.android.geofence.EDIT" should disable monitoring
+    And no new CoT type "b-a-o-tbl" alerts should appear
+    And MapOverlay should still draw the shape

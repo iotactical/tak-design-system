@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- 22 ATAK core Gherkin feature files under `specs/` (self marker, palettes, mission packages, layers, geofence, orientation, overlays, range-bearing, bloodhound, drawing, attachments, import/export, emergency, viewshed, radial menu, GPS, pairing line, tracks, go-to, video, fires, contacts)
+- 22 ATAK core Gherkin feature files under `specs/` (self marker, palettes, mission packages, layers, geofence, orientation, overlays, range-bearing, bloodhound, drawing, attachments, import/export, emergency, viewshed, radial menu, GPS, pairing line, tracks, go-to, video, fires, contacts). Each scenario quotes the ATAK Civilian Software User Manual and maps the step to a React component, CoT type, intent, and preference (REQ-SITE-044)
 - REQ-SITE-043 catalog and REQ-BDD-001 through REQ-BDD-022 so each of those workflows has a requirement row; tests fail if a catalog file is deleted
 - REQ-SITE-038 through REQ-SITE-042 specifying a standalone Symbol Sandbox: own route, canvas-first mobile layout, fullscreen preview, native touch on the symbol, and a shareable SIDC query parameter
 - REQ-SITE-035 through REQ-SITE-037 covering Sources page links, Home grid fit, and floating control visibility, areas that had no requirement and therefore no coverage

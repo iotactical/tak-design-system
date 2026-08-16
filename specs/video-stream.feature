@@ -1,33 +1,41 @@
-Feature: Video Stream Playback
+Feature: Video Player
+  Source: ATAK Civilian Software User Manual · Video Player
+
   As a TAK operator
-  I need to play video streams associated with map items
-  So that ISR and recon feeds are reachable from the COP
+  I need video aliases, TAK Server download, snapshots, and KLV SPI as the Software User Manual describes
+  So that UDP, RTSP, RTMP, and related streams play from the COP
 
   Background:
     Given the TAK application is running
-    And a marker "UAV-01" exists with a video alias
+    And the operator selects the [Video Player] icon
 
-  Scenario: Open a video stream from a marker
-    Given "UAV-01" publishes a playable video URL
-    When the operator chooses Video from the radial menu
-    Then a video player should open
-    And playback should start if the stream is reachable
+  Scenario: Play a listed video alias
+    # SUM: "Select the desired listed video alias or file name to begin playing the stored or streaming video. The video will display half the width of the screen."
+    Given an alias "UAV-01" is listed
+    When the operator selects "UAV-01"
+    Then intent "com.atakmap.android.video.VIDEO_TOOL" should open the player
+    And DockPane should occupy half the screen width
+    And a CoT type "b-m-p-s-p-loc" SPI should appear only if KLV metadata is present
 
-  Scenario: List known video aliases
-    Given the video catalog contains 2 aliases
-    When the operator opens Video
-    Then both aliases should be listed
-    And selecting an alias should open that stream
+  Scenario: Add a video alias
+    # SUM: "To add a video alias, select the [+] button at the top of the Video Player screen. Enter the necessary information for the selected stream type: Stream Type (UDP, RTSP, RTMP, RTMPS, TCP, RTP, HTTP, HTTPS, RAW) along with the necessary streaming information including, IP address..."
+    Given the operator selects [+]
+    When the operator enters stream type RTSP, address, port, and alias name
+    Then intent "com.atakmap.maps.video.ADD_ALIAS" should save the alias
+    And ListView should include the new name
+    And preference "video_dropdown_hidden_disconnect" should disconnect on hide only if enabled
 
-  Scenario: Associate a new video alias with a marker
-    Given the operator has a RTSP URL for a feed
-    When the operator adds the URL as a video alias on "UAV-01"
-    Then MarkerDetail should list the alias
-    And subsequent Video actions on "UAV-01" should offer that alias
+  Scenario: Download an alias from TAK Server
+    # SUM: "To download a video alias from a TAK Server, select the [Download] icon at the top of the Video Player screen, select the TAK Server."
+    Given TAK Server hosts aliases
+    When the operator downloads one
+    Then intent "com.atakmap.maps.video.DISPLAY" should be able to play it
+    And ConnectionStatus should remain Connected
 
-  Scenario: Report an unreachable stream
+  Scenario: Unreachable stream
+    # SUM: "To close the video player, select the [X] located at the bottom right corner of the video player or select the [Back] button."
     Given the selected alias host is unreachable
-    When the operator attempts playback
-    Then the player should not spin indefinitely without feedback
-    And the operator should see that the stream could not be opened
-    And the map marker should remain
+    When playback is attempted
+    Then DialogPanel should report that the stream could not be opened
+    And intent "com.atakmap.android.video.VIDEO_TOOL" should not spin without feedback
+    And the associated CoT type "a-f-G-U-C" map marker should remain

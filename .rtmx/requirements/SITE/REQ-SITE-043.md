@@ -37,7 +37,7 @@ Required additions (derived from ATAK intent namespaces and the SITE-007 remaind
 | `mission-packages.feature` | `missionpackage` | Interfaces / data packages |
 | `map-layers.feature` | `layers`, `grg` | overlay tokens |
 | `geofence.feature` | `geofence.component` | — |
-| `map-orientation.feature` | `mapcompass`, `compass` | `CompassHeading` |
+| `map-orientation.feature` | `mapcompass`, `compass` | `ToolBar`, `CoordinateDisplay` |
 | `overlay-hierarchy.feature` | `hierarchy` | Overlay manager |
 | `range-bearing.feature` | `toolbars` (RB/IQ) | `RangeBearing` |
 | `bloodhound.feature` | `bloodhound` | — |
@@ -62,7 +62,9 @@ are explicitly out of catalog for this requirement.
 - One `.feature` per catalog row, in `specs/`
 - Minimum four scenarios: at least one happy path, one validation or failure path
 - `Background` where the connection or map is a shared given
-- Name the React component in a Then/And when the UI is in `@iotactical/tak-react`
+- Scenarios follow ATAK Civilian Software User Manual instructions (REQ-SITE-044):
+  quote the SUM step, then map it to a React component, CoT type, intent, and
+  preference
 - Discover files from disk in `tests/bdd/test_gherkin.mjs`; do not hardcode a
   six-file allowlist
 
@@ -75,6 +77,7 @@ are explicitly out of catalog for this requirement.
 - [x] Tests fail if a catalog file is deleted
 - [x] Tests do not treat a six-file directory as complete
 - [x] Plugin-only tools remain unspecified until a later requirement
+- [x] SUM-to-platform mapping is required by REQ-SITE-044
 
 ## Validation
 - **Test**: tests/bdd/test_gherkin.mjs

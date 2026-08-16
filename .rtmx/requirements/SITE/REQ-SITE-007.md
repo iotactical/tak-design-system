@@ -35,6 +35,7 @@ menu, GPS, pairing line, tracks, go-to, video, fires, contacts).
 - [x] Steps reference TAK design system components where applicable
 - [x] Feature files parseable by standard Gherkin tooling (Cucumber)
 - [x] Remaining candidates from this list are specified under REQ-SITE-043
+- [x] Scenarios quote ATAK Civilian Software User Manual instructions and map them to components, CoT types, intents, and preferences (REQ-SITE-044)
 
 ## Validation
 - **Test**: tests/bdd/test_gherkin.mjs

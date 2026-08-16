@@ -1,62 +1,56 @@
 Feature: Route Planning and Navigation
+  Source: ATAK Civilian Software User Manual · Route Planning and Navigation
+
   As a TAK operator
-  I need to plan routes with waypoints and calculate distances
-  So that I can navigate and share movement plans with my team
+  I need Routes list, create, checkpoints, GO, cues, and export as the Software User Manual describes
+  So that Navigation appears under Overlay Manager and files land in /atak/export
 
   Background:
     Given the TAK application is running
-    And the operator is authenticated with callsign "NAV-01"
-    And the route planning tool is selected
+    And preference "locationCallsign" is "NAV-01"
+    And the operator selects the [Routes] icon
 
-  Scenario: Create a route with waypoints
-    Given the map view is displayed
-    When the operator taps on the map at "38.8977 N, 77.0365 W" to place waypoint "WP-1"
-    And the operator taps on the map at "38.9072 N, 77.0369 W" to place waypoint "WP-2"
-    And the operator taps on the map at "38.9200 N, 77.0450 W" to place waypoint "WP-3"
-    And the operator confirms the route with name "ROUTE-ALPHA"
-    Then the route "ROUTE-ALPHA" should appear on the map
-    And the route should contain 3 waypoints
-    And route segments should be drawn between consecutive waypoints
+  Scenario: Create a route with map taps and End
+    # SUM: "To create a new route, tap on [+], select the route type, and follow the on screen instructions. Select a location on the map to make it part of the route or long press to create Check Points along the route. Select [Undo] to reverse any changes and [End] to complete the Route."
+    Given the operator selects [+]
+    When the operator taps three map locations and selects [End]
+    Then intent "com.atakmap.android.maps.route.EDIT_ROUTE" should finish the route
+    And RoutePlanner should list the checkpoints
+    And a CoT type "b-m-r" route should appear
+    And Overlay Manager should list it under Navigation
 
-  Scenario: Calculate total route distance
-    Given route "ROUTE-ALPHA" exists with the following waypoints:
-      | waypoint | latitude | longitude |
-      | WP-1     | 38.8977  | -77.0365  |
-      | WP-2     | 38.9072  | -77.0369  |
-      | WP-3     | 38.9200  | -77.0450  |
-    When the operator opens the route detail panel for "ROUTE-ALPHA"
-    Then the total distance should be calculated and displayed in meters
-    And each segment distance should be listed individually
-    And the total distance should equal the sum of all segment distances
+  Scenario: Route details GO starts navigation
+    # SUM: "Once the [End] button is selected, the route details window opens. Within the Details window, the user can choose to navigate to the route by selecting the [GO] button"
+    Given route "ROUTE-ALPHA" exists
+    When the operator selects [GO]
+    Then intent "com.atakmap.android.maps.START_NAV" should begin navigation
+    And RangeBearing-style ETA to the next checkpoint should appear
+    And preference "useRouteVoiceCues" should control audible cues
 
-  Scenario: Reorder waypoints in a route
-    Given route "ROUTE-ALPHA" has waypoints in order "WP-1, WP-2, WP-3"
-    When the operator opens the waypoint list for "ROUTE-ALPHA"
-    And the operator drags waypoint "WP-3" to position 1
-    Then the waypoint order should update to "WP-3, WP-1, WP-2"
-    And the route line on the map should redraw to reflect the new order
-    And the total distance should recalculate
+  Scenario: Show All lists only on-screen routes
+    # SUM: "If the [Show All] box in the lower right is unchecked, only routes that are visible in the current map screen will be listed."
+    Given two routes exist and one is off-screen
+    When Show All is unchecked
+    Then ListView should omit the off-screen route
+    And preference "defaultRouteColor" should still color remaining routes
 
-  Scenario: Remove a waypoint from a route
-    Given route "ROUTE-ALPHA" has 3 waypoints
-    When the operator selects waypoint "WP-2" in the waypoint list
-    And the operator taps "Remove Waypoint"
-    Then the route should contain 2 waypoints
-    And waypoint "WP-2" should no longer appear on the map
-    And the route line should connect the remaining waypoints directly
+  Scenario: Export KML or GPX
+    # SUM: "The route can be exported to a file in either KML or GPX format. This file will be located in the “/atak/export” folder."
+    Given route "ROUTE-ALPHA" exists
+    When the operator selects Export as GPX
+    Then intent "com.atakmap.android.maps.ROUTE_EXPORT" should write /atak/export
+    And the CoT type "b-m-r" waypoints should round-trip
 
-  Scenario: Export route as a CoT message
-    Given route "ROUTE-ALPHA" exists with 3 waypoints
-    When the operator taps "Share Route" on the route detail panel
-    And the operator selects destination "TAK Server"
-    Then a CoT route message should be transmitted to the TAK Server
-    And the CoT message should contain a route element with all waypoint coordinates
-    And each waypoint should include its name and sequence number
+  Scenario: Import from file
+    # SUM: "Select the [Import] icon to import a route in one of two ways: either from a file or from a line on the map. Select [Import From File] to navigate to the location of the saved routes (in KML or GPX format)"
+    Given a GPX file exists
+    When the operator Import From File
+    Then intent "com.atakmap.android.maps.ROUTE_IMPORT" should load it
+    And Overlay Manager Navigation should list it
 
-  Scenario: Estimate travel time for a route
-    Given route "ROUTE-ALPHA" has a total distance of 2500 meters
-    When the operator sets movement speed to "Foot (5 km/h)"
-    Then the estimated travel time should be approximately 30 minutes
-    When the operator changes movement speed to "Vehicle (40 km/h)"
-    Then the estimated travel time should update to approximately 4 minutes
-    And the travel time should display in the route detail panel
+  Scenario: End navigation with x
+    # SUM: "Selecting the [x] will end navigation."
+    Given navigation is active
+    When the operator selects [x]
+    Then intent "com.atakmap.android.maps.END_NAV" should stop navigation
+    And the CoT type "b-m-r" route should remain on the map

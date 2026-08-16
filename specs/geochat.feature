@@ -1,63 +1,55 @@
-Feature: GeoChat Tactical Messaging
+Feature: GeoChat
+  Source: ATAK Civilian Software User Manual · Contacts · GeoChat Messaging
+
   As a TAK operator
-  I need to send and receive text messages with embedded geospatial data
-  So that I can communicate tactical information to my team
+  I need All Chat Rooms, role rooms, Teams, predefined pads, and unread badges as the Software User Manual describes
+  So that chat CoT matches ATAK GeoChat
 
   Background:
     Given the TAK application is running
-    And the operator is authenticated with callsign "SENDER-01"
-    And the operator is connected to the TAK Server
-    And the GeoChat panel is open
+    And preference "locationCallsign" is "SENDER-01"
+    And the operator is connected to a TAK Server
 
-  Scenario: Send a message to a chat channel
-    Given the operator is viewing the "All Chat Rooms" channel
-    When the operator types "Moving to rally point BRAVO"
-    And the operator taps the send button
-    Then the message "Moving to rally point BRAVO" should appear in the chat log
-    And the message should display the sender callsign "SENDER-01"
-    And the message should include a timestamp
-    And a GeoChat CoT message should be transmitted to the TAK Server
+  Scenario: Send in All Chat Rooms
+    # SUM: "Select [All Chat Rooms] to view all messages from or send messages to those present on the network or TAK Server."
+    Given ChatPanel is on All Chat Rooms
+    When the operator types "Moving to rally point BRAVO" and sends
+    Then a CoT type "b-t-f" GeoChat event should be transmitted
+    And intent "com.atakmap.android.chat.NEW_CHAT_MESSAGE" should append the line
+    And preference "audibleNotify" should not be required for the sender's own echo
 
-  Scenario: Receive a message from another operator
-    Given operator "REMOTE-02" sends a GeoChat message "Contact at grid 123456"
-    When the TAK application receives the GeoChat CoT event
-    Then the message "Contact at grid 123456" should appear in the chat log
-    And the sender should display as "REMOTE-02"
-    And an audible notification should trigger if notifications are enabled
+  Scenario: Predefined message pads
+    # SUM: "At the bottom of the Chat area are pre-defined messages that may be used to quickly create a message to send. Select the current menu button to scroll through the eight different menus of pre-defined messages, including: DFLT1, DFLT2, ASLT1, ASLT2, JM1, JM2, RECON1 and RECON2."
+    Given ChatPanel is open
+    When the operator taps a DFLT1 pad
+    Then ChatPanel should send that CoT type "b-t-f" text
+    And intent "com.atakmap.chatmessage.persistmessage" should persist it
 
-  Scenario: Switch between chat channels
-    Given the following chat channels exist:
-      | channel       |
-      | All Chat Rooms|
-      | Team Cyan     |
-      | Direct: ALPHA |
-    When the operator selects channel "Team Cyan"
-    Then the chat log should display only messages from the "Team Cyan" channel
-    And the channel header should display "Team Cyan"
-    And the message input should target the "Team Cyan" channel
+  Scenario: Unread badge on Contacts
+    # SUM: "A numbered red dot will appear on the [Contacts] icon when a message has been received successfully. The number denotes the number of unread messages that have been received."
+    Given 3 unread CoT type "b-t-f" messages arrive
+    When the operator views the toolbar
+    Then ToolBar should show a numbered red dot on Contacts
+    And intent "com.atakmap.android.chat.HISTORY_UPDATE" should keep the count until opened
+    And preference "audibleNotify" should play if enabled
 
-  Scenario: Unread badge count on channels
-    Given the operator is viewing channel "Team Cyan"
-    And 3 new messages arrive in channel "All Chat Rooms"
-    When the operator views the channel list
-    Then channel "All Chat Rooms" should display an unread badge with count 3
-    And channel "Team Cyan" should not display an unread badge
-    When the operator opens channel "All Chat Rooms"
-    Then the unread badge for "All Chat Rooms" should be cleared
+  Scenario: Pan To in an individual chat
+    # SUM: "Selecting the [Pan To] icon, located at the top right of the call sign in an individual chat, will pan the map interface to that user's location."
+    Given ChatPanel is in a conversation with "REMOTE-02"
+    When the operator selects [Pan To]
+    Then the map should center on that contact's CoT type "a-f-G-U-C" point
+    And SkittleMarker for that uid should be in view
 
-  Scenario: Embed a coordinate in a chat message
-    Given the operator is viewing channel "Team Cyan"
-    When the operator taps the attach location button
-    And the operator selects a point at "34.0522 N, 118.2437 W"
-    And the operator types "Rally here"
-    And the operator taps the send button
-    Then the message should contain an embedded coordinate "34.0522 N, 118.2437 W"
-    And the message should display a clickable coordinate link
-    And the GeoChat CoT message should include a point element
+  Scenario: Role rooms
+    # SUM: "Other groups available for viewing or sending messages are: Forward Observer, Groups, HQ, K9, Medic, RTO, Sniper, Team Lead, and Teams. If the user's current role is Forward Observer, HQ, K9, Medic, RTO, Sniper or Team Lead, that user can view or send messages to all other contacts with the same role."
+    Given preference "atakRoleType" is "Medic"
+    When the operator opens the Medic room
+    Then ChatPanel should target that role group
+    And CoT type "b-t-f" messages should not go to All Chat Rooms unless that room is selected
 
-  Scenario: View an embedded coordinate on the map
-    Given a chat message contains an embedded coordinate "34.0522 N, 118.2437 W"
-    When the operator taps the coordinate link in the message
-    Then the map should pan to coordinates "34.0522 N, 118.2437 W"
-    And a temporary marker should appear at the linked position
-    And the map zoom level should adjust to show the coordinate in context
+  Scenario: Mark message read
+    # SUM: "The user name who sent the message will appear with a numbered red dot next to their name."
+    Given an unread message from "REMOTE-02" exists
+    When the operator opens that conversation
+    Then intent "com.atakmap.chat.markmessageread" should clear the badge
+    And UserList should remove the red dot for that contact

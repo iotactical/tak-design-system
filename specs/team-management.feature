@@ -1,61 +1,50 @@
-Feature: Team Member Management
-  As a TAK team lead
-  I need to organize operators into teams and manage their status
-  So that I can coordinate tactical operations effectively
+Feature: Team Affiliation and Roles
+  Source: ATAK Civilian Software User Manual · Placement · Self-Marker
+
+  As a TAK operator
+  I need team color and role as the Software User Manual describes
+  So that self and contacts use the 15 team colors and TL, HQ, S, Medic, FO, RTO, K9 badges
 
   Background:
     Given the TAK application is running
-    And the operator is authenticated with callsign "LEAD-01"
-    And a connection to a TAK Server is established
+    And the operator is connected to a TAK Server
+    And preference "locationCallsign" is "LEAD-01"
 
-  Scenario: Set team color for an operator
-    Given the operator "LEAD-01" is on team "Unassigned"
-    When the operator opens the team settings panel
-    And the operator selects team color "Cyan"
-    Then the operator's team affiliation should update to "Cyan"
-    And the operator's map icon should display with a cyan indicator
-    And a CoT SA message should be broadcast with team color "Cyan"
+  Scenario: Set My Team
+    # SUM: "The color of the circle represents the user's Team affiliation, with additional lettering inside the circle to identify the role of the user on the team."
+    Given preference "locationTeam" is "Unassigned"
+    When the operator sets preference "locationTeam" to "Cyan"
+    Then a CoT type "a-f-G-U-C" SA event should include team Cyan
+    And SkittleMarker for self should tint Cyan
+    And UserList should show LEAD-01 on Cyan
 
-  Scenario: Discover team members on the network
-    Given the TAK Server has 5 connected operators
-    And 3 operators are on team "Cyan" and 2 are on team "Yellow"
-    When the operator opens the contacts list
-    Then the contacts list should display 5 team members
-    And each contact should show their callsign and team color
-    And each contact should show their last known position age
+  Scenario: Set My Role
+    # SUM: "Available roles include: Team Member, Team Lead (designated by a TL in the center of the marker), Headquarters (HQ in center), Sniper (S), Medic (+), Forward Observer (FO), RTO (R) or K9 (K9)."
+    Given the Self-Marker is visible
+    When the operator sets preference "atakRoleType" to "Team Lead"
+    Then SkittleMarker should show the TL badge
+    And the CoT type "a-f-G-U-C" SA event should include role Team Lead
 
-  Scenario: View the team roster
-    Given the following operators are connected:
-      | callsign  | team   | status |
-      | ALPHA-01  | Cyan   | active |
-      | BRAVO-02  | Cyan   | active |
-      | CHARLIE-03| Yellow | stale  |
-    When the operator opens the roster view
-    Then the roster should list 3 operators
-    And operators should be grouped by team color
-    And each entry should display callsign, team, and status
+  Scenario: Contacts grouped by team
+    # SUM: "The Contacts list includes a variety of ways in which a user may communicate with other users"
+    Given remote SA from Cyan and Yellow callsigns
+    When the operator opens Overlay Manager Teams and Contacts
+    Then intent "com.atakmap.android.contact.CONTACT_LIST" should list them
+    And UserList should group by team color
+    And MapOverlay Teams by color should match
 
-  Scenario: Filter roster by online and stale status
-    Given the roster contains 5 active and 3 stale team members
-    When the operator applies the filter "Active Only"
-    Then the roster should display 5 entries
-    And no stale operators should appear in the filtered list
-    When the operator applies the filter "Stale Only"
-    Then the roster should display 3 entries
-    And all displayed operators should have status "stale"
+  Scenario: Stale team member
+    # SUM: "If a contact is no longer online, it will be indicated by changing the contact listing to a yellow color and the marker changes to gray both in the list and on the map."
+    Given "BRAVO-02" has stopped sending
+    When intent "com.atakmap.android.cot.ITEM_STALE" fires
+    Then UserList should show yellow for "BRAVO-02"
+    And SkittleMarker should gray that uid
+    And the last CoT type "a-f-G-U-C" point should remain until expiration
 
-  Scenario: Team member goes stale
-    Given operator "BRAVO-02" last reported position 120 seconds ago
-    And the stale threshold is configured to 120 seconds
-    When the stale check timer fires
-    Then operator "BRAVO-02" status should change to "stale"
-    And the roster entry for "BRAVO-02" should show a stale badge
-    And the map icon for "BRAVO-02" should show reduced opacity
-
-  Scenario: Assign a role to a team member
-    Given operator "ALPHA-01" is on team "Cyan"
-    When the team lead selects operator "ALPHA-01" from the roster
-    And the team lead assigns role "Team Lead" to "ALPHA-01"
-    Then the roster entry for "ALPHA-01" should display role "Team Lead"
-    And the CoT SA message for "ALPHA-01" should include role "Team Lead"
-    And the map icon for "ALPHA-01" should display the team lead indicator
+  Scenario: Display type
+    # SUM: "Next, the user will be prompted to change their callsign and/or import preferences or data from a Mission Package."
+    Given TAK Device Setup is available
+    When the operator sets preference "locationCallsign" to "LEAD-01"
+    And preference "locationUnitType" to a ground unit
+    Then subsequent CoT type "a-f-G-U-C" events should use that callsign
+    And ConnectionStatus should stay Connected

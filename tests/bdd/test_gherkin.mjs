@@ -1,5 +1,6 @@
 // rtmx:req REQ-SITE-007
 // rtmx:req REQ-SITE-043
+// rtmx:req REQ-SITE-044
 // rtmx:req REQ-XW-050
 // rtmx:req REQ-XW-051
 // rtmx:req REQ-XW-052
@@ -36,7 +37,8 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const specsDir = join(__dirname, "..", "..", "specs");
+const root = join(__dirname, "..", "..");
+const specsDir = join(root, "specs");
 
 const ORIGINAL = [
   { file: "cot-lifecycle.feature", req: "REQ-XW-050", minScenarios: 3 },
@@ -74,10 +76,30 @@ const ADDITIONS = [
 
 const CATALOG = [...ORIGINAL, ...ADDITIONS];
 
+const REACT_COMPONENTS = readdirSync(join(root, "packages", "react", "src", "components"), {
+  withFileTypes: true,
+})
+  .filter((entry) => entry.isDirectory())
+  .map((entry) => entry.name);
+
+const INTENT_ACTIONS = new Set(
+  JSON.parse(readFileSync(join(root, "data", "atak-intents.json"), "utf-8")).groups.flatMap(
+    (group) => group.intents.map((intent) => intent.action)
+  )
+);
+
+const PREFERENCE_KEYS = new Set(
+  JSON.parse(readFileSync(join(root, "data", "atak-preference-keys.json"), "utf-8")).keys
+);
+
 function featureFilesOnDisk() {
   return readdirSync(specsDir)
     .filter((name) => name.endsWith(".feature"))
     .sort();
+}
+
+function quoted(content, pattern) {
+  return [...content.matchAll(pattern)].map((match) => match[1]);
 }
 
 function assertGherkinShape(file, content, minScenarios) {
@@ -112,7 +134,56 @@ function assertGherkinShape(file, content, minScenarios) {
       /^\s*(Then )/m,
       `Scenario "${scenarioLabel}" in ${file} must have a Then step`
     );
+    assert.match(
+      scenario,
+      /^\s*# SUM: /m,
+      `Scenario "${scenarioLabel}" in ${file} must quote a Software User Manual instruction with "# SUM:"`
+    );
   }
+}
+
+function assertSumMapping(file, content) {
+  assert.match(
+    content,
+    /Source:\s*ATAK Civilian Software User Manual/,
+    `${file} must cite the ATAK Civilian Software User Manual`
+  );
+
+  const intents = quoted(content, /intent "([^"]+)"/g);
+  assert.ok(intents.length > 0, `${file} must map at least one intent "…"`);
+  for (const action of intents) {
+    assert.ok(
+      INTENT_ACTIONS.has(action),
+      `${file} cites unknown intent "${action}"; must exist in data/atak-intents.json`
+    );
+  }
+
+  const prefs = quoted(content, /preference "([^"]+)"/g);
+  assert.ok(prefs.length > 0, `${file} must map at least one preference "…"`);
+  for (const key of prefs) {
+    assert.ok(
+      PREFERENCE_KEYS.has(key),
+      `${file} cites unknown preference "${key}"; must exist in data/atak-preference-keys.json`
+    );
+  }
+
+  const cotTypes = quoted(content, /CoT type "([^"]+)"/g);
+  assert.ok(cotTypes.length > 0, `${file} must map at least one CoT type "…"`);
+  for (const cotType of cotTypes) {
+    assert.match(
+      cotType,
+      /^[a-z](-[A-Za-z0-9]+)+$/,
+      `${file} CoT type "${cotType}" is not a TAK type token`
+    );
+  }
+
+  const namedComponents = REACT_COMPONENTS.filter((name) =>
+    new RegExp(`\\b${name}\\b`).test(content)
+  );
+  assert.ok(
+    namedComponents.length > 0,
+    `${file} must name at least one @iotactical/tak-react component (${REACT_COMPONENTS.join(", ")})`
+  );
 }
 
 describe("BDD Gherkin catalog", () => {
@@ -152,6 +223,14 @@ describe("BDD Gherkin catalog", () => {
     );
   });
 
+  // rtmx:req REQ-SITE-044
+  it("test_sum_mapping: catalog files quote the Software User Manual and map platform surfaces", () => {
+    for (const { file } of CATALOG) {
+      const content = readFileSync(join(specsDir, file), "utf-8");
+      assertSumMapping(file, content);
+    }
+  });
+
   for (const { file, req, minScenarios } of CATALOG) {
     const filePath = join(specsDir, file);
 
@@ -160,6 +239,7 @@ describe("BDD Gherkin catalog", () => {
         assert.ok(existsSync(filePath), `${file} must exist at ${filePath}`);
         const content = readFileSync(filePath, "utf-8");
         assertGherkinShape(file, content, minScenarios);
+        assertSumMapping(file, content);
       });
     });
   }
@@ -173,6 +253,7 @@ describe("BDD Gherkin catalog", () => {
       it(`${file} still parses as Gherkin`, () => {
         const content = readFileSync(join(specsDir, file), "utf-8");
         assertGherkinShape(file, content, 3);
+        assertSumMapping(file, content);
       });
     }
   });
