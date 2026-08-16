@@ -136,6 +136,15 @@ describe('REQ-XW-118: Full taxonomy search index', () => {
     );
     assert.ok(content.includes('CoT Lifecycle'), 'Should include CoT Lifecycle spec');
     assert.ok(content.includes('Team Management'), 'Should include Team Management spec');
+    assert.ok(content.includes('self-marker.feature'), 'Should include Self Marker spec');
+    assert.ok(content.includes('mission-packages.feature'), 'Should include Mission Packages spec');
+    assert.ok(content.includes('geofence.feature'), 'Should include Geofence spec');
+    assert.ok(content.includes('contacts.feature'), 'Should include Contacts spec');
+    const specFiles = [...content.matchAll(/file: '([^']+\.feature)'/g)].map((m) => m[1]);
+    assert.ok(
+      specFiles.length > 6,
+      `Search index lists ${specFiles.length} BDD specs; ATAK catalog is more than six`,
+    );
   });
 
   it('palette entries include team colors and roles', () => {

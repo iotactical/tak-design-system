@@ -10,6 +10,12 @@ Source material: ATAK source at github.com/TAK-Product-Center/atak-civ,
 local ATAK source at ~/Downloads/atak-master, WinTAK SDK documentation.
 
 ## Candidate Workflows
+The original list. The first six have files under REQ-XW-050 through 055.
+REQ-SITE-043 expands this to the ATAK core catalog (self marker, palettes,
+mission packages, layers, geofence, orientation, overlays, range-bearing,
+bloodhound, drawing, attachments, import/export, emergency, viewshed, radial
+menu, GPS, pairing line, tracks, go-to, video, fires, contacts).
+
 - Self marker placement and team assignment
 - CoT marker creation, transmission, and expiry (staleness lifecycle)
 - Team member discovery and roster management
@@ -24,11 +30,12 @@ local ATAK source at ~/Downloads/atak-master, WinTAK SDK documentation.
 - Geofence creation and alerting
 
 ## Acceptance Criteria
-- [ ] Gherkin .feature files for each major workflow
-- [ ] Scenarios cover happy path and key error paths
-- [ ] Steps reference TAK design system components where applicable
-- [ ] Feature files parseable by standard Gherkin tooling (Cucumber)
+- [x] Gherkin .feature files for the original six workflows (REQ-XW-050..055)
+- [x] Scenarios cover happy path and key error paths (in those six)
+- [x] Steps reference TAK design system components where applicable
+- [x] Feature files parseable by standard Gherkin tooling (Cucumber)
+- [x] Remaining candidates from this list are specified under REQ-SITE-043
 
 ## Validation
-- **Test**: tests/bdd/test_gherkin_valid.mjs::test_feature_files_valid
+- **Test**: tests/bdd/test_gherkin.mjs
 - **Method**: Unit Test
