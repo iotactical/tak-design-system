@@ -1,0 +1,968 @@
+{
+  "source": "https://github.com/TAK-Product-Center/atak-civ/tree/main/atak/ATAK/app/src/main/res/xml",
+  "description": "Every ATAK Settings XML screen under res/xml. Preference screens with zero android:key (chat_modes, provider_paths) are listed with empty keys.",
+  "count": 67,
+  "screens": [
+    {
+      "file": "accounts.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/accounts.xml",
+      "key_count": 1,
+      "keys": [
+        "accounts_category"
+      ]
+    },
+    {
+      "file": "advanced_logging_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/advanced_logging_preferences.xml",
+      "key_count": 10,
+      "keys": [
+        "collect_metrics",
+        "debug_logging_preferences_category",
+        "generate_detail_pool",
+        "generate_full_pool",
+        "loggingDisclaimer",
+        "loggingfile",
+        "loggingfile_error_only",
+        "loggingfile_upload_debug",
+        "lognettraffictofile",
+        "network_logging_preferences_category"
+      ]
+    },
+    {
+      "file": "alert_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/alert_preferences.xml",
+      "key_count": 6,
+      "keys": [
+        "alert_audible",
+        "alert_notification",
+        "alert_preferences_category",
+        "alert_vibration",
+        "individual_alert_notification",
+        "sms_numbers"
+      ]
+    },
+    {
+      "file": "app_mgmt_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/app_mgmt_preferences.xml",
+      "key_count": 12,
+      "keys": [
+        "appMgmtEnableUpdateServer",
+        "atakPluginScanningOnStartup",
+        "atakQuickConfigUpdateServer",
+        "atakUpdateLocalPath",
+        "atakUpdateLocalPathReset",
+        "atakUpdateServerUrl",
+        "repoStartupSync",
+        "tak_package_mgmt_local_preferences_category",
+        "tak_package_mgmt_preferences_category",
+        "tak_package_mgmt_remote_preferences_category",
+        "updateServerCaLocation",
+        "updateServerCaPassword"
+      ]
+    },
+    {
+      "file": "app_restrictions.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/app_restrictions.xml",
+      "key_count": 6,
+      "keys": [
+        "enterpriseConfigurationDataPackage",
+        "enterpriseConfigurationDataPackage2",
+        "enterpriseConfigurationDataPackage3",
+        "enterpriseConfigurationDataPackage4",
+        "enterpriseConfigurationDataPackage5",
+        "enterpriseConfigurationPreferences"
+      ]
+    },
+    {
+      "file": "atak_docs_preference.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/atak_docs_preference.xml",
+      "key_count": 7,
+      "keys": [
+        "atakChangeLog",
+        "atakDatasets",
+        "atakDocumentation",
+        "atakDocumentationTranslated",
+        "atakFlavorAddendum",
+        "atakIconGlossary",
+        "documentation_category"
+      ]
+    },
+    {
+      "file": "basic_display_settings.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/basic_display_settings.xml",
+      "key_count": 10,
+      "keys": [
+        "basic_display_settings_category",
+        "coordinate_entry_tabs",
+        "map_center_designator",
+        "map_eyealt_visible",
+        "map_scale_rounding",
+        "map_scale_visible",
+        "map_zoom_visible",
+        "self_coord_info_display",
+        "sidepane_handle_shade",
+        "unitPreferences"
+      ]
+    },
+    {
+      "file": "bloodhound_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/bloodhound_preferences.xml",
+      "key_count": 16,
+      "keys": [
+        "bloodhound_eta_preference_category",
+        "bloodhound_flash_color_pref",
+        "bloodhound_flash_eta",
+        "bloodhound_inner_color_pref",
+        "bloodhound_inner_eta",
+        "bloodhound_middle_color_pref",
+        "bloodhound_outer_color_pref",
+        "bloodhound_outer_eta",
+        "bloodhound_preference_category",
+        "bloodhound_reroute_distance_pref",
+        "bloodhound_reroute_timer_pref",
+        "bloodhound_routing_preference",
+        "rab_bloodhound_display_textwidget",
+        "rab_bloodhound_flash_colors",
+        "rab_bloodhound_large_textwidget",
+        "rab_bloodhound_zoom"
+      ]
+    },
+    {
+      "file": "bluetooth_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/bluetooth_preferences.xml",
+      "key_count": 3,
+      "keys": [
+        "atakBluetoothReconnectSeconds",
+        "atakControlBluetooth",
+        "bluetoorh_preferences_category"
+      ]
+    },
+    {
+      "file": "bread_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/bread_preferences.xml",
+      "key_count": 14,
+      "keys": [
+        "bread_crumb_preferences_category",
+        "bread_dist_threshold",
+        "bread_track_timegap_threshold",
+        "max_num_bread_tracks",
+        "toggle_log_tracks",
+        "toggle_rotate_track_colors",
+        "track_crumb_size",
+        "track_csv_export_headers",
+        "track_history_default_color",
+        "track_history_preferences_category",
+        "track_infinite",
+        "track_kml_export_timestamps",
+        "track_line_to_surface",
+        "track_prefix"
+      ]
+    },
+    {
+      "file": "call_sign_preference.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/call_sign_preference.xml",
+      "key_count": 5,
+      "keys": [
+        "atakRoleTypeAction",
+        "callsign_category",
+        "locationCallsign",
+        "locationTeam",
+        "userRemarks"
+      ]
+    },
+    {
+      "file": "callsign_device_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/callsign_device_preferences.xml",
+      "key_count": 8,
+      "keys": [
+        "bluetooth",
+        "callSignPrefs",
+        "callsign_and_device_preferences_category",
+        "contactPrefs",
+        "devicePrefs",
+        "encryptPassword",
+        "prefManage",
+        "reportingPrefs"
+      ]
+    },
+    {
+      "file": "chat_modes.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/chat_modes.xml",
+      "key_count": 0,
+      "keys": []
+    },
+    {
+      "file": "chat_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/chat_preferences.xml",
+      "key_count": 10,
+      "keys": [
+        "audibleNotify",
+        "chatAddress",
+        "chatPort",
+        "clearHistory",
+        "enableToast",
+        "exportHistory",
+        "geochat_network_preferences_category",
+        "history_preferences_category",
+        "notification_preferences_category",
+        "vibratePhone"
+      ]
+    },
+    {
+      "file": "color_and_tinting.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/color_and_tinting.xml",
+      "key_count": 3,
+      "keys": [
+        "color_tinting_category",
+        "my_actionbar_settings",
+        "my_location_icon_color"
+      ]
+    },
+    {
+      "file": "contact_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/contact_preferences.xml",
+      "key_count": 9,
+      "keys": [
+        "alternateContactCategory",
+        "preferAltNumber",
+        "saAlternativeNumber",
+        "saEmailAddress",
+        "saHasPhoneNumber",
+        "saSipAddress",
+        "saSipAddressAssignment",
+        "saURN",
+        "saXmppUsername"
+      ]
+    },
+    {
+      "file": "control_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/control_preferences.xml",
+      "key_count": 11,
+      "keys": [
+        "control_preferences_category",
+        "eud_api_disable_option",
+        "forceEnglish",
+        "lockBehavior",
+        "mediaPreference",
+        "other_general_control_preferences_category",
+        "override_permission_request",
+        "scrollToSelfOnStart",
+        "selfCoordinate",
+        "staleData",
+        "userTouch"
+      ]
+    },
+    {
+      "file": "coordentry_preference_fragment.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/coordentry_preference_fragment.xml",
+      "key_count": 2,
+      "keys": [
+        "coordEntryPreferences",
+        "pull_elevation_mode"
+      ]
+    },
+    {
+      "file": "custom_actionbar_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/custom_actionbar_preferences.xml",
+      "key_count": 5,
+      "keys": [
+        "@string/default_actionbar_colors",
+        "@string/selected_actionbar_background_color",
+        "@string/selected_actionbar_icon_color",
+        "landscape_extended_buttons",
+        "nav_orientation_right"
+      ]
+    },
+    {
+      "file": "device_details_preference.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/device_details_preference.xml",
+      "key_count": 2,
+      "keys": [
+        "deviceDetails",
+        "settingsDebugging"
+      ]
+    },
+    {
+      "file": "device_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/device_preferences.xml",
+      "key_count": 10,
+      "keys": [
+        "atakRoleTypeAction",
+        "device_preferences_category",
+        "gpsSettings",
+        "locationCallsign",
+        "locationTeam",
+        "locationUnitTypeAction",
+        "locationUseWRCallsign",
+        "lrfSettings",
+        "symbologyProvider",
+        "userRemarks"
+      ]
+    },
+    {
+      "file": "dex_options_prefs.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/dex_options_prefs.xml",
+      "key_count": 2,
+      "keys": [
+        "dexControls",
+        "dex_options_category"
+      ]
+    },
+    {
+      "file": "display_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/display_preferences.xml",
+      "key_count": 8,
+      "keys": [
+        "3DRendering",
+        "additionalDisplay",
+        "adjust_toolbar_preferences_category",
+        "basic_display_settings",
+        "dexOptions",
+        "my_actionbar_settings",
+        "my_location_icon_color",
+        "usableSettings"
+      ]
+    },
+    {
+      "file": "elevation_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/elevation_preferences.xml",
+      "key_count": 8,
+      "keys": [
+        "coordEntryPreferences",
+        "dataUsagePreferences",
+        "elevation_data_category",
+        "force_dted_elevation_only",
+        "prefs_dted_download",
+        "prefs_dted_stream",
+        "prefs_dted_stream_server",
+        "pull_elevation_mode"
+      ]
+    },
+    {
+      "file": "encrypt_preference.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/encrypt_preference.xml",
+      "key_count": 1,
+      "keys": [
+        "encryptionPassphrase"
+      ]
+    },
+    {
+      "file": "file_overlay_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/file_overlay_preferences.xml",
+      "key_count": 2,
+      "keys": [
+        "file_overlay_category",
+        "prefs_file_label"
+      ]
+    },
+    {
+      "file": "fires_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/fires_preferences.xml",
+      "key_count": 20,
+      "keys": [
+        "autosendStaleEnabled",
+        "autosendStaleInterval",
+        "autosend_prefs_category",
+        "bullseyeDirection",
+        "bullseyeDistance",
+        "bullseyeNumRings",
+        "bullseyeRadiusRings",
+        "bullseyeRingsVisible",
+        "bullseye_preference_category",
+        "coord_entry_prefs_category",
+        "expandedDangerClose",
+        "fire_prefs_category",
+        "firesNumberOfSpis",
+        "goto_tool_use_last_point",
+        "hostileUpdateDelay",
+        "legacyFiresToolbarMode",
+        "preference_broadcast_delete",
+        "rapid_mgrs_dialog",
+        "spiFahSize",
+        "spiUpdateDelay"
+      ]
+    },
+    {
+      "file": "geocoder_preference_fragment.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/geocoder_preference_fragment.xml",
+      "key_count": 4,
+      "keys": [
+        "address_lookup_preferences",
+        "enableGeocoder",
+        "geocodeSupplier",
+        "geocodeTestConnection"
+      ]
+    },
+    {
+      "file": "gridlines_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/gridlines_preferences.xml",
+      "key_count": 4,
+      "keys": [
+        "display_preference_category",
+        "pref_grid_color",
+        "pref_grid_type",
+        "prefs_grid_default_show"
+      ]
+    },
+    {
+      "file": "importstyle_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/importstyle_preferences.xml",
+      "key_count": 2,
+      "keys": [
+        "import_style_default_preferences_category",
+        "pref_overlay_style_outline_color"
+      ]
+    },
+    {
+      "file": "isrv_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/isrv_preferences.xml",
+      "key_count": 10,
+      "keys": [
+        "address_category",
+        "configuration_category",
+        "dns_servers_category",
+        "network_config",
+        "network_dhcp",
+        "network_static_dns1",
+        "network_static_dns2",
+        "network_static_gateway",
+        "network_static_ip_address",
+        "network_static_subnet_mask"
+      ]
+    },
+    {
+      "file": "layers_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/layers_preferences.xml",
+      "key_count": 3,
+      "keys": [
+        "imagery_layer_outline_preferences_category",
+        "pref_layer_outline_color",
+        "prefs_layer_outlines_default_show"
+      ]
+    },
+    {
+      "file": "legacy_prefs.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/legacy_prefs.xml",
+      "key_count": 6,
+      "keys": [
+        "atakContinuousRender",
+        "atakDeveloperTools",
+        "atakForceAirplaneRadioList",
+        "disableLeyGuard",
+        "legacy_preferences_category",
+        "pointDroppingBehavior"
+      ]
+    },
+    {
+      "file": "locking_preference.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/locking_preference.xml",
+      "key_count": 2,
+      "keys": [
+        "disableFloatToBottom",
+        "lock_behavior_category"
+      ]
+    },
+    {
+      "file": "logging_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/logging_preferences.xml",
+      "key_count": 7,
+      "keys": [
+        "advanced_logging",
+        "app_logging_preferences_category",
+        "atakExportCrashLogs",
+        "collect_crashlogs",
+        "collect_metrics",
+        "enableAutoUploadLogs",
+        "realtime_metrics"
+      ]
+    },
+    {
+      "file": "lrf_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/lrf_preferences.xml",
+      "key_count": 2,
+      "keys": [
+        "lrfCategory",
+        "nonBluetoothLaserRangeFinder"
+      ]
+    },
+    {
+      "file": "main_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/main_preferences.xml",
+      "key_count": 10,
+      "keys": [
+        "about",
+        "atakAccounts",
+        "atakControlOptions",
+        "bluetoothPref",
+        "deviceSettings",
+        "documentation",
+        "generalDisplayPref",
+        "preferences_category",
+        "settingsPref",
+        "toolsPref"
+      ]
+    },
+    {
+      "file": "media_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/media_preferences.xml",
+      "key_count": 7,
+      "keys": [
+        "mediaLayerCacheForceRescan",
+        "media_preferences_category",
+        "prefs_use_klv_elevation",
+        "prompt_photo_rename",
+        "quick_pic_preferences",
+        "quickpic.camera_chooser",
+        "secureDeleteTimeout"
+      ]
+    },
+    {
+      "file": "metrics_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/metrics_preferences.xml",
+      "key_count": 6,
+      "keys": [
+        "collect_metrics",
+        "generate_detail_pool",
+        "generate_full_pool",
+        "key_for_category",
+        "loggingDisclaimer",
+        "realtime_metrics"
+      ]
+    },
+    {
+      "file": "missionpackage_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/missionpackage_preferences.xml",
+      "key_count": 13,
+      "keys": [
+        "advanced_network_settings",
+        "datapackage_general settings",
+        "datapackage_overlay_manager_settings",
+        "dpgkRootVisibilityToggle",
+        "fileshareDownloadAttempts",
+        "filesharingAllServers",
+        "filesharingConnectionTimeoutSecs",
+        "filesharingEnabled",
+        "filesharingSecureWebServerPort",
+        "filesharingSizeThresholdNoGo",
+        "filesharingTransferTimeoutSecs",
+        "filesharingWebServerLegacyHttpEnabled",
+        "filesharingWebServerPort"
+      ]
+    },
+    {
+      "file": "my_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/my_preferences.xml",
+      "key_count": 9,
+      "keys": [
+        "about",
+        "accounts",
+        "callSignAndDevicePrefs",
+        "controlPrefs",
+        "displayPrefs",
+        "documentation",
+        "legacyPrefs",
+        "networkPrefs",
+        "toolPrefs"
+      ]
+    },
+    {
+      "file": "network_connections_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/network_connections_preferences.xml",
+      "key_count": 33,
+      "keys": [
+        "apiCertEnrollmentKeyLength",
+        "apiCertEnrollmentPort",
+        "apiSecureServerPort",
+        "apiUnsecureServerPort",
+        "autoDisableMeshSAWhenStreaming",
+        "caLocation",
+        "caPassword",
+        "certEnrollmentExport",
+        "certificateLocation",
+        "clientPassword",
+        "configureNonStreamingEncryption",
+        "default_client_credentials",
+        "deviceProfileEnableOnConnect",
+        "displayServerConnectionWidget",
+        "enableNonStreamingConnections",
+        "httpClientPermissiveMode",
+        "input_output_management_category",
+        "insertDestInDirectedCoT",
+        "manageInputsLink",
+        "manageOutputsLink",
+        "manageStreamingLink",
+        "monitorServerConnections",
+        "multicastTTL",
+        "network_multicast_loopback",
+        "network_quic_enabled",
+        "network_tweaks_category",
+        "onlyStreamingWithVPN",
+        "ppp0_highspeed_capable",
+        "server_connections_category",
+        "showIP",
+        "tcpConnectTimeout",
+        "udpNoDataTimeout",
+        "waveRelayRedirect"
+      ]
+    },
+    {
+      "file": "network_gps_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/network_gps_preferences.xml",
+      "key_count": 6,
+      "keys": [
+        "gps.update.interval",
+        "listenPort",
+        "mockingOption",
+        "networkGpsCategory",
+        "useGPSTime",
+        "useTerrainElevationSelfMarker"
+      ]
+    },
+    {
+      "file": "network_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/network_preferences.xml",
+      "key_count": 4,
+      "keys": [
+        "networkSettings",
+        "network_preferences_category",
+        "serverConnections",
+        "tadiljSettings"
+      ]
+    },
+    {
+      "file": "night_vision_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/night_vision_preferences.xml",
+      "key_count": 7,
+      "keys": [
+        "external_applications_category",
+        "external_night_vision_launch",
+        "loc_map_widget",
+        "loc_notification",
+        "loc_self_overlay_box",
+        "location_options_category",
+        "night_vision_widget"
+      ]
+    },
+    {
+      "file": "off_scr_indi_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/off_scr_indi_preferences.xml",
+      "key_count": 4,
+      "keys": [
+        "offscreen_indicator_dist_threshold",
+        "offscreen_indicator_timeout_threshold",
+        "offscreen_indicators_preferences_category",
+        "toggle_offscreen_indicators"
+      ]
+    },
+    {
+      "file": "other_display_prefs.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/other_display_prefs.xml",
+      "key_count": 18,
+      "keys": [
+        "atakControlOtherUserNotification",
+        "atakControlReverseOrientation",
+        "atakControlShortenLabels",
+        "atakControlShowLabels",
+        "atakDisableSoftkeyIllumination",
+        "atakForcedBrightness",
+        "atakOffScrIndiOptions",
+        "atakScreenLock",
+        "broadcast_disable",
+        "displayAsSymbologyGraphic",
+        "fade_notification",
+        "frame_limit",
+        "gridLinesPreference",
+        "imagery_tab_name",
+        "layerOutlinesPreference",
+        "other_miscellaneous_display_options",
+        "overlayStylePreference",
+        "overlay_manager_width_height"
+      ]
+    },
+    {
+      "file": "point_drop_behavior.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/point_drop_behavior.xml",
+      "key_count": 3,
+      "keys": [
+        "centerDesignatorDuringPointDrop",
+        "legacyPointDropNaming",
+        "point_dropping_behavior_category"
+      ]
+    },
+    {
+      "file": "preference_management.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/preference_management.xml",
+      "key_count": 5,
+      "keys": [
+        "loadPrefs",
+        "pref_import_pref_action",
+        "preference_management_category",
+        "prepareForClone",
+        "savePrefs"
+      ]
+    },
+    {
+      "file": "prompt_network_preference.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/prompt_network_preference.xml",
+      "key_count": 4,
+      "keys": [
+        "advanced_network_settings",
+        "dataPackage",
+        "network_preferences_category",
+        "quickConnect"
+      ]
+    },
+    {
+      "file": "provider_paths.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/provider_paths.xml",
+      "key_count": 0,
+      "keys": []
+    },
+    {
+      "file": "reporting_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/reporting_preferences.xml",
+      "key_count": 15,
+      "keys": [
+        "constantReportingRateReliable",
+        "constantReportingRateUnreliable",
+        "dispatchLocationCotExternal",
+        "dispatchLocationCotExternalAtStart",
+        "dispatchLocationHidden",
+        "dispatchTAKVersionNumber",
+        "dynamicReportingRateMaxReliable",
+        "dynamicReportingRateMaxUnreliable",
+        "dynamicReportingRateMinReliable",
+        "dynamicReportingRateMinUnreliable",
+        "dynamicReportingRateStationaryReliable",
+        "dynamicReportingRateStationaryUnreliable",
+        "locationReportingStrategy",
+        "publishCategory",
+        "restoreRecordedLocation"
+      ]
+    },
+    {
+      "file": "route_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/route_preferences.xml",
+      "key_count": 30,
+      "keys": [
+        "attachment_billboards_category",
+        "defaultRouteColor",
+        "driving_category",
+        "elevProfileCenterOnSeeker",
+        "elevProfileInterpolateAlt",
+        "flying_category",
+        "gpxImportCheckpointsForNamedRoutePoints",
+        "kmlExportCheckpointMode",
+        "kmlExportGroundClamp",
+        "other_category",
+        "route_billboard_distance_m",
+        "route_billboard_enabled",
+        "route_preferences_category",
+        "route_track_up_locked_on",
+        "route_vibrate_at_checkpoint",
+        "swimming_category",
+        "useRouteVoiceCues",
+        "walking_category",
+        "watercraft_category",
+        "waypointBubble.Driving",
+        "waypointBubble.Flying",
+        "waypointBubble.Swimming",
+        "waypointBubble.Walking",
+        "waypointBubble.Watercraft",
+        "waypointOffRouteBubble.Driving",
+        "waypointOffRouteBubble.Flying",
+        "waypointOffRouteBubble.Swimming",
+        "waypointOffRouteBubble.Walking",
+        "waypointOffRouteBubble.Watercraft",
+        "waypointPrefix"
+      ]
+    },
+    {
+      "file": "self_coordinate.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/self_coordinate.xml",
+      "key_count": 4,
+      "keys": [
+        "self_coord_action",
+        "self_coord_info_display",
+        "self_coordinate_category",
+        "selfcoord_legacy_enlarge"
+      ]
+    },
+    {
+      "file": "self_marker_custom_pref_fragment.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/self_marker_custom_pref_fragment.xml",
+      "key_count": 8,
+      "keys": [
+        "change_custom_gps_color",
+        "change_custom_gps_outline_color",
+        "color_category",
+        "custom_color_gps_icon_pref",
+        "default_gps_icon",
+        "location_marker_scale_key",
+        "size_category",
+        "team_color_gps_icon"
+      ]
+    },
+    {
+      "file": "specific_tool_preference.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/specific_tool_preference.xml",
+      "key_count": 1,
+      "keys": [
+        "specific_tool_preferences_category"
+      ]
+    },
+    {
+      "file": "stale_data_prefs.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/stale_data_prefs.xml",
+      "key_count": 5,
+      "keys": [
+        "expireEverything",
+        "expireStaleItemsTime",
+        "expireUnknowns",
+        "staleRemoteDisconnects",
+        "stale_data_preferences"
+      ]
+    },
+    {
+      "file": "support_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/support_preferences.xml",
+      "key_count": 8,
+      "keys": [
+        "atakdocs",
+        "deviceDetails",
+        "loggingPrefs",
+        "resetHints",
+        "support_category",
+        "takInitDeviceConfig",
+        "takSupportInfo",
+        "userFeedback"
+      ]
+    },
+    {
+      "file": "tadilj_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/tadilj_preferences.xml",
+      "key_count": 2,
+      "keys": [
+        "tadiljPersistedIds",
+        "tadilj_settings_category"
+      ]
+    },
+    {
+      "file": "takgov_eud_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/takgov_eud_preferences.xml",
+      "key_count": 5,
+      "keys": [
+        "eud_api_client_status",
+        "eud_api_general_preferences",
+        "eud_api_resource_sync_preferences",
+        "eud_api_sync_mapsources",
+        "eud_api_sync_plugins"
+      ]
+    },
+    {
+      "file": "three_d_rendering.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/three_d_rendering.xml",
+      "key_count": 2,
+      "keys": [
+        "3D_rendering_options_category",
+        "atakGlobeModeEnabled"
+      ]
+    },
+    {
+      "file": "tools_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/tools_preferences.xml",
+      "key_count": 3,
+      "keys": [
+        "appsPref",
+        "specTools",
+        "tools_prefereces_category"
+      ]
+    },
+    {
+      "file": "unit_display_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/unit_display_preferences.xml",
+      "key_count": 20,
+      "keys": [
+        "alt_display_agl",
+        "alt_display_pref",
+        "alt_unit_pref",
+        "compass_heading_display",
+        "coord_display_pref",
+        "coordinate_preferences_category",
+        "domain_preferences_category",
+        "rab_brg_units_pref",
+        "rab_color_pref",
+        "rab_dist_slant_range",
+        "rab_north_ref_pref",
+        "rab_preference_show_eta",
+        "rab_rng_units_pref",
+        "rng_feet_display_pref",
+        "rng_meters_display_pref",
+        "set_domain_pref",
+        "speed_unit_pref",
+        "unit_threshold_category",
+        "units_category",
+        "visual_preferences_category"
+      ]
+    },
+    {
+      "file": "usability_settings.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/usability_settings.xml",
+      "key_count": 12,
+      "keys": [
+        "atakAdjustCurvedDisplay",
+        "dim_map_with_brightness_key",
+        "disable_autolink_mapitem_links",
+        "displaySettings",
+        "faux_nav_bar",
+        "faux_nav_bar_reverse",
+        "label_text_size",
+        "largeActionBar",
+        "largeTextMode",
+        "relativeOverlaysScalingRadioList",
+        "tilt_rotation_menu_auto_close",
+        "usability_settings_category"
+      ]
+    },
+    {
+      "file": "user_touch_prefs.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/user_touch_prefs.xml",
+      "key_count": 6,
+      "keys": [
+        "atakBackButtonCenterSelf",
+        "atakControlAskToQuit",
+        "atakControlQuitOnBack",
+        "atakDoubleTapToZoom",
+        "atakLongPressMap",
+        "user_touch_preferences_category"
+      ]
+    },
+    {
+      "file": "video_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/video_preferences.xml",
+      "key_count": 4,
+      "keys": [
+        "recordUdpTool",
+        "video_disable_audio",
+        "video_mute_when_hidden",
+        "video_preferences_category"
+      ]
+    },
+    {
+      "file": "wms_preferences.xml",
+      "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/ATAK/app/src/main/res/xml/wms_preferences.xml",
+      "key_count": 9,
+      "keys": [
+        "grgRootVisibilityToggle",
+        "prefs_enable_smart_cache",
+        "prefs_layer_grg_map_interaction",
+        "prefs_smart_cache_download_limit",
+        "redeploywms",
+        "smart_cache_preference_category",
+        "volumemapswitcher",
+        "wms_preferences_category",
+        "wmsconnecttimeout"
+      ]
+    }
+  ]
+}

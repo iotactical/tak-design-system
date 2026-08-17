@@ -56,7 +56,9 @@ Required additions (derived from ATAK intent namespaces and the SITE-007 remaind
 | `contacts.feature` | `contact` | `UserList`, `ChatPanel` |
 
 Plugin-only namespaces (`jumpmaster`, `ssetool`, `geocam` as a selected plugin)
-are explicitly out of catalog for this requirement.
+are explicitly out of catalog for this requirement. Remaining Software User
+Manual chapters (Red X, radio, lasso, resection, and the rest) are catalogued
+and specified under REQ-SITE-045 and REQ-SITE-046.
 
 ## Approach
 - One `.feature` per catalog row, in `specs/`

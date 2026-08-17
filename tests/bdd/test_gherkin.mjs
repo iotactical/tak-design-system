@@ -1,6 +1,9 @@
 // rtmx:req REQ-SITE-007
 // rtmx:req REQ-SITE-043
 // rtmx:req REQ-SITE-044
+// rtmx:req REQ-SITE-045
+// rtmx:req REQ-SITE-046
+// rtmx:req REQ-SITE-047
 // rtmx:req REQ-XW-050
 // rtmx:req REQ-XW-051
 // rtmx:req REQ-XW-052
@@ -29,6 +32,23 @@
 // rtmx:req REQ-BDD-020
 // rtmx:req REQ-BDD-021
 // rtmx:req REQ-BDD-022
+// rtmx:req REQ-BDD-023
+// rtmx:req REQ-BDD-024
+// rtmx:req REQ-BDD-025
+// rtmx:req REQ-BDD-026
+// rtmx:req REQ-BDD-027
+// rtmx:req REQ-BDD-028
+// rtmx:req REQ-BDD-029
+// rtmx:req REQ-BDD-030
+// rtmx:req REQ-BDD-031
+// rtmx:req REQ-BDD-032
+// rtmx:req REQ-BDD-033
+// rtmx:req REQ-BDD-034
+// rtmx:req REQ-BDD-035
+// rtmx:req REQ-BDD-036
+// rtmx:req REQ-BDD-037
+// rtmx:req REQ-BDD-038
+// rtmx:req REQ-BDD-039
 
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
@@ -53,18 +73,18 @@ const ADDITIONS = [
   { file: "self-marker.feature", req: "REQ-BDD-001", minScenarios: 4 },
   { file: "icon-palettes.feature", req: "REQ-BDD-002", minScenarios: 4 },
   { file: "mission-packages.feature", req: "REQ-BDD-003", minScenarios: 4 },
-  { file: "map-layers.feature", req: "REQ-BDD-004", minScenarios: 4 },
+  { file: "map-layers.feature", req: "REQ-BDD-004", minScenarios: 8 },
   { file: "geofence.feature", req: "REQ-BDD-005", minScenarios: 4 },
-  { file: "map-orientation.feature", req: "REQ-BDD-006", minScenarios: 4 },
-  { file: "overlay-hierarchy.feature", req: "REQ-BDD-007", minScenarios: 4 },
+  { file: "map-orientation.feature", req: "REQ-BDD-006", minScenarios: 5 },
+  { file: "overlay-hierarchy.feature", req: "REQ-BDD-007", minScenarios: 12 },
   { file: "range-bearing.feature", req: "REQ-BDD-008", minScenarios: 4 },
-  { file: "bloodhound.feature", req: "REQ-BDD-009", minScenarios: 4 },
-  { file: "drawing-tools.feature", req: "REQ-BDD-010", minScenarios: 4 },
+  { file: "bloodhound.feature", req: "REQ-BDD-009", minScenarios: 6 },
+  { file: "drawing-tools.feature", req: "REQ-BDD-010", minScenarios: 9 },
   { file: "attachments.feature", req: "REQ-BDD-011", minScenarios: 4 },
   { file: "import-export.feature", req: "REQ-BDD-012", minScenarios: 4 },
   { file: "emergency-alert.feature", req: "REQ-BDD-013", minScenarios: 4 },
-  { file: "viewshed.feature", req: "REQ-BDD-014", minScenarios: 4 },
-  { file: "radial-menu.feature", req: "REQ-BDD-015", minScenarios: 4 },
+  { file: "viewshed.feature", req: "REQ-BDD-014", minScenarios: 6 },
+  { file: "radial-menu.feature", req: "REQ-BDD-015", minScenarios: 5 },
   { file: "gps-location.feature", req: "REQ-BDD-016", minScenarios: 4 },
   { file: "pairing-line.feature", req: "REQ-BDD-017", minScenarios: 4 },
   { file: "tracks.feature", req: "REQ-BDD-018", minScenarios: 4 },
@@ -72,6 +92,23 @@ const ADDITIONS = [
   { file: "video-stream.feature", req: "REQ-BDD-020", minScenarios: 4 },
   { file: "fires.feature", req: "REQ-BDD-021", minScenarios: 4 },
   { file: "contacts.feature", req: "REQ-BDD-022", minScenarios: 4 },
+  { file: "overview.feature", req: "REQ-BDD-023", minScenarios: 7 },
+  { file: "red-x.feature", req: "REQ-BDD-024", minScenarios: 4 },
+  { file: "radio-controls.feature", req: "REQ-BDD-025", minScenarios: 4 },
+  { file: "chat.feature", req: "REQ-BDD-026", minScenarios: 4 },
+  { file: "lasso.feature", req: "REQ-BDD-027", minScenarios: 4 },
+  { file: "digital-pointer.feature", req: "REQ-BDD-028", minScenarios: 4 },
+  { file: "contour-lines.feature", req: "REQ-BDD-029", minScenarios: 4 },
+  { file: "resection.feature", req: "REQ-BDD-030", minScenarios: 4 },
+  { file: "rubber-sheet.feature", req: "REQ-BDD-031", minScenarios: 4 },
+  { file: "plugins.feature", req: "REQ-BDD-032", minScenarios: 4 },
+  { file: "toolbar-manager.feature", req: "REQ-BDD-033", minScenarios: 4 },
+  { file: "clear-content.feature", req: "REQ-BDD-034", minScenarios: 4 },
+  { file: "preferences.feature", req: "REQ-BDD-035", minScenarios: 8 },
+  { file: "device-tools.feature", req: "REQ-BDD-036", minScenarios: 4 },
+  { file: "sensors.feature", req: "REQ-BDD-037", minScenarios: 4 },
+  { file: "vehicles.feature", req: "REQ-BDD-038", minScenarios: 4 },
+  { file: "preference-keys.feature", req: "REQ-BDD-039", minScenarios: 514 },
 ];
 
 const CATALOG = [...ORIGINAL, ...ADDITIONS];
@@ -88,8 +125,14 @@ const INTENT_ACTIONS = new Set(
   )
 );
 
+const SUM_FEATURES = JSON.parse(
+  readFileSync(join(root, "data", "atak-sum-features.json"), "utf-8")
+).features;
+
 const PREFERENCE_KEYS = new Set(
-  JSON.parse(readFileSync(join(root, "data", "atak-preference-keys.json"), "utf-8")).keys
+  JSON.parse(readFileSync(join(root, "data", "atak-preferences.json"), "utf-8")).items.map(
+    (item) => item.key
+  )
 );
 
 function featureFilesOnDisk() {
@@ -163,7 +206,7 @@ function assertSumMapping(file, content) {
   for (const key of prefs) {
     assert.ok(
       PREFERENCE_KEYS.has(key),
-      `${file} cites unknown preference "${key}"; must exist in data/atak-preference-keys.json`
+      `${file} cites unknown preference "${key}"; must exist in data/atak-preferences.json`
     );
   }
 
@@ -193,8 +236,20 @@ describe("BDD Gherkin catalog", () => {
       CATALOG.length > 6,
       "ATAK core catalog must be larger than the original six SITE-007 files"
     );
-    assert.equal(ADDITIONS.length, 22);
+    assert.equal(ADDITIONS.length, 39);
     assert.equal(ORIGINAL.length, 6);
+    assert.equal(CATALOG.length, 45);
+  });
+
+  // rtmx:req REQ-SITE-046
+  it("test_sum_coverage: every catalogued SUM feature has Gherkin", () => {
+    const catalogFiles = new Set(CATALOG.map((row) => row.file));
+    for (const row of SUM_FEATURES) {
+      assert.ok(
+        catalogFiles.has(row.spec),
+        `SUM feature "${row.heading}" maps to ${row.spec} which is not in the BDD catalog`
+      );
+    }
   });
 
   // rtmx:req REQ-SITE-007

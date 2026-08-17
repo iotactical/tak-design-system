@@ -321,6 +321,23 @@ const BDD_SPECS = [
   { name: 'Video Stream', file: 'video-stream.feature' },
   { name: 'Fires', file: 'fires.feature' },
   { name: 'Contacts', file: 'contacts.feature' },
+  { name: 'Overview', file: 'overview.feature' },
+  { name: 'Red X', file: 'red-x.feature' },
+  { name: 'Radio Controls', file: 'radio-controls.feature' },
+  { name: 'Chat Inbox', file: 'chat.feature' },
+  { name: 'Lasso Select', file: 'lasso.feature' },
+  { name: 'Digital Pointer', file: 'digital-pointer.feature' },
+  { name: 'Contour Lines', file: 'contour-lines.feature' },
+  { name: 'Resection', file: 'resection.feature' },
+  { name: 'Rubber Sheet', file: 'rubber-sheet.feature' },
+  { name: 'Plugins and Package Management', file: 'plugins.feature' },
+  { name: 'Toolbar Manager', file: 'toolbar-manager.feature' },
+  { name: 'Clear Content', file: 'clear-content.feature' },
+  { name: 'Preferences', file: 'preferences.feature' },
+  { name: 'Device Tools', file: 'device-tools.feature' },
+  { name: 'Sensors', file: 'sensors.feature' },
+  { name: 'Vehicles', file: 'vehicles.feature' },
+  { name: 'Preference Keys', file: 'preference-keys.feature' },
 ];
 
 function buildSpecEntries(): SearchEntry[] {

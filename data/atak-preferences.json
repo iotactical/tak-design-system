@@ -1,0 +1,6287 @@
+{
+  "source": "https://github.com/TAK-Product-Center/atak-civ/blob/main/atak/docs/SupportedPreferenceDisable.txt",
+  "xml_source": "https://github.com/TAK-Product-Center/atak-civ/tree/main/atak/ATAK/app/src/main/res/xml",
+  "description": "ATAK preference keys from SupportedPreferenceDisable.txt (hide/disable) unioned with every android:key in atak/ATAK/app/src/main/res/xml preference screens.",
+  "hideable_count": 240,
+  "xml_key_count": 474,
+  "count": 514,
+  "items": [
+    {
+      "key": "3DRendering",
+      "kind": "setting",
+      "label": "3DRendering",
+      "screens": [
+        "display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "3D_rendering_options_category",
+      "kind": "category",
+      "label": "3D rendering options category",
+      "screens": [
+        "three_d_rendering.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "@string/default_actionbar_colors",
+      "kind": "xml-alias",
+      "label": "@string/default actionbar colors",
+      "screens": [
+        "custom_actionbar_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "@string/selected_actionbar_background_color",
+      "kind": "xml-alias",
+      "label": "@string/selected actionbar background color",
+      "screens": [
+        "custom_actionbar_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "@string/selected_actionbar_icon_color",
+      "kind": "xml-alias",
+      "label": "@string/selected actionbar icon color",
+      "screens": [
+        "custom_actionbar_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "about",
+      "kind": "setting",
+      "label": "About",
+      "screens": [
+        "main_preferences.xml",
+        "my_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_about",
+      "disable_key": "disablePreferenceItem_about"
+    },
+    {
+      "key": "accounts",
+      "kind": "setting",
+      "label": "accounts",
+      "screens": [
+        "my_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "accounts_category",
+      "kind": "category",
+      "label": "accounts category",
+      "screens": [
+        "accounts.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "additionalDisplay",
+      "kind": "setting",
+      "label": "additionalDisplay",
+      "screens": [
+        "display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "address_category",
+      "kind": "category",
+      "label": "address category",
+      "screens": [
+        "isrv_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "address_lookup_preferences",
+      "kind": "setting",
+      "label": "address lookup preferences",
+      "screens": [
+        "geocoder_preference_fragment.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "adjust_toolbar_preferences_category",
+      "kind": "category",
+      "label": "adjust toolbar preferences category",
+      "screens": [
+        "display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "advanced_logging",
+      "kind": "setting",
+      "label": "advanced logging",
+      "screens": [
+        "logging_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "advanced_network_settings",
+      "kind": "setting",
+      "label": "advanced network settings",
+      "screens": [
+        "missionpackage_preferences.xml",
+        "prompt_network_preference.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "alertPreference",
+      "kind": "screen",
+      "label": "Alert Preferences",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_alertPreference",
+      "disable_key": "disablePreferenceItem_alertPreference"
+    },
+    {
+      "key": "alert_audible",
+      "kind": "setting",
+      "label": "Audible alert",
+      "screens": [
+        "alert_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_alert_audible",
+      "disable_key": "disablePreferenceItem_alert_audible"
+    },
+    {
+      "key": "alert_notification",
+      "kind": "setting",
+      "label": "Notification",
+      "screens": [
+        "alert_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_alert_notification",
+      "disable_key": "disablePreferenceItem_alert_notification"
+    },
+    {
+      "key": "alert_preferences_category",
+      "kind": "category",
+      "label": "alert preferences category",
+      "screens": [
+        "alert_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "alert_vibration",
+      "kind": "setting",
+      "label": "Vibration alert",
+      "screens": [
+        "alert_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_alert_vibration",
+      "disable_key": "disablePreferenceItem_alert_vibration"
+    },
+    {
+      "key": "alt_display_agl",
+      "kind": "setting",
+      "label": "alt display agl",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "alt_display_pref",
+      "kind": "setting",
+      "label": "alt display pref",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "alt_unit_pref",
+      "kind": "setting",
+      "label": "alt unit pref",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "alternateContactCategory",
+      "kind": "category",
+      "label": "Contact Preferences",
+      "screens": [
+        "contact_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_alternateContactCategory",
+      "disable_key": "disablePreferenceItem_alternateContactCategory"
+    },
+    {
+      "key": "apiCertEnrollmentKeyLength",
+      "kind": "setting",
+      "label": "Certificate Enrollment Key Length",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_apiCertEnrollmentKeyLength",
+      "disable_key": "disablePreferenceItem_apiCertEnrollmentKeyLength"
+    },
+    {
+      "key": "apiCertEnrollmentPort",
+      "kind": "setting",
+      "label": "Certificate Enrollment API port",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_apiCertEnrollmentPort",
+      "disable_key": "disablePreferenceItem_apiCertEnrollmentPort"
+    },
+    {
+      "key": "apiSecureServerPort",
+      "kind": "setting",
+      "label": "Secure Server API port",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_apiSecureServerPort",
+      "disable_key": "disablePreferenceItem_apiSecureServerPort"
+    },
+    {
+      "key": "apiUnsecureServerPort",
+      "kind": "setting",
+      "label": "Unsecure Server API port",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_apiUnsecureServerPort",
+      "disable_key": "disablePreferenceItem_apiUnsecureServerPort"
+    },
+    {
+      "key": "appMgmtEnableUpdateServer",
+      "kind": "setting",
+      "label": "appMgmtEnableUpdateServer",
+      "screens": [
+        "app_mgmt_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "app_logging_preferences_category",
+      "kind": "category",
+      "label": "app logging preferences category",
+      "screens": [
+        "logging_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "appsPref",
+      "kind": "screen",
+      "label": "TAK Package Mgmt",
+      "screens": [
+        "tools_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_appsPref",
+      "disable_key": "disablePreferenceItem_appsPref"
+    },
+    {
+      "key": "atakAccounts",
+      "kind": "setting",
+      "label": "Accounts",
+      "screens": [
+        "main_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakAccounts",
+      "disable_key": "disablePreferenceItem_atakAccounts"
+    },
+    {
+      "key": "atakAdjustCurvedDisplay",
+      "kind": "setting",
+      "label": "Adjust for Curved Display",
+      "screens": [
+        "usability_settings.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakAdjustCurvedDisplay",
+      "disable_key": "disablePreferenceItem_atakAdjustCurvedDisplay"
+    },
+    {
+      "key": "atakBackButtonCenterSelf",
+      "kind": "setting",
+      "label": "atakBackButtonCenterSelf",
+      "screens": [
+        "user_touch_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "atakBluetoothReconnectSeconds",
+      "kind": "setting",
+      "label": "Bluetooth Reconnect Time",
+      "screens": [
+        "bluetooth_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakBluetoothReconnectSeconds",
+      "disable_key": "disablePreferenceItem_atakBluetoothReconnectSeconds"
+    },
+    {
+      "key": "atakChangeLog",
+      "kind": "setting",
+      "label": "ATAK Release Change Log",
+      "screens": [
+        "atak_docs_preference.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakChangeLog",
+      "disable_key": "disablePreferenceItem_atakChangeLog"
+    },
+    {
+      "key": "atakContinuousRender",
+      "kind": "setting",
+      "label": "atakContinuousRender",
+      "screens": [
+        "legacy_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "atakControlAskToQuit",
+      "kind": "setting",
+      "label": "atakControlAskToQuit",
+      "screens": [
+        "user_touch_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "atakControlBluetooth",
+      "kind": "setting",
+      "label": "Bluetooth Support",
+      "screens": [
+        "bluetooth_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakControlBluetooth",
+      "disable_key": "disablePreferenceItem_atakControlBluetooth"
+    },
+    {
+      "key": "atakControlOptions",
+      "kind": "setting",
+      "label": "Control Preferences",
+      "screens": [
+        "main_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakControlOptions",
+      "disable_key": "disablePreferenceItem_atakControlOptions"
+    },
+    {
+      "key": "atakControlOtherUserNotification",
+      "kind": "setting",
+      "label": "Display Notifications for other users",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakControlOtherUserNotification",
+      "disable_key": "disablePreferenceItem_atakControlOtherUserNotification"
+    },
+    {
+      "key": "atakControlQuitOnBack",
+      "kind": "setting",
+      "label": "atakControlQuitOnBack",
+      "screens": [
+        "user_touch_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "atakControlReverseOrientation",
+      "kind": "setting",
+      "label": "Reverse Landscape Orientation",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakControlReverseOrientation",
+      "disable_key": "disablePreferenceItem_atakControlReverseOrientation"
+    },
+    {
+      "key": "atakControlShortenLabels",
+      "kind": "setting",
+      "label": "Shorten Long Marker Labels",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakControlShortenLabels",
+      "disable_key": "disablePreferenceItem_atakControlShortenLabels"
+    },
+    {
+      "key": "atakControlShowLabels",
+      "kind": "setting",
+      "label": "Show Marker Labels",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakControlShowLabels",
+      "disable_key": "disablePreferenceItem_atakControlShowLabels"
+    },
+    {
+      "key": "atakDatasets",
+      "kind": "setting",
+      "label": "ATAK Dataset Instructions",
+      "screens": [
+        "atak_docs_preference.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakDatasets",
+      "disable_key": "disablePreferenceItem_atakDatasets"
+    },
+    {
+      "key": "atakDeveloperTools",
+      "kind": "setting",
+      "label": "atakDeveloperTools",
+      "screens": [
+        "legacy_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "atakDisableSoftkeyIllumination",
+      "kind": "setting",
+      "label": "Disable SoftKey Illumination",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakDisableSoftkeyIllumination",
+      "disable_key": "disablePreferenceItem_atakDisableSoftkeyIllumination"
+    },
+    {
+      "key": "atakDocumentation",
+      "kind": "setting",
+      "label": "ATAK User Manual",
+      "screens": [
+        "atak_docs_preference.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakDocumentation",
+      "disable_key": "disablePreferenceItem_atakDocumentation"
+    },
+    {
+      "key": "atakDocumentationTranslated",
+      "kind": "setting",
+      "label": "atakDocumentationTranslated",
+      "screens": [
+        "atak_docs_preference.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "atakDoubleTapToZoom",
+      "kind": "setting",
+      "label": "atakDoubleTapToZoom",
+      "screens": [
+        "user_touch_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "atakExportCrashLogs",
+      "kind": "setting",
+      "label": "atakExportCrashLogs",
+      "screens": [
+        "logging_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "atakFlavorAddendum",
+      "kind": "setting",
+      "label": "Addendum",
+      "screens": [
+        "atak_docs_preference.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakFlavorAddendum",
+      "disable_key": "disablePreferenceItem_atakFlavorAddendum"
+    },
+    {
+      "key": "atakForceAirplaneRadioList",
+      "kind": "setting",
+      "label": "atakForceAirplaneRadioList",
+      "screens": [
+        "legacy_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "atakForcedBrightness",
+      "kind": "setting",
+      "label": "Forced Application Brightness",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakForcedBrightness",
+      "disable_key": "disablePreferenceItem_atakForcedBrightness"
+    },
+    {
+      "key": "atakGlobeModeEnabled",
+      "kind": "setting",
+      "label": "Enable Globe Display Mode",
+      "screens": [
+        "three_d_rendering.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakGlobeModeEnabled",
+      "disable_key": "disablePreferenceItem_atakGlobeModeEnabled"
+    },
+    {
+      "key": "atakIconGlossary",
+      "kind": "setting",
+      "label": "atakIconGlossary",
+      "screens": [
+        "atak_docs_preference.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "atakLongPressMap",
+      "kind": "setting",
+      "label": "atakLongPressMap",
+      "screens": [
+        "user_touch_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "atakOffScrIndiOptions",
+      "kind": "setting",
+      "label": "Off-Screen Indicators Preferences",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakOffScrIndiOptions",
+      "disable_key": "disablePreferenceItem_atakOffScrIndiOptions"
+    },
+    {
+      "key": "atakPluginScanningOnStartup",
+      "kind": "setting",
+      "label": "atakPluginScanningOnStartup",
+      "screens": [
+        "app_mgmt_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "atakQuickConfigUpdateServer",
+      "kind": "setting",
+      "label": "atakQuickConfigUpdateServer",
+      "screens": [
+        "app_mgmt_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "atakRoleType",
+      "kind": "setting",
+      "label": "My Role",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_atakRoleType",
+      "disable_key": "disablePreferenceItem_atakRoleType"
+    },
+    {
+      "key": "atakRoleTypeAction",
+      "kind": "setting",
+      "label": "atakRoleTypeAction",
+      "screens": [
+        "call_sign_preference.xml",
+        "device_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "atakScreenLock",
+      "kind": "setting",
+      "label": "Disable Screen Saver / Screen Lock",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_atakScreenLock",
+      "disable_key": "disablePreferenceItem_atakScreenLock"
+    },
+    {
+      "key": "atakSupport",
+      "kind": "setting",
+      "label": "TAK Support Information",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_atakSupport",
+      "disable_key": "disablePreferenceItem_atakSupport"
+    },
+    {
+      "key": "atakTrackOptions",
+      "kind": "setting",
+      "label": "Track History Preferences",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_atakTrackOptions",
+      "disable_key": "disablePreferenceItem_atakTrackOptions"
+    },
+    {
+      "key": "atakUpdateLocalPath",
+      "kind": "setting",
+      "label": "atakUpdateLocalPath",
+      "screens": [
+        "app_mgmt_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "atakUpdateLocalPathReset",
+      "kind": "setting",
+      "label": "atakUpdateLocalPathReset",
+      "screens": [
+        "app_mgmt_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "atakUpdateServerUrl",
+      "kind": "setting",
+      "label": "atakUpdateServerUrl",
+      "screens": [
+        "app_mgmt_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "atakdocs",
+      "kind": "setting",
+      "label": "atakdocs",
+      "screens": [
+        "support_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "attachment_billboards_category",
+      "kind": "category",
+      "label": "attachment billboards category",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "audibleNotify",
+      "kind": "setting",
+      "label": "Audible Chat notifications",
+      "screens": [
+        "chat_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_audibleNotify",
+      "disable_key": "disablePreferenceItem_audibleNotify"
+    },
+    {
+      "key": "autoDisableMeshSAWhenStreaming",
+      "kind": "setting",
+      "label": "Auto Manage Mesh Network Self SA Mode",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_autoDisableMeshSAWhenStreaming",
+      "disable_key": "disablePreferenceItem_autoDisableMeshSAWhenStreaming"
+    },
+    {
+      "key": "autosendStaleEnabled",
+      "kind": "setting",
+      "label": "autosendStaleEnabled",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "autosendStaleInterval",
+      "kind": "setting",
+      "label": "autosendStaleInterval",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "autosend_prefs_category",
+      "kind": "category",
+      "label": "autosend prefs category",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "basic_display_settings",
+      "kind": "setting",
+      "label": "basic display settings",
+      "screens": [
+        "display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "basic_display_settings_category",
+      "kind": "category",
+      "label": "basic display settings category",
+      "screens": [
+        "basic_display_settings.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "bloodhoundPreferences",
+      "kind": "screen",
+      "label": "Bloodhound Preferences",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_bloodhoundPreferences",
+      "disable_key": "disablePreferenceItem_bloodhoundPreferences"
+    },
+    {
+      "key": "bloodhound_eta_preference_category",
+      "kind": "category",
+      "label": "bloodhound eta preference category",
+      "screens": [
+        "bloodhound_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "bloodhound_flash_color_pref",
+      "kind": "setting",
+      "label": "Flash Color",
+      "screens": [
+        "bloodhound_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_bloodhound_flash_color_pref",
+      "disable_key": "disablePreferenceItem_bloodhound_flash_color_pref"
+    },
+    {
+      "key": "bloodhound_flash_eta",
+      "kind": "setting",
+      "label": "Flash ETA Threshold",
+      "screens": [
+        "bloodhound_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_bloodhound_flash_eta",
+      "disable_key": "disablePreferenceItem_bloodhound_flash_eta"
+    },
+    {
+      "key": "bloodhound_inner_color_pref",
+      "kind": "setting",
+      "label": "Inner ETA Color",
+      "screens": [
+        "bloodhound_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_bloodhound_inner_color_pref",
+      "disable_key": "disablePreferenceItem_bloodhound_inner_color_pref"
+    },
+    {
+      "key": "bloodhound_inner_eta",
+      "kind": "setting",
+      "label": "Middle/Inner ETA Threshold",
+      "screens": [
+        "bloodhound_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_bloodhound_inner_eta",
+      "disable_key": "disablePreferenceItem_bloodhound_inner_eta"
+    },
+    {
+      "key": "bloodhound_middle_color_pref",
+      "kind": "setting",
+      "label": "Middle ETA Color",
+      "screens": [
+        "bloodhound_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_bloodhound_middle_color_pref",
+      "disable_key": "disablePreferenceItem_bloodhound_middle_color_pref"
+    },
+    {
+      "key": "bloodhound_outer_color_pref",
+      "kind": "setting",
+      "label": "Outer ETA Color",
+      "screens": [
+        "bloodhound_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_bloodhound_outer_color_pref",
+      "disable_key": "disablePreferenceItem_bloodhound_outer_color_pref"
+    },
+    {
+      "key": "bloodhound_outer_eta",
+      "kind": "setting",
+      "label": "Outer/Middle ETA Threshold",
+      "screens": [
+        "bloodhound_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_bloodhound_outer_eta",
+      "disable_key": "disablePreferenceItem_bloodhound_outer_eta"
+    },
+    {
+      "key": "bloodhound_preference_category",
+      "kind": "category",
+      "label": "bloodhound preference category",
+      "screens": [
+        "bloodhound_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "bloodhound_reroute_distance_pref",
+      "kind": "setting",
+      "label": "Reroute distance",
+      "screens": [
+        "bloodhound_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_bloodhound_reroute_distance_pref",
+      "disable_key": "disablePreferenceItem_bloodhound_reroute_distance_pref"
+    },
+    {
+      "key": "bloodhound_reroute_timer_pref",
+      "kind": "setting",
+      "label": "Reroute timer frequency",
+      "screens": [
+        "bloodhound_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_bloodhound_reroute_timer_pref",
+      "disable_key": "disablePreferenceItem_bloodhound_reroute_timer_pref"
+    },
+    {
+      "key": "bloodhound_routing_preference",
+      "kind": "setting",
+      "label": "bloodhound routing preference",
+      "screens": [
+        "bloodhound_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "bluetoorh_preferences_category",
+      "kind": "category",
+      "label": "bluetoorh preferences category",
+      "screens": [
+        "bluetooth_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "bluetooth",
+      "kind": "setting",
+      "label": "bluetooth",
+      "screens": [
+        "callsign_device_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "bluetoothPref",
+      "kind": "screen",
+      "label": "Bluetooth Preferences",
+      "screens": [
+        "main_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_bluetoothPref",
+      "disable_key": "disablePreferenceItem_bluetoothPref"
+    },
+    {
+      "key": "bread_crumb_preferences_category",
+      "kind": "category",
+      "label": "bread crumb preferences category",
+      "screens": [
+        "bread_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "bread_dist_threshold",
+      "kind": "setting",
+      "label": "Bread Crumb Distance Threshold",
+      "screens": [
+        "bread_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_bread_dist_threshold",
+      "disable_key": "disablePreferenceItem_bread_dist_threshold"
+    },
+    {
+      "key": "bread_track_timegap_threshold",
+      "kind": "setting",
+      "label": "Server track time gap (minutes)",
+      "screens": [
+        "bread_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_bread_track_timegap_threshold",
+      "disable_key": "disablePreferenceItem_bread_track_timegap_threshold"
+    },
+    {
+      "key": "broadcast_disable",
+      "kind": "setting",
+      "label": "broadcast disable",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "builtInGeocoder",
+      "kind": "setting",
+      "label": "Use Android Geocoder",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_builtInGeocoder",
+      "disable_key": "disablePreferenceItem_builtInGeocoder"
+    },
+    {
+      "key": "bullseyeDirection",
+      "kind": "setting",
+      "label": "bullseyeDirection",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "bullseyeDistance",
+      "kind": "setting",
+      "label": "bullseyeDistance",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "bullseyeNumRings",
+      "kind": "setting",
+      "label": "bullseyeNumRings",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "bullseyeRadiusRings",
+      "kind": "setting",
+      "label": "bullseyeRadiusRings",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "bullseyeRingsVisible",
+      "kind": "setting",
+      "label": "bullseyeRingsVisible",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "bullseye_preference_category",
+      "kind": "category",
+      "label": "bullseye preference category",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "caLocation",
+      "kind": "setting",
+      "label": "Default SSL/TLS TrustStore Location",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_caLocation",
+      "disable_key": "disablePreferenceItem_caLocation"
+    },
+    {
+      "key": "caPassword",
+      "kind": "setting",
+      "label": "Default SSL/TLS TrustStore Password",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_caPassword",
+      "disable_key": "disablePreferenceItem_caPassword"
+    },
+    {
+      "key": "callSignAndDevicePrefs",
+      "kind": "screen",
+      "label": "callSignAndDevicePrefs",
+      "screens": [
+        "my_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "callSignPrefs",
+      "kind": "screen",
+      "label": "callSignPrefs",
+      "screens": [
+        "callsign_device_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "callsign_and_device_preferences_category",
+      "kind": "category",
+      "label": "callsign and device preferences category",
+      "screens": [
+        "callsign_device_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "callsign_category",
+      "kind": "category",
+      "label": "callsign category",
+      "screens": [
+        "call_sign_preference.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "centerDesignatorDuringPointDrop",
+      "kind": "setting",
+      "label": "centerDesignatorDuringPointDrop",
+      "screens": [
+        "point_drop_behavior.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "certEnrollmentExport",
+      "kind": "setting",
+      "label": "Enable Client Certificate Export",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_certEnrollmentExport",
+      "disable_key": "disablePreferenceItem_certEnrollmentExport"
+    },
+    {
+      "key": "certificateLocation",
+      "kind": "setting",
+      "label": "Default SSL/TLS Client Certificate Store",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_certificateLocation",
+      "disable_key": "disablePreferenceItem_certificateLocation"
+    },
+    {
+      "key": "change_custom_gps_color",
+      "kind": "setting",
+      "label": "Change/Create Custom Color",
+      "screens": [
+        "self_marker_custom_pref_fragment.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_change_custom_gps_color",
+      "disable_key": "disablePreferenceItem_change_custom_gps_color"
+    },
+    {
+      "key": "change_custom_gps_outline_color",
+      "kind": "setting",
+      "label": "change custom gps outline color",
+      "screens": [
+        "self_marker_custom_pref_fragment.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "chatAddress",
+      "kind": "setting",
+      "label": "Chat Address",
+      "screens": [
+        "chat_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_chatAddress",
+      "disable_key": "disablePreferenceItem_chatAddress"
+    },
+    {
+      "key": "chatPort",
+      "kind": "setting",
+      "label": "Chat Port",
+      "screens": [
+        "chat_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_chatPort",
+      "disable_key": "disablePreferenceItem_chatPort"
+    },
+    {
+      "key": "chatPreference",
+      "kind": "screen",
+      "label": "Chat Preferences",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_chatPreference",
+      "disable_key": "disablePreferenceItem_chatPreference"
+    },
+    {
+      "key": "clearHistory",
+      "kind": "setting",
+      "label": "Clear History",
+      "screens": [
+        "chat_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_clearHistory",
+      "disable_key": "disablePreferenceItem_clearHistory"
+    },
+    {
+      "key": "clearMedia",
+      "kind": "setting",
+      "label": "Clear Attachments",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_clearMedia",
+      "disable_key": "disablePreferenceItem_clearMedia"
+    },
+    {
+      "key": "clientPassword",
+      "kind": "setting",
+      "label": "Default SSL/TLS Client Certificate Password",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_clientPassword",
+      "disable_key": "disablePreferenceItem_clientPassword"
+    },
+    {
+      "key": "collect_crashlogs",
+      "kind": "setting",
+      "label": "collect crashlogs",
+      "screens": [
+        "logging_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "collect_metrics",
+      "kind": "setting",
+      "label": "collect metrics",
+      "screens": [
+        "advanced_logging_preferences.xml",
+        "logging_preferences.xml",
+        "metrics_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "color_category",
+      "kind": "category",
+      "label": "color category",
+      "screens": [
+        "self_marker_custom_pref_fragment.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "color_tinting_category",
+      "kind": "category",
+      "label": "color tinting category",
+      "screens": [
+        "color_and_tinting.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "compass_heading_display",
+      "kind": "setting",
+      "label": "compass heading display",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "configuration_category",
+      "kind": "category",
+      "label": "configuration category",
+      "screens": [
+        "isrv_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "configureNonStreamingEncryption",
+      "kind": "setting",
+      "label": "Configure AES-256 Mesh Encryption",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_configureNonStreamingEncryption",
+      "disable_key": "disablePreferenceItem_configureNonStreamingEncryption"
+    },
+    {
+      "key": "constantReportingRateReliable",
+      "kind": "setting",
+      "label": "Constant Reporting Rate (Reliable)",
+      "screens": [
+        "reporting_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_constantReportingRateReliable",
+      "disable_key": "disablePreferenceItem_constantReportingRateReliable"
+    },
+    {
+      "key": "constantReportingRateUnreliable",
+      "kind": "setting",
+      "label": "Constant Reporting Rate (Unreliable)",
+      "screens": [
+        "reporting_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_constantReportingRateUnreliable",
+      "disable_key": "disablePreferenceItem_constantReportingRateUnreliable"
+    },
+    {
+      "key": "contactPrefs",
+      "kind": "screen",
+      "label": "contactPrefs",
+      "screens": [
+        "callsign_device_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "controlPrefs",
+      "kind": "screen",
+      "label": "controlPrefs",
+      "screens": [
+        "my_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "control_preferences_category",
+      "kind": "category",
+      "label": "control preferences category",
+      "screens": [
+        "control_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "coordEntryPreferences",
+      "kind": "screen",
+      "label": "coordEntryPreferences",
+      "screens": [
+        "coordentry_preference_fragment.xml",
+        "elevation_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "coord_display_pref",
+      "kind": "setting",
+      "label": "coord display pref",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "coord_entry_prefs_category",
+      "kind": "category",
+      "label": "coord entry prefs category",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "coordinate_entry_tabs",
+      "kind": "setting",
+      "label": "coordinate entry tabs",
+      "screens": [
+        "basic_display_settings.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "coordinate_preferences_category",
+      "kind": "category",
+      "label": "coordinate preferences category",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "custom_actionbar_icon_color",
+      "kind": "setting",
+      "label": "Tool Bar Icon Color",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_custom_actionbar_icon_color",
+      "disable_key": "disablePreferenceItem_custom_actionbar_icon_color"
+    },
+    {
+      "key": "custom_color_gps_icon_pref",
+      "kind": "setting",
+      "label": "Custom",
+      "screens": [
+        "self_marker_custom_pref_fragment.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_custom_color_gps_icon_pref",
+      "disable_key": "disablePreferenceItem_custom_color_gps_icon_pref"
+    },
+    {
+      "key": "dataPackage",
+      "kind": "setting",
+      "label": "dataPackage",
+      "screens": [
+        "prompt_network_preference.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "dataUsagePreferences",
+      "kind": "screen",
+      "label": "dataUsagePreferences",
+      "screens": [
+        "elevation_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "datapackage_general settings",
+      "kind": "setting",
+      "label": "datapackage general settings",
+      "screens": [
+        "missionpackage_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "datapackage_overlay_manager_settings",
+      "kind": "setting",
+      "label": "datapackage overlay manager settings",
+      "screens": [
+        "missionpackage_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "debug_logging_preferences_category",
+      "kind": "category",
+      "label": "debug logging preferences category",
+      "screens": [
+        "advanced_logging_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "defaultRouteColor",
+      "kind": "setting",
+      "label": "Default for unspecified Route Colors",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_defaultRouteColor",
+      "disable_key": "disablePreferenceItem_defaultRouteColor"
+    },
+    {
+      "key": "default_actionbar_colors",
+      "kind": "setting",
+      "label": "Reset Tool Bar Colors To Default",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_default_actionbar_colors",
+      "disable_key": "disablePreferenceItem_default_actionbar_colors"
+    },
+    {
+      "key": "default_client_credentials",
+      "kind": "setting",
+      "label": "Default SSL/TLS Credentials",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_default_client_credentials",
+      "disable_key": "disablePreferenceItem_default_client_credentials"
+    },
+    {
+      "key": "default_gps_icon",
+      "kind": "setting",
+      "label": "Default",
+      "screens": [
+        "self_marker_custom_pref_fragment.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_default_gps_icon",
+      "disable_key": "disablePreferenceItem_default_gps_icon"
+    },
+    {
+      "key": "deviceDetails",
+      "kind": "setting",
+      "label": "deviceDetails",
+      "screens": [
+        "device_details_preference.xml",
+        "support_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "devicePrefs",
+      "kind": "screen",
+      "label": "devicePrefs",
+      "screens": [
+        "callsign_device_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "deviceProfileEnableOnConnect",
+      "kind": "setting",
+      "label": "Apply TAK Server profile updates",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_deviceProfileEnableOnConnect",
+      "disable_key": "disablePreferenceItem_deviceProfileEnableOnConnect"
+    },
+    {
+      "key": "deviceSettings",
+      "kind": "screen",
+      "label": "Device Preferences",
+      "screens": [
+        "main_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_deviceSettings",
+      "disable_key": "disablePreferenceItem_deviceSettings"
+    },
+    {
+      "key": "device_preferences_category",
+      "kind": "category",
+      "label": "device preferences category",
+      "screens": [
+        "device_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "dexControls",
+      "kind": "setting",
+      "label": "Enable DEX Friendly Controls",
+      "screens": [
+        "dex_options_prefs.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_dexControls",
+      "disable_key": "disablePreferenceItem_dexControls"
+    },
+    {
+      "key": "dexOptions",
+      "kind": "setting",
+      "label": "dexOptions",
+      "screens": [
+        "display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "dex_options_category",
+      "kind": "category",
+      "label": "dex options category",
+      "screens": [
+        "dex_options_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "dim_map_with_brightness_key",
+      "kind": "setting",
+      "label": "Map Overlays Dimming/Brightening",
+      "screens": [
+        "usability_settings.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_dim_map_with_brightness_key",
+      "disable_key": "disablePreferenceItem_dim_map_with_brightness_key"
+    },
+    {
+      "key": "disableFloatToBottom",
+      "kind": "setting",
+      "label": "disableFloatToBottom",
+      "screens": [
+        "locking_preference.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "disableLeyGuard",
+      "kind": "setting",
+      "label": "disableLeyGuard",
+      "screens": [
+        "legacy_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "disable_autolink_mapitem_links",
+      "kind": "setting",
+      "label": "disable autolink mapitem links",
+      "screens": [
+        "usability_settings.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "dispatchLocationCotExternal",
+      "kind": "setting",
+      "label": "Send Location Over Network",
+      "screens": [
+        "reporting_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_dispatchLocationCotExternal",
+      "disable_key": "disablePreferenceItem_dispatchLocationCotExternal"
+    },
+    {
+      "key": "dispatchLocationCotExternalAtStart",
+      "kind": "setting",
+      "label": "Report Location before obtaining location fix",
+      "screens": [
+        "reporting_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_dispatchLocationCotExternalAtStart",
+      "disable_key": "disablePreferenceItem_dispatchLocationCotExternalAtStart"
+    },
+    {
+      "key": "dispatchLocationHidden",
+      "kind": "setting",
+      "label": "Hide my current position",
+      "screens": [
+        "reporting_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_dispatchLocationHidden",
+      "disable_key": "disablePreferenceItem_dispatchLocationHidden"
+    },
+    {
+      "key": "dispatchTAKVersionNumber",
+      "kind": "setting",
+      "label": "dispatchTAKVersionNumber",
+      "screens": [
+        "reporting_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "displayAsSymbologyGraphic",
+      "kind": "setting",
+      "label": "displayAsSymbologyGraphic",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "displayPrefs",
+      "kind": "screen",
+      "label": "displayPrefs",
+      "screens": [
+        "my_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "displayServerConnectionWidget",
+      "kind": "setting",
+      "label": "Display Connection Widget",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_displayServerConnectionWidget",
+      "disable_key": "disablePreferenceItem_displayServerConnectionWidget"
+    },
+    {
+      "key": "displaySettings",
+      "kind": "screen",
+      "label": "Android Display Preferences",
+      "screens": [
+        "usability_settings.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_displaySettings",
+      "disable_key": "disablePreferenceItem_displaySettings"
+    },
+    {
+      "key": "display_preference_category",
+      "kind": "category",
+      "label": "display preference category",
+      "screens": [
+        "gridlines_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "dns_servers_category",
+      "kind": "category",
+      "label": "dns servers category",
+      "screens": [
+        "isrv_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "documentation",
+      "kind": "setting",
+      "label": "Support",
+      "screens": [
+        "main_preferences.xml",
+        "my_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_documentation",
+      "disable_key": "disablePreferenceItem_documentation"
+    },
+    {
+      "key": "documentation_category",
+      "kind": "category",
+      "label": "documentation category",
+      "screens": [
+        "atak_docs_preference.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "doghouseShowNorthReference",
+      "kind": "setting",
+      "label": "Display \u00b0M Unit in Doghouse",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_doghouseShowNorthReference",
+      "disable_key": "disablePreferenceItem_doghouseShowNorthReference"
+    },
+    {
+      "key": "domain_preferences_category",
+      "kind": "category",
+      "label": "domain preferences category",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "dpgkRootVisibilityToggle",
+      "kind": "setting",
+      "label": "dpgkRootVisibilityToggle",
+      "screens": [
+        "missionpackage_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "driving_category",
+      "kind": "category",
+      "label": "driving category",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "dtedPreference",
+      "kind": "screen",
+      "label": "Elevation Overlays Preferences",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_dtedPreference",
+      "disable_key": "disablePreferenceItem_dtedPreference"
+    },
+    {
+      "key": "dynamicReportingRateMaxReliable",
+      "kind": "setting",
+      "label": "Dynamic Reporting Rate Maximum (Reliable)",
+      "screens": [
+        "reporting_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_dynamicReportingRateMaxReliable",
+      "disable_key": "disablePreferenceItem_dynamicReportingRateMaxReliable"
+    },
+    {
+      "key": "dynamicReportingRateMaxUnreliable",
+      "kind": "setting",
+      "label": "Dynamic Reporting Rate Maximum (Unreliable)",
+      "screens": [
+        "reporting_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_dynamicReportingRateMaxUnreliable",
+      "disable_key": "disablePreferenceItem_dynamicReportingRateMaxUnreliable"
+    },
+    {
+      "key": "dynamicReportingRateMinReliable",
+      "kind": "setting",
+      "label": "Dynamic Reporting Rate Minimum (Reliable)",
+      "screens": [
+        "reporting_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_dynamicReportingRateMinReliable",
+      "disable_key": "disablePreferenceItem_dynamicReportingRateMinReliable"
+    },
+    {
+      "key": "dynamicReportingRateMinUnreliable",
+      "kind": "setting",
+      "label": "Dynamic Reporting Rate Minimum (Unreliable)",
+      "screens": [
+        "reporting_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_dynamicReportingRateMinUnreliable",
+      "disable_key": "disablePreferenceItem_dynamicReportingRateMinUnreliable"
+    },
+    {
+      "key": "dynamicReportingRateStationaryReliable",
+      "kind": "setting",
+      "label": "Dynamic Reporting Rate Stationary (Reliable)",
+      "screens": [
+        "reporting_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_dynamicReportingRateStationaryReliable",
+      "disable_key": "disablePreferenceItem_dynamicReportingRateStationaryReliable"
+    },
+    {
+      "key": "dynamicReportingRateStationaryUnreliable",
+      "kind": "setting",
+      "label": "Dynamic Reporting Rate Stationary (Unreliable)",
+      "screens": [
+        "reporting_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_dynamicReportingRateStationaryUnreliable",
+      "disable_key": "disablePreferenceItem_dynamicReportingRateStationaryUnreliable"
+    },
+    {
+      "key": "elevProfileCenterOnSeeker",
+      "kind": "setting",
+      "label": "Elevation Profile Center on Seeker",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_elevProfileCenterOnSeeker",
+      "disable_key": "disablePreferenceItem_elevProfileCenterOnSeeker"
+    },
+    {
+      "key": "elevProfileInterpolateAlt",
+      "kind": "setting",
+      "label": "Elevation Profile Interpolate Altitudes",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_elevProfileInterpolateAlt",
+      "disable_key": "disablePreferenceItem_elevProfileInterpolateAlt"
+    },
+    {
+      "key": "elevation_data_category",
+      "kind": "category",
+      "label": "elevation data category",
+      "screens": [
+        "elevation_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "enableAutoUploadLogs",
+      "kind": "setting",
+      "label": "enableAutoUploadLogs",
+      "screens": [
+        "logging_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "enableGeocoder",
+      "kind": "setting",
+      "label": "Enable Address Lookup (Geocoder)",
+      "screens": [
+        "geocoder_preference_fragment.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_enableGeocoder",
+      "disable_key": "disablePreferenceItem_enableGeocoder"
+    },
+    {
+      "key": "enableNonStreamingConnections",
+      "kind": "setting",
+      "label": "Enable Mesh Network Mode",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_enableNonStreamingConnections",
+      "disable_key": "disablePreferenceItem_enableNonStreamingConnections"
+    },
+    {
+      "key": "enableToast",
+      "kind": "setting",
+      "label": "Display Notification",
+      "screens": [
+        "chat_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_enableToast",
+      "disable_key": "disablePreferenceItem_enableToast"
+    },
+    {
+      "key": "encryptPassword",
+      "kind": "setting",
+      "label": "encryptPassword",
+      "screens": [
+        "callsign_device_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "encryptionPassphrase",
+      "kind": "setting",
+      "label": "Change Encryption Passphrase",
+      "screens": [
+        "encrypt_preference.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_encryptionPassphrase",
+      "disable_key": "disablePreferenceItem_encryptionPassphrase"
+    },
+    {
+      "key": "enterpriseConfigurationDataPackage",
+      "kind": "setting",
+      "label": "enterpriseConfigurationDataPackage",
+      "screens": [
+        "app_restrictions.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "enterpriseConfigurationDataPackage2",
+      "kind": "setting",
+      "label": "enterpriseConfigurationDataPackage2",
+      "screens": [
+        "app_restrictions.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "enterpriseConfigurationDataPackage3",
+      "kind": "setting",
+      "label": "enterpriseConfigurationDataPackage3",
+      "screens": [
+        "app_restrictions.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "enterpriseConfigurationDataPackage4",
+      "kind": "setting",
+      "label": "enterpriseConfigurationDataPackage4",
+      "screens": [
+        "app_restrictions.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "enterpriseConfigurationDataPackage5",
+      "kind": "setting",
+      "label": "enterpriseConfigurationDataPackage5",
+      "screens": [
+        "app_restrictions.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "enterpriseConfigurationPreferences",
+      "kind": "screen",
+      "label": "enterpriseConfigurationPreferences",
+      "screens": [
+        "app_restrictions.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "eud_api_client_status",
+      "kind": "setting",
+      "label": "eud api client status",
+      "screens": [
+        "takgov_eud_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "eud_api_disable_option",
+      "kind": "setting",
+      "label": "eud api disable option",
+      "screens": [
+        "control_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "eud_api_general_preferences",
+      "kind": "setting",
+      "label": "eud api general preferences",
+      "screens": [
+        "takgov_eud_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "eud_api_resource_sync_preferences",
+      "kind": "setting",
+      "label": "eud api resource sync preferences",
+      "screens": [
+        "takgov_eud_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "eud_api_sync_mapsources",
+      "kind": "setting",
+      "label": "eud api sync mapsources",
+      "screens": [
+        "takgov_eud_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "eud_api_sync_plugins",
+      "kind": "setting",
+      "label": "eud api sync plugins",
+      "screens": [
+        "takgov_eud_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "expandedDangerClose",
+      "kind": "setting",
+      "label": "Expanded Danger Close Search",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_expandedDangerClose",
+      "disable_key": "disablePreferenceItem_expandedDangerClose"
+    },
+    {
+      "key": "expireEverything",
+      "kind": "setting",
+      "label": "expireEverything",
+      "screens": [
+        "stale_data_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "expireStaleItemsTime",
+      "kind": "setting",
+      "label": "expireStaleItemsTime",
+      "screens": [
+        "stale_data_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "expireUnknowns",
+      "kind": "setting",
+      "label": "expireUnknowns",
+      "screens": [
+        "stale_data_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "exportHistory",
+      "kind": "setting",
+      "label": "Export Chat History",
+      "screens": [
+        "chat_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_exportHistory",
+      "disable_key": "disablePreferenceItem_exportHistory"
+    },
+    {
+      "key": "external_applications_category",
+      "kind": "category",
+      "label": "external applications category",
+      "screens": [
+        "night_vision_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "external_night_vision_launch",
+      "kind": "setting",
+      "label": "external night vision launch",
+      "screens": [
+        "night_vision_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "fade_notification",
+      "kind": "setting",
+      "label": "Fade Notification Time",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_fade_notification",
+      "disable_key": "disablePreferenceItem_fade_notification"
+    },
+    {
+      "key": "fahDistance",
+      "kind": "setting",
+      "label": "FAH Distance (NM)",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_fahDistance",
+      "disable_key": "disablePreferenceItem_fahDistance"
+    },
+    {
+      "key": "faux_nav_bar",
+      "kind": "setting",
+      "label": "Enable the Faux Navigation Bar",
+      "screens": [
+        "usability_settings.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_faux_nav_bar",
+      "disable_key": "disablePreferenceItem_faux_nav_bar"
+    },
+    {
+      "key": "faux_nav_bar_reverse",
+      "kind": "setting",
+      "label": "Reverse the buttons on the Faux Navigation Bar",
+      "screens": [
+        "usability_settings.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_faux_nav_bar_reverse",
+      "disable_key": "disablePreferenceItem_faux_nav_bar_reverse"
+    },
+    {
+      "key": "file_overlay_category",
+      "kind": "category",
+      "label": "file overlay category",
+      "screens": [
+        "file_overlay_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "fileshareDownloadAttempts",
+      "kind": "setting",
+      "label": "Download attempts",
+      "screens": [
+        "missionpackage_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_fileshareDownloadAttempts",
+      "disable_key": "disablePreferenceItem_fileshareDownloadAttempts"
+    },
+    {
+      "key": "filesharingAllServers",
+      "kind": "setting",
+      "label": "filesharingAllServers",
+      "screens": [
+        "missionpackage_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "filesharingConnectionTimeoutSecs",
+      "kind": "setting",
+      "label": "File Transfer Connection Timeout",
+      "screens": [
+        "missionpackage_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_filesharingConnectionTimeoutSecs",
+      "disable_key": "disablePreferenceItem_filesharingConnectionTimeoutSecs"
+    },
+    {
+      "key": "filesharingEnabled",
+      "kind": "setting",
+      "label": "filesharingEnabled",
+      "screens": [
+        "missionpackage_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "filesharingSecureWebServerPort",
+      "kind": "setting",
+      "label": "filesharingSecureWebServerPort",
+      "screens": [
+        "missionpackage_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "filesharingSizeThresholdNoGo",
+      "kind": "setting",
+      "label": "File Transfer Max size",
+      "screens": [
+        "missionpackage_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_filesharingSizeThresholdNoGo",
+      "disable_key": "disablePreferenceItem_filesharingSizeThresholdNoGo"
+    },
+    {
+      "key": "filesharingTransferTimeoutSecs",
+      "kind": "setting",
+      "label": "File Transfer Failure Timeout",
+      "screens": [
+        "missionpackage_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_filesharingTransferTimeoutSecs",
+      "disable_key": "disablePreferenceItem_filesharingTransferTimeoutSecs"
+    },
+    {
+      "key": "filesharingWebServerLegacyHttpEnabled",
+      "kind": "setting",
+      "label": "filesharingWebServerLegacyHttpEnabled",
+      "screens": [
+        "missionpackage_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "filesharingWebServerPort",
+      "kind": "setting",
+      "label": "Server port",
+      "screens": [
+        "missionpackage_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_filesharingWebServerPort",
+      "disable_key": "disablePreferenceItem_filesharingWebServerPort"
+    },
+    {
+      "key": "fire_prefs_category",
+      "kind": "category",
+      "label": "Digital Pointer Preferences",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_fire_prefs_category",
+      "disable_key": "disablePreferenceItem_fire_prefs_category"
+    },
+    {
+      "key": "firesNumberOfSpis",
+      "kind": "setting",
+      "label": "Number of DPs",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_firesNumberOfSpis",
+      "disable_key": "disablePreferenceItem_firesNumberOfSpis"
+    },
+    {
+      "key": "firesPreference",
+      "kind": "screen",
+      "label": "Fires Toolbar Preferences",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_firesPreference",
+      "disable_key": "disablePreferenceItem_firesPreference"
+    },
+    {
+      "key": "flying_category",
+      "kind": "category",
+      "label": "flying category",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "forceEnglish",
+      "kind": "setting",
+      "label": "forceEnglish",
+      "screens": [
+        "control_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "force_dted_elevation_only",
+      "kind": "setting",
+      "label": "force dted elevation only",
+      "screens": [
+        "elevation_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "frame_limit",
+      "kind": "setting",
+      "label": "Render Speed",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_frame_limit",
+      "disable_key": "disablePreferenceItem_frame_limit"
+    },
+    {
+      "key": "generalDisplayPref",
+      "kind": "screen",
+      "label": "Display Preferences",
+      "screens": [
+        "main_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_generalDisplayPref",
+      "disable_key": "disablePreferenceItem_generalDisplayPref"
+    },
+    {
+      "key": "generate_detail_pool",
+      "kind": "setting",
+      "label": "generate detail pool",
+      "screens": [
+        "advanced_logging_preferences.xml",
+        "metrics_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "generate_full_pool",
+      "kind": "setting",
+      "label": "generate full pool",
+      "screens": [
+        "advanced_logging_preferences.xml",
+        "metrics_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "geochat_network_preferences_category",
+      "kind": "category",
+      "label": "geochat network preferences category",
+      "screens": [
+        "chat_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "geocodeSupplier",
+      "kind": "setting",
+      "label": "Address Provider",
+      "screens": [
+        "geocoder_preference_fragment.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_geocodeSupplier",
+      "disable_key": "disablePreferenceItem_geocodeSupplier"
+    },
+    {
+      "key": "geocodeTestConnection",
+      "kind": "setting",
+      "label": "Test Address Provider",
+      "screens": [
+        "geocoder_preference_fragment.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_geocodeTestConnection",
+      "disable_key": "disablePreferenceItem_geocodeTestConnection"
+    },
+    {
+      "key": "geocoderPreferences",
+      "kind": "screen",
+      "label": "Address Lookup Preferences",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_geocoderPreferences",
+      "disable_key": "disablePreferenceItem_geocoderPreferences"
+    },
+    {
+      "key": "goto_tool_use_last_point",
+      "kind": "setting",
+      "label": "goto tool use last point",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "gps.update.interval",
+      "kind": "setting",
+      "label": "gps.update.interval",
+      "screens": [
+        "network_gps_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "gpsSettings",
+      "kind": "screen",
+      "label": "GPS Preferences",
+      "screens": [
+        "device_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_gpsSettings",
+      "disable_key": "disablePreferenceItem_gpsSettings"
+    },
+    {
+      "key": "gpxImportCheckpointsForNamedRoutePoints",
+      "kind": "setting",
+      "label": "GPX Import Checkpoints",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_gpxImportCheckpointsForNamedRoutePoints",
+      "disable_key": "disablePreferenceItem_gpxImportCheckpointsForNamedRoutePoints"
+    },
+    {
+      "key": "grgRootVisibilityToggle",
+      "kind": "setting",
+      "label": "grgRootVisibilityToggle",
+      "screens": [
+        "wms_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "gridLinesPreference",
+      "kind": "screen",
+      "label": "Grid Line Preferences",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_gridLinesPreference",
+      "disable_key": "disablePreferenceItem_gridLinesPreference"
+    },
+    {
+      "key": "history_preferences_category",
+      "kind": "category",
+      "label": "history preferences category",
+      "screens": [
+        "chat_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "hostileUpdateDelay",
+      "kind": "setting",
+      "label": "Automatically Broadcast a Marker",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_hostileUpdateDelay",
+      "disable_key": "disablePreferenceItem_hostileUpdateDelay"
+    },
+    {
+      "key": "httpClientPermissiveMode",
+      "kind": "setting",
+      "label": "httpClientPermissiveMode",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "imagery_layer_outline_preferences_category",
+      "kind": "category",
+      "label": "imagery layer outline preferences category",
+      "screens": [
+        "layers_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "imagery_tab_name",
+      "kind": "setting",
+      "label": "Imagery Tab Name",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_imagery_tab_name",
+      "disable_key": "disablePreferenceItem_imagery_tab_name"
+    },
+    {
+      "key": "import_style_default_preferences_category",
+      "kind": "category",
+      "label": "import style default preferences category",
+      "screens": [
+        "importstyle_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "individual_alert_notification",
+      "kind": "setting",
+      "label": "Individual Alert Notifications",
+      "screens": [
+        "alert_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_individual_alert_notification",
+      "disable_key": "disablePreferenceItem_individual_alert_notification"
+    },
+    {
+      "key": "input_output_management_category",
+      "kind": "category",
+      "label": "input output management category",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "insertDestInDirectedCoT",
+      "kind": "setting",
+      "label": "insertDestInDirectedCoT",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "isrvNetworkPreference",
+      "kind": "screen",
+      "label": "Rover Control Preferences",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_isrvNetworkPreference",
+      "disable_key": "disablePreferenceItem_isrvNetworkPreference"
+    },
+    {
+      "key": "key_for_category",
+      "kind": "category",
+      "label": "key for category",
+      "screens": [
+        "metrics_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "kmlExportCheckpointMode",
+      "kind": "setting",
+      "label": "KML Export Checkpoint Mode",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_kmlExportCheckpointMode",
+      "disable_key": "disablePreferenceItem_kmlExportCheckpointMode"
+    },
+    {
+      "key": "kmlExportGroundClamp",
+      "kind": "setting",
+      "label": "Ignore Elevation Data",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_kmlExportGroundClamp",
+      "disable_key": "disablePreferenceItem_kmlExportGroundClamp"
+    },
+    {
+      "key": "label_text_size",
+      "kind": "setting",
+      "label": "Default Label Size",
+      "screens": [
+        "usability_settings.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_label_text_size",
+      "disable_key": "disablePreferenceItem_label_text_size"
+    },
+    {
+      "key": "landscape_extended_buttons",
+      "kind": "setting",
+      "label": "landscape extended buttons",
+      "screens": [
+        "custom_actionbar_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "largeActionBar",
+      "kind": "setting",
+      "label": "Enable Large Tool Bar",
+      "screens": [
+        "usability_settings.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_largeActionBar",
+      "disable_key": "disablePreferenceItem_largeActionBar"
+    },
+    {
+      "key": "largeTextMode",
+      "kind": "setting",
+      "label": "Enable Large Text Mode",
+      "screens": [
+        "usability_settings.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_largeTextMode",
+      "disable_key": "disablePreferenceItem_largeTextMode"
+    },
+    {
+      "key": "laserBasketDistance",
+      "kind": "setting",
+      "label": "Laser Basket Distance (NM)",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_laserBasketDistance",
+      "disable_key": "disablePreferenceItem_laserBasketDistance"
+    },
+    {
+      "key": "layerOutlinesPreference",
+      "kind": "screen",
+      "label": "Imagery Layer Outline Preferences",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_layerOutlinesPreference",
+      "disable_key": "disablePreferenceItem_layerOutlinesPreference"
+    },
+    {
+      "key": "legacyFiresToolbarMode",
+      "kind": "setting",
+      "label": "Legacy Toolbar Mode",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_legacyFiresToolbarMode",
+      "disable_key": "disablePreferenceItem_legacyFiresToolbarMode"
+    },
+    {
+      "key": "legacyPointDropNaming",
+      "kind": "setting",
+      "label": "legacyPointDropNaming",
+      "screens": [
+        "point_drop_behavior.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "legacyPrefs",
+      "kind": "screen",
+      "label": "legacyPrefs",
+      "screens": [
+        "my_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "legacy_preferences_category",
+      "kind": "category",
+      "label": "legacy preferences category",
+      "screens": [
+        "legacy_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "legacy_settings",
+      "kind": "setting",
+      "label": "Legacy Settings View",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_legacy_settings",
+      "disable_key": "disablePreferenceItem_legacy_settings"
+    },
+    {
+      "key": "listenPort",
+      "kind": "setting",
+      "label": "Network GPS Port",
+      "screens": [
+        "network_gps_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_listenPort",
+      "disable_key": "disablePreferenceItem_listenPort"
+    },
+    {
+      "key": "loadPartialPrefs",
+      "kind": "screen",
+      "label": "Load Preference Category",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_loadPartialPrefs",
+      "disable_key": "disablePreferenceItem_loadPartialPrefs"
+    },
+    {
+      "key": "loadPrefs",
+      "kind": "screen",
+      "label": "Load Preferences",
+      "screens": [
+        "preference_management.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_loadPrefs",
+      "disable_key": "disablePreferenceItem_loadPrefs"
+    },
+    {
+      "key": "loc_map_widget",
+      "kind": "setting",
+      "label": "loc map widget",
+      "screens": [
+        "night_vision_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "loc_notification",
+      "kind": "setting",
+      "label": "loc notification",
+      "screens": [
+        "night_vision_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "loc_self_overlay_box",
+      "kind": "setting",
+      "label": "loc self overlay box",
+      "screens": [
+        "night_vision_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "locationCallsign",
+      "kind": "setting",
+      "label": "My Callsign",
+      "screens": [
+        "call_sign_preference.xml",
+        "device_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_locationCallsign",
+      "disable_key": "disablePreferenceItem_locationCallsign"
+    },
+    {
+      "key": "locationReportingStrategy",
+      "kind": "setting",
+      "label": "Reporting Strategy",
+      "screens": [
+        "reporting_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_locationReportingStrategy",
+      "disable_key": "disablePreferenceItem_locationReportingStrategy"
+    },
+    {
+      "key": "locationTeam",
+      "kind": "setting",
+      "label": "My Team",
+      "screens": [
+        "call_sign_preference.xml",
+        "device_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_locationTeam",
+      "disable_key": "disablePreferenceItem_locationTeam"
+    },
+    {
+      "key": "locationUnitType",
+      "kind": "setting",
+      "label": "My Display Type",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_locationUnitType",
+      "disable_key": "disablePreferenceItem_locationUnitType"
+    },
+    {
+      "key": "locationUnitTypeAction",
+      "kind": "setting",
+      "label": "locationUnitTypeAction",
+      "screens": [
+        "device_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "locationUseWRCallsign",
+      "kind": "setting",
+      "label": "Use Wave Relay Callsign",
+      "screens": [
+        "device_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_locationUseWRCallsign",
+      "disable_key": "disablePreferenceItem_locationUseWRCallsign"
+    },
+    {
+      "key": "location_marker_scale_key",
+      "kind": "setting",
+      "label": "location marker scale key",
+      "screens": [
+        "self_marker_custom_pref_fragment.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "location_options_category",
+      "kind": "category",
+      "label": "location options category",
+      "screens": [
+        "night_vision_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "lockBehavior",
+      "kind": "setting",
+      "label": "lockBehavior",
+      "screens": [
+        "control_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "lock_behavior_category",
+      "kind": "category",
+      "label": "lock behavior category",
+      "screens": [
+        "locking_preference.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "loggingDisclaimer",
+      "kind": "setting",
+      "label": "loggingDisclaimer",
+      "screens": [
+        "advanced_logging_preferences.xml",
+        "metrics_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "loggingPrefs",
+      "kind": "screen",
+      "label": "loggingPrefs",
+      "screens": [
+        "support_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "loggingfile",
+      "kind": "setting",
+      "label": "loggingfile",
+      "screens": [
+        "advanced_logging_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "loggingfile_error_only",
+      "kind": "setting",
+      "label": "loggingfile error only",
+      "screens": [
+        "advanced_logging_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "loggingfile_upload_debug",
+      "kind": "setting",
+      "label": "loggingfile upload debug",
+      "screens": [
+        "advanced_logging_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "lognettraffictofile",
+      "kind": "setting",
+      "label": "lognettraffictofile",
+      "screens": [
+        "advanced_logging_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "lrfCategory",
+      "kind": "category",
+      "label": "lrfCategory",
+      "screens": [
+        "lrf_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "lrfSettings",
+      "kind": "screen",
+      "label": "lrfSettings",
+      "screens": [
+        "device_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "manageInputsLink",
+      "kind": "setting",
+      "label": "Manage Inputs",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_manageInputsLink",
+      "disable_key": "disablePreferenceItem_manageInputsLink"
+    },
+    {
+      "key": "manageOutputsLink",
+      "kind": "setting",
+      "label": "Manage Outputs",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_manageOutputsLink",
+      "disable_key": "disablePreferenceItem_manageOutputsLink"
+    },
+    {
+      "key": "manageStreamingLink",
+      "kind": "setting",
+      "label": "Manage Server Connections",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_manageStreamingLink",
+      "disable_key": "disablePreferenceItem_manageStreamingLink"
+    },
+    {
+      "key": "map_center_designator",
+      "kind": "setting",
+      "label": "Designate the Map Center",
+      "screens": [
+        "basic_display_settings.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_map_center_designator",
+      "disable_key": "disablePreferenceItem_map_center_designator"
+    },
+    {
+      "key": "map_eyealt_visible",
+      "kind": "setting",
+      "label": "map eyealt visible",
+      "screens": [
+        "basic_display_settings.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "map_scale_rounding",
+      "kind": "setting",
+      "label": "Enable Map Scale Rounding",
+      "screens": [
+        "basic_display_settings.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_map_scale_rounding",
+      "disable_key": "disablePreferenceItem_map_scale_rounding"
+    },
+    {
+      "key": "map_scale_visible",
+      "kind": "setting",
+      "label": "Enable Map Scale Display",
+      "screens": [
+        "basic_display_settings.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_map_scale_visible",
+      "disable_key": "disablePreferenceItem_map_scale_visible"
+    },
+    {
+      "key": "map_zoom_visible",
+      "kind": "setting",
+      "label": "map zoom visible",
+      "screens": [
+        "basic_display_settings.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "max_num_bread_tracks",
+      "kind": "setting",
+      "label": "Set Max Number of Bread Crumbs",
+      "screens": [
+        "bread_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_max_num_bread_tracks",
+      "disable_key": "disablePreferenceItem_max_num_bread_tracks"
+    },
+    {
+      "key": "mediaLayerCacheForceRescan",
+      "kind": "setting",
+      "label": "Force Reset Layer Cache",
+      "screens": [
+        "media_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_mediaLayerCacheForceRescan",
+      "disable_key": "disablePreferenceItem_mediaLayerCacheForceRescan"
+    },
+    {
+      "key": "mediaPreference",
+      "kind": "screen",
+      "label": "Media Preferences",
+      "screens": [
+        "control_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_mediaPreference",
+      "disable_key": "disablePreferenceItem_mediaPreference"
+    },
+    {
+      "key": "media_preferences_category",
+      "kind": "category",
+      "label": "media preferences category",
+      "screens": [
+        "media_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "metricsPreference",
+      "kind": "screen",
+      "label": "Metric Report Preferences",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_metricsPreference",
+      "disable_key": "disablePreferenceItem_metricsPreference"
+    },
+    {
+      "key": "missionpackagePreference",
+      "kind": "screen",
+      "label": "Mission Package Control Preferences",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_missionpackagePreference",
+      "disable_key": "disablePreferenceItem_missionpackagePreference"
+    },
+    {
+      "key": "mockingOption",
+      "kind": "setting",
+      "label": "GPS Option",
+      "screens": [
+        "network_gps_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_mockingOption",
+      "disable_key": "disablePreferenceItem_mockingOption"
+    },
+    {
+      "key": "monitorServerConnections",
+      "kind": "setting",
+      "label": "Monitor Server Connections",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_monitorServerConnections",
+      "disable_key": "disablePreferenceItem_monitorServerConnections"
+    },
+    {
+      "key": "multicastTTL",
+      "kind": "setting",
+      "label": "Multicast TTL",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_multicastTTL",
+      "disable_key": "disablePreferenceItem_multicastTTL"
+    },
+    {
+      "key": "myIdentity",
+      "kind": "setting",
+      "label": "My Callsign",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_myIdentity",
+      "disable_key": "disablePreferenceItem_myIdentity"
+    },
+    {
+      "key": "myPlugins",
+      "kind": "setting",
+      "label": "TAK Package Mgmt",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_myPlugins",
+      "disable_key": "disablePreferenceItem_myPlugins"
+    },
+    {
+      "key": "myServers",
+      "kind": "setting",
+      "label": "TAK Servers",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_myServers",
+      "disable_key": "disablePreferenceItem_myServers"
+    },
+    {
+      "key": "mySettings",
+      "kind": "screen",
+      "label": "My Preferences",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_mySettings",
+      "disable_key": "disablePreferenceItem_mySettings"
+    },
+    {
+      "key": "my_actionbar_settings",
+      "kind": "setting",
+      "label": "Tool Bar Customization",
+      "screens": [
+        "color_and_tinting.xml",
+        "display_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_my_actionbar_settings",
+      "disable_key": "disablePreferenceItem_my_actionbar_settings"
+    },
+    {
+      "key": "my_location_icon_color",
+      "kind": "setting",
+      "label": "My Location Color / Size",
+      "screens": [
+        "color_and_tinting.xml",
+        "display_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_my_location_icon_color",
+      "disable_key": "disablePreferenceItem_my_location_icon_color"
+    },
+    {
+      "key": "nav_orientation_right",
+      "kind": "setting",
+      "label": "nav orientation right",
+      "screens": [
+        "custom_actionbar_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "networkCategory",
+      "kind": "category",
+      "label": "Network GPS",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_networkCategory",
+      "disable_key": "disablePreferenceItem_networkCategory"
+    },
+    {
+      "key": "networkGpsCategory",
+      "kind": "category",
+      "label": "GPS Preferences",
+      "screens": [
+        "network_gps_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_networkGpsCategory",
+      "disable_key": "disablePreferenceItem_networkGpsCategory"
+    },
+    {
+      "key": "networkPrefs",
+      "kind": "screen",
+      "label": "networkPrefs",
+      "screens": [
+        "my_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "networkSettings",
+      "kind": "screen",
+      "label": "Network Connection Preferences",
+      "screens": [
+        "network_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_networkSettings",
+      "disable_key": "disablePreferenceItem_networkSettings"
+    },
+    {
+      "key": "network_config",
+      "kind": "setting",
+      "label": "Internal Network Configuration",
+      "screens": [
+        "isrv_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_network_config",
+      "disable_key": "disablePreferenceItem_network_config"
+    },
+    {
+      "key": "network_dhcp",
+      "kind": "setting",
+      "label": "DHCP",
+      "screens": [
+        "isrv_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_network_dhcp",
+      "disable_key": "disablePreferenceItem_network_dhcp"
+    },
+    {
+      "key": "network_logging_preferences_category",
+      "kind": "category",
+      "label": "network logging preferences category",
+      "screens": [
+        "advanced_logging_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "network_multicast_loopback",
+      "kind": "setting",
+      "label": "Multicast Traffic Loopback",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_network_multicast_loopback",
+      "disable_key": "disablePreferenceItem_network_multicast_loopback"
+    },
+    {
+      "key": "network_preferences_category",
+      "kind": "category",
+      "label": "network preferences category",
+      "screens": [
+        "network_preferences.xml",
+        "prompt_network_preference.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "network_quic_enabled",
+      "kind": "setting",
+      "label": "network quic enabled",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "network_static_dns1",
+      "kind": "setting",
+      "label": "DNS 1",
+      "screens": [
+        "isrv_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_network_static_dns1",
+      "disable_key": "disablePreferenceItem_network_static_dns1"
+    },
+    {
+      "key": "network_static_dns2",
+      "kind": "setting",
+      "label": "DNS 2",
+      "screens": [
+        "isrv_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_network_static_dns2",
+      "disable_key": "disablePreferenceItem_network_static_dns2"
+    },
+    {
+      "key": "network_static_gateway",
+      "kind": "setting",
+      "label": "Default gateway",
+      "screens": [
+        "isrv_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_network_static_gateway",
+      "disable_key": "disablePreferenceItem_network_static_gateway"
+    },
+    {
+      "key": "network_static_ip_address",
+      "kind": "setting",
+      "label": "IP address",
+      "screens": [
+        "isrv_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_network_static_ip_address",
+      "disable_key": "disablePreferenceItem_network_static_ip_address"
+    },
+    {
+      "key": "network_static_subnet_mask",
+      "kind": "setting",
+      "label": "Subnet mask",
+      "screens": [
+        "isrv_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_network_static_subnet_mask",
+      "disable_key": "disablePreferenceItem_network_static_subnet_mask"
+    },
+    {
+      "key": "network_tweaks_category",
+      "kind": "category",
+      "label": "network tweaks category",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "ngaCertification",
+      "kind": "setting",
+      "label": "NGA Memorandum for Record (PFI)",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_ngaCertification",
+      "disable_key": "disablePreferenceItem_ngaCertification"
+    },
+    {
+      "key": "night_vision_widget",
+      "kind": "setting",
+      "label": "night vision widget",
+      "screens": [
+        "night_vision_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "nineLineControlPreference",
+      "kind": "screen",
+      "label": "9-line/5-line Control Preferences",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_nineLineControlPreference",
+      "disable_key": "disablePreferenceItem_nineLineControlPreference"
+    },
+    {
+      "key": "nonBluetoothLaserRangeFinder",
+      "kind": "setting",
+      "label": "nonBluetoothLaserRangeFinder",
+      "screens": [
+        "lrf_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "notification_preferences_category",
+      "kind": "category",
+      "label": "notification preferences category",
+      "screens": [
+        "chat_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "offscreen_indicator_dist_threshold",
+      "kind": "setting",
+      "label": "Set Distance Threshold (KM)",
+      "screens": [
+        "off_scr_indi_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_offscreen_indicator_dist_threshold",
+      "disable_key": "disablePreferenceItem_offscreen_indicator_dist_threshold"
+    },
+    {
+      "key": "offscreen_indicator_timeout_threshold",
+      "kind": "setting",
+      "label": "Set Timeout Threshold (seconds) or zero to disable",
+      "screens": [
+        "off_scr_indi_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_offscreen_indicator_timeout_threshold",
+      "disable_key": "disablePreferenceItem_offscreen_indicator_timeout_threshold"
+    },
+    {
+      "key": "offscreen_indicators_preferences_category",
+      "kind": "category",
+      "label": "offscreen indicators preferences category",
+      "screens": [
+        "off_scr_indi_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "onlyStreamingWithVPN",
+      "kind": "setting",
+      "label": "onlyStreamingWithVPN",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "other_category",
+      "kind": "category",
+      "label": "other category",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "other_general_control_preferences_category",
+      "kind": "category",
+      "label": "other general control preferences category",
+      "screens": [
+        "control_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "other_miscellaneous_display_options",
+      "kind": "screen",
+      "label": "other miscellaneous display options",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "overlayStylePreference",
+      "kind": "screen",
+      "label": "Import Style Default Preferences",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_overlayStylePreference",
+      "disable_key": "disablePreferenceItem_overlayStylePreference"
+    },
+    {
+      "key": "overlay_manager_width_height",
+      "kind": "setting",
+      "label": "Overlay Manager Width/Height",
+      "screens": [
+        "other_display_prefs.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_overlay_manager_width_height",
+      "disable_key": "disablePreferenceItem_overlay_manager_width_height"
+    },
+    {
+      "key": "override_permission_request",
+      "kind": "setting",
+      "label": "override permission request",
+      "screens": [
+        "control_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "pointDroppingBehavior",
+      "kind": "setting",
+      "label": "pointDroppingBehavior",
+      "screens": [
+        "legacy_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "point_dropping_behavior_category",
+      "kind": "category",
+      "label": "point dropping behavior category",
+      "screens": [
+        "point_drop_behavior.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "ppp0_highspeed_capable",
+      "kind": "setting",
+      "label": "Point-to-Point Link High Speed Capable",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_ppp0_highspeed_capable",
+      "disable_key": "disablePreferenceItem_ppp0_highspeed_capable"
+    },
+    {
+      "key": "prefManage",
+      "kind": "setting",
+      "label": "prefManage",
+      "screens": [
+        "callsign_device_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "pref_grid_color",
+      "kind": "setting",
+      "label": "pref grid color",
+      "screens": [
+        "gridlines_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "pref_grid_type",
+      "kind": "setting",
+      "label": "pref grid type",
+      "screens": [
+        "gridlines_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "pref_import_pref_action",
+      "kind": "setting",
+      "label": "pref import pref action",
+      "screens": [
+        "preference_management.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "pref_layer_outline_color",
+      "kind": "setting",
+      "label": "pref layer outline color",
+      "screens": [
+        "layers_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "pref_overlay_style_outline_color",
+      "kind": "setting",
+      "label": "pref overlay style outline color",
+      "screens": [
+        "importstyle_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "preferAltNumber",
+      "kind": "setting",
+      "label": "preferAltNumber",
+      "screens": [
+        "contact_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "preference_broadcast_delete",
+      "kind": "setting",
+      "label": "preference broadcast delete",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "preference_management_category",
+      "kind": "category",
+      "label": "preference management category",
+      "screens": [
+        "preference_management.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "preferences_category",
+      "kind": "category",
+      "label": "preferences category",
+      "screens": [
+        "main_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "prefs_dted_download",
+      "kind": "setting",
+      "label": "prefs dted download",
+      "screens": [
+        "elevation_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "prefs_dted_stream",
+      "kind": "setting",
+      "label": "prefs dted stream",
+      "screens": [
+        "elevation_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "prefs_dted_stream_server",
+      "kind": "setting",
+      "label": "prefs dted stream server",
+      "screens": [
+        "elevation_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "prefs_dted_visible",
+      "kind": "setting",
+      "label": "Show by Default",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_prefs_dted_visible",
+      "disable_key": "disablePreferenceItem_prefs_dted_visible"
+    },
+    {
+      "key": "prefs_enable_smart_cache",
+      "kind": "setting",
+      "label": "prefs enable smart cache",
+      "screens": [
+        "wms_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "prefs_file_label",
+      "kind": "setting",
+      "label": "prefs file label",
+      "screens": [
+        "file_overlay_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "prefs_grid_default_show",
+      "kind": "setting",
+      "label": "prefs grid default show",
+      "screens": [
+        "gridlines_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "prefs_layer_grg_map_interaction",
+      "kind": "setting",
+      "label": "Enable Image Overlay Map Interaction",
+      "screens": [
+        "wms_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_prefs_layer_grg_map_interaction",
+      "disable_key": "disablePreferenceItem_prefs_layer_grg_map_interaction"
+    },
+    {
+      "key": "prefs_layer_outlines_default_show",
+      "kind": "setting",
+      "label": "prefs layer outlines default show",
+      "screens": [
+        "layers_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "prefs_smart_cache_download_limit",
+      "kind": "setting",
+      "label": "prefs smart cache download limit",
+      "screens": [
+        "wms_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "prefs_use_klv_elevation",
+      "kind": "setting",
+      "label": "prefs use klv elevation",
+      "screens": [
+        "media_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "prepareForClone",
+      "kind": "setting",
+      "label": "Prepare for Cloning / Clear Device unique information",
+      "screens": [
+        "preference_management.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_prepareForClone",
+      "disable_key": "disablePreferenceItem_prepareForClone"
+    },
+    {
+      "key": "prompt_photo_rename",
+      "kind": "setting",
+      "label": "prompt photo rename",
+      "screens": [
+        "media_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "publishCategory",
+      "kind": "category",
+      "label": "Reporting Preferences",
+      "screens": [
+        "reporting_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_publishCategory",
+      "disable_key": "disablePreferenceItem_publishCategory"
+    },
+    {
+      "key": "pull_elevation_mode",
+      "kind": "setting",
+      "label": "pull elevation mode",
+      "screens": [
+        "coordentry_preference_fragment.xml",
+        "elevation_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "quickConnect",
+      "kind": "setting",
+      "label": "quickConnect",
+      "screens": [
+        "prompt_network_preference.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "quick_pic_preferences",
+      "kind": "setting",
+      "label": "quick pic preferences",
+      "screens": [
+        "media_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "quickpic.camera_chooser",
+      "kind": "setting",
+      "label": "quickpic.camera chooser",
+      "screens": [
+        "media_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "rab_bloodhound_display_textwidget",
+      "kind": "setting",
+      "label": "Display Bloodhound Text Widget",
+      "screens": [
+        "bloodhound_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_rab_bloodhound_display_textwidget",
+      "disable_key": "disablePreferenceItem_rab_bloodhound_display_textwidget"
+    },
+    {
+      "key": "rab_bloodhound_flash_colors",
+      "kind": "setting",
+      "label": "Flash When Closing In",
+      "screens": [
+        "bloodhound_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_rab_bloodhound_flash_colors",
+      "disable_key": "disablePreferenceItem_rab_bloodhound_flash_colors"
+    },
+    {
+      "key": "rab_bloodhound_large_textwidget",
+      "kind": "setting",
+      "label": "Display Large Bloodhound Text Widget",
+      "screens": [
+        "bloodhound_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_rab_bloodhound_large_textwidget",
+      "disable_key": "disablePreferenceItem_rab_bloodhound_large_textwidget"
+    },
+    {
+      "key": "rab_bloodhound_zoom",
+      "kind": "setting",
+      "label": "Toggle Auto Zoom",
+      "screens": [
+        "bloodhound_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_rab_bloodhound_zoom",
+      "disable_key": "disablePreferenceItem_rab_bloodhound_zoom"
+    },
+    {
+      "key": "rab_brg_units_pref",
+      "kind": "setting",
+      "label": "rab brg units pref",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "rab_color_pref",
+      "kind": "setting",
+      "label": "rab color pref",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "rab_dist_slant_range",
+      "kind": "setting",
+      "label": "rab dist slant range",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "rab_north_ref_pref",
+      "kind": "setting",
+      "label": "rab north ref pref",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "rab_preference_show_eta",
+      "kind": "setting",
+      "label": "rab preference show eta",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "rab_rng_units_pref",
+      "kind": "setting",
+      "label": "rab rng units pref",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "rapid_mgrs_dialog",
+      "kind": "setting",
+      "label": "rapid mgrs dialog",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "realtime_metrics",
+      "kind": "setting",
+      "label": "realtime metrics",
+      "screens": [
+        "logging_preferences.xml",
+        "metrics_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "recordUdpTool",
+      "kind": "setting",
+      "label": "recordUdpTool",
+      "screens": [
+        "video_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "redeploywms",
+      "kind": "setting",
+      "label": "Redeploy WMS Sources",
+      "screens": [
+        "wms_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_redeploywms",
+      "disable_key": "disablePreferenceItem_redeploywms"
+    },
+    {
+      "key": "relativeOverlaysScalingRadioList",
+      "kind": "setting",
+      "label": "Icon and Text Size",
+      "screens": [
+        "usability_settings.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_relativeOverlaysScalingRadioList",
+      "disable_key": "disablePreferenceItem_relativeOverlaysScalingRadioList"
+    },
+    {
+      "key": "repoStartupSync",
+      "kind": "setting",
+      "label": "repoStartupSync",
+      "screens": [
+        "app_mgmt_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "reportingPrefs",
+      "kind": "screen",
+      "label": "reportingPrefs",
+      "screens": [
+        "callsign_device_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "reportingSettings",
+      "kind": "screen",
+      "label": "Reporting Preferences",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_reportingSettings",
+      "disable_key": "disablePreferenceItem_reportingSettings"
+    },
+    {
+      "key": "requestDelay",
+      "kind": "setting",
+      "label": "Request Delay",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_requestDelay",
+      "disable_key": "disablePreferenceItem_requestDelay"
+    },
+    {
+      "key": "resetDeviceConfig",
+      "kind": "setting",
+      "label": "TAK Device Configuration",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_resetDeviceConfig",
+      "disable_key": "disablePreferenceItem_resetDeviceConfig"
+    },
+    {
+      "key": "resetHints",
+      "kind": "setting",
+      "label": "Reset Hints",
+      "screens": [
+        "support_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_resetHints",
+      "disable_key": "disablePreferenceItem_resetHints"
+    },
+    {
+      "key": "restoreRecordedLocation",
+      "kind": "setting",
+      "label": "restoreRecordedLocation",
+      "screens": [
+        "reporting_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "rng_feet_display_pref",
+      "kind": "setting",
+      "label": "rng feet display pref",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "rng_meters_display_pref",
+      "kind": "setting",
+      "label": "rng meters display pref",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "routePreference",
+      "kind": "screen",
+      "label": "Route Preferences",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_routePreference",
+      "disable_key": "disablePreferenceItem_routePreference"
+    },
+    {
+      "key": "route_billboard_distance_m",
+      "kind": "setting",
+      "label": "Billboard Render Distance",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_route_billboard_distance_m",
+      "disable_key": "disablePreferenceItem_route_billboard_distance_m"
+    },
+    {
+      "key": "route_billboard_enabled",
+      "kind": "setting",
+      "label": "Show Attachment Billboards",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_route_billboard_enabled",
+      "disable_key": "disablePreferenceItem_route_billboard_enabled"
+    },
+    {
+      "key": "route_preferences_category",
+      "kind": "category",
+      "label": "route preferences category",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "route_track_up_locked_on",
+      "kind": "setting",
+      "label": "Traditional Navigation Mode",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_route_track_up_locked_on",
+      "disable_key": "disablePreferenceItem_route_track_up_locked_on"
+    },
+    {
+      "key": "route_vibrate_at_checkpoint",
+      "kind": "setting",
+      "label": "Vibrate When Arriving at Checkpoint",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_route_vibrate_at_checkpoint",
+      "disable_key": "disablePreferenceItem_route_vibrate_at_checkpoint"
+    },
+    {
+      "key": "saAlternativeNumber",
+      "kind": "setting",
+      "label": "saAlternativeNumber",
+      "screens": [
+        "contact_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "saEmailAddress",
+      "kind": "setting",
+      "label": "Publish Preferred Email",
+      "screens": [
+        "contact_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_saEmailAddress",
+      "disable_key": "disablePreferenceItem_saEmailAddress"
+    },
+    {
+      "key": "saHasPhoneNumber",
+      "kind": "setting",
+      "label": "Publish phone number",
+      "screens": [
+        "contact_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_saHasPhoneNumber",
+      "disable_key": "disablePreferenceItem_saHasPhoneNumber"
+    },
+    {
+      "key": "saSipAddress",
+      "kind": "setting",
+      "label": "VoIP Number",
+      "screens": [
+        "contact_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_saSipAddress",
+      "disable_key": "disablePreferenceItem_saSipAddress"
+    },
+    {
+      "key": "saSipAddressAssignment",
+      "kind": "setting",
+      "label": "Publish VoIP Number",
+      "screens": [
+        "contact_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_saSipAddressAssignment",
+      "disable_key": "disablePreferenceItem_saSipAddressAssignment"
+    },
+    {
+      "key": "saURN",
+      "kind": "setting",
+      "label": "saURN",
+      "screens": [
+        "contact_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "saXmppUsername",
+      "kind": "setting",
+      "label": "Publish XMPP Username",
+      "screens": [
+        "contact_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_saXmppUsername",
+      "disable_key": "disablePreferenceItem_saXmppUsername"
+    },
+    {
+      "key": "savePrefs",
+      "kind": "screen",
+      "label": "Save Preferences",
+      "screens": [
+        "preference_management.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_savePrefs",
+      "disable_key": "disablePreferenceItem_savePrefs"
+    },
+    {
+      "key": "scrollToSelfOnStart",
+      "kind": "setting",
+      "label": "scrollToSelfOnStart",
+      "screens": [
+        "control_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "secureDeleteTimeout",
+      "kind": "setting",
+      "label": "secureDeleteTimeout",
+      "screens": [
+        "media_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "selected_actionbar_background_color",
+      "kind": "setting",
+      "label": "Tool Bar Background Color",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_selected_actionbar_background_color",
+      "disable_key": "disablePreferenceItem_selected_actionbar_background_color"
+    },
+    {
+      "key": "selfCoordinate",
+      "kind": "setting",
+      "label": "selfCoordinate",
+      "screens": [
+        "control_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "self_coord_action",
+      "kind": "setting",
+      "label": "self coord action",
+      "screens": [
+        "self_coordinate.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "self_coord_info_display",
+      "kind": "setting",
+      "label": "self coord info display",
+      "screens": [
+        "basic_display_settings.xml",
+        "self_coordinate.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "self_coordinate_category",
+      "kind": "category",
+      "label": "self coordinate category",
+      "screens": [
+        "self_coordinate.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "selfcoord_legacy_enlarge",
+      "kind": "setting",
+      "label": "selfcoord legacy enlarge",
+      "screens": [
+        "self_coordinate.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "serverConnections",
+      "kind": "setting",
+      "label": "serverConnections",
+      "screens": [
+        "network_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "server_connections_category",
+      "kind": "category",
+      "label": "server connections category",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "set_domain_pref",
+      "kind": "setting",
+      "label": "set domain pref",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "settingsDebugging",
+      "kind": "setting",
+      "label": "settingsDebugging",
+      "screens": [
+        "device_details_preference.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "settingsLogging",
+      "kind": "setting",
+      "label": "Logging Preferences",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_settingsLogging",
+      "disable_key": "disablePreferenceItem_settingsLogging"
+    },
+    {
+      "key": "settingsPref",
+      "kind": "screen",
+      "label": "Network Preferences",
+      "screens": [
+        "main_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_settingsPref",
+      "disable_key": "disablePreferenceItem_settingsPref"
+    },
+    {
+      "key": "showIP",
+      "kind": "setting",
+      "label": "showIP",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "show_self_coordinate_overlay",
+      "kind": "setting",
+      "label": "Display the Self Coordinate Information",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_show_self_coordinate_overlay",
+      "disable_key": "disablePreferenceItem_show_self_coordinate_overlay"
+    },
+    {
+      "key": "sidepane_handle_shade",
+      "kind": "setting",
+      "label": "sidepane handle shade",
+      "screens": [
+        "basic_display_settings.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "size_category",
+      "kind": "category",
+      "label": "size category",
+      "screens": [
+        "self_marker_custom_pref_fragment.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "smart_cache_preference_category",
+      "kind": "category",
+      "label": "smart cache preference category",
+      "screens": [
+        "wms_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "sms_numbers",
+      "kind": "setting",
+      "label": "Alert SMS Numbers",
+      "screens": [
+        "alert_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_sms_numbers",
+      "disable_key": "disablePreferenceItem_sms_numbers"
+    },
+    {
+      "key": "specTools",
+      "kind": "setting",
+      "label": "specTools",
+      "screens": [
+        "tools_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "specific_tool_preferences_category",
+      "kind": "category",
+      "label": "specific tool preferences category",
+      "screens": [
+        "specific_tool_preference.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "speed_unit_pref",
+      "kind": "setting",
+      "label": "speed unit pref",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "spiFahSize",
+      "kind": "setting",
+      "label": "DP/RedX FAH Width",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_spiFahSize",
+      "disable_key": "disablePreferenceItem_spiFahSize"
+    },
+    {
+      "key": "spiUpdateDelay",
+      "kind": "setting",
+      "label": "DP Update Period",
+      "screens": [
+        "fires_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_spiUpdateDelay",
+      "disable_key": "disablePreferenceItem_spiUpdateDelay"
+    },
+    {
+      "key": "staleData",
+      "kind": "setting",
+      "label": "staleData",
+      "screens": [
+        "control_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "staleRemoteDisconnects",
+      "kind": "setting",
+      "label": "staleRemoteDisconnects",
+      "screens": [
+        "stale_data_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "stale_data_preferences",
+      "kind": "setting",
+      "label": "stale data preferences",
+      "screens": [
+        "stale_data_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "support_category",
+      "kind": "category",
+      "label": "support category",
+      "screens": [
+        "support_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "swimming_category",
+      "kind": "category",
+      "label": "swimming category",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "symbologyProvider",
+      "kind": "setting",
+      "label": "symbologyProvider",
+      "screens": [
+        "device_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "tadiljPersistedIds",
+      "kind": "setting",
+      "label": "Manage Persisted IDs",
+      "screens": [
+        "tadilj_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_tadiljPersistedIds",
+      "disable_key": "disablePreferenceItem_tadiljPersistedIds"
+    },
+    {
+      "key": "tadiljSettings",
+      "kind": "screen",
+      "label": "TADIL-J Preferences",
+      "screens": [
+        "network_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_tadiljSettings",
+      "disable_key": "disablePreferenceItem_tadiljSettings"
+    },
+    {
+      "key": "tadilj_settings_category",
+      "kind": "category",
+      "label": "tadilj settings category",
+      "screens": [
+        "tadilj_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "takInitDeviceConfig",
+      "kind": "setting",
+      "label": "takInitDeviceConfig",
+      "screens": [
+        "support_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "takSupportInfo",
+      "kind": "setting",
+      "label": "takSupportInfo",
+      "screens": [
+        "support_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "tak_package_mgmt_local_preferences_category",
+      "kind": "category",
+      "label": "tak package mgmt local preferences category",
+      "screens": [
+        "app_mgmt_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "tak_package_mgmt_preferences_category",
+      "kind": "category",
+      "label": "tak package mgmt preferences category",
+      "screens": [
+        "app_mgmt_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "tak_package_mgmt_remote_preferences_category",
+      "kind": "category",
+      "label": "tak package mgmt remote preferences category",
+      "screens": [
+        "app_mgmt_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "tcpConnectTimeout",
+      "kind": "setting",
+      "label": "TCP Connection Timeout",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_tcpConnectTimeout",
+      "disable_key": "disablePreferenceItem_tcpConnectTimeout"
+    },
+    {
+      "key": "team_color_gps_icon",
+      "kind": "setting",
+      "label": "Team Color",
+      "screens": [
+        "self_marker_custom_pref_fragment.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_team_color_gps_icon",
+      "disable_key": "disablePreferenceItem_team_color_gps_icon"
+    },
+    {
+      "key": "tilt_rotation_menu_auto_close",
+      "kind": "setting",
+      "label": "tilt rotation menu auto close",
+      "screens": [
+        "usability_settings.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "toggle_log_tracks",
+      "kind": "setting",
+      "label": "Log Tracks",
+      "screens": [
+        "bread_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_toggle_log_tracks",
+      "disable_key": "disablePreferenceItem_toggle_log_tracks"
+    },
+    {
+      "key": "toggle_offscreen_indicators",
+      "kind": "setting",
+      "label": "toggle offscreen indicators",
+      "screens": [
+        "off_scr_indi_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "toggle_rotate_track_colors",
+      "kind": "setting",
+      "label": "Auto Rotate Track Colors",
+      "screens": [
+        "bread_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_toggle_rotate_track_colors",
+      "disable_key": "disablePreferenceItem_toggle_rotate_track_colors"
+    },
+    {
+      "key": "toolPrefs",
+      "kind": "screen",
+      "label": "toolPrefs",
+      "screens": [
+        "my_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "toolsPref",
+      "kind": "screen",
+      "label": "Tool Preferences",
+      "screens": [
+        "main_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_toolsPref",
+      "disable_key": "disablePreferenceItem_toolsPref"
+    },
+    {
+      "key": "tools_prefereces_category",
+      "kind": "category",
+      "label": "tools prefereces category",
+      "screens": [
+        "tools_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "track_crumb_size",
+      "kind": "setting",
+      "label": "Default Crumb Size",
+      "screens": [
+        "bread_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_track_crumb_size",
+      "disable_key": "disablePreferenceItem_track_crumb_size"
+    },
+    {
+      "key": "track_csv_export_headers",
+      "kind": "setting",
+      "label": "CSV Export Header",
+      "screens": [
+        "bread_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_track_csv_export_headers",
+      "disable_key": "disablePreferenceItem_track_csv_export_headers"
+    },
+    {
+      "key": "track_history_default_color",
+      "kind": "setting",
+      "label": "Default Color",
+      "screens": [
+        "bread_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_track_history_default_color",
+      "disable_key": "disablePreferenceItem_track_history_default_color"
+    },
+    {
+      "key": "track_history_preferences_category",
+      "kind": "category",
+      "label": "track history preferences category",
+      "screens": [
+        "bread_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "track_infinite",
+      "kind": "setting",
+      "label": "Persistent Self Track",
+      "screens": [
+        "bread_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_track_infinite",
+      "disable_key": "disablePreferenceItem_track_infinite"
+    },
+    {
+      "key": "track_kml_export_timestamps",
+      "kind": "setting",
+      "label": "KML Export Timestamps",
+      "screens": [
+        "bread_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_track_kml_export_timestamps",
+      "disable_key": "disablePreferenceItem_track_kml_export_timestamps"
+    },
+    {
+      "key": "track_line_to_surface",
+      "kind": "setting",
+      "label": "Render bread crumb line to ground in 3-D",
+      "screens": [
+        "bread_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_track_line_to_surface",
+      "disable_key": "disablePreferenceItem_track_line_to_surface"
+    },
+    {
+      "key": "track_prefix",
+      "kind": "setting",
+      "label": "Track Prefix",
+      "screens": [
+        "bread_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_track_prefix",
+      "disable_key": "disablePreferenceItem_track_prefix"
+    },
+    {
+      "key": "udpNoDataTimeout",
+      "kind": "setting",
+      "label": "MulticastRejoin interval",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_udpNoDataTimeout",
+      "disable_key": "disablePreferenceItem_udpNoDataTimeout"
+    },
+    {
+      "key": "unitPreferences",
+      "kind": "screen",
+      "label": "Unit Display Format Preferences",
+      "screens": [
+        "basic_display_settings.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_unitPreferences",
+      "disable_key": "disablePreferenceItem_unitPreferences"
+    },
+    {
+      "key": "unit_threshold_category",
+      "kind": "category",
+      "label": "unit threshold category",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "units_category",
+      "kind": "category",
+      "label": "units category",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "updateServerCaLocation",
+      "kind": "setting",
+      "label": "updateServerCaLocation",
+      "screens": [
+        "app_mgmt_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "updateServerCaPassword",
+      "kind": "setting",
+      "label": "updateServerCaPassword",
+      "screens": [
+        "app_mgmt_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "usability_settings_category",
+      "kind": "category",
+      "label": "usability settings category",
+      "screens": [
+        "usability_settings.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "usableSettings",
+      "kind": "screen",
+      "label": "usableSettings",
+      "screens": [
+        "display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "useGPSTime",
+      "kind": "setting",
+      "label": "Use GPS Time",
+      "screens": [
+        "network_gps_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_useGPSTime",
+      "disable_key": "disablePreferenceItem_useGPSTime"
+    },
+    {
+      "key": "useRouteVoiceCues",
+      "kind": "setting",
+      "label": "Navigational Voice Cues",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_useRouteVoiceCues",
+      "disable_key": "disablePreferenceItem_useRouteVoiceCues"
+    },
+    {
+      "key": "useTerrainElevationSelfMarker",
+      "kind": "setting",
+      "label": "useTerrainElevationSelfMarker",
+      "screens": [
+        "network_gps_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "userFeedback",
+      "kind": "setting",
+      "label": "userFeedback",
+      "screens": [
+        "support_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "userRemarks",
+      "kind": "setting",
+      "label": "userRemarks",
+      "screens": [
+        "call_sign_preference.xml",
+        "device_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "userTouch",
+      "kind": "setting",
+      "label": "userTouch",
+      "screens": [
+        "control_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "user_touch_preferences_category",
+      "kind": "category",
+      "label": "user touch preferences category",
+      "screens": [
+        "user_touch_prefs.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "vibratePhone",
+      "kind": "setting",
+      "label": "Vibrate phone",
+      "screens": [
+        "chat_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_vibratePhone",
+      "disable_key": "disablePreferenceItem_vibratePhone"
+    },
+    {
+      "key": "videoPreference",
+      "kind": "screen",
+      "label": "Video Preferences",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_videoPreference",
+      "disable_key": "disablePreferenceItem_videoPreference"
+    },
+    {
+      "key": "video_disable_audio",
+      "kind": "setting",
+      "label": "video disable audio",
+      "screens": [
+        "video_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "video_dropdown_hidden_disconnect",
+      "kind": "setting",
+      "label": "Hide video dropdown on disconnect",
+      "screens": [],
+      "sources": [
+        "gherkin-catalog"
+      ],
+      "extra": true,
+      "hide_key": "hidePreferenceItem_video_dropdown_hidden_disconnect"
+    },
+    {
+      "key": "video_mute_when_hidden",
+      "kind": "setting",
+      "label": "video mute when hidden",
+      "screens": [
+        "video_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "video_preferences_category",
+      "kind": "category",
+      "label": "video preferences category",
+      "screens": [
+        "video_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "visual_preferences_category",
+      "kind": "category",
+      "label": "visual preferences category",
+      "screens": [
+        "unit_display_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "volumemapswitcher",
+      "kind": "setting",
+      "label": "Enable Volume Keys rotating map layers",
+      "screens": [
+        "wms_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_volumemapswitcher",
+      "disable_key": "disablePreferenceItem_volumemapswitcher"
+    },
+    {
+      "key": "walking_category",
+      "kind": "category",
+      "label": "walking category",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "watercraft_category",
+      "kind": "category",
+      "label": "watercraft category",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "waveRelayRedirect",
+      "kind": "setting",
+      "label": "Legacy Wave Relay Redirect",
+      "screens": [
+        "network_connections_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_waveRelayRedirect",
+      "disable_key": "disablePreferenceItem_waveRelayRedirect"
+    },
+    {
+      "key": "waypointBubble.Driving",
+      "kind": "setting",
+      "label": "Driving Checkpoint Navigation Bubble Radius",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_waypointBubble.Driving",
+      "disable_key": "disablePreferenceItem_waypointBubble.Driving"
+    },
+    {
+      "key": "waypointBubble.Flying",
+      "kind": "setting",
+      "label": "Flying Checkpoint Navigation Bubble Radius",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_waypointBubble.Flying",
+      "disable_key": "disablePreferenceItem_waypointBubble.Flying"
+    },
+    {
+      "key": "waypointBubble.Swimming",
+      "kind": "setting",
+      "label": "Swimming Checkpoint Navigation Bubble Radius",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_waypointBubble.Swimming",
+      "disable_key": "disablePreferenceItem_waypointBubble.Swimming"
+    },
+    {
+      "key": "waypointBubble.Walking",
+      "kind": "setting",
+      "label": "Walking Checkpoint Navigation Bubble Radius",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_waypointBubble.Walking",
+      "disable_key": "disablePreferenceItem_waypointBubble.Walking"
+    },
+    {
+      "key": "waypointBubble.Watercraft",
+      "kind": "setting",
+      "label": "Watercraft Checkpoint Navigation Bubble Radius",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_waypointBubble.Watercraft",
+      "disable_key": "disablePreferenceItem_waypointBubble.Watercraft"
+    },
+    {
+      "key": "waypointOffRouteBubble.Driving",
+      "kind": "setting",
+      "label": "Driving Off Route Bubble Radius",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_waypointOffRouteBubble.Driving",
+      "disable_key": "disablePreferenceItem_waypointOffRouteBubble.Driving"
+    },
+    {
+      "key": "waypointOffRouteBubble.Flying",
+      "kind": "setting",
+      "label": "Flying Off Route Bubble Radius",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_waypointOffRouteBubble.Flying",
+      "disable_key": "disablePreferenceItem_waypointOffRouteBubble.Flying"
+    },
+    {
+      "key": "waypointOffRouteBubble.Swimming",
+      "kind": "setting",
+      "label": "Swimming Off Route Bubble Radius",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_waypointOffRouteBubble.Swimming",
+      "disable_key": "disablePreferenceItem_waypointOffRouteBubble.Swimming"
+    },
+    {
+      "key": "waypointOffRouteBubble.Walking",
+      "kind": "setting",
+      "label": "Walking Off Route Bubble Radius",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_waypointOffRouteBubble.Walking",
+      "disable_key": "disablePreferenceItem_waypointOffRouteBubble.Walking"
+    },
+    {
+      "key": "waypointOffRouteBubble.Watercraft",
+      "kind": "setting",
+      "label": "Watercraft Off Route Bubble Radius",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_waypointOffRouteBubble.Watercraft",
+      "disable_key": "disablePreferenceItem_waypointOffRouteBubble.Watercraft"
+    },
+    {
+      "key": "waypointPrefix",
+      "kind": "setting",
+      "label": "Checkpoint Name Prefix",
+      "screens": [
+        "route_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_waypointPrefix",
+      "disable_key": "disablePreferenceItem_waypointPrefix"
+    },
+    {
+      "key": "wmsPreferences",
+      "kind": "screen",
+      "label": "Map Data Preferences",
+      "screens": [],
+      "sources": [
+        "SupportedPreferenceDisable.txt"
+      ],
+      "hide_key": "hidePreferenceItem_wmsPreferences",
+      "disable_key": "disablePreferenceItem_wmsPreferences"
+    },
+    {
+      "key": "wms_preferences_category",
+      "kind": "category",
+      "label": "wms preferences category",
+      "screens": [
+        "wms_preferences.xml"
+      ],
+      "sources": [
+        "res/xml"
+      ]
+    },
+    {
+      "key": "wmsconnecttimeout",
+      "kind": "setting",
+      "label": "WMS Connect Timeout",
+      "screens": [
+        "wms_preferences.xml"
+      ],
+      "sources": [
+        "SupportedPreferenceDisable.txt",
+        "res/xml"
+      ],
+      "hide_key": "hidePreferenceItem_wmsconnecttimeout",
+      "disable_key": "disablePreferenceItem_wmsconnecttimeout"
+    }
+  ]
+}

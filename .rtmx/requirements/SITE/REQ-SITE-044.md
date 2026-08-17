@@ -27,7 +27,9 @@ or the React chrome against ATAK.
   Track History, Elevation Tools, Import Manager, Emergency Beacon, Encrypted
   Mesh, or TAK Package Management
 - Quote intent actions that exist in `data/atak-intents.json`
-- Quote preference keys that exist in `data/atak-preference-keys.json`
+- Quote preference keys that exist in `data/atak-preferences.json` (the
+  SupportedPreferenceDisable inventory; `data/atak-preference-keys.json` is the
+  unique-key projection)
 - Name CoT types with `CoT type "..."` and React components by PascalCase
   export name
 
@@ -36,7 +38,7 @@ or the React chrome against ATAK.
 - [x] Every Scenario includes a `# SUM:` comment quoting the instruction
 - [x] Every catalog file maps at least one real intent, preference, and CoT type
 - [x] Intents cited in features exist in `data/atak-intents.json`
-- [x] Preference keys cited in features exist in `data/atak-preference-keys.json`
+- [x] Preference keys cited in features exist in `data/atak-preferences.json`
 - [x] Components cited are exports of `@iotactical/tak-react`
 
 ## Validation

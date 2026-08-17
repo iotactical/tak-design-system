@@ -40,3 +40,19 @@ Feature: Bloodhound Tool
     Then intent "com.atakmap.android.toolbars.BLOOD_HOUND" should not start a from-self track
     And GPSStatus should display no fix
     And preference "rab_bloodhound_zoom" should not auto-zoom
+
+  Scenario: Route Mode turns the R and B line into a route
+    # SUM: "Select the Route Mode icon in the bottom left corner of the screen when the bloodhound tool is active to activate Route mode. Once the route planner has been configured, the Bloodhound’s Range & Bearing line will become a route."
+    Given bloodhound is active and a route planner is configured
+    When the operator selects Route Mode
+    Then RangeBearing should follow the calculated route
+    And preference "routePreference" should apply the planner
+    And a CoT type "b-m-r" route should update as endpoints move
+
+  Scenario: Open Navigation while Route Mode is active
+    # SUM: "When Route Mode is active, the Navigation Interface can be activated by selecting the Open Navigation Interface icon. The navigation interface provides voice and visual cues like those that are used when navigating traditional routes."
+    Given Route Mode is active
+    When the operator selects Open Navigation Interface
+    Then RoutePlanner should show navigation cues
+    And preference "useRouteVoiceCues" should control spoken prompts
+    And intent "com.atakmap.android.toolbars.BLOOD_HOUND" should keep tracking

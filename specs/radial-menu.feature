@@ -33,6 +33,14 @@ Feature: Radial Menus
     And RadialMenu should close
     And intent "com.atakmap.android.maps.HIDE_MENU" should fire
 
+  Scenario: Fine Adjust opens coordinate or MGRS entry
+    # SUM: "Long-press Fine Adjust to open the sub-radial which allows the ability to enter coordinates or MGRS location."
+    Given RadialMenu is open on "RP BRAVO"
+    When the operator long-presses Fine Adjust
+    Then intent "com.atakmap.android.maps.FINE_ADJUST" should magnify the point
+    And intent "com.atakmap.android.maps.MGRS_ENTRY" should accept a grid
+    And CoordinateDisplay should update after Confirm
+
   Scenario: Dismiss the radial without an action
     # SUM: "Select [Details] on the marker radial to make desired modifications, including: Coordinate, Elevation, Name, Type and Remarks."
     Given RadialMenu is open

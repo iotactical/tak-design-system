@@ -34,6 +34,14 @@ Feature: Compass Interactions
     And intent "com.atakmap.android.maps.LOCK_TILT" should be available as [3D Lock]
     And a CoT type "a-f-G-U-C" self SA event should be unchanged
 
+  Scenario: Manual Orientation with two-finger rotate
+    # SUM: "To place the map into manual orientation, long-press on the Compass and select the Manual Orientation control option. Once in the manual orientation mode, touch the screen with two fingers and simultaneously rotate both fingers and the map will rotate accordingly."
+    Given the operator long-pressed the Compass
+    When the operator selects Manual Orientation and pivots two fingers
+    Then intent "com.atakmap.android.maps.USER_DEFINED_UP" should hold that rotation
+    And preference "unitPreferences" should still label the heading
+    And a CoT type "a-f-G-U-C" self SA event should be unchanged
+
   Scenario: Magnetic Up is not trusted without a heading
     # SUM: "Long press the [North Arrow] to call out the additional controls menu where the Manual Rotation/Lock and 3D features are available."
     Given no magnetometer heading is available

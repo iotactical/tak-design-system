@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Generated `specs/preference-keys.feature`: one Scenario per catalogued ATAK preference key (REQ-SITE-047, REQ-BDD-039)
+- Feature catalog expanded to 109 SUM headings, Settings screens, and core tools (Heatmap, Vehicle Models, WMS, Fine Adjust, Brightness, Night Vision, LRF)
+- Gherkin for device tools, sensors, and vehicle models (REQ-BDD-036–038); extra scenarios for Settings load/save, Dataset Instructions, heatmap/slope, extrude, off-screen indicators
+- Gherkin for remaining SUM chapters: overview, Red X, radio, Chat inbox, lasso, digital pointer, contours, resection, rubber sheet, toolbar manager, clear content, package management/plugins, and preferences (REQ-SITE-046, REQ-BDD-023–035)
 - 22 ATAK core Gherkin feature files under `specs/` (self marker, palettes, mission packages, layers, geofence, orientation, overlays, range-bearing, bloodhound, drawing, attachments, import/export, emergency, viewshed, radial menu, GPS, pairing line, tracks, go-to, video, fires, contacts). Each scenario quotes the ATAK Civilian Software User Manual and maps the step to a React component, CoT type, intent, and preference (REQ-SITE-044)
 - REQ-SITE-043 catalog and REQ-BDD-001 through REQ-BDD-022 so each of those workflows has a requirement row; tests fail if a catalog file is deleted
 - REQ-SITE-038 through REQ-SITE-042 specifying a standalone Symbol Sandbox: own route, canvas-first mobile layout, fullscreen preview, native touch on the symbol, and a shareable SIDC query parameter
