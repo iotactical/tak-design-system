@@ -133,14 +133,17 @@ describe('REQ-XW-103: Build mode', () => {
       source.includes('syncFromDFields'),
       'BuildPanel must have syncFromDFields function'
     );
-    // D SIDC starts with 10, E with 15
     assert.ok(
-      source.includes('`10${'),
-      'syncFromDFields must build D SIDC starting with 10'
+      source.includes('function composeSidc20'),
+      'BuildPanel must compose 20-char D/E SIDCs via composeSidc20'
     );
     assert.ok(
-      source.includes('`15${'),
-      'syncFromDFields must build E SIDC starting with 15'
+      source.includes("composeSidc20('10'"),
+      'syncFromDFields must build D SIDC starting with version 10'
+    );
+    assert.ok(
+      source.includes("composeSidc20('15'"),
+      'syncFromDFields must build E SIDC starting with version 15'
     );
   });
 

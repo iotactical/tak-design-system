@@ -54,13 +54,9 @@ test.describe('Symbol Sandbox mobile', () => {
     await expect(grid).toBeHidden();
   });
 
-  test('fullscreen control is at least 44px', async ({ page }) => {
+  test('does not show a fullscreen control', async ({ page }) => {
     await page.goto(`${BASE}/sandbox`);
-    const btn = page.getByTestId('sandbox-fullscreen');
-    await expect(btn).toBeVisible();
-    const box = await btn.boundingBox();
-    expect(box!.width).toBeGreaterThanOrEqual(44);
-    expect(box!.height).toBeGreaterThanOrEqual(44);
+    await expect(page.getByTestId('sandbox-fullscreen')).toHaveCount(0);
   });
 
   test('test_sandbox_touch: tap on the frame cycles Standard Identity', async ({ page }) => {

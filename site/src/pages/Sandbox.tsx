@@ -191,16 +191,31 @@ const DEFAULT_C = 'SFGPU-----*****';
 const DEFAULT_D = '10031000001100000000';
 const DEFAULT_E = '15031000001100000000';
 const SI_CYCLE = ['0', '1', '3', '4', '6'];
-const DEFAULT_PREVIEW = 220;
+const DEFAULT_PREVIEW = 180;
 const MIN_PREVIEW = 80;
 const MAX_PREVIEW = 480;
 
+/** 20-char SIDC: version(2) + context(1) + SI(1) + SS(2) + status(1) + HQ(1) + echelon(2) + entity(6) + mod1(2) + mod2(2) */
+function composeSidc20(
+  version: '10' | '15',
+  si: string,
+  ss: string,
+  status: string,
+  hqtffd: string,
+  echelon: string,
+  entity: string,
+  mod1: string,
+  mod2: string,
+): string {
+  return `${version}0${si}${ss}${status}${hqtffd}${echelon}${entity}${mod1}${mod2}`;
+}
+
 function parseD20(sidc: string) {
-  const d = sidc.startsWith('15') ? `10${sidc.slice(2)}` : sidc;
-  if (d.length !== 20) return null;
+  if (sidc.length !== 20) return null;
+  const d = sidc.startsWith('10') ? sidc : `10${sidc.slice(2)}`;
   return {
     dSidc: d,
-    eSidc: `15${d.slice(2)}`,
+    eSidc: composeSidc20('15', d.charAt(3), d.slice(4, 6), d.charAt(6), d.charAt(7), d.slice(8, 10), d.slice(10, 16), d.slice(16, 18), d.slice(18, 20)),
     si: d.charAt(3),
     ss: d.slice(4, 6),
     status: d.charAt(6),
@@ -252,12 +267,12 @@ function hydrateSidcParam(raw: string | null) {
         mod2: '00',
       };
     }
-    const newD = `10${siChar}0${dFields.ss}00${dFields.ec}${dFields.s1}${dFields.s2}`;
+    const newD = composeSidc20('10', siChar, dFields.ss, '0', '0', '00', dFields.ec, dFields.s1, dFields.s2);
     return {
       bSidc: v,
       cSidc: cFull,
-      dSidc: newD.length === 20 ? newD : DEFAULT_D,
-      eSidc: newD.length === 20 ? `15${newD.slice(2)}` : DEFAULT_E,
+      dSidc: newD,
+      eSidc: composeSidc20('15', siChar, dFields.ss, '0', '0', '00', dFields.ec, dFields.s1, dFields.s2),
       si: siChar,
       ss: dFields.ss,
       status: '0',
@@ -347,8 +362,6 @@ function BuildPanel() {
   const [mod1, setMod1] = useState(seed?.mod1 ?? '00');
   const [mod2, setMod2] = useState(seed?.mod2 ?? '00');
   const [previewSize, setPreviewSize] = useState(DEFAULT_PREVIEW);
-  const [fullscreen, setFullscreen] = useState(false);
-  const [pseudoFs, setPseudoFs] = useState(false);
   const [showVersions, setShowVersions] = useState(false);
   const canvasRef = useRef<HTMLDivElement>(null);
   const pointers = useRef(new Map<number, { x: number; y: number; t: number }>());
@@ -376,9 +389,8 @@ function BuildPanel() {
     newHqtffd: string, newEchelon: string, newEc: string,
     newMod1: string, newMod2: string
   ) {
-    // 20-char SIDC: version(2) + context(1) + SI(1) + SS(2) + status(1) + HQ(1) + echelon(2) + entity(6) + mod1(2) + mod2(2)
-    const newD = `100${newSi}${newSs}${newStatus}${newHqtffd}${newEchelon}${newEc}${newMod1}${newMod2}`;
-    const newE = `150${newSi}${newSs}${newStatus}${newHqtffd}${newEchelon}${newEc}${newMod1}${newMod2}`;
+    const newD = composeSidc20('10', newSi, newSs, newStatus, newHqtffd, newEchelon, newEc, newMod1, newMod2);
+    const newE = composeSidc20('15', newSi, newSs, newStatus, newHqtffd, newEchelon, newEc, newMod1, newMod2);
     setDSidc(newD);
     setESidc(newE);
 
@@ -428,11 +440,7 @@ function BuildPanel() {
     setEchelon('00');
     setMod1('00');
     setMod2('00');
-
-    const newD = `1030${newSs}00${newEc}0000`;
-    const newE = `1530${newSs}00${newEc}0000`;
-    setDSidc(newD);
-    setESidc(newE);
+    syncFromDFields('3', newSs, '0', '0', '00', newEc, '00', '00');
   }
 
   // Handle direct B SIDC edit
@@ -454,8 +462,8 @@ function BuildPanel() {
           setEntityCode(dFields.ec);
           setMod1(dFields.s1);
           setMod2(dFields.s2);
-          const newD = `10${siChar}0${dFields.ss}0${echelon}${dFields.ec}${dFields.s1}${dFields.s2}`;
-          const newE = `15${siChar}0${dFields.ss}0${echelon}${dFields.ec}${dFields.s1}${dFields.s2}`;
+          const newD = composeSidc20('10', siChar, dFields.ss, status, hqtffd, echelon, dFields.ec, dFields.s1, dFields.s2);
+          const newE = composeSidc20('15', siChar, dFields.ss, status, hqtffd, echelon, dFields.ec, dFields.s1, dFields.s2);
           setDSidc(newD);
           setESidc(newE);
         }
@@ -478,8 +486,8 @@ function BuildPanel() {
         setEntityCode(dFields.ec);
         setMod1(dFields.s1);
         setMod2(dFields.s2);
-        const newD = `10${siChar}0${dFields.ss}0${echelon}${dFields.ec}${dFields.s1}${dFields.s2}`;
-        const newE = `15${siChar}0${dFields.ss}0${echelon}${dFields.ec}${dFields.s1}${dFields.s2}`;
+        const newD = composeSidc20('10', siChar, dFields.ss, status, hqtffd, echelon, dFields.ec, dFields.s1, dFields.s2);
+        const newE = composeSidc20('15', siChar, dFields.ss, status, hqtffd, echelon, dFields.ec, dFields.s1, dFields.s2);
         setDSidc(newD);
         setESidc(newE);
       }
@@ -495,35 +503,26 @@ function BuildPanel() {
   function handleDSidcChange(val: string) {
     setDSidc(val);
     if (val.length === 20) {
-      const newSi = val.charAt(2);
-      const newStatus2 = val.charAt(3);
-      const newSs2 = val.substring(4, 6);
-      const newHqtffd2 = val.charAt(6);
-      const newEchelon2 = val.substring(7, 9);
-      const newEc = val.substring(10, 16);
-      const newMod12 = val.substring(16, 18);
-      const newMod22 = val.substring(18, 20);
+      const parsed = parseD20(val);
+      if (!parsed) return;
+      setSi(parsed.si);
+      setStatus(parsed.status);
+      setSs(parsed.ss);
+      setHqtffd(parsed.hqtffd);
+      setEchelon(parsed.echelon);
+      setEntityCode(parsed.entityCode);
+      setMod1(parsed.mod1);
+      setMod2(parsed.mod2);
+      setDSidc(parsed.dSidc);
+      setESidc(parsed.eSidc);
 
-      setSi(newSi);
-      setStatus(newStatus2);
-      setSs(newSs2);
-      setHqtffd(newHqtffd2);
-      setEchelon(newEchelon2);
-      setEntityCode(newEc);
-      setMod1(newMod12);
-      setMod2(newMod22);
-
-      // Update E
-      setESidc('15' + val.substring(2));
-
-      // Reverse to C
-      const cBasic = lookupD2C(newSs2, newEc);
+      const cBasic = lookupD2C(parsed.ss, parsed.entityCode);
       if (cBasic) {
-        const affil = SI_TO_AFFIL[newSi] || 'F';
-        setCSidc(buildSidc15(cBasic, affil));
+        const affil = SI_TO_AFFIL[parsed.si] || 'F';
+        setCSidc(buildSidc15(cBasic, affil, parsed.echelon, parsed.hqtffd));
         const bBasic = lookupC2B(cBasic);
         if (bBasic) {
-          setBSidc(buildSidc15(bBasic, affil));
+          setBSidc(buildSidc15(bBasic, affil, parsed.echelon, parsed.hqtffd));
         }
       }
     }
@@ -580,68 +579,6 @@ function BuildPanel() {
     }
     setSearchParams({ sidc: dSidc }, { replace: true });
   }, [dSidc, setSearchParams]);
-
-  useEffect(() => {
-    const root = document.documentElement;
-    function onFs() {
-      const active = Boolean(document.fullscreenElement || (document as Document & { webkitFullscreenElement?: Element }).webkitFullscreenElement);
-      if (!active) {
-        root.classList.remove('sandbox-fullscreen');
-        setFullscreen(false);
-        setPseudoFs(false);
-      } else {
-        root.classList.add('sandbox-fullscreen');
-        setFullscreen(true);
-      }
-    }
-    function onKey(ev: KeyboardEvent) {
-      if (ev.key === 'Escape' && (document.fullscreenElement || pseudoFs)) {
-        exitFullscreen();
-      }
-    }
-    document.addEventListener('fullscreenchange', onFs);
-    document.addEventListener('webkitfullscreenchange', onFs);
-    document.addEventListener('keydown', onKey);
-    return () => {
-      document.removeEventListener('fullscreenchange', onFs);
-      document.removeEventListener('webkitfullscreenchange', onFs);
-      document.removeEventListener('keydown', onKey);
-      root.classList.remove('sandbox-fullscreen');
-    };
-  }, [pseudoFs]);
-
-  function setChromeHidden(hidden: boolean) {
-    document.documentElement.classList.toggle('sandbox-fullscreen', hidden);
-  }
-
-  function enterFullscreen() {
-    const el = document.documentElement as HTMLElement & { webkitRequestFullscreen?: () => void };
-    const req = el.requestFullscreen?.bind(el) || el.webkitRequestFullscreen?.bind(el);
-    if (req) {
-      Promise.resolve(req()).catch(() => {
-        setPseudoFs(true);
-        setFullscreen(true);
-        setChromeHidden(true);
-      });
-      setChromeHidden(true);
-      setFullscreen(true);
-    } else {
-      setPseudoFs(true);
-      setFullscreen(true);
-      setChromeHidden(true);
-    }
-  }
-
-  function exitFullscreen() {
-    const doc = document as Document & { webkitExitFullscreen?: () => void };
-    if (document.fullscreenElement || doc.webkitExitFullscreen) {
-      const exit = document.exitFullscreen?.bind(document) || doc.webkitExitFullscreen?.bind(document);
-      try { exit?.(); } catch { /* ignore */ }
-    }
-    setPseudoFs(false);
-    setFullscreen(false);
-    setChromeHidden(false);
-  }
 
   function cycleSi(dir: 1 | -1) {
     const idx = SI_CYCLE.indexOf(si);
@@ -707,7 +644,7 @@ function BuildPanel() {
   }
 
   return (
-    <div className={`${styles.layout}${pseudoFs ? ` ${styles.pseudoFullscreen}` : ''}`}>
+    <div className={styles.layout}>
       <div
         ref={canvasRef}
         className={styles.canvas}
@@ -728,16 +665,6 @@ function BuildPanel() {
           aria-label="Cycle echelon"
           onClick={(ev) => { ev.stopPropagation(); cycleEchelon(); }}
         />
-        <button
-          type="button"
-          className={styles.fullscreenBtn}
-          data-testid="sandbox-fullscreen"
-          aria-label={fullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
-          aria-pressed={fullscreen}
-          onClick={(ev) => { ev.stopPropagation(); fullscreen ? exitFullscreen() : enterFullscreen(); }}
-        >
-          {fullscreen ? 'Exit' : 'Full'}
-        </button>
       </div>
       <div className={styles.sheet}>
       {/* Fuzzy entity search */}
@@ -769,6 +696,77 @@ function BuildPanel() {
               ))}
             </div>
           )}
+        </div>
+      </div>
+
+      {/* D/E field selector dropdowns — two columns so all eight stay on-screen */}
+      <div className={styles.buildFields}>
+        <div className={styles.buildFieldGroup}>
+          <label className={styles.buildFieldLabel}>Standard Identity</label>
+          <select className={styles.buildFieldSelect} data-testid="sandbox-si-select" value={si} onChange={(e) => handleFieldChange('si', e.target.value)}>
+            {Object.entries(STANDARD_IDENTITY_NAMES).map(([k, v]) => (
+              <option key={k} value={k}>{v} ({k})</option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.buildFieldGroup}>
+          <label className={styles.buildFieldLabel}>Symbol Set</label>
+          <select className={styles.buildFieldSelect} value={ss} onChange={(e) => handleFieldChange('ss', e.target.value)}>
+            {Object.entries(SYMBOL_SET_NAMES).map(([k, v]) => (
+              <option key={k} value={k}>{v} ({k})</option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.buildFieldGroup}>
+          <label className={styles.buildFieldLabel}>Status</label>
+          <select className={styles.buildFieldSelect} value={status} onChange={(e) => handleFieldChange('status', e.target.value)}>
+            {Object.entries(STATUS_NAMES).map(([k, v]) => (
+              <option key={k} value={k}>{v} ({k})</option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.buildFieldGroup}>
+          <label className={styles.buildFieldLabel}>HQ/TF/FD</label>
+          <select className={styles.buildFieldSelect} value={hqtffd} onChange={(e) => handleFieldChange('hqtffd', e.target.value)}>
+            {Object.entries(HQ_TF_FD_NAMES).map(([k, v]) => (
+              <option key={k} value={k}>{v} ({k})</option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.buildFieldGroup}>
+          <label className={styles.buildFieldLabel}>Echelon</label>
+          <select className={styles.buildFieldSelect} data-testid="sandbox-echelon-select" value={echelon} onChange={(e) => handleFieldChange('echelon', e.target.value)}>
+            {Object.entries(ECHELON_NAMES).map(([k, v]) => (
+              <option key={k} value={k}>{v} ({k})</option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.buildFieldGroup}>
+          <label className={styles.buildFieldLabel}>Entity</label>
+          <select className={styles.buildFieldSelect} value={entityCode} onChange={(e) => handleFieldChange('entity', e.target.value)}>
+            {ssEntities.map((m) => (
+              <option key={m.d_ec} value={m.d_ec}>{m.label} ({m.d_ec})</option>
+            ))}
+            {ssEntities.length === 0 && (
+              <option value="110000">Default (110000)</option>
+            )}
+          </select>
+        </div>
+        <div className={styles.buildFieldGroup}>
+          <label className={styles.buildFieldLabel}>Modifier 1</label>
+          <select className={styles.buildFieldSelect} value={mod1} onChange={(e) => handleFieldChange('mod1', e.target.value)}>
+            {mod1Options.map((opt) => (
+              <option key={opt.value} value={opt.value}>{opt.label} ({opt.value})</option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.buildFieldGroup}>
+          <label className={styles.buildFieldLabel}>Modifier 2</label>
+          <select className={styles.buildFieldSelect} value={mod2} onChange={(e) => handleFieldChange('mod2', e.target.value)}>
+            {mod2Options.map((opt) => (
+              <option key={opt.value} value={opt.value}>{opt.label} ({opt.value})</option>
+            ))}
+          </select>
         </div>
       </div>
 
@@ -851,77 +849,6 @@ function BuildPanel() {
             data-testid="e-sidc-input"
           />
           <MilSymRendererLive sidc={eSidc} size={48} />
-        </div>
-      </div>
-
-      {/* D/E field selector dropdowns */}
-      <div className={styles.buildFields}>
-        <div className={styles.buildFieldGroup}>
-          <label className={styles.buildFieldLabel}>Standard Identity</label>
-          <select className={styles.buildFieldSelect} data-testid="sandbox-si-select" value={si} onChange={(e) => handleFieldChange('si', e.target.value)}>
-            {Object.entries(STANDARD_IDENTITY_NAMES).map(([k, v]) => (
-              <option key={k} value={k}>{v} ({k})</option>
-            ))}
-          </select>
-        </div>
-        <div className={styles.buildFieldGroup}>
-          <label className={styles.buildFieldLabel}>Symbol Set</label>
-          <select className={styles.buildFieldSelect} value={ss} onChange={(e) => handleFieldChange('ss', e.target.value)}>
-            {Object.entries(SYMBOL_SET_NAMES).map(([k, v]) => (
-              <option key={k} value={k}>{v} ({k})</option>
-            ))}
-          </select>
-        </div>
-        <div className={styles.buildFieldGroup}>
-          <label className={styles.buildFieldLabel}>Status</label>
-          <select className={styles.buildFieldSelect} value={status} onChange={(e) => handleFieldChange('status', e.target.value)}>
-            {Object.entries(STATUS_NAMES).map(([k, v]) => (
-              <option key={k} value={k}>{v} ({k})</option>
-            ))}
-          </select>
-        </div>
-        <div className={styles.buildFieldGroup}>
-          <label className={styles.buildFieldLabel}>HQ/TF/FD</label>
-          <select className={styles.buildFieldSelect} value={hqtffd} onChange={(e) => handleFieldChange('hqtffd', e.target.value)}>
-            {Object.entries(HQ_TF_FD_NAMES).map(([k, v]) => (
-              <option key={k} value={k}>{v} ({k})</option>
-            ))}
-          </select>
-        </div>
-        <div className={styles.buildFieldGroup}>
-          <label className={styles.buildFieldLabel}>Echelon</label>
-          <select className={styles.buildFieldSelect} data-testid="sandbox-echelon-select" value={echelon} onChange={(e) => handleFieldChange('echelon', e.target.value)}>
-            {Object.entries(ECHELON_NAMES).map(([k, v]) => (
-              <option key={k} value={k}>{v} ({k})</option>
-            ))}
-          </select>
-        </div>
-        <div className={styles.buildFieldGroup}>
-          <label className={styles.buildFieldLabel}>Entity</label>
-          <select className={styles.buildFieldSelect} value={entityCode} onChange={(e) => handleFieldChange('entity', e.target.value)}>
-            {ssEntities.map((m) => (
-              <option key={m.d_ec} value={m.d_ec}>{m.label} ({m.d_ec})</option>
-            ))}
-            {ssEntities.length === 0 && (
-              <option value="110000">Default (110000)</option>
-            )}
-          </select>
-        </div>
-        <div className={styles.buildFieldGroup}>
-          <label className={styles.buildFieldLabel}>Modifier 1</label>
-          <select className={styles.buildFieldSelect} value={mod1} onChange={(e) => handleFieldChange('mod1', e.target.value)}>
-            {mod1Options.map((opt) => (
-              <option key={opt.value} value={opt.value}>{opt.label} ({opt.value})</option>
-            ))}
-          </select>
-        </div>
-        <div className={styles.buildFieldGroup}>
-          <label className={styles.buildFieldLabel}>Modifier 2</label>
-          <select className={styles.buildFieldSelect} value={mod2} onChange={(e) => handleFieldChange('mod2', e.target.value)}>
-            {mod2Options.map((opt) => (
-              <option key={opt.value} value={opt.value}>{opt.label} ({opt.value})</option>
-            ))}
-          </select>
         </div>
       </div>
       </div>

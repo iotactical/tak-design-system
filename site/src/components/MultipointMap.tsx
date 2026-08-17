@@ -824,9 +824,7 @@ export function MultipointMap({
         if (small && mapRef.current) {
           const bounds = computeBounds(parsed);
           if (bounds) {
-            const container = mapRef.current.getContainer();
-            const pad = Math.round(Math.min(container.clientWidth, container.clientHeight) * 0.3);
-            mapRef.current.fitBounds(bounds, { padding: pad, duration: 0, maxZoom: 12 });
+            mapRef.current.fitBounds(bounds, { padding: 16, duration: 0, maxZoom: 12 });
           }
         }
       } catch (e) {

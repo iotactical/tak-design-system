@@ -8,14 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Dedicated Symbol Sandbox at `/sandbox` with canvas-first mobile layout, fullscreen preview, pointer gestures on the symbol, and a shareable `?sidc=` query (REQ-SITE-038 through 042)
+- Dedicated Symbol Sandbox at `/sandbox` with canvas-first mobile layout, pointer gestures on the symbol, and a shareable `?sidc=` query (REQ-SITE-038 through 042)
 - Generated `specs/preference-keys.feature`: one Scenario per catalogued ATAK preference key (REQ-SITE-047, REQ-BDD-039)
 - Feature catalog expanded to 109 SUM headings, Settings screens, and core tools (Heatmap, Vehicle Models, WMS, Fine Adjust, Brightness, Night Vision, LRF)
 - Gherkin for device tools, sensors, and vehicle models (REQ-BDD-036–038); extra scenarios for Settings load/save, Dataset Instructions, heatmap/slope, extrude, off-screen indicators
 - Gherkin for remaining SUM chapters: overview, Red X, radio, Chat inbox, lasso, digital pointer, contours, resection, rubber sheet, toolbar manager, clear content, package management/plugins, and preferences (REQ-SITE-046, REQ-BDD-023–035)
 - 22 ATAK core Gherkin feature files under `specs/` (self marker, palettes, mission packages, layers, geofence, orientation, overlays, range-bearing, bloodhound, drawing, attachments, import/export, emergency, viewshed, radial menu, GPS, pairing line, tracks, go-to, video, fires, contacts). Each scenario quotes the ATAK Civilian Software User Manual and maps the step to a React component, CoT type, intent, and preference (REQ-SITE-044)
 - REQ-SITE-043 catalog and REQ-BDD-001 through REQ-BDD-022 so each of those workflows has a requirement row; tests fail if a catalog file is deleted
-- REQ-SITE-038 through REQ-SITE-042 specifying a standalone Symbol Sandbox: own route, canvas-first mobile layout, fullscreen preview, native touch on the symbol, and a shareable SIDC query parameter
+- REQ-SITE-038 through REQ-SITE-042 specifying a standalone Symbol Sandbox: own route, canvas-first mobile layout, in-page preview, native touch on the symbol, and a shareable SIDC query parameter
 - REQ-SITE-035 through REQ-SITE-037 covering Sources page links, Home grid fit, and floating control visibility, areas that had no requirement and therefore no coverage
 - `aria-expanded` and a close glyph on the mobile menu button
 - `scripts/publish-npm.sh`, publishing every public workspace package and skipping versions already on the registry
@@ -35,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Spinner component
 
 ### Changed
+- Symbol Sandbox no longer offers a Full / fullscreen control; the preview stays in page flow (REQ-SITE-040)
 - Consolidated `@iotactical/tak-data` into `@iotactical/tak-react` (single npm package)
 - Typography and Spacing pages moved from inline styles to CSS modules so they can carry breakpoints
 - Intent catalog table styling moved into the CSS module; its sticky header is released on mobile, where it would otherwise pin to the scroll wrapper

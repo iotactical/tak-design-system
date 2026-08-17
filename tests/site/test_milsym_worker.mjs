@@ -41,6 +41,31 @@ test('REQ-XW-137: Worker handles message events via self.onmessage', () => {
   );
 });
 
+test('REQ-XW-137: Worker keeps amplifier SVG and falls back E icons to D tables', () => {
+  const workerPath = resolve(ROOT, 'site/src/workers/milsym-worker.ts');
+  const content = readFileSync(workerPath, 'utf8');
+  assert.ok(
+    content.includes("startsWith('<svg')"),
+    'packSvg must not re-wrap a complete SVG (that clips echelon)'
+  );
+  assert.ok(
+    content.includes('rendererSidcCandidates'),
+    'Worker must generate version fallbacks for 2525E SIDCs'
+  );
+  assert.ok(
+    content.includes('`13${rest}`') || content.includes('13${rest}'),
+    '2525E SIDCs must fall back to version 13'
+  );
+  assert.ok(
+    content.includes('`11${rest}`') || content.includes('11${rest}'),
+    '2525E SIDCs must fall back to 2525D ch1 (11)'
+  );
+  assert.ok(
+    content.includes('next.length > packed.length'),
+    'Worker must prefer the richer SVG so empty E frames lose to D icons'
+  );
+});
+
 test('REQ-XW-137: Worker catches errors to prevent main-thread crash', () => {
   const workerPath = resolve(ROOT, 'site/src/workers/milsym-worker.ts');
   const content = readFileSync(workerPath, 'utf8');

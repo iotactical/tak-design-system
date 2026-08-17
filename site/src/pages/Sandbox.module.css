@@ -30,7 +30,8 @@
   border-radius: 8px;
   min-width: 160px;
   min-height: 160px;
-  overflow: hidden;
+  padding: 28px 16px 16px;
+  overflow: visible;
   touch-action: none;
 }
 
@@ -50,25 +51,6 @@
   background: transparent;
   border: none;
   cursor: pointer;
-}
-
-.fullscreenBtn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  min-width: 44px;
-  min-height: 44px;
-  padding: 8px 10px;
-  border: 1px solid #2e2e2e;
-  border-radius: 6px;
-  background: #242424;
-  color: #dad4bc;
-  cursor: pointer;
-}
-
-.pseudoFullscreen {
-  min-height: 100dvh;
-  min-height: 100vh;
 }
 
 .sheet {
@@ -185,8 +167,8 @@
 
 .buildFields {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 16px;
 }
 
 .buildFieldGroup {
@@ -240,14 +222,13 @@
   }
 
   .buildFields {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .searchInput,
   .buildFieldSelect,
   .buildSidcInput,
   .versionsToggle,
-  .fullscreenBtn,
   .buildDropdownItem {
     min-height: 44px;
   }
@@ -255,9 +236,8 @@
 
 @media (min-width: 768px) {
   .layout {
-    display: grid;
-    grid-template-columns: minmax(240px, 1fr) minmax(0, 1.4fr);
-    align-items: start;
+    display: flex;
+    flex-direction: column;
   }
 
   .mobileSidc {

@@ -57,22 +57,21 @@ describe('REQ-SITE-039: Sandbox is a canvas-first layout on mobile', () => {
     assert.ok(mobile.includes('min-height: 44px'));
     const desktop = sandboxCss.substring(sandboxCss.indexOf('min-width: 768px'));
     assert.ok(desktop.includes('repeat(4, minmax(0, 1fr))') || sandboxCss.includes('repeat(4, minmax(0, 1fr))'));
+    assert.ok(sandboxCss.includes('repeat(2, minmax(0, 1fr))'));
+    assert.ok(!sandboxCss.includes('minmax(240px, 1fr) minmax(0, 1.4fr)'));
+    assert.ok(sandboxCss.includes('overflow: visible'));
   });
 });
 
-describe('REQ-SITE-040: Sandbox preview supports fullscreen', () => {
-  it('test_sandbox_fullscreen: Fullscreen API with 100dvh fallback and chrome hidden', () => {
-    assert.ok(sandboxSrc.includes('requestFullscreen'));
-    assert.ok(sandboxSrc.includes('webkitRequestFullscreen'));
-    assert.ok(sandboxCss.includes('100dvh'));
-    assert.ok(sandboxSrc.includes('aria-pressed'));
-    assert.ok(sandboxSrc.includes("'Escape'"));
-    assert.ok(sandboxCss.includes('min-width: 44px') && sandboxCss.includes('.fullscreenBtn'));
-    assert.ok(appCss.includes('html.sandbox-fullscreen'));
-    assert.ok(appCss.includes('.shareFab'));
-    assert.ok(appCss.includes('.hamburger'));
-    assert.ok(appCss.includes('.sidebar'));
-    assert.ok(appCss.includes('.topBar'));
+describe('REQ-SITE-040: Sandbox preview stays in page flow', () => {
+  it('test_sandbox_fullscreen: no fullscreen control or Fullscreen API', () => {
+    assert.ok(!sandboxSrc.includes('sandbox-fullscreen'));
+    assert.ok(!sandboxSrc.includes('requestFullscreen'));
+    assert.ok(!sandboxSrc.includes('webkitRequestFullscreen'));
+    assert.ok(!sandboxSrc.includes('fullscreenBtn'));
+    assert.ok(!sandboxCss.includes('.fullscreenBtn'));
+    assert.ok(!sandboxCss.includes('100dvh'));
+    assert.ok(!appCss.includes('html.sandbox-fullscreen'));
   });
 });
 
@@ -106,5 +105,7 @@ describe('REQ-SITE-042: Sandbox SIDC is addressable and construction is preserve
     assert.ok(sandboxSrc.includes('getModifierOptions'));
     assert.ok(sandboxSrc.includes('function BuildPanel'));
     assert.ok(sandboxSrc.includes('syncFromDFields'));
+    assert.ok(sandboxSrc.includes('function composeSidc20'));
+    assert.ok(sandboxSrc.includes('${version}0${si}${ss}${status}${hqtffd}${echelon}${entity}${mod1}${mod2}'));
   });
 });

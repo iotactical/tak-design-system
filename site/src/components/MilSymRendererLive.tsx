@@ -83,7 +83,13 @@ export function MilSymRendererLive({
       <div
         style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
         aria-label={`Military symbol ${sidc}`}
-        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(svg, { USE_PROFILES: { svg: true } }) }}
+        dangerouslySetInnerHTML={{
+          __html: DOMPurify.sanitize(svg, {
+            USE_PROFILES: { svg: true, svgFilters: true },
+            ADD_TAGS: ['use'],
+            ADD_ATTR: ['viewBox', 'xmlns', 'transform', 'd', 'fill', 'stroke'],
+          }),
+        }}
       />
     );
   }

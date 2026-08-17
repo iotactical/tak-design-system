@@ -63,4 +63,13 @@ describe('REQ-XW-088: Multi-point graphics gallery with map preview', () => {
   it('MultipointGallery.module.css exists', () => {
     assert.ok(existsSync(resolve(SITE, 'pages', 'MultipointGallery.module.css')));
   });
+
+  it('preview map fills its frame without reserved bottom padding', () => {
+    const mapCss = readFileSync(resolve(SITE, 'components', 'MultipointMap.module.css'), 'utf8');
+    assert.match(mapCss, /\.mapContainerSmall\s*\{[^}]*height:\s*100%/);
+    assert.ok(!mapCss.includes('height: 200px'), 'Small map must not use a shorter fixed height than its frame');
+    const gallery = readFileSync(resolve(SITE, 'pages', 'MultipointGallery.tsx'), 'utf8');
+    assert.ok(gallery.includes('padding: 16'), 'Thumbnail fitBounds padding must stay tight so the graphic fills the preview');
+    assert.ok(!gallery.includes('padding: 80'), '80px fitBounds padding left an empty band under the graphic');
+  });
 });

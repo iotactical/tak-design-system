@@ -139,7 +139,7 @@ async function processThumbnailQueue() {
         // are fully visible within the thumbnail.
         const bounds = computeBounds(parsed);
         if (bounds) {
-          map.fitBounds(bounds, { padding: 80, animate: false });
+          map.fitBounds(bounds, { padding: 16, animate: false });
         }
 
         await new Promise<void>((resolve) => {
@@ -180,7 +180,7 @@ function destroyThumbnailMap() {
 const CACHE_DB_NAME = 'mpg-thumb-cache';
 const CACHE_DB_VERSION = 1;
 const CACHE_STORE = 'thumbnails';
-const CACHE_APP_VERSION = '2';  // bump to invalidate all cached thumbnails
+const CACHE_APP_VERSION = '3';  // bump to invalidate all cached thumbnails
 
 let cacheDb: IDBDatabase | null = null;
 let cacheDbFailed = false;
