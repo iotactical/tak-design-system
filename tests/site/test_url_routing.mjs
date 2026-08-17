@@ -130,4 +130,21 @@ assert.ok(
   'Explorer.tsx should not use useSearchParams (replaced by useParams)',
 );
 
+assert.ok(
+  appSrc.includes('path="/sandbox"'),
+  'App.tsx should have /sandbox route',
+);
+assert.ok(
+  appSrc.includes('/explorer/build'),
+  'App.tsx should redirect /explorer/build',
+);
+assert.ok(
+  appSrc.includes('Navigate'),
+  'App.tsx should use Navigate for the Build relocating redirect',
+);
+assert.ok(
+  appSrc.includes("to: '/sandbox'"),
+  'App.tsx navItems should include Sandbox',
+);
+
 console.log('PASS: URL-based routing (REQ-XW-140) - all pages use useParams/:tab? routing');

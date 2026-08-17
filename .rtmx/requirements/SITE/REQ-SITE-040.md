@@ -21,12 +21,12 @@ as well.
 - `aria-pressed` on the control reflects fullscreen state
 
 ## Acceptance Criteria
-- [ ] A labelled control enters and exits fullscreen (or the `100dvh` fallback)
-- [ ] While fullscreen, the share FAB, hamburger, sidebar, and bottom search bar
+- [x] A labelled control enters and exits fullscreen (or the `100dvh` fallback)
+- [x] While fullscreen, the share FAB, hamburger, sidebar, and bottom search bar
       are not visible
-- [ ] Exiting fullscreen restores those controls
-- [ ] Escape exits fullscreen when the API is in use
-- [ ] The enter/exit control is at least 44px on both axes below 768px
+- [x] Exiting fullscreen restores those controls
+- [x] Escape exits fullscreen when the API is in use
+- [x] The enter/exit control is at least 44px on both axes below 768px
 
 ## Validation
 - **Test**: tests/site/test_sandbox.mjs, tests/e2e/sandbox.spec.ts

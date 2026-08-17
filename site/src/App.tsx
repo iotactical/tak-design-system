@@ -1,7 +1,8 @@
 // rtmx:req REQ-XW-201
 // rtmx:req REQ-XW-263
+// rtmx:req REQ-SITE-038
 import { lazy, Suspense, useState, useCallback } from 'react';
-import { Routes, Route, NavLink, Link } from 'react-router-dom';
+import { Routes, Route, NavLink, Link, Navigate } from 'react-router-dom';
 import styles from './App.module.css';
 import { GlobalSearch } from './components/GlobalSearch';
 import { LoadingCenter } from './components/Spinner';
@@ -21,6 +22,7 @@ const Platforms = lazy(() => import('./pages/Platforms'));
 const Palettes = lazy(() => import('./pages/Palettes'));
 const Interfaces = lazy(() => import('./pages/Interfaces'));
 const Explorer = lazy(() => import('./pages/Explorer'));
+const Sandbox = lazy(() => import('./pages/Sandbox'));
 const MultipointGallery = lazy(() => import('./pages/MultipointGallery'));
 const SearchResults = lazy(() => import('./pages/SearchResults'));
 const Sources = lazy(() => import('./pages/Sources'));
@@ -36,6 +38,7 @@ const navItems = [
   { to: '/interfaces', label: 'Interfaces' },
   { to: '/multipoint', label: 'Tactical Graphics' },
   { to: '/explorer', label: '2525 Explorer' },
+  { to: '/sandbox', label: 'Sandbox' },
   { to: '/sources', label: 'Sources' },
 ];
 
@@ -133,6 +136,8 @@ export default function App() {
             <Route path="/platforms" element={<Platforms />} />
             <Route path="/interfaces/:tab?" element={<Interfaces />} />
             <Route path="/multipoint" element={<MultipointGallery />} />
+            <Route path="/sandbox" element={<Sandbox />} />
+            <Route path="/explorer/build" element={<Navigate to="/sandbox" replace />} />
             <Route path="/explorer/:tab?" element={<Explorer />} />
             <Route path="/sources" element={<Sources />} />
             <Route path="/search" element={<SearchResults />} />

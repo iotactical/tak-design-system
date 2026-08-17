@@ -26,15 +26,15 @@ the desktop path; touch is additive.
 - Pointer Events so a stylus and a mouse still work on desktop
 
 ## Acceptance Criteria
-- [ ] Preview element uses Pointer Events (not mouse-only listeners)
-- [ ] `touch-action: none` is scoped to the preview, not `body` or `.page`
-- [ ] Two-pointer pinch changes preview size; double-tap restores the default
-- [ ] Tap on the frame (or a documented hit target) cycles Standard Identity
+- [x] Preview element uses Pointer Events (not mouse-only listeners)
+- [x] `touch-action: none` is scoped to the preview, not `body` or `.page`
+- [x] Two-pointer pinch changes preview size; double-tap restores the default
+- [x] Tap on the frame (or a documented hit target) cycles Standard Identity
       and updates the SIDC
-- [ ] Horizontal swipe on the canvas cycles Standard Identity the same way
-- [ ] Tap on the amplifier region cycles echelon and updates the SIDC
-- [ ] Equivalent `<select>`s still exist and stay in sync with gesture state
-- [ ] Vertical scroll of the page is unaffected when the gesture starts outside
+- [x] Horizontal swipe on the canvas cycles Standard Identity the same way
+- [x] Tap on the amplifier region cycles echelon and updates the SIDC
+- [x] Equivalent `<select>`s still exist and stay in sync with gesture state
+- [x] Vertical scroll of the page is unaffected when the gesture starts outside
       the preview
 
 ## Validation

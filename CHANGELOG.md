@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Dedicated Symbol Sandbox at `/sandbox` with canvas-first mobile layout, fullscreen preview, pointer gestures on the symbol, and a shareable `?sidc=` query (REQ-SITE-038 through 042)
 - Generated `specs/preference-keys.feature`: one Scenario per catalogued ATAK preference key (REQ-SITE-047, REQ-BDD-039)
 - Feature catalog expanded to 109 SUM headings, Settings screens, and core tools (Heatmap, Vehicle Models, WMS, Fine Adjust, Brightness, Night Vision, LRF)
 - Gherkin for device tools, sensors, and vehicle models (REQ-BDD-036–038); extra scenarios for Settings load/save, Dataset Instructions, heatmap/slope, extrude, off-screen indicators

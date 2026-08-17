@@ -316,6 +316,20 @@
   }
 }
 
+:global(html.sandbox-fullscreen) .shareFab,
+:global(html.sandbox-fullscreen) .hamburger,
+:global(html.sandbox-fullscreen) .sidebar,
+:global(html.sandbox-fullscreen) .topBar,
+:global(html.sandbox-fullscreen) .backdrop {
+  display: none !important;
+}
+
+:global(html.sandbox-fullscreen) .content {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   :global(.highlight-flash) {

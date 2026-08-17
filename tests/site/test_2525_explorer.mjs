@@ -20,19 +20,23 @@ describe('REQ-XW-100: 2525 Explorer page', () => {
     assert.ok(existsSync(explorerCss), 'Explorer.module.css must exist');
   });
 
-  it('Explorer.tsx contains Browse, Decode, Build, and Compare tabs', () => {
+  it('Explorer.tsx contains Browse, Decode, and Compare tabs', () => {
     const source = readFileSync(
       resolve(SITE_DIR, 'src', 'pages', 'Explorer.tsx'),
       'utf8'
     );
 
-    const tabNames = ['Browse', 'Decode', 'Build', 'Compare'];
+    const tabNames = ['Browse', 'Decode', 'Compare'];
     for (const tab of tabNames) {
       assert.ok(
         source.includes(tab),
         `Explorer.tsx must reference the "${tab}" tab`
       );
     }
+    assert.ok(
+      !source.includes("id: 'build'"),
+      'Explorer tab list must not include Build after REQ-SITE-038'
+    );
   });
 
   it('Explorer.tsx imports MilSymRenderer', () => {

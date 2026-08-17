@@ -28,15 +28,15 @@ the "construction" claim is false for any symbol that uses them.
   single `None` option
 
 ## Acceptance Criteria
-- [ ] Opening `/sandbox?sidc=10031000001100000000` renders that SIDC
-- [ ] Opening `/sandbox?sidc=SFGPU-----*****` hydrates the B-series equivalent
+- [x] Opening `/sandbox?sidc=10031000001100000000` renders that SIDC
+- [x] Opening `/sandbox?sidc=SFGPU-----*****` hydrates the B-series equivalent
       and the D/E crosswalk
-- [ ] An invalid or truncated `sidc` param does not crash; the default symbol
+- [x] An invalid or truncated `sidc` param does not crash; the default symbol
       is shown
-- [ ] Editing a field updates the query string without pushing a history entry
-- [ ] Modifier 1 and Modifier 2 selectors list more than `None` when the
+- [x] Editing a field updates the query string without pushing a history entry
+- [x] Modifier 1 and Modifier 2 selectors list more than `None` when the
       current symbol set defines modifiers
-- [ ] All REQ-XW-103 field selectors still exist and still live-update the
+- [x] All REQ-XW-103 field selectors still exist and still live-update the
       render
 
 ## Validation

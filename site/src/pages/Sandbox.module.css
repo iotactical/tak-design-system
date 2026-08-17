@@ -1,0 +1,279 @@
+.page {
+  max-width: 1100px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #dad4bc;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #878787;
+  margin-bottom: 20px;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.canvas {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a1a;
+  border: 1px solid #2e2e2e;
+  border-radius: 8px;
+  min-width: 160px;
+  min-height: 160px;
+  overflow: hidden;
+  touch-action: none;
+}
+
+.frameHit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.echelonHit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 28%;
+  min-height: 44px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.fullscreenBtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid #2e2e2e;
+  border-radius: 6px;
+  background: #242424;
+  color: #dad4bc;
+  cursor: pointer;
+}
+
+.pseudoFullscreen {
+  min-height: 100dvh;
+  min-height: 100vh;
+}
+
+.sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobileSidc {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.versionsToggle,
+.searchInput,
+.buildFieldSelect,
+.buildSidcInput {
+  min-height: 44px;
+}
+
+.searchInput,
+.buildSidcInput {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  background: #111;
+  border: 1px solid #2e2e2e;
+  border-radius: 4px;
+  color: #ffe35e;
+  outline: none;
+}
+
+.buildSidcInput {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.buildSidcInput:focus,
+.searchInput:focus,
+.buildFieldSelect:focus {
+  border-color: #ffe35e;
+}
+
+.buildSearchWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.buildSearchBox {
+  position: relative;
+  max-width: 100%;
+}
+
+.buildDropdown {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  max-height: 240px;
+  overflow-y: auto;
+  background: #1a1a1a;
+  border: 1px solid #2e2e2e;
+}
+
+.buildDropdownItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #2e2e2e;
+  color: #dad4bc;
+  cursor: pointer;
+  text-align: left;
+}
+
+.buildDropdownLabel {
+  flex: 1;
+}
+
+.buildDropdownSs {
+  font-size: 11px;
+  color: #878787;
+  margin-left: 8px;
+}
+
+.buildVersionGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.buildVersionCard {
+  background: #1a1a1a;
+  border: 1px solid #2e2e2e;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.buildVersionLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #dad4bc;
+}
+
+.buildFields {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.buildFieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.buildFieldLabel {
+  font-size: 12px;
+  color: #878787;
+}
+
+.buildFieldSelect {
+  padding: 8px 12px;
+  font-size: 13px;
+  background: #1a1a1a;
+  border: 1px solid #2e2e2e;
+  border-radius: 6px;
+  color: #dad4bc;
+}
+
+.versionsToggle {
+  align-self: flex-start;
+  padding: 8px 12px;
+  background: #242424;
+  border: 1px solid #2e2e2e;
+  border-radius: 6px;
+  color: #dad4bc;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .canvas {
+    min-height: 160px;
+    min-width: 160px;
+    width: 100%;
+  }
+
+  .mobileSidc {
+    display: flex;
+  }
+
+  .buildVersionGrid {
+    display: none;
+  }
+
+  .buildVersionGrid.versionsOpen {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .buildFields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .searchInput,
+  .buildFieldSelect,
+  .buildSidcInput,
+  .versionsToggle,
+  .fullscreenBtn,
+  .buildDropdownItem {
+    min-height: 44px;
+  }
+}
+
+@media (min-width: 768px) {
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 1fr) minmax(0, 1.4fr);
+    align-items: start;
+  }
+
+  .mobileSidc {
+    display: none;
+  }
+
+  .searchInput,
+  .buildFieldSelect,
+  .buildSidcInput {
+    min-height: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .canvas,
+  .frameHit {
+    transition: none;
+  }
+}

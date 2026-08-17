@@ -52,7 +52,7 @@ const TAB_SEGMENTS: Record<string, Record<string, string>> = {
   '2525': {
     Browse: '/explorer?tab=browse',
     Decode: '/explorer?tab=decode',
-    Build: '/explorer?tab=build',
+    Build: '/sandbox',
     Compare: '/explorer?tab=compare',
   },
 };

@@ -25,11 +25,11 @@ itself is REQ-SITE-041).
 - No horizontal page scroll at 360px or 430px
 
 ## Acceptance Criteria
-- [ ] Below 768px the live preview is at least 160px on the shorter side
-- [ ] Below 768px the page does not render a four-column SIDC grid
-- [ ] Every interactive control in the Sandbox has `min-height: 44px` below 768px
-- [ ] The page does not force horizontal document scroll at 360px or 430px
-- [ ] Desktop (min-width 768px) still exposes all four version SIDCs and all
+- [x] Below 768px the live preview is at least 160px on the shorter side
+- [x] Below 768px the page does not render a four-column SIDC grid
+- [x] Every interactive control in the Sandbox has `min-height: 44px` below 768px
+- [x] The page does not force horizontal document scroll at 360px or 430px
+- [x] Desktop (min-width 768px) still exposes all four version SIDCs and all
       field selectors from REQ-XW-103
 
 ## Validation

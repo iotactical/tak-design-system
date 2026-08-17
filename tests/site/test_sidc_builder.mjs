@@ -15,16 +15,20 @@ describe('REQ-XW-092: Interactive SIDC builder with live symbol rendering', () =
     assert.ok(existsSync(explorerPage), 'Explorer.tsx must exist');
   });
 
-  it('Explorer has Build tab for SIDC assembly', () => {
-    const src = readFileSync(resolve(SITE_DIR, 'src', 'pages', 'Explorer.tsx'), 'utf8');
-    assert.ok(src.includes("'build'"), 'Should have build tab');
-    assert.ok(src.includes('Build'), 'Should have Build label');
+  it('Sandbox is the SIDC assembly destination', () => {
+    const src = readFileSync(resolve(SITE_DIR, 'src', 'pages', 'Sandbox.tsx'), 'utf8');
+    assert.ok(src.includes('function BuildPanel'), 'Should define BuildPanel');
+    assert.ok(src.includes('Symbol Sandbox'), 'Should brand the Sandbox page');
   });
 
   it('Explorer has field selectors for SIDC components', () => {
-    const src = readFileSync(resolve(SITE_DIR, 'src', 'pages', 'Explorer.tsx'), 'utf8');
-    assert.ok(src.includes('symbolSet') || src.includes('selectedSS'), 'Should have symbol set selector');
-    assert.ok(src.includes('identity') || src.includes('standardIdentity'), 'Should have identity selector');
+    const explorer = readFileSync(resolve(SITE_DIR, 'src', 'pages', 'Explorer.tsx'), 'utf8');
+    const sandbox = readFileSync(resolve(SITE_DIR, 'src', 'pages', 'Sandbox.tsx'), 'utf8');
+    assert.ok(explorer.includes('symbolSet') || explorer.includes('selectedSS'), 'Should have symbol set selector');
+    assert.ok(
+      sandbox.includes('STANDARD_IDENTITY') || sandbox.includes('identity'),
+      'Should have identity selector',
+    );
   });
 
   it('Explorer uses mil-sym-ts for live rendering', () => {

@@ -7,32 +7,32 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..', '..');
-const EXPLORER_SRC = resolve(ROOT, 'site', 'src', 'pages', 'Explorer.tsx');
+const SANDBOX_SRC = resolve(ROOT, 'site', 'src', 'pages', 'Sandbox.tsx');
 
-const source = readFileSync(EXPLORER_SRC, 'utf8');
+const source = readFileSync(SANDBOX_SRC, 'utf8');
 
 describe('REQ-XW-103: Build mode', () => {
   it('BuildPanel exists with function definition', () => {
     assert.ok(
       source.includes('function BuildPanel'),
-      'Explorer.tsx must define BuildPanel component'
+      'Sandbox.tsx must define BuildPanel component'
     );
     assert.ok(
       source.includes('<BuildPanel'),
-      'Explorer.tsx must render BuildPanel'
+      'Sandbox.tsx must render BuildPanel'
     );
   });
 
   it('Standard Identity (SI) selector exists', () => {
     assert.ok(
       source.includes('STANDARD_IDENTITY_NAMES'),
-      'Explorer.tsx must define STANDARD_IDENTITY_NAMES for SI selector'
+      'Sandbox.tsx must define STANDARD_IDENTITY_NAMES for SI selector'
     );
     assert.ok(
       source.includes('setSi'),
       'BuildPanel must have SI state setter'
     );
-    const siValues = ['Pending', 'Unknown', 'Friend', 'Neutral', 'Hostile'];
+    const siValues = ['Pending', 'Unknown', 'Friend', 'Neutral', 'Hostile/Faker'];
     for (const val of siValues) {
       assert.ok(
         source.includes(`'${val}'`),
@@ -55,7 +55,7 @@ describe('REQ-XW-103: Build mode', () => {
   it('Status selector exists', () => {
     assert.ok(
       source.includes('STATUS_NAMES'),
-      'Explorer.tsx must define STATUS_NAMES'
+      'Sandbox.tsx must define STATUS_NAMES'
     );
     assert.ok(
       source.includes('setStatus'),
@@ -74,7 +74,7 @@ describe('REQ-XW-103: Build mode', () => {
   it('HQ/TF/FD selector exists', () => {
     assert.ok(
       source.includes('HQ_TF_FD_NAMES'),
-      'Explorer.tsx must define HQ_TF_FD_NAMES'
+      'Sandbox.tsx must define HQ_TF_FD_NAMES'
     );
     assert.ok(
       source.includes('setHqtffd'),
@@ -93,7 +93,7 @@ describe('REQ-XW-103: Build mode', () => {
   it('Echelon selector exists', () => {
     assert.ok(
       source.includes('ECHELON_NAMES'),
-      'Explorer.tsx must define ECHELON_NAMES'
+      'Sandbox.tsx must define ECHELON_NAMES'
     );
     assert.ok(
       source.includes('setEchelon'),
@@ -144,14 +144,10 @@ describe('REQ-XW-103: Build mode', () => {
     );
   });
 
-  it('build tab is declared in TABS array', () => {
+  it('lives on the dedicated Sandbox page rather than an Explorer tab', () => {
     assert.ok(
-      source.includes("id: 'build'"),
-      'TABS must include build tab'
-    );
-    assert.ok(
-      source.includes("label: 'Build'"),
-      'Build tab must have Build label'
+      source.includes("data-testid=\"sandbox-page\"") || source.includes('Symbol Sandbox'),
+      'BuildPanel must render as the Symbol Sandbox'
     );
   });
 });

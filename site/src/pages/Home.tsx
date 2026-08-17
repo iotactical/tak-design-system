@@ -18,7 +18,8 @@ const pageCards = [
   { to: '/platforms', title: 'Platforms', desc: 'Android, WPF, Web, and IDE outputs', preview: 'preview-platforms.png', icon: 'X' },
   { to: '/interfaces', title: 'Interfaces', desc: 'Reference UI patterns and layouts', preview: 'preview-interfaces.png', icon: 'IF' },
   { to: '/multipoint', title: 'Tactical Graphics', desc: 'Tactical control measure graphics', preview: 'preview-multipoint.png', icon: 'TG' },
-  { to: '/explorer', title: '2525 Explorer', desc: 'Browse, decode, and build SIDCs', preview: 'preview-explorer.png', icon: '25' },
+  { to: '/explorer', title: '2525 Explorer', desc: 'Browse, decode, and compare SIDCs', preview: 'preview-explorer.png', icon: '25' },
+  { to: '/sandbox', title: 'Sandbox', desc: 'Construct a live SIDC on a canvas', preview: 'preview-explorer.png', icon: 'Sb' },
   { to: '/sources', title: 'Sources', desc: 'Figma, TAK Product Center, MIL-STD-2525', preview: 'preview-sources.png', icon: 'Fg' },
 ];
 

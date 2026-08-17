@@ -23,13 +23,13 @@ requirement relocates that behavior; it does not replace it.
   Measures stay
 
 ## Acceptance Criteria
-- [ ] `App.tsx` declares a `/sandbox` route whose element is a dedicated page,
+- [x] `App.tsx` declares a `/sandbox` route whose element is a dedicated page,
       not `Explorer` with a tab param
-- [ ] Sidebar `navItems` includes a Sandbox entry pointing at `/sandbox`
-- [ ] Home `pageCards` includes a Sandbox card pointing at `/sandbox`
-- [ ] Navigating to `/explorer/build` lands the user on `/sandbox`
-- [ ] Explorer tab list no longer contains a Build tab
-- [ ] Global search "Build" result resolves to `/sandbox`
+- [x] Sidebar `navItems` includes a Sandbox entry pointing at `/sandbox`
+- [x] Home `pageCards` includes a Sandbox card pointing at `/sandbox`
+- [x] Navigating to `/explorer/build` lands the user on `/sandbox`
+- [x] Explorer tab list no longer contains a Build tab
+- [x] Global search "Build" result resolves to `/sandbox`
 
 ## Validation
 - **Test**: tests/site/test_sandbox.mjs, tests/site/test_url_routing.mjs

@@ -352,12 +352,32 @@ function buildSpecEntries(): SearchEntry[] {
 
 // ----- Build and export -----
 
+function buildSandboxEntries(): SearchEntry[] {
+  return [
+    {
+      name: 'Build',
+      category: '2525',
+      path: '/sandbox',
+      breadcrumb: '2525 > Build',
+      description: 'Construct a SIDC on the Symbol Sandbox canvas',
+    },
+    {
+      name: 'Sandbox',
+      category: '2525',
+      path: '/sandbox',
+      breadcrumb: '2525 > Sandbox',
+      description: 'Standalone SIDC constructor',
+    },
+  ];
+}
+
 export const searchIndex: SearchEntry[] = [
   ...buildTokenEntries(),
   ...buildComponentEntries(),
   ...buildIconEntries(),
   ...buildPaletteEntries(),
   ...build2525Entries(),
+  ...buildSandboxEntries(),
   ...buildIntentEntries(),
   ...buildInterfaceEntries(),
   ...buildSpecEntries(),

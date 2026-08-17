@@ -122,7 +122,7 @@ npx rtmx verify    # Verify all requirements have passing tests
 npx rtmx status    # Show RTM coverage summary
 ```
 
-Current: 349/354 requirements verified (98.6%). Five Symbol Sandbox requirements (REQ-SITE-038 through 042) are specified and not yet implemented.
+Current: 354/354 requirements verified (100%).
 
 ## Releasing
 
